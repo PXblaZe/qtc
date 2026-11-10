@@ -1,0 +1,9 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: qtc
+Description: Qt 6 for C, safe by construction
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lqtc
+Cflags: -I${includedir}

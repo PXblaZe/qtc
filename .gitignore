@@ -1,0 +1,15 @@
+/build*/
+/out/
+*.o
+*.so
+*.so.*
+*.dylib
+*.dll
+__pycache__/
+*.pyc
+/tests/fuzz-work*/
+/gen/models/*.json
+!/gen/models/*.json.xz
+canvas.png
+.cache/
+compile_commands.json

@@ -1,0 +1,32 @@
+# Qt's string hashing and searching read in 16/32-byte SIMD blocks that may run past the
+# end of a heap block (never past the page): memcheck reports these reads, they are benign.
+{
+   qt_aeshash_simd_overread
+   Memcheck:Addr16
+   fun:*aeshash*
+}
+{
+   qt_aeshash_simd_overread32
+   Memcheck:Addr32
+   fun:*aeshash*
+}
+{
+   qt_simd_string_overread16
+   Memcheck:Addr16
+   fun:*qustrchr*
+}
+{
+   qt_simd_string_overread32
+   Memcheck:Addr32
+   fun:*qustrchr*
+}
+{
+   qt_simd_latin1_overread
+   Memcheck:Addr16
+   fun:*qt_from_latin1*
+}
+{
+   qt_simd_utf8_overread
+   Memcheck:Addr16
+   fun:*QUtf8*
+}

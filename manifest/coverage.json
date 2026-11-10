@@ -1,0 +1,582 @@
+{
+ "qt_version": "6.12.0",
+ "modules": {
+  "Core": {
+   "methods_seen": 3684,
+   "skip:denied": 135,
+   "skip:operator or internal": 303,
+   "methods_bound": 2646,
+   "skip:returns type not bindable safely": 203,
+   "classes_bound": 137,
+   "classes_empty": 21,
+   "skip:type not bindable safely": 70,
+   "skip:instance method of a non-copyable value class": 189,
+   "skip:returns a raw pointer": 35,
+   "skip:raw pointer to a non-QObject type": 28,
+   "ctors_bound": 298,
+   "skip:non-const reference (out parameter)": 44,
+   "skip:returns unknown class QByteArray::FromBase64Result": 2,
+   "skip:rvalue reference": 8,
+   "skip:unknown class QCborSimpleType": 1,
+   "skip:returns non-Qt type": 1,
+   "skip:non-Qt type": 4,
+   "skip:required raw buffer pointer": 5,
+   "skip:QObject by value": 1,
+   "skip:constantarray": 1,
+   "skip:variadic": 1,
+   "skip:slot named by a string": 4,
+   "skip:template QUrlTwoFlags": 2,
+   "skip:returns unknown class QUuid::Id128Bytes": 1
+  },
+  "Gui": {
+   "methods_seen": 3047,
+   "skip:operator or internal": 285,
+   "skip:instance method of a non-copyable value class": 110,
+   "classes_empty": 9,
+   "skip:denied": 90,
+   "methods_bound": 2383,
+   "ctors_bound": 218,
+   "classes_bound": 105,
+   "skip:type not bindable safely": 12,
+   "skip:returns a raw pointer": 43,
+   "skip:raw pointer to a non-QObject type": 40,
+   "skip:returns type not bindable safely": 31,
+   "skip:non-const reference (out parameter)": 41,
+   "skip:rvalue reference": 2,
+   "skip:returns template QRgbaFloat": 2,
+   "skip:returns template QGenericMatrix": 2,
+   "skip:variadic": 2,
+   "skip:returns template QQuaternion::EulerAngles": 1,
+   "skip:template QQuaternion::EulerAngles": 1,
+   "skip:template QGenericMatrix": 1,
+   "skip:returns unknown class QTransform::Affine": 1
+  },
+  "Widgets": {
+   "methods_seen": 3857,
+   "skip:denied": 237,
+   "skip:operator or internal": 230,
+   "methods_bound": 3013,
+   "classes_bound": 118,
+   "skip:raw pointer to a non-QObject type": 151,
+   "skip:type not bindable safely": 15,
+   "ctors_bound": 153,
+   "skip:non-const reference (out parameter)": 7,
+   "skip:returns a raw pointer": 66,
+   "skip:slot named by a string": 12,
+   "skip:instance method of a non-copyable value class": 101,
+   "classes_empty": 7,
+   "skip:returns type not bindable safely": 25
+  },
+  "Network": {
+   "methods_seen": 1145,
+   "skip:denied": 39,
+   "skip:operator or internal": 142,
+   "methods_bound": 862,
+   "classes_bound": 53,
+   "skip:raw pointer to a non-QObject type": 12,
+   "ctors_bound": 76,
+   "skip:non-const reference (out parameter)": 30,
+   "skip:returns type not bindable safely": 29,
+   "skip:instance method of a non-copyable value class": 14,
+   "classes_empty": 3,
+   "skip:type not bindable safely": 11,
+   "skip:returns a raw pointer": 3,
+   "skip:rvalue reference": 2,
+   "skip:required raw buffer pointer": 1
+  },
+  "Sql": {
+   "methods_seen": 269,
+   "skip:operator or internal": 27,
+   "methods_bound": 223,
+   "skip:denied": 7,
+   "skip:raw pointer to a non-QObject type": 1,
+   "ctors_bound": 13,
+   "classes_bound": 11,
+   "skip:non-const reference (out parameter)": 9,
+   "skip:returns a raw pointer": 1,
+   "skip:rvalue reference": 1
+  },
+  "PrintSupport": {
+   "methods_seen": 154,
+   "skip:denied": 13,
+   "skip:operator or internal": 11,
+   "methods_bound": 68,
+   "skip:returns a raw pointer": 3,
+   "classes_bound": 6,
+   "skip:slot named by a string": 3,
+   "ctors_bound": 5,
+   "skip:raw pointer to a non-QObject type": 3,
+   "skip:instance method of a non-copyable value class": 53,
+   "classes_empty": 2
+  },
+  "Xml": {
+   "methods_seen": 219,
+   "skip:operator or internal": 23,
+   "methods_bound": 180,
+   "ctors_bound": 19,
+   "classes_bound": 17,
+   "skip:raw pointer to a non-QObject type": 5,
+   "classes_empty": 1,
+   "skip:non-const reference (out parameter)": 1,
+   "skip:returns type not bindable safely": 10
+  },
+  "DBus": {
+   "methods_seen": 257,
+   "skip:denied": 20,
+   "skip:operator or internal": 62,
+   "classes_bound": 17,
+   "methods_bound": 146,
+   "skip:slot named by a string": 4,
+   "classes_skipped": 2,
+   "skip:non-const reference (out parameter)": 10,
+   "ctors_bound": 23,
+   "skip:returns a raw pointer": 1,
+   "skip:returns template QDBusReply": 10,
+   "skip:non-Qt type": 1,
+   "skip:raw pointer to a non-QObject type": 1,
+   "classes_empty": 1,
+   "skip:returns type not bindable safely": 2
+  },
+  "OpenGL": {
+   "methods_seen": 65,
+   "skip:operator or internal": 12,
+   "skip:non-const reference (out parameter)": 2,
+   "methods_bound": 48,
+   "ctors_bound": 9,
+   "classes_bound": 6,
+   "skip:returns type not bindable safely": 1,
+   "skip:denied": 2
+  },
+  "OpenGLWidgets": {
+   "methods_seen": 24,
+   "skip:denied": 2,
+   "skip:operator or internal": 2,
+   "methods_bound": 20,
+   "ctors_bound": 1,
+   "classes_bound": 1
+  },
+  "Svg": {
+   "methods_seen": 50,
+   "methods_bound": 42,
+   "ctors_bound": 5,
+   "classes_bound": 2,
+   "skip:denied": 2,
+   "skip:operator or internal": 2,
+   "skip:raw pointer to a non-QObject type": 4
+  },
+  "SvgWidgets": {
+   "methods_seen": 10,
+   "skip:denied": 2,
+   "skip:operator or internal": 2,
+   "methods_bound": 6,
+   "ctors_bound": 2,
+   "classes_bound": 1
+  },
+  "Qml": {
+   "methods_seen": 396,
+   "skip:denied": 17,
+   "skip:operator or internal": 32,
+   "methods_bound": 239,
+   "skip:raw pointer to a non-QObject type": 7,
+   "skip:returns a raw pointer": 6,
+   "ctors_bound": 38,
+   "classes_bound": 17,
+   "skip:instance method of a non-copyable value class": 86,
+   "classes_empty": 8,
+   "skip:non-const reference (out parameter)": 3,
+   "skip:returns list of raw pointer to a non-QObject type": 1,
+   "skip:type not bindable safely": 1,
+   "skip:unknown class QtMsgType": 1,
+   "skip:slot named by a string": 1,
+   "skip:returns type not bindable safely": 2
+  },
+  "Quick": {
+   "methods_seen": 370,
+   "skip:denied": 20,
+   "skip:operator or internal": 18,
+   "methods_bound": 304,
+   "skip:returns a raw pointer": 12,
+   "classes_bound": 9,
+   "classes_empty": 4,
+   "skip:returns type not bindable safely": 6,
+   "skip:raw pointer to a non-QObject type": 10,
+   "ctors_bound": 9
+  },
+  "QuickWidgets": {
+   "methods_seen": 25,
+   "skip:denied": 3,
+   "skip:operator or internal": 2,
+   "methods_bound": 20,
+   "ctors_bound": 4,
+   "classes_bound": 1
+  },
+  "QuickControls2": {
+   "methods_seen": 9,
+   "skip:denied": 2,
+   "skip:operator or internal": 2,
+   "methods_bound": 5,
+   "ctors_bound": 1,
+   "classes_bound": 2
+  },
+  "Multimedia": {
+   "methods_seen": 783,
+   "skip:operator or internal": 83,
+   "skip:non-const reference (out parameter)": 8,
+   "methods_bound": 632,
+   "ctors_bound": 50,
+   "classes_bound": 32,
+   "skip:denied": 42,
+   "skip:returns a raw pointer": 8,
+   "skip:raw pointer to a non-QObject type": 4,
+   "skip:returns type not bindable safely": 3,
+   "skip:type not bindable safely": 3,
+   "classes_empty": 1
+  },
+  "MultimediaWidgets": {
+   "methods_seen": 11,
+   "skip:denied": 2,
+   "skip:operator or internal": 2,
+   "methods_bound": 7,
+   "ctors_bound": 1,
+   "classes_bound": 1
+  },
+  "SpatialAudio": {
+   "methods_seen": 124,
+   "skip:denied": 8,
+   "skip:operator or internal": 8,
+   "methods_bound": 108,
+   "ctors_bound": 6,
+   "classes_bound": 4,
+   "classes_skipped": 1
+  },
+  "Charts": {
+   "methods_seen": 1251,
+   "skip:denied": 106,
+   "skip:operator or internal": 113,
+   "methods_bound": 1030,
+   "classes_bound": 53,
+   "ctors_bound": 41,
+   "skip:raw pointer to a non-QObject type": 1,
+   "skip:returns type not bindable safely": 1
+  },
+  "SerialPort": {
+   "methods_seen": 73,
+   "skip:denied": 2,
+   "skip:operator or internal": 3,
+   "methods_bound": 61,
+   "skip:returns type not bindable safely": 6,
+   "ctors_bound": 5,
+   "classes_bound": 2,
+   "skip:non-const reference (out parameter)": 1
+  },
+  "Positioning": {
+   "methods_seen": 294,
+   "skip:operator or internal": 36,
+   "skip:non-const reference (out parameter)": 6,
+   "methods_bound": 235,
+   "ctors_bound": 26,
+   "classes_bound": 16,
+   "skip:denied": 11,
+   "skip:returns type not bindable safely": 3,
+   "skip:instance method of a non-copyable value class": 3,
+   "classes_empty": 1
+  },
+  "WebSockets": {
+   "classes_skipped": 1,
+   "methods_seen": 137,
+   "skip:denied": 4,
+   "skip:operator or internal": 8,
+   "methods_bound": 115,
+   "skip:QObject subclass without Q_OBJECT": 1,
+   "skip:raw pointer to a non-QObject type": 5,
+   "ctors_bound": 4,
+   "classes_bound": 4,
+   "skip:non-const reference (out parameter)": 2,
+   "skip:type not bindable safely": 1,
+   "skip:returns type not bindable safely": 1
+  },
+  "WebChannel": {
+   "methods_seen": 23,
+   "skip:denied": 4,
+   "skip:operator or internal": 4,
+   "skip:container of objects": 1,
+   "skip:returns container of objects": 1,
+   "methods_bound": 11,
+   "skip:returns type not bindable safely": 2,
+   "ctors_bound": 1,
+   "classes_bound": 2
+  },
+  "UiTools": {
+   "methods_seen": 21,
+   "skip:denied": 2,
+   "skip:operator or internal": 2,
+   "methods_bound": 17,
+   "ctors_bound": 1,
+   "classes_bound": 1
+  }
+ },
+ "totals": {
+  "methods_seen": 16298,
+  "skip:denied": 772,
+  "skip:operator or internal": 1414,
+  "methods_bound": 12421,
+  "skip:returns type not bindable safely": 325,
+  "classes_bound": 618,
+  "classes_empty": 58,
+  "skip:type not bindable safely": 113,
+  "skip:instance method of a non-copyable value class": 556,
+  "skip:returns a raw pointer": 178,
+  "skip:raw pointer to a non-QObject type": 272,
+  "ctors_bound": 1009,
+  "skip:non-const reference (out parameter)": 164,
+  "skip:returns unknown class QByteArray::FromBase64Result": 2,
+  "skip:rvalue reference": 13,
+  "skip:unknown class QCborSimpleType": 1,
+  "skip:returns non-Qt type": 1,
+  "skip:non-Qt type": 5,
+  "skip:required raw buffer pointer": 6,
+  "skip:QObject by value": 1,
+  "skip:constantarray": 1,
+  "skip:variadic": 3,
+  "skip:slot named by a string": 24,
+  "skip:template QUrlTwoFlags": 2,
+  "skip:returns unknown class QUuid::Id128Bytes": 1,
+  "skip:returns template QRgbaFloat": 2,
+  "skip:returns template QGenericMatrix": 2,
+  "skip:returns template QQuaternion::EulerAngles": 1,
+  "skip:template QQuaternion::EulerAngles": 1,
+  "skip:template QGenericMatrix": 1,
+  "skip:returns unknown class QTransform::Affine": 1,
+  "classes_skipped": 4,
+  "skip:returns template QDBusReply": 10,
+  "skip:returns list of raw pointer to a non-QObject type": 1,
+  "skip:unknown class QtMsgType": 1,
+  "skip:QObject subclass without Q_OBJECT": 1,
+  "skip:container of objects": 1,
+  "skip:returns container of objects": 1
+ },
+ "skip_reasons": {
+  "operator or internal": 1414,
+  "denied": 772,
+  "instance method of a non-copyable value class": 556,
+  "returns type not bindable safely": 325,
+  "raw pointer to a non-QObject type": 272,
+  "returns a raw pointer": 178,
+  "non-const reference (out parameter)": 164,
+  "type not bindable safely": 113,
+  "slot named by a string": 24,
+  "rvalue reference": 13,
+  "returns template QDBusReply": 10,
+  "required raw buffer pointer": 6,
+  "non-Qt type": 5,
+  "variadic": 3,
+  "returns unknown class QByteArray::FromBase64Result": 2,
+  "template QUrlTwoFlags": 2,
+  "returns template QRgbaFloat": 2,
+  "returns template QGenericMatrix": 2,
+  "unknown class QCborSimpleType": 1,
+  "returns non-Qt type": 1,
+  "QObject by value": 1,
+  "constantarray": 1,
+  "returns unknown class QUuid::Id128Bytes": 1,
+  "returns template QQuaternion::EulerAngles": 1,
+  "template QQuaternion::EulerAngles": 1,
+  "template QGenericMatrix": 1,
+  "returns unknown class QTransform::Affine": 1,
+  "returns list of raw pointer to a non-QObject type": 1,
+  "unknown class QtMsgType": 1,
+  "QObject subclass without Q_OBJECT": 1,
+  "container of objects": 1,
+  "returns container of objects": 1
+ },
+ "skip_examples": {
+  "denied": [
+   "QBitArray::data_ptr",
+   "QBitArray::data_ptr",
+   "QByteArray::setRawData",
+   "QByteArray::fromRawData",
+   "QByteArray::data_ptr",
+   "QByteArray::data_ptr",
+   "QCoreApplication::exec",
+   "QCoreApplication::eventDispatcher"
+  ],
+  "operator or internal": [
+   "QBasicTimer::operator=",
+   "QBitArray::operator=",
+   "QBitArray::operator=",
+   "QBitArray::operator[]",
+   "QBitArray::operator[]",
+   "QBitArray::operator&=",
+   "QBitArray::operator|=",
+   "QBitArray::operator^="
+  ],
+  "returns type not bindable safely": [
+   "QAbstractAnimation::bindableState",
+   "QAbstractAnimation::bindableDirection",
+   "QAbstractAnimation::bindableCurrentTime",
+   "QAbstractAnimation::bindableLoopCount",
+   "QAbstractAnimation::bindableCurrentLoop",
+   "QAbstractProxyModel::bindableSourceModel",
+   "QByteArray::begin",
+   "QByteArray::begin"
+  ],
+  "type not bindable safely": [
+   "QAbstractItemModel::rowsAboutToBeInserted",
+   "QAbstractItemModel::rowsInserted",
+   "QAbstractItemModel::rowsAboutToBeRemoved",
+   "QAbstractItemModel::rowsRemoved",
+   "QAbstractItemModel::columnsAboutToBeInserted",
+   "QAbstractItemModel::columnsInserted",
+   "QAbstractItemModel::columnsAboutToBeRemoved",
+   "QAbstractItemModel::columnsRemoved"
+  ],
+  "instance method of a non-copyable value class": [
+   "QBasicTimer::swap",
+   "QBasicTimer::isActive",
+   "QBasicTimer::timerId",
+   "QBasicTimer::id",
+   "QBasicTimer::start",
+   "QBasicTimer::start",
+   "QBasicTimer::start",
+   "QBasicTimer::start"
+  ],
+  "returns a raw pointer": [
+   "QBindingStorage::status",
+   "QBindingStorage::bindingData",
+   "QBindingStorage::bindingData",
+   "QContiguousCacheData::allocateData",
+   "QEasingCurve::customType",
+   "QFileDevice::map",
+   "QLibrary::resolve",
+   "QLibrary::resolve"
+  ],
+  "raw pointer to a non-QObject type": [
+   "QBindingStorage::registerDependency",
+   "QBuffer::setBuffer",
+   "QCborValue::fromCbor",
+   "QCollator::compare",
+   "QContiguousCacheData::freeData",
+   "QCoreApplication::sendEvent",
+   "QCoreApplication::postEvent",
+   "QFile::open"
+  ],
+  "non-const reference (out parameter)": [
+   "QBitArray::swap",
+   "QBluetoothPermission::swap",
+   "QByteArray::swap",
+   "QCalendarPermission::swap",
+   "QCameraPermission::swap",
+   "QCborArray::swap",
+   "QCborMap::swap",
+   "QCborValue::swap"
+  ],
+  "returns unknown class QByteArray::FromBase64Result": [
+   "QByteArray::fromBase64Encoding",
+   "QByteArray::fromBase64Encoding"
+  ],
+  "rvalue reference": [
+   "QByteArray::fromPercentEncoding",
+   "QCborArray::insert",
+   "QCborArray::prepend",
+   "QCborArray::append",
+   "QCborArray::fromJsonArray",
+   "QCborMap::fromJsonObject",
+   "QObject::setProperty",
+   "QVariant::setValue"
+  ],
+  "unknown class QCborSimpleType": [
+   "QCborValue::isSimpleType"
+  ],
+  "returns non-Qt type": [
+   "QChar::fromUcs4"
+  ],
+  "non-Qt type": [
+   "QEasingCurve::setCustomType",
+   "QInternal::registerCallback",
+   "QInternal::unregisterCallback",
+   "QSettings::registerFormat",
+   "QDBusMetaType::registerMarshallOperators"
+  ],
+  "required raw buffer pointer": [
+   "QFileDevice::unmap",
+   "QIODevice::read",
+   "QIODevice::readLine",
+   "QIODevice::peek",
+   "QIODevice::getChar",
+   "QUdpSocket::readDatagram"
+  ],
+  "QObject by value": [
+   "QFileInfo::setFile"
+  ],
+  "constantarray": [
+   "QString::vasprintf"
+  ],
+  "variadic": [
+   "QString::asprintf",
+   "QPolygon::setPoints",
+   "QPolygon::putPoints"
+  ],
+  "slot named by a string": [
+   "QTimer::singleShot",
+   "QTimer::singleShot",
+   "QTimer::singleShot",
+   "QTimer::singleShot",
+   "QColorDialog::open",
+   "QFileDialog::open",
+   "QFontDialog::open",
+   "QInputDialog::open"
+  ],
+  "template QUrlTwoFlags": [
+   "QUrl::adjusted",
+   "QUrl::matches"
+  ],
+  "returns unknown class QUuid::Id128Bytes": [
+   "QUuid::toBytes"
+  ],
+  "returns template QRgbaFloat": [
+   "QColorTransform::map",
+   "QColorTransform::map"
+  ],
+  "returns template QGenericMatrix": [
+   "QMatrix4x4::normalMatrix",
+   "QQuaternion::toRotationMatrix"
+  ],
+  "returns template QQuaternion::EulerAngles": [
+   "QQuaternion::eulerAngles"
+  ],
+  "template QQuaternion::EulerAngles": [
+   "QQuaternion::fromEulerAngles"
+  ],
+  "template QGenericMatrix": [
+   "QQuaternion::fromRotationMatrix"
+  ],
+  "returns unknown class QTransform::Affine": [
+   "QTransform::asAffineMatrix"
+  ],
+  "returns template QDBusReply": [
+   "QDBusConnectionInterface::registeredServiceNames",
+   "QDBusConnectionInterface::activatableServiceNames",
+   "QDBusConnectionInterface::isServiceRegistered",
+   "QDBusConnectionInterface::serviceOwner",
+   "QDBusConnectionInterface::unregisterService",
+   "QDBusConnectionInterface::registerService",
+   "QDBusConnectionInterface::servicePid",
+   "QDBusConnectionInterface::serviceUid"
+  ],
+  "returns list of raw pointer to a non-QObject type": [
+   "QQmlEngine::urlInterceptors"
+  ],
+  "unknown class QtMsgType": [
+   "QQmlError::setMessageType"
+  ],
+  "QObject subclass without Q_OBJECT": [
+   "QWebSocket::setMaskGenerator"
+  ],
+  "container of objects": [
+   "QWebChannel::registerObjects"
+  ],
+  "returns container of objects": [
+   "QWebChannel::registeredObjects"
+  ]
+ }
+}
