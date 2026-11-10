@@ -20,7 +20,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtQuickWidgets/qquickwidget.h>)
-template <class S> static int t11050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -32,7 +32,7 @@ template <class S> static int t11050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -44,7 +44,7 @@ template <class S> static int t11051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -56,7 +56,7 @@ template <class S> static int t11052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -68,7 +68,7 @@ template <class S> static int t11053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -80,13 +80,13 @@ template <class S> static int t11054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQuickWidget::ResizeMode> p0;
-    QTC_CVE(0, p0, 502);
+    QTC_CVE(0, p0, 526);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQuickWidget::ResizeMode> &p0) { qtc::cve(aa[0], p0, 0, 502); s->setResizeMode(p0.get()); }) { s->setResizeMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQuickWidget::ResizeMode> &p0) { qtc::cve(aa[0], p0, 0, 526); s->setResizeMode(p0.get()); }) { s->setResizeMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -94,7 +94,7 @@ template <class S> static int t11055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -106,7 +106,7 @@ template <class S> static int t11056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -118,7 +118,7 @@ template <class S> static int t11057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -130,7 +130,7 @@ template <class S> static int t11058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -142,7 +142,7 @@ template <class S> static int t11059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSurfaceFormat> p0;
     QTC_CV(0, p0);
@@ -156,7 +156,7 @@ template <class S> static int t11060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -168,7 +168,7 @@ template <class S> static int t11061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::pixels_ok(double(s->width()) * s->devicePixelRatioF(), double(s->height()) * s->devicePixelRatioF(), 4))) return qtc::pre_fail(QTC_ERR_LIMIT, "QQuickWidget::grabFramebuffer(): the image would exceed the allocation limit (qtc_set_alloc_limit)");
     switch (n) {
@@ -181,7 +181,7 @@ template <class S> static int t11062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QColor> p0;
     QTC_CV(0, p0);
@@ -195,7 +195,7 @@ template <class S> static int t11063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -207,7 +207,7 @@ template <class S> static int t11064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -222,7 +222,7 @@ template <class S> static int t11065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-template <class S> static int t11066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QMap<QString, QVariant>> p0;
     QTC_CV(0, p0);
@@ -238,7 +238,7 @@ template <class S> static int t11066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-template <class S> static int t11067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
@@ -255,13 +255,13 @@ template <class S> static int t11067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQuickWidget::Status> p0;
-    QTC_CVE(0, p0, 503);
+    QTC_CVE(0, p0, 527);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQuickWidget::Status> &p0) { qtc::cve(aa[0], p0, 0, 503); s->statusChanged(p0.get()); }) { s->statusChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQuickWidget::Status> &p0) { qtc::cve(aa[0], p0, 0, 527); s->statusChanged(p0.get()); }) { s->statusChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -269,15 +269,15 @@ template <class S> static int t11068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQuickWindow::SceneGraphError> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 506);
+    QTC_CVE(0, p0, 530);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQuickWindow::SceneGraphError> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 506); qtc::cv(aa[1], p1, 1); s->sceneGraphError(p0.get(), p1.get()); }) { s->sceneGraphError(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQuickWindow::SceneGraphError> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 530); qtc::cv(aa[1], p1, 1); s->sceneGraphError(p0.get(), p1.get()); }) { s->sceneGraphError(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -285,7 +285,7 @@ template <class S> static int t11069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QWidget *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -301,7 +301,7 @@ template <class S> static int t11070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QWidget *> p1;
@@ -316,7 +316,7 @@ template <class S> static int t11071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QUrl> p0;
     qtc::H<QWidget *> p1;
@@ -335,7 +335,7 @@ template <class S> static int t11072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-template <class S> static int t11073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
@@ -357,57 +357,57 @@ template <class S> static int t11073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #endif
-static const qtc::ParamDesc P11055[] = {{qtc::PK_ENUM, 502, "QQuickWidget::ResizeMode", nullptr}};
-static const qtc::ParamDesc P11060[] = {{qtc::PK_VALUE, -1, "QSurfaceFormat", nullptr}};
-static const qtc::ParamDesc P11063[] = {{qtc::PK_VALUE, -1, "QColor", nullptr}};
-static const qtc::ParamDesc P11065[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11213[] = {{qtc::PK_ENUM, 526, "QQuickWidget::ResizeMode", nullptr}};
+static const qtc::ParamDesc P11218[] = {{qtc::PK_VALUE, -1, "QSurfaceFormat", nullptr}};
+static const qtc::ParamDesc P11221[] = {{qtc::PK_VALUE, -1, "QColor", nullptr}};
+static const qtc::ParamDesc P11223[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-static const qtc::ParamDesc P11066[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
+static const qtc::ParamDesc P11224[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-static const qtc::ParamDesc P11067[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P11225[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P11068[] = {{qtc::PK_ENUM, 503, "QQuickWidget::Status", nullptr}};
-static const qtc::ParamDesc P11069[] = {{qtc::PK_ENUM, 506, "QQuickWindow::SceneGraphError", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11070[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
-static const qtc::ParamDesc P11071[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
-static const qtc::ParamDesc P11072[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P11226[] = {{qtc::PK_ENUM, 527, "QQuickWidget::Status", nullptr}};
+static const qtc::ParamDesc P11227[] = {{qtc::PK_ENUM, 530, "QQuickWindow::SceneGraphError", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11228[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P11229[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P11230[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-static const qtc::ParamDesc P11073[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P11231[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
 #endif
 #if __has_include(<QtQuickWidgets/qquickwidget.h>)
 static const qtc::MethodDef M_QQuickWidget[] = {
-    {"source", "source()", t11050<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"engine", "engine()", t11051<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
-    {"rootContext", "rootContext()", t11052<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
-    {"rootObject", "rootObject()", t11053<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQuickItem*"},
-    {"resizeMode", "resizeMode()", t11054<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQuickWidget::ResizeMode"},
-    {"setResizeMode", "setResizeMode(QQuickWidget::ResizeMode)", t11055<QQuickWidget>, P11055, 1, 1, 0, QTC_T_NONE, "void"},
-    {"status", "status()", t11056<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQuickWidget::Status"},
-    {"errors", "errors()", t11057<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQmlError>"},
-    {"sizeHint", "sizeHint()", t11058<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"initialSize", "initialSize()", t11059<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"setFormat", "setFormat(QSurfaceFormat)", t11060<QQuickWidget>, P11060, 1, 1, 0, QTC_T_NONE, "void"},
-    {"format", "format()", t11061<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSurfaceFormat"},
-    {"grabFramebuffer", "grabFramebuffer()", t11062<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QImage"},
-    {"setClearColor", "setClearColor(QColor)", t11063<QQuickWidget>, P11063, 1, 1, 0, QTC_T_NONE, "void"},
-    {"quickWindow", "quickWindow()", t11064<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQuickWindow*"},
-    {"setSource", "setSource(QUrl)", t11065<QQuickWidget>, P11065, 1, 1, 0, QTC_T_NONE, "void"},
+    {"source", "source()", t11208<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"engine", "engine()", t11209<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
+    {"rootContext", "rootContext()", t11210<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
+    {"rootObject", "rootObject()", t11211<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQuickItem*"},
+    {"resizeMode", "resizeMode()", t11212<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQuickWidget::ResizeMode"},
+    {"setResizeMode", "setResizeMode(QQuickWidget::ResizeMode)", t11213<QQuickWidget>, P11213, 1, 1, 0, QTC_T_NONE, "void"},
+    {"status", "status()", t11214<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQuickWidget::Status"},
+    {"errors", "errors()", t11215<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQmlError>"},
+    {"sizeHint", "sizeHint()", t11216<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"initialSize", "initialSize()", t11217<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"setFormat", "setFormat(QSurfaceFormat)", t11218<QQuickWidget>, P11218, 1, 1, 0, QTC_T_NONE, "void"},
+    {"format", "format()", t11219<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSurfaceFormat"},
+    {"grabFramebuffer", "grabFramebuffer()", t11220<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QImage"},
+    {"setClearColor", "setClearColor(QColor)", t11221<QQuickWidget>, P11221, 1, 1, 0, QTC_T_NONE, "void"},
+    {"quickWindow", "quickWindow()", t11222<QQuickWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQuickWindow*"},
+    {"setSource", "setSource(QUrl)", t11223<QQuickWidget>, P11223, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-    {"setInitialProperties", "setInitialProperties(QVariantMap)", t11066<QQuickWidget>, P11066, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setInitialProperties", "setInitialProperties(QVariantMap)", t11224<QQuickWidget>, P11224, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-    {"loadFromModule", "loadFromModule(QAnyStringView,QAnyStringView)", t11067<QQuickWidget>, P11067, 2, 2, 0, QTC_T_NONE, "void"},
+    {"loadFromModule", "loadFromModule(QAnyStringView,QAnyStringView)", t11225<QQuickWidget>, P11225, 2, 2, 0, QTC_T_NONE, "void"},
 #endif
-    {"statusChanged", "statusChanged(QQuickWidget::Status)", t11068<QQuickWidget>, P11068, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sceneGraphError", "sceneGraphError(QQuickWindow::SceneGraphError,QString)", t11069<QQuickWidget>, P11069, 2, 2, 0, QTC_T_NONE, "void"},
+    {"statusChanged", "statusChanged(QQuickWidget::Status)", t11226<QQuickWidget>, P11226, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sceneGraphError", "sceneGraphError(QQuickWindow::SceneGraphError,QString)", t11227<QQuickWidget>, P11227, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQuickWidget[] = {
-    {"QQuickWidget", "QQuickWidget(QWidget*)", t11070<QQuickWidget>, P11070, 1, 0, 0, QTC_T_OBJ, "QQuickWidget"},
-    {"QQuickWidget", "QQuickWidget(QQmlEngine*,QWidget*)", t11071<QQuickWidget>, P11071, 2, 2, 0, QTC_T_OBJ, "QQuickWidget"},
-    {"QQuickWidget", "QQuickWidget(QUrl,QWidget*)", t11072<QQuickWidget>, P11072, 2, 1, 0, QTC_T_OBJ, "QQuickWidget"},
+    {"QQuickWidget", "QQuickWidget(QWidget*)", t11228<QQuickWidget>, P11228, 1, 0, 0, QTC_T_OBJ, "QQuickWidget"},
+    {"QQuickWidget", "QQuickWidget(QQmlEngine*,QWidget*)", t11229<QQuickWidget>, P11229, 2, 2, 0, QTC_T_OBJ, "QQuickWidget"},
+    {"QQuickWidget", "QQuickWidget(QUrl,QWidget*)", t11230<QQuickWidget>, P11230, 2, 1, 0, QTC_T_OBJ, "QQuickWidget"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-    {"QQuickWidget", "QQuickWidget(QAnyStringView,QAnyStringView,QWidget*)", t11073<QQuickWidget>, P11073, 3, 2, 0, QTC_T_OBJ, "QQuickWidget"},
+    {"QQuickWidget", "QQuickWidget(QAnyStringView,QAnyStringView,QWidget*)", t11231<QQuickWidget>, P11231, 3, 2, 0, QTC_T_OBJ, "QQuickWidget"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif

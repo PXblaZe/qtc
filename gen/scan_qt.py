@@ -29,6 +29,8 @@ DEFAULT_MODULES = [
     "OpenGL", "OpenGLWidgets", "Svg", "SvgWidgets", "Qml", "Quick", "QuickWidgets",
     "QuickControls2", "Multimedia", "MultimediaWidgets", "SpatialAudio", "Charts",
     "SerialPort", "Positioning", "WebSockets", "WebChannel", "UiTools",
+    # network add-ons (GPL-3.0 or commercial), bound when installed
+    "NetworkAuth", "HttpServer", "Mqtt", "Coap",
 ]
 
 # Namespaces whose enums are exported (classes inside them are not bound).
@@ -114,7 +116,14 @@ def is_deprecated(c):
     return c.availability == ci.AvailabilityKind.DEPRECATED
 
 
-def method_record(c):
+def has_final(c):
+    try:
+        return any(ch.kind == K.CXX_FINAL_ATTR for ch in c.get_children())
+    except Exception:
+        return False
+
+
+def method_record(c, access="public"):
     params = []
     for p in c.get_arguments():
         params.append({"name": p.spelling, "type": type_info(p.type), "default": has_default(p)})
@@ -125,6 +134,8 @@ def method_record(c):
         "virtual": c.is_virtual_method(),
         "pure": c.is_pure_virtual_method(),
         "deprecated": is_deprecated(c),
+        "final": has_final(c),
+        "access": access,
         "variadic": c.type.is_function_variadic() if c.type.kind == T.FUNCTIONPROTO else False,
         "ret": type_info(c.result_type),
         "params": params,
@@ -233,7 +244,7 @@ class Scanner:
         rec = {"name": qname, "module": module, "header": header, "bases": [], "ctors": [],
                "methods": [], "enums": [], "abstract": False, "has_meta": False,
                "has_metaobject_fn": False, "dtor": "implicit", "nested": outer is not None,
-               "deprecated": is_deprecated(c)}
+               "deprecated": is_deprecated(c), "final": has_final(c), "protected_ctors": []}
         try:
             rec["abstract"] = c.is_abstract_record()
         except Exception:
@@ -251,6 +262,9 @@ class Scanner:
                     rec["has_metaobject_fn"] = True
                 if public:
                     rec["methods"].append(method_record(ch))
+                elif acc == ci.AccessSpecifier.PROTECTED:
+                    # for overridable subclasses: protected virtuals to override, the rest to call
+                    rec["methods"].append(method_record(ch, "protected"))
             elif k == K.CONSTRUCTOR:
                 if public:
                     rec["ctors"].append(ctor_record(ch))
@@ -258,6 +272,8 @@ class Scanner:
                     r = ctor_record(ch)
                     if r.get("copy"):
                         rec["copy_nonpublic"] = True
+                    elif acc == ci.AccessSpecifier.PROTECTED and not r.get("move"):
+                        rec["protected_ctors"].append(r)
             elif k == K.DESTRUCTOR:
                 rec["dtor"] = "public" if public else "nonpublic"
             elif k == K.VAR_DECL and ch.spelling == "staticMetaObject":

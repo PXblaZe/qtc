@@ -23,6 +23,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import overrides
 from preconditions import preconditions  # noqa: E402
 
 
@@ -46,6 +47,7 @@ MODULE_DEPS = {
     "MultimediaWidgets": ["Multimedia", "Widgets"], "SpatialAudio": ["Multimedia"],
     "Charts": ["Widgets"], "SerialPort": ["Core"], "Positioning": ["Core"],
     "WebSockets": ["Network"], "WebChannel": ["Core"], "UiTools": ["Widgets"],
+    "NetworkAuth": ["Network"], "HttpServer": ["Network"], "Mqtt": ["Network"], "Coap": ["Network"],
 }
 NEED_WIDGETS = {"Widgets", "PrintSupport", "SvgWidgets", "MultimediaWidgets", "QuickWidgets",
                 "OpenGLWidgets", "Charts", "UiTools"}
@@ -87,11 +89,11 @@ DENY_CLASS_RE = re.compile(
     r"QAccessible\w*Interface|QStyleOption|QStyleHintReturn|QItemEditorCreatorBase|QQmlInfo|QQmlListReference|"
     r"QQmlListProperty|QJSPrimitiveValue|QDebug|QNoDebug|QDebugStateSaver|QMessageLogger|QLoggingCategory|"
     r"QTextStream|QDataStream|QPainter$|QPainter::|QPaintEngine|QPaintEngineState|QPaintDevice$|QPagedPaintDevice|"
-    r"QOpenGLPaintDevice|QBackingStore|QRhi|QSG|QQuickRenderTarget|QQuickGraphicsDevice|QQuickGraphicsConfiguration|"
+    r"QOpenGLPaintDevice|QBackingStore|QRhi(?!Widget$)|QSG|QQuickRenderTarget|QQuickGraphicsDevice|QQuickGraphicsConfiguration|"
     r"QVulkan|QStringConverter|QStringEncoder|QStringDecoder|QStringDecoder|QAnyStringView|QStringView|QLatin1String|"
     r"QUtf8StringView|QByteArrayView|QStringMatcher|QByteArrayMatcher|QLatin1StringMatcher|QKeyValueIterator|"
     r"QPermission|QFutureInterface|QFuture|QPromise|QFutureWatcher|QFutureSynchronizer|QtConcurrent|QRunnable|"
-    r"QThreadPool$|QSharedPointer|QWeakPointer|QScopedPointer|QPointer|QExplicitlySharedDataPointer|"
+    r"QSharedPointer|QWeakPointer|QScopedPointer|QPointer|QExplicitlySharedDataPointer|"
     r"QSharedDataPointer|QSharedData$|QAdoptSharedDataTag|QEnableSharedFromThis|QSpan|QTypeInfo|"
     r"QFunctionPointer|QObjectData|QObjectUserData|QAbstractDeclarativeData|QDynamicMetaObjectData|"
     r"QAbstractDynamicMetaObject|QCborStreamReader|QCborStreamWriter|QDirIterator|QDirListing|QStorageInfo_|"
@@ -139,6 +141,9 @@ DENY_PAIRS = {("QCoreApplication", "exec"), ("QGuiApplication", "exec"), ("QAppl
               ("QCoreApplication", "exit"), ("QCoreApplication", "quit"), ("QObject", "destroyed"),
               ("QWidget", "destroy"), ("QWidget", "create"), ("QWindow", "destroy"), ("QWindow", "create"),
               ("QThread", "terminate"), ("QCoreApplication", "setEventDispatcher"),
+              # a released thread nobody reserved breaks the pool's count (qtc_task_start_in runs tasks)
+              ("QThreadPool", "reserveThread"), ("QThreadPool", "releaseThread"),
+              ("QThreadPool", "startOnReservedThread"), ("QThreadPool", "tryTake"),
               ("QCoreApplication", "eventDispatcher"), ("QThread", "setEventDispatcher"),
               ("QThread", "eventDispatcher"), ("QObject", "setParent"), ("QWidget", "setParent"),
               # only valid inside a child process modifier; elsewhere it ends the calling process
@@ -824,6 +829,8 @@ class Emitter:
         man_methods, man_ctors = [], []
         thunk_code = []
         for m in c["methods"]:
+            if m.get("access", "public") != "public":
+                continue   # protected: callable only on overridable objects (see emit_overridable)
             self.cov[module]["methods_seen"] += 1
             plan, why = self.method_plan(cn, c, m, is_obj)
             if plan is None:
@@ -1009,9 +1016,10 @@ def main():
     man_dir = os.path.join(args.out, "manifest")
     os.makedirs(gen_dir, exist_ok=True)
     os.makedirs(man_dir, exist_ok=True)
-    stale_files = set(glob.glob(os.path.join(gen_dir, "qtc_gen_*.cpp")))
+    stale_files = set(glob.glob(os.path.join(gen_dir, "qtc_gen_*.cpp")) + glob.glob(os.path.join(gen_dir, "qtc_ov_*.cpp")))
 
     em = Emitter(ctx, versions, floor, primary["include_root"], primary.get("header_config"))
+    ove = overrides.OvEmitter(em, ctx, map_value, cstr, guard, Versions, NEED_WIDGETS, NEED_GUI)
     by_module = collections.defaultdict(list)
     for cn in sorted(primary["classes"]):
         c = primary["classes"][cn]
@@ -1065,6 +1073,31 @@ def main():
             files.append(fn)
             reg_decls.append((module, "void %s();" % fname))
             reg_calls.append((module, "    %s();" % fname))
+        # overridable subclasses of this module's classes (gen/overrides.py)
+        ov_classes = [cn for cn in overrides.OVERRIDABLE
+                      if cn in primary["classes"] and primary["classes"][cn]["module"] == module]
+        if ov_classes:
+            code, tables, defs = [], [], []
+            for cn in ov_classes:
+                ove.emit(cn, code, tables, defs)
+            if defs:
+                fn = "qtc_ov_%s.cpp" % module
+                fname = "qtc_ov_register_%s" % module
+                ov_pragmas = ["#if defined(__GNUC__)", "#pragma GCC diagnostic ignored \"-Wdeprecated-declarations\"",
+                              "#pragma GCC diagnostic ignored \"-Wunused-parameter\"",
+                              "#pragma GCC diagnostic ignored \"-Wunused-variable\"",
+                              "#pragma GCC diagnostic ignored \"-Wunused-but-set-variable\"",
+                              "#pragma GCC diagnostic ignored \"-Woverloaded-virtual\"", "#endif"]
+                body = header + ['#include "../qtc_override.h"'] + ov_pragmas + incs + pragmas[6:] + ["", "namespace {"] + \
+                    code + tables + ["static const qtc::OvClassDef OVCLASSES[] = {"] + defs + [
+                    "    {nullptr, nullptr, 0, nullptr, 0, nullptr, 0, nullptr, 0, nullptr}};", "}  // namespace", "",
+                    "void %s() { qtc::register_overridables(OVCLASSES, int(sizeof(OVCLASSES) / sizeof(OVCLASSES[0])) - 1); }" % fname,
+                    ""]
+                write_if_changed(os.path.join(gen_dir, fn), "\n".join(body))
+                stale_files.discard(os.path.join(gen_dir, fn))
+                files.append(fn)
+                reg_decls.append((module, "void %s();" % fname))
+                reg_calls.append((module, "    %s();" % fname))
         cmake.append("set(QTC_GEN_%s %s)" % (module, " ".join("${CMAKE_CURRENT_LIST_DIR}/" + f for f in files)))
 
     # enums: an older Qt lacks values added since, so each enum has one table per Qt version that
@@ -1181,9 +1214,9 @@ def main():
     for n in names:
         e = primary["enums"][n]
         enum_man.append({"name": n, "flags": n in ctx.flag_enums, "scoped": bool(e.get("scoped")), "values": e["values"]})
-    manifest = {"qtc_version": "1.0.0", "qt_version": primary["qt_version"],
+    manifest = {"qtc_version": "1.1.0", "qt_version": primary["qt_version"],
                 "qt_versions_scanned": [m["qt_version"] for m in models],
-                "classes": em.manifest_classes, "enums": enum_man}
+                "classes": em.manifest_classes, "enums": enum_man, "overridables": ove.manifest}
     with open(os.path.join(man_dir, "qtc_api.json"), "w") as f:
         json.dump(manifest, f, separators=(",", ":"))
     totals = collections.Counter()

@@ -6,12 +6,14 @@ void qtc_gen_register_Core_1();
 void qtc_gen_register_Core_2();
 void qtc_gen_register_Core_3();
 void qtc_gen_register_Core_4();
+void qtc_ov_register_Core();
 #endif
 #ifdef QTC_HAS_MODULE_Gui
 void qtc_gen_register_Gui_0();
 void qtc_gen_register_Gui_1();
 void qtc_gen_register_Gui_2();
 void qtc_gen_register_Gui_3();
+void qtc_ov_register_Gui();
 #endif
 #ifdef QTC_HAS_MODULE_Widgets
 void qtc_gen_register_Widgets_0();
@@ -19,10 +21,13 @@ void qtc_gen_register_Widgets_1();
 void qtc_gen_register_Widgets_2();
 void qtc_gen_register_Widgets_3();
 void qtc_gen_register_Widgets_4();
+void qtc_gen_register_Widgets_5();
+void qtc_ov_register_Widgets();
 #endif
 #ifdef QTC_HAS_MODULE_Network
 void qtc_gen_register_Network_0();
 void qtc_gen_register_Network_1();
+void qtc_ov_register_Network();
 #endif
 #ifdef QTC_HAS_MODULE_Sql
 void qtc_gen_register_Sql_0();
@@ -38,9 +43,11 @@ void qtc_gen_register_DBus_0();
 #endif
 #ifdef QTC_HAS_MODULE_OpenGL
 void qtc_gen_register_OpenGL_0();
+void qtc_ov_register_OpenGL();
 #endif
 #ifdef QTC_HAS_MODULE_OpenGLWidgets
 void qtc_gen_register_OpenGLWidgets_0();
+void qtc_ov_register_OpenGLWidgets();
 #endif
 #ifdef QTC_HAS_MODULE_Svg
 void qtc_gen_register_Svg_0();
@@ -88,6 +95,18 @@ void qtc_gen_register_WebChannel_0();
 #ifdef QTC_HAS_MODULE_UiTools
 void qtc_gen_register_UiTools_0();
 #endif
+#ifdef QTC_HAS_MODULE_NetworkAuth
+void qtc_gen_register_NetworkAuth_0();
+#endif
+#ifdef QTC_HAS_MODULE_HttpServer
+void qtc_gen_register_HttpServer_0();
+#endif
+#ifdef QTC_HAS_MODULE_Mqtt
+void qtc_gen_register_Mqtt_0();
+#endif
+#ifdef QTC_HAS_MODULE_Coap
+void qtc_gen_register_Coap_0();
+#endif
 
 void qtc_gen_register_all() {
 #ifdef QTC_HAS_MODULE_Core
@@ -96,12 +115,14 @@ void qtc_gen_register_all() {
     qtc_gen_register_Core_2();
     qtc_gen_register_Core_3();
     qtc_gen_register_Core_4();
+    qtc_ov_register_Core();
 #endif
 #ifdef QTC_HAS_MODULE_Gui
     qtc_gen_register_Gui_0();
     qtc_gen_register_Gui_1();
     qtc_gen_register_Gui_2();
     qtc_gen_register_Gui_3();
+    qtc_ov_register_Gui();
 #endif
 #ifdef QTC_HAS_MODULE_Widgets
     qtc_gen_register_Widgets_0();
@@ -109,10 +130,13 @@ void qtc_gen_register_all() {
     qtc_gen_register_Widgets_2();
     qtc_gen_register_Widgets_3();
     qtc_gen_register_Widgets_4();
+    qtc_gen_register_Widgets_5();
+    qtc_ov_register_Widgets();
 #endif
 #ifdef QTC_HAS_MODULE_Network
     qtc_gen_register_Network_0();
     qtc_gen_register_Network_1();
+    qtc_ov_register_Network();
 #endif
 #ifdef QTC_HAS_MODULE_Sql
     qtc_gen_register_Sql_0();
@@ -128,9 +152,11 @@ void qtc_gen_register_all() {
 #endif
 #ifdef QTC_HAS_MODULE_OpenGL
     qtc_gen_register_OpenGL_0();
+    qtc_ov_register_OpenGL();
 #endif
 #ifdef QTC_HAS_MODULE_OpenGLWidgets
     qtc_gen_register_OpenGLWidgets_0();
+    qtc_ov_register_OpenGLWidgets();
 #endif
 #ifdef QTC_HAS_MODULE_Svg
     qtc_gen_register_Svg_0();
@@ -177,5 +203,17 @@ void qtc_gen_register_all() {
 #endif
 #ifdef QTC_HAS_MODULE_UiTools
     qtc_gen_register_UiTools_0();
+#endif
+#ifdef QTC_HAS_MODULE_NetworkAuth
+    qtc_gen_register_NetworkAuth_0();
+#endif
+#ifdef QTC_HAS_MODULE_HttpServer
+    qtc_gen_register_HttpServer_0();
+#endif
+#ifdef QTC_HAS_MODULE_Mqtt
+    qtc_gen_register_Mqtt_0();
+#endif
+#ifdef QTC_HAS_MODULE_Coap
+    qtc_gen_register_Coap_0();
 #endif
 }

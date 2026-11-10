@@ -27,4 +27,7 @@ under the GNU Lesser General Public License v3, the GNU General Public License
 v2/v3, or a commercial license from The Qt Company; see https://www.qt.io/licensing.
 A program that uses qtc uses Qt and must meet the terms of the Qt license it uses
 (for the LGPL: link Qt dynamically, let users replace it, ship its license text).
+A default build of qtc binds only Qt modules available under the LGPL-3.0; the Qt
+modules available under the GPL-3.0 only (Charts, Network Authorization, HTTP
+Server, MQTT, CoAP) are bound only with -DQTC_GPL_MODULES=ON. See docs/LICENSING.md.
 The models in gen/models describe the Qt API as declared in Qt's headers.

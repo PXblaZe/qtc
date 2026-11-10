@@ -18,13 +18,13 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtOpenGLWidgets/qopenglwidget.h>)
-template <class S> static int t10384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10538(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QOpenGLWidget::UpdateBehavior> p0;
-    QTC_CVE(0, p0, 412);
+    QTC_CVE(0, p0, 436);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::UpdateBehavior> &p0) { qtc::cve(aa[0], p0, 0, 412); s->setUpdateBehavior(p0.get()); }) { s->setUpdateBehavior(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::UpdateBehavior> &p0) { qtc::cve(aa[0], p0, 0, 436); s->setUpdateBehavior(p0.get()); }) { s->setUpdateBehavior(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -32,7 +32,7 @@ template <class S> static int t10384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10539(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -44,7 +44,7 @@ template <class S> static int t10385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10540(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSurfaceFormat> p0;
     QTC_CV(0, p0);
@@ -58,7 +58,7 @@ template <class S> static int t10386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10541(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -70,7 +70,7 @@ template <class S> static int t10387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10542(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -82,7 +82,7 @@ template <class S> static int t10388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10543(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -96,7 +96,7 @@ template <class S> static int t10389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10544(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -108,7 +108,7 @@ template <class S> static int t10390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10545(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -121,13 +121,13 @@ template <class S> static int t10391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10546(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QOpenGLWidget::TargetBuffer> p0;
-    QTC_CVE(0, p0, 411);
+    QTC_CVE(0, p0, 435);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::TargetBuffer> &p0) { qtc::cve(aa[0], p0, 0, 411); s->makeCurrent(p0.get()); }) { s->makeCurrent(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::TargetBuffer> &p0) { qtc::cve(aa[0], p0, 0, 435); s->makeCurrent(p0.get()); }) { s->makeCurrent(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -136,7 +136,7 @@ template <class S> static int t10392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10547(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -148,7 +148,7 @@ template <class S> static int t10393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10548(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -160,7 +160,7 @@ template <class S> static int t10394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10549(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -173,13 +173,13 @@ template <class S> static int t10395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10550(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QOpenGLWidget::TargetBuffer> p0;
-    QTC_CVE(0, p0, 411);
+    QTC_CVE(0, p0, 435);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::TargetBuffer> &p0) { qtc::cve(aa[0], p0, 0, 411); qtc::rt(*rr, s->defaultFramebufferObject(p0.get())); }) { qtc::rt(*r, s->defaultFramebufferObject(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::TargetBuffer> &p0) { qtc::cve(aa[0], p0, 0, 435); qtc::rt(*rr, s->defaultFramebufferObject(p0.get())); }) { qtc::rt(*r, s->defaultFramebufferObject(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -188,7 +188,7 @@ template <class S> static int t10396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10551(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::pixels_ok(double(s->width()) * s->devicePixelRatioF(), double(s->height()) * s->devicePixelRatioF(), 4))) return qtc::pre_fail(QTC_ERR_LIMIT, "QOpenGLWidget::grabFramebuffer(): the image would exceed the allocation limit (qtc_set_alloc_limit)");
     switch (n) {
@@ -202,14 +202,14 @@ template <class S> static int t10397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10552(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QOpenGLWidget::TargetBuffer> p0;
-    QTC_CVE(0, p0, 411);
+    QTC_CVE(0, p0, 435);
     if (!(qtc::pixels_ok(double(s->width()) * s->devicePixelRatioF(), double(s->height()) * s->devicePixelRatioF(), 4))) return qtc::pre_fail(QTC_ERR_LIMIT, "QOpenGLWidget::grabFramebuffer(QOpenGLWidget::TargetBuffer): the image would exceed the allocation limit (qtc_set_alloc_limit)");
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::TargetBuffer> &p0) { qtc::cve(aa[0], p0, 0, 411); qtc::rt(*rr, s->grabFramebuffer(p0.get())); }) { qtc::rt(*r, s->grabFramebuffer(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWidget::TargetBuffer> &p0) { qtc::cve(aa[0], p0, 0, 435); qtc::rt(*rr, s->grabFramebuffer(p0.get())); }) { qtc::rt(*r, s->grabFramebuffer(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -219,7 +219,7 @@ template <class S> static int t10398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10553(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -232,7 +232,7 @@ template <class S> static int t10399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10554(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -244,7 +244,7 @@ template <class S> static int t10400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10555(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -256,7 +256,7 @@ template <class S> static int t10401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10556(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -268,7 +268,7 @@ template <class S> static int t10402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10557(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -280,12 +280,12 @@ template <class S> static int t10403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10558(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QWidget *> p0;
     qtc::H<QFlags<Qt::WindowType>> p1;
     if (n > 0) QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 926);
+    if (n > 1) QTC_CVF(1, p1, 950);
     switch (n) {
         case 0:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
@@ -294,7 +294,7 @@ template <class S> static int t10404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 926); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 950); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -302,52 +302,52 @@ template <class S> static int t10404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P10384[] = {{qtc::PK_ENUM, 412, "QOpenGLWidget::UpdateBehavior", nullptr}};
-static const qtc::ParamDesc P10386[] = {{qtc::PK_VALUE, -1, "QSurfaceFormat", nullptr}};
-static const qtc::ParamDesc P10389[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10538[] = {{qtc::PK_ENUM, 436, "QOpenGLWidget::UpdateBehavior", nullptr}};
+static const qtc::ParamDesc P10540[] = {{qtc::PK_VALUE, -1, "QSurfaceFormat", nullptr}};
+static const qtc::ParamDesc P10543[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10392[] = {{qtc::PK_ENUM, 411, "QOpenGLWidget::TargetBuffer", nullptr}};
+static const qtc::ParamDesc P10546[] = {{qtc::PK_ENUM, 435, "QOpenGLWidget::TargetBuffer", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10396[] = {{qtc::PK_ENUM, 411, "QOpenGLWidget::TargetBuffer", nullptr}};
+static const qtc::ParamDesc P10550[] = {{qtc::PK_ENUM, 435, "QOpenGLWidget::TargetBuffer", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10398[] = {{qtc::PK_ENUM, 411, "QOpenGLWidget::TargetBuffer", nullptr}};
+static const qtc::ParamDesc P10552[] = {{qtc::PK_ENUM, 435, "QOpenGLWidget::TargetBuffer", nullptr}};
 #endif
-static const qtc::ParamDesc P10404[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}, {qtc::PK_FLAGS, 926, "QFlags<Qt::WindowType>", nullptr}};
+static const qtc::ParamDesc P10558[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}, {qtc::PK_FLAGS, 950, "QFlags<Qt::WindowType>", nullptr}};
 #if __has_include(<QtOpenGLWidgets/qopenglwidget.h>)
 static const qtc::MethodDef M_QOpenGLWidget[] = {
-    {"setUpdateBehavior", "setUpdateBehavior(QOpenGLWidget::UpdateBehavior)", t10384<QOpenGLWidget>, P10384, 1, 1, 0, QTC_T_NONE, "void"},
-    {"updateBehavior", "updateBehavior()", t10385<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLWidget::UpdateBehavior"},
-    {"setFormat", "setFormat(QSurfaceFormat)", t10386<QOpenGLWidget>, P10386, 1, 1, 0, QTC_T_NONE, "void"},
-    {"format", "format()", t10387<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSurfaceFormat"},
-    {"textureFormat", "textureFormat()", t10388<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"setTextureFormat", "setTextureFormat(GLenum)", t10389<QOpenGLWidget>, P10389, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isValid", "isValid()", t10390<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"makeCurrent", "makeCurrent()", t10391<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setUpdateBehavior", "setUpdateBehavior(QOpenGLWidget::UpdateBehavior)", t10538<QOpenGLWidget>, P10538, 1, 1, 0, QTC_T_NONE, "void"},
+    {"updateBehavior", "updateBehavior()", t10539<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLWidget::UpdateBehavior"},
+    {"setFormat", "setFormat(QSurfaceFormat)", t10540<QOpenGLWidget>, P10540, 1, 1, 0, QTC_T_NONE, "void"},
+    {"format", "format()", t10541<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSurfaceFormat"},
+    {"textureFormat", "textureFormat()", t10542<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"setTextureFormat", "setTextureFormat(GLenum)", t10543<QOpenGLWidget>, P10543, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isValid", "isValid()", t10544<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"makeCurrent", "makeCurrent()", t10545<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"makeCurrent", "makeCurrent(QOpenGLWidget::TargetBuffer)", t10392<QOpenGLWidget>, P10392, 1, 1, 0, QTC_T_NONE, "void"},
+    {"makeCurrent", "makeCurrent(QOpenGLWidget::TargetBuffer)", t10546<QOpenGLWidget>, P10546, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"doneCurrent", "doneCurrent()", t10393<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"context", "context()", t10394<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QOpenGLContext*"},
-    {"defaultFramebufferObject", "defaultFramebufferObject()", t10395<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"doneCurrent", "doneCurrent()", t10547<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"context", "context()", t10548<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QOpenGLContext*"},
+    {"defaultFramebufferObject", "defaultFramebufferObject()", t10549<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"defaultFramebufferObject", "defaultFramebufferObject(QOpenGLWidget::TargetBuffer)", t10396<QOpenGLWidget>, P10396, 1, 1, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"defaultFramebufferObject", "defaultFramebufferObject(QOpenGLWidget::TargetBuffer)", t10550<QOpenGLWidget>, P10550, 1, 1, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
 #endif
-    {"grabFramebuffer", "grabFramebuffer()", t10397<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_VALUE, "QImage"},
+    {"grabFramebuffer", "grabFramebuffer()", t10551<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_VALUE, "QImage"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"grabFramebuffer", "grabFramebuffer(QOpenGLWidget::TargetBuffer)", t10398<QOpenGLWidget>, P10398, 1, 1, 0, QTC_T_VALUE, "QImage"},
+    {"grabFramebuffer", "grabFramebuffer(QOpenGLWidget::TargetBuffer)", t10552<QOpenGLWidget>, P10552, 1, 1, 0, QTC_T_VALUE, "QImage"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"currentTargetBuffer", "currentTargetBuffer()", t10399<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLWidget::TargetBuffer"},
+    {"currentTargetBuffer", "currentTargetBuffer()", t10553<QOpenGLWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLWidget::TargetBuffer"},
 #endif
-    {"aboutToCompose", "aboutToCompose()", t10400<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"frameSwapped", "frameSwapped()", t10401<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"aboutToResize", "aboutToResize()", t10402<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"resized", "resized()", t10403<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"aboutToCompose", "aboutToCompose()", t10554<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"frameSwapped", "frameSwapped()", t10555<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"aboutToResize", "aboutToResize()", t10556<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"resized", "resized()", t10557<QOpenGLWidget>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QOpenGLWidget[] = {
-    {"QOpenGLWidget", "QOpenGLWidget(QWidget*,Qt::WindowFlags)", t10404<QOpenGLWidget>, P10404, 2, 0, 0, QTC_T_OBJ, "QOpenGLWidget"},
+    {"QOpenGLWidget", "QOpenGLWidget(QWidget*,Qt::WindowFlags)", t10558<QOpenGLWidget>, P10558, 2, 0, 0, QTC_T_OBJ, "QOpenGLWidget"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

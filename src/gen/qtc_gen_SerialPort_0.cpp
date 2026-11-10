@@ -15,7 +15,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtSerialPort/qserialport.h>)
-template <class S> static int t12955(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -29,7 +29,7 @@ template <class S> static int t12955(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12956(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -41,7 +41,7 @@ template <class S> static int t12956(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12957(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPortInfo> p0;
     QTC_CV(0, p0);
@@ -55,14 +55,14 @@ template <class S> static int t12957(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12958(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p0;
-    QTC_CVF(0, p0, 244);
+    QTC_CVF(0, p0, 254);
     if (!(qtc::nmea_open_ok(s, int((p0.get()))))) return qtc::pre_fail(QTC_ERR_STATE, "QSerialPort::open(OpenMode): an NMEA source reads this device: open it for reading");
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 244); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 254); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -70,7 +70,7 @@ template <class S> static int t12958(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -82,18 +82,18 @@ template <class S> static int t12959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QFlags<QSerialPort::Direction>> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 569);
+    if (n > 1) QTC_CVF(1, p1, 593);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->setBaudRate(p0.get())); }) { qtc::rt(*r, s->setBaudRate(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QSerialPort::Direction>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 569); qtc::rt(*rr, s->setBaudRate(p0.get(), p1.get())); }) { qtc::rt(*r, s->setBaudRate(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QSerialPort::Direction>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 593); qtc::rt(*rr, s->setBaudRate(p0.get(), p1.get())); }) { qtc::rt(*r, s->setBaudRate(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -101,16 +101,16 @@ template <class S> static int t12960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QSerialPort::Direction>> p0;
-    if (n > 0) QTC_CVF(0, p0, 569);
+    if (n > 0) QTC_CVF(0, p0, 593);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->baudRate()); }) { qtc::rt(*r, s->baudRate()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QSerialPort::Direction>> &p0) { qtc::cvf(aa[0], p0, 0, 569); qtc::rt(*rr, s->baudRate(p0.get())); }) { qtc::rt(*r, s->baudRate(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QSerialPort::Direction>> &p0) { qtc::cvf(aa[0], p0, 0, 593); qtc::rt(*rr, s->baudRate(p0.get())); }) { qtc::rt(*r, s->baudRate(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -118,13 +118,13 @@ template <class S> static int t12961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::DataBits> p0;
-    QTC_CVE(0, p0, 568);
+    QTC_CVE(0, p0, 592);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::DataBits> &p0) { qtc::cve(aa[0], p0, 0, 568); qtc::rt(*rr, s->setDataBits(p0.get())); }) { qtc::rt(*r, s->setDataBits(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::DataBits> &p0) { qtc::cve(aa[0], p0, 0, 592); qtc::rt(*rr, s->setDataBits(p0.get())); }) { qtc::rt(*r, s->setDataBits(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -132,7 +132,7 @@ template <class S> static int t12962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -144,13 +144,13 @@ template <class S> static int t12963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::Parity> p0;
-    QTC_CVE(0, p0, 571);
+    QTC_CVE(0, p0, 595);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::Parity> &p0) { qtc::cve(aa[0], p0, 0, 571); qtc::rt(*rr, s->setParity(p0.get())); }) { qtc::rt(*r, s->setParity(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::Parity> &p0) { qtc::cve(aa[0], p0, 0, 595); qtc::rt(*rr, s->setParity(p0.get())); }) { qtc::rt(*r, s->setParity(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -158,7 +158,7 @@ template <class S> static int t12964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -170,13 +170,13 @@ template <class S> static int t12965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::StopBits> p0;
-    QTC_CVE(0, p0, 574);
+    QTC_CVE(0, p0, 598);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::StopBits> &p0) { qtc::cve(aa[0], p0, 0, 574); qtc::rt(*rr, s->setStopBits(p0.get())); }) { qtc::rt(*r, s->setStopBits(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::StopBits> &p0) { qtc::cve(aa[0], p0, 0, 598); qtc::rt(*rr, s->setStopBits(p0.get())); }) { qtc::rt(*r, s->setStopBits(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -184,7 +184,7 @@ template <class S> static int t12966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -196,13 +196,13 @@ template <class S> static int t12967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::FlowControl> p0;
-    QTC_CVE(0, p0, 570);
+    QTC_CVE(0, p0, 594);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::FlowControl> &p0) { qtc::cve(aa[0], p0, 0, 570); qtc::rt(*rr, s->setFlowControl(p0.get())); }) { qtc::rt(*r, s->setFlowControl(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::FlowControl> &p0) { qtc::cve(aa[0], p0, 0, 594); qtc::rt(*rr, s->setFlowControl(p0.get())); }) { qtc::rt(*r, s->setFlowControl(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -210,7 +210,7 @@ template <class S> static int t12968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -222,7 +222,7 @@ template <class S> static int t12969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -236,7 +236,7 @@ template <class S> static int t12970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -248,7 +248,7 @@ template <class S> static int t12971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -262,7 +262,7 @@ template <class S> static int t12972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -274,7 +274,7 @@ template <class S> static int t12973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -286,7 +286,7 @@ template <class S> static int t12974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -298,16 +298,16 @@ template <class S> static int t12975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QSerialPort::Direction>> p0;
-    if (n > 0) QTC_CVF(0, p0, 569);
+    if (n > 0) QTC_CVF(0, p0, 593);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->clear()); }) { qtc::rt(*r, s->clear()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QSerialPort::Direction>> &p0) { qtc::cvf(aa[0], p0, 0, 569); qtc::rt(*rr, s->clear(p0.get())); }) { qtc::rt(*r, s->clear(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QSerialPort::Direction>> &p0) { qtc::cvf(aa[0], p0, 0, 593); qtc::rt(*rr, s->clear(p0.get())); }) { qtc::rt(*r, s->clear(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -315,7 +315,7 @@ template <class S> static int t12976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -327,7 +327,7 @@ template <class S> static int t12977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -339,7 +339,7 @@ template <class S> static int t12978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -351,7 +351,7 @@ template <class S> static int t12979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -366,7 +366,7 @@ template <class S> static int t12980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t12981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -380,7 +380,7 @@ template <class S> static int t12981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t12982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -395,7 +395,7 @@ template <class S> static int t12982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t12983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -407,7 +407,7 @@ template <class S> static int t12983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -419,7 +419,7 @@ template <class S> static int t12984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -431,7 +431,7 @@ template <class S> static int t12985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -443,7 +443,7 @@ template <class S> static int t12986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -460,7 +460,7 @@ template <class S> static int t12987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -477,7 +477,7 @@ template <class S> static int t12988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -494,7 +494,7 @@ template <class S> static int t12989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -507,7 +507,7 @@ template <class S> static int t12990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t12991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -521,7 +521,7 @@ template <class S> static int t12991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t12992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -536,7 +536,7 @@ template <class S> static int t12992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t12993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -548,15 +548,15 @@ template <class S> static int t12993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QFlags<QSerialPort::Direction>> p1;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 569);
+    QTC_CVF(1, p1, 593);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QSerialPort::Direction>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 569); s->baudRateChanged(p0.get(), p1.get()); }) { s->baudRateChanged(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QSerialPort::Direction>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 593); s->baudRateChanged(p0.get(), p1.get()); }) { s->baudRateChanged(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -564,13 +564,13 @@ template <class S> static int t12994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::DataBits> p0;
-    QTC_CVE(0, p0, 568);
+    QTC_CVE(0, p0, 592);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::DataBits> &p0) { qtc::cve(aa[0], p0, 0, 568); s->dataBitsChanged(p0.get()); }) { s->dataBitsChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::DataBits> &p0) { qtc::cve(aa[0], p0, 0, 592); s->dataBitsChanged(p0.get()); }) { s->dataBitsChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -578,13 +578,13 @@ template <class S> static int t12995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::Parity> p0;
-    QTC_CVE(0, p0, 571);
+    QTC_CVE(0, p0, 595);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::Parity> &p0) { qtc::cve(aa[0], p0, 0, 571); s->parityChanged(p0.get()); }) { s->parityChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::Parity> &p0) { qtc::cve(aa[0], p0, 0, 595); s->parityChanged(p0.get()); }) { s->parityChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -592,13 +592,13 @@ template <class S> static int t12996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::StopBits> p0;
-    QTC_CVE(0, p0, 574);
+    QTC_CVE(0, p0, 598);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::StopBits> &p0) { qtc::cve(aa[0], p0, 0, 574); s->stopBitsChanged(p0.get()); }) { s->stopBitsChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::StopBits> &p0) { qtc::cve(aa[0], p0, 0, 598); s->stopBitsChanged(p0.get()); }) { s->stopBitsChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -606,13 +606,13 @@ template <class S> static int t12997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::FlowControl> p0;
-    QTC_CVE(0, p0, 570);
+    QTC_CVE(0, p0, 594);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::FlowControl> &p0) { qtc::cve(aa[0], p0, 0, 570); s->flowControlChanged(p0.get()); }) { s->flowControlChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::FlowControl> &p0) { qtc::cve(aa[0], p0, 0, 594); s->flowControlChanged(p0.get()); }) { s->flowControlChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -620,7 +620,7 @@ template <class S> static int t12998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t12999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -634,7 +634,7 @@ template <class S> static int t12999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -648,13 +648,13 @@ template <class S> static int t13000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSerialPort::SerialPortError> p0;
-    QTC_CVE(0, p0, 573);
+    QTC_CVE(0, p0, 597);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::SerialPortError> &p0) { qtc::cve(aa[0], p0, 0, 573); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSerialPort::SerialPortError> &p0) { qtc::cve(aa[0], p0, 0, 597); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -662,7 +662,7 @@ template <class S> static int t13001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -677,7 +677,7 @@ template <class S> static int t13002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t13003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -692,7 +692,7 @@ template <class S> static int t13003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t13004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -708,7 +708,7 @@ template <class S> static int t13004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -726,7 +726,7 @@ template <class S> static int t13005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QSerialPortInfo> p0;
     qtc::H<QObject *> p1;
@@ -746,7 +746,7 @@ template <class S> static int t13006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSerialPort/qserialportinfo.h>)
-template <class S> static int t13007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -758,7 +758,7 @@ template <class S> static int t13007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -770,7 +770,7 @@ template <class S> static int t13008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -782,7 +782,7 @@ template <class S> static int t13009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -794,7 +794,7 @@ template <class S> static int t13010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -806,7 +806,7 @@ template <class S> static int t13011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -818,7 +818,7 @@ template <class S> static int t13012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -830,7 +830,7 @@ template <class S> static int t13013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -842,7 +842,7 @@ template <class S> static int t13014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -854,7 +854,7 @@ template <class S> static int t13015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -866,7 +866,7 @@ template <class S> static int t13016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -877,7 +877,7 @@ template <class S> static int t13017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -888,7 +888,7 @@ template <class S> static int t13018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -899,7 +899,7 @@ template <class S> static int t13019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -913,130 +913,130 @@ template <class S> static int t13020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P12955[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P12957[] = {{qtc::PK_VALUE, -1, "QSerialPortInfo", nullptr}};
-static const qtc::ParamDesc P12958[] = {{qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P12960[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 569, "QFlags<QSerialPort::Direction>", nullptr}};
-static const qtc::ParamDesc P12961[] = {{qtc::PK_FLAGS, 569, "QFlags<QSerialPort::Direction>", nullptr}};
-static const qtc::ParamDesc P12962[] = {{qtc::PK_ENUM, 568, "QSerialPort::DataBits", nullptr}};
-static const qtc::ParamDesc P12964[] = {{qtc::PK_ENUM, 571, "QSerialPort::Parity", nullptr}};
-static const qtc::ParamDesc P12966[] = {{qtc::PK_ENUM, 574, "QSerialPort::StopBits", nullptr}};
-static const qtc::ParamDesc P12968[] = {{qtc::PK_ENUM, 570, "QSerialPort::FlowControl", nullptr}};
-static const qtc::ParamDesc P12970[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P12972[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P12976[] = {{qtc::PK_FLAGS, 569, "QFlags<QSerialPort::Direction>", nullptr}};
-static const qtc::ParamDesc P12980[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13113[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13115[] = {{qtc::PK_VALUE, -1, "QSerialPortInfo", nullptr}};
+static const qtc::ParamDesc P13116[] = {{qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P13118[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 593, "QFlags<QSerialPort::Direction>", nullptr}};
+static const qtc::ParamDesc P13119[] = {{qtc::PK_FLAGS, 593, "QFlags<QSerialPort::Direction>", nullptr}};
+static const qtc::ParamDesc P13120[] = {{qtc::PK_ENUM, 592, "QSerialPort::DataBits", nullptr}};
+static const qtc::ParamDesc P13122[] = {{qtc::PK_ENUM, 595, "QSerialPort::Parity", nullptr}};
+static const qtc::ParamDesc P13124[] = {{qtc::PK_ENUM, 598, "QSerialPort::StopBits", nullptr}};
+static const qtc::ParamDesc P13126[] = {{qtc::PK_ENUM, 594, "QSerialPort::FlowControl", nullptr}};
+static const qtc::ParamDesc P13128[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13130[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13134[] = {{qtc::PK_FLAGS, 593, "QFlags<QSerialPort::Direction>", nullptr}};
+static const qtc::ParamDesc P13138[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P12982[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13140[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #endif
-static const qtc::ParamDesc P12987[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P12988[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P12989[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13145[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13146[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13147[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P12992[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13150[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
-static const qtc::ParamDesc P12994[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 569, "QFlags<QSerialPort::Direction>", nullptr}};
-static const qtc::ParamDesc P12995[] = {{qtc::PK_ENUM, 568, "QSerialPort::DataBits", nullptr}};
-static const qtc::ParamDesc P12996[] = {{qtc::PK_ENUM, 571, "QSerialPort::Parity", nullptr}};
-static const qtc::ParamDesc P12997[] = {{qtc::PK_ENUM, 574, "QSerialPort::StopBits", nullptr}};
-static const qtc::ParamDesc P12998[] = {{qtc::PK_ENUM, 570, "QSerialPort::FlowControl", nullptr}};
-static const qtc::ParamDesc P12999[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13000[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13001[] = {{qtc::PK_ENUM, 573, "QSerialPort::SerialPortError", nullptr}};
-static const qtc::ParamDesc P13002[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13152[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 593, "QFlags<QSerialPort::Direction>", nullptr}};
+static const qtc::ParamDesc P13153[] = {{qtc::PK_ENUM, 592, "QSerialPort::DataBits", nullptr}};
+static const qtc::ParamDesc P13154[] = {{qtc::PK_ENUM, 595, "QSerialPort::Parity", nullptr}};
+static const qtc::ParamDesc P13155[] = {{qtc::PK_ENUM, 598, "QSerialPort::StopBits", nullptr}};
+static const qtc::ParamDesc P13156[] = {{qtc::PK_ENUM, 594, "QSerialPort::FlowControl", nullptr}};
+static const qtc::ParamDesc P13157[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13158[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13159[] = {{qtc::PK_ENUM, 597, "QSerialPort::SerialPortError", nullptr}};
+static const qtc::ParamDesc P13160[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P13003[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13161[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
-static const qtc::ParamDesc P13004[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13005[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13006[] = {{qtc::PK_VALUE, -1, "QSerialPortInfo", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13162[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13163[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13164[] = {{qtc::PK_VALUE, -1, "QSerialPortInfo", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtSerialPort/qserialport.h>)
 static const qtc::MethodDef M_QSerialPort[] = {
-    {"setPortName", "setPortName(QString)", t12955<QSerialPort>, P12955, 1, 1, 0, QTC_T_NONE, "void"},
-    {"portName", "portName()", t12956<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPort", "setPort(QSerialPortInfo)", t12957<QSerialPort>, P12957, 1, 1, 0, QTC_T_NONE, "void"},
-    {"open", "open(OpenMode)", t12958<QSerialPort>, P12958, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"close", "close()", t12959<QSerialPort>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"setBaudRate", "setBaudRate(qint32,QSerialPort::Directions)", t12960<QSerialPort>, P12960, 2, 1, 0, QTC_T_BOOL, "bool"},
-    {"baudRate", "baudRate(QSerialPort::Directions)", t12961<QSerialPort>, P12961, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setDataBits", "setDataBits(QSerialPort::DataBits)", t12962<QSerialPort>, P12962, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"dataBits", "dataBits()", t12963<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::DataBits"},
-    {"setParity", "setParity(QSerialPort::Parity)", t12964<QSerialPort>, P12964, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"parity", "parity()", t12965<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::Parity"},
-    {"setStopBits", "setStopBits(QSerialPort::StopBits)", t12966<QSerialPort>, P12966, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"stopBits", "stopBits()", t12967<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::StopBits"},
-    {"setFlowControl", "setFlowControl(QSerialPort::FlowControl)", t12968<QSerialPort>, P12968, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"flowControl", "flowControl()", t12969<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::FlowControl"},
-    {"setDataTerminalReady", "setDataTerminalReady(bool)", t12970<QSerialPort>, P12970, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"isDataTerminalReady", "isDataTerminalReady()", t12971<QSerialPort>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"setRequestToSend", "setRequestToSend(bool)", t12972<QSerialPort>, P12972, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"isRequestToSend", "isRequestToSend()", t12973<QSerialPort>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"pinoutSignals", "pinoutSignals()", t12974<QSerialPort>, nullptr, 0, 0, 0, QTC_T_INT, "QFlags<QSerialPort::PinoutSignal>"},
-    {"flush", "flush()", t12975<QSerialPort>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"clear", "clear(QSerialPort::Directions)", t12976<QSerialPort>, P12976, 1, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"error", "error()", t12977<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::SerialPortError"},
-    {"clearError", "clearError()", t12978<QSerialPort>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"readBufferSize", "readBufferSize()", t12979<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setReadBufferSize", "setReadBufferSize(qint64)", t12980<QSerialPort>, P12980, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setPortName", "setPortName(QString)", t13113<QSerialPort>, P13113, 1, 1, 0, QTC_T_NONE, "void"},
+    {"portName", "portName()", t13114<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPort", "setPort(QSerialPortInfo)", t13115<QSerialPort>, P13115, 1, 1, 0, QTC_T_NONE, "void"},
+    {"open", "open(OpenMode)", t13116<QSerialPort>, P13116, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"close", "close()", t13117<QSerialPort>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"setBaudRate", "setBaudRate(qint32,QSerialPort::Directions)", t13118<QSerialPort>, P13118, 2, 1, 0, QTC_T_BOOL, "bool"},
+    {"baudRate", "baudRate(QSerialPort::Directions)", t13119<QSerialPort>, P13119, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setDataBits", "setDataBits(QSerialPort::DataBits)", t13120<QSerialPort>, P13120, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"dataBits", "dataBits()", t13121<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::DataBits"},
+    {"setParity", "setParity(QSerialPort::Parity)", t13122<QSerialPort>, P13122, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"parity", "parity()", t13123<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::Parity"},
+    {"setStopBits", "setStopBits(QSerialPort::StopBits)", t13124<QSerialPort>, P13124, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"stopBits", "stopBits()", t13125<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::StopBits"},
+    {"setFlowControl", "setFlowControl(QSerialPort::FlowControl)", t13126<QSerialPort>, P13126, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"flowControl", "flowControl()", t13127<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::FlowControl"},
+    {"setDataTerminalReady", "setDataTerminalReady(bool)", t13128<QSerialPort>, P13128, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"isDataTerminalReady", "isDataTerminalReady()", t13129<QSerialPort>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"setRequestToSend", "setRequestToSend(bool)", t13130<QSerialPort>, P13130, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"isRequestToSend", "isRequestToSend()", t13131<QSerialPort>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"pinoutSignals", "pinoutSignals()", t13132<QSerialPort>, nullptr, 0, 0, 0, QTC_T_INT, "QFlags<QSerialPort::PinoutSignal>"},
+    {"flush", "flush()", t13133<QSerialPort>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"clear", "clear(QSerialPort::Directions)", t13134<QSerialPort>, P13134, 1, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"error", "error()", t13135<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSerialPort::SerialPortError"},
+    {"clearError", "clearError()", t13136<QSerialPort>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"readBufferSize", "readBufferSize()", t13137<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setReadBufferSize", "setReadBufferSize(qint64)", t13138<QSerialPort>, P13138, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"writeBufferSize", "writeBufferSize()", t12981<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"writeBufferSize", "writeBufferSize()", t13139<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setWriteBufferSize", "setWriteBufferSize(qint64)", t12982<QSerialPort>, P12982, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setWriteBufferSize", "setWriteBufferSize(qint64)", t13140<QSerialPort>, P13140, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"isSequential", "isSequential()", t12983<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"bytesAvailable", "bytesAvailable()", t12984<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"bytesToWrite", "bytesToWrite()", t12985<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"canReadLine", "canReadLine()", t12986<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"waitForReadyRead", "waitForReadyRead(int)", t12987<QSerialPort>, P12987, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"waitForBytesWritten", "waitForBytesWritten(int)", t12988<QSerialPort>, P12988, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"setBreakEnabled", "setBreakEnabled(bool)", t12989<QSerialPort>, P12989, 1, 0, 0, QTC_T_BOOL, "bool"},
-    {"isBreakEnabled", "isBreakEnabled()", t12990<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isSequential", "isSequential()", t13141<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"bytesAvailable", "bytesAvailable()", t13142<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bytesToWrite", "bytesToWrite()", t13143<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"canReadLine", "canReadLine()", t13144<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"waitForReadyRead", "waitForReadyRead(int)", t13145<QSerialPort>, P13145, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"waitForBytesWritten", "waitForBytesWritten(int)", t13146<QSerialPort>, P13146, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"setBreakEnabled", "setBreakEnabled(bool)", t13147<QSerialPort>, P13147, 1, 0, 0, QTC_T_BOOL, "bool"},
+    {"isBreakEnabled", "isBreakEnabled()", t13148<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"settingsRestoredOnClose", "settingsRestoredOnClose()", t12991<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"settingsRestoredOnClose", "settingsRestoredOnClose()", t13149<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setSettingsRestoredOnClose", "setSettingsRestoredOnClose(bool)", t12992<QSerialPort>, P12992, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setSettingsRestoredOnClose", "setSettingsRestoredOnClose(bool)", t13150<QSerialPort>, P13150, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"handle", "handle()", t12993<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"baudRateChanged", "baudRateChanged(qint32,QSerialPort::Directions)", t12994<QSerialPort>, P12994, 2, 2, 0, QTC_T_NONE, "void"},
-    {"dataBitsChanged", "dataBitsChanged(QSerialPort::DataBits)", t12995<QSerialPort>, P12995, 1, 1, 0, QTC_T_NONE, "void"},
-    {"parityChanged", "parityChanged(QSerialPort::Parity)", t12996<QSerialPort>, P12996, 1, 1, 0, QTC_T_NONE, "void"},
-    {"stopBitsChanged", "stopBitsChanged(QSerialPort::StopBits)", t12997<QSerialPort>, P12997, 1, 1, 0, QTC_T_NONE, "void"},
-    {"flowControlChanged", "flowControlChanged(QSerialPort::FlowControl)", t12998<QSerialPort>, P12998, 1, 1, 0, QTC_T_NONE, "void"},
-    {"dataTerminalReadyChanged", "dataTerminalReadyChanged(bool)", t12999<QSerialPort>, P12999, 1, 1, 0, QTC_T_NONE, "void"},
-    {"requestToSendChanged", "requestToSendChanged(bool)", t13000<QSerialPort>, P13000, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QSerialPort::SerialPortError)", t13001<QSerialPort>, P13001, 1, 1, 0, QTC_T_NONE, "void"},
-    {"breakEnabledChanged", "breakEnabledChanged(bool)", t13002<QSerialPort>, P13002, 1, 1, 0, QTC_T_NONE, "void"},
+    {"handle", "handle()", t13151<QSerialPort>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"baudRateChanged", "baudRateChanged(qint32,QSerialPort::Directions)", t13152<QSerialPort>, P13152, 2, 2, 0, QTC_T_NONE, "void"},
+    {"dataBitsChanged", "dataBitsChanged(QSerialPort::DataBits)", t13153<QSerialPort>, P13153, 1, 1, 0, QTC_T_NONE, "void"},
+    {"parityChanged", "parityChanged(QSerialPort::Parity)", t13154<QSerialPort>, P13154, 1, 1, 0, QTC_T_NONE, "void"},
+    {"stopBitsChanged", "stopBitsChanged(QSerialPort::StopBits)", t13155<QSerialPort>, P13155, 1, 1, 0, QTC_T_NONE, "void"},
+    {"flowControlChanged", "flowControlChanged(QSerialPort::FlowControl)", t13156<QSerialPort>, P13156, 1, 1, 0, QTC_T_NONE, "void"},
+    {"dataTerminalReadyChanged", "dataTerminalReadyChanged(bool)", t13157<QSerialPort>, P13157, 1, 1, 0, QTC_T_NONE, "void"},
+    {"requestToSendChanged", "requestToSendChanged(bool)", t13158<QSerialPort>, P13158, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QSerialPort::SerialPortError)", t13159<QSerialPort>, P13159, 1, 1, 0, QTC_T_NONE, "void"},
+    {"breakEnabledChanged", "breakEnabledChanged(bool)", t13160<QSerialPort>, P13160, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"settingsRestoredOnCloseChanged", "settingsRestoredOnCloseChanged(bool)", t13003<QSerialPort>, P13003, 1, 1, 0, QTC_T_NONE, "void"},
+    {"settingsRestoredOnCloseChanged", "settingsRestoredOnCloseChanged(bool)", t13161<QSerialPort>, P13161, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSerialPort[] = {
-    {"QSerialPort", "QSerialPort(QObject*)", t13004<QSerialPort>, P13004, 1, 0, 0, QTC_T_OBJ, "QSerialPort"},
-    {"QSerialPort", "QSerialPort(QString,QObject*)", t13005<QSerialPort>, P13005, 2, 1, 0, QTC_T_OBJ, "QSerialPort"},
-    {"QSerialPort", "QSerialPort(QSerialPortInfo,QObject*)", t13006<QSerialPort>, P13006, 2, 1, 0, QTC_T_OBJ, "QSerialPort"},
+    {"QSerialPort", "QSerialPort(QObject*)", t13162<QSerialPort>, P13162, 1, 0, 0, QTC_T_OBJ, "QSerialPort"},
+    {"QSerialPort", "QSerialPort(QString,QObject*)", t13163<QSerialPort>, P13163, 2, 1, 0, QTC_T_OBJ, "QSerialPort"},
+    {"QSerialPort", "QSerialPort(QSerialPortInfo,QObject*)", t13164<QSerialPort>, P13164, 2, 1, 0, QTC_T_OBJ, "QSerialPort"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13020[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13178[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtSerialPort/qserialportinfo.h>)
 static const qtc::MethodDef M_QSerialPortInfo[] = {
-    {"portName", "portName()", t13007<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"systemLocation", "systemLocation()", t13008<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"description", "description()", t13009<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"manufacturer", "manufacturer()", t13010<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"serialNumber", "serialNumber()", t13011<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"vendorIdentifier", "vendorIdentifier()", t13012<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"productIdentifier", "productIdentifier()", t13013<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"hasVendorIdentifier", "hasVendorIdentifier()", t13014<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"hasProductIdentifier", "hasProductIdentifier()", t13015<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNull", "isNull()", t13016<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"standardBaudRates", "standardBaudRates()", t13017<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<int>"},
-    {"availablePorts", "availablePorts()", t13018<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QSerialPortInfo>"},
+    {"portName", "portName()", t13165<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"systemLocation", "systemLocation()", t13166<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"description", "description()", t13167<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"manufacturer", "manufacturer()", t13168<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"serialNumber", "serialNumber()", t13169<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"vendorIdentifier", "vendorIdentifier()", t13170<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"productIdentifier", "productIdentifier()", t13171<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"hasVendorIdentifier", "hasVendorIdentifier()", t13172<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"hasProductIdentifier", "hasProductIdentifier()", t13173<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull()", t13174<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"standardBaudRates", "standardBaudRates()", t13175<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<int>"},
+    {"availablePorts", "availablePorts()", t13176<QSerialPortInfo>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QSerialPortInfo>"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSerialPortInfo[] = {
-    {"QSerialPortInfo", "QSerialPortInfo()", t13019<QSerialPortInfo>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSerialPortInfo"},
-    {"QSerialPortInfo", "QSerialPortInfo(QString)", t13020<QSerialPortInfo>, P13020, 1, 1, 0, QTC_T_VALUE, "QSerialPortInfo"},
+    {"QSerialPortInfo", "QSerialPortInfo()", t13177<QSerialPortInfo>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSerialPortInfo"},
+    {"QSerialPortInfo", "QSerialPortInfo(QString)", t13178<QSerialPortInfo>, P13178, 1, 1, 0, QTC_T_VALUE, "QSerialPortInfo"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

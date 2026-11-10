@@ -18,7 +18,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtSvgWidgets/qsvgwidget.h>)
-template <class S> static int t10452(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10610(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -30,7 +30,7 @@ template <class S> static int t10452(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10453(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10611(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -43,7 +43,7 @@ template <class S> static int t10453(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t10454(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10612(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -57,13 +57,13 @@ template <class S> static int t10454(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t10455(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10613(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QtSvg::Option>> p0;
-    QTC_CVF(0, p0, 941);
+    QTC_CVF(0, p0, 971);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QtSvg::Option>> &p0) { qtc::cvf(aa[0], p0, 0, 941); s->setOptions(p0.get()); }) { s->setOptions(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QtSvg::Option>> &p0) { qtc::cvf(aa[0], p0, 0, 971); s->setOptions(p0.get()); }) { s->setOptions(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -72,7 +72,7 @@ template <class S> static int t10455(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10456(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10614(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -86,7 +86,7 @@ template <class S> static int t10456(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10457(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10615(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -100,7 +100,7 @@ template <class S> static int t10457(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10458(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10616(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QWidget *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -116,7 +116,7 @@ template <class S> static int t10458(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10459(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10617(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QWidget *> p1;
@@ -136,28 +136,28 @@ template <class S> static int t10459(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P10455[] = {{qtc::PK_FLAGS, 941, "QFlags<QtSvg::Option>", nullptr}};
+static const qtc::ParamDesc P10613[] = {{qtc::PK_FLAGS, 971, "QFlags<QtSvg::Option>", nullptr}};
 #endif
-static const qtc::ParamDesc P10456[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10457[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P10458[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
-static const qtc::ParamDesc P10459[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P10614[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10615[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P10616[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P10617[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
 #if __has_include(<QtSvgWidgets/qsvgwidget.h>)
 static const qtc::MethodDef M_QSvgWidget[] = {
-    {"renderer", "renderer()", t10452<QSvgWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QSvgRenderer*"},
-    {"sizeHint", "sizeHint()", t10453<QSvgWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"renderer", "renderer()", t10610<QSvgWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QSvgRenderer*"},
+    {"sizeHint", "sizeHint()", t10611<QSvgWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"options", "options()", t10454<QSvgWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QtSvg::Option>"},
+    {"options", "options()", t10612<QSvgWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QtSvg::Option>"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"setOptions", "setOptions(QtSvg::Options)", t10455<QSvgWidget>, P10455, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setOptions", "setOptions(QtSvg::Options)", t10613<QSvgWidget>, P10613, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"load", "load(QString)", t10456<QSvgWidget>, P10456, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"load", "load(QByteArray)", t10457<QSvgWidget>, P10457, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"load", "load(QString)", t10614<QSvgWidget>, P10614, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"load", "load(QByteArray)", t10615<QSvgWidget>, P10615, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSvgWidget[] = {
-    {"QSvgWidget", "QSvgWidget(QWidget*)", t10458<QSvgWidget>, P10458, 1, 0, 0, QTC_T_OBJ, "QSvgWidget"},
-    {"QSvgWidget", "QSvgWidget(QString,QWidget*)", t10459<QSvgWidget>, P10459, 2, 1, 0, QTC_T_OBJ, "QSvgWidget"},
+    {"QSvgWidget", "QSvgWidget(QWidget*)", t10616<QSvgWidget>, P10616, 1, 0, 0, QTC_T_OBJ, "QSvgWidget"},
+    {"QSvgWidget", "QSvgWidget(QString,QWidget*)", t10617<QSvgWidget>, P10617, 2, 1, 0, QTC_T_OBJ, "QSvgWidget"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

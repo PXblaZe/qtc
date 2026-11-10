@@ -56,6 +56,12 @@ private:
 };
 #endif
 
+namespace qtc {
+// an override call begins / ends: drawing in it uses a recorder of its own (qtc_builtin.cpp)
+void draw_push();
+void draw_pop();
+}
+
 class QtcBridge : public QObject {
     Q_OBJECT
 public:

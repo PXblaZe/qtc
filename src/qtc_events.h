@@ -15,6 +15,14 @@ bool read_bytes(qtc_str s, QByteArray &out, const char *what);
 uint64_t handle_for_signal_arg(QObject *o);
 void top_level_point();
 qtc_status do_call(uint64_t receiver, qtc_str method);
+uint64_t events_push(const qtc_event &e, const QByteArray &text);
+bool events_watched_below(QObject *o);
+bool events_forwards_below(QObject *root);
+void events_mark_far(QObject *root);
+void events_describe(QEvent *e, QObject *o, qtc_event *out, QByteArray *text);
+int ov_depth();   // override calls in progress on this thread (qtc_override.cpp)
+void concurrent_init();
+void concurrent_shutdown();
 
 // Runs an API call on the GUI thread after qtc_init, containing C++ exceptions.
 // Status-returning calls (signed integers) return the failure's own code; others return def.

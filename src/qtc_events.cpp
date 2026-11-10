@@ -2,6 +2,7 @@
 #include "qtc_events.h"
 
 #include <QtCore/QCoreApplication>
+#include <cstring>
 #include <QtCore/QEventLoop>
 #include <QtCore/QMimeData>
 #include <QtCore/QTimer>
@@ -39,6 +40,7 @@ struct Connection {
     bool used = false;
     bool forward = false;
     bool destroyed_signal = false;
+    bool far = false;                // the sender lives in another thread (its emissions arrive queued)
     QObject *sender = nullptr;
     QObject *receiver = nullptr;     // forward connections (qtc_connect_to)
     uint64_t receiver_handle = 0;
@@ -149,6 +151,47 @@ static uint64_t enqueue(QueuedEvent &&qe, bool gui) {
     return seq;
 }
 
+// For the other layers (futures): queues an event built elsewhere. GUI thread.
+uint64_t events_push(const qtc_event &e, const QByteArray &text) {
+    QueuedEvent qe;
+    qe.e = e;
+    qe.text = text;
+    return enqueue(std::move(qe), true);
+}
+
+static bool within(const QObject *o, const QObject *root) {
+    for (int d = 0; o && d < 10000; o = o->parent(), d++)
+        if (o == root) return true;
+    return false;
+}
+
+// qtc_move_to_thread: whether a qtc_connect_to forward starts or ends inside root (a forward calls
+// its receiver inside the emission, which must not cross threads). GUI thread.
+bool events_forwards_below(QObject *root) {
+    // forwards only join objects of the GUI thread, whose deaths clear these pointers at once
+    for (const Connection &c : E().conns)
+        if (c.used && c.forward && !c.far && (within(c.sender, root) || within(c.receiver, root))) return true;
+    return false;
+}
+
+// root moved to another thread: the signals of what is inside it now come from there.
+void events_mark_far(QObject *root) {
+    // a far sender's pointer may dangle until its release arrives: only near ones are looked at
+    for (Connection &c : E().conns)
+        if (c.used && !c.forward && !c.far && within(c.sender, root)) c.far = true;
+}
+
+// Whether the object or one of its children has a qtc_watch (an event filter that lives in the
+// GUI thread, which Qt refuses across threads). GUI thread.
+bool events_watched_below(QObject *o) {
+    Events &ev = E();
+    if (ev.watches_by_obj.contains(o)) return true;
+    const QList<QObject *> kids = o->findChildren<QObject *>();
+    for (QObject *k : kids)
+        if (ev.watches_by_obj.contains(k)) return true;
+    return false;
+}
+
 static void fill_payload(QueuedEvent &qe) {
     int64_t *is[4] = {&qe.e.i0, &qe.e.i1, &qe.e.i2, &qe.e.i3};
     double *ds[2] = {&qe.e.d0, &qe.e.d1};
@@ -217,6 +260,7 @@ static void release_conn(uint32_t slot) {
         }
     }
     c.used = false;
+    c.far = false;
     c.sender = c.receiver = nullptr;
     c.signal = QMetaMethod();
     c.qconn = QMetaObject::Connection();
@@ -335,14 +379,17 @@ static void on_signal(uint32_t slot, void **a) {
                 qe.args.append(QVariant());
                 continue;
             }
+            // From another thread an object argument may be gone by now (or be another object at
+            // the same address): only objects qtc knows and that still live get their handles there.
             if (t.flags() & QMetaType::PointerToQObject) {
                 QObject *o = *reinterpret_cast<QObject **>(a[i + 1]);
-                uint64_t h = c.destroyed_signal ? c.sender_handle : handle_for_signal_arg(o);
+                uint64_t h = c.destroyed_signal ? c.sender_handle : c.far ? reg().known_handle(o) : handle_for_signal_arg(o);
                 qe.args.append(QVariant::fromValue(ObjRef{h}));
             } else if (t == QMetaType::fromType<QVariant>()) {
-                qe.args.append(sanitize(*reinterpret_cast<const QVariant *>(a[i + 1])));   // not a variant inside a variant
+                const QVariant &v = *reinterpret_cast<const QVariant *>(a[i + 1]);   // not a variant inside a variant
+                qe.args.append(c.far ? sanitize_known(v) : sanitize(v));
             } else {
-                qe.args.append(sanitize(QVariant(t, a[i + 1])));
+                qe.args.append(c.far ? sanitize_known(QVariant(t, a[i + 1])) : sanitize(QVariant(t, a[i + 1])));
             }
         }
         fill_payload(qe);
@@ -409,6 +456,7 @@ static uint64_t make_connection(QObject *o, uint64_t sender, int sidx, uint64_t 
     Connection &c = ev.conns[slot];
     c.used = true;
     c.forward = false;
+    c.far = o->thread() != QThread::currentThread();
     c.sender = o;
     c.receiver = nullptr;
     c.sender_handle = sender;
@@ -559,6 +607,30 @@ static void fill_from_qevent(QueuedEvent &qe, int kind, QEvent *e, QObject *o) {
 }
 #endif
 
+// An event an override receives (qtc_ov_arg_event), described like a watched one: the kind (0
+// for events watches do not deliver), the payload and the text. GUI thread or not.
+void events_describe(QEvent *e, QObject *o, qtc_event *out, QByteArray *text) {
+#ifdef QTC_HAS_GUI
+    QueuedEvent qe;
+    const int kind = kind_of_event(e->type());
+    qe.e.kind = kind;
+    if (kind) fill_from_qevent(qe, kind, e, o);
+    *out = qe.e;
+    out->kind = kind;
+    out->flags = 0;
+    out->count = 1;
+    out->i3 = kind ? qe.e.i3 : 0;
+    if (!kind) out->i0 = int64_t(e->type());   // the QEvent::Type of anything else
+    *text = qe.text;
+#else
+    std::memset(out, 0, sizeof *out);
+    out->i0 = int64_t(e->type());
+    out->count = 1;
+    text->clear();
+    (void)o;
+#endif
+}
+
 static bool consumable(int kind) {
     switch (kind) {
     case QTC_EV_MOUSE_PRESS: case QTC_EV_MOUSE_RELEASE: case QTC_EV_MOUSE_DOUBLE_CLICK: case QTC_EV_MOUSE_MOVE:
@@ -674,8 +746,23 @@ bool AppFilter::eventFilter(QObject *o, QEvent *e) {
 
 // -------------------------------------------------- object destruction hook
 
+// An object qtc_move_to_thread sent away died in its own thread: its connections are released on
+// the GUI thread, found by handle (its address may already be reused). It has no watches.
+static void forget_far_object(uint64_t handle) {
+    Events &ev = E();
+    for (uint32_t s = 0; s < ev.conns.size(); s++) {
+        Connection &c = ev.conns[s];
+        if (c.used && (c.sender_handle == handle || (c.receiver && c.receiver_handle == handle))) release_conn(s);
+    }
+}
+
 static void object_destroyed(QObject *o, uint64_t handle) {
-    if (!gui_thread_ok()) return;
+    if (!gui_thread_ok()) {
+        Events &ev = E();
+        std::lock_guard<std::mutex> lk(ev.mu);
+        if (ev.spy) QMetaObject::invokeMethod(ev.spy, [handle] { forget_far_object(handle); }, Qt::QueuedConnection);
+        return;
+    }
     Events &ev = E();
     auto wit = ev.watches_by_obj.find(o);
     if (wit != ev.watches_by_obj.end()) {
@@ -793,6 +880,7 @@ extern "C" {
 QTC_API int32_t qtc_wait(int64_t timeout_ms) {
     return guarded<int32_t>(QTC_ERR_STATE, [&]() -> int32_t {
         Events &ev = E();
+        if (ov_depth() > 0) return fail(QTC_ERR_STATE, "qtc_wait cannot run inside an override handler (Qt is in the middle of a call)");
         if (ev.in_handler) return fail(QTC_ERR_STATE, "qtc_wait cannot be called from inside a qtc_run handler");
         if (ev.waiting) return fail(QTC_ERR_STATE, "qtc_wait is already running");
         auto pending = [&] {
@@ -873,6 +961,7 @@ QTC_API int64_t qtc_pending(void) {
 
 QTC_API qtc_status qtc_process_events(void) {
     return guarded<qtc_status>(QTC_ERR_STATE, []() -> qtc_status {
+        if (ov_depth() > 0) return fail(QTC_ERR_STATE, "qtc_process_events cannot run inside an override handler (Qt is in the middle of a call)");
         if (E().waiting) return fail(QTC_ERR_STATE, "qtc_process_events cannot run inside qtc_wait");
         top_level();
         roles_epoch++;
@@ -920,6 +1009,7 @@ QTC_API qtc_status qtc_set_handler(qtc_handler fn, void *user) {
 QTC_API int32_t qtc_run(void) {
     return guarded<int32_t>(QTC_ERR_STATE, []() -> int32_t {
         Events &ev = E();
+        if (ov_depth() > 0) return fail(QTC_ERR_STATE, "qtc_run cannot run inside an override handler");
         if (!ev.handler) return fail(QTC_ERR_STATE, "qtc_run needs a handler: call qtc_set_handler first");
         if (ev.in_handler || ev.waiting) return fail(QTC_ERR_STATE, "qtc_run is already running");
         for (;;) {
@@ -1073,7 +1163,12 @@ QTC_API qtc_view qtc_event_signal(uint64_t seq) {
 QTC_API uint64_t qtc_connect(qtc_obj sender, qtc_str signal, uint64_t tag, uint32_t flags) {
     return guarded<uint64_t>(0, [&]() -> uint64_t {
         qtc_status err = 0;
+        // a sender may live in a worker thread (qtc_move_to_thread): its signals reach the queue
+        // through Qt's queued connections. The registry lock keeps such a sender from finishing
+        // dying while it is connected to.
+        std::lock_guard<std::recursive_mutex> lk(reg().mu);
         QObject *o = reg().object(sender, &err);
+        if (!o && err == QTC_ERR_WRONG_THREAD) o = reg().object_anywhere(sender, &err);
         if (!o) { fail(err, "qtc_connect: sender"); return 0; }
         if (flags & ~uint32_t(QTC_CONN_COALESCE | QTC_CONN_ONCE | QTC_CONN_NO_ARGS)) { fail(QTC_ERR_INVALID_ARG, "unknown connection flags"); return 0; }
         QByteArray spec;
@@ -1156,6 +1251,7 @@ QTC_API uint64_t qtc_connect_to(qtc_obj sender, qtc_str signal, qtc_obj receiver
         Connection &c = ev.conns[slot];
         c.used = true;
         c.forward = true;
+        c.far = false;   // both live here (object() above), and slots are reused
         c.sender = s;
         c.receiver = r;
         c.receiver_handle = receiver;

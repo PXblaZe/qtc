@@ -14,7 +14,13 @@ has them.
 | `test_app` | a small application driven by simulated input (`libqtc_test`): a form, tabs, a canvas, keyboard and mouse |
 | `test_sweep` | every bound method and constructor called wrongly: a stale, null, garbage and wrong-kind receiver, one argument too many, each argument of a wrong type, a stale object as an argument; every call must fail with the right error |
 | `test_stress` | handle churn and generation reuse, event floods, deep object trees, many connections, floods from other threads, big payloads — each with a time budget, so a performance cliff fails like a wrong result |
-| `example_*` | the five examples, each driving itself with `--selftest` and checking the result |
+| `test_concurrent` | futures, promises, tasks, parallel map, worker objects and queued calls from many threads: results, progress, cancel, suspend, failure, watchers, release in every state, shutdown with work in flight (about 1,700 checks) |
+| `test_override` | overridable objects: list and table models with Qt's begin/end rules, painting and input events, validators, highlighters, devices, `QThread::run` on its thread, scenes, recursion and the depth limit, results Qt cannot use, handlers that destroy their object, a handler found by symbol |
+| `test_class` | runtime classes: signals, slots, invokables and properties seen by `qtc_call`, by Qt's meta-object system and by QML, notify signals, classes based on overridable classes, slots on worker threads |
+| `test_rhi` | the graphics layer on every backend the machine has: every refusal (handles, kinds, states, sizes, bindings against shaders, vertex and index ranges, destruction order), rendering read back pixel by pixel (offscreen frames, swapchains on windows, `QRhiWidget`), texture sampling, instancing, compute into buffers and images, native interop, shutdown with frames open |
+| `rhi_xcb` | `test_rhi` on an X server (Xvfb), where Mesa's llvmpipe (OpenGL) and lavapipe (Vulkan) render |
+| `fuzz_rhi`, `fuzz_rhi_xcb` | random sequences of graphics calls with handles of every kind and edge-value arguments, built around valid scenes so that hundreds of draws and dispatches reach the GPU per run; no handle may be left behind |
+| `example_*` | the six examples, each driving itself with `--selftest` and checking the result |
 
 ## The fuzzers (`tests/fuzz_methods.cpp`, `tests/fuzz_driver.py`)
 

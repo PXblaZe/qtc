@@ -19,7 +19,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtQuickControls2/qquickattachedpropertypropagator.h>)
-template <class S> static int t11074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -31,7 +31,7 @@ template <class S> static int t11074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -43,7 +43,7 @@ template <class S> static int t11075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -61,7 +61,7 @@ template <class S> static int t11076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQuickControls2/qquickstyle.h>)
-template <class S> static int t11077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -72,7 +72,7 @@ template <class S> static int t11077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -85,7 +85,7 @@ template <class S> static int t11078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -99,23 +99,23 @@ template <class S> static int t11079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P11076[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11234[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtQuickControls2/qquickattachedpropertypropagator.h>)
 static const qtc::MethodDef M_QQuickAttachedPropertyPropagator[] = {
-    {"attachedChildren", "attachedChildren()", t11074<QQuickAttachedPropertyPropagator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQuickAttachedPropertyPropagator *>"},
-    {"attachedParent", "attachedParent()", t11075<QQuickAttachedPropertyPropagator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQuickAttachedPropertyPropagator*"},
+    {"attachedChildren", "attachedChildren()", t11232<QQuickAttachedPropertyPropagator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQuickAttachedPropertyPropagator *>"},
+    {"attachedParent", "attachedParent()", t11233<QQuickAttachedPropertyPropagator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQuickAttachedPropertyPropagator*"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQuickAttachedPropertyPropagator[] = {
-    {"QQuickAttachedPropertyPropagator", "QQuickAttachedPropertyPropagator(QObject*)", t11076<QQuickAttachedPropertyPropagator>, P11076, 1, 0, 0, QTC_T_OBJ, "QQuickAttachedPropertyPropagator"},
+    {"QQuickAttachedPropertyPropagator", "QQuickAttachedPropertyPropagator(QObject*)", t11234<QQuickAttachedPropertyPropagator>, P11234, 1, 0, 0, QTC_T_OBJ, "QQuickAttachedPropertyPropagator"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11078[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11079[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11236[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11237[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtQuickControls2/qquickstyle.h>)
 static const qtc::MethodDef M_QQuickStyle[] = {
-    {"name", "name()", t11077<QQuickStyle>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"setStyle", "setStyle(QString)", t11078<QQuickStyle>, P11078, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
-    {"setFallbackStyle", "setFallbackStyle(QString)", t11079<QQuickStyle>, P11079, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"name", "name()", t11235<QQuickStyle>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"setStyle", "setStyle(QString)", t11236<QQuickStyle>, P11236, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"setFallbackStyle", "setFallbackStyle(QString)", t11237<QQuickStyle>, P11237, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQuickStyle[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};

@@ -40,13 +40,31 @@ approach:
   preconditions turns what Qt only asserts in debug builds (indexes, sizes,
   ownership cycles, objects that must not be null, states a method needs) into
   errors. Qt's internal parts and objects it owns cannot be destroyed from C.
-- **No callbacks inside Qt.** Signals and watched events are queued and read
-  with `qtc_wait` / `qtc_poll` at the top of the program's own loop, so C code
-  never runs in the middle of a Qt call.
+- **No callbacks inside Qt unless you ask.** Signals and watched events are
+  queued and read with `qtc_wait` / `qtc_poll` at the top of the program's own
+  loop, so C code never runs in the middle of a Qt call. Subclassing is the
+  exception a program opts into: overridable objects run a handler for the
+  virtual methods it overrides, with the arguments and results checked and the
+  event loop off limits inside it.
 - **Generated from Qt's headers.** The bindings come from scanning Qt's headers
   with libclang. The generator also knows the Qt 6 releases before 6.12 and
   compiles each method in only where the Qt in use has it, but only Qt 6.12 is
   tested (see [Qt versions](#qt-versions)).
+
+Beyond calling Qt's classes, qtc has:
+
+- **Subclassing** (`qtc_new_overridable`, `qtc_override`): item models, widgets
+  that paint and handle events, validators, devices, threads and more, written
+  in C.
+- **Classes defined at run time** (`qtc_class_*`): signals, slots, invokables and
+  properties that Qt and QML see like a C++ class's.
+- **Futures and worker threads** (`qtc_future_*`, `qtc_promise_*`, `qtc_task_*`,
+  `qtc_move_to_thread`): work on Qt's thread pool or a QThread, with progress,
+  cancellation and results.
+- **Graphics** (`qtc_rhi_*`): Qt's rendering hardware interface over Vulkan,
+  OpenGL, Direct3D and Metal, with shaders compiled at run time, offscreen
+  rendering, windows, `QRhiWidget` and compute; every command checked before the
+  GPU sees it. Native handles for code that calls those APIs itself.
 
 What this does and does not promise is spelled out in [docs/LIMITS.md](docs/LIMITS.md),
 and how it is tested in [docs/TESTING.md](docs/TESTING.md).
@@ -90,14 +108,17 @@ Distribution packages are often older than 6.12. **Arch Linux** has Qt 6.12
 
 ```sh
 sudo pacman -S --needed cmake ninja gcc qt6-base qt6-declarative qt6-svg \
-    qt6-multimedia qt6-charts qt6-serialport qt6-positioning qt6-websockets \
-    qt6-webchannel qt6-tools
+    qt6-multimedia qt6-serialport qt6-positioning qt6-websockets \
+    qt6-webchannel qt6-tools qt6-shadertools
 cmake -S . -B build -G Ninja && cmake --build build && sudo cmake --install build
 ```
 
 `qt6-base` alone is enough for Core, Gui, Widgets, Network, Sql, PrintSupport,
 Xml, DBus and OpenGL; the other packages add the modules of the same names
-(`qt6-tools` provides UiTools). **Debian and Ubuntu** releases ship older Qt 6
+(`qt6-tools` provides UiTools). Add `qt6-shadertools` to compile shaders at run
+time (`qtc_rhi_shader_bake`; conda-forge's `qt6-main` includes it). Charts and
+the network add-ons are GPL-3.0-only and left out of a default build; see
+[docs/LICENSING.md](docs/LICENSING.md). **Debian and Ubuntu** releases ship older Qt 6
 packages (Ubuntu 24.04 has 6.4.2), so use one of the routes above there.
 
 ### Qt versions
@@ -141,6 +162,7 @@ run interactively, or test themselves with `--selftest`:
 | `canvas.c` | custom drawing on a widget and into an image, mouse events |
 | `qml.c` | a Qt Quick window and a two-way bridge between QML and C |
 | `threads.c` | worker threads reporting to the GUI with `qtc_post` |
+| `rhi.c` | a spinning triangle drawn with Qt's RHI on Vulkan, Metal, Direct3D, OpenGL or the Null backend, in a window or offscreen |
 
 The pieces:
 
@@ -209,4 +231,8 @@ xz -9 gen/models/qt-6.13.0.json
 
 MIT, see [LICENSE](LICENSE). Qt itself is available under the LGPL 3, the GPL
 or a commercial license; programs that use qtc use Qt, and its terms apply to
-them.
+them. A default build binds only Qt modules available under the LGPL-3.0, which
+closed-source programs may use; the GPL-3.0-only modules (Charts, Network
+Authorization, HTTP Server, MQTT, CoAP) need `-DQTC_GPL_MODULES=ON`.
+[docs/LICENSING.md](docs/LICENSING.md) has the details, the obligations in
+outline and non-GPL alternatives.

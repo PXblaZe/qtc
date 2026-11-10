@@ -33,6 +33,49 @@ LISTLIKE = r"QString|QByteArray|QBitArray|QJsonArray|QCborArray|QHttpHeaders|QPo
 
 # (class regex, method regex, parameter-type regex or None, expression, code, message)
 TABLE = [
+    # ---------------------------------------------------------------- threads
+    # a stack the system refuses makes start() fail with only a warning, and a pool would then
+    # never run its tasks (their futures would never finish)
+    ("QThread|QThreadPool", r"setStackSize", None, "{0} == 0 || ({0} >= 65536 && {0} <= (1u << 30))", OOR,
+     "stack size must be 0 (the default) or between 64 KiB and 1 GiB"),
+    ("QThreadPool", r"setMaxThreadCount", None, "{0} <= 4096", LIMIT, "at most 4096 threads"),
+    # ---------------------------------------------------------------- model subclasses
+    # (protected methods of overridable models, see src/qtc_override.h). Qt keeps begin*/end* on a
+    # stack it pops in end* without looking, and checks the ranges only in debug builds: one pair
+    # at a time here, each end* the begin* waiting, and the ranges Qt's documentation states.
+    ("QAbstractItemModel", r"begin\w+", None, "qtc::model_idle({s})", STATE,
+     "another begin* is still waiting for its end*"),
+    ("QAbstractItemModel", r"beginInsertRows", None, "{1} >= 0 && {1} <= qtc::rows_of({s}, {0}) && {2} >= {1}", OOR,
+     "first must lie in [0, rowCount(parent)] and last must not be less than first"),
+    ("QAbstractItemModel", r"beginInsertColumns", None, "{1} >= 0 && {1} <= qtc::cols_of({s}, {0}) && {2} >= {1}", OOR,
+     "first must lie in [0, columnCount(parent)] and last must not be less than first"),
+    ("QAbstractItemModel", r"beginRemoveRows", None, "{1} >= 0 && {1} <= {2} && {2} < qtc::rows_of({s}, {0})", OOR,
+     "first and last must lie in [0, rowCount(parent)) with first <= last"),
+    ("QAbstractItemModel", r"beginRemoveColumns", None, "{1} >= 0 && {1} <= {2} && {2} < qtc::cols_of({s}, {0})", OOR,
+     "first and last must lie in [0, columnCount(parent)) with first <= last"),
+    ("QAbstractItemModel", r"beginMoveRows", None,
+     "{1} >= 0 && {1} <= {2} && {2} < qtc::rows_of({s}, {0}) && {4} >= 0 && {4} <= qtc::rows_of({s}, {3})", OOR,
+     "the rows must lie in [0, rowCount(sourceParent)) and the destination in [0, rowCount(destinationParent)]"),
+    ("QAbstractItemModel", r"beginMoveColumns", None,
+     "{1} >= 0 && {1} <= {2} && {2} < qtc::cols_of({s}, {0}) && {4} >= 0 && {4} <= qtc::cols_of({s}, {3})", OOR,
+     "the columns must lie in [0, columnCount(sourceParent)) and the destination in [0, columnCount(destinationParent)]"),
+    ("QAbstractItemModel", r"endInsertRows", None, "qtc::model_pending({s}, qtc::MOP_INSERT_ROWS)", STATE,
+     "no beginInsertRows is waiting for it"),
+    ("QAbstractItemModel", r"endRemoveRows", None, "qtc::model_pending({s}, qtc::MOP_REMOVE_ROWS)", STATE,
+     "no beginRemoveRows is waiting for it"),
+    ("QAbstractItemModel", r"endMoveRows", None, "qtc::model_pending({s}, qtc::MOP_MOVE_ROWS)", STATE,
+     "no beginMoveRows is waiting for it"),
+    ("QAbstractItemModel", r"endInsertColumns", None, "qtc::model_pending({s}, qtc::MOP_INSERT_COLUMNS)", STATE,
+     "no beginInsertColumns is waiting for it"),
+    ("QAbstractItemModel", r"endRemoveColumns", None, "qtc::model_pending({s}, qtc::MOP_REMOVE_COLUMNS)", STATE,
+     "no beginRemoveColumns is waiting for it"),
+    ("QAbstractItemModel", r"endMoveColumns", None, "qtc::model_pending({s}, qtc::MOP_MOVE_COLUMNS)", STATE,
+     "no beginMoveColumns is waiting for it"),
+    ("QAbstractItemModel", r"endResetModel", None, "qtc::model_pending({s}, qtc::MOP_RESET)", STATE,
+     "no beginResetModel is waiting for it"),
+    ("QAbstractItemModel", r"changePersistentIndexList", None,
+     "qtc::indexes_of({s}, {0}) && qtc::indexes_of({s}, {1}) && {0}.size() == {1}.size()", BAD,
+     "both lists must hold indexes of this model (or invalid ones), as many in each"),
     # ---------------------------------------------------------------- strings and byte arrays
     (STR, r"at", None, "qtc::idx({s}, {0})", OOR, "index out of range [0, size())"),
     (STR, r"first|last|chopped", r"qsizetype", "qtc::pos({s}, {0})", OOR, "n out of range [0, size()]"),
@@ -787,6 +830,18 @@ TABLE = [
     ("QAmbientSound|QSpatialSound", r"stop", None, "qtc::note_sound({s}, false)", STATE, "-"),
     ("QAmbientSound|QSpatialSound", r"pause", None, "qtc::sound_playing({s})", STATE,
      "the sound is not playing: call play() first (Qt aborts on pause() before play() or after stop())"),
+    # ---------------------------------------------------------------- network add-ons (GPL-3.0-only)
+    ("QAbstractOAuth2", r"post|put", r"QUrl,QHttpMultiPart\*", "{1} != nullptr", BAD, "the multipart is null"),
+    ("QAbstractOAuthReplyHandler", r"networkReplyFinished", None, "{0} != nullptr", BAD, "the reply is null"),
+    # a default-constructed request (Qt 6.8+) has no data, and every accessor reads it: requests
+    # worth reading come from QHttpServer. The request is one shared-data pointer (when Qt
+    # changes that, the check fails safe and refuses every call).
+    ("QHttpServerRequest",
+     r"value|url|query|method|headers|body|remoteAddress|remotePort|localAddress|localPort|sslConfiguration", None,
+     "sizeof(*{s}) == sizeof(void *) && *reinterpret_cast<void *const *>({s}) != nullptr", STATE,
+     "the request has no data (a default-constructed request): requests come from QHttpServer"),
+    ("QCoapMessage", r"optionAt", None, "{0} >= 0 && {0} < {s}->optionCount()", OOR,
+     "index must lie in [0, optionCount())"),
 ]
 
 # Pointer parameters that must not be null: "Class::method" -> parameter indexes (None: every object parameter

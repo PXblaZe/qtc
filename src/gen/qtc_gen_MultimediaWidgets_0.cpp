@@ -19,7 +19,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtMultimediaWidgets/qvideowidget.h>)
-template <class S> static int t11762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11920(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -31,7 +31,7 @@ template <class S> static int t11762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11921(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -43,7 +43,7 @@ template <class S> static int t11763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11922(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -55,7 +55,7 @@ template <class S> static int t11764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11923(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -69,13 +69,13 @@ template <class S> static int t11765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11924(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<Qt::AspectRatioMode> p0;
-    QTC_CVE(0, p0, 837);
+    QTC_CVE(0, p0, 861);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::AspectRatioMode> &p0) { qtc::cve(aa[0], p0, 0, 837); s->setAspectRatioMode(p0.get()); }) { s->setAspectRatioMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::AspectRatioMode> &p0) { qtc::cve(aa[0], p0, 0, 861); s->setAspectRatioMode(p0.get()); }) { s->setAspectRatioMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -83,7 +83,7 @@ template <class S> static int t11766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11925(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -97,13 +97,13 @@ template <class S> static int t11767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11926(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<Qt::AspectRatioMode> p0;
-    QTC_CVE(0, p0, 837);
+    QTC_CVE(0, p0, 861);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::AspectRatioMode> &p0) { qtc::cve(aa[0], p0, 0, 837); s->aspectRatioModeChanged(p0.get()); }) { s->aspectRatioModeChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::AspectRatioMode> &p0) { qtc::cve(aa[0], p0, 0, 861); s->aspectRatioModeChanged(p0.get()); }) { s->aspectRatioModeChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -111,7 +111,7 @@ template <class S> static int t11768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11927(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QWidget *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -128,23 +128,23 @@ template <class S> static int t11769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P11765[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11766[] = {{qtc::PK_ENUM, 837, "Qt::AspectRatioMode", nullptr}};
-static const qtc::ParamDesc P11767[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11768[] = {{qtc::PK_ENUM, 837, "Qt::AspectRatioMode", nullptr}};
-static const qtc::ParamDesc P11769[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P11923[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11924[] = {{qtc::PK_ENUM, 861, "Qt::AspectRatioMode", nullptr}};
+static const qtc::ParamDesc P11925[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11926[] = {{qtc::PK_ENUM, 861, "Qt::AspectRatioMode", nullptr}};
+static const qtc::ParamDesc P11927[] = {{qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
 #if __has_include(<QtMultimediaWidgets/qvideowidget.h>)
 static const qtc::MethodDef M_QVideoWidget[] = {
-    {"videoSink", "videoSink()", t11762<QVideoWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoSink*"},
-    {"aspectRatioMode", "aspectRatioMode()", t11763<QVideoWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "Qt::AspectRatioMode"},
-    {"sizeHint", "sizeHint()", t11764<QVideoWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"setFullScreen", "setFullScreen(bool)", t11765<QVideoWidget>, P11765, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setAspectRatioMode", "setAspectRatioMode(Qt::AspectRatioMode)", t11766<QVideoWidget>, P11766, 1, 1, 0, QTC_T_NONE, "void"},
-    {"fullScreenChanged", "fullScreenChanged(bool)", t11767<QVideoWidget>, P11767, 1, 1, 0, QTC_T_NONE, "void"},
-    {"aspectRatioModeChanged", "aspectRatioModeChanged(Qt::AspectRatioMode)", t11768<QVideoWidget>, P11768, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoSink", "videoSink()", t11920<QVideoWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoSink*"},
+    {"aspectRatioMode", "aspectRatioMode()", t11921<QVideoWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "Qt::AspectRatioMode"},
+    {"sizeHint", "sizeHint()", t11922<QVideoWidget>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"setFullScreen", "setFullScreen(bool)", t11923<QVideoWidget>, P11923, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAspectRatioMode", "setAspectRatioMode(Qt::AspectRatioMode)", t11924<QVideoWidget>, P11924, 1, 1, 0, QTC_T_NONE, "void"},
+    {"fullScreenChanged", "fullScreenChanged(bool)", t11925<QVideoWidget>, P11925, 1, 1, 0, QTC_T_NONE, "void"},
+    {"aspectRatioModeChanged", "aspectRatioModeChanged(Qt::AspectRatioMode)", t11926<QVideoWidget>, P11926, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QVideoWidget[] = {
-    {"QVideoWidget", "QVideoWidget(QWidget*)", t11769<QVideoWidget>, P11769, 1, 0, 0, QTC_T_OBJ, "QVideoWidget"},
+    {"QVideoWidget", "QVideoWidget(QWidget*)", t11927<QVideoWidget>, P11927, 1, 0, 0, QTC_T_OBJ, "QVideoWidget"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

@@ -17,7 +17,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtUiTools/quiloader.h>)
-template <class S> static int t13413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13571(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -29,7 +29,7 @@ template <class S> static int t13413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13572(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -41,7 +41,7 @@ template <class S> static int t13414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13573(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -55,7 +55,7 @@ template <class S> static int t13415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13574(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QIODevice *> p0;
     qtc::H<QWidget *> p1;
@@ -74,7 +74,7 @@ template <class S> static int t13416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13575(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -86,7 +86,7 @@ template <class S> static int t13417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13576(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -98,7 +98,7 @@ template <class S> static int t13418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13577(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QWidget *> p1;
@@ -122,7 +122,7 @@ template <class S> static int t13419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13578(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -146,7 +146,7 @@ template <class S> static int t13420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13579(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -168,7 +168,7 @@ template <class S> static int t13421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13580(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -190,7 +190,7 @@ template <class S> static int t13422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13581(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDir> p0;
     QTC_CV(0, p0);
@@ -204,7 +204,7 @@ template <class S> static int t13423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13582(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -216,7 +216,7 @@ template <class S> static int t13424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13583(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -230,7 +230,7 @@ template <class S> static int t13425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13426(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13584(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -242,7 +242,7 @@ template <class S> static int t13426(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13585(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -256,7 +256,7 @@ template <class S> static int t13427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13428(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13586(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -268,7 +268,7 @@ template <class S> static int t13428(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13429(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13587(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -280,7 +280,7 @@ template <class S> static int t13429(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13430(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13588(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -297,38 +297,38 @@ template <class S> static int t13430(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P13415[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13416[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
-static const qtc::ParamDesc P13419[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13420[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13421[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13422[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13423[] = {{qtc::PK_VALUE, -1, "QDir", nullptr}};
-static const qtc::ParamDesc P13425[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13427[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13430[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13573[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13574[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}};
+static const qtc::ParamDesc P13577[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QWidget*", &QWidget::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13578[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13579[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13580[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13581[] = {{qtc::PK_VALUE, -1, "QDir", nullptr}};
+static const qtc::ParamDesc P13583[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13585[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13588[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtUiTools/quiloader.h>)
 static const qtc::MethodDef M_QUiLoader[] = {
-    {"pluginPaths", "pluginPaths()", t13413<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"clearPluginPaths", "clearPluginPaths()", t13414<QUiLoader>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"addPluginPath", "addPluginPath(QString)", t13415<QUiLoader>, P13415, 1, 1, 0, QTC_T_NONE, "void"},
-    {"load", "load(QIODevice*,QWidget*)", t13416<QUiLoader>, P13416, 2, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QWidget*"},
-    {"availableWidgets", "availableWidgets()", t13417<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"availableLayouts", "availableLayouts()", t13418<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"createWidget", "createWidget(QString,QWidget*,QString)", t13419<QUiLoader>, P13419, 3, 1, 0, QTC_T_OBJ, "QWidget*"},
-    {"createLayout", "createLayout(QString,QObject*,QString)", t13420<QUiLoader>, P13420, 3, 1, 0, QTC_T_OBJ, "QLayout*"},
-    {"createActionGroup", "createActionGroup(QObject*,QString)", t13421<QUiLoader>, P13421, 2, 0, 0, QTC_T_OBJ, "QActionGroup*"},
-    {"createAction", "createAction(QObject*,QString)", t13422<QUiLoader>, P13422, 2, 0, 0, QTC_T_OBJ, "QAction*"},
-    {"setWorkingDirectory", "setWorkingDirectory(QDir)", t13423<QUiLoader>, P13423, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"workingDirectory", "workingDirectory()", t13424<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDir"},
-    {"setLanguageChangeEnabled", "setLanguageChangeEnabled(bool)", t13425<QUiLoader>, P13425, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isLanguageChangeEnabled", "isLanguageChangeEnabled()", t13426<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setTranslationEnabled", "setTranslationEnabled(bool)", t13427<QUiLoader>, P13427, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isTranslationEnabled", "isTranslationEnabled()", t13428<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"errorString", "errorString()", t13429<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"pluginPaths", "pluginPaths()", t13571<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"clearPluginPaths", "clearPluginPaths()", t13572<QUiLoader>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"addPluginPath", "addPluginPath(QString)", t13573<QUiLoader>, P13573, 1, 1, 0, QTC_T_NONE, "void"},
+    {"load", "load(QIODevice*,QWidget*)", t13574<QUiLoader>, P13574, 2, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QWidget*"},
+    {"availableWidgets", "availableWidgets()", t13575<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"availableLayouts", "availableLayouts()", t13576<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"createWidget", "createWidget(QString,QWidget*,QString)", t13577<QUiLoader>, P13577, 3, 1, 0, QTC_T_OBJ, "QWidget*"},
+    {"createLayout", "createLayout(QString,QObject*,QString)", t13578<QUiLoader>, P13578, 3, 1, 0, QTC_T_OBJ, "QLayout*"},
+    {"createActionGroup", "createActionGroup(QObject*,QString)", t13579<QUiLoader>, P13579, 2, 0, 0, QTC_T_OBJ, "QActionGroup*"},
+    {"createAction", "createAction(QObject*,QString)", t13580<QUiLoader>, P13580, 2, 0, 0, QTC_T_OBJ, "QAction*"},
+    {"setWorkingDirectory", "setWorkingDirectory(QDir)", t13581<QUiLoader>, P13581, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"workingDirectory", "workingDirectory()", t13582<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDir"},
+    {"setLanguageChangeEnabled", "setLanguageChangeEnabled(bool)", t13583<QUiLoader>, P13583, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isLanguageChangeEnabled", "isLanguageChangeEnabled()", t13584<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setTranslationEnabled", "setTranslationEnabled(bool)", t13585<QUiLoader>, P13585, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isTranslationEnabled", "isTranslationEnabled()", t13586<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"errorString", "errorString()", t13587<QUiLoader>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QUiLoader[] = {
-    {"QUiLoader", "QUiLoader(QObject*)", t13430<QUiLoader>, P13430, 1, 0, 0, QTC_T_OBJ, "QUiLoader"},
+    {"QUiLoader", "QUiLoader(QObject*)", t13588<QUiLoader>, P13588, 1, 0, 0, QTC_T_OBJ, "QUiLoader"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

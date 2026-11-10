@@ -15,7 +15,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtSql/qsqldatabase.h>)
-template <class S> static int t9650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -27,7 +27,7 @@ template <class S> static int t9650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -43,7 +43,7 @@ template <class S> static int t9651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -55,7 +55,7 @@ template <class S> static int t9652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -67,7 +67,7 @@ template <class S> static int t9653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -79,16 +79,16 @@ template <class S> static int t9654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSql::TableType> p0;
-    if (n > 0) QTC_CVE(0, p0, 595);
+    if (n > 0) QTC_CVE(0, p0, 619);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->tables()); }) { qtc::rt(*r, s->tables()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSql::TableType> &p0) { qtc::cve(aa[0], p0, 0, 595); qtc::rt(*rr, s->tables(p0.get())); }) { qtc::rt(*r, s->tables(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSql::TableType> &p0) { qtc::cve(aa[0], p0, 0, 619); qtc::rt(*rr, s->tables(p0.get())); }) { qtc::rt(*r, s->tables(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -96,7 +96,7 @@ template <class S> static int t9655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -110,7 +110,7 @@ template <class S> static int t9656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -124,7 +124,7 @@ template <class S> static int t9657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -141,7 +141,7 @@ template <class S> static int t9658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -153,7 +153,7 @@ template <class S> static int t9659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -165,7 +165,7 @@ template <class S> static int t9660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -177,7 +177,7 @@ template <class S> static int t9661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -189,7 +189,7 @@ template <class S> static int t9662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -201,7 +201,7 @@ template <class S> static int t9663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -215,7 +215,7 @@ template <class S> static int t9664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -229,7 +229,7 @@ template <class S> static int t9665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -243,7 +243,7 @@ template <class S> static int t9666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -257,7 +257,7 @@ template <class S> static int t9667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -271,7 +271,7 @@ template <class S> static int t9668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -288,7 +288,7 @@ template <class S> static int t9669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -300,7 +300,7 @@ template <class S> static int t9670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -312,7 +312,7 @@ template <class S> static int t9671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -324,7 +324,7 @@ template <class S> static int t9672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -336,7 +336,7 @@ template <class S> static int t9673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -348,7 +348,7 @@ template <class S> static int t9674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -360,7 +360,7 @@ template <class S> static int t9675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -372,7 +372,7 @@ template <class S> static int t9676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -384,13 +384,13 @@ template <class S> static int t9677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSql::NumericalPrecisionPolicy> p0;
-    QTC_CVE(0, p0, 593);
+    QTC_CVE(0, p0, 617);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSql::NumericalPrecisionPolicy> &p0) { qtc::cve(aa[0], p0, 0, 593); s->setNumericalPrecisionPolicy(p0.get()); }) { s->setNumericalPrecisionPolicy(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSql::NumericalPrecisionPolicy> &p0) { qtc::cve(aa[0], p0, 0, 617); s->setNumericalPrecisionPolicy(p0.get()); }) { s->setNumericalPrecisionPolicy(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -398,7 +398,7 @@ template <class S> static int t9678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -411,7 +411,7 @@ template <class S> static int t9679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -424,7 +424,7 @@ template <class S> static int t9680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -436,7 +436,7 @@ template <class S> static int t9681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -454,7 +454,7 @@ template <class S> static int t9682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QSqlDriver *> p0;
     qtc::H<QString> p1;
@@ -472,7 +472,7 @@ template <class S> static int t9683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QSqlDatabase> p0;
     qtc::H<QString> p1;
@@ -487,7 +487,7 @@ template <class S> static int t9684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -502,7 +502,7 @@ template <class S> static int t9685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<bool> p1;
@@ -523,7 +523,7 @@ template <class S> static int t9686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -536,7 +536,7 @@ template <class S> static int t9687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -552,7 +552,7 @@ template <class S> static int t9688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -563,7 +563,7 @@ template <class S> static int t9689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -574,7 +574,7 @@ template <class S> static int t9690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -587,7 +587,7 @@ template <class S> static int t9691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -600,7 +600,7 @@ template <class S> static int t9692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0) && __has_include(<QtSql/qsqldatabase.h>)
-template <class S> static int t9693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -613,7 +613,7 @@ template <class S> static int t9693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSql/qsqlerror.h>)
-template <class S> static int t9694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -625,7 +625,7 @@ template <class S> static int t9694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -637,7 +637,7 @@ template <class S> static int t9695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -649,7 +649,7 @@ template <class S> static int t9696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -661,7 +661,7 @@ template <class S> static int t9697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -673,7 +673,7 @@ template <class S> static int t9698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -685,7 +685,7 @@ template <class S> static int t9699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -693,7 +693,7 @@ template <class S> static int t9700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QString> p3;
     if (n > 0) QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 601);
+    if (n > 2) QTC_CVE(2, p2, 625);
     if (n > 3) QTC_CV(3, p3);
     switch (n) {
         case 0:
@@ -706,10 +706,10 @@ template <class S> static int t9700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QSqlError::ErrorType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 601); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QSqlError::ErrorType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 625); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QSqlError::ErrorType> &p2, qtc::H<QString> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 601); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QSqlError::ErrorType> &p2, qtc::H<QString> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 625); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -718,7 +718,7 @@ template <class S> static int t9700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSql/qsqlfield.h>)
-template <class S> static int t9701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -732,7 +732,7 @@ template <class S> static int t9701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -744,7 +744,7 @@ template <class S> static int t9702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -758,7 +758,7 @@ template <class S> static int t9703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -770,7 +770,7 @@ template <class S> static int t9704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -784,7 +784,7 @@ template <class S> static int t9705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -796,7 +796,7 @@ template <class S> static int t9706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -808,7 +808,7 @@ template <class S> static int t9707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -822,7 +822,7 @@ template <class S> static int t9708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -834,7 +834,7 @@ template <class S> static int t9709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -846,7 +846,7 @@ template <class S> static int t9710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9711(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -858,7 +858,7 @@ template <class S> static int t9711(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -870,7 +870,7 @@ template <class S> static int t9712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMetaType> p0;
     QTC_CV(0, p0);
@@ -884,7 +884,7 @@ template <class S> static int t9713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -896,13 +896,13 @@ template <class S> static int t9714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant::Type> p0;
-    QTC_CVE(0, p0, 802);
+    QTC_CVE(0, p0, 826);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVariant::Type> &p0) { qtc::cve(aa[0], p0, 0, 802); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVariant::Type> &p0) { qtc::cve(aa[0], p0, 0, 826); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -910,13 +910,13 @@ template <class S> static int t9715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSqlField::RequiredStatus> p0;
-    QTC_CVE(0, p0, 602);
+    QTC_CVE(0, p0, 626);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlField::RequiredStatus> &p0) { qtc::cve(aa[0], p0, 0, 602); s->setRequiredStatus(p0.get()); }) { s->setRequiredStatus(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlField::RequiredStatus> &p0) { qtc::cve(aa[0], p0, 0, 626); s->setRequiredStatus(p0.get()); }) { s->setRequiredStatus(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -924,7 +924,7 @@ template <class S> static int t9716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -938,7 +938,7 @@ template <class S> static int t9717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -952,7 +952,7 @@ template <class S> static int t9718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -966,7 +966,7 @@ template <class S> static int t9719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -980,7 +980,7 @@ template <class S> static int t9720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -994,7 +994,7 @@ template <class S> static int t9721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1008,7 +1008,7 @@ template <class S> static int t9722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1022,7 +1022,7 @@ template <class S> static int t9723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1034,7 +1034,7 @@ template <class S> static int t9724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1046,7 +1046,7 @@ template <class S> static int t9725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1058,7 +1058,7 @@ template <class S> static int t9726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1070,7 +1070,7 @@ template <class S> static int t9727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1082,7 +1082,7 @@ template <class S> static int t9728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1094,7 +1094,7 @@ template <class S> static int t9729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1106,7 +1106,7 @@ template <class S> static int t9730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QMetaType> p1;
@@ -1132,20 +1132,20 @@ template <class S> static int t9731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QVariant::Type> p1;
     qtc::H<QString> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 802);
+    QTC_CVE(1, p1, 826);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QVariant::Type> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 802); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QVariant::Type> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 826); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QVariant::Type> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 802); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QVariant::Type> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 826); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1154,7 +1154,7 @@ template <class S> static int t9732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSql/qsqlindex.h>)
-template <class S> static int t9733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1168,7 +1168,7 @@ template <class S> static int t9733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9886(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1180,7 +1180,7 @@ template <class S> static int t9734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9887(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1194,7 +1194,7 @@ template <class S> static int t9735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9888(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1206,7 +1206,7 @@ template <class S> static int t9736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9889(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSqlField> p0;
     QTC_CV(0, p0);
@@ -1220,7 +1220,7 @@ template <class S> static int t9737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9890(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSqlField> p0;
     qtc::H<bool> p1;
@@ -1236,7 +1236,7 @@ template <class S> static int t9738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9891(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1250,7 +1250,7 @@ template <class S> static int t9739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9892(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<bool> p1;
@@ -1266,7 +1266,7 @@ template <class S> static int t9740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9893(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1289,7 +1289,7 @@ template <class S> static int t9741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSql/qsqlquery.h>)
-template <class S> static int t9742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9894(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1301,7 +1301,7 @@ template <class S> static int t9742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1313,7 +1313,7 @@ template <class S> static int t9743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9896(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1328,7 +1328,7 @@ template <class S> static int t9744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9897(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -1343,7 +1343,7 @@ template <class S> static int t9745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9898(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1355,7 +1355,7 @@ template <class S> static int t9746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9899(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1367,7 +1367,7 @@ template <class S> static int t9747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9900(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1379,7 +1379,7 @@ template <class S> static int t9748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9901(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1391,7 +1391,7 @@ template <class S> static int t9749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9902(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1403,7 +1403,7 @@ template <class S> static int t9750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9903(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1415,7 +1415,7 @@ template <class S> static int t9751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9904(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1427,7 +1427,7 @@ template <class S> static int t9752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9905(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1439,7 +1439,7 @@ template <class S> static int t9753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9906(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1451,7 +1451,7 @@ template <class S> static int t9754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9907(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1465,7 +1465,7 @@ template <class S> static int t9755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9908(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1479,7 +1479,7 @@ template <class S> static int t9756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9909(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1494,7 +1494,7 @@ template <class S> static int t9757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9910(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -1509,13 +1509,13 @@ template <class S> static int t9758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9911(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSql::NumericalPrecisionPolicy> p0;
-    QTC_CVE(0, p0, 593);
+    QTC_CVE(0, p0, 617);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSql::NumericalPrecisionPolicy> &p0) { qtc::cve(aa[0], p0, 0, 593); s->setNumericalPrecisionPolicy(p0.get()); }) { s->setNumericalPrecisionPolicy(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSql::NumericalPrecisionPolicy> &p0) { qtc::cve(aa[0], p0, 0, 617); s->setNumericalPrecisionPolicy(p0.get()); }) { s->setNumericalPrecisionPolicy(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1523,7 +1523,7 @@ template <class S> static int t9759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9912(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1536,7 +1536,7 @@ template <class S> static int t9760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9913(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1552,7 +1552,7 @@ template <class S> static int t9761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9914(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1565,7 +1565,7 @@ template <class S> static int t9762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9915(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<bool> p1;
@@ -1584,7 +1584,7 @@ template <class S> static int t9763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9916(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1596,7 +1596,7 @@ template <class S> static int t9764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9917(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1608,7 +1608,7 @@ template <class S> static int t9765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9918(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1620,7 +1620,7 @@ template <class S> static int t9766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9919(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1632,7 +1632,7 @@ template <class S> static int t9767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9920(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1644,7 +1644,7 @@ template <class S> static int t9768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9921(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1656,16 +1656,16 @@ template <class S> static int t9769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9922(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSqlQuery::BatchExecutionMode> p0;
-    if (n > 0) QTC_CVE(0, p0, 603);
+    if (n > 0) QTC_CVE(0, p0, 627);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->execBatch()); }) { qtc::rt(*r, s->execBatch()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlQuery::BatchExecutionMode> &p0) { qtc::cve(aa[0], p0, 0, 603); qtc::rt(*rr, s->execBatch(p0.get())); }) { qtc::rt(*r, s->execBatch(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlQuery::BatchExecutionMode> &p0) { qtc::cve(aa[0], p0, 0, 627); qtc::rt(*rr, s->execBatch(p0.get())); }) { qtc::rt(*r, s->execBatch(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1673,7 +1673,7 @@ template <class S> static int t9770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9923(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1687,20 +1687,20 @@ template <class S> static int t9771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9924(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
     qtc::H<QFlags<QSql::ParamTypeFlag>> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 594);
+    if (n > 2) QTC_CVF(2, p2, 618);
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QVariant> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->bindValue(p0.get(), p1.get()); }) { s->bindValue(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QVariant> &p1, qtc::H<QFlags<QSql::ParamTypeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 594); s->bindValue(p0.get(), p1.get(), p2.get()); }) { s->bindValue(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QVariant> &p1, qtc::H<QFlags<QSql::ParamTypeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 618); s->bindValue(p0.get(), p1.get(), p2.get()); }) { s->bindValue(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1708,20 +1708,20 @@ template <class S> static int t9772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9925(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<QVariant> p1;
     qtc::H<QFlags<QSql::ParamTypeFlag>> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 594);
+    if (n > 2) QTC_CVF(2, p2, 618);
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QVariant> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->bindValue(p0.get(), p1.get()); }) { s->bindValue(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QVariant> &p1, qtc::H<QFlags<QSql::ParamTypeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 594); s->bindValue(p0.get(), p1.get(), p2.get()); }) { s->bindValue(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QVariant> &p1, qtc::H<QFlags<QSql::ParamTypeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 618); s->bindValue(p0.get(), p1.get(), p2.get()); }) { s->bindValue(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1729,18 +1729,18 @@ template <class S> static int t9773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9926(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     qtc::H<QFlags<QSql::ParamTypeFlag>> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 594);
+    if (n > 1) QTC_CVF(1, p1, 618);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVariant> &p0) { qtc::cv(aa[0], p0, 0); s->addBindValue(p0.get()); }) { s->addBindValue(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVariant> &p0, qtc::H<QFlags<QSql::ParamTypeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 594); s->addBindValue(p0.get(), p1.get()); }) { s->addBindValue(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVariant> &p0, qtc::H<QFlags<QSql::ParamTypeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 618); s->addBindValue(p0.get(), p1.get()); }) { s->addBindValue(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1748,7 +1748,7 @@ template <class S> static int t9774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9927(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1762,7 +1762,7 @@ template <class S> static int t9775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9928(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1776,7 +1776,7 @@ template <class S> static int t9776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9929(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1789,7 +1789,7 @@ template <class S> static int t9777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t9778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9930(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1803,7 +1803,7 @@ template <class S> static int t9778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t9779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9931(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1819,7 +1819,7 @@ template <class S> static int t9779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9932(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1831,7 +1831,7 @@ template <class S> static int t9780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9933(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1843,7 +1843,7 @@ template <class S> static int t9781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9934(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1855,7 +1855,7 @@ template <class S> static int t9782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9935(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1867,7 +1867,7 @@ template <class S> static int t9783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9936(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QSqlDatabase> p1;
@@ -1888,7 +1888,7 @@ template <class S> static int t9784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9937(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QSqlDatabase> p0;
     QTC_CV(0, p0);
@@ -1903,7 +1903,7 @@ template <class S> static int t9785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqlquerymodel.h>)
-template <class S> static int t9786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9938(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1921,7 +1921,7 @@ template <class S> static int t9786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9939(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1939,7 +1939,7 @@ template <class S> static int t9787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9940(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1953,7 +1953,7 @@ template <class S> static int t9788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9941(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1965,7 +1965,7 @@ template <class S> static int t9789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9942(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     qtc::H<int> p1;
@@ -1985,20 +1985,20 @@ template <class S> static int t9790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9943(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<Qt::Orientation> p1;
     qtc::H<int> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 892);
+    QTC_CVE(1, p1, 916);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2006,22 +2006,22 @@ template <class S> static int t9791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9944(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<Qt::Orientation> p1;
     qtc::H<QVariant> p2;
     qtc::H<int> p3;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 892);
+    QTC_CVE(1, p1, 916);
     QTC_CV(2, p2);
     if (n > 3) QTC_CV(3, p3);
     switch (n) {
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<QVariant> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->setHeaderData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->setHeaderData(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<QVariant> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->setHeaderData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->setHeaderData(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<QVariant> &p2, qtc::H<int> &p3) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, s->setHeaderData(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, s->setHeaderData(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<QVariant> &p2, qtc::H<int> &p3) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, s->setHeaderData(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, s->setHeaderData(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2029,7 +2029,7 @@ template <class S> static int t9792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9945(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -2054,7 +2054,7 @@ template <class S> static int t9793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9946(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -2077,7 +2077,7 @@ template <class S> static int t9794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9947(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSqlQuery> p0;
     QTC_CV(0, p0);
@@ -2091,7 +2091,7 @@ template <class S> static int t9795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9948(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QSqlDatabase> p1;
@@ -2111,7 +2111,7 @@ template <class S> static int t9796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-template <class S> static int t9797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9949(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2125,7 +2125,7 @@ template <class S> static int t9797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t9798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9950(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2138,7 +2138,7 @@ template <class S> static int t9798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9951(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2150,7 +2150,7 @@ template <class S> static int t9799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9952(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2162,7 +2162,7 @@ template <class S> static int t9800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9953(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2180,7 +2180,7 @@ template <class S> static int t9801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9954(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2198,7 +2198,7 @@ template <class S> static int t9802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9955(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2210,7 +2210,7 @@ template <class S> static int t9803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9956(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2228,7 +2228,7 @@ template <class S> static int t9804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSql/qsqlrecord.h>)
-template <class S> static int t9805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9957(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2243,7 +2243,7 @@ template <class S> static int t9805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9958(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -2258,7 +2258,7 @@ template <class S> static int t9806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<QVariant> p1;
@@ -2275,7 +2275,7 @@ template <class S> static int t9807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QVariant> p1;
@@ -2292,7 +2292,7 @@ template <class S> static int t9808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2307,7 +2307,7 @@ template <class S> static int t9809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -2322,7 +2322,7 @@ template <class S> static int t9810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2337,7 +2337,7 @@ template <class S> static int t9811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -2353,7 +2353,7 @@ template <class S> static int t9812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -2368,7 +2368,7 @@ template <class S> static int t9813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2382,7 +2382,7 @@ template <class S> static int t9814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2397,7 +2397,7 @@ template <class S> static int t9815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -2412,7 +2412,7 @@ template <class S> static int t9816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2427,7 +2427,7 @@ template <class S> static int t9817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -2443,7 +2443,7 @@ template <class S> static int t9818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<bool> p1;
@@ -2460,7 +2460,7 @@ template <class S> static int t9819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<bool> p1;
@@ -2476,7 +2476,7 @@ template <class S> static int t9820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSqlField> p0;
     QTC_CV(0, p0);
@@ -2490,7 +2490,7 @@ template <class S> static int t9821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<QSqlField> p1;
@@ -2506,7 +2506,7 @@ template <class S> static int t9822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<QSqlField> p1;
@@ -2523,7 +2523,7 @@ template <class S> static int t9823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2537,7 +2537,7 @@ template <class S> static int t9824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2550,7 +2550,7 @@ template <class S> static int t9825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -2565,7 +2565,7 @@ template <class S> static int t9826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2577,7 +2577,7 @@ template <class S> static int t9827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2589,7 +2589,7 @@ template <class S> static int t9828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2601,7 +2601,7 @@ template <class S> static int t9829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSqlRecord> p0;
     QTC_CV(0, p0);
@@ -2615,7 +2615,7 @@ template <class S> static int t9830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2628,7 +2628,7 @@ template <class S> static int t9831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqlrelationaltablemodel.h>)
-template <class S> static int t9832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2640,7 +2640,7 @@ template <class S> static int t9832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2652,7 +2652,7 @@ template <class S> static int t9833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2664,7 +2664,7 @@ template <class S> static int t9834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2676,7 +2676,7 @@ template <class S> static int t9835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2687,7 +2687,7 @@ template <class S> static int t9836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -2706,7 +2706,7 @@ template <class S> static int t9837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqlrelationaltablemodel.h>)
-template <class S> static int t9838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     qtc::H<int> p1;
@@ -2726,7 +2726,7 @@ template <class S> static int t9838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     qtc::H<QVariant> p1;
@@ -2748,7 +2748,7 @@ template <class S> static int t9839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -2771,7 +2771,7 @@ template <class S> static int t9840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2783,7 +2783,7 @@ template <class S> static int t9841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2795,7 +2795,7 @@ template <class S> static int t9842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2809,7 +2809,7 @@ template <class S> static int t9843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QSqlRelation> p1;
@@ -2826,7 +2826,7 @@ template <class S> static int t9844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2840,7 +2840,7 @@ template <class S> static int t9845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2854,13 +2854,13 @@ template <class S> static int t9846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSqlRelationalTableModel::JoinMode> p0;
-    QTC_CVE(0, p0, 604);
+    QTC_CVE(0, p0, 628);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlRelationalTableModel::JoinMode> &p0) { qtc::cve(aa[0], p0, 0, 604); s->setJoinMode(p0.get()); }) { s->setJoinMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlRelationalTableModel::JoinMode> &p0) { qtc::cve(aa[0], p0, 0, 628); s->setJoinMode(p0.get()); }) { s->setJoinMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2868,7 +2868,7 @@ template <class S> static int t9847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2882,7 +2882,7 @@ template <class S> static int t9848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QSqlDatabase> p1;
@@ -2905,7 +2905,7 @@ template <class S> static int t9849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqltablemodel.h>)
-template <class S> static int t9850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2919,7 +2919,7 @@ template <class S> static int t9850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2931,7 +2931,7 @@ template <class S> static int t9851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     QTC_CV(0, p0);
@@ -2946,7 +2946,7 @@ template <class S> static int t9852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2958,7 +2958,7 @@ template <class S> static int t9853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2972,7 +2972,7 @@ template <class S> static int t9854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     qtc::H<int> p1;
@@ -2992,7 +2992,7 @@ template <class S> static int t9855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     qtc::H<QVariant> p1;
@@ -3014,7 +3014,7 @@ template <class S> static int t9856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     QTC_CV(0, p0);
@@ -3029,20 +3029,20 @@ template <class S> static int t9857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<Qt::Orientation> p1;
     qtc::H<int> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 892);
+    QTC_CVE(1, p1, 916);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3050,7 +3050,7 @@ template <class S> static int t9858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3062,7 +3062,7 @@ template <class S> static int t9859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     QTC_CV(0, p0);
@@ -3077,7 +3077,7 @@ template <class S> static int t9860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3089,13 +3089,13 @@ template <class S> static int t9861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSqlTableModel::EditStrategy> p0;
-    QTC_CVE(0, p0, 605);
+    QTC_CVE(0, p0, 629);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlTableModel::EditStrategy> &p0) { qtc::cve(aa[0], p0, 0, 605); s->setEditStrategy(p0.get()); }) { s->setEditStrategy(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSqlTableModel::EditStrategy> &p0) { qtc::cve(aa[0], p0, 0, 629); s->setEditStrategy(p0.get()); }) { s->setEditStrategy(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3103,7 +3103,7 @@ template <class S> static int t9862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3115,7 +3115,7 @@ template <class S> static int t9863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3127,7 +3127,7 @@ template <class S> static int t9864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3139,7 +3139,7 @@ template <class S> static int t9865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3153,15 +3153,15 @@ template <class S> static int t9866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<Qt::SortOrder> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 904);
+    QTC_CVE(1, p1, 928);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::SortOrder> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 904); s->sort(p0.get(), p1.get()); }) { s->sort(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::SortOrder> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 928); s->sort(p0.get(), p1.get()); }) { s->sort(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3169,15 +3169,15 @@ template <class S> static int t9867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<Qt::SortOrder> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 904);
+    QTC_CVE(1, p1, 928);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::SortOrder> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 904); s->setSort(p0.get(), p1.get()); }) { s->setSort(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::SortOrder> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 928); s->setSort(p0.get(), p1.get()); }) { s->setSort(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3185,7 +3185,7 @@ template <class S> static int t9868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3197,7 +3197,7 @@ template <class S> static int t9869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3211,7 +3211,7 @@ template <class S> static int t9870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QModelIndex> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3229,7 +3229,7 @@ template <class S> static int t9871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -3252,7 +3252,7 @@ template <class S> static int t9872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -3275,7 +3275,7 @@ template <class S> static int t9873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -3299,7 +3299,7 @@ template <class S> static int t9874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QSqlRecord> p1;
@@ -3315,7 +3315,7 @@ template <class S> static int t9875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QSqlRecord> p1;
@@ -3331,7 +3331,7 @@ template <class S> static int t9876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3345,7 +3345,7 @@ template <class S> static int t9877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3357,7 +3357,7 @@ template <class S> static int t9878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3371,7 +3371,7 @@ template <class S> static int t9879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3383,7 +3383,7 @@ template <class S> static int t9880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3395,7 +3395,7 @@ template <class S> static int t9881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3407,7 +3407,7 @@ template <class S> static int t9882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3419,7 +3419,7 @@ template <class S> static int t9883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3433,7 +3433,7 @@ template <class S> static int t9884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QSqlDatabase> p1;
@@ -3455,75 +3455,75 @@ template <class S> static int t9885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P9651[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9655[] = {{qtc::PK_ENUM, 595, "QSql::TableType", nullptr}};
-static const qtc::ParamDesc P9656[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9657[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9658[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9664[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9665[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9666[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9667[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9668[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9669[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9678[] = {{qtc::PK_ENUM, 593, "QSql::NumericalPrecisionPolicy", nullptr}};
-static const qtc::ParamDesc P9682[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9683[] = {{qtc::PK_OBJ, -1, "QSqlDriver*", &QSqlDriver::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9684[] = {{qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9685[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9686[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9687[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9688[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9691[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9803[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9807[] = {{qtc::PK_ENUM, 619, "QSql::TableType", nullptr}};
+static const qtc::ParamDesc P9808[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9809[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9810[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9816[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9817[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9818[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9819[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9820[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9821[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9830[] = {{qtc::PK_ENUM, 617, "QSql::NumericalPrecisionPolicy", nullptr}};
+static const qtc::ParamDesc P9834[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9835[] = {{qtc::PK_OBJ, -1, "QSqlDriver*", &QSqlDriver::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9836[] = {{qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9837[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9838[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9839[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9840[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9843[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtSql/qsqldatabase.h>)
 static const qtc::MethodDef M_QSqlDatabase[] = {
-    {"open", "open()", t9650<QSqlDatabase>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"open", "open(QString,QString)", t9651<QSqlDatabase>, P9651, 2, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"close", "close()", t9652<QSqlDatabase>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"isOpen", "isOpen()", t9653<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isOpenError", "isOpenError()", t9654<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"tables", "tables(QSql::TableType)", t9655<QSqlDatabase>, P9655, 1, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"primaryIndex", "primaryIndex(QString)", t9656<QSqlDatabase>, P9656, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlIndex"},
-    {"record", "record(QString)", t9657<QSqlDatabase>, P9657, 1, 1, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
-    {"exec", "exec(QString)", t9658<QSqlDatabase>, P9658, 1, 0, qtc::MF_CONST|qtc::MF_DEPRECATED|qtc::MF_BLOCKING|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlQuery"},
-    {"lastError", "lastError()", t9659<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlError"},
-    {"isValid", "isValid()", t9660<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"transaction", "transaction()", t9661<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"commit", "commit()", t9662<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"rollback", "rollback()", t9663<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"setDatabaseName", "setDatabaseName(QString)", t9664<QSqlDatabase>, P9664, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"setUserName", "setUserName(QString)", t9665<QSqlDatabase>, P9665, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setPassword", "setPassword(QString)", t9666<QSqlDatabase>, P9666, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setHostName", "setHostName(QString)", t9667<QSqlDatabase>, P9667, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setPort", "setPort(int)", t9668<QSqlDatabase>, P9668, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setConnectOptions", "setConnectOptions(QString)", t9669<QSqlDatabase>, P9669, 1, 0, 0, QTC_T_NONE, "void"},
-    {"databaseName", "databaseName()", t9670<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"userName", "userName()", t9671<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"password", "password()", t9672<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"hostName", "hostName()", t9673<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"driverName", "driverName()", t9674<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"port", "port()", t9675<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"connectOptions", "connectOptions()", t9676<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"connectionName", "connectionName()", t9677<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setNumericalPrecisionPolicy", "setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy)", t9678<QSqlDatabase>, P9678, 1, 1, 0, QTC_T_NONE, "void"},
-    {"numericalPrecisionPolicy", "numericalPrecisionPolicy()", t9679<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSql::NumericalPrecisionPolicy"},
+    {"open", "open()", t9802<QSqlDatabase>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"open", "open(QString,QString)", t9803<QSqlDatabase>, P9803, 2, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"close", "close()", t9804<QSqlDatabase>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"isOpen", "isOpen()", t9805<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isOpenError", "isOpenError()", t9806<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"tables", "tables(QSql::TableType)", t9807<QSqlDatabase>, P9807, 1, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"primaryIndex", "primaryIndex(QString)", t9808<QSqlDatabase>, P9808, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlIndex"},
+    {"record", "record(QString)", t9809<QSqlDatabase>, P9809, 1, 1, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
+    {"exec", "exec(QString)", t9810<QSqlDatabase>, P9810, 1, 0, qtc::MF_CONST|qtc::MF_DEPRECATED|qtc::MF_BLOCKING|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlQuery"},
+    {"lastError", "lastError()", t9811<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlError"},
+    {"isValid", "isValid()", t9812<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"transaction", "transaction()", t9813<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"commit", "commit()", t9814<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"rollback", "rollback()", t9815<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"setDatabaseName", "setDatabaseName(QString)", t9816<QSqlDatabase>, P9816, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"setUserName", "setUserName(QString)", t9817<QSqlDatabase>, P9817, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setPassword", "setPassword(QString)", t9818<QSqlDatabase>, P9818, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setHostName", "setHostName(QString)", t9819<QSqlDatabase>, P9819, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setPort", "setPort(int)", t9820<QSqlDatabase>, P9820, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setConnectOptions", "setConnectOptions(QString)", t9821<QSqlDatabase>, P9821, 1, 0, 0, QTC_T_NONE, "void"},
+    {"databaseName", "databaseName()", t9822<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"userName", "userName()", t9823<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"password", "password()", t9824<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"hostName", "hostName()", t9825<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"driverName", "driverName()", t9826<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"port", "port()", t9827<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"connectOptions", "connectOptions()", t9828<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"connectionName", "connectionName()", t9829<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setNumericalPrecisionPolicy", "setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy)", t9830<QSqlDatabase>, P9830, 1, 1, 0, QTC_T_NONE, "void"},
+    {"numericalPrecisionPolicy", "numericalPrecisionPolicy()", t9831<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSql::NumericalPrecisionPolicy"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"thread", "thread()", t9680<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QThread*"},
+    {"thread", "thread()", t9832<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QThread*"},
 #endif
-    {"driver", "driver()", t9681<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QSqlDriver*"},
-    {"addDatabase", "addDatabase(QString,QString)", t9682<QSqlDatabase>, P9682, 2, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
-    {"addDatabase", "addDatabase(QSqlDriver*,QString)", t9683<QSqlDatabase>, P9683, 2, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
-    {"cloneDatabase", "cloneDatabase(QSqlDatabase,QString)", t9684<QSqlDatabase>, P9684, 2, 2, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
-    {"cloneDatabase", "cloneDatabase(QString,QString)", t9685<QSqlDatabase>, P9685, 2, 2, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
-    {"database", "database(QString,bool)", t9686<QSqlDatabase>, P9686, 2, 0, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
-    {"removeDatabase", "removeDatabase(QString)", t9687<QSqlDatabase>, P9687, 1, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"contains", "contains(QString)", t9688<QSqlDatabase>, P9688, 1, 0, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"drivers", "drivers()", t9689<QSqlDatabase>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
-    {"connectionNames", "connectionNames()", t9690<QSqlDatabase>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
-    {"isDriverAvailable", "isDriverAvailable(QString)", t9691<QSqlDatabase>, P9691, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"driver", "driver()", t9833<QSqlDatabase>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QSqlDriver*"},
+    {"addDatabase", "addDatabase(QString,QString)", t9834<QSqlDatabase>, P9834, 2, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
+    {"addDatabase", "addDatabase(QSqlDriver*,QString)", t9835<QSqlDatabase>, P9835, 2, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
+    {"cloneDatabase", "cloneDatabase(QSqlDatabase,QString)", t9836<QSqlDatabase>, P9836, 2, 2, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
+    {"cloneDatabase", "cloneDatabase(QString,QString)", t9837<QSqlDatabase>, P9837, 2, 2, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
+    {"database", "database(QString,bool)", t9838<QSqlDatabase>, P9838, 2, 0, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
+    {"removeDatabase", "removeDatabase(QString)", t9839<QSqlDatabase>, P9839, 1, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"contains", "contains(QString)", t9840<QSqlDatabase>, P9840, 1, 0, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"drivers", "drivers()", t9841<QSqlDatabase>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
+    {"connectionNames", "connectionNames()", t9842<QSqlDatabase>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
+    {"isDriverAvailable", "isDriverAvailable(QString)", t9843<QSqlDatabase>, P9843, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlDatabase[] = {
-    {"QSqlDatabase", "QSqlDatabase()", t9692<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSqlDatabase"},
+    {"QSqlDatabase", "QSqlDatabase()", t9844<QSqlDatabase>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSqlDatabase"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
 static const char *const B_QSqlDatabase[] = {"QSqlDatabaseDefaultConnectionName", nullptr};
@@ -3535,429 +3535,429 @@ static void *U_QSqlDatabase(void *p, int b) { switch (b) {  default: return p; }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0) && __has_include(<QtSql/qsqldatabase.h>)
 static const qtc::MethodDef M_QSqlDatabaseDefaultConnectionName[] = {
-    {"defaultConnectionName", "defaultConnectionName()", t9693<QSqlDatabaseDefaultConnectionName>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"defaultConnectionName", "defaultConnectionName()", t9845<QSqlDatabaseDefaultConnectionName>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlDatabaseDefaultConnectionName[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9700[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 601, "QSqlError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9852[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 625, "QSqlError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtSql/qsqlerror.h>)
 static const qtc::MethodDef M_QSqlError[] = {
-    {"driverText", "driverText()", t9694<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"databaseText", "databaseText()", t9695<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"type", "type()", t9696<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSqlError::ErrorType"},
-    {"nativeErrorCode", "nativeErrorCode()", t9697<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"text", "text()", t9698<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isValid", "isValid()", t9699<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"driverText", "driverText()", t9846<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"databaseText", "databaseText()", t9847<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"type", "type()", t9848<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSqlError::ErrorType"},
+    {"nativeErrorCode", "nativeErrorCode()", t9849<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"text", "text()", t9850<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isValid", "isValid()", t9851<QSqlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlError[] = {
-    {"QSqlError", "QSqlError(QString,QString,QSqlError::ErrorType,QString)", t9700<QSqlError>, P9700, 4, 0, 0, QTC_T_VALUE, "QSqlError"},
+    {"QSqlError", "QSqlError(QString,QString,QSqlError::ErrorType,QString)", t9852<QSqlError>, P9852, 4, 0, 0, QTC_T_VALUE, "QSqlError"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9701[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P9703[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9705[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9708[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9713[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}};
-static const qtc::ParamDesc P9715[] = {{qtc::PK_ENUM, 802, "QVariant::Type", nullptr}};
-static const qtc::ParamDesc P9716[] = {{qtc::PK_ENUM, 602, "QSqlField::RequiredStatus", nullptr}};
-static const qtc::ParamDesc P9717[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9718[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9719[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9720[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P9721[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9722[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9723[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9731[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QMetaType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9732[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 802, "QVariant::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9853[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9855[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9857[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9860[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9865[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}};
+static const qtc::ParamDesc P9867[] = {{qtc::PK_ENUM, 826, "QVariant::Type", nullptr}};
+static const qtc::ParamDesc P9868[] = {{qtc::PK_ENUM, 626, "QSqlField::RequiredStatus", nullptr}};
+static const qtc::ParamDesc P9869[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9870[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9871[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9872[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9873[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9874[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9875[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9883[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QMetaType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9884[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 826, "QVariant::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtSql/qsqlfield.h>)
 static const qtc::MethodDef M_QSqlField[] = {
-    {"setValue", "setValue(QVariant)", t9701<QSqlField>, P9701, 1, 1, 0, QTC_T_NONE, "void"},
-    {"value", "value()", t9702<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setName", "setName(QString)", t9703<QSqlField>, P9703, 1, 1, 0, QTC_T_NONE, "void"},
-    {"name", "name()", t9704<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setTableName", "setTableName(QString)", t9705<QSqlField>, P9705, 1, 1, 0, QTC_T_NONE, "void"},
-    {"tableName", "tableName()", t9706<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isNull", "isNull()", t9707<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setReadOnly", "setReadOnly(bool)", t9708<QSqlField>, P9708, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isReadOnly", "isReadOnly()", t9709<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t9710<QSqlField>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isAutoValue", "isAutoValue()", t9711<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"metaType", "metaType()", t9712<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMetaType"},
-    {"setMetaType", "setMetaType(QMetaType)", t9713<QSqlField>, P9713, 1, 1, 0, QTC_T_NONE, "void"},
-    {"type", "type()", t9714<QSqlField>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "QVariant::Type"},
-    {"setType", "setType(QVariant::Type)", t9715<QSqlField>, P9715, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
-    {"setRequiredStatus", "setRequiredStatus(QSqlField::RequiredStatus)", t9716<QSqlField>, P9716, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setRequired", "setRequired(bool)", t9717<QSqlField>, P9717, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setLength", "setLength(int)", t9718<QSqlField>, P9718, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setPrecision", "setPrecision(int)", t9719<QSqlField>, P9719, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setDefaultValue", "setDefaultValue(QVariant)", t9720<QSqlField>, P9720, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setSqlType", "setSqlType(int)", t9721<QSqlField>, P9721, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
-    {"setGenerated", "setGenerated(bool)", t9722<QSqlField>, P9722, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setAutoValue", "setAutoValue(bool)", t9723<QSqlField>, P9723, 1, 1, 0, QTC_T_NONE, "void"},
-    {"requiredStatus", "requiredStatus()", t9724<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSqlField::RequiredStatus"},
-    {"length", "length()", t9725<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"precision", "precision()", t9726<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"defaultValue", "defaultValue()", t9727<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"typeID", "typeID()", t9728<QSqlField>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "int"},
-    {"isGenerated", "isGenerated()", t9729<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isValid", "isValid()", t9730<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setValue", "setValue(QVariant)", t9853<QSqlField>, P9853, 1, 1, 0, QTC_T_NONE, "void"},
+    {"value", "value()", t9854<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setName", "setName(QString)", t9855<QSqlField>, P9855, 1, 1, 0, QTC_T_NONE, "void"},
+    {"name", "name()", t9856<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setTableName", "setTableName(QString)", t9857<QSqlField>, P9857, 1, 1, 0, QTC_T_NONE, "void"},
+    {"tableName", "tableName()", t9858<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isNull", "isNull()", t9859<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setReadOnly", "setReadOnly(bool)", t9860<QSqlField>, P9860, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isReadOnly", "isReadOnly()", t9861<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t9862<QSqlField>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isAutoValue", "isAutoValue()", t9863<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"metaType", "metaType()", t9864<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMetaType"},
+    {"setMetaType", "setMetaType(QMetaType)", t9865<QSqlField>, P9865, 1, 1, 0, QTC_T_NONE, "void"},
+    {"type", "type()", t9866<QSqlField>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "QVariant::Type"},
+    {"setType", "setType(QVariant::Type)", t9867<QSqlField>, P9867, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
+    {"setRequiredStatus", "setRequiredStatus(QSqlField::RequiredStatus)", t9868<QSqlField>, P9868, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setRequired", "setRequired(bool)", t9869<QSqlField>, P9869, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setLength", "setLength(int)", t9870<QSqlField>, P9870, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setPrecision", "setPrecision(int)", t9871<QSqlField>, P9871, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setDefaultValue", "setDefaultValue(QVariant)", t9872<QSqlField>, P9872, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setSqlType", "setSqlType(int)", t9873<QSqlField>, P9873, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
+    {"setGenerated", "setGenerated(bool)", t9874<QSqlField>, P9874, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAutoValue", "setAutoValue(bool)", t9875<QSqlField>, P9875, 1, 1, 0, QTC_T_NONE, "void"},
+    {"requiredStatus", "requiredStatus()", t9876<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSqlField::RequiredStatus"},
+    {"length", "length()", t9877<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"precision", "precision()", t9878<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"defaultValue", "defaultValue()", t9879<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"typeID", "typeID()", t9880<QSqlField>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "int"},
+    {"isGenerated", "isGenerated()", t9881<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isValid", "isValid()", t9882<QSqlField>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlField[] = {
-    {"QSqlField", "QSqlField(QString,QMetaType,QString)", t9731<QSqlField>, P9731, 3, 0, 0, QTC_T_VALUE, "QSqlField"},
-    {"QSqlField", "QSqlField(QString,QVariant::Type,QString)", t9732<QSqlField>, P9732, 3, 2, 0, QTC_T_VALUE, "QSqlField"},
+    {"QSqlField", "QSqlField(QString,QMetaType,QString)", t9883<QSqlField>, P9883, 3, 0, 0, QTC_T_VALUE, "QSqlField"},
+    {"QSqlField", "QSqlField(QString,QVariant::Type,QString)", t9884<QSqlField>, P9884, 3, 2, 0, QTC_T_VALUE, "QSqlField"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9733[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9735[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9737[] = {{qtc::PK_VALUE, -1, "QSqlField", nullptr}};
-static const qtc::ParamDesc P9738[] = {{qtc::PK_VALUE, -1, "QSqlField", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9739[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9740[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9741[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9885[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9887[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9889[] = {{qtc::PK_VALUE, -1, "QSqlField", nullptr}};
+static const qtc::ParamDesc P9890[] = {{qtc::PK_VALUE, -1, "QSqlField", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9891[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9892[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9893[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtSql/qsqlindex.h>)
 static const qtc::MethodDef M_QSqlIndex[] = {
-    {"setCursorName", "setCursorName(QString)", t9733<QSqlIndex>, P9733, 1, 1, 0, QTC_T_NONE, "void"},
-    {"cursorName", "cursorName()", t9734<QSqlIndex>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setName", "setName(QString)", t9735<QSqlIndex>, P9735, 1, 1, 0, QTC_T_NONE, "void"},
-    {"name", "name()", t9736<QSqlIndex>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"append", "append(QSqlField)", t9737<QSqlIndex>, P9737, 1, 1, 0, QTC_T_NONE, "void"},
-    {"append", "append(QSqlField,bool)", t9738<QSqlIndex>, P9738, 2, 2, 0, QTC_T_NONE, "void"},
-    {"isDescending", "isDescending(int)", t9739<QSqlIndex>, P9739, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setDescending", "setDescending(int,bool)", t9740<QSqlIndex>, P9740, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setCursorName", "setCursorName(QString)", t9885<QSqlIndex>, P9885, 1, 1, 0, QTC_T_NONE, "void"},
+    {"cursorName", "cursorName()", t9886<QSqlIndex>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setName", "setName(QString)", t9887<QSqlIndex>, P9887, 1, 1, 0, QTC_T_NONE, "void"},
+    {"name", "name()", t9888<QSqlIndex>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"append", "append(QSqlField)", t9889<QSqlIndex>, P9889, 1, 1, 0, QTC_T_NONE, "void"},
+    {"append", "append(QSqlField,bool)", t9890<QSqlIndex>, P9890, 2, 2, 0, QTC_T_NONE, "void"},
+    {"isDescending", "isDescending(int)", t9891<QSqlIndex>, P9891, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setDescending", "setDescending(int,bool)", t9892<QSqlIndex>, P9892, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlIndex[] = {
-    {"QSqlIndex", "QSqlIndex(QString,QString)", t9741<QSqlIndex>, P9741, 2, 0, 0, QTC_T_VALUE, "QSqlIndex"},
+    {"QSqlIndex", "QSqlIndex(QString,QString)", t9893<QSqlIndex>, P9893, 2, 0, 0, QTC_T_VALUE, "QSqlIndex"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QSqlIndex[] = {"QSqlRecord", nullptr};
 static void *U_QSqlIndex(void *p, int b) { switch (b) { case 0: return static_cast<QSqlRecord *>(static_cast<QSqlIndex *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P9744[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9896[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9745[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9897[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9755[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9756[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9757[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9907[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9908[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9909[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9758[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9910[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9759[] = {{qtc::PK_ENUM, 593, "QSql::NumericalPrecisionPolicy", nullptr}};
+static const qtc::ParamDesc P9911[] = {{qtc::PK_ENUM, 617, "QSql::NumericalPrecisionPolicy", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9761[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9913[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
-static const qtc::ParamDesc P9763[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9770[] = {{qtc::PK_ENUM, 603, "QSqlQuery::BatchExecutionMode", nullptr}};
-static const qtc::ParamDesc P9771[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9772[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_FLAGS, 594, "QFlags<QSql::ParamTypeFlag>", nullptr}};
-static const qtc::ParamDesc P9773[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_FLAGS, 594, "QFlags<QSql::ParamTypeFlag>", nullptr}};
-static const qtc::ParamDesc P9774[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_FLAGS, 594, "QFlags<QSql::ParamTypeFlag>", nullptr}};
-static const qtc::ParamDesc P9775[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9776[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9915[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9922[] = {{qtc::PK_ENUM, 627, "QSqlQuery::BatchExecutionMode", nullptr}};
+static const qtc::ParamDesc P9923[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9924[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_FLAGS, 618, "QFlags<QSql::ParamTypeFlag>", nullptr}};
+static const qtc::ParamDesc P9925[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_FLAGS, 618, "QFlags<QSql::ParamTypeFlag>", nullptr}};
+static const qtc::ParamDesc P9926[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_FLAGS, 618, "QFlags<QSql::ParamTypeFlag>", nullptr}};
+static const qtc::ParamDesc P9927[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9928[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P9779[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9931[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #endif
-static const qtc::ParamDesc P9784[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
-static const qtc::ParamDesc P9785[] = {{qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
+static const qtc::ParamDesc P9936[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
+static const qtc::ParamDesc P9937[] = {{qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
 #if __has_include(<QtSql/qsqlquery.h>)
 static const qtc::MethodDef M_QSqlQuery[] = {
-    {"isValid", "isValid()", t9742<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isActive", "isActive()", t9743<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNull", "isNull(int)", t9744<QSqlQuery>, P9744, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isValid", "isValid()", t9894<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isActive", "isActive()", t9895<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull(int)", t9896<QSqlQuery>, P9896, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"isNull", "isNull(QAnyStringView)", t9745<QSqlQuery>, P9745, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull(QAnyStringView)", t9897<QSqlQuery>, P9897, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
-    {"at", "at()", t9746<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"lastQuery", "lastQuery()", t9747<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"numRowsAffected", "numRowsAffected()", t9748<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"lastError", "lastError()", t9749<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlError"},
-    {"isSelect", "isSelect()", t9750<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"size", "size()", t9751<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"driver", "driver()", t9752<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QSqlDriver*"},
-    {"isForwardOnly", "isForwardOnly()", t9753<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"record", "record()", t9754<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
-    {"setForwardOnly", "setForwardOnly(bool)", t9755<QSqlQuery>, P9755, 1, 1, 0, QTC_T_NONE, "void"},
-    {"exec", "exec(QString)", t9756<QSqlQuery>, P9756, 1, 1, qtc::MF_BLOCKING|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"value", "value(int)", t9757<QSqlQuery>, P9757, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"at", "at()", t9898<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"lastQuery", "lastQuery()", t9899<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"numRowsAffected", "numRowsAffected()", t9900<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"lastError", "lastError()", t9901<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlError"},
+    {"isSelect", "isSelect()", t9902<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"size", "size()", t9903<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"driver", "driver()", t9904<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QSqlDriver*"},
+    {"isForwardOnly", "isForwardOnly()", t9905<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"record", "record()", t9906<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
+    {"setForwardOnly", "setForwardOnly(bool)", t9907<QSqlQuery>, P9907, 1, 1, 0, QTC_T_NONE, "void"},
+    {"exec", "exec(QString)", t9908<QSqlQuery>, P9908, 1, 1, qtc::MF_BLOCKING|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"value", "value(int)", t9909<QSqlQuery>, P9909, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"value", "value(QAnyStringView)", t9758<QSqlQuery>, P9758, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"value", "value(QAnyStringView)", t9910<QSqlQuery>, P9910, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
 #endif
-    {"setNumericalPrecisionPolicy", "setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy)", t9759<QSqlQuery>, P9759, 1, 1, 0, QTC_T_NONE, "void"},
-    {"numericalPrecisionPolicy", "numericalPrecisionPolicy()", t9760<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSql::NumericalPrecisionPolicy"},
+    {"setNumericalPrecisionPolicy", "setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy)", t9911<QSqlQuery>, P9911, 1, 1, 0, QTC_T_NONE, "void"},
+    {"numericalPrecisionPolicy", "numericalPrecisionPolicy()", t9912<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSql::NumericalPrecisionPolicy"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"setPositionalBindingEnabled", "setPositionalBindingEnabled(bool)", t9761<QSqlQuery>, P9761, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setPositionalBindingEnabled", "setPositionalBindingEnabled(bool)", t9913<QSqlQuery>, P9913, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"isPositionalBindingEnabled", "isPositionalBindingEnabled()", t9762<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isPositionalBindingEnabled", "isPositionalBindingEnabled()", t9914<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
-    {"seek", "seek(int,bool)", t9763<QSqlQuery>, P9763, 2, 1, 0, QTC_T_BOOL, "bool"},
-    {"next", "next()", t9764<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"previous", "previous()", t9765<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"first", "first()", t9766<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"last", "last()", t9767<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t9768<QSqlQuery>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"exec", "exec()", t9769<QSqlQuery>, nullptr, 0, 0, qtc::MF_BLOCKING|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"execBatch", "execBatch(QSqlQuery::BatchExecutionMode)", t9770<QSqlQuery>, P9770, 1, 0, 0, QTC_T_BOOL, "bool"},
-    {"prepare", "prepare(QString)", t9771<QSqlQuery>, P9771, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"bindValue", "bindValue(QString,QVariant,QSql::ParamType)", t9772<QSqlQuery>, P9772, 3, 2, 0, QTC_T_NONE, "void"},
-    {"bindValue", "bindValue(int,QVariant,QSql::ParamType)", t9773<QSqlQuery>, P9773, 3, 2, 0, QTC_T_NONE, "void"},
-    {"addBindValue", "addBindValue(QVariant,QSql::ParamType)", t9774<QSqlQuery>, P9774, 2, 1, 0, QTC_T_NONE, "void"},
-    {"boundValue", "boundValue(QString)", t9775<QSqlQuery>, P9775, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"boundValue", "boundValue(int)", t9776<QSqlQuery>, P9776, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"boundValues", "boundValues()", t9777<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
+    {"seek", "seek(int,bool)", t9915<QSqlQuery>, P9915, 2, 1, 0, QTC_T_BOOL, "bool"},
+    {"next", "next()", t9916<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"previous", "previous()", t9917<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"first", "first()", t9918<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"last", "last()", t9919<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t9920<QSqlQuery>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"exec", "exec()", t9921<QSqlQuery>, nullptr, 0, 0, qtc::MF_BLOCKING|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"execBatch", "execBatch(QSqlQuery::BatchExecutionMode)", t9922<QSqlQuery>, P9922, 1, 0, 0, QTC_T_BOOL, "bool"},
+    {"prepare", "prepare(QString)", t9923<QSqlQuery>, P9923, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"bindValue", "bindValue(QString,QVariant,QSql::ParamType)", t9924<QSqlQuery>, P9924, 3, 2, 0, QTC_T_NONE, "void"},
+    {"bindValue", "bindValue(int,QVariant,QSql::ParamType)", t9925<QSqlQuery>, P9925, 3, 2, 0, QTC_T_NONE, "void"},
+    {"addBindValue", "addBindValue(QVariant,QSql::ParamType)", t9926<QSqlQuery>, P9926, 2, 1, 0, QTC_T_NONE, "void"},
+    {"boundValue", "boundValue(QString)", t9927<QSqlQuery>, P9927, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"boundValue", "boundValue(int)", t9928<QSqlQuery>, P9928, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"boundValues", "boundValues()", t9929<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"boundValueNames", "boundValueNames()", t9778<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"boundValueNames", "boundValueNames()", t9930<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"boundValueName", "boundValueName(int)", t9779<QSqlQuery>, P9779, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"boundValueName", "boundValueName(int)", t9931<QSqlQuery>, P9931, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
 #endif
-    {"executedQuery", "executedQuery()", t9780<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"lastInsertId", "lastInsertId()", t9781<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"finish", "finish()", t9782<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"nextResult", "nextResult()", t9783<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"executedQuery", "executedQuery()", t9932<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"lastInsertId", "lastInsertId()", t9933<QSqlQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"finish", "finish()", t9934<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"nextResult", "nextResult()", t9935<QSqlQuery>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlQuery[] = {
-    {"QSqlQuery", "QSqlQuery(QString,QSqlDatabase)", t9784<QSqlQuery>, P9784, 2, 0, 0, QTC_T_VALUE, "QSqlQuery"},
-    {"QSqlQuery", "QSqlQuery(QSqlDatabase)", t9785<QSqlQuery>, P9785, 1, 1, 0, QTC_T_VALUE, "QSqlQuery"},
+    {"QSqlQuery", "QSqlQuery(QString,QSqlDatabase)", t9936<QSqlQuery>, P9936, 2, 0, 0, QTC_T_VALUE, "QSqlQuery"},
+    {"QSqlQuery", "QSqlQuery(QSqlDatabase)", t9937<QSqlQuery>, P9937, 1, 1, 0, QTC_T_VALUE, "QSqlQuery"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9786[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9787[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9788[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9790[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9791[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 892, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9792[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 892, "Qt::Orientation", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9793[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9794[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9795[] = {{qtc::PK_VALUE, -1, "QSqlQuery", nullptr}};
-static const qtc::ParamDesc P9796[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
-static const qtc::ParamDesc P9801[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9802[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9804[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9938[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P9939[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P9940[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9942[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9943[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 916, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9944[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 916, "Qt::Orientation", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9945[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P9946[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P9947[] = {{qtc::PK_VALUE, -1, "QSqlQuery", nullptr}};
+static const qtc::ParamDesc P9948[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
+static const qtc::ParamDesc P9953[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P9954[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P9956[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqlquerymodel.h>)
 static const qtc::MethodDef M_QSqlQueryModel[] = {
-    {"rowCount", "rowCount(QModelIndex)", t9786<QSqlQueryModel>, P9786, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"columnCount", "columnCount(QModelIndex)", t9787<QSqlQueryModel>, P9787, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"record", "record(int)", t9788<QSqlQueryModel>, P9788, 1, 1, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
-    {"record", "record()", t9789<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
-    {"data", "data(QModelIndex,int)", t9790<QSqlQueryModel>, P9790, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"headerData", "headerData(int,Qt::Orientation,int)", t9791<QSqlQueryModel>, P9791, 3, 2, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setHeaderData", "setHeaderData(int,Qt::Orientation,QVariant,int)", t9792<QSqlQueryModel>, P9792, 4, 3, 0, QTC_T_BOOL, "bool"},
-    {"insertColumns", "insertColumns(int,int,QModelIndex)", t9793<QSqlQueryModel>, P9793, 3, 2, 0, QTC_T_BOOL, "bool"},
-    {"removeColumns", "removeColumns(int,int,QModelIndex)", t9794<QSqlQueryModel>, P9794, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"setQuery", "setQuery(QSqlQuery)", t9795<QSqlQueryModel>, P9795, 1, 1, qtc::MF_DEPRECATED|qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"setQuery", "setQuery(QString,QSqlDatabase)", t9796<QSqlQueryModel>, P9796, 2, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"rowCount", "rowCount(QModelIndex)", t9938<QSqlQueryModel>, P9938, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"columnCount", "columnCount(QModelIndex)", t9939<QSqlQueryModel>, P9939, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"record", "record(int)", t9940<QSqlQueryModel>, P9940, 1, 1, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
+    {"record", "record()", t9941<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
+    {"data", "data(QModelIndex,int)", t9942<QSqlQueryModel>, P9942, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"headerData", "headerData(int,Qt::Orientation,int)", t9943<QSqlQueryModel>, P9943, 3, 2, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setHeaderData", "setHeaderData(int,Qt::Orientation,QVariant,int)", t9944<QSqlQueryModel>, P9944, 4, 3, 0, QTC_T_BOOL, "bool"},
+    {"insertColumns", "insertColumns(int,int,QModelIndex)", t9945<QSqlQueryModel>, P9945, 3, 2, 0, QTC_T_BOOL, "bool"},
+    {"removeColumns", "removeColumns(int,int,QModelIndex)", t9946<QSqlQueryModel>, P9946, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"setQuery", "setQuery(QSqlQuery)", t9947<QSqlQueryModel>, P9947, 1, 1, qtc::MF_DEPRECATED|qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"setQuery", "setQuery(QString,QSqlDatabase)", t9948<QSqlQueryModel>, P9948, 2, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-    {"refresh", "refresh()", t9797<QSqlQueryModel>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"refresh", "refresh()", t9949<QSqlQueryModel>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"query", "query()", t9798<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlQuery"},
+    {"query", "query()", t9950<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlQuery"},
 #endif
-    {"clear", "clear()", t9799<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"lastError", "lastError()", t9800<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlError"},
-    {"fetchMore", "fetchMore(QModelIndex)", t9801<QSqlQueryModel>, P9801, 1, 0, 0, QTC_T_NONE, "void"},
-    {"canFetchMore", "canFetchMore(QModelIndex)", t9802<QSqlQueryModel>, P9802, 1, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"roleNames", "roleNames()", t9803<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHash<int, QByteArray>"},
+    {"clear", "clear()", t9951<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"lastError", "lastError()", t9952<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlError"},
+    {"fetchMore", "fetchMore(QModelIndex)", t9953<QSqlQueryModel>, P9953, 1, 0, 0, QTC_T_NONE, "void"},
+    {"canFetchMore", "canFetchMore(QModelIndex)", t9954<QSqlQueryModel>, P9954, 1, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"roleNames", "roleNames()", t9955<QSqlQueryModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHash<int, QByteArray>"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlQueryModel[] = {
-    {"QSqlQueryModel", "QSqlQueryModel(QObject*)", t9804<QSqlQueryModel>, P9804, 1, 0, 0, QTC_T_OBJ, "QSqlQueryModel"},
+    {"QSqlQueryModel", "QSqlQueryModel(QObject*)", t9956<QSqlQueryModel>, P9956, 1, 0, 0, QTC_T_OBJ, "QSqlQueryModel"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9805[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9957[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9806[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9958[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9807[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9959[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9808[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9960[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
 #endif
-static const qtc::ParamDesc P9809[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9961[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9810[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9962[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9811[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9963[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9812[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9813[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-#endif
-static const qtc::ParamDesc P9814[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9815[] = {{qtc::PK_INT, -1, "int", nullptr}};
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9816[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-#endif
-static const qtc::ParamDesc P9817[] = {{qtc::PK_INT, -1, "int", nullptr}};
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9818[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9964[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9819[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9965[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9820[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9821[] = {{qtc::PK_VALUE, -1, "QSqlField", nullptr}};
-static const qtc::ParamDesc P9822[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlField", nullptr}};
-static const qtc::ParamDesc P9823[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlField", nullptr}};
-static const qtc::ParamDesc P9824[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9966[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9967[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9826[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9968[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9830[] = {{qtc::PK_VALUE, -1, "QSqlRecord", nullptr}};
+static const qtc::ParamDesc P9969[] = {{qtc::PK_INT, -1, "int", nullptr}};
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+static const qtc::ParamDesc P9970[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+static const qtc::ParamDesc P9971[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+#endif
+static const qtc::ParamDesc P9972[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9973[] = {{qtc::PK_VALUE, -1, "QSqlField", nullptr}};
+static const qtc::ParamDesc P9974[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlField", nullptr}};
+static const qtc::ParamDesc P9975[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlField", nullptr}};
+static const qtc::ParamDesc P9976[] = {{qtc::PK_INT, -1, "int", nullptr}};
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+static const qtc::ParamDesc P9978[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+#endif
+static const qtc::ParamDesc P9982[] = {{qtc::PK_VALUE, -1, "QSqlRecord", nullptr}};
 #if __has_include(<QtSql/qsqlrecord.h>)
 static const qtc::MethodDef M_QSqlRecord[] = {
-    {"value", "value(int)", t9805<QSqlRecord>, P9805, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"value", "value(int)", t9957<QSqlRecord>, P9957, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"value", "value(QAnyStringView)", t9806<QSqlRecord>, P9806, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"value", "value(QAnyStringView)", t9958<QSqlRecord>, P9958, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
 #endif
-    {"setValue", "setValue(int,QVariant)", t9807<QSqlRecord>, P9807, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setValue", "setValue(int,QVariant)", t9959<QSqlRecord>, P9959, 2, 2, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setValue", "setValue(QAnyStringView,QVariant)", t9808<QSqlRecord>, P9808, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setValue", "setValue(QAnyStringView,QVariant)", t9960<QSqlRecord>, P9960, 2, 2, 0, QTC_T_NONE, "void"},
 #endif
-    {"setNull", "setNull(int)", t9809<QSqlRecord>, P9809, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setNull", "setNull(int)", t9961<QSqlRecord>, P9961, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setNull", "setNull(QAnyStringView)", t9810<QSqlRecord>, P9810, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setNull", "setNull(QAnyStringView)", t9962<QSqlRecord>, P9962, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"isNull", "isNull(int)", t9811<QSqlRecord>, P9811, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull(int)", t9963<QSqlRecord>, P9963, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"isNull", "isNull(QAnyStringView)", t9812<QSqlRecord>, P9812, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"indexOf", "indexOf(QAnyStringView)", t9813<QSqlRecord>, P9813, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-#endif
-    {"fieldName", "fieldName(int)", t9814<QSqlRecord>, P9814, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"field", "field(int)", t9815<QSqlRecord>, P9815, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlField"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"field", "field(QAnyStringView)", t9816<QSqlRecord>, P9816, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlField"},
-#endif
-    {"isGenerated", "isGenerated(int)", t9817<QSqlRecord>, P9817, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"isGenerated", "isGenerated(QAnyStringView)", t9818<QSqlRecord>, P9818, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull(QAnyStringView)", t9964<QSqlRecord>, P9964, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setGenerated", "setGenerated(QAnyStringView,bool)", t9819<QSqlRecord>, P9819, 2, 2, 0, QTC_T_NONE, "void"},
+    {"indexOf", "indexOf(QAnyStringView)", t9965<QSqlRecord>, P9965, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
 #endif
-    {"setGenerated", "setGenerated(int,bool)", t9820<QSqlRecord>, P9820, 2, 2, 0, QTC_T_NONE, "void"},
-    {"append", "append(QSqlField)", t9821<QSqlRecord>, P9821, 1, 1, 0, QTC_T_NONE, "void"},
-    {"replace", "replace(int,QSqlField)", t9822<QSqlRecord>, P9822, 2, 2, 0, QTC_T_NONE, "void"},
-    {"insert", "insert(int,QSqlField)", t9823<QSqlRecord>, P9823, 2, 2, 0, QTC_T_NONE, "void"},
-    {"remove", "remove(int)", t9824<QSqlRecord>, P9824, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isEmpty", "isEmpty()", t9825<QSqlRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"fieldName", "fieldName(int)", t9966<QSqlRecord>, P9966, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"field", "field(int)", t9967<QSqlRecord>, P9967, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlField"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"contains", "contains(QAnyStringView)", t9826<QSqlRecord>, P9826, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"field", "field(QAnyStringView)", t9968<QSqlRecord>, P9968, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlField"},
 #endif
-    {"clear", "clear()", t9827<QSqlRecord>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"clearValues", "clearValues()", t9828<QSqlRecord>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"count", "count()", t9829<QSqlRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"keyValues", "keyValues(QSqlRecord)", t9830<QSqlRecord>, P9830, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlRecord"},
+    {"isGenerated", "isGenerated(int)", t9969<QSqlRecord>, P9969, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"isGenerated", "isGenerated(QAnyStringView)", t9970<QSqlRecord>, P9970, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"setGenerated", "setGenerated(QAnyStringView,bool)", t9971<QSqlRecord>, P9971, 2, 2, 0, QTC_T_NONE, "void"},
+#endif
+    {"setGenerated", "setGenerated(int,bool)", t9972<QSqlRecord>, P9972, 2, 2, 0, QTC_T_NONE, "void"},
+    {"append", "append(QSqlField)", t9973<QSqlRecord>, P9973, 1, 1, 0, QTC_T_NONE, "void"},
+    {"replace", "replace(int,QSqlField)", t9974<QSqlRecord>, P9974, 2, 2, 0, QTC_T_NONE, "void"},
+    {"insert", "insert(int,QSqlField)", t9975<QSqlRecord>, P9975, 2, 2, 0, QTC_T_NONE, "void"},
+    {"remove", "remove(int)", t9976<QSqlRecord>, P9976, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isEmpty", "isEmpty()", t9977<QSqlRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"contains", "contains(QAnyStringView)", t9978<QSqlRecord>, P9978, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+#endif
+    {"clear", "clear()", t9979<QSqlRecord>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"clearValues", "clearValues()", t9980<QSqlRecord>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"count", "count()", t9981<QSqlRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"keyValues", "keyValues(QSqlRecord)", t9982<QSqlRecord>, P9982, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlRecord[] = {
-    {"QSqlRecord", "QSqlRecord()", t9831<QSqlRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSqlRecord"},
+    {"QSqlRecord", "QSqlRecord()", t9983<QSqlRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSqlRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9837[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9989[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqlrelationaltablemodel.h>)
 static const qtc::MethodDef M_QSqlRelation[] = {
-    {"tableName", "tableName()", t9832<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"indexColumn", "indexColumn()", t9833<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"displayColumn", "displayColumn()", t9834<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isValid", "isValid()", t9835<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"tableName", "tableName()", t9984<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"indexColumn", "indexColumn()", t9985<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"displayColumn", "displayColumn()", t9986<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isValid", "isValid()", t9987<QSqlRelation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlRelation[] = {
-    {"QSqlRelation", "QSqlRelation()", t9836<QSqlRelation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSqlRelation"},
-    {"QSqlRelation", "QSqlRelation(QString,QString,QString)", t9837<QSqlRelation>, P9837, 3, 3, 0, QTC_T_VALUE, "QSqlRelation"},
+    {"QSqlRelation", "QSqlRelation()", t9988<QSqlRelation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QSqlRelation"},
+    {"QSqlRelation", "QSqlRelation(QString,QString,QString)", t9989<QSqlRelation>, P9989, 3, 3, 0, QTC_T_VALUE, "QSqlRelation"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9838[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9839[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9840[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9843[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9844[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlRelation", nullptr}};
-static const qtc::ParamDesc P9845[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9846[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9847[] = {{qtc::PK_ENUM, 604, "QSqlRelationalTableModel::JoinMode", nullptr}};
-static const qtc::ParamDesc P9848[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9849[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
+static const qtc::ParamDesc P9990[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9991[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9992[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P9995[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9996[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlRelation", nullptr}};
+static const qtc::ParamDesc P9997[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9998[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9999[] = {{qtc::PK_ENUM, 628, "QSqlRelationalTableModel::JoinMode", nullptr}};
+static const qtc::ParamDesc P10000[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10001[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqlrelationaltablemodel.h>)
 static const qtc::MethodDef M_QSqlRelationalTableModel[] = {
-    {"data", "data(QModelIndex,int)", t9838<QSqlRelationalTableModel>, P9838, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setData", "setData(QModelIndex,QVariant,int)", t9839<QSqlRelationalTableModel>, P9839, 3, 2, 0, QTC_T_BOOL, "bool"},
-    {"removeColumns", "removeColumns(int,int,QModelIndex)", t9840<QSqlRelationalTableModel>, P9840, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t9841<QSqlRelationalTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"select", "select()", t9842<QSqlRelationalTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"setTable", "setTable(QString)", t9843<QSqlRelationalTableModel>, P9843, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setRelation", "setRelation(int,QSqlRelation)", t9844<QSqlRelationalTableModel>, P9844, 2, 2, 0, QTC_T_NONE, "void"},
-    {"relation", "relation(int)", t9845<QSqlRelationalTableModel>, P9845, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlRelation"},
-    {"relationModel", "relationModel(int)", t9846<QSqlRelationalTableModel>, P9846, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QSqlTableModel*"},
-    {"setJoinMode", "setJoinMode(QSqlRelationalTableModel::JoinMode)", t9847<QSqlRelationalTableModel>, P9847, 1, 1, 0, QTC_T_NONE, "void"},
-    {"revertRow", "revertRow(int)", t9848<QSqlRelationalTableModel>, P9848, 1, 1, 0, QTC_T_NONE, "void"},
+    {"data", "data(QModelIndex,int)", t9990<QSqlRelationalTableModel>, P9990, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setData", "setData(QModelIndex,QVariant,int)", t9991<QSqlRelationalTableModel>, P9991, 3, 2, 0, QTC_T_BOOL, "bool"},
+    {"removeColumns", "removeColumns(int,int,QModelIndex)", t9992<QSqlRelationalTableModel>, P9992, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t9993<QSqlRelationalTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"select", "select()", t9994<QSqlRelationalTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"setTable", "setTable(QString)", t9995<QSqlRelationalTableModel>, P9995, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setRelation", "setRelation(int,QSqlRelation)", t9996<QSqlRelationalTableModel>, P9996, 2, 2, 0, QTC_T_NONE, "void"},
+    {"relation", "relation(int)", t9997<QSqlRelationalTableModel>, P9997, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QSqlRelation"},
+    {"relationModel", "relationModel(int)", t9998<QSqlRelationalTableModel>, P9998, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QSqlTableModel*"},
+    {"setJoinMode", "setJoinMode(QSqlRelationalTableModel::JoinMode)", t9999<QSqlRelationalTableModel>, P9999, 1, 1, 0, QTC_T_NONE, "void"},
+    {"revertRow", "revertRow(int)", t10000<QSqlRelationalTableModel>, P10000, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlRelationalTableModel[] = {
-    {"QSqlRelationalTableModel", "QSqlRelationalTableModel(QObject*,QSqlDatabase)", t9849<QSqlRelationalTableModel>, P9849, 2, 0, 0, QTC_T_OBJ, "QSqlRelationalTableModel"},
+    {"QSqlRelationalTableModel", "QSqlRelationalTableModel(QObject*,QSqlDatabase)", t10001<QSqlRelationalTableModel>, P10001, 2, 0, 0, QTC_T_OBJ, "QSqlRelationalTableModel"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9850[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9852[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9854[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9855[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9856[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9857[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9858[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 892, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9860[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9862[] = {{qtc::PK_ENUM, 605, "QSqlTableModel::EditStrategy", nullptr}};
-static const qtc::ParamDesc P9866[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9867[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 904, "Qt::SortOrder", nullptr}};
-static const qtc::ParamDesc P9868[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 904, "Qt::SortOrder", nullptr}};
-static const qtc::ParamDesc P9870[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9871[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9872[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9873[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9874[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P9875[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlRecord", nullptr}};
-static const qtc::ParamDesc P9876[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlRecord", nullptr}};
-static const qtc::ParamDesc P9877[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9879[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9884[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9885[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
+static const qtc::ParamDesc P10002[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10004[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P10006[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10007[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10008[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10009[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P10010[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 916, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10012[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P10014[] = {{qtc::PK_ENUM, 629, "QSqlTableModel::EditStrategy", nullptr}};
+static const qtc::ParamDesc P10018[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10019[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 928, "Qt::SortOrder", nullptr}};
+static const qtc::ParamDesc P10020[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 928, "Qt::SortOrder", nullptr}};
+static const qtc::ParamDesc P10022[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10023[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P10024[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P10025[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P10026[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P10027[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlRecord", nullptr}};
+static const qtc::ParamDesc P10028[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QSqlRecord", nullptr}};
+static const qtc::ParamDesc P10029[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10031[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10036[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10037[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_VALUE, -1, "QSqlDatabase", nullptr}};
 #if QT_CONFIG(sqlmodel) && __has_include(<QtSql/qsqltablemodel.h>)
 static const qtc::MethodDef M_QSqlTableModel[] = {
-    {"setTable", "setTable(QString)", t9850<QSqlTableModel>, P9850, 1, 1, 0, QTC_T_NONE, "void"},
-    {"tableName", "tableName()", t9851<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"flags", "flags(QModelIndex)", t9852<QSqlTableModel>, P9852, 1, 1, qtc::MF_CONST, QTC_T_INT, "QFlags<Qt::ItemFlag>"},
-    {"record", "record()", t9853<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
-    {"record", "record(int)", t9854<QSqlTableModel>, P9854, 1, 1, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
-    {"data", "data(QModelIndex,int)", t9855<QSqlTableModel>, P9855, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setData", "setData(QModelIndex,QVariant,int)", t9856<QSqlTableModel>, P9856, 3, 2, 0, QTC_T_BOOL, "bool"},
-    {"clearItemData", "clearItemData(QModelIndex)", t9857<QSqlTableModel>, P9857, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"headerData", "headerData(int,Qt::Orientation,int)", t9858<QSqlTableModel>, P9858, 3, 2, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"isDirty", "isDirty()", t9859<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isDirty", "isDirty(QModelIndex)", t9860<QSqlTableModel>, P9860, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t9861<QSqlTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"setEditStrategy", "setEditStrategy(QSqlTableModel::EditStrategy)", t9862<QSqlTableModel>, P9862, 1, 1, 0, QTC_T_NONE, "void"},
-    {"editStrategy", "editStrategy()", t9863<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSqlTableModel::EditStrategy"},
-    {"primaryKey", "primaryKey()", t9864<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlIndex"},
-    {"database", "database()", t9865<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
-    {"fieldIndex", "fieldIndex(QString)", t9866<QSqlTableModel>, P9866, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"sort", "sort(int,Qt::SortOrder)", t9867<QSqlTableModel>, P9867, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setSort", "setSort(int,Qt::SortOrder)", t9868<QSqlTableModel>, P9868, 2, 2, 0, QTC_T_NONE, "void"},
-    {"filter", "filter()", t9869<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setFilter", "setFilter(QString)", t9870<QSqlTableModel>, P9870, 1, 1, 0, QTC_T_NONE, "void"},
-    {"rowCount", "rowCount(QModelIndex)", t9871<QSqlTableModel>, P9871, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"removeColumns", "removeColumns(int,int,QModelIndex)", t9872<QSqlTableModel>, P9872, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"removeRows", "removeRows(int,int,QModelIndex)", t9873<QSqlTableModel>, P9873, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"insertRows", "insertRows(int,int,QModelIndex)", t9874<QSqlTableModel>, P9874, 3, 2, 0, QTC_T_BOOL, "bool"},
-    {"insertRecord", "insertRecord(int,QSqlRecord)", t9875<QSqlTableModel>, P9875, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"setRecord", "setRecord(int,QSqlRecord)", t9876<QSqlTableModel>, P9876, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"revertRow", "revertRow(int)", t9877<QSqlTableModel>, P9877, 1, 1, 0, QTC_T_NONE, "void"},
-    {"select", "select()", t9878<QSqlTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"selectRow", "selectRow(int)", t9879<QSqlTableModel>, P9879, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"submit", "submit()", t9880<QSqlTableModel>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
-    {"revert", "revert()", t9881<QSqlTableModel>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"submitAll", "submitAll()", t9882<QSqlTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"revertAll", "revertAll()", t9883<QSqlTableModel>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"beforeDelete", "beforeDelete(int)", t9884<QSqlTableModel>, P9884, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setTable", "setTable(QString)", t10002<QSqlTableModel>, P10002, 1, 1, 0, QTC_T_NONE, "void"},
+    {"tableName", "tableName()", t10003<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"flags", "flags(QModelIndex)", t10004<QSqlTableModel>, P10004, 1, 1, qtc::MF_CONST, QTC_T_INT, "QFlags<Qt::ItemFlag>"},
+    {"record", "record()", t10005<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
+    {"record", "record(int)", t10006<QSqlTableModel>, P10006, 1, 1, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlRecord"},
+    {"data", "data(QModelIndex,int)", t10007<QSqlTableModel>, P10007, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setData", "setData(QModelIndex,QVariant,int)", t10008<QSqlTableModel>, P10008, 3, 2, 0, QTC_T_BOOL, "bool"},
+    {"clearItemData", "clearItemData(QModelIndex)", t10009<QSqlTableModel>, P10009, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"headerData", "headerData(int,Qt::Orientation,int)", t10010<QSqlTableModel>, P10010, 3, 2, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"isDirty", "isDirty()", t10011<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isDirty", "isDirty(QModelIndex)", t10012<QSqlTableModel>, P10012, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t10013<QSqlTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"setEditStrategy", "setEditStrategy(QSqlTableModel::EditStrategy)", t10014<QSqlTableModel>, P10014, 1, 1, 0, QTC_T_NONE, "void"},
+    {"editStrategy", "editStrategy()", t10015<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSqlTableModel::EditStrategy"},
+    {"primaryKey", "primaryKey()", t10016<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSqlIndex"},
+    {"database", "database()", t10017<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_VALUE, "QSqlDatabase"},
+    {"fieldIndex", "fieldIndex(QString)", t10018<QSqlTableModel>, P10018, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"sort", "sort(int,Qt::SortOrder)", t10019<QSqlTableModel>, P10019, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setSort", "setSort(int,Qt::SortOrder)", t10020<QSqlTableModel>, P10020, 2, 2, 0, QTC_T_NONE, "void"},
+    {"filter", "filter()", t10021<QSqlTableModel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setFilter", "setFilter(QString)", t10022<QSqlTableModel>, P10022, 1, 1, 0, QTC_T_NONE, "void"},
+    {"rowCount", "rowCount(QModelIndex)", t10023<QSqlTableModel>, P10023, 1, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"removeColumns", "removeColumns(int,int,QModelIndex)", t10024<QSqlTableModel>, P10024, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"removeRows", "removeRows(int,int,QModelIndex)", t10025<QSqlTableModel>, P10025, 3, 2, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"insertRows", "insertRows(int,int,QModelIndex)", t10026<QSqlTableModel>, P10026, 3, 2, 0, QTC_T_BOOL, "bool"},
+    {"insertRecord", "insertRecord(int,QSqlRecord)", t10027<QSqlTableModel>, P10027, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"setRecord", "setRecord(int,QSqlRecord)", t10028<QSqlTableModel>, P10028, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"revertRow", "revertRow(int)", t10029<QSqlTableModel>, P10029, 1, 1, 0, QTC_T_NONE, "void"},
+    {"select", "select()", t10030<QSqlTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"selectRow", "selectRow(int)", t10031<QSqlTableModel>, P10031, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"submit", "submit()", t10032<QSqlTableModel>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"revert", "revert()", t10033<QSqlTableModel>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"submitAll", "submitAll()", t10034<QSqlTableModel>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"revertAll", "revertAll()", t10035<QSqlTableModel>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"beforeDelete", "beforeDelete(int)", t10036<QSqlTableModel>, P10036, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSqlTableModel[] = {
-    {"QSqlTableModel", "QSqlTableModel(QObject*,QSqlDatabase)", t9885<QSqlTableModel>, P9885, 2, 0, 0, QTC_T_OBJ, "QSqlTableModel"},
+    {"QSqlTableModel", "QSqlTableModel(QObject*,QSqlDatabase)", t10037<QSqlTableModel>, P10037, 2, 0, 0, QTC_T_OBJ, "QSqlTableModel"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

@@ -25,8 +25,13 @@
  * meta-objects).
  *
  * Threading: all calls must come from the thread that called qtc_init (Qt's GUI
- * thread), except qtc_post, qtc_version, qtc_last_error* and qtc_status_name,
- * which are callable from any thread.
+ * thread), except these, which are callable from any thread: qtc_post,
+ * qtc_version, qtc_last_error*, qtc_clear_error, qtc_status_name, the promise
+ * functions (qtc_promise_*, but qtc_promise_add_val), qtc_task_start,
+ * qtc_task_map and the future functions marked "any thread" below. Work runs
+ * off the GUI thread as tasks on a thread pool (qtc_task_*), or in objects moved
+ * to a QThread (qtc_move_to_thread); its results reach the GUI thread through
+ * futures and as events.
  *
  * Strings: input strings are qtc_str (UTF-8 bytes + length, no NUL needed).
  * Output strings are qtc_view: library-owned UTF-8, also NUL-terminated, valid
@@ -55,9 +60,9 @@ extern "C" {
 #endif
 
 #define QTC_VERSION_MAJOR 1
-#define QTC_VERSION_MINOR 0
+#define QTC_VERSION_MINOR 1
 #define QTC_VERSION_PATCH 0
-#define QTC_VERSION_STRING "1.0.0"
+#define QTC_VERSION_STRING "1.1.0"
 
 /* ------------------------------------------------------------------ types */
 
@@ -168,11 +173,24 @@ typedef struct qtc_event {
    DROP / DRAG_*: d0, d1 = x, y; i0 = proposed action; qtc_event_text = the
      dropped text, or the URLs one per line.
    CLOSE: a close request (consume it to keep the window open).
-   DESTROYED: the watched object was destroyed (source is now stale). */
+   DESTROYED: the watched object was destroyed (source is now stale).
+   FUTURE_* (qtc_future_watch): source = the future, id = the watch.
+     FUTURE_PROGRESS: i0 = value, i1 = minimum, i2 = maximum; qtc_event_text =
+       the progress text. FUTURE_RESULTS: i0 = index of the first new result,
+       i1 = how many. FUTURE_FINISHED: i0 = QTC_FUT_* state, i1 = result count;
+       qtc_event_text = the failure message (QTC_FUT_FAILED). The watch ends
+       with this event. */
 #define QTC_EV_SIGNAL              1
 #define QTC_EV_POST                2
 #define QTC_EV_TIMER               3
 #define QTC_EV_LAST_WINDOW_CLOSED  4
+#define QTC_EV_FUTURE_STARTED      5
+#define QTC_EV_FUTURE_PROGRESS     6
+#define QTC_EV_FUTURE_RESULTS      7
+#define QTC_EV_FUTURE_FINISHED     8
+#define QTC_EV_FUTURE_CANCELED     9
+#define QTC_EV_FUTURE_SUSPENDED   10
+#define QTC_EV_FUTURE_RESUMED     11
 #define QTC_EV_WATCH_FIRST        16
 #define QTC_EV_MOUSE_PRESS        16
 #define QTC_EV_MOUSE_RELEASE      17
@@ -207,9 +225,10 @@ typedef struct qtc_event {
 
 #define QTC_EVF_STALE_SOURCE 1   /* the source was destroyed after the event was queued */
 
-#define QTC_WAIT_TIMEOUT 0
-#define QTC_WAIT_EVENTS  1
-#define QTC_WAIT_QUIT    2
+#define QTC_WAIT_TIMEOUT  0
+#define QTC_WAIT_EVENTS   1
+#define QTC_WAIT_QUIT     2
+#define QTC_WAIT_FINISHED 1   /* qtc_future_wait: the future finished */
 
 /* Runs Qt's event loop until a qtc event is queued, the timeout passes or the
    application is asked to quit. timeout_ms < 0 waits forever, 0 only processes
@@ -449,12 +468,255 @@ QTC_API qtc_view qtc_enum_describe(qtc_str enum_name);
 /* {"classes":..,"methods":..,"unsupported":..,...} for this build. */
 QTC_API qtc_view qtc_stats(void);
 
+/* --------------------------------------------------------------- overrides */
+
+/* Subclassing from C. qtc_new_overridable makes an object of a Qt class whose
+   virtual methods the program overrides, one object at a time: an event
+   handler (paintEvent, mousePressEvent, ...), a model's rowCount and data, a
+   validator's validate, a thread's run, ... qtc_overridable_classes lists the
+   classes, qtc_overridable_methods(class) their methods. Such an object is an
+   ordinary object of its class otherwise, and its protected methods (a model's
+   beginInsertRows and createIndex, a highlighter's setFormat, ...) are callable
+   with qtc_call. */
+QTC_API qtc_obj qtc_new_overridable(qtc_str class_name);   /* constructor arguments on the stack */
+QTC_API bool qtc_is_overridable(qtc_obj obj);
+QTC_API qtc_view qtc_overridable_classes(void);             /* one name per line */
+/* JSON: {"class":..,"methods":[{"name","sig","params":[{"type","kind"}],
+   "returns":{..},"pure","thread":"gui"|"any","paints"}],"protected":[sigs]} */
+QTC_API qtc_view qtc_overridable_methods(qtc_str class_name);
+/* From now on Qt's calls of method (a name, or a signature for an overload) on
+   obj go to the override handler, with this tag; tag 0 ends the override. */
+QTC_API qtc_status qtc_override(qtc_obj obj, qtc_str method, uint64_t tag);
+
+typedef struct qtc_override_call {
+    qtc_obj self;          /* the object */
+    uint64_t tag;          /* the tag given to qtc_override */
+    const char *method;    /* its signature, e.g. "rowCount(QModelIndex)" (static) */
+    int32_t nargs;
+    int32_t depth;         /* override calls in progress on this thread (1: this one alone) */
+    bool gui_thread;       /* false for methods Qt calls from other threads (QThread::run) */
+} qtc_override_call;
+
+#define QTC_OV_DONE 0   /* the handler set the result (or there is none) */
+#define QTC_OV_BASE 1   /* run the class's own implementation instead */
+
+/* The handler runs whenever Qt calls an overridden method, on the thread Qt
+   calls it from, in the middle of Qt's work: it may call qtc as usual, but not
+   run the event loop (qtc_wait, qtc_run, qtc_process_events, exec(), ...) or
+   shut qtc down, which fail with QTC_ERR_STATE. Methods other than "any"-thread
+   ones are dispatched only on the GUI thread; there the handler may read and
+   set the call with qtc_ov_*, and on other threads it may use the qtc_ov_*
+   calls and the functions callable from any thread. Overrides calling each
+   other stop 64 deep (Qt's own implementation runs beyond). */
+typedef int32_t (*qtc_override_handler)(const qtc_override_call *call, void *user);
+QTC_API qtc_status qtc_set_override_handler(qtc_override_handler handler, void *user);
+/* For languages without function pointers: the handler is the function the
+   program exports under this name (a dynamic symbol: link with -rdynamic). */
+QTC_API qtc_status qtc_set_override_handler_symbol(qtc_str symbol);
+
+/* Inside a handler, about the call being handled (any thread):
+   the arguments, by position. */
+QTC_API int32_t qtc_ov_arg_kind(int32_t index);      /* QTC_T_*; QTC_T_NONE for events, painters, ... */
+QTC_API qtc_view qtc_ov_arg_type(int32_t index);     /* the C++ type, e.g. "const QModelIndex &" */
+QTC_API bool qtc_ov_arg_bool(int32_t index);
+QTC_API int64_t qtc_ov_arg_int(int32_t index);
+QTC_API double qtc_ov_arg_double(int32_t index);
+QTC_API qtc_view qtc_ov_arg_str(int32_t index);      /* valid until the handler returns */
+QTC_API qtc_obj qtc_ov_arg_obj(int32_t index);
+QTC_API qtc_val qtc_ov_arg_val(int32_t index);       /* GUI thread: a new value (free it) */
+/* An event argument (QMouseEvent *, ...) described as qtc_wait would deliver a
+   watched one (kind 0 and i0 = its QEvent::Type for others); its text; and
+   whether it is accepted (what a handler's caller sees, e.g. a close event). */
+QTC_API qtc_status qtc_ov_arg_event(int32_t index, qtc_event *out);
+QTC_API qtc_view qtc_ov_event_text(int32_t index);
+QTC_API qtc_status qtc_ov_accept_event(int32_t index, bool accepted);
+/* A QModelIndex argument (models' overrides): its row, column and internal id
+   (any of them may be NULL); true when it is valid. */
+QTC_API bool qtc_ov_arg_index(int32_t index, int32_t *row, int32_t *column, uint64_t *id);
+/* Out-parameters (QString &, int &): write them. */
+QTC_API qtc_status qtc_ov_set_arg_int(int32_t index, int64_t v);
+QTC_API qtc_status qtc_ov_set_arg_str(int32_t index, qtc_str v);
+/* Buffers: a char * parameter to fill (its length is the next parameter):
+   copies bytes in, at most that many, and returns how many; a const char *
+   parameter to read. */
+QTC_API int64_t qtc_ov_buffer_write(int32_t index, qtc_str bytes);
+QTC_API qtc_view qtc_ov_buffer_read(int32_t index);
+/* The result. Converted to the method's return type (QTC_ERR_CONVERSION or
+   QTC_ERR_OUT_OF_RANGE when it does not fit). Not set: a default value (0,
+   false, an empty string, an invalid index) for methods Qt has no
+   implementation of, the class's own result after qtc_ov_call_base. */
+QTC_API qtc_status qtc_ov_ret_bool(bool v);
+QTC_API qtc_status qtc_ov_ret_int(int64_t v);
+QTC_API qtc_status qtc_ov_ret_uint(uint64_t v);
+QTC_API qtc_status qtc_ov_ret_double(double v);
+QTC_API qtc_status qtc_ov_ret_str(qtc_str v);
+QTC_API qtc_status qtc_ov_ret_bytes(qtc_str v);
+QTC_API qtc_status qtc_ov_ret_val(qtc_val v);         /* GUI thread: a copy of v */
+/* A model's index, parent, sibling or buddy override: an index of this model
+   (createIndex(row, column, id)); row < 0 gives an invalid index. */
+QTC_API qtc_status qtc_ov_ret_index(int32_t row, int32_t column, uint64_t id);
+/* Runs the class's own implementation with the call's arguments (as out-
+   parameters stand now); its result becomes the call's result and, on the GUI
+   thread, the return register's (qtc_ret_*). */
+QTC_API qtc_status qtc_ov_call_base(void);
+QTC_API int32_t qtc_ov_depth(void);                   /* override calls in progress on this thread */
+
+/* ---------------------------------------------------------- runtime classes */
+
+/* New QObject classes, defined while the program runs: signals, slots,
+   invokables and properties that Qt, QML (as a context property, say) and
+   qtc_call see like a C++ class's. Define one between qtc_class_begin and
+   qtc_class_end, then make objects with qtc_class_new (or qtc_new). base:
+   "QObject" (or empty), or any overridable class (qtc_overridable_classes): the
+   objects are overridable objects too (qtc_override).
+   Types in signatures: the names Qt's meta-type system knows ("int", "double",
+   "QString", "QVariant", "QVariantList", "QColor", ...) and QObject* for objects.
+   Slots and invokables run the override handler (qtc_set_override_handler)
+   with the tag given here, on the thread Qt calls them from: an object moved to
+   a worker thread (qtc_move_to_thread) runs them there. The handler reads the
+   arguments with qtc_ov_arg_* and sets the result with qtc_ov_ret_*.
+   Properties keep their values in the object; a write that changes one emits
+   its notify signal ("<name>Changed(<type>)", added unless the class declares
+   one taking nothing or the value). */
+#define QTC_PROP_READ     0u   /* every property is readable */
+#define QTC_PROP_WRITE    1u
+#define QTC_PROP_NOTIFY   2u
+#define QTC_PROP_CONSTANT 4u
+QTC_API qtc_status qtc_class_begin(qtc_str name, qtc_str base);
+QTC_API qtc_status qtc_class_signal(qtc_str signature);                         /* "progress(int,QString)" */
+QTC_API qtc_status qtc_class_slot(qtc_str signature, qtc_str return_type, uint64_t tag);   /* return_type {0,0}: void */
+QTC_API qtc_status qtc_class_invokable(qtc_str signature, qtc_str return_type, uint64_t tag);
+QTC_API qtc_status qtc_class_property(qtc_str name, qtc_str type, uint32_t flags);
+QTC_API qtc_status qtc_class_end(void);      /* the class exists from now on (until qtc_shutdown) */
+QTC_API qtc_status qtc_class_cancel(void);   /* drops the definition being made */
+QTC_API bool qtc_class_exists_runtime(qtc_str class_name);
+/* An object of a runtime class, made with its base's constructor arguments
+   (pushed as for qtc_new). */
+QTC_API qtc_obj qtc_class_new(qtc_str class_name);
+/* Emits a signal of a runtime class's object with the pushed arguments: the
+   name, or the signature for an overload. (qtc_call emits it too.) */
+QTC_API qtc_status qtc_emit(qtc_obj obj, qtc_str signal);
+
+/* -------------------------------------------- tasks, futures and threads */
+
+/* A future: the results of work that runs elsewhere (a task on a thread pool,
+   a promise any thread fills, a queued call). Results are values kept in order
+   until the future is released. Futures are not object handles. */
+typedef uint64_t qtc_future;
+
+#define QTC_FUT_STARTED   1
+#define QTC_FUT_RUNNING   2
+#define QTC_FUT_FINISHED  4
+#define QTC_FUT_CANCELED  8
+#define QTC_FUT_SUSPENDED 16   /* suspended, or asked to suspend */
+#define QTC_FUT_FAILED    32   /* finished with qtc_promise_fail */
+
+/* Promises (any thread, but qtc_promise_add_val): the producing side of a
+   future. qtc_promise_new returns a started future that any thread may fill;
+   pass its id to the thread doing the work. Every promise call fails with
+   QTC_ERR_STATE once the future is finished, QTC_ERR_STALE_HANDLE once released. */
+QTC_API qtc_future qtc_promise_new(void);
+QTC_API qtc_status qtc_promise_progress_range(qtc_future f, int32_t min, int32_t max);
+/* text {0, 0}: leave the progress text as it is */
+QTC_API qtc_status qtc_promise_progress(qtc_future f, int32_t value, qtc_str text);
+QTC_API qtc_status qtc_promise_add_bool(qtc_future f, bool v);
+QTC_API qtc_status qtc_promise_add_int(qtc_future f, int64_t v);
+QTC_API qtc_status qtc_promise_add_double(qtc_future f, double v);
+QTC_API qtc_status qtc_promise_add_str(qtc_future f, qtc_str v);
+QTC_API qtc_status qtc_promise_add_bytes(qtc_future f, qtc_str v);
+QTC_API qtc_status qtc_promise_add_f64s(qtc_future f, qtc_f64s v);   /* a list of doubles */
+/* JSON object or array: the result is a map or a list */
+QTC_API qtc_status qtc_promise_add_json(qtc_future f, qtc_str json);
+QTC_API qtc_status qtc_promise_add_val(qtc_future f, qtc_val v);     /* GUI thread: a copy of v */
+/* Finishes the future as failed, with a message (qtc_future_error). */
+QTC_API qtc_status qtc_promise_fail(qtc_future f, qtc_str message);
+QTC_API qtc_status qtc_promise_finish(qtc_future f);
+/* Whether the consumer canceled it (also true once it is released or finished
+   canceled): long work checks this and stops. */
+QTC_API bool qtc_promise_canceled(qtc_future f);
+/* Blocks while the consumer has the future suspended (qtc_future_suspend).
+   Not on the GUI thread (QTC_ERR_WRONG_THREAD). */
+QTC_API qtc_status qtc_promise_suspend_if_requested(qtc_future f);
+
+/* Tasks: C functions run on Qt's global thread pool. fn(f, user) runs on a pool
+   thread and fills the future with the promise functions; when it returns, the
+   future finishes (unless it already did). A future canceled before its task
+   starts finishes without running it. cleanup(user), if given, runs exactly
+   once after fn returns (on the pool thread), or instead of it when the task
+   never runs. Any thread. Returns 0 on failure. */
+typedef void (*qtc_task_fn)(qtc_future f, void *user);
+typedef void (*qtc_map_fn)(int64_t index, void *user);
+QTC_API qtc_future qtc_task_start(qtc_task_fn fn, void *user, void (*cleanup)(void *user));
+/* The same on a QThreadPool object (0: the global pool), with Qt's priority
+   (higher runs sooner). GUI thread. */
+QTC_API qtc_future qtc_task_start_in(qtc_obj pool, int32_t priority, qtc_task_fn fn, void *user,
+                                     void (*cleanup)(void *user));
+/* Calls fn(i, user) for every i in [0, count), in parallel chunks on the global
+   pool. Progress counts finished chunks; cancel stops it between chunks and
+   suspend pauses it there. fn writes its results where user points (no results
+   are added to the future). Any thread. */
+QTC_API qtc_future qtc_task_map(int64_t count, qtc_map_fn fn, void *user, void (*cleanup)(void *user));
+
+/* Futures: the consuming side. */
+QTC_API int32_t qtc_future_state(qtc_future f);           /* QTC_FUT_* bits, < 0 on error; any thread */
+QTC_API int64_t qtc_future_result_count(qtc_future f);    /* any thread */
+QTC_API qtc_status qtc_future_progress(qtc_future f, int32_t *value, int32_t *min, int32_t *max);  /* any thread */
+/* Result index into the return register (qtc_ret_*). GUI thread. */
+QTC_API qtc_status qtc_future_result(qtc_future f, int64_t index);
+/* The qtc_promise_fail message ("" if none). Any thread; valid until the next
+   qtc_future_error on the same thread. */
+QTC_API qtc_view qtc_future_error(qtc_future f);
+QTC_API qtc_status qtc_future_cancel(qtc_future f);                 /* any thread */
+QTC_API qtc_status qtc_future_suspend(qtc_future f, bool suspend);  /* any thread */
+/* Waits until the future finishes: QTC_WAIT_FINISHED, or QTC_WAIT_TIMEOUT when
+   timeout_ms (< 0: forever) passes first. On the GUI thread it runs Qt's event
+   loop meanwhile, queueing qtc events as qtc_wait does (and returns early if
+   the application quits); on other threads it blocks. Any thread. */
+QTC_API int32_t qtc_future_wait(qtc_future f, int64_t timeout_ms);
+/* Frees it, canceling and finishing it if it is not finished yet: a task still
+   running sees qtc_promise_canceled. Any thread. */
+QTC_API qtc_status qtc_future_release(qtc_future f);
+/* A future that finishes when both have finished / when either has (its one
+   result is the id of the one that finished first). Release it too. */
+QTC_API qtc_future qtc_future_all(qtc_future a, qtc_future b);
+QTC_API qtc_future qtc_future_any(qtc_future a, qtc_future b);
+/* Delivers the future's progress as QTC_EV_FUTURE_* events with this tag,
+   until it finishes. Returns a watch id (0 on failure). GUI thread. */
+QTC_API uint64_t qtc_future_watch(qtc_future f, uint64_t tag);
+QTC_API qtc_status qtc_future_unwatch(uint64_t watch);
+QTC_API int64_t qtc_live_futures(void);
+
+/* Worker objects. Moves an object (with its children) to a QThread's event
+   loop. Allowed for objects with no parent that nothing else uses: not widgets,
+   windows, QML or Qt Quick objects, models, animations, or Qt classes outside
+   Qt Core and the network modules; nothing in the GUI thread may hold it, and
+   it may not have qtc_watch watches or qtc_connect_to forwards. Afterwards
+   qtc_call refuses it (QTC_ERR_WRONG_THREAD): reach it with qtc_invoke_queued /
+   qtc_invoke_future; its signals (qtc_connect) arrive as events as before, and
+   qtc_destroy deletes it in its thread (directly once that thread has
+   finished). When its QThread is destroyed, it comes back to the GUI thread. */
+QTC_API qtc_status qtc_move_to_thread(qtc_obj obj, qtc_obj thread);
+/* Calls a slot, signal or invokable the way qtc_call reaches meta-object
+   methods (the program's own classes, qtc runtime classes, QML objects), with
+   the pushed arguments, from the target's event loop: later on the GUI thread,
+   or in the thread the object lives in. Objects cannot be passed to (or
+   returned from) another thread. qtc_invoke_future returns a future that gets
+   the method's return value as its result. GUI thread. */
+QTC_API qtc_status qtc_invoke_queued(qtc_obj obj, qtc_str method);
+QTC_API qtc_future qtc_invoke_future(qtc_obj obj, qtc_str method);
+
 /* ---------------------------------------------------------------- drawing */
 
 /* Records drawing commands for a QtcCanvas object (a widget that replays the
    last finished recording whenever it paints) or draws them straight into a
    QImage or QPixmap value. Coordinates are doubles in the target's pixels. */
 QTC_API qtc_status qtc_draw_begin(uint64_t target);
+/* Inside an override that paints: qtc_draw_begin(self) in a widget's or
+   window's paintEvent (or paintGL) override draws on it when the recording
+   ends; qtc_draw_begin_painter(i) draws with the override's QPainter argument
+   i (QGraphicsScene::drawBackground, ...). A recording still open when the
+   handler returns is ended then. */
+QTC_API qtc_status qtc_draw_begin_painter(int32_t arg_index);
 QTC_API qtc_status qtc_draw_end(void);
 QTC_API qtc_status qtc_draw_clear(uint32_t argb);
 QTC_API qtc_status qtc_draw_pen(uint32_t argb, double width, int32_t style, int32_t cap, int32_t join);
@@ -494,6 +756,272 @@ QTC_API qtc_status qtc_draw_text_in(double x, double y, double w, double h, int3
 QTC_API qtc_status qtc_draw_image(qtc_val image, double x, double y, double w, double h);
 /* Number of commands recorded so far (for tests and budgeting). */
 QTC_API int64_t qtc_draw_count(void);
+
+/* --------------------------------------------------------------- graphics */
+
+/* Qt Quick's graphics API, for the windows made after the call (set it before
+   the first Qt Quick window): software, OpenGL, Vulkan, Direct3D 11 or 12,
+   Metal, or none (Null). */
+#define QTC_GAPI_UNKNOWN  0
+#define QTC_GAPI_SOFTWARE 1
+#define QTC_GAPI_OPENGL   2
+#define QTC_GAPI_VULKAN   3
+#define QTC_GAPI_D3D11    4
+#define QTC_GAPI_D3D12    5
+#define QTC_GAPI_METAL    6
+#define QTC_GAPI_NULL     7
+QTC_API qtc_status qtc_quick_set_graphics_api(int32_t api);
+/* The API a Qt Quick window renders with (QTC_GAPI_UNKNOWN until its scene
+   graph starts); window 0: the one requested for new windows. */
+QTC_API int32_t qtc_quick_graphics_api(qtc_obj window);
+
+/* An OpenGL function of the context current on this thread (in initializeGL,
+   paintGL and resizeGL overrides, in an RHI frame on OpenGL, or after
+   qtc_rhi_make_current), to call through a function pointer of its type. */
+QTC_API void *qtc_gl_proc_address(qtc_str name);
+
+/* Qt's rendering hardware interface (QRhi): one API over Vulkan, OpenGL (ES),
+   Direct3D 11 and 12 and Metal. An RHI renders offscreen into textures, into a
+   window through a swapchain, or into a QRhiWidget inside its render override.
+
+   qtc_rhi handles name an RHI, the resources made with it (buffers, textures,
+   samplers, render targets, swapchains, bindings, pipelines, readbacks) and
+   shaders; they are not object handles. Destroying an RHI destroys its
+   resources; a resource something else still uses (a texture a render target
+   draws into, a buffer in created bindings, the bindings a pipeline was made
+   with) cannot be destroyed before that user. GUI thread only.
+
+   Every command is checked before the GPU sees it: the frame and pass it needs;
+   a pipeline's vertex inputs, interface and bindings against the shaders'
+   reflection; every draw against the sizes of the buffers it reads (indexed
+   draws against the indices uploaded into the index buffer); dispatches against
+   the device's limits. What a shader computes is not checked: a shader that
+   indexes outside its buffers or images is undefined behaviour on the GPU. */
+typedef uint64_t qtc_rhi;
+
+#define QTC_RHI_BACKEND_NULL    0   /* no GPU: records and checks, draws nothing */
+#define QTC_RHI_BACKEND_OPENGL  1   /* OpenGL 2.1+ or OpenGL ES 2.0+ */
+#define QTC_RHI_BACKEND_VULKAN  2
+#define QTC_RHI_BACKEND_D3D11   3   /* Windows */
+#define QTC_RHI_BACKEND_D3D12   4   /* Windows */
+#define QTC_RHI_BACKEND_METAL   5   /* macOS, iOS */
+#define QTC_RHI_DEBUG 1u            /* debug markers, and the backend's validation layer when installed */
+/* QTC_ERR_UNSUPPORTED when the backend is not in this build or has no device here. */
+QTC_API qtc_rhi qtc_rhi_create(int32_t backend, uint32_t flags);
+/* Destroys an RHI (with everything made with it), a resource, a readback or a
+   shader. Resources used by the frame being recorded go when it ends. */
+QTC_API qtc_status qtc_rhi_destroy(qtc_rhi h);
+/* JSON: {"backend", "driver", "compute", "instancing", "index32", "base_vertex",
+   "base_instance", "int_attributes", "max_texture_size", "max_uniform_buffer",
+   "max_vertex_inputs", "max_compute_groups", "ubuf_alignment", "y_up_in_ndc",
+   "y_up_in_framebuffer", "clip_space_corr" (16 doubles, column-major)}. */
+QTC_API qtc_view qtc_rhi_info(qtc_rhi rhi);
+#define QTC_RHI_FEATURE_COMPUTE           1
+#define QTC_RHI_FEATURE_INSTANCING        2
+#define QTC_RHI_FEATURE_INDEX32           3   /* 32-bit indices */
+#define QTC_RHI_FEATURE_BASE_VERTEX       4   /* vertex_offset in indexed draws */
+#define QTC_RHI_FEATURE_BASE_INSTANCE     5   /* first_instance */
+#define QTC_RHI_FEATURE_INT_ATTRIBUTES    6   /* QTC_RHI_INT and QTC_RHI_UINT vertex inputs */
+#define QTC_RHI_FEATURE_READ_BACK_BUFFERS 7   /* readbacks of buffers other than uniform buffers */
+QTC_API bool qtc_rhi_supports(qtc_rhi rhi, int32_t feature);
+QTC_API int64_t qtc_rhi_live(void);   /* RHI handles alive: RHIs, resources, readbacks, shaders */
+/* Waits until the GPU has done everything submitted, completing readbacks.
+   Outside frames. */
+QTC_API qtc_status qtc_rhi_finish(qtc_rhi rhi);
+
+/* Shaders. Stages (also visibility bits for bindings): */
+#define QTC_RHI_VERTEX   1u
+#define QTC_RHI_FRAGMENT 2u
+#define QTC_RHI_COMPUTE  4u
+/* Compiles Vulkan-style GLSL (#version 440, layout(binding = n) on every
+   resource, layout(location = n) on every input and output) for every backend
+   this platform has, with Qt Shader Tools: QTC_ERR_UNSUPPORTED without it (load
+   packages made by Qt's qsb tool instead). Compile errors: QTC_ERR_INVALID_ARG
+   with the compiler's message. */
+QTC_API qtc_rhi qtc_rhi_shader_bake(uint32_t stage, qtc_str glsl);
+QTC_API qtc_rhi qtc_rhi_shader_load(qtc_str qsb);         /* a .qsb shader package */
+QTC_API qtc_view qtc_rhi_shader_save(qtc_rhi shader);      /* its .qsb bytes, for caching */
+QTC_API qtc_view qtc_rhi_shader_reflect(qtc_rhi shader);   /* the reflection data, JSON */
+
+/* Buffers. Uniform buffers are QTC_RHI_DYNAMIC, with no other usage; index and
+   storage buffers are QTC_RHI_IMMUTABLE or QTC_RHI_STATIC. size: (0, 1 GiB]. */
+#define QTC_RHI_IMMUTABLE 0   /* uploaded rarely (stays on the GPU) */
+#define QTC_RHI_STATIC    1   /* uploaded now and then */
+#define QTC_RHI_DYNAMIC   2   /* rewritten every frame */
+#define QTC_RHI_VERTEX_BUFFER  1u
+#define QTC_RHI_INDEX_BUFFER   2u
+#define QTC_RHI_UNIFORM_BUFFER 4u
+#define QTC_RHI_STORAGE_BUFFER 8u
+QTC_API qtc_rhi qtc_rhi_buffer(qtc_rhi rhi, int32_t type, uint32_t usage, int64_t size);
+
+/* Textures (2D, one mip level) and samplers. */
+#define QTC_RHI_RGBA8   1
+#define QTC_RHI_BGRA8   2
+#define QTC_RHI_R8      3
+#define QTC_RHI_RGBA16F 4
+#define QTC_RHI_RGBA32F 5
+#define QTC_RHI_R32F    6
+#define QTC_RHI_RENDER_TARGET 1u   /* texture flags: qtc_rhi_render_target draws into it */
+#define QTC_RHI_READABLE      2u   /* qtc_rhi_read_texture */
+#define QTC_RHI_STORAGE_IMAGE 4u   /* qtc_rhi_bind_image */
+QTC_API qtc_rhi qtc_rhi_texture(qtc_rhi rhi, int32_t format, int32_t w, int32_t h, uint32_t flags);
+QTC_API qtc_rhi qtc_rhi_sampler(qtc_rhi rhi, bool linear, bool repeat);
+/* A target drawing into a texture made with QTC_RHI_RENDER_TARGET, with a
+   depth-stencil buffer of its size when depth is true. */
+QTC_API qtc_rhi qtc_rhi_render_target(qtc_rhi texture, bool depth);
+/* A swapchain presenting into a QWindow (not a widget's, a Qt Quick or a
+   QPaintDeviceWindow, which draw themselves). Make it before the window is
+   first shown: it sets the window's surface type (and Vulkan instance) to the
+   RHI's. Frames on it (qtc_rhi_begin_frame) draw into the window; it follows
+   the window's size. */
+#define QTC_RHI_SC_DEPTH     1u   /* a depth-stencil buffer */
+#define QTC_RHI_SC_READABLE  2u   /* qtc_rhi_read_swapchain */
+#define QTC_RHI_SC_NO_VSYNC  4u
+QTC_API qtc_rhi qtc_rhi_swapchain(qtc_rhi rhi, qtc_obj window, uint32_t flags);
+
+/* Bindings: the resources shaders see, by binding number, and the stages that
+   see each (QTC_RHI_VERTEX | ...). Add them, then create; created bindings do
+   not change. */
+QTC_API qtc_rhi qtc_rhi_bindings(qtc_rhi rhi);
+/* size 0: from offset to the end. offset: a multiple of the device's uniform
+   buffer alignment ("ubuf_alignment"). */
+QTC_API qtc_status qtc_rhi_bind_uniform(qtc_rhi bindings, int32_t binding, uint32_t stages, qtc_rhi buffer,
+                                        int64_t offset, int64_t size);
+QTC_API qtc_status qtc_rhi_bind_texture(qtc_rhi bindings, int32_t binding, uint32_t stages, qtc_rhi texture,
+                                        qtc_rhi sampler);
+#define QTC_RHI_LOAD       1   /* storage access */
+#define QTC_RHI_STORE      2
+#define QTC_RHI_LOAD_STORE 3
+QTC_API qtc_status qtc_rhi_bind_storage(qtc_rhi bindings, int32_t binding, uint32_t stages, qtc_rhi buffer,
+                                        int32_t access);
+/* A texture made with QTC_RHI_STORAGE_IMAGE, as a compute shader's image. */
+QTC_API qtc_status qtc_rhi_bind_image(qtc_rhi bindings, int32_t binding, uint32_t stages, qtc_rhi texture,
+                                      int32_t access);
+QTC_API qtc_status qtc_rhi_bindings_create(qtc_rhi bindings);
+
+/* Graphics pipelines: configure, then create. */
+#define QTC_RHI_FLOAT       1   /* vertex attribute formats */
+#define QTC_RHI_FLOAT2      2
+#define QTC_RHI_FLOAT3      3
+#define QTC_RHI_FLOAT4      4
+#define QTC_RHI_UNORM_BYTE4 5   /* 4 bytes as floats in [0, 1] */
+#define QTC_RHI_INT         6
+#define QTC_RHI_UINT        7
+#define QTC_RHI_TRIANGLES      0   /* topologies */
+#define QTC_RHI_TRIANGLE_STRIP 1
+#define QTC_RHI_LINES          2
+#define QTC_RHI_LINE_STRIP     3
+#define QTC_RHI_POINTS         4   /* the vertex shader writes gl_PointSize */
+#define QTC_RHI_CULL_NONE  0
+#define QTC_RHI_CULL_FRONT 1
+#define QTC_RHI_CULL_BACK  2
+QTC_API qtc_rhi qtc_rhi_pipeline(qtc_rhi rhi);
+QTC_API qtc_status qtc_rhi_pipeline_shaders(qtc_rhi pipeline, qtc_rhi vertex, qtc_rhi fragment);
+/* Vertex bindings are numbered in the order they are added (stride: bytes per
+   vertex or instance, a multiple of 4). */
+QTC_API qtc_status qtc_rhi_pipeline_vertex_binding(qtc_rhi pipeline, int32_t stride, bool per_instance);
+QTC_API qtc_status qtc_rhi_pipeline_vertex_attribute(qtc_rhi pipeline, int32_t binding, int32_t location,
+                                                     int32_t format, int32_t offset);
+/* blend: premultiplied alpha. Defaults: triangles, no culling, no blending, no depth. */
+QTC_API qtc_status qtc_rhi_pipeline_options(qtc_rhi pipeline, int32_t topology, int32_t cull, bool blend,
+                                            bool depth_test, bool depth_write);
+/* bindings: created bindings with the layout the shaders use (any bindings of
+   the same layout serve its draws later). target: a render target, a swapchain
+   or a QRhiWidget's target; the pipeline draws into every target compatible
+   with it. */
+QTC_API qtc_status qtc_rhi_pipeline_create(qtc_rhi pipeline, qtc_rhi bindings, qtc_rhi target);
+QTC_API qtc_rhi qtc_rhi_compute_pipeline(qtc_rhi rhi, qtc_rhi shader, qtc_rhi bindings);
+
+/* Data. Uploads and readbacks are queued, and run when the next pass begins or
+   ends, or the frame ends: draws in a pass see what was uploaded before it. */
+QTC_API qtc_status qtc_rhi_upload(qtc_rhi buffer, int64_t offset, qtc_str bytes);
+/* A QImage value of the texture's size into an RGBA8, BGRA8 or R8 texture. */
+QTC_API qtc_status qtc_rhi_upload_image(qtc_rhi texture, qtc_val image);
+/* The whole texture, rows tightly packed, in its format. */
+QTC_API qtc_status qtc_rhi_upload_pixels(qtc_rhi texture, qtc_str pixels);
+/* Readbacks: handles that complete when the frame that runs them has finished
+   on the GPU (offscreen frames: when qtc_rhi_end_frame returns; window and
+   widget frames: a frame or two later, or at qtc_rhi_finish). */
+QTC_API qtc_rhi qtc_rhi_read_texture(qtc_rhi texture);          /* made with QTC_RHI_READABLE */
+QTC_API qtc_rhi qtc_rhi_read_buffer(qtc_rhi buffer, int64_t offset, int64_t size);
+QTC_API qtc_rhi qtc_rhi_read_swapchain(qtc_rhi swapchain);      /* in a frame on it, QTC_RHI_SC_READABLE */
+QTC_API bool qtc_rhi_readback_ready(qtc_rhi readback);
+QTC_API qtc_view qtc_rhi_readback_bytes(qtc_rhi readback);
+/* RGBA8 and BGRA8 readbacks as a QImage value (rows top to bottom). */
+QTC_API qtc_val qtc_rhi_readback_image(qtc_rhi readback);
+
+/* Frames. swapchain 0: an offscreen frame; else a frame drawing into the
+   swapchain's window, presented by qtc_rhi_end_frame. QTC_RHI_SKIPPED (not an
+   error): the window cannot be drawn into now (hidden, minimized, size 0); try
+   again on its next expose. */
+#define QTC_RHI_SKIPPED 1
+QTC_API qtc_status qtc_rhi_begin_frame(qtc_rhi rhi, qtc_rhi swapchain);
+QTC_API qtc_status qtc_rhi_end_frame(qtc_rhi rhi);
+/* Passes. target: a render target, the swapchain of the frame, or a QRhiWidget's
+   target (qtc_rhi_widget_target). The viewport starts as the whole target.
+   QTC_RHI_PASS_EXTERNAL: native commands may be recorded in it
+   (qtc_rhi_begin_external). */
+#define QTC_RHI_PASS_EXTERNAL 1u
+QTC_API qtc_status qtc_rhi_begin_pass(qtc_rhi rhi, qtc_rhi target, uint32_t clear_argb, double depth,
+                                      uint32_t flags);
+QTC_API qtc_status qtc_rhi_begin_compute(qtc_rhi rhi, uint32_t flags);
+QTC_API qtc_status qtc_rhi_end_pass(qtc_rhi rhi);   /* a render or a compute pass */
+QTC_API qtc_status qtc_rhi_set_pipeline(qtc_rhi rhi, qtc_rhi pipeline);
+QTC_API qtc_status qtc_rhi_set_bindings(qtc_rhi rhi, qtc_rhi bindings);
+QTC_API qtc_status qtc_rhi_set_viewport(qtc_rhi rhi, double x, double y, double w, double h);
+QTC_API qtc_status qtc_rhi_set_vertex_buffer(qtc_rhi rhi, int32_t binding, qtc_rhi buffer, int64_t offset);
+QTC_API qtc_status qtc_rhi_set_index_buffer(qtc_rhi rhi, qtc_rhi buffer, int64_t offset, bool index32);
+QTC_API qtc_status qtc_rhi_draw(qtc_rhi rhi, int64_t vertices, int64_t instances, int64_t first_vertex,
+                                int64_t first_instance);
+QTC_API qtc_status qtc_rhi_draw_indexed(qtc_rhi rhi, int64_t indices, int64_t instances, int64_t first_index,
+                                        int64_t vertex_offset, int64_t first_instance);
+QTC_API qtc_status qtc_rhi_dispatch(qtc_rhi rhi, int32_t x, int32_t y, int32_t z);
+
+/* QRhiWidget: make one overridable (qtc_new_overridable "QRhiWidget") and
+   override initialize(QRhiCommandBuffer*) and render(QRhiCommandBuffer*). In
+   those overrides, qtc_rhi_widget(self) is the widget's RHI with a frame open
+   (record passes, uploads and draws as in a frame of your own; the frame ends
+   with the call), and qtc_rhi_widget_target(self) its target for passes. The
+   target handle is valid during that call only; resources made with the
+   widget's RHI live until it goes (releaseResources is called before that). */
+QTC_API qtc_rhi qtc_rhi_widget(qtc_obj widget);
+QTC_API qtc_rhi qtc_rhi_widget_target(qtc_obj widget);
+
+/* Native interop: the objects behind an RHI, for code that calls Vulkan,
+   OpenGL, Direct3D or Metal itself. */
+typedef struct qtc_rhi_native_handles {
+    int32_t backend;           /* QTC_RHI_BACKEND_* */
+    void *instance;            /* VkInstance */
+    void *physical_device;     /* VkPhysicalDevice */
+    void *device;              /* VkDevice, ID3D11Device*, ID3D12Device*, id<MTLDevice>, QOpenGLContext* */
+    void *queue;               /* VkQueue, ID3D11DeviceContext*, ID3D12CommandQueue*, id<MTLCommandQueue> */
+    uint32_t queue_family;     /* Vulkan */
+    uint32_t queue_index;      /* Vulkan */
+} qtc_rhi_native_handles;
+QTC_API qtc_status qtc_rhi_native(qtc_rhi rhi, qtc_rhi_native_handles *out);
+/* A buffer's or texture's native object (VkBuffer, VkImage, GLuint, ID3D11Buffer*,
+   ...; 0 if none); layout: a texture's current VkImageLayout (or 0). */
+QTC_API uint64_t qtc_rhi_native_object(qtc_rhi resource, int32_t *layout);
+/* Makes an OpenGL RHI's context current on this thread, outside frames. */
+QTC_API qtc_status qtc_rhi_make_current(qtc_rhi rhi);
+/* Inside a pass begun with QTC_RHI_PASS_EXTERNAL: native commands may be
+   recorded until qtc_rhi_end_external, into *native_cb (VkCommandBuffer,
+   ID3D12GraphicsCommandList*, id<MTLRenderCommandEncoder>; null for OpenGL and
+   Direct3D 11, whose commands go to the current context). The pipeline and
+   bindings must be set again afterwards. */
+QTC_API qtc_status qtc_rhi_begin_external(qtc_rhi rhi, void **native_cb);
+QTC_API qtc_status qtc_rhi_end_external(qtc_rhi rhi);
+
+/* Vulkan without an RHI: a Vulkan instance (extensions and layers: JSON arrays
+   of names; {0, 0}: none), its functions, and surfaces for windows. Destroy it
+   with qtc_rhi_destroy; windows using it lose their native window first. */
+QTC_API qtc_rhi qtc_vk_create(qtc_str extensions, qtc_str layers);
+/* h: an instance from qtc_vk_create, or a Vulkan RHI. */
+QTC_API void *qtc_vk_instance(qtc_rhi h);                     /* VkInstance */
+QTC_API void *qtc_vk_proc_address(qtc_rhi h, qtc_str name);   /* vkGetInstanceProcAddr */
+/* Before the window is first shown: makes it a Vulkan surface of the instance. */
+QTC_API qtc_status qtc_vk_attach(qtc_rhi h, qtc_obj window);
+QTC_API uint64_t qtc_vk_surface(qtc_rhi h, qtc_obj window);  /* VkSurfaceKHR, once the window exists */
 
 /* ---------------------------------------------------------------- interop */
 

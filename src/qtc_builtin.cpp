@@ -1,4 +1,5 @@
 // QtcCanvas, QtcBridge and the qtc_draw_* API.
+#include "qtc_override.h"
 #include "qtc_builtin.h"
 #include "qtc_events.h"
 
@@ -6,6 +7,7 @@
 #include <QtGui/QLinearGradient>
 #include <QtGui/QPainter>
 #include <QtGui/QPainterPath>
+#include <QtGui/QPaintDeviceWindow>
 #include <QtGui/QTextTable>
 #include <QtGui/QTransform>
 #include <QtCore/QLineF>
@@ -95,16 +97,31 @@ void replay(QPainter &p, const DrawList &l, const QRect &bounds) {
 
 // ------------------------------------------------------------ the recorder
 
+// Where a recording goes when it ends.
+enum Sink : uint8_t {
+    SINK_CANVAS = 0,   // a QtcCanvas keeps it and replays it whenever it paints
+    SINK_VALUE,        // drawn into a QImage or QPixmap value
+    SINK_LIVE,         // drawn on the object an override paints right now (paintEvent, paintGL)
+    SINK_PAINTER,      // drawn with the QPainter an override received
+};
 struct Recorder {
     bool active = false;
     uint64_t target = 0;
+    uint8_t sink = SINK_CANVAS;
     bool is_value = false;
+    int32_t painter_arg = -1;
     std::shared_ptr<DrawList> list;
     int depth = 0;
     QPainterPath path;
     bool path_open = false;
 };
-static Recorder &rec() { static Recorder *r = new Recorder; return *r; }
+// One recorder per override call in progress: a handler draws on its own, and a recording the
+// program had open before Qt called the override stays as it was.
+static std::vector<Recorder> &recs() {
+    static auto *v = new std::vector<Recorder>(1);
+    return *v;
+}
+static Recorder &rec() { return recs().back(); }
 
 static constexpr double kMaxCoord = 1e9;
 
@@ -199,6 +216,19 @@ static const ClassDef builtin_defs[] = {
 
 void register_builtin_classes() { register_classes(builtin_defs, int(sizeof(builtin_defs) / sizeof(builtin_defs[0]))); }
 
+#ifdef QTC_HAS_GUI
+void draw_push() { recs().emplace_back(); }
+void draw_pop() {
+    std::vector<Recorder> &v = recs();
+    if (v.size() <= 1) return;
+    if (v.back().active) qtc_draw_end();   // finishes what the handler left open, where it was meant to go
+    v.pop_back();
+}
+#else
+void draw_push() {}
+void draw_pop() {}
+#endif
+
 }  // namespace qtc
 
 using namespace qtc;
@@ -227,15 +257,45 @@ QTC_API qtc_status qtc_draw_begin(uint64_t target) {
         } else {
             QObject *o = reg().object(target, &err);
             if (!o) return fail(err, "qtc_draw_begin");
+            if (ov_painting(o)) {
+                // inside the object's own paintEvent (or paintGL) override: drawn on it at the end
+                r.sink = SINK_LIVE;
+                r.is_value = false;
+            } else {
 #ifdef QTC_HAS_WIDGETS
-            if (!qobject_cast<QtcCanvas *>(o)) return fail(QTC_ERR_WRONG_TYPE, QStringLiteral("qtc_draw_begin: %1 is not a QtcCanvas").arg(QLatin1StringView(o->metaObject()->className())));
+                if (!qobject_cast<QtcCanvas *>(o))
+                    return fail(QTC_ERR_WRONG_TYPE, QStringLiteral("qtc_draw_begin: %1 is not a QtcCanvas (other widgets and "
+                                                                   "windows are drawn on inside their paintEvent override)")
+                                                        .arg(QLatin1StringView(o->metaObject()->className())));
 #else
-            return fail(QTC_ERR_UNSUPPORTED, "QtcCanvas needs QtWidgets");
+                return fail(QTC_ERR_UNSUPPORTED, "QtcCanvas needs QtWidgets");
 #endif
-            r.is_value = false;
+                r.sink = SINK_CANVAS;
+                r.is_value = false;
+            }
         }
+        if (r.is_value) r.sink = SINK_VALUE;
         r.active = true;
         r.target = target;
+        r.list = std::make_shared<DrawList>();
+        r.depth = 0;
+        r.path = QPainterPath();
+        r.path_open = false;
+        return QTC_OK;)
+}
+
+QTC_API qtc_status qtc_draw_begin_painter(int32_t arg_index) {
+    DRAW_GUARD(
+        Recorder &r = rec();
+        if (r.active) return fail(QTC_ERR_STATE, "qtc_draw_begin_painter: a recording is already open; call qtc_draw_end");
+        QPainter *p = ov_painter_arg(arg_index);
+        if (!p) return fail(QTC_ERR_STATE, QStringLiteral("qtc_draw_begin_painter: argument %1 of the override being handled is not a QPainter").arg(arg_index));
+        if (!p->isActive()) return fail(QTC_ERR_STATE, "qtc_draw_begin_painter: the painter is not active");
+        r.active = true;
+        r.target = 0;
+        r.sink = SINK_PAINTER;
+        r.is_value = false;
+        r.painter_arg = arg_index;
         r.list = std::make_shared<DrawList>();
         r.depth = 0;
         r.path = QPainterPath();
@@ -256,6 +316,38 @@ QTC_API qtc_status qtc_draw_end(void) {
         }
         std::shared_ptr<DrawList> list = std::move(r.list);
         qtc_status err = 0;
+        if (r.sink == SINK_PAINTER) {
+            QPainter *p = ov_painter_arg(r.painter_arg);
+            if (!p || !p->isActive()) return fail(QTC_ERR_STATE, "qtc_draw_end: the painter is gone");
+            const QPaintDevice *d = p->device();
+            p->save();
+            replay(*p, *list, d ? QRect(0, 0, d->width(), d->height()) : p->viewport());
+            p->restore();
+            return QTC_OK;
+        }
+        if (r.sink == SINK_LIVE) {
+            QObject *o = reg().object(r.target, &err);
+            if (!o) return fail(err, "qtc_draw_end: the target");
+            if (!ov_painting(o)) return fail(QTC_ERR_STATE, "qtc_draw_end: the paint override that began this drawing has returned");
+            QPaintDevice *dev = nullptr;
+            QRect bounds;
+#ifdef QTC_HAS_WIDGETS
+            if (o->isWidgetType()) {
+                dev = static_cast<QWidget *>(o);
+                bounds = static_cast<QWidget *>(o)->rect();
+            }
+#endif
+            if (auto *w = qobject_cast<QPaintDeviceWindow *>(o)) {
+                dev = w;
+                bounds = QRect(QPoint(0, 0), w->size());
+            }
+            if (!dev) return fail(QTC_ERR_WRONG_TYPE, "qtc_draw_end: the target cannot be painted on");
+            QPainter p;
+            if (!p.begin(dev)) return fail(QTC_ERR_REJECTED, "qtc_draw_end: QPainter cannot paint on the target now");
+            replay(p, *list, bounds);
+            p.end();
+            return QTC_OK;
+        }
         if (r.is_value) {
             QVariant *v = reg().value(r.target, &err);
             if (!v) return fail(err, "qtc_draw_end: the target");

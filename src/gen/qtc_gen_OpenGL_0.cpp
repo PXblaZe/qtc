@@ -16,7 +16,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtOpenGL/qopengldebug.h>)
-template <class S> static int t10327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10479(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -28,7 +28,7 @@ template <class S> static int t10327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10480(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -40,7 +40,7 @@ template <class S> static int t10328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10481(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -52,7 +52,7 @@ template <class S> static int t10329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10482(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -64,7 +64,7 @@ template <class S> static int t10330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10483(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -76,7 +76,7 @@ template <class S> static int t10331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10484(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<unsigned int> p1;
@@ -84,8 +84,8 @@ template <class S> static int t10332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QOpenGLDebugMessage::Type> p3;
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 383);
-    if (n > 3) QTC_CVE(3, p3, 385);
+    if (n > 2) QTC_CVE(2, p2, 407);
+    if (n > 3) QTC_CVE(3, p3, 409);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::createApplicationMessage(p0.get())); }) { qtc::rt(*r, S::createApplicationMessage(p0.get())); return 0; }
@@ -94,17 +94,17 @@ template <class S> static int t10332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S::createApplicationMessage(p0.get(), p1.get())); }) { qtc::rt(*r, S::createApplicationMessage(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 383); qtc::rt(*rr, S::createApplicationMessage(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::createApplicationMessage(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 407); qtc::rt(*rr, S::createApplicationMessage(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::createApplicationMessage(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2, qtc::H<QOpenGLDebugMessage::Type> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 383); qtc::cve(aa[3], p3, 3, 385); qtc::rt(*rr, S::createApplicationMessage(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S::createApplicationMessage(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2, qtc::H<QOpenGLDebugMessage::Type> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 407); qtc::cve(aa[3], p3, 3, 409); qtc::rt(*rr, S::createApplicationMessage(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S::createApplicationMessage(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10485(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<unsigned int> p1;
@@ -112,8 +112,8 @@ template <class S> static int t10333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QOpenGLDebugMessage::Type> p3;
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 383);
-    if (n > 3) QTC_CVE(3, p3, 385);
+    if (n > 2) QTC_CVE(2, p2, 407);
+    if (n > 3) QTC_CVE(3, p3, 409);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::createThirdPartyMessage(p0.get())); }) { qtc::rt(*r, S::createThirdPartyMessage(p0.get())); return 0; }
@@ -122,17 +122,17 @@ template <class S> static int t10333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S::createThirdPartyMessage(p0.get(), p1.get())); }) { qtc::rt(*r, S::createThirdPartyMessage(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 383); qtc::rt(*rr, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 407); qtc::rt(*rr, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2, qtc::H<QOpenGLDebugMessage::Type> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 383); qtc::cve(aa[3], p3, 3, 385); qtc::rt(*rr, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned int> &p1, qtc::H<QOpenGLDebugMessage::Severity> &p2, qtc::H<QOpenGLDebugMessage::Type> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 407); qtc::cve(aa[3], p3, 3, 409); qtc::rt(*rr, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S::createThirdPartyMessage(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10486(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -145,7 +145,7 @@ template <class S> static int t10334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtOpenGL/qopenglframebufferobject.h>)
-template <class S> static int t10335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10487(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -159,7 +159,7 @@ template <class S> static int t10335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10488(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -171,7 +171,7 @@ template <class S> static int t10336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10489(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -185,7 +185,7 @@ template <class S> static int t10337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10490(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -197,13 +197,13 @@ template <class S> static int t10338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10491(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QOpenGLFramebufferObject::Attachment> p0;
-    QTC_CVE(0, p0, 386);
+    QTC_CVE(0, p0, 410);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLFramebufferObject::Attachment> &p0) { qtc::cve(aa[0], p0, 0, 386); s->setAttachment(p0.get()); }) { s->setAttachment(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLFramebufferObject::Attachment> &p0) { qtc::cve(aa[0], p0, 0, 410); s->setAttachment(p0.get()); }) { s->setAttachment(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -211,7 +211,7 @@ template <class S> static int t10339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10492(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -223,7 +223,7 @@ template <class S> static int t10340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10493(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -237,7 +237,7 @@ template <class S> static int t10341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10494(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -249,7 +249,7 @@ template <class S> static int t10342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10495(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -263,7 +263,7 @@ template <class S> static int t10343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10496(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -275,7 +275,7 @@ template <class S> static int t10344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10497(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -288,7 +288,7 @@ template <class S> static int t10345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtOpenGL/qopenglpixeltransferoptions.h>)
-template <class S> static int t10346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10498(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -302,7 +302,7 @@ template <class S> static int t10346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10499(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -314,7 +314,7 @@ template <class S> static int t10347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10500(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -328,7 +328,7 @@ template <class S> static int t10348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10501(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -340,7 +340,7 @@ template <class S> static int t10349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10502(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -354,7 +354,7 @@ template <class S> static int t10350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10503(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -366,7 +366,7 @@ template <class S> static int t10351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10504(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -380,7 +380,7 @@ template <class S> static int t10352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10505(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -392,7 +392,7 @@ template <class S> static int t10353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10506(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -406,7 +406,7 @@ template <class S> static int t10354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10507(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -418,7 +418,7 @@ template <class S> static int t10355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10508(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -432,7 +432,7 @@ template <class S> static int t10356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10509(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -444,7 +444,7 @@ template <class S> static int t10357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10510(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -458,7 +458,7 @@ template <class S> static int t10358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10511(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -470,7 +470,7 @@ template <class S> static int t10359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10512(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -484,7 +484,7 @@ template <class S> static int t10360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10513(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -496,7 +496,7 @@ template <class S> static int t10361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10514(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -509,7 +509,7 @@ template <class S> static int t10362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtOpenGL/qopenglversionprofile.h>)
-template <class S> static int t10363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10515(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -525,7 +525,7 @@ template <class S> static int t10363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10516(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -537,13 +537,13 @@ template <class S> static int t10364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10517(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSurfaceFormat::OpenGLContextProfile> p0;
-    QTC_CVE(0, p0, 726);
+    QTC_CVE(0, p0, 750);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSurfaceFormat::OpenGLContextProfile> &p0) { qtc::cve(aa[0], p0, 0, 726); s->setProfile(p0.get()); }) { s->setProfile(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSurfaceFormat::OpenGLContextProfile> &p0) { qtc::cve(aa[0], p0, 0, 750); s->setProfile(p0.get()); }) { s->setProfile(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -551,7 +551,7 @@ template <class S> static int t10365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10518(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -563,7 +563,7 @@ template <class S> static int t10366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10519(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -575,7 +575,7 @@ template <class S> static int t10367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10520(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -587,7 +587,7 @@ template <class S> static int t10368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10521(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -598,7 +598,7 @@ template <class S> static int t10369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10522(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QSurfaceFormat> p0;
     QTC_CV(0, p0);
@@ -613,7 +613,7 @@ template <class S> static int t10370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtOpenGL/qopenglversionfunctions.h>)
-template <class S> static int t10371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10523(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -624,17 +624,17 @@ template <class S> static int t10371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10524(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     qtc::H<int> p1;
     qtc::H<QOpenGLVersionStatus::OpenGLStatus> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    QTC_CVE(2, p2, 410);
+    QTC_CVE(2, p2, 434);
     switch (n) {
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1, qtc::H<QOpenGLVersionStatus::OpenGLStatus> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 410); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1, qtc::H<QOpenGLVersionStatus::OpenGLStatus> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 434); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -643,7 +643,7 @@ template <class S> static int t10372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtOpenGL/qopenglwindow.h>)
-template <class S> static int t10373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10525(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -655,7 +655,7 @@ template <class S> static int t10373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10526(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -667,7 +667,7 @@ template <class S> static int t10374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10527(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -679,7 +679,7 @@ template <class S> static int t10375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10528(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -691,7 +691,7 @@ template <class S> static int t10376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10529(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -703,7 +703,7 @@ template <class S> static int t10377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10530(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -715,7 +715,7 @@ template <class S> static int t10378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10531(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -727,7 +727,7 @@ template <class S> static int t10379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10532(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -739,7 +739,7 @@ template <class S> static int t10380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10533(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -751,44 +751,44 @@ template <class S> static int t10381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10382(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10534(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QOpenGLWindow::UpdateBehavior> p0;
     qtc::H<QWindow *> p1;
-    if (n > 0) QTC_CVE(0, p0, 413);
+    if (n > 0) QTC_CVE(0, p0, 437);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 0:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWindow::UpdateBehavior> &p0) { qtc::cve(aa[0], p0, 0, 413); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWindow::UpdateBehavior> &p0) { qtc::cve(aa[0], p0, 0, 437); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWindow::UpdateBehavior> &p0, qtc::H<QWindow *> &p1) { qtc::cve(aa[0], p0, 0, 413); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLWindow::UpdateBehavior> &p0, qtc::H<QWindow *> &p1) { qtc::cve(aa[0], p0, 0, 437); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10535(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QOpenGLContext *> p0;
     qtc::H<QOpenGLWindow::UpdateBehavior> p1;
     qtc::H<QWindow *> p2;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 413);
+    if (n > 1) QTC_CVE(1, p1, 437);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLContext *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLContext *> &p0, qtc::H<QOpenGLWindow::UpdateBehavior> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 413); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLContext *> &p0, qtc::H<QOpenGLWindow::UpdateBehavior> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 437); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLContext *> &p0, qtc::H<QOpenGLWindow::UpdateBehavior> &p1, qtc::H<QWindow *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 413); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOpenGLContext *> &p0, qtc::H<QOpenGLWindow::UpdateBehavior> &p1, qtc::H<QWindow *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 437); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -796,118 +796,118 @@ template <class S> static int t10383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P10332[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}, {qtc::PK_ENUM, 383, "QOpenGLDebugMessage::Severity", nullptr}, {qtc::PK_ENUM, 385, "QOpenGLDebugMessage::Type", nullptr}};
-static const qtc::ParamDesc P10333[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}, {qtc::PK_ENUM, 383, "QOpenGLDebugMessage::Severity", nullptr}, {qtc::PK_ENUM, 385, "QOpenGLDebugMessage::Type", nullptr}};
+static const qtc::ParamDesc P10484[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}, {qtc::PK_ENUM, 407, "QOpenGLDebugMessage::Severity", nullptr}, {qtc::PK_ENUM, 409, "QOpenGLDebugMessage::Type", nullptr}};
+static const qtc::ParamDesc P10485[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}, {qtc::PK_ENUM, 407, "QOpenGLDebugMessage::Severity", nullptr}, {qtc::PK_ENUM, 409, "QOpenGLDebugMessage::Type", nullptr}};
 #if __has_include(<QtOpenGL/qopengldebug.h>)
 static const qtc::MethodDef M_QOpenGLDebugMessage[] = {
-    {"source", "source()", t10327<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLDebugMessage::Source"},
-    {"type", "type()", t10328<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLDebugMessage::Type"},
-    {"severity", "severity()", t10329<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLDebugMessage::Severity"},
-    {"id", "id()", t10330<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"message", "message()", t10331<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"createApplicationMessage", "createApplicationMessage(QString,GLuint,QOpenGLDebugMessage::Severity,QOpenGLDebugMessage::Type)", t10332<QOpenGLDebugMessage>, P10332, 4, 1, qtc::MF_STATIC, QTC_T_VALUE, "QOpenGLDebugMessage"},
-    {"createThirdPartyMessage", "createThirdPartyMessage(QString,GLuint,QOpenGLDebugMessage::Severity,QOpenGLDebugMessage::Type)", t10333<QOpenGLDebugMessage>, P10333, 4, 1, qtc::MF_STATIC, QTC_T_VALUE, "QOpenGLDebugMessage"},
+    {"source", "source()", t10479<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLDebugMessage::Source"},
+    {"type", "type()", t10480<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLDebugMessage::Type"},
+    {"severity", "severity()", t10481<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLDebugMessage::Severity"},
+    {"id", "id()", t10482<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"message", "message()", t10483<QOpenGLDebugMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"createApplicationMessage", "createApplicationMessage(QString,GLuint,QOpenGLDebugMessage::Severity,QOpenGLDebugMessage::Type)", t10484<QOpenGLDebugMessage>, P10484, 4, 1, qtc::MF_STATIC, QTC_T_VALUE, "QOpenGLDebugMessage"},
+    {"createThirdPartyMessage", "createThirdPartyMessage(QString,GLuint,QOpenGLDebugMessage::Severity,QOpenGLDebugMessage::Type)", t10485<QOpenGLDebugMessage>, P10485, 4, 1, qtc::MF_STATIC, QTC_T_VALUE, "QOpenGLDebugMessage"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QOpenGLDebugMessage[] = {
-    {"QOpenGLDebugMessage", "QOpenGLDebugMessage()", t10334<QOpenGLDebugMessage>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLDebugMessage"},
+    {"QOpenGLDebugMessage", "QOpenGLDebugMessage()", t10486<QOpenGLDebugMessage>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLDebugMessage"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10335[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10337[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10339[] = {{qtc::PK_ENUM, 386, "QOpenGLFramebufferObject::Attachment", nullptr}};
-static const qtc::ParamDesc P10341[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P10343[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10487[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10489[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10491[] = {{qtc::PK_ENUM, 410, "QOpenGLFramebufferObject::Attachment", nullptr}};
+static const qtc::ParamDesc P10493[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10495[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
 #if __has_include(<QtOpenGL/qopenglframebufferobject.h>)
 static const qtc::MethodDef M_QOpenGLFramebufferObjectFormat[] = {
-    {"setSamples", "setSamples(int)", t10335<QOpenGLFramebufferObjectFormat>, P10335, 1, 1, 0, QTC_T_NONE, "void"},
-    {"samples", "samples()", t10336<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setMipmap", "setMipmap(bool)", t10337<QOpenGLFramebufferObjectFormat>, P10337, 1, 1, 0, QTC_T_NONE, "void"},
-    {"mipmap", "mipmap()", t10338<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setAttachment", "setAttachment(QOpenGLFramebufferObject::Attachment)", t10339<QOpenGLFramebufferObjectFormat>, P10339, 1, 1, 0, QTC_T_NONE, "void"},
-    {"attachment", "attachment()", t10340<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLFramebufferObject::Attachment"},
-    {"setTextureTarget", "setTextureTarget(GLenum)", t10341<QOpenGLFramebufferObjectFormat>, P10341, 1, 1, 0, QTC_T_NONE, "void"},
-    {"textureTarget", "textureTarget()", t10342<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"setInternalTextureFormat", "setInternalTextureFormat(GLenum)", t10343<QOpenGLFramebufferObjectFormat>, P10343, 1, 1, 0, QTC_T_NONE, "void"},
-    {"internalTextureFormat", "internalTextureFormat()", t10344<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"setSamples", "setSamples(int)", t10487<QOpenGLFramebufferObjectFormat>, P10487, 1, 1, 0, QTC_T_NONE, "void"},
+    {"samples", "samples()", t10488<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setMipmap", "setMipmap(bool)", t10489<QOpenGLFramebufferObjectFormat>, P10489, 1, 1, 0, QTC_T_NONE, "void"},
+    {"mipmap", "mipmap()", t10490<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setAttachment", "setAttachment(QOpenGLFramebufferObject::Attachment)", t10491<QOpenGLFramebufferObjectFormat>, P10491, 1, 1, 0, QTC_T_NONE, "void"},
+    {"attachment", "attachment()", t10492<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLFramebufferObject::Attachment"},
+    {"setTextureTarget", "setTextureTarget(GLenum)", t10493<QOpenGLFramebufferObjectFormat>, P10493, 1, 1, 0, QTC_T_NONE, "void"},
+    {"textureTarget", "textureTarget()", t10494<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"setInternalTextureFormat", "setInternalTextureFormat(GLenum)", t10495<QOpenGLFramebufferObjectFormat>, P10495, 1, 1, 0, QTC_T_NONE, "void"},
+    {"internalTextureFormat", "internalTextureFormat()", t10496<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QOpenGLFramebufferObjectFormat[] = {
-    {"QOpenGLFramebufferObjectFormat", "QOpenGLFramebufferObjectFormat()", t10345<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLFramebufferObjectFormat"},
+    {"QOpenGLFramebufferObjectFormat", "QOpenGLFramebufferObjectFormat()", t10497<QOpenGLFramebufferObjectFormat>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLFramebufferObjectFormat"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10346[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10348[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10350[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10352[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10354[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10356[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10358[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10360[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10498[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10500[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10502[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10504[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10506[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10508[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10510[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10512[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if __has_include(<QtOpenGL/qopenglpixeltransferoptions.h>)
 static const qtc::MethodDef M_QOpenGLPixelTransferOptions[] = {
-    {"setAlignment", "setAlignment(int)", t10346<QOpenGLPixelTransferOptions>, P10346, 1, 1, 0, QTC_T_NONE, "void"},
-    {"alignment", "alignment()", t10347<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSkipImages", "setSkipImages(int)", t10348<QOpenGLPixelTransferOptions>, P10348, 1, 1, 0, QTC_T_NONE, "void"},
-    {"skipImages", "skipImages()", t10349<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSkipRows", "setSkipRows(int)", t10350<QOpenGLPixelTransferOptions>, P10350, 1, 1, 0, QTC_T_NONE, "void"},
-    {"skipRows", "skipRows()", t10351<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSkipPixels", "setSkipPixels(int)", t10352<QOpenGLPixelTransferOptions>, P10352, 1, 1, 0, QTC_T_NONE, "void"},
-    {"skipPixels", "skipPixels()", t10353<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setImageHeight", "setImageHeight(int)", t10354<QOpenGLPixelTransferOptions>, P10354, 1, 1, 0, QTC_T_NONE, "void"},
-    {"imageHeight", "imageHeight()", t10355<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setRowLength", "setRowLength(int)", t10356<QOpenGLPixelTransferOptions>, P10356, 1, 1, 0, QTC_T_NONE, "void"},
-    {"rowLength", "rowLength()", t10357<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setLeastSignificantByteFirst", "setLeastSignificantByteFirst(bool)", t10358<QOpenGLPixelTransferOptions>, P10358, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isLeastSignificantBitFirst", "isLeastSignificantBitFirst()", t10359<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setSwapBytesEnabled", "setSwapBytesEnabled(bool)", t10360<QOpenGLPixelTransferOptions>, P10360, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isSwapBytesEnabled", "isSwapBytesEnabled()", t10361<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setAlignment", "setAlignment(int)", t10498<QOpenGLPixelTransferOptions>, P10498, 1, 1, 0, QTC_T_NONE, "void"},
+    {"alignment", "alignment()", t10499<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSkipImages", "setSkipImages(int)", t10500<QOpenGLPixelTransferOptions>, P10500, 1, 1, 0, QTC_T_NONE, "void"},
+    {"skipImages", "skipImages()", t10501<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSkipRows", "setSkipRows(int)", t10502<QOpenGLPixelTransferOptions>, P10502, 1, 1, 0, QTC_T_NONE, "void"},
+    {"skipRows", "skipRows()", t10503<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSkipPixels", "setSkipPixels(int)", t10504<QOpenGLPixelTransferOptions>, P10504, 1, 1, 0, QTC_T_NONE, "void"},
+    {"skipPixels", "skipPixels()", t10505<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setImageHeight", "setImageHeight(int)", t10506<QOpenGLPixelTransferOptions>, P10506, 1, 1, 0, QTC_T_NONE, "void"},
+    {"imageHeight", "imageHeight()", t10507<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setRowLength", "setRowLength(int)", t10508<QOpenGLPixelTransferOptions>, P10508, 1, 1, 0, QTC_T_NONE, "void"},
+    {"rowLength", "rowLength()", t10509<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setLeastSignificantByteFirst", "setLeastSignificantByteFirst(bool)", t10510<QOpenGLPixelTransferOptions>, P10510, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isLeastSignificantBitFirst", "isLeastSignificantBitFirst()", t10511<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setSwapBytesEnabled", "setSwapBytesEnabled(bool)", t10512<QOpenGLPixelTransferOptions>, P10512, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isSwapBytesEnabled", "isSwapBytesEnabled()", t10513<QOpenGLPixelTransferOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QOpenGLPixelTransferOptions[] = {
-    {"QOpenGLPixelTransferOptions", "QOpenGLPixelTransferOptions()", t10362<QOpenGLPixelTransferOptions>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLPixelTransferOptions"},
+    {"QOpenGLPixelTransferOptions", "QOpenGLPixelTransferOptions()", t10514<QOpenGLPixelTransferOptions>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLPixelTransferOptions"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10363[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10365[] = {{qtc::PK_ENUM, 726, "QSurfaceFormat::OpenGLContextProfile", nullptr}};
-static const qtc::ParamDesc P10370[] = {{qtc::PK_VALUE, -1, "QSurfaceFormat", nullptr}};
+static const qtc::ParamDesc P10515[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10517[] = {{qtc::PK_ENUM, 750, "QSurfaceFormat::OpenGLContextProfile", nullptr}};
+static const qtc::ParamDesc P10522[] = {{qtc::PK_VALUE, -1, "QSurfaceFormat", nullptr}};
 #if __has_include(<QtOpenGL/qopenglversionprofile.h>)
 static const qtc::MethodDef M_QOpenGLVersionProfile[] = {
-    {"setVersion", "setVersion(int,int)", t10363<QOpenGLVersionProfile>, P10363, 2, 2, 0, QTC_T_NONE, "void"},
-    {"profile", "profile()", t10364<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSurfaceFormat::OpenGLContextProfile"},
-    {"setProfile", "setProfile(QSurfaceFormat::OpenGLContextProfile)", t10365<QOpenGLVersionProfile>, P10365, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hasProfiles", "hasProfiles()", t10366<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isLegacyVersion", "isLegacyVersion()", t10367<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isValid", "isValid()", t10368<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setVersion", "setVersion(int,int)", t10515<QOpenGLVersionProfile>, P10515, 2, 2, 0, QTC_T_NONE, "void"},
+    {"profile", "profile()", t10516<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSurfaceFormat::OpenGLContextProfile"},
+    {"setProfile", "setProfile(QSurfaceFormat::OpenGLContextProfile)", t10517<QOpenGLVersionProfile>, P10517, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hasProfiles", "hasProfiles()", t10518<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isLegacyVersion", "isLegacyVersion()", t10519<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isValid", "isValid()", t10520<QOpenGLVersionProfile>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QOpenGLVersionProfile[] = {
-    {"QOpenGLVersionProfile", "QOpenGLVersionProfile()", t10369<QOpenGLVersionProfile>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLVersionProfile"},
-    {"QOpenGLVersionProfile", "QOpenGLVersionProfile(QSurfaceFormat)", t10370<QOpenGLVersionProfile>, P10370, 1, 1, 0, QTC_T_VALUE, "QOpenGLVersionProfile"},
+    {"QOpenGLVersionProfile", "QOpenGLVersionProfile()", t10521<QOpenGLVersionProfile>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLVersionProfile"},
+    {"QOpenGLVersionProfile", "QOpenGLVersionProfile(QSurfaceFormat)", t10522<QOpenGLVersionProfile>, P10522, 1, 1, 0, QTC_T_VALUE, "QOpenGLVersionProfile"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10372[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 410, "QOpenGLVersionStatus::OpenGLStatus", nullptr}};
+static const qtc::ParamDesc P10524[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 434, "QOpenGLVersionStatus::OpenGLStatus", nullptr}};
 #if __has_include(<QtOpenGL/qopenglversionfunctions.h>)
 static const qtc::MethodDef M_QOpenGLVersionStatus[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QOpenGLVersionStatus[] = {
-    {"QOpenGLVersionStatus", "QOpenGLVersionStatus()", t10371<QOpenGLVersionStatus>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLVersionStatus"},
-    {"QOpenGLVersionStatus", "QOpenGLVersionStatus(int,int,QOpenGLVersionStatus::OpenGLStatus)", t10372<QOpenGLVersionStatus>, P10372, 3, 3, 0, QTC_T_VALUE, "QOpenGLVersionStatus"},
+    {"QOpenGLVersionStatus", "QOpenGLVersionStatus()", t10523<QOpenGLVersionStatus>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOpenGLVersionStatus"},
+    {"QOpenGLVersionStatus", "QOpenGLVersionStatus(int,int,QOpenGLVersionStatus::OpenGLStatus)", t10524<QOpenGLVersionStatus>, P10524, 3, 3, 0, QTC_T_VALUE, "QOpenGLVersionStatus"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10382[] = {{qtc::PK_ENUM, 413, "QOpenGLWindow::UpdateBehavior", nullptr}, {qtc::PK_OBJ, -1, "QWindow*", &QWindow::staticMetaObject}};
-static const qtc::ParamDesc P10383[] = {{qtc::PK_OBJ, -1, "QOpenGLContext*", &QOpenGLContext::staticMetaObject}, {qtc::PK_ENUM, 413, "QOpenGLWindow::UpdateBehavior", nullptr}, {qtc::PK_OBJ, -1, "QWindow*", &QWindow::staticMetaObject}};
+static const qtc::ParamDesc P10534[] = {{qtc::PK_ENUM, 437, "QOpenGLWindow::UpdateBehavior", nullptr}, {qtc::PK_OBJ, -1, "QWindow*", &QWindow::staticMetaObject}};
+static const qtc::ParamDesc P10535[] = {{qtc::PK_OBJ, -1, "QOpenGLContext*", &QOpenGLContext::staticMetaObject}, {qtc::PK_ENUM, 437, "QOpenGLWindow::UpdateBehavior", nullptr}, {qtc::PK_OBJ, -1, "QWindow*", &QWindow::staticMetaObject}};
 #if __has_include(<QtOpenGL/qopenglwindow.h>)
 static const qtc::MethodDef M_QOpenGLWindow[] = {
-    {"updateBehavior", "updateBehavior()", t10373<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLWindow::UpdateBehavior"},
-    {"isValid", "isValid()", t10374<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"makeCurrent", "makeCurrent()", t10375<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"doneCurrent", "doneCurrent()", t10376<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"context", "context()", t10377<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QOpenGLContext*"},
-    {"shareContext", "shareContext()", t10378<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QOpenGLContext*"},
-    {"defaultFramebufferObject", "defaultFramebufferObject()", t10379<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"grabFramebuffer", "grabFramebuffer()", t10380<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_VALUE, "QImage"},
-    {"frameSwapped", "frameSwapped()", t10381<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"updateBehavior", "updateBehavior()", t10525<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOpenGLWindow::UpdateBehavior"},
+    {"isValid", "isValid()", t10526<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"makeCurrent", "makeCurrent()", t10527<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"doneCurrent", "doneCurrent()", t10528<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"context", "context()", t10529<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QOpenGLContext*"},
+    {"shareContext", "shareContext()", t10530<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QOpenGLContext*"},
+    {"defaultFramebufferObject", "defaultFramebufferObject()", t10531<QOpenGLWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"grabFramebuffer", "grabFramebuffer()", t10532<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_VALUE, "QImage"},
+    {"frameSwapped", "frameSwapped()", t10533<QOpenGLWindow>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QOpenGLWindow[] = {
-    {"QOpenGLWindow", "QOpenGLWindow(QOpenGLWindow::UpdateBehavior,QWindow*)", t10382<QOpenGLWindow>, P10382, 2, 0, 0, QTC_T_OBJ, "QOpenGLWindow"},
-    {"QOpenGLWindow", "QOpenGLWindow(QOpenGLContext*,QOpenGLWindow::UpdateBehavior,QWindow*)", t10383<QOpenGLWindow>, P10383, 3, 1, 0, QTC_T_OBJ, "QOpenGLWindow"},
+    {"QOpenGLWindow", "QOpenGLWindow(QOpenGLWindow::UpdateBehavior,QWindow*)", t10534<QOpenGLWindow>, P10534, 2, 0, 0, QTC_T_OBJ, "QOpenGLWindow"},
+    {"QOpenGLWindow", "QOpenGLWindow(QOpenGLContext*,QOpenGLWindow::UpdateBehavior,QWindow*)", t10535<QOpenGLWindow>, P10535, 3, 1, 0, QTC_T_OBJ, "QOpenGLWindow"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

@@ -18,12 +18,13 @@ jobs:
       - uses: jurplel/install-qt-action@v4
         with:
           version: '6.12.*'
-          modules: 'qtcharts qtmultimedia qtpositioning qtserialport qtwebsockets qtwebchannel qtspatialaudio'
+          modules: 'qtcharts qtmultimedia qtpositioning qtserialport qtwebsockets qtwebchannel qtspatialaudio qtshadertools'
           cache: true
       - name: Build tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y ninja-build libgl-dev libegl-dev libxkbcommon-dev
+          # Xvfb, Mesa's llvmpipe and lavapipe: the graphics tests render on OpenGL and Vulkan
+          sudo apt-get install -y ninja-build libgl-dev libegl-dev libxkbcommon-dev xvfb mesa-vulkan-drivers libvulkan-dev vulkan-validationlayers
       - run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DQTC_SANITIZE=${{ matrix.sanitize }}
       - run: cmake --build build
       - run: ctest --test-dir build -LE slow --output-on-failure

@@ -1011,7 +1011,7 @@ static void test_qml(void) {
     qtc_obj comp = qtc_new(S("QQmlComponent"));
     CHECK(comp != 0);
     qtc_arg_bytes(S("import QtQml\nQtObject { property int x: 5; property string name: \"qml\"; signal ping(string s, int n);"
-                    " function add(a, b) { return a + b } }"));
+                    " function add(a, b) { return a + b } function w(r) { return r.width } }"));
     qtc_arg_val(qtc_val_str(S("file:///inline.qml")));
     CHECK_EQ(qtc_call(comp, S("setData")), QTC_OK);
     CHECK_EQ(qtc_call(comp, S("create()")), QTC_OK);
@@ -1031,6 +1031,18 @@ static void test_qml(void) {
     qtc_arg_int(40);
     CHECK_EQ(qtc_call(o, S("add")), QTC_OK);
     CHECK_EQ(qtc_ret_int(), 42);
+    /* a value stored outside its variant (QRectF is 32 bytes) reaches an untyped QML parameter
+       as itself (1.0.0 passed the address of the value, read as a variant: a crash) */
+    qtc_arg_double(1);
+    qtc_arg_double(2);
+    qtc_arg_double(30);
+    qtc_arg_double(40);
+    qtc_val rect = qtc_val_new(S("QRectF"));
+    CHECK(rect != 0);
+    qtc_arg_val(rect);
+    CHECK_EQ(qtc_call(o, S("w")), QTC_OK);
+    CHECK(qtc_ret_double() == 30.0);
+    qtc_val_free(rect);
     uint64_t c = qtc_connect(o, S("ping"), 40, 0);
     CHECK(c != 0);
     qtc_arg_str(S("hello"));

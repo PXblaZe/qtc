@@ -19,6 +19,42 @@ if(TARGET qtc_test)
   target_link_libraries(test_core PRIVATE qtc qtc_test Threads::Threads m)
   qtc_add_test(core $<TARGET_FILE:test_core>)
 
+  add_executable(test_concurrent test_concurrent.c)
+  target_link_libraries(test_concurrent PRIVATE qtc Threads::Threads)
+  qtc_add_test(concurrent $<TARGET_FILE:test_concurrent>)
+
+  add_executable(test_override test_override.c)
+  target_link_libraries(test_override PRIVATE qtc qtc_test Threads::Threads)
+  set_target_properties(test_override PROPERTIES ENABLE_EXPORTS ON)   # qtc_set_override_handler_symbol
+  qtc_add_test(override $<TARGET_FILE:test_override>)
+
+  # graphics: the Null backend here; OpenGL and Vulkan too where a display (or Xvfb) and drivers are
+  add_executable(test_rhi test_rhi.c)
+  target_link_libraries(test_rhi PRIVATE qtc)
+  qtc_add_test(rhi $<TARGET_FILE:test_rhi>)
+  find_program(QTC_XVFB_RUN xvfb-run)
+  if(QTC_XVFB_RUN)
+    add_test(NAME rhi_xcb COMMAND ${QTC_XVFB_RUN} -a -s "-screen 0 1024x768x24" $<TARGET_FILE:test_rhi>
+             WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    set(_qtc_xcb_env ${QTC_TEST_ENV})
+    list(REMOVE_ITEM _qtc_xcb_env "QT_QPA_PLATFORM=offscreen")
+    list(APPEND _qtc_xcb_env "QT_QPA_PLATFORM=xcb")
+    set_tests_properties(rhi_xcb PROPERTIES ENVIRONMENT "${_qtc_xcb_env}" TIMEOUT 1800)
+  endif()
+
+  add_executable(fuzz_rhi fuzz_rhi.c)
+  target_link_libraries(fuzz_rhi PRIVATE qtc)
+  qtc_add_test(fuzz_rhi $<TARGET_FILE:fuzz_rhi> 1 20000)
+  if(QTC_XVFB_RUN)
+    add_test(NAME fuzz_rhi_xcb COMMAND ${QTC_XVFB_RUN} -a -s "-screen 0 1024x768x24" $<TARGET_FILE:fuzz_rhi> 2 20000
+             WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    set_tests_properties(fuzz_rhi_xcb PROPERTIES ENVIRONMENT "${_qtc_xcb_env}" TIMEOUT 1800)
+  endif()
+
+  add_executable(test_class test_class.c)
+  target_link_libraries(test_class PRIVATE qtc Threads::Threads)
+  qtc_add_test(class $<TARGET_FILE:test_class>)
+
   add_executable(test_app test_app.c)
   target_link_libraries(test_app PRIVATE qtc qtc_test m)
   qtc_add_test(app $<TARGET_FILE:test_app>)

@@ -16,7 +16,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtQml/qjsengine.h>)
-template <class S> static int t10460(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10618(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -28,7 +28,7 @@ template <class S> static int t10460(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10461(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10619(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -52,7 +52,7 @@ template <class S> static int t10461(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10462(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10620(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -67,7 +67,7 @@ template <class S> static int t10462(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10463(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10621(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QJSValue> p1;
@@ -83,7 +83,7 @@ template <class S> static int t10463(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10464(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10622(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -95,7 +95,7 @@ template <class S> static int t10464(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10465(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10623(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -109,7 +109,7 @@ template <class S> static int t10465(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10466(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10624(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<unsigned int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -126,7 +126,7 @@ template <class S> static int t10466(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10467(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10625(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -140,18 +140,18 @@ template <class S> static int t10467(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10468(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10626(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QJSValue::ErrorType> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 276);
+    QTC_CVE(0, p0, 286);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0) { qtc::cve(aa[0], p0, 0, 276); qtc::rt(*rr, s->newErrorObject(p0.get())); }) { qtc::rt(*r, s->newErrorObject(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0) { qtc::cve(aa[0], p0, 0, 286); qtc::rt(*rr, s->newErrorObject(p0.get())); }) { qtc::rt(*r, s->newErrorObject(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 276); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->newErrorObject(p0.get(), p1.get())); }) { qtc::rt(*r, s->newErrorObject(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 286); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->newErrorObject(p0.get(), p1.get())); }) { qtc::rt(*r, s->newErrorObject(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -159,7 +159,7 @@ template <class S> static int t10468(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10469(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10627(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -171,22 +171,22 @@ template <class S> static int t10469(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10470(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10628(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QJSEngine::ObjectOwnership> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 273);
+    QTC_CVE(1, p1, 283);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0, qtc::H<QJSEngine::ObjectOwnership> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 273); S::setObjectOwnership(p0.get(), p1.get()); }) { S::setObjectOwnership(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0, qtc::H<QJSEngine::ObjectOwnership> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 283); S::setObjectOwnership(p0.get(), p1.get()); }) { S::setObjectOwnership(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10471(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10629(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -199,18 +199,18 @@ template <class S> static int t10471(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10472(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10630(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QJSEngine::Extension>> p0;
     qtc::H<QJSValue> p1;
-    QTC_CVF(0, p0, 272);
+    QTC_CVF(0, p0, 282);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QJSEngine::Extension>> &p0) { qtc::cvf(aa[0], p0, 0, 272); s->installExtensions(p0.get()); }) { s->installExtensions(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QJSEngine::Extension>> &p0) { qtc::cvf(aa[0], p0, 0, 282); s->installExtensions(p0.get()); }) { s->installExtensions(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QJSEngine::Extension>> &p0, qtc::H<QJSValue> &p1) { qtc::cvf(aa[0], p0, 0, 272); qtc::cv(aa[1], p1, 1); s->installExtensions(p0.get(), p1.get()); }) { s->installExtensions(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QJSEngine::Extension>> &p0, qtc::H<QJSValue> &p1) { qtc::cvf(aa[0], p0, 0, 282); qtc::cv(aa[1], p1, 1); s->installExtensions(p0.get(), p1.get()); }) { s->installExtensions(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -218,7 +218,7 @@ template <class S> static int t10472(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10473(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10631(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -232,7 +232,7 @@ template <class S> static int t10473(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10474(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10632(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -244,7 +244,7 @@ template <class S> static int t10474(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10475(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10633(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -258,18 +258,18 @@ template <class S> static int t10475(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10476(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10634(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QJSValue::ErrorType> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 276);
+    QTC_CVE(0, p0, 286);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0) { qtc::cve(aa[0], p0, 0, 276); s->throwError(p0.get()); }) { s->throwError(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0) { qtc::cve(aa[0], p0, 0, 286); s->throwError(p0.get()); }) { s->throwError(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 276); qtc::cv(aa[1], p1, 1); s->throwError(p0.get(), p1.get()); }) { s->throwError(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 286); qtc::cv(aa[1], p1, 1); s->throwError(p0.get(), p1.get()); }) { s->throwError(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -277,7 +277,7 @@ template <class S> static int t10476(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10477(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10635(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QJSValue> p0;
     QTC_CV(0, p0);
@@ -291,7 +291,7 @@ template <class S> static int t10477(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10478(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10636(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -303,7 +303,7 @@ template <class S> static int t10478(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10479(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10637(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -315,7 +315,7 @@ template <class S> static int t10479(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10480(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10638(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -327,7 +327,7 @@ template <class S> static int t10480(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10481(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10639(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -341,7 +341,7 @@ template <class S> static int t10481(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10482(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10640(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -353,7 +353,7 @@ template <class S> static int t10482(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10483(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10641(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -364,7 +364,7 @@ template <class S> static int t10483(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10484(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10642(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -379,7 +379,7 @@ template <class S> static int t10484(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtQml/qjslist.h>)
-template <class S> static int t10485(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -391,7 +391,7 @@ template <class S> static int t10485(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10486(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10644(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -405,7 +405,7 @@ template <class S> static int t10486(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtQml/qjslist.h>)
-template <class S> static int t10487(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10645(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -420,7 +420,7 @@ template <class S> static int t10487(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && __has_include(<QtQml/qjslist.h>)
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t10488(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10646(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<long long> p0;
     qtc::H<long long> p1;
@@ -443,7 +443,7 @@ template <class S> static int t10488(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #endif
 #if __has_include(<QtQml/qjsnumbercoercion.h>)
-template <class S> static int t10489(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10647(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -457,7 +457,7 @@ template <class S> static int t10489(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t10490(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10648(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -472,7 +472,7 @@ template <class S> static int t10490(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t10491(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10649(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -487,7 +487,7 @@ template <class S> static int t10491(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t10492(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<unsigned long long> p0;
     QTC_CV(0, p0);
@@ -501,7 +501,7 @@ template <class S> static int t10492(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10493(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -514,7 +514,7 @@ template <class S> static int t10493(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10494(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -530,7 +530,7 @@ template <class S> static int t10494(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t10495(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -546,7 +546,7 @@ template <class S> static int t10495(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #endif
 #if __has_include(<QtQml/qjsvalue.h>)
-template <class S> static int t10496(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -558,7 +558,7 @@ template <class S> static int t10496(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10497(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -570,7 +570,7 @@ template <class S> static int t10497(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10498(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -582,7 +582,7 @@ template <class S> static int t10498(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10499(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -594,7 +594,7 @@ template <class S> static int t10499(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10500(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -606,7 +606,7 @@ template <class S> static int t10500(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10501(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -618,7 +618,7 @@ template <class S> static int t10501(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10502(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -630,7 +630,7 @@ template <class S> static int t10502(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10503(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -642,7 +642,7 @@ template <class S> static int t10503(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10504(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -654,7 +654,7 @@ template <class S> static int t10504(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10505(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -666,7 +666,7 @@ template <class S> static int t10505(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10506(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -678,7 +678,7 @@ template <class S> static int t10506(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10507(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -690,7 +690,7 @@ template <class S> static int t10507(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10508(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -702,7 +702,7 @@ template <class S> static int t10508(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10509(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -714,7 +714,7 @@ template <class S> static int t10509(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10510(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -726,7 +726,7 @@ template <class S> static int t10510(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10511(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -738,7 +738,7 @@ template <class S> static int t10511(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10512(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -750,7 +750,7 @@ template <class S> static int t10512(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10513(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -762,7 +762,7 @@ template <class S> static int t10513(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10514(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -774,7 +774,7 @@ template <class S> static int t10514(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10515(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -786,13 +786,13 @@ template <class S> static int t10515(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10516(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QJSValue::ObjectConversionBehavior> p0;
-    QTC_CVE(0, p0, 277);
+    QTC_CVE(0, p0, 287);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ObjectConversionBehavior> &p0) { qtc::cve(aa[0], p0, 0, 277); qtc::rt(*rr, s->toVariant(p0.get())); }) { qtc::rt(*r, s->toVariant(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::ObjectConversionBehavior> &p0) { qtc::cve(aa[0], p0, 0, 287); qtc::rt(*rr, s->toVariant(p0.get())); }) { qtc::rt(*r, s->toVariant(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -800,7 +800,7 @@ template <class S> static int t10516(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10517(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -812,7 +812,7 @@ template <class S> static int t10517(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10518(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -824,7 +824,7 @@ template <class S> static int t10518(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10519(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -836,7 +836,7 @@ template <class S> static int t10519(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10520(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QJSValue> p0;
     QTC_CV(0, p0);
@@ -850,7 +850,7 @@ template <class S> static int t10520(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10521(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QJSValue> p0;
     QTC_CV(0, p0);
@@ -864,7 +864,7 @@ template <class S> static int t10521(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10522(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -876,7 +876,7 @@ template <class S> static int t10522(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10523(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QJSValue> p0;
     QTC_CV(0, p0);
@@ -890,7 +890,7 @@ template <class S> static int t10523(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10524(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -904,7 +904,7 @@ template <class S> static int t10524(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10525(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QJSValue> p1;
@@ -920,7 +920,7 @@ template <class S> static int t10525(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10526(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -934,7 +934,7 @@ template <class S> static int t10526(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10527(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -948,7 +948,7 @@ template <class S> static int t10527(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10528(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -962,7 +962,7 @@ template <class S> static int t10528(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10529(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     qtc::H<QJSValue> p1;
@@ -978,7 +978,7 @@ template <class S> static int t10529(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10530(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -992,7 +992,7 @@ template <class S> static int t10530(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10531(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1004,7 +1004,7 @@ template <class S> static int t10531(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10532(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QJSValue>> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1021,7 +1021,7 @@ template <class S> static int t10532(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10533(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QJSValue> p0;
     qtc::H<QList<QJSValue>> p1;
@@ -1040,7 +1040,7 @@ template <class S> static int t10533(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10534(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QJSValue>> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1057,7 +1057,7 @@ template <class S> static int t10534(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10535(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1069,23 +1069,23 @@ template <class S> static int t10535(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10536(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QJSValue::SpecialValue> p0;
-    if (n > 0) QTC_CVE(0, p0, 278);
+    if (n > 0) QTC_CVE(0, p0, 288);
     switch (n) {
         case 0:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::SpecialValue> &p0) { qtc::cve(aa[0], p0, 0, 278); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJSValue::SpecialValue> &p0) { qtc::cve(aa[0], p0, 0, 288); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10537(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1098,7 +1098,7 @@ template <class S> static int t10537(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10538(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1111,7 +1111,7 @@ template <class S> static int t10538(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10539(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -1124,7 +1124,7 @@ template <class S> static int t10539(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10540(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -1137,7 +1137,7 @@ template <class S> static int t10540(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10541(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1150,7 +1150,7 @@ template <class S> static int t10541(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10542(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QLatin1String> p0;
     QTC_CV(0, p0);
@@ -1163,7 +1163,7 @@ template <class S> static int t10542(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10543(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const char *> p0;
     QTC_CV(0, p0);
@@ -1178,7 +1178,7 @@ template <class S> static int t10543(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlapplicationengine.h>)
-template <class S> static int t10544(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1190,7 +1190,7 @@ template <class S> static int t10544(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10545(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -1204,7 +1204,7 @@ template <class S> static int t10545(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10546(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1219,7 +1219,7 @@ template <class S> static int t10546(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10547(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
@@ -1236,7 +1236,7 @@ template <class S> static int t10547(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10548(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QMap<QString, QVariant>> p0;
     QTC_CV(0, p0);
@@ -1250,7 +1250,7 @@ template <class S> static int t10548(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10549(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QString>> p0;
     QTC_CV(0, p0);
@@ -1264,7 +1264,7 @@ template <class S> static int t10549(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10550(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QByteArray> p0;
     qtc::H<QUrl> p1;
@@ -1283,7 +1283,7 @@ template <class S> static int t10550(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10551(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     qtc::H<QUrl> p1;
@@ -1299,7 +1299,7 @@ template <class S> static int t10551(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10552(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -1313,7 +1313,7 @@ template <class S> static int t10552(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10553(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10711(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1329,7 +1329,7 @@ template <class S> static int t10553(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10554(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QUrl> p0;
     qtc::H<QObject *> p1;
@@ -1348,7 +1348,7 @@ template <class S> static int t10554(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10555(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
@@ -1369,7 +1369,7 @@ template <class S> static int t10555(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10556(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -1389,7 +1389,7 @@ template <class S> static int t10556(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlcomponent.h>)
-template <class S> static int t10557(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1401,7 +1401,7 @@ template <class S> static int t10557(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10558(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1413,7 +1413,7 @@ template <class S> static int t10558(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10559(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1425,7 +1425,7 @@ template <class S> static int t10559(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10560(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1437,7 +1437,7 @@ template <class S> static int t10560(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10561(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1449,7 +1449,7 @@ template <class S> static int t10561(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10562(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(QT_VERSION >= QT_VERSION_CHECK(6, 12, 0) || s->status() == QQmlComponent::Ready)) return qtc::pre_fail(QTC_ERR_STATE, "QQmlComponent::isBound(): the component is not ready (this Qt version crashes on it)");
     switch (n) {
@@ -1462,7 +1462,7 @@ template <class S> static int t10562(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10563(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1474,7 +1474,7 @@ template <class S> static int t10563(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10564(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1486,7 +1486,7 @@ template <class S> static int t10564(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10565(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1498,7 +1498,7 @@ template <class S> static int t10565(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10566(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1510,7 +1510,7 @@ template <class S> static int t10566(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10567(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQmlContext *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1528,7 +1528,7 @@ template <class S> static int t10567(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10568(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QMap<QString, QVariant>> p0;
     qtc::H<QQmlContext *> p1;
@@ -1549,7 +1549,7 @@ template <class S> static int t10568(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10569(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     qtc::H<QMap<QString, QVariant>> p1;
@@ -1567,7 +1567,7 @@ template <class S> static int t10569(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10570(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQmlContext *> p0;
     QTC_CV(0, p0);
@@ -1583,7 +1583,7 @@ template <class S> static int t10570(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10571(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(QT_VERSION >= QT_VERSION_CHECK(6, 12, 0) || s->status() == QQmlComponent::Ready)) return qtc::pre_fail(QTC_ERR_STATE, "QQmlComponent::completeCreate(): the component is not ready (this Qt version crashes on it)");
     switch (n) {
@@ -1596,7 +1596,7 @@ template <class S> static int t10571(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10572(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1608,7 +1608,7 @@ template <class S> static int t10572(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10573(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1620,7 +1620,7 @@ template <class S> static int t10573(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10574(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -1635,16 +1635,16 @@ template <class S> static int t10574(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10575(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     qtc::H<QQmlComponent::CompilationMode> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 476);
+    QTC_CVE(1, p1, 500);
     if (!(qtc::qml_has_engine(s))) return qtc::pre_fail(QTC_ERR_STATE, "QQmlComponent::loadUrl(QUrl,QQmlComponent::CompilationMode): the component has no engine");
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0, qtc::H<QQmlComponent::CompilationMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 476); s->loadUrl(p0.get(), p1.get()); }) { s->loadUrl(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0, qtc::H<QQmlComponent::CompilationMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 500); s->loadUrl(p0.get(), p1.get()); }) { s->loadUrl(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1653,21 +1653,21 @@ template <class S> static int t10575(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10576(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
     qtc::H<QQmlComponent::CompilationMode> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 476);
+    if (n > 2) QTC_CVE(2, p2, 500);
     if (!(qtc::qml_has_engine(s))) return qtc::pre_fail(QTC_ERR_STATE, "QQmlComponent::loadFromModule(QAnyStringView,QAnyStringView,QQmlComponent::CompilationMode): the component has no engine");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAnyStringView> &p0, qtc::H<QAnyStringView> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->loadFromModule(p0.get(), p1.get()); }) { s->loadFromModule(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAnyStringView> &p0, qtc::H<QAnyStringView> &p1, qtc::H<QQmlComponent::CompilationMode> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 476); s->loadFromModule(p0.get(), p1.get(), p2.get()); }) { s->loadFromModule(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAnyStringView> &p0, qtc::H<QAnyStringView> &p1, qtc::H<QQmlComponent::CompilationMode> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 500); s->loadFromModule(p0.get(), p1.get(), p2.get()); }) { s->loadFromModule(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1676,7 +1676,7 @@ template <class S> static int t10576(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10577(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QByteArray> p0;
     qtc::H<QUrl> p1;
@@ -1693,13 +1693,13 @@ template <class S> static int t10577(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10578(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQmlComponent::Status> p0;
-    QTC_CVE(0, p0, 477);
+    QTC_CVE(0, p0, 501);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlComponent::Status> &p0) { qtc::cve(aa[0], p0, 0, 477); s->statusChanged(p0.get()); }) { s->statusChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlComponent::Status> &p0) { qtc::cve(aa[0], p0, 0, 501); s->statusChanged(p0.get()); }) { s->statusChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1707,7 +1707,7 @@ template <class S> static int t10578(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10579(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -1721,7 +1721,7 @@ template <class S> static int t10579(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10580(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QObject *> p1;
@@ -1740,7 +1740,7 @@ template <class S> static int t10580(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10581(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QString> p1;
@@ -1761,7 +1761,7 @@ template <class S> static int t10581(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10582(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QString> p1;
@@ -1769,22 +1769,22 @@ template <class S> static int t10582(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QObject *> p3;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    QTC_CVE(2, p2, 476);
+    QTC_CVE(2, p2, 500);
     if (n > 3) QTC_CV(3, p3);
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QQmlComponent::QQmlComponent(QQmlEngine*,QString,QQmlComponent::CompilationMode,QObject*): argument 1 must not be null");
     switch (n) {
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QString> &p1, qtc::H<QQmlComponent::CompilationMode> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 476); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QString> &p1, qtc::H<QQmlComponent::CompilationMode> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 500); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QString> &p1, qtc::H<QQmlComponent::CompilationMode> &p2, qtc::H<QObject *> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 476); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QString> &p1, qtc::H<QQmlComponent::CompilationMode> &p2, qtc::H<QObject *> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 500); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10583(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QUrl> p1;
@@ -1805,7 +1805,7 @@ template <class S> static int t10583(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10584(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QUrl> p1;
@@ -1813,15 +1813,15 @@ template <class S> static int t10584(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QObject *> p3;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    QTC_CVE(2, p2, 476);
+    QTC_CVE(2, p2, 500);
     if (n > 3) QTC_CV(3, p3);
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QQmlComponent::QQmlComponent(QQmlEngine*,QUrl,QQmlComponent::CompilationMode,QObject*): argument 1 must not be null");
     switch (n) {
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QUrl> &p1, qtc::H<QQmlComponent::CompilationMode> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 476); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QUrl> &p1, qtc::H<QQmlComponent::CompilationMode> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 500); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QUrl> &p1, qtc::H<QQmlComponent::CompilationMode> &p2, qtc::H<QObject *> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 476); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QUrl> &p1, qtc::H<QQmlComponent::CompilationMode> &p2, qtc::H<QObject *> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 500); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1829,7 +1829,7 @@ template <class S> static int t10584(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10585(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QAnyStringView> p1;
@@ -1854,7 +1854,7 @@ template <class S> static int t10585(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10586(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QAnyStringView> p1;
@@ -1864,15 +1864,15 @@ template <class S> static int t10586(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     QTC_CV(1, p1);
     QTC_CV(2, p2);
-    QTC_CVE(3, p3, 476);
+    QTC_CVE(3, p3, 500);
     if (n > 4) QTC_CV(4, p4);
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QQmlComponent::QQmlComponent(QQmlEngine*,QAnyStringView,QAnyStringView,QQmlComponent::CompilationMode,QObject*): argument 1 must not be null");
     switch (n) {
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QAnyStringView> &p1, qtc::H<QAnyStringView> &p2, qtc::H<QQmlComponent::CompilationMode> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 476); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QAnyStringView> &p1, qtc::H<QAnyStringView> &p2, qtc::H<QQmlComponent::CompilationMode> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 500); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 5:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QAnyStringView> &p1, qtc::H<QAnyStringView> &p2, qtc::H<QQmlComponent::CompilationMode> &p3, qtc::H<QObject *> &p4) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 476); qtc::cv(aa[4], p4, 4); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QQmlEngine *> &p0, qtc::H<QAnyStringView> &p1, qtc::H<QAnyStringView> &p2, qtc::H<QQmlComponent::CompilationMode> &p3, qtc::H<QObject *> &p4) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 500); qtc::cv(aa[4], p4, 4); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1882,7 +1882,7 @@ template <class S> static int t10586(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #endif
 #if __has_include(<QtQml/qqmlcontext.h>)
-template <class S> static int t10587(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1894,7 +1894,7 @@ template <class S> static int t10587(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10588(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1906,7 +1906,7 @@ template <class S> static int t10588(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10589(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1919,7 +1919,7 @@ template <class S> static int t10589(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-template <class S> static int t10590(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1932,7 +1932,7 @@ template <class S> static int t10590(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10591(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1944,7 +1944,7 @@ template <class S> static int t10591(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10592(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -1959,7 +1959,7 @@ template <class S> static int t10592(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10593(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1973,7 +1973,7 @@ template <class S> static int t10593(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10594(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -1991,7 +1991,7 @@ template <class S> static int t10594(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10595(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -2008,7 +2008,7 @@ template <class S> static int t10595(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10596(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QQmlContext::PropertyPair>> p0;
     QTC_CV(0, p0);
@@ -2022,7 +2022,7 @@ template <class S> static int t10596(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10597(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<const QObject *> p0;
     QTC_CV(0, p0);
@@ -2036,7 +2036,7 @@ template <class S> static int t10597(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10598(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2051,7 +2051,7 @@ template <class S> static int t10598(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-template <class S> static int t10599(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2067,7 +2067,7 @@ template <class S> static int t10599(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-template <class S> static int t10600(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2082,7 +2082,7 @@ template <class S> static int t10600(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10601(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -2096,7 +2096,7 @@ template <class S> static int t10601(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10602(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -2110,7 +2110,7 @@ template <class S> static int t10602(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10603(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2122,7 +2122,7 @@ template <class S> static int t10603(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10604(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QObject *> p1;
@@ -2140,7 +2140,7 @@ template <class S> static int t10604(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10605(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlContext *> p0;
     qtc::H<QObject *> p1;
@@ -2160,7 +2160,7 @@ template <class S> static int t10605(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlengine.h>)
-template <class S> static int t10606(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2172,7 +2172,7 @@ template <class S> static int t10606(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10607(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2184,7 +2184,7 @@ template <class S> static int t10607(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10608(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2196,7 +2196,7 @@ template <class S> static int t10608(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10609(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2208,7 +2208,7 @@ template <class S> static int t10609(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10610(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2220,7 +2220,7 @@ template <class S> static int t10610(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10611(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QString>> p0;
     QTC_CV(0, p0);
@@ -2234,7 +2234,7 @@ template <class S> static int t10611(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10612(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2248,7 +2248,7 @@ template <class S> static int t10612(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10613(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2260,7 +2260,7 @@ template <class S> static int t10613(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10614(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QString>> p0;
     QTC_CV(0, p0);
@@ -2274,7 +2274,7 @@ template <class S> static int t10614(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10615(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2288,7 +2288,7 @@ template <class S> static int t10615(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10616(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -2304,7 +2304,7 @@ template <class S> static int t10616(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10617(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2316,15 +2316,15 @@ template <class S> static int t10617(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10618(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     qtc::H<QQmlAbstractUrlInterceptor::DataType> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 475);
+    QTC_CVE(1, p1, 499);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0, qtc::H<QQmlAbstractUrlInterceptor::DataType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 475); qtc::rt(*rr, s->interceptUrl(p0.get(), p1.get())); }) { qtc::rt(*r, s->interceptUrl(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0, qtc::H<QQmlAbstractUrlInterceptor::DataType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 499); qtc::rt(*rr, s->interceptUrl(p0.get(), p1.get())); }) { qtc::rt(*r, s->interceptUrl(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2332,7 +2332,7 @@ template <class S> static int t10618(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10619(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QQmlImageProviderBase *> p1;
@@ -2349,7 +2349,7 @@ template <class S> static int t10619(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10620(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2363,7 +2363,7 @@ template <class S> static int t10620(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10621(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2377,7 +2377,7 @@ template <class S> static int t10621(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10622(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2391,7 +2391,7 @@ template <class S> static int t10622(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10623(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2403,7 +2403,7 @@ template <class S> static int t10623(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10624(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2417,7 +2417,7 @@ template <class S> static int t10624(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10625(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2429,7 +2429,7 @@ template <class S> static int t10625(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10626(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -2443,7 +2443,7 @@ template <class S> static int t10626(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10627(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2455,7 +2455,7 @@ template <class S> static int t10627(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10628(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -2470,7 +2470,7 @@ template <class S> static int t10628(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t10629(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2484,7 +2484,7 @@ template <class S> static int t10629(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t10630(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
@@ -2504,7 +2504,7 @@ template <class S> static int t10630(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10631(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2517,7 +2517,7 @@ template <class S> static int t10631(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10632(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2530,7 +2530,7 @@ template <class S> static int t10632(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10633(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const QObject *> p0;
     QTC_CV(0, p0);
@@ -2543,7 +2543,7 @@ template <class S> static int t10633(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10634(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QQmlContext *> p1;
@@ -2558,7 +2558,7 @@ template <class S> static int t10634(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10635(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2570,7 +2570,7 @@ template <class S> static int t10635(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10636(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2584,7 +2584,7 @@ template <class S> static int t10636(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10637(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QQmlError>> p0;
     QTC_CV(0, p0);
@@ -2598,7 +2598,7 @@ template <class S> static int t10637(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10638(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2616,7 +2616,7 @@ template <class S> static int t10638(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlerror.h>)
-template <class S> static int t10639(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2628,7 +2628,7 @@ template <class S> static int t10639(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10640(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2640,7 +2640,7 @@ template <class S> static int t10640(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10641(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -2654,7 +2654,7 @@ template <class S> static int t10641(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10642(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2666,7 +2666,7 @@ template <class S> static int t10642(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2680,7 +2680,7 @@ template <class S> static int t10643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10644(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2692,7 +2692,7 @@ template <class S> static int t10644(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10645(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2706,7 +2706,7 @@ template <class S> static int t10645(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10646(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2718,7 +2718,7 @@ template <class S> static int t10646(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10647(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2732,7 +2732,7 @@ template <class S> static int t10647(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10648(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2744,7 +2744,7 @@ template <class S> static int t10648(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10649(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -2758,7 +2758,7 @@ template <class S> static int t10649(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2770,7 +2770,7 @@ template <class S> static int t10650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2782,7 +2782,7 @@ template <class S> static int t10651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2795,7 +2795,7 @@ template <class S> static int t10652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlexpression.h>)
-template <class S> static int t10653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2807,7 +2807,7 @@ template <class S> static int t10653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2819,7 +2819,7 @@ template <class S> static int t10654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2831,7 +2831,7 @@ template <class S> static int t10655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2845,7 +2845,7 @@ template <class S> static int t10656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2857,7 +2857,7 @@ template <class S> static int t10657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -2871,7 +2871,7 @@ template <class S> static int t10658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2883,7 +2883,7 @@ template <class S> static int t10659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2895,7 +2895,7 @@ template <class S> static int t10660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2907,7 +2907,7 @@ template <class S> static int t10661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<int> p1;
@@ -2928,7 +2928,7 @@ template <class S> static int t10662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2940,7 +2940,7 @@ template <class S> static int t10663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2952,7 +2952,7 @@ template <class S> static int t10664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2964,7 +2964,7 @@ template <class S> static int t10665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2976,7 +2976,7 @@ template <class S> static int t10666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<qtc::Out<bool>> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2993,7 +2993,7 @@ template <class S> static int t10667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3005,7 +3005,7 @@ template <class S> static int t10668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3016,7 +3016,7 @@ template <class S> static int t10669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlContext *> p0;
     qtc::H<QObject *> p1;
@@ -3039,7 +3039,7 @@ template <class S> static int t10670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlScriptString> p0;
     qtc::H<QQmlContext *> p1;
@@ -3069,7 +3069,7 @@ template <class S> static int t10671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlfile.h>)
-template <class S> static int t10672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3082,7 +3082,7 @@ template <class S> static int t10672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -3095,7 +3095,7 @@ template <class S> static int t10673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3108,7 +3108,7 @@ template <class S> static int t10674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -3121,7 +3121,7 @@ template <class S> static int t10675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3134,7 +3134,7 @@ template <class S> static int t10676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -3149,7 +3149,7 @@ template <class S> static int t10677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlfileselector.h>)
-template <class S> static int t10678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3161,7 +3161,7 @@ template <class S> static int t10678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFileSelector *> p0;
     QTC_CV(0, p0);
@@ -3176,7 +3176,7 @@ template <class S> static int t10679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QString>> p0;
     QTC_CV(0, p0);
@@ -3190,7 +3190,7 @@ template <class S> static int t10680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     QTC_CV(0, p0);
@@ -3204,7 +3204,7 @@ template <class S> static int t10681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QQmlEngine *> p0;
     qtc::H<QObject *> p1;
@@ -3225,7 +3225,7 @@ template <class S> static int t10682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlproperty.h>)
-template <class S> static int t10683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3237,7 +3237,7 @@ template <class S> static int t10683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3249,7 +3249,7 @@ template <class S> static int t10684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3261,7 +3261,7 @@ template <class S> static int t10685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3273,7 +3273,7 @@ template <class S> static int t10686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3285,7 +3285,7 @@ template <class S> static int t10687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3297,7 +3297,7 @@ template <class S> static int t10688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3309,7 +3309,7 @@ template <class S> static int t10689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3321,7 +3321,7 @@ template <class S> static int t10690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3333,7 +3333,7 @@ template <class S> static int t10691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3345,7 +3345,7 @@ template <class S> static int t10692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const QObject *> p0;
     qtc::H<QString> p1;
@@ -3360,7 +3360,7 @@ template <class S> static int t10693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const QObject *> p0;
     qtc::H<QString> p1;
@@ -3377,7 +3377,7 @@ template <class S> static int t10694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const QObject *> p0;
     qtc::H<QString> p1;
@@ -3394,7 +3394,7 @@ template <class S> static int t10695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -3408,7 +3408,7 @@ template <class S> static int t10696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -3425,7 +3425,7 @@ template <class S> static int t10697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -3444,7 +3444,7 @@ template <class S> static int t10698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -3463,7 +3463,7 @@ template <class S> static int t10699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3475,7 +3475,7 @@ template <class S> static int t10700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3487,7 +3487,7 @@ template <class S> static int t10701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3499,7 +3499,7 @@ template <class S> static int t10702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QObject *> p0;
     qtc::H<int> p1;
@@ -3515,7 +3515,7 @@ template <class S> static int t10703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3527,7 +3527,7 @@ template <class S> static int t10704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3539,7 +3539,7 @@ template <class S> static int t10705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3551,7 +3551,7 @@ template <class S> static int t10706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3563,7 +3563,7 @@ template <class S> static int t10707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3575,7 +3575,7 @@ template <class S> static int t10708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3587,7 +3587,7 @@ template <class S> static int t10709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3598,7 +3598,7 @@ template <class S> static int t10710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10711(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -3611,7 +3611,7 @@ template <class S> static int t10711(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QQmlContext *> p1;
@@ -3626,7 +3626,7 @@ template <class S> static int t10712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QQmlEngine *> p1;
@@ -3641,7 +3641,7 @@ template <class S> static int t10713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -3656,7 +3656,7 @@ template <class S> static int t10714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -3673,7 +3673,7 @@ template <class S> static int t10715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     qtc::H<QString> p1;
@@ -3693,7 +3693,7 @@ template <class S> static int t10716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #if __has_include(<QtQml/qqmlpropertymap.h>)
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-template <class S> static int t10717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3710,7 +3710,7 @@ template <class S> static int t10717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3724,7 +3724,7 @@ template <class S> static int t10718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -3740,7 +3740,7 @@ template <class S> static int t10719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHash<QString, QVariant>> p0;
     QTC_CV(0, p0);
@@ -3754,7 +3754,7 @@ template <class S> static int t10720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3768,7 +3768,7 @@ template <class S> static int t10721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3780,7 +3780,7 @@ template <class S> static int t10722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3792,7 +3792,7 @@ template <class S> static int t10723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3804,7 +3804,7 @@ template <class S> static int t10724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3816,7 +3816,7 @@ template <class S> static int t10725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3828,7 +3828,7 @@ template <class S> static int t10726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3842,7 +3842,7 @@ template <class S> static int t10727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10886(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -3858,7 +3858,7 @@ template <class S> static int t10728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10887(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3876,7 +3876,7 @@ template <class S> static int t10729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtQml/qqmlscriptstring.h>)
-template <class S> static int t10730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10888(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3888,7 +3888,7 @@ template <class S> static int t10730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10889(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3900,7 +3900,7 @@ template <class S> static int t10731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10890(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3912,7 +3912,7 @@ template <class S> static int t10732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10891(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3924,7 +3924,7 @@ template <class S> static int t10733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10892(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<qtc::Out<bool>> p0;
     QTC_CV(0, p0);
@@ -3938,7 +3938,7 @@ template <class S> static int t10734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10893(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<qtc::Out<bool>> p0;
     QTC_CV(0, p0);
@@ -3952,7 +3952,7 @@ template <class S> static int t10735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10894(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3964,597 +3964,597 @@ template <class S> static int t10736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P10461[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10462[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10463[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10465[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10466[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P10467[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10468[] = {{qtc::PK_ENUM, 276, "QJSValue::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10470[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_ENUM, 273, "QJSEngine::ObjectOwnership", nullptr}};
-static const qtc::ParamDesc P10471[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10472[] = {{qtc::PK_FLAGS, 272, "QFlags<QJSEngine::Extension>", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10473[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10475[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10476[] = {{qtc::PK_ENUM, 276, "QJSValue::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10477[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10481[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10484[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10619[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10620[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10621[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10623[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10624[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10625[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10626[] = {{qtc::PK_ENUM, 286, "QJSValue::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10628[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_ENUM, 283, "QJSEngine::ObjectOwnership", nullptr}};
+static const qtc::ParamDesc P10629[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10630[] = {{qtc::PK_FLAGS, 282, "QFlags<QJSEngine::Extension>", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10631[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10633[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10634[] = {{qtc::PK_ENUM, 286, "QJSValue::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10635[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10639[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10642[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qjsengine.h>)
 static const qtc::MethodDef M_QJSEngine[] = {
-    {"globalObject", "globalObject()", t10460<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
-    {"evaluate", "evaluate(QString,QString,int)", t10461<QJSEngine>, P10461, 3, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"importModule", "importModule(QString)", t10462<QJSEngine>, P10462, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"registerModule", "registerModule(QString,QJSValue)", t10463<QJSEngine>, P10463, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"newObject", "newObject()", t10464<QJSEngine>, nullptr, 0, 0, 0, QTC_T_VALUE, "QJSValue"},
-    {"newSymbol", "newSymbol(QString)", t10465<QJSEngine>, P10465, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"newArray", "newArray(uint)", t10466<QJSEngine>, P10466, 1, 0, 0, QTC_T_VALUE, "QJSValue"},
-    {"newQObject", "newQObject(QObject*)", t10467<QJSEngine>, P10467, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"newErrorObject", "newErrorObject(QJSValue::ErrorType,QString)", t10468<QJSEngine>, P10468, 2, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"collectGarbage", "collectGarbage()", t10469<QJSEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setObjectOwnership", "setObjectOwnership(QObject*,QJSEngine::ObjectOwnership)", t10470<QJSEngine>, P10470, 2, 2, qtc::MF_STATIC, QTC_T_NONE, "void"},
-    {"objectOwnership", "objectOwnership(QObject*)", t10471<QJSEngine>, P10471, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QJSEngine::ObjectOwnership"},
-    {"installExtensions", "installExtensions(QJSEngine::Extensions,QJSValue)", t10472<QJSEngine>, P10472, 2, 1, 0, QTC_T_NONE, "void"},
-    {"setInterrupted", "setInterrupted(bool)", t10473<QJSEngine>, P10473, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isInterrupted", "isInterrupted()", t10474<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"throwError", "throwError(QString)", t10475<QJSEngine>, P10475, 1, 1, 0, QTC_T_NONE, "void"},
-    {"throwError", "throwError(QJSValue::ErrorType,QString)", t10476<QJSEngine>, P10476, 2, 1, 0, QTC_T_NONE, "void"},
-    {"throwError", "throwError(QJSValue)", t10477<QJSEngine>, P10477, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hasError", "hasError()", t10478<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"catchError", "catchError()", t10479<QJSEngine>, nullptr, 0, 0, 0, QTC_T_VALUE, "QJSValue"},
-    {"uiLanguage", "uiLanguage()", t10480<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setUiLanguage", "setUiLanguage(QString)", t10481<QJSEngine>, P10481, 1, 1, 0, QTC_T_NONE, "void"},
-    {"uiLanguageChanged", "uiLanguageChanged()", t10482<QJSEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"globalObject", "globalObject()", t10618<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
+    {"evaluate", "evaluate(QString,QString,int)", t10619<QJSEngine>, P10619, 3, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"importModule", "importModule(QString)", t10620<QJSEngine>, P10620, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"registerModule", "registerModule(QString,QJSValue)", t10621<QJSEngine>, P10621, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"newObject", "newObject()", t10622<QJSEngine>, nullptr, 0, 0, 0, QTC_T_VALUE, "QJSValue"},
+    {"newSymbol", "newSymbol(QString)", t10623<QJSEngine>, P10623, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"newArray", "newArray(uint)", t10624<QJSEngine>, P10624, 1, 0, 0, QTC_T_VALUE, "QJSValue"},
+    {"newQObject", "newQObject(QObject*)", t10625<QJSEngine>, P10625, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"newErrorObject", "newErrorObject(QJSValue::ErrorType,QString)", t10626<QJSEngine>, P10626, 2, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"collectGarbage", "collectGarbage()", t10627<QJSEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setObjectOwnership", "setObjectOwnership(QObject*,QJSEngine::ObjectOwnership)", t10628<QJSEngine>, P10628, 2, 2, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"objectOwnership", "objectOwnership(QObject*)", t10629<QJSEngine>, P10629, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QJSEngine::ObjectOwnership"},
+    {"installExtensions", "installExtensions(QJSEngine::Extensions,QJSValue)", t10630<QJSEngine>, P10630, 2, 1, 0, QTC_T_NONE, "void"},
+    {"setInterrupted", "setInterrupted(bool)", t10631<QJSEngine>, P10631, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isInterrupted", "isInterrupted()", t10632<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"throwError", "throwError(QString)", t10633<QJSEngine>, P10633, 1, 1, 0, QTC_T_NONE, "void"},
+    {"throwError", "throwError(QJSValue::ErrorType,QString)", t10634<QJSEngine>, P10634, 2, 1, 0, QTC_T_NONE, "void"},
+    {"throwError", "throwError(QJSValue)", t10635<QJSEngine>, P10635, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hasError", "hasError()", t10636<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"catchError", "catchError()", t10637<QJSEngine>, nullptr, 0, 0, 0, QTC_T_VALUE, "QJSValue"},
+    {"uiLanguage", "uiLanguage()", t10638<QJSEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setUiLanguage", "setUiLanguage(QString)", t10639<QJSEngine>, P10639, 1, 1, 0, QTC_T_NONE, "void"},
+    {"uiLanguageChanged", "uiLanguageChanged()", t10640<QJSEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QJSEngine[] = {
-    {"QJSEngine", "QJSEngine()", t10483<QJSEngine>, nullptr, 0, 0, 0, QTC_T_OBJ, "QJSEngine"},
-    {"QJSEngine", "QJSEngine(QObject*)", t10484<QJSEngine>, P10484, 1, 1, 0, QTC_T_OBJ, "QJSEngine"},
+    {"QJSEngine", "QJSEngine()", t10641<QJSEngine>, nullptr, 0, 0, 0, QTC_T_OBJ, "QJSEngine"},
+    {"QJSEngine", "QJSEngine(QObject*)", t10642<QJSEngine>, P10642, 1, 1, 0, QTC_T_OBJ, "QJSEngine"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtQml/qjslist.h>)
 static const qtc::MethodDef M_QJSListForInIterator[] = {
-    {"hasNext", "hasNext()", t10485<QJSListForInIterator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"next", "next()", t10486<QJSListForInIterator>, nullptr, 0, 0, 0, QTC_T_INT, "long long"},
+    {"hasNext", "hasNext()", t10643<QJSListForInIterator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"next", "next()", t10644<QJSListForInIterator>, nullptr, 0, 0, 0, QTC_T_INT, "long long"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QJSListForInIterator[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtQml/qjslist.h>)
 static const qtc::MethodDef M_QJSListForOfIterator[] = {
-    {"init", "init()", t10487<QJSListForOfIterator>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"init", "init()", t10645<QJSListForOfIterator>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QJSListForOfIterator[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P10488[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P10646[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && __has_include(<QtQml/qjslist.h>)
 static const qtc::MethodDef M_QJSListIndexClamp[] = {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"clamp", "clamp(qsizetype,qsizetype,qsizetype)", t10488<QJSListIndexClamp>, P10488, 3, 2, qtc::MF_STATIC, QTC_T_INT, "long long"},
+    {"clamp", "clamp(qsizetype,qsizetype,qsizetype)", t10646<QJSListIndexClamp>, P10646, 3, 2, qtc::MF_STATIC, QTC_T_INT, "long long"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QJSListIndexClamp[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10489[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10647[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P10490[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10648[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P10491[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P10649[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P10492[] = {{qtc::PK_UINT, -1, "unsigned long long", nullptr}};
+static const qtc::ParamDesc P10650[] = {{qtc::PK_UINT, -1, "unsigned long long", nullptr}};
 #endif
-static const qtc::ParamDesc P10493[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P10494[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10651[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10652[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P10495[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10653[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 #endif
 #if __has_include(<QtQml/qjsnumbercoercion.h>)
 static const qtc::MethodDef M_QJSNumberCoercion[] = {
-    {"isInteger", "isInteger(double)", t10489<QJSNumberCoercion>, P10489, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isInteger", "isInteger(double)", t10647<QJSNumberCoercion>, P10647, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"isArrayIndex", "isArrayIndex(double)", t10490<QJSNumberCoercion>, P10490, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isArrayIndex", "isArrayIndex(double)", t10648<QJSNumberCoercion>, P10648, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"isArrayIndex", "isArrayIndex(qint64)", t10491<QJSNumberCoercion>, P10491, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isArrayIndex", "isArrayIndex(qint64)", t10649<QJSNumberCoercion>, P10649, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"isArrayIndex", "isArrayIndex(quint64)", t10492<QJSNumberCoercion>, P10492, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isArrayIndex", "isArrayIndex(quint64)", t10650<QJSNumberCoercion>, P10650, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
 #endif
-    {"toInteger", "toInteger(double)", t10493<QJSNumberCoercion>, P10493, 1, 1, qtc::MF_STATIC, QTC_T_INT, "int"},
-    {"equals", "equals(double,double)", t10494<QJSNumberCoercion>, P10494, 2, 2, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"toInteger", "toInteger(double)", t10651<QJSNumberCoercion>, P10651, 1, 1, qtc::MF_STATIC, QTC_T_INT, "int"},
+    {"equals", "equals(double,double)", t10652<QJSNumberCoercion>, P10652, 2, 2, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"roundTowards0", "roundTowards0(double)", t10495<QJSNumberCoercion>, P10495, 1, 1, qtc::MF_STATIC, QTC_T_DOUBLE, "double"},
+    {"roundTowards0", "roundTowards0(double)", t10653<QJSNumberCoercion>, P10653, 1, 1, qtc::MF_STATIC, QTC_T_DOUBLE, "double"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QJSNumberCoercion[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10516[] = {{qtc::PK_ENUM, 277, "QJSValue::ObjectConversionBehavior", nullptr}};
-static const qtc::ParamDesc P10520[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10521[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10523[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10524[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10525[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10526[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10527[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10528[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P10529[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
-static const qtc::ParamDesc P10530[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10532[] = {{qtc::PK_LIST, -1, "QList<QJSValue>", nullptr}};
-static const qtc::ParamDesc P10533[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}, {qtc::PK_LIST, -1, "QList<QJSValue>", nullptr}};
-static const qtc::ParamDesc P10534[] = {{qtc::PK_LIST, -1, "QList<QJSValue>", nullptr}};
-static const qtc::ParamDesc P10536[] = {{qtc::PK_ENUM, 278, "QJSValue::SpecialValue", nullptr}};
-static const qtc::ParamDesc P10537[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10538[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10539[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P10540[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P10541[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10542[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
-static const qtc::ParamDesc P10543[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
+static const qtc::ParamDesc P10674[] = {{qtc::PK_ENUM, 287, "QJSValue::ObjectConversionBehavior", nullptr}};
+static const qtc::ParamDesc P10678[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10679[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10681[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10682[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10683[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10684[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10685[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10686[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10687[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}, {qtc::PK_VALUE, -1, "QJSValue", nullptr}};
+static const qtc::ParamDesc P10688[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10690[] = {{qtc::PK_LIST, -1, "QList<QJSValue>", nullptr}};
+static const qtc::ParamDesc P10691[] = {{qtc::PK_VALUE, -1, "QJSValue", nullptr}, {qtc::PK_LIST, -1, "QList<QJSValue>", nullptr}};
+static const qtc::ParamDesc P10692[] = {{qtc::PK_LIST, -1, "QList<QJSValue>", nullptr}};
+static const qtc::ParamDesc P10694[] = {{qtc::PK_ENUM, 288, "QJSValue::SpecialValue", nullptr}};
+static const qtc::ParamDesc P10695[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10696[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10697[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10698[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10699[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10700[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
+static const qtc::ParamDesc P10701[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
 #if __has_include(<QtQml/qjsvalue.h>)
 static const qtc::MethodDef M_QJSValue[] = {
-    {"isBool", "isBool()", t10496<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNumber", "isNumber()", t10497<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNull", "isNull()", t10498<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isString", "isString()", t10499<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isUndefined", "isUndefined()", t10500<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isVariant", "isVariant()", t10501<QJSValue>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
-    {"isQObject", "isQObject()", t10502<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isQMetaObject", "isQMetaObject()", t10503<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isObject", "isObject()", t10504<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isDate", "isDate()", t10505<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isRegExp", "isRegExp()", t10506<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isArray", "isArray()", t10507<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isError", "isError()", t10508<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isUrl", "isUrl()", t10509<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"toString", "toString()", t10510<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"toNumber", "toNumber()", t10511<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"toInt", "toInt()", t10512<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"toUInt", "toUInt()", t10513<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"toBool", "toBool()", t10514<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"toVariant", "toVariant()", t10515<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"toVariant", "toVariant(QJSValue::ObjectConversionBehavior)", t10516<QJSValue>, P10516, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"toPrimitive", "toPrimitive()", t10517<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSPrimitiveValue"},
-    {"toQObject", "toQObject()", t10518<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"toDateTime", "toDateTime()", t10519<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
-    {"equals", "equals(QJSValue)", t10520<QJSValue>, P10520, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"strictlyEquals", "strictlyEquals(QJSValue)", t10521<QJSValue>, P10521, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"prototype", "prototype()", t10522<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
-    {"setPrototype", "setPrototype(QJSValue)", t10523<QJSValue>, P10523, 1, 1, 0, QTC_T_NONE, "void"},
-    {"property", "property(QString)", t10524<QJSValue>, P10524, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
-    {"setProperty", "setProperty(QString,QJSValue)", t10525<QJSValue>, P10525, 2, 2, 0, QTC_T_NONE, "void"},
-    {"hasProperty", "hasProperty(QString)", t10526<QJSValue>, P10526, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"hasOwnProperty", "hasOwnProperty(QString)", t10527<QJSValue>, P10527, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"property", "property(quint32)", t10528<QJSValue>, P10528, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
-    {"setProperty", "setProperty(quint32,QJSValue)", t10529<QJSValue>, P10529, 2, 2, 0, QTC_T_NONE, "void"},
-    {"deleteProperty", "deleteProperty(QString)", t10530<QJSValue>, P10530, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"isCallable", "isCallable()", t10531<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"call", "call(QJSValueList)", t10532<QJSValue>, P10532, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
-    {"callWithInstance", "callWithInstance(QJSValue,QJSValueList)", t10533<QJSValue>, P10533, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
-    {"callAsConstructor", "callAsConstructor(QJSValueList)", t10534<QJSValue>, P10534, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
-    {"errorType", "errorType()", t10535<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QJSValue::ErrorType"},
+    {"isBool", "isBool()", t10654<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNumber", "isNumber()", t10655<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull()", t10656<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isString", "isString()", t10657<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isUndefined", "isUndefined()", t10658<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isVariant", "isVariant()", t10659<QJSValue>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
+    {"isQObject", "isQObject()", t10660<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isQMetaObject", "isQMetaObject()", t10661<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isObject", "isObject()", t10662<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isDate", "isDate()", t10663<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isRegExp", "isRegExp()", t10664<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isArray", "isArray()", t10665<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isError", "isError()", t10666<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isUrl", "isUrl()", t10667<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"toString", "toString()", t10668<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"toNumber", "toNumber()", t10669<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"toInt", "toInt()", t10670<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"toUInt", "toUInt()", t10671<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"toBool", "toBool()", t10672<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"toVariant", "toVariant()", t10673<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"toVariant", "toVariant(QJSValue::ObjectConversionBehavior)", t10674<QJSValue>, P10674, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"toPrimitive", "toPrimitive()", t10675<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSPrimitiveValue"},
+    {"toQObject", "toQObject()", t10676<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"toDateTime", "toDateTime()", t10677<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
+    {"equals", "equals(QJSValue)", t10678<QJSValue>, P10678, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"strictlyEquals", "strictlyEquals(QJSValue)", t10679<QJSValue>, P10679, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"prototype", "prototype()", t10680<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
+    {"setPrototype", "setPrototype(QJSValue)", t10681<QJSValue>, P10681, 1, 1, 0, QTC_T_NONE, "void"},
+    {"property", "property(QString)", t10682<QJSValue>, P10682, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
+    {"setProperty", "setProperty(QString,QJSValue)", t10683<QJSValue>, P10683, 2, 2, 0, QTC_T_NONE, "void"},
+    {"hasProperty", "hasProperty(QString)", t10684<QJSValue>, P10684, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"hasOwnProperty", "hasOwnProperty(QString)", t10685<QJSValue>, P10685, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"property", "property(quint32)", t10686<QJSValue>, P10686, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
+    {"setProperty", "setProperty(quint32,QJSValue)", t10687<QJSValue>, P10687, 2, 2, 0, QTC_T_NONE, "void"},
+    {"deleteProperty", "deleteProperty(QString)", t10688<QJSValue>, P10688, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"isCallable", "isCallable()", t10689<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"call", "call(QJSValueList)", t10690<QJSValue>, P10690, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
+    {"callWithInstance", "callWithInstance(QJSValue,QJSValueList)", t10691<QJSValue>, P10691, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
+    {"callAsConstructor", "callAsConstructor(QJSValueList)", t10692<QJSValue>, P10692, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QJSValue"},
+    {"errorType", "errorType()", t10693<QJSValue>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QJSValue::ErrorType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QJSValue[] = {
-    {"QJSValue", "QJSValue(QJSValue::SpecialValue)", t10536<QJSValue>, P10536, 1, 0, 0, QTC_T_VALUE, "QJSValue"},
-    {"QJSValue", "QJSValue(bool)", t10537<QJSValue>, P10537, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"QJSValue", "QJSValue(int)", t10538<QJSValue>, P10538, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"QJSValue", "QJSValue(uint)", t10539<QJSValue>, P10539, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"QJSValue", "QJSValue(double)", t10540<QJSValue>, P10540, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"QJSValue", "QJSValue(QString)", t10541<QJSValue>, P10541, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"QJSValue", "QJSValue(QLatin1String)", t10542<QJSValue>, P10542, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
-    {"QJSValue", "QJSValue(const char*)", t10543<QJSValue>, P10543, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(QJSValue::SpecialValue)", t10694<QJSValue>, P10694, 1, 0, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(bool)", t10695<QJSValue>, P10695, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(int)", t10696<QJSValue>, P10696, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(uint)", t10697<QJSValue>, P10697, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(double)", t10698<QJSValue>, P10698, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(QString)", t10699<QJSValue>, P10699, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(QLatin1String)", t10700<QJSValue>, P10700, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
+    {"QJSValue", "QJSValue(const char*)", t10701<QJSValue>, P10701, 1, 1, 0, QTC_T_VALUE, "QJSValue"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10545[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10546[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10703[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10704[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10547[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P10705[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P10548[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
-static const qtc::ParamDesc P10549[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
-static const qtc::ParamDesc P10550[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10551[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10552[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10553[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10554[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10706[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
+static const qtc::ParamDesc P10707[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
+static const qtc::ParamDesc P10708[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10709[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10710[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10711[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10712[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10555[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10713[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
-static const qtc::ParamDesc P10556[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10714[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qqmlapplicationengine.h>)
 static const qtc::MethodDef M_QQmlApplicationEngine[] = {
-    {"rootObjects", "rootObjects()", t10544<QQmlApplicationEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QObject *>"},
-    {"load", "load(QUrl)", t10545<QQmlApplicationEngine>, P10545, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"load", "load(QString)", t10546<QQmlApplicationEngine>, P10546, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"rootObjects", "rootObjects()", t10702<QQmlApplicationEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QObject *>"},
+    {"load", "load(QUrl)", t10703<QQmlApplicationEngine>, P10703, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"load", "load(QString)", t10704<QQmlApplicationEngine>, P10704, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"loadFromModule", "loadFromModule(QAnyStringView,QAnyStringView)", t10547<QQmlApplicationEngine>, P10547, 2, 2, 0, QTC_T_NONE, "void"},
+    {"loadFromModule", "loadFromModule(QAnyStringView,QAnyStringView)", t10705<QQmlApplicationEngine>, P10705, 2, 2, 0, QTC_T_NONE, "void"},
 #endif
-    {"setInitialProperties", "setInitialProperties(QVariantMap)", t10548<QQmlApplicationEngine>, P10548, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setExtraFileSelectors", "setExtraFileSelectors(QStringList)", t10549<QQmlApplicationEngine>, P10549, 1, 1, 0, QTC_T_NONE, "void"},
-    {"loadData", "loadData(QByteArray,QUrl)", t10550<QQmlApplicationEngine>, P10550, 2, 1, 0, QTC_T_NONE, "void"},
-    {"objectCreated", "objectCreated(QObject*,QUrl)", t10551<QQmlApplicationEngine>, P10551, 2, 2, 0, QTC_T_NONE, "void"},
-    {"objectCreationFailed", "objectCreationFailed(QUrl)", t10552<QQmlApplicationEngine>, P10552, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setInitialProperties", "setInitialProperties(QVariantMap)", t10706<QQmlApplicationEngine>, P10706, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setExtraFileSelectors", "setExtraFileSelectors(QStringList)", t10707<QQmlApplicationEngine>, P10707, 1, 1, 0, QTC_T_NONE, "void"},
+    {"loadData", "loadData(QByteArray,QUrl)", t10708<QQmlApplicationEngine>, P10708, 2, 1, 0, QTC_T_NONE, "void"},
+    {"objectCreated", "objectCreated(QObject*,QUrl)", t10709<QQmlApplicationEngine>, P10709, 2, 2, 0, QTC_T_NONE, "void"},
+    {"objectCreationFailed", "objectCreationFailed(QUrl)", t10710<QQmlApplicationEngine>, P10710, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlApplicationEngine[] = {
-    {"QQmlApplicationEngine", "QQmlApplicationEngine(QObject*)", t10553<QQmlApplicationEngine>, P10553, 1, 0, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
-    {"QQmlApplicationEngine", "QQmlApplicationEngine(QUrl,QObject*)", t10554<QQmlApplicationEngine>, P10554, 2, 1, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
+    {"QQmlApplicationEngine", "QQmlApplicationEngine(QObject*)", t10711<QQmlApplicationEngine>, P10711, 1, 0, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
+    {"QQmlApplicationEngine", "QQmlApplicationEngine(QUrl,QObject*)", t10712<QQmlApplicationEngine>, P10712, 2, 1, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"QQmlApplicationEngine", "QQmlApplicationEngine(QAnyStringView,QAnyStringView,QObject*)", t10555<QQmlApplicationEngine>, P10555, 3, 2, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
+    {"QQmlApplicationEngine", "QQmlApplicationEngine(QAnyStringView,QAnyStringView,QObject*)", t10713<QQmlApplicationEngine>, P10713, 3, 2, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
 #endif
-    {"QQmlApplicationEngine", "QQmlApplicationEngine(QString,QObject*)", t10556<QQmlApplicationEngine>, P10556, 2, 1, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
+    {"QQmlApplicationEngine", "QQmlApplicationEngine(QString,QObject*)", t10714<QQmlApplicationEngine>, P10714, 2, 1, 0, QTC_T_OBJ, "QQmlApplicationEngine"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10567[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10568[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10569[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
-static const qtc::ParamDesc P10570[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10574[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10575[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 476, "QQmlComponent::CompilationMode", nullptr}};
+static const qtc::ParamDesc P10725[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10726[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10727[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
+static const qtc::ParamDesc P10728[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10732[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10733[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 500, "QQmlComponent::CompilationMode", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10576[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_ENUM, 476, "QQmlComponent::CompilationMode", nullptr}};
+static const qtc::ParamDesc P10734[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_ENUM, 500, "QQmlComponent::CompilationMode", nullptr}};
 #endif
-static const qtc::ParamDesc P10577[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10578[] = {{qtc::PK_ENUM, 477, "QQmlComponent::Status", nullptr}};
-static const qtc::ParamDesc P10579[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P10580[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10581[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10582[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 476, "QQmlComponent::CompilationMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10583[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10584[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 476, "QQmlComponent::CompilationMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10735[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10736[] = {{qtc::PK_ENUM, 501, "QQmlComponent::Status", nullptr}};
+static const qtc::ParamDesc P10737[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10738[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10739[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10740[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 500, "QQmlComponent::CompilationMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10741[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10742[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 500, "QQmlComponent::CompilationMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10585[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10743[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10586[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_ENUM, 476, "QQmlComponent::CompilationMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10744[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_ENUM, 500, "QQmlComponent::CompilationMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
 #if __has_include(<QtQml/qqmlcomponent.h>)
 static const qtc::MethodDef M_QQmlComponent[] = {
-    {"status", "status()", t10557<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQmlComponent::Status"},
-    {"isNull", "isNull()", t10558<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isReady", "isReady()", t10559<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isError", "isError()", t10560<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isLoading", "isLoading()", t10561<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isBound", "isBound()", t10562<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"errors", "errors()", t10563<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQmlError>"},
-    {"errorString", "errorString()", t10564<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"progress", "progress()", t10565<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"url", "url()", t10566<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"create", "create(QQmlContext*)", t10567<QQmlComponent>, P10567, 1, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QObject*"},
-    {"createWithInitialProperties", "createWithInitialProperties(QVariantMap,QQmlContext*)", t10568<QQmlComponent>, P10568, 2, 1, 0, QTC_T_OBJ, "QObject*"},
-    {"setInitialProperties", "setInitialProperties(QObject*,QVariantMap)", t10569<QQmlComponent>, P10569, 2, 2, 0, QTC_T_NONE, "void"},
-    {"beginCreate", "beginCreate(QQmlContext*)", t10570<QQmlComponent>, P10570, 1, 1, 0, QTC_T_OBJ, "QObject*"},
-    {"completeCreate", "completeCreate()", t10571<QQmlComponent>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"creationContext", "creationContext()", t10572<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
-    {"engine", "engine()", t10573<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
-    {"loadUrl", "loadUrl(QUrl)", t10574<QQmlComponent>, P10574, 1, 1, 0, QTC_T_NONE, "void"},
-    {"loadUrl", "loadUrl(QUrl,QQmlComponent::CompilationMode)", t10575<QQmlComponent>, P10575, 2, 2, 0, QTC_T_NONE, "void"},
+    {"status", "status()", t10715<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQmlComponent::Status"},
+    {"isNull", "isNull()", t10716<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isReady", "isReady()", t10717<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isError", "isError()", t10718<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isLoading", "isLoading()", t10719<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isBound", "isBound()", t10720<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"errors", "errors()", t10721<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQmlError>"},
+    {"errorString", "errorString()", t10722<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"progress", "progress()", t10723<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"url", "url()", t10724<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"create", "create(QQmlContext*)", t10725<QQmlComponent>, P10725, 1, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QObject*"},
+    {"createWithInitialProperties", "createWithInitialProperties(QVariantMap,QQmlContext*)", t10726<QQmlComponent>, P10726, 2, 1, 0, QTC_T_OBJ, "QObject*"},
+    {"setInitialProperties", "setInitialProperties(QObject*,QVariantMap)", t10727<QQmlComponent>, P10727, 2, 2, 0, QTC_T_NONE, "void"},
+    {"beginCreate", "beginCreate(QQmlContext*)", t10728<QQmlComponent>, P10728, 1, 1, 0, QTC_T_OBJ, "QObject*"},
+    {"completeCreate", "completeCreate()", t10729<QQmlComponent>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"creationContext", "creationContext()", t10730<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
+    {"engine", "engine()", t10731<QQmlComponent>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
+    {"loadUrl", "loadUrl(QUrl)", t10732<QQmlComponent>, P10732, 1, 1, 0, QTC_T_NONE, "void"},
+    {"loadUrl", "loadUrl(QUrl,QQmlComponent::CompilationMode)", t10733<QQmlComponent>, P10733, 2, 2, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"loadFromModule", "loadFromModule(QAnyStringView,QAnyStringView,QQmlComponent::CompilationMode)", t10576<QQmlComponent>, P10576, 3, 2, 0, QTC_T_NONE, "void"},
+    {"loadFromModule", "loadFromModule(QAnyStringView,QAnyStringView,QQmlComponent::CompilationMode)", t10734<QQmlComponent>, P10734, 3, 2, 0, QTC_T_NONE, "void"},
 #endif
-    {"setData", "setData(QByteArray,QUrl)", t10577<QQmlComponent>, P10577, 2, 2, 0, QTC_T_NONE, "void"},
-    {"statusChanged", "statusChanged(QQmlComponent::Status)", t10578<QQmlComponent>, P10578, 1, 1, 0, QTC_T_NONE, "void"},
-    {"progressChanged", "progressChanged(qreal)", t10579<QQmlComponent>, P10579, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setData", "setData(QByteArray,QUrl)", t10735<QQmlComponent>, P10735, 2, 2, 0, QTC_T_NONE, "void"},
+    {"statusChanged", "statusChanged(QQmlComponent::Status)", t10736<QQmlComponent>, P10736, 1, 1, 0, QTC_T_NONE, "void"},
+    {"progressChanged", "progressChanged(qreal)", t10737<QQmlComponent>, P10737, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlComponent[] = {
-    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QObject*)", t10580<QQmlComponent>, P10580, 2, 1, 0, QTC_T_OBJ, "QQmlComponent"},
-    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QString,QObject*)", t10581<QQmlComponent>, P10581, 3, 2, 0, QTC_T_OBJ, "QQmlComponent"},
-    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QString,QQmlComponent::CompilationMode,QObject*)", t10582<QQmlComponent>, P10582, 4, 3, 0, QTC_T_OBJ, "QQmlComponent"},
-    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QUrl,QObject*)", t10583<QQmlComponent>, P10583, 3, 2, 0, QTC_T_OBJ, "QQmlComponent"},
-    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QUrl,QQmlComponent::CompilationMode,QObject*)", t10584<QQmlComponent>, P10584, 4, 3, 0, QTC_T_OBJ, "QQmlComponent"},
+    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QObject*)", t10738<QQmlComponent>, P10738, 2, 1, 0, QTC_T_OBJ, "QQmlComponent"},
+    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QString,QObject*)", t10739<QQmlComponent>, P10739, 3, 2, 0, QTC_T_OBJ, "QQmlComponent"},
+    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QString,QQmlComponent::CompilationMode,QObject*)", t10740<QQmlComponent>, P10740, 4, 3, 0, QTC_T_OBJ, "QQmlComponent"},
+    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QUrl,QObject*)", t10741<QQmlComponent>, P10741, 3, 2, 0, QTC_T_OBJ, "QQmlComponent"},
+    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QUrl,QQmlComponent::CompilationMode,QObject*)", t10742<QQmlComponent>, P10742, 4, 3, 0, QTC_T_OBJ, "QQmlComponent"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QAnyStringView,QAnyStringView,QObject*)", t10585<QQmlComponent>, P10585, 4, 3, 0, QTC_T_OBJ, "QQmlComponent"},
+    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QAnyStringView,QAnyStringView,QObject*)", t10743<QQmlComponent>, P10743, 4, 3, 0, QTC_T_OBJ, "QQmlComponent"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QAnyStringView,QAnyStringView,QQmlComponent::CompilationMode,QObject*)", t10586<QQmlComponent>, P10586, 5, 4, 0, QTC_T_OBJ, "QQmlComponent"},
+    {"QQmlComponent", "QQmlComponent(QQmlEngine*,QAnyStringView,QAnyStringView,QQmlComponent::CompilationMode,QObject*)", t10744<QQmlComponent>, P10744, 5, 4, 0, QTC_T_OBJ, "QQmlComponent"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10592[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10593[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10594[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10595[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P10596[] = {{qtc::PK_LIST, -1, "QList<QQmlContext::PropertyPair>", nullptr}};
-static const qtc::ParamDesc P10597[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10598[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10750[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10751[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10752[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10753[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10754[] = {{qtc::PK_LIST, -1, "QList<QQmlContext::PropertyPair>", nullptr}};
+static const qtc::ParamDesc P10755[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10756[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-static const qtc::ParamDesc P10599[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10757[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-static const qtc::ParamDesc P10600[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10758[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #endif
-static const qtc::ParamDesc P10601[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10602[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10604[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10605[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10759[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10760[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10762[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10763[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qqmlcontext.h>)
 static const qtc::MethodDef M_QQmlContext[] = {
-    {"isValid", "isValid()", t10587<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"engine", "engine()", t10588<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
-    {"parentContext", "parentContext()", t10589<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
+    {"isValid", "isValid()", t10745<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"engine", "engine()", t10746<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
+    {"parentContext", "parentContext()", t10747<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-    {"childContexts", "childContexts()", t10590<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQmlContext *>"},
+    {"childContexts", "childContexts()", t10748<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QQmlContext *>"},
 #endif
-    {"contextObject", "contextObject()", t10591<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"setContextObject", "setContextObject(QObject*)", t10592<QQmlContext>, P10592, 1, 1, 0, QTC_T_NONE, "void"},
-    {"contextProperty", "contextProperty(QString)", t10593<QQmlContext>, P10593, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setContextProperty", "setContextProperty(QString,QObject*)", t10594<QQmlContext>, P10594, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setContextProperty", "setContextProperty(QString,QVariant)", t10595<QQmlContext>, P10595, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setContextProperties", "setContextProperties(QList<PropertyPair>)", t10596<QQmlContext>, P10596, 1, 1, 0, QTC_T_NONE, "void"},
-    {"nameForObject", "nameForObject(const QObject*)", t10597<QQmlContext>, P10597, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"objectForName", "objectForName(QString)", t10598<QQmlContext>, P10598, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"contextObject", "contextObject()", t10749<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"setContextObject", "setContextObject(QObject*)", t10750<QQmlContext>, P10750, 1, 1, 0, QTC_T_NONE, "void"},
+    {"contextProperty", "contextProperty(QString)", t10751<QQmlContext>, P10751, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setContextProperty", "setContextProperty(QString,QObject*)", t10752<QQmlContext>, P10752, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setContextProperty", "setContextProperty(QString,QVariant)", t10753<QQmlContext>, P10753, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setContextProperties", "setContextProperties(QList<PropertyPair>)", t10754<QQmlContext>, P10754, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nameForObject", "nameForObject(const QObject*)", t10755<QQmlContext>, P10755, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"objectForName", "objectForName(QString)", t10756<QQmlContext>, P10756, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-    {"findObjectRecursively", "findObjectRecursively(QString)", t10599<QQmlContext>, P10599, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"findObjectRecursively", "findObjectRecursively(QString)", t10757<QQmlContext>, P10757, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-    {"findObjectsRecursively", "findObjectsRecursively(QString)", t10600<QQmlContext>, P10600, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QObject *>"},
+    {"findObjectsRecursively", "findObjectsRecursively(QString)", t10758<QQmlContext>, P10758, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QObject *>"},
 #endif
-    {"resolvedUrl", "resolvedUrl(QUrl)", t10601<QQmlContext>, P10601, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setBaseUrl", "setBaseUrl(QUrl)", t10602<QQmlContext>, P10602, 1, 1, 0, QTC_T_NONE, "void"},
-    {"baseUrl", "baseUrl()", t10603<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"resolvedUrl", "resolvedUrl(QUrl)", t10759<QQmlContext>, P10759, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setBaseUrl", "setBaseUrl(QUrl)", t10760<QQmlContext>, P10760, 1, 1, 0, QTC_T_NONE, "void"},
+    {"baseUrl", "baseUrl()", t10761<QQmlContext>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlContext[] = {
-    {"QQmlContext", "QQmlContext(QQmlEngine*,QObject*)", t10604<QQmlContext>, P10604, 2, 1, 0, QTC_T_OBJ, "QQmlContext"},
-    {"QQmlContext", "QQmlContext(QQmlContext*,QObject*)", t10605<QQmlContext>, P10605, 2, 1, 0, QTC_T_OBJ, "QQmlContext"},
+    {"QQmlContext", "QQmlContext(QQmlEngine*,QObject*)", t10762<QQmlContext>, P10762, 2, 1, 0, QTC_T_OBJ, "QQmlContext"},
+    {"QQmlContext", "QQmlContext(QQmlContext*,QObject*)", t10763<QQmlContext>, P10763, 2, 1, 0, QTC_T_OBJ, "QQmlContext"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10611[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
-static const qtc::ParamDesc P10612[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10614[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
-static const qtc::ParamDesc P10615[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10616[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10618[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 475, "QQmlAbstractUrlInterceptor::DataType", nullptr}};
-static const qtc::ParamDesc P10619[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlImageProviderBase*", &QQmlImageProviderBase::staticMetaObject}};
-static const qtc::ParamDesc P10620[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10621[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10622[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10624[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10626[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10628[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10769[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
+static const qtc::ParamDesc P10770[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10772[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
+static const qtc::ParamDesc P10773[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10774[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10776[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 499, "QQmlAbstractUrlInterceptor::DataType", nullptr}};
+static const qtc::ParamDesc P10777[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlImageProviderBase*", &QQmlImageProviderBase::staticMetaObject}};
+static const qtc::ParamDesc P10778[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10779[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10780[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10782[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10784[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10786[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-static const qtc::ParamDesc P10630[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10788[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
-static const qtc::ParamDesc P10633[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10634[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10636[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10637[] = {{qtc::PK_LIST, -1, "QList<QQmlError>", nullptr}};
-static const qtc::ParamDesc P10638[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10791[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10792[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10794[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10795[] = {{qtc::PK_LIST, -1, "QList<QQmlError>", nullptr}};
+static const qtc::ParamDesc P10796[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qqmlengine.h>)
 static const qtc::MethodDef M_QQmlEngine[] = {
-    {"rootContext", "rootContext()", t10606<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
-    {"clearComponentCache", "clearComponentCache()", t10607<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"trimComponentCache", "trimComponentCache()", t10608<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"clearSingletons", "clearSingletons()", t10609<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"importPathList", "importPathList()", t10610<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"setImportPathList", "setImportPathList(QStringList)", t10611<QQmlEngine>, P10611, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addImportPath", "addImportPath(QString)", t10612<QQmlEngine>, P10612, 1, 1, 0, QTC_T_NONE, "void"},
-    {"pluginPathList", "pluginPathList()", t10613<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"setPluginPathList", "setPluginPathList(QStringList)", t10614<QQmlEngine>, P10614, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addPluginPath", "addPluginPath(QString)", t10615<QQmlEngine>, P10615, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addNamedBundle", "addNamedBundle(QString,QString)", t10616<QQmlEngine>, P10616, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
-    {"networkAccessManager", "networkAccessManager()", t10617<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QNetworkAccessManager*"},
-    {"interceptUrl", "interceptUrl(QUrl,QQmlAbstractUrlInterceptor::DataType)", t10618<QQmlEngine>, P10618, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"addImageProvider", "addImageProvider(QString,QQmlImageProviderBase*)", t10619<QQmlEngine>, P10619, 2, 2, 0, QTC_T_NONE, "void"},
-    {"imageProvider", "imageProvider(QString)", t10620<QQmlEngine>, P10620, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QQmlImageProviderBase*"},
-    {"removeImageProvider", "removeImageProvider(QString)", t10621<QQmlEngine>, P10621, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"setOfflineStoragePath", "setOfflineStoragePath(QString)", t10622<QQmlEngine>, P10622, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"offlineStoragePath", "offlineStoragePath()", t10623<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"offlineStorageDatabaseFilePath", "offlineStorageDatabaseFilePath(QString)", t10624<QQmlEngine>, P10624, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"baseUrl", "baseUrl()", t10625<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setBaseUrl", "setBaseUrl(QUrl)", t10626<QQmlEngine>, P10626, 1, 1, 0, QTC_T_NONE, "void"},
-    {"outputWarningsToStandardError", "outputWarningsToStandardError()", t10627<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setOutputWarningsToStandardError", "setOutputWarningsToStandardError(bool)", t10628<QQmlEngine>, P10628, 1, 1, 0, QTC_T_NONE, "void"},
+    {"rootContext", "rootContext()", t10764<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
+    {"clearComponentCache", "clearComponentCache()", t10765<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"trimComponentCache", "trimComponentCache()", t10766<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"clearSingletons", "clearSingletons()", t10767<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"importPathList", "importPathList()", t10768<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"setImportPathList", "setImportPathList(QStringList)", t10769<QQmlEngine>, P10769, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addImportPath", "addImportPath(QString)", t10770<QQmlEngine>, P10770, 1, 1, 0, QTC_T_NONE, "void"},
+    {"pluginPathList", "pluginPathList()", t10771<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"setPluginPathList", "setPluginPathList(QStringList)", t10772<QQmlEngine>, P10772, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addPluginPath", "addPluginPath(QString)", t10773<QQmlEngine>, P10773, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addNamedBundle", "addNamedBundle(QString,QString)", t10774<QQmlEngine>, P10774, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
+    {"networkAccessManager", "networkAccessManager()", t10775<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QNetworkAccessManager*"},
+    {"interceptUrl", "interceptUrl(QUrl,QQmlAbstractUrlInterceptor::DataType)", t10776<QQmlEngine>, P10776, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"addImageProvider", "addImageProvider(QString,QQmlImageProviderBase*)", t10777<QQmlEngine>, P10777, 2, 2, 0, QTC_T_NONE, "void"},
+    {"imageProvider", "imageProvider(QString)", t10778<QQmlEngine>, P10778, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QQmlImageProviderBase*"},
+    {"removeImageProvider", "removeImageProvider(QString)", t10779<QQmlEngine>, P10779, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"setOfflineStoragePath", "setOfflineStoragePath(QString)", t10780<QQmlEngine>, P10780, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"offlineStoragePath", "offlineStoragePath()", t10781<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"offlineStorageDatabaseFilePath", "offlineStorageDatabaseFilePath(QString)", t10782<QQmlEngine>, P10782, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"baseUrl", "baseUrl()", t10783<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setBaseUrl", "setBaseUrl(QUrl)", t10784<QQmlEngine>, P10784, 1, 1, 0, QTC_T_NONE, "void"},
+    {"outputWarningsToStandardError", "outputWarningsToStandardError()", t10785<QQmlEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setOutputWarningsToStandardError", "setOutputWarningsToStandardError(bool)", t10786<QQmlEngine>, P10786, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"markCurrentFunctionAsTranslationBinding", "markCurrentFunctionAsTranslationBinding()", t10629<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"markCurrentFunctionAsTranslationBinding", "markCurrentFunctionAsTranslationBinding()", t10787<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"setExternalSingletonInstance", "setExternalSingletonInstance(QAnyStringView,QAnyStringView,QObject*)", t10630<QQmlEngine>, P10630, 3, 3, 0, QTC_T_BOOL, "bool"},
+    {"setExternalSingletonInstance", "setExternalSingletonInstance(QAnyStringView,QAnyStringView,QObject*)", t10788<QQmlEngine>, P10788, 3, 3, 0, QTC_T_BOOL, "bool"},
 #endif
-    {"retranslate", "retranslate()", t10631<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"retranslate", "retranslate()", t10789<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"offlineStoragePathChanged", "offlineStoragePathChanged()", t10632<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"offlineStoragePathChanged", "offlineStoragePathChanged()", t10790<QQmlEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
-    {"contextForObject", "contextForObject(const QObject*)", t10633<QQmlEngine>, P10633, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QQmlContext*"},
-    {"setContextForObject", "setContextForObject(QObject*,QQmlContext*)", t10634<QQmlEngine>, P10634, 2, 2, qtc::MF_STATIC, QTC_T_NONE, "void"},
-    {"quit", "quit()", t10635<QQmlEngine>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"exit", "exit(int)", t10636<QQmlEngine>, P10636, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"warnings", "warnings(QList<QQmlError>)", t10637<QQmlEngine>, P10637, 1, 1, 0, QTC_T_NONE, "void"},
+    {"contextForObject", "contextForObject(const QObject*)", t10791<QQmlEngine>, P10791, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QQmlContext*"},
+    {"setContextForObject", "setContextForObject(QObject*,QQmlContext*)", t10792<QQmlEngine>, P10792, 2, 2, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"quit", "quit()", t10793<QQmlEngine>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"exit", "exit(int)", t10794<QQmlEngine>, P10794, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"warnings", "warnings(QList<QQmlError>)", t10795<QQmlEngine>, P10795, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlEngine[] = {
-    {"QQmlEngine", "QQmlEngine(QObject*)", t10638<QQmlEngine>, P10638, 1, 0, 0, QTC_T_OBJ, "QQmlEngine"},
+    {"QQmlEngine", "QQmlEngine(QObject*)", t10796<QQmlEngine>, P10796, 1, 0, 0, QTC_T_OBJ, "QQmlEngine"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10641[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10643[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10645[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10647[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10649[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10799[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10801[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10803[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10805[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10807[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qqmlerror.h>)
 static const qtc::MethodDef M_QQmlError[] = {
-    {"isValid", "isValid()", t10639<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"url", "url()", t10640<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setUrl", "setUrl(QUrl)", t10641<QQmlError>, P10641, 1, 1, 0, QTC_T_NONE, "void"},
-    {"description", "description()", t10642<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setDescription", "setDescription(QString)", t10643<QQmlError>, P10643, 1, 1, 0, QTC_T_NONE, "void"},
-    {"line", "line()", t10644<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setLine", "setLine(int)", t10645<QQmlError>, P10645, 1, 1, 0, QTC_T_NONE, "void"},
-    {"column", "column()", t10646<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setColumn", "setColumn(int)", t10647<QQmlError>, P10647, 1, 1, 0, QTC_T_NONE, "void"},
-    {"object", "object()", t10648<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"setObject", "setObject(QObject*)", t10649<QQmlError>, P10649, 1, 1, 0, QTC_T_NONE, "void"},
-    {"messageType", "messageType()", t10650<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtMsgType"},
-    {"toString", "toString()", t10651<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isValid", "isValid()", t10797<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"url", "url()", t10798<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setUrl", "setUrl(QUrl)", t10799<QQmlError>, P10799, 1, 1, 0, QTC_T_NONE, "void"},
+    {"description", "description()", t10800<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setDescription", "setDescription(QString)", t10801<QQmlError>, P10801, 1, 1, 0, QTC_T_NONE, "void"},
+    {"line", "line()", t10802<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setLine", "setLine(int)", t10803<QQmlError>, P10803, 1, 1, 0, QTC_T_NONE, "void"},
+    {"column", "column()", t10804<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setColumn", "setColumn(int)", t10805<QQmlError>, P10805, 1, 1, 0, QTC_T_NONE, "void"},
+    {"object", "object()", t10806<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"setObject", "setObject(QObject*)", t10807<QQmlError>, P10807, 1, 1, 0, QTC_T_NONE, "void"},
+    {"messageType", "messageType()", t10808<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtMsgType"},
+    {"toString", "toString()", t10809<QQmlError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlError[] = {
-    {"QQmlError", "QQmlError()", t10652<QQmlError>, nullptr, 0, 0, 0, QTC_T_VALUE, "QQmlError"},
+    {"QQmlError", "QQmlError()", t10810<QQmlError>, nullptr, 0, 0, 0, QTC_T_VALUE, "QQmlError"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10656[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10658[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10662[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10667[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
-static const qtc::ParamDesc P10670[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10671[] = {{qtc::PK_VALUE, -1, "QQmlScriptString", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10814[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10816[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10820[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10825[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
+static const qtc::ParamDesc P10828[] = {{qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10829[] = {{qtc::PK_VALUE, -1, "QQmlScriptString", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qqmlexpression.h>)
 static const qtc::MethodDef M_QQmlExpression[] = {
-    {"engine", "engine()", t10653<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
-    {"context", "context()", t10654<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
-    {"expression", "expression()", t10655<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setExpression", "setExpression(QString)", t10656<QQmlExpression>, P10656, 1, 1, 0, QTC_T_NONE, "void"},
-    {"notifyOnValueChanged", "notifyOnValueChanged()", t10657<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setNotifyOnValueChanged", "setNotifyOnValueChanged(bool)", t10658<QQmlExpression>, P10658, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sourceFile", "sourceFile()", t10659<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"lineNumber", "lineNumber()", t10660<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"columnNumber", "columnNumber()", t10661<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSourceLocation", "setSourceLocation(QString,int,int)", t10662<QQmlExpression>, P10662, 3, 2, 0, QTC_T_NONE, "void"},
-    {"scopeObject", "scopeObject()", t10663<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"hasError", "hasError()", t10664<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"clearError", "clearError()", t10665<QQmlExpression>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"error", "error()", t10666<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QQmlError"},
-    {"evaluate", "evaluate(bool*)", t10667<QQmlExpression>, P10667, 1, 0, 0, QTC_T_VALUE, "QVariant"},
-    {"valueChanged", "valueChanged()", t10668<QQmlExpression>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"engine", "engine()", t10811<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlEngine*"},
+    {"context", "context()", t10812<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QQmlContext*"},
+    {"expression", "expression()", t10813<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setExpression", "setExpression(QString)", t10814<QQmlExpression>, P10814, 1, 1, 0, QTC_T_NONE, "void"},
+    {"notifyOnValueChanged", "notifyOnValueChanged()", t10815<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setNotifyOnValueChanged", "setNotifyOnValueChanged(bool)", t10816<QQmlExpression>, P10816, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sourceFile", "sourceFile()", t10817<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"lineNumber", "lineNumber()", t10818<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"columnNumber", "columnNumber()", t10819<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSourceLocation", "setSourceLocation(QString,int,int)", t10820<QQmlExpression>, P10820, 3, 2, 0, QTC_T_NONE, "void"},
+    {"scopeObject", "scopeObject()", t10821<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"hasError", "hasError()", t10822<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"clearError", "clearError()", t10823<QQmlExpression>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"error", "error()", t10824<QQmlExpression>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QQmlError"},
+    {"evaluate", "evaluate(bool*)", t10825<QQmlExpression>, P10825, 1, 0, 0, QTC_T_VALUE, "QVariant"},
+    {"valueChanged", "valueChanged()", t10826<QQmlExpression>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlExpression[] = {
-    {"QQmlExpression", "QQmlExpression()", t10669<QQmlExpression>, nullptr, 0, 0, 0, QTC_T_OBJ, "QQmlExpression"},
-    {"QQmlExpression", "QQmlExpression(QQmlContext*,QObject*,QString,QObject*)", t10670<QQmlExpression>, P10670, 4, 3, 0, QTC_T_OBJ, "QQmlExpression"},
-    {"QQmlExpression", "QQmlExpression(QQmlScriptString,QQmlContext*,QObject*,QObject*)", t10671<QQmlExpression>, P10671, 4, 1, 0, QTC_T_OBJ, "QQmlExpression"},
+    {"QQmlExpression", "QQmlExpression()", t10827<QQmlExpression>, nullptr, 0, 0, 0, QTC_T_OBJ, "QQmlExpression"},
+    {"QQmlExpression", "QQmlExpression(QQmlContext*,QObject*,QString,QObject*)", t10828<QQmlExpression>, P10828, 4, 3, 0, QTC_T_OBJ, "QQmlExpression"},
+    {"QQmlExpression", "QQmlExpression(QQmlScriptString,QQmlContext*,QObject*,QObject*)", t10829<QQmlExpression>, P10829, 4, 1, 0, QTC_T_OBJ, "QQmlExpression"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10672[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10673[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10674[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10675[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P10676[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10677[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10830[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10831[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10832[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10833[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P10834[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10835[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
 #if __has_include(<QtQml/qqmlfile.h>)
 static const qtc::MethodDef M_QQmlFile[] = {
-    {"isSynchronous", "isSynchronous(QString)", t10672<QQmlFile>, P10672, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"isSynchronous", "isSynchronous(QUrl)", t10673<QQmlFile>, P10673, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"isLocalFile", "isLocalFile(QString)", t10674<QQmlFile>, P10674, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"isLocalFile", "isLocalFile(QUrl)", t10675<QQmlFile>, P10675, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"urlToLocalFileOrQrc", "urlToLocalFileOrQrc(QString)", t10676<QQmlFile>, P10676, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"urlToLocalFileOrQrc", "urlToLocalFileOrQrc(QUrl)", t10677<QQmlFile>, P10677, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"isSynchronous", "isSynchronous(QString)", t10830<QQmlFile>, P10830, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isSynchronous", "isSynchronous(QUrl)", t10831<QQmlFile>, P10831, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isLocalFile", "isLocalFile(QString)", t10832<QQmlFile>, P10832, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isLocalFile", "isLocalFile(QUrl)", t10833<QQmlFile>, P10833, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"urlToLocalFileOrQrc", "urlToLocalFileOrQrc(QString)", t10834<QQmlFile>, P10834, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"urlToLocalFileOrQrc", "urlToLocalFileOrQrc(QUrl)", t10835<QQmlFile>, P10835, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlFile[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10679[] = {{qtc::PK_OBJ, -1, "QFileSelector*", &QFileSelector::staticMetaObject}};
-static const qtc::ParamDesc P10680[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
-static const qtc::ParamDesc P10681[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
-static const qtc::ParamDesc P10682[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10837[] = {{qtc::PK_OBJ, -1, "QFileSelector*", &QFileSelector::staticMetaObject}};
+static const qtc::ParamDesc P10838[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
+static const qtc::ParamDesc P10839[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
+static const qtc::ParamDesc P10840[] = {{qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qqmlfileselector.h>)
 static const qtc::MethodDef M_QQmlFileSelector[] = {
-    {"selector", "selector()", t10678<QQmlFileSelector>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QFileSelector*"},
-    {"setSelector", "setSelector(QFileSelector*)", t10679<QQmlFileSelector>, P10679, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setExtraSelectors", "setExtraSelectors(QStringList)", t10680<QQmlFileSelector>, P10680, 1, 1, 0, QTC_T_NONE, "void"},
-    {"get", "get(QQmlEngine*)", t10681<QQmlFileSelector>, P10681, 1, 1, qtc::MF_STATIC|qtc::MF_DEPRECATED, QTC_T_OBJ, "QQmlFileSelector*"},
+    {"selector", "selector()", t10836<QQmlFileSelector>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QFileSelector*"},
+    {"setSelector", "setSelector(QFileSelector*)", t10837<QQmlFileSelector>, P10837, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setExtraSelectors", "setExtraSelectors(QStringList)", t10838<QQmlFileSelector>, P10838, 1, 1, 0, QTC_T_NONE, "void"},
+    {"get", "get(QQmlEngine*)", t10839<QQmlFileSelector>, P10839, 1, 1, qtc::MF_STATIC|qtc::MF_DEPRECATED, QTC_T_OBJ, "QQmlFileSelector*"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlFileSelector[] = {
-    {"QQmlFileSelector", "QQmlFileSelector(QQmlEngine*,QObject*)", t10682<QQmlFileSelector>, P10682, 2, 1, 0, QTC_T_OBJ, "QQmlFileSelector"},
+    {"QQmlFileSelector", "QQmlFileSelector(QQmlEngine*,QObject*)", t10840<QQmlFileSelector>, P10840, 2, 1, 0, QTC_T_OBJ, "QQmlFileSelector"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10693[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10694[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10695[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
-static const qtc::ParamDesc P10696[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P10697[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P10698[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10699[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
-static const qtc::ParamDesc P10703[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10711[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10712[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10713[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
-static const qtc::ParamDesc P10714[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10715[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
-static const qtc::ParamDesc P10716[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
+static const qtc::ParamDesc P10851[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10852[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10853[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
+static const qtc::ParamDesc P10854[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10855[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10856[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10857[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
+static const qtc::ParamDesc P10861[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10869[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10870[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10871[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
+static const qtc::ParamDesc P10872[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10873[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlContext*", &QQmlContext::staticMetaObject}};
+static const qtc::ParamDesc P10874[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QQmlEngine*", &QQmlEngine::staticMetaObject}};
 #if __has_include(<QtQml/qqmlproperty.h>)
 static const qtc::MethodDef M_QQmlProperty[] = {
-    {"type", "type()", t10683<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQmlProperty::Type"},
-    {"isValid", "isValid()", t10684<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isProperty", "isProperty()", t10685<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isSignalProperty", "isSignalProperty()", t10686<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"propertyType", "propertyType()", t10687<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"propertyMetaType", "propertyMetaType()", t10688<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMetaType"},
-    {"propertyTypeCategory", "propertyTypeCategory()", t10689<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQmlProperty::PropertyTypeCategory"},
-    {"propertyTypeName", "propertyTypeName()", t10690<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "const char*"},
-    {"name", "name()", t10691<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"read", "read()", t10692<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"read", "read(const QObject*,QString)", t10693<QQmlProperty>, P10693, 2, 2, qtc::MF_STATIC, QTC_T_VALUE, "QVariant"},
-    {"read", "read(const QObject*,QString,QQmlContext*)", t10694<QQmlProperty>, P10694, 3, 3, qtc::MF_STATIC, QTC_T_VALUE, "QVariant"},
-    {"read", "read(const QObject*,QString,QQmlEngine*)", t10695<QQmlProperty>, P10695, 3, 3, qtc::MF_STATIC, QTC_T_VALUE, "QVariant"},
-    {"write", "write(QVariant)", t10696<QQmlProperty>, P10696, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"write", "write(QObject*,QString,QVariant)", t10697<QQmlProperty>, P10697, 3, 3, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"write", "write(QObject*,QString,QVariant,QQmlContext*)", t10698<QQmlProperty>, P10698, 4, 4, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"write", "write(QObject*,QString,QVariant,QQmlEngine*)", t10699<QQmlProperty>, P10699, 4, 4, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"reset", "reset()", t10700<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"hasNotifySignal", "hasNotifySignal()", t10701<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"needsNotifySignal", "needsNotifySignal()", t10702<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"connectNotifySignal", "connectNotifySignal(QObject*,int)", t10703<QQmlProperty>, P10703, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isWritable", "isWritable()", t10704<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isBindable", "isBindable()", t10705<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isDesignable", "isDesignable()", t10706<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isResettable", "isResettable()", t10707<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"object", "object()", t10708<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"index", "index()", t10709<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"type", "type()", t10841<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQmlProperty::Type"},
+    {"isValid", "isValid()", t10842<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isProperty", "isProperty()", t10843<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isSignalProperty", "isSignalProperty()", t10844<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"propertyType", "propertyType()", t10845<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"propertyMetaType", "propertyMetaType()", t10846<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMetaType"},
+    {"propertyTypeCategory", "propertyTypeCategory()", t10847<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QQmlProperty::PropertyTypeCategory"},
+    {"propertyTypeName", "propertyTypeName()", t10848<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "const char*"},
+    {"name", "name()", t10849<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"read", "read()", t10850<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"read", "read(const QObject*,QString)", t10851<QQmlProperty>, P10851, 2, 2, qtc::MF_STATIC, QTC_T_VALUE, "QVariant"},
+    {"read", "read(const QObject*,QString,QQmlContext*)", t10852<QQmlProperty>, P10852, 3, 3, qtc::MF_STATIC, QTC_T_VALUE, "QVariant"},
+    {"read", "read(const QObject*,QString,QQmlEngine*)", t10853<QQmlProperty>, P10853, 3, 3, qtc::MF_STATIC, QTC_T_VALUE, "QVariant"},
+    {"write", "write(QVariant)", t10854<QQmlProperty>, P10854, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"write", "write(QObject*,QString,QVariant)", t10855<QQmlProperty>, P10855, 3, 3, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"write", "write(QObject*,QString,QVariant,QQmlContext*)", t10856<QQmlProperty>, P10856, 4, 4, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"write", "write(QObject*,QString,QVariant,QQmlEngine*)", t10857<QQmlProperty>, P10857, 4, 4, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"reset", "reset()", t10858<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"hasNotifySignal", "hasNotifySignal()", t10859<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"needsNotifySignal", "needsNotifySignal()", t10860<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"connectNotifySignal", "connectNotifySignal(QObject*,int)", t10861<QQmlProperty>, P10861, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isWritable", "isWritable()", t10862<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isBindable", "isBindable()", t10863<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isDesignable", "isDesignable()", t10864<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isResettable", "isResettable()", t10865<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"object", "object()", t10866<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"index", "index()", t10867<QQmlProperty>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlProperty[] = {
-    {"QQmlProperty", "QQmlProperty()", t10710<QQmlProperty>, nullptr, 0, 0, 0, QTC_T_VALUE, "QQmlProperty"},
-    {"QQmlProperty", "QQmlProperty(QObject*)", t10711<QQmlProperty>, P10711, 1, 1, 0, QTC_T_VALUE, "QQmlProperty"},
-    {"QQmlProperty", "QQmlProperty(QObject*,QQmlContext*)", t10712<QQmlProperty>, P10712, 2, 2, 0, QTC_T_VALUE, "QQmlProperty"},
-    {"QQmlProperty", "QQmlProperty(QObject*,QQmlEngine*)", t10713<QQmlProperty>, P10713, 2, 2, 0, QTC_T_VALUE, "QQmlProperty"},
-    {"QQmlProperty", "QQmlProperty(QObject*,QString)", t10714<QQmlProperty>, P10714, 2, 2, 0, QTC_T_VALUE, "QQmlProperty"},
-    {"QQmlProperty", "QQmlProperty(QObject*,QString,QQmlContext*)", t10715<QQmlProperty>, P10715, 3, 3, 0, QTC_T_VALUE, "QQmlProperty"},
-    {"QQmlProperty", "QQmlProperty(QObject*,QString,QQmlEngine*)", t10716<QQmlProperty>, P10716, 3, 3, 0, QTC_T_VALUE, "QQmlProperty"},
+    {"QQmlProperty", "QQmlProperty()", t10868<QQmlProperty>, nullptr, 0, 0, 0, QTC_T_VALUE, "QQmlProperty"},
+    {"QQmlProperty", "QQmlProperty(QObject*)", t10869<QQmlProperty>, P10869, 1, 1, 0, QTC_T_VALUE, "QQmlProperty"},
+    {"QQmlProperty", "QQmlProperty(QObject*,QQmlContext*)", t10870<QQmlProperty>, P10870, 2, 2, 0, QTC_T_VALUE, "QQmlProperty"},
+    {"QQmlProperty", "QQmlProperty(QObject*,QQmlEngine*)", t10871<QQmlProperty>, P10871, 2, 2, 0, QTC_T_VALUE, "QQmlProperty"},
+    {"QQmlProperty", "QQmlProperty(QObject*,QString)", t10872<QQmlProperty>, P10872, 2, 2, 0, QTC_T_VALUE, "QQmlProperty"},
+    {"QQmlProperty", "QQmlProperty(QObject*,QString,QQmlContext*)", t10873<QQmlProperty>, P10873, 3, 3, 0, QTC_T_VALUE, "QQmlProperty"},
+    {"QQmlProperty", "QQmlProperty(QObject*,QString,QQmlEngine*)", t10874<QQmlProperty>, P10874, 3, 3, 0, QTC_T_VALUE, "QQmlProperty"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-static const qtc::ParamDesc P10717[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10875[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
-static const qtc::ParamDesc P10718[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10719[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P10720[] = {{qtc::PK_MAP, -1, "QHash<QString, QVariant>", nullptr}};
-static const qtc::ParamDesc P10721[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10727[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10728[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P10729[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10876[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10877[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10878[] = {{qtc::PK_MAP, -1, "QHash<QString, QVariant>", nullptr}};
+static const qtc::ParamDesc P10879[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10885[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10886[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10887[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtQml/qqmlpropertymap.h>)
 static const qtc::MethodDef M_QQmlPropertyMap[] = {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-    {"create", "create(QObject*)", t10717<QQmlPropertyMap>, P10717, 1, 0, qtc::MF_STATIC, QTC_T_OBJ, "QQmlPropertyMap*"},
+    {"create", "create(QObject*)", t10875<QQmlPropertyMap>, P10875, 1, 0, qtc::MF_STATIC, QTC_T_OBJ, "QQmlPropertyMap*"},
 #endif
-    {"value", "value(QString)", t10718<QQmlPropertyMap>, P10718, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"insert", "insert(QString,QVariant)", t10719<QQmlPropertyMap>, P10719, 2, 2, 0, QTC_T_NONE, "void"},
-    {"insert", "insert(QVariantHash)", t10720<QQmlPropertyMap>, P10720, 1, 1, 0, QTC_T_NONE, "void"},
-    {"clear", "clear(QString)", t10721<QQmlPropertyMap>, P10721, 1, 1, 0, QTC_T_NONE, "void"},
-    {"freeze", "freeze()", t10722<QQmlPropertyMap>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"keys", "keys()", t10723<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"count", "count()", t10724<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"size", "size()", t10725<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"isEmpty", "isEmpty()", t10726<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"contains", "contains(QString)", t10727<QQmlPropertyMap>, P10727, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"valueChanged", "valueChanged(QString,QVariant)", t10728<QQmlPropertyMap>, P10728, 2, 2, 0, QTC_T_NONE, "void"},
+    {"value", "value(QString)", t10876<QQmlPropertyMap>, P10876, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"insert", "insert(QString,QVariant)", t10877<QQmlPropertyMap>, P10877, 2, 2, 0, QTC_T_NONE, "void"},
+    {"insert", "insert(QVariantHash)", t10878<QQmlPropertyMap>, P10878, 1, 1, 0, QTC_T_NONE, "void"},
+    {"clear", "clear(QString)", t10879<QQmlPropertyMap>, P10879, 1, 1, 0, QTC_T_NONE, "void"},
+    {"freeze", "freeze()", t10880<QQmlPropertyMap>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"keys", "keys()", t10881<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"count", "count()", t10882<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"size", "size()", t10883<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"isEmpty", "isEmpty()", t10884<QQmlPropertyMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"contains", "contains(QString)", t10885<QQmlPropertyMap>, P10885, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"valueChanged", "valueChanged(QString,QVariant)", t10886<QQmlPropertyMap>, P10886, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlPropertyMap[] = {
-    {"QQmlPropertyMap", "QQmlPropertyMap(QObject*)", t10729<QQmlPropertyMap>, P10729, 1, 0, 0, QTC_T_OBJ, "QQmlPropertyMap"},
+    {"QQmlPropertyMap", "QQmlPropertyMap(QObject*)", t10887<QQmlPropertyMap>, P10887, 1, 0, 0, QTC_T_OBJ, "QQmlPropertyMap"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10734[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
-static const qtc::ParamDesc P10735[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
+static const qtc::ParamDesc P10892[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
+static const qtc::ParamDesc P10893[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
 #if __has_include(<QtQml/qqmlscriptstring.h>)
 static const qtc::MethodDef M_QQmlScriptString[] = {
-    {"isEmpty", "isEmpty()", t10730<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isUndefinedLiteral", "isUndefinedLiteral()", t10731<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNullLiteral", "isNullLiteral()", t10732<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"stringLiteral", "stringLiteral()", t10733<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"numberLiteral", "numberLiteral(bool*)", t10734<QQmlScriptString>, P10734, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"booleanLiteral", "booleanLiteral(bool*)", t10735<QQmlScriptString>, P10735, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isEmpty", "isEmpty()", t10888<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isUndefinedLiteral", "isUndefinedLiteral()", t10889<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNullLiteral", "isNullLiteral()", t10890<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"stringLiteral", "stringLiteral()", t10891<QQmlScriptString>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"numberLiteral", "numberLiteral(bool*)", t10892<QQmlScriptString>, P10892, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"booleanLiteral", "booleanLiteral(bool*)", t10893<QQmlScriptString>, P10893, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QQmlScriptString[] = {
-    {"QQmlScriptString", "QQmlScriptString()", t10736<QQmlScriptString>, nullptr, 0, 0, 0, QTC_T_VALUE, "QQmlScriptString"},
+    {"QQmlScriptString", "QQmlScriptString()", t10894<QQmlScriptString>, nullptr, 0, 0, 0, QTC_T_VALUE, "QQmlScriptString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

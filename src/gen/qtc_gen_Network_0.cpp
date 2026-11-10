@@ -15,7 +15,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtNetwork/qabstractnetworkcache.h>)
-template <class S> static int t8712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -29,7 +29,7 @@ template <class S> static int t8712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCacheMetaData> p0;
     QTC_CV(0, p0);
@@ -43,7 +43,7 @@ template <class S> static int t8713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -57,7 +57,7 @@ template <class S> static int t8714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -71,7 +71,7 @@ template <class S> static int t8715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -83,7 +83,7 @@ template <class S> static int t8716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCacheMetaData> p0;
     QTC_CV(0, p0);
@@ -97,7 +97,7 @@ template <class S> static int t8717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QIODevice *> p0;
     QTC_CV(0, p0);
@@ -112,7 +112,7 @@ template <class S> static int t8718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -126,7 +126,7 @@ template <class S> static int t8719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qabstractsocket.h>)
-template <class S> static int t8720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -138,7 +138,7 @@ template <class S> static int t8720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -150,13 +150,13 @@ template <class S> static int t8721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QAbstractSocket::PauseMode>> p0;
-    QTC_CVF(0, p0, 23);
+    QTC_CVF(0, p0, 28);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QAbstractSocket::PauseMode>> &p0) { qtc::cvf(aa[0], p0, 0, 23); s->setPauseMode(p0.get()); }) { s->setPauseMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QAbstractSocket::PauseMode>> &p0) { qtc::cvf(aa[0], p0, 0, 28); s->setPauseMode(p0.get()); }) { s->setPauseMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -164,14 +164,14 @@ template <class S> static int t8722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<unsigned short> p1;
     qtc::H<QFlags<QAbstractSocket::BindFlag>> p2;
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 21);
+    if (n > 2) QTC_CVF(2, p2, 26);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->bind(p0.get())); }) { qtc::rt(*r, s->bind(p0.get())); return 0; }
@@ -180,7 +180,7 @@ template <class S> static int t8723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<unsigned short> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->bind(p0.get(), p1.get())); }) { qtc::rt(*r, s->bind(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QAbstractSocket::BindFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 21); qtc::rt(*rr, s->bind(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->bind(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QAbstractSocket::BindFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 26); qtc::rt(*rr, s->bind(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->bind(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -188,12 +188,12 @@ template <class S> static int t8723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<unsigned short> p0;
     qtc::H<QFlags<QAbstractSocket::BindFlag>> p1;
     if (n > 0) QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 21);
+    if (n > 1) QTC_CVF(1, p1, 26);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->bind()); }) { qtc::rt(*r, s->bind()); return 0; }
@@ -202,7 +202,7 @@ template <class S> static int t8724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned short> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->bind(p0.get())); }) { qtc::rt(*r, s->bind(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned short> &p0, qtc::H<QFlags<QAbstractSocket::BindFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 21); qtc::rt(*rr, s->bind(p0.get(), p1.get())); }) { qtc::rt(*r, s->bind(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned short> &p0, qtc::H<QFlags<QAbstractSocket::BindFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 26); qtc::rt(*rr, s->bind(p0.get(), p1.get())); }) { qtc::rt(*r, s->bind(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -210,7 +210,7 @@ template <class S> static int t8724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<unsigned short> p1;
@@ -218,17 +218,17 @@ template <class S> static int t8725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QAbstractSocket::NetworkLayerProtocol> p3;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 244);
-    if (n > 3) QTC_CVE(3, p3, 22);
+    if (n > 2) QTC_CVF(2, p2, 254);
+    if (n > 3) QTC_CVE(3, p3, 27);
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned short> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->connectToHost(p0.get(), p1.get()); }) { s->connectToHost(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 244); s->connectToHost(p0.get(), p1.get(), p2.get()); }) { s->connectToHost(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 254); s->connectToHost(p0.get(), p1.get(), p2.get()); }) { s->connectToHost(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2, qtc::H<QAbstractSocket::NetworkLayerProtocol> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 244); qtc::cve(aa[3], p3, 3, 22); s->connectToHost(p0.get(), p1.get(), p2.get(), p3.get()); }) { s->connectToHost(p0.get(), p1.get(), p2.get(), p3.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2, qtc::H<QAbstractSocket::NetworkLayerProtocol> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 254); qtc::cve(aa[3], p3, 3, 27); s->connectToHost(p0.get(), p1.get(), p2.get(), p3.get()); }) { s->connectToHost(p0.get(), p1.get(), p2.get(), p3.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -236,20 +236,20 @@ template <class S> static int t8725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<unsigned short> p1;
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 244);
+    if (n > 2) QTC_CVF(2, p2, 254);
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<unsigned short> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->connectToHost(p0.get(), p1.get()); }) { s->connectToHost(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 244); s->connectToHost(p0.get(), p1.get(), p2.get()); }) { s->connectToHost(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<unsigned short> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 254); s->connectToHost(p0.get(), p1.get(), p2.get()); }) { s->connectToHost(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -257,7 +257,7 @@ template <class S> static int t8726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -269,7 +269,7 @@ template <class S> static int t8727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -281,7 +281,7 @@ template <class S> static int t8728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -293,7 +293,7 @@ template <class S> static int t8729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -305,7 +305,7 @@ template <class S> static int t8730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -317,7 +317,7 @@ template <class S> static int t8731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -329,7 +329,7 @@ template <class S> static int t8732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -341,7 +341,7 @@ template <class S> static int t8733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -353,7 +353,7 @@ template <class S> static int t8734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -365,7 +365,7 @@ template <class S> static int t8735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8886(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -377,7 +377,7 @@ template <class S> static int t8736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8887(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -391,7 +391,7 @@ template <class S> static int t8737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8888(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -403,7 +403,7 @@ template <class S> static int t8738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8889(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -415,24 +415,24 @@ template <class S> static int t8739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8890(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     qtc::H<QAbstractSocket::SocketState> p1;
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p2;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 26);
-    if (n > 2) QTC_CVF(2, p2, 244);
+    if (n > 1) QTC_CVE(1, p1, 31);
+    if (n > 2) QTC_CVF(2, p2, 254);
     if (!(qtc::fd_open((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QAbstractSocket::setSocketDescriptor(qintptr,QAbstractSocket::SocketState,OpenMode): the descriptor is not open");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->setSocketDescriptor(p0.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QAbstractSocket::SocketState> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 26); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QAbstractSocket::SocketState> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 31); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QAbstractSocket::SocketState> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 26); qtc::cvf(aa[2], p2, 2, 244); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QAbstractSocket::SocketState> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 31); qtc::cvf(aa[2], p2, 2, 254); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -440,15 +440,15 @@ template <class S> static int t8740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8891(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAbstractSocket::SocketOption> p0;
     qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 25);
+    QTC_CVE(0, p0, 30);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketOption> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 25); qtc::cv(aa[1], p1, 1); s->setSocketOption(p0.get(), p1.get()); }) { s->setSocketOption(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketOption> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 30); qtc::cv(aa[1], p1, 1); s->setSocketOption(p0.get(), p1.get()); }) { s->setSocketOption(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -456,13 +456,13 @@ template <class S> static int t8741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8892(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAbstractSocket::SocketOption> p0;
-    QTC_CVE(0, p0, 25);
+    QTC_CVE(0, p0, 30);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketOption> &p0) { qtc::cve(aa[0], p0, 0, 25); qtc::rt(*rr, s->socketOption(p0.get())); }) { qtc::rt(*r, s->socketOption(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketOption> &p0) { qtc::cve(aa[0], p0, 0, 30); qtc::rt(*rr, s->socketOption(p0.get())); }) { qtc::rt(*r, s->socketOption(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -470,7 +470,7 @@ template <class S> static int t8742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8893(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -482,7 +482,7 @@ template <class S> static int t8743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8894(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -494,7 +494,7 @@ template <class S> static int t8744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -506,7 +506,7 @@ template <class S> static int t8745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8896(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -518,7 +518,7 @@ template <class S> static int t8746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8897(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -530,7 +530,7 @@ template <class S> static int t8747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8898(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -542,7 +542,7 @@ template <class S> static int t8748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8899(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -559,7 +559,7 @@ template <class S> static int t8749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8900(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -576,7 +576,7 @@ template <class S> static int t8750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8901(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -593,7 +593,7 @@ template <class S> static int t8751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8902(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -610,7 +610,7 @@ template <class S> static int t8752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8903(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkProxy> p0;
     QTC_CV(0, p0);
@@ -624,7 +624,7 @@ template <class S> static int t8753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8904(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -636,7 +636,7 @@ template <class S> static int t8754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8905(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -648,7 +648,7 @@ template <class S> static int t8755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8906(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -662,7 +662,7 @@ template <class S> static int t8756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8907(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -674,7 +674,7 @@ template <class S> static int t8757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8908(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -686,7 +686,7 @@ template <class S> static int t8758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8909(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -698,13 +698,13 @@ template <class S> static int t8759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8910(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAbstractSocket::SocketState> p0;
-    QTC_CVE(0, p0, 26);
+    QTC_CVE(0, p0, 31);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketState> &p0) { qtc::cve(aa[0], p0, 0, 26); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketState> &p0) { qtc::cve(aa[0], p0, 0, 31); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -712,13 +712,13 @@ template <class S> static int t8760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8911(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAbstractSocket::SocketError> p0;
-    QTC_CVE(0, p0, 24);
+    QTC_CVE(0, p0, 29);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketError> &p0) { qtc::cve(aa[0], p0, 0, 24); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketError> &p0) { qtc::cve(aa[0], p0, 0, 29); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -726,15 +726,15 @@ template <class S> static int t8761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8912(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAbstractSocket::SocketType> p0;
     qtc::H<QObject *> p1;
-    QTC_CVE(0, p0, 27);
+    QTC_CVE(0, p0, 32);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketType> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 27); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAbstractSocket::SocketType> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 32); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -743,7 +743,7 @@ template <class S> static int t8762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qauthenticator.h>)
-template <class S> static int t8763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8913(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -755,7 +755,7 @@ template <class S> static int t8763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8914(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -769,7 +769,7 @@ template <class S> static int t8764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8915(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -781,7 +781,7 @@ template <class S> static int t8765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8916(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -795,7 +795,7 @@ template <class S> static int t8766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8917(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -807,7 +807,7 @@ template <class S> static int t8767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8918(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -821,7 +821,7 @@ template <class S> static int t8768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8919(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -835,7 +835,7 @@ template <class S> static int t8769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8920(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -847,7 +847,7 @@ template <class S> static int t8770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8921(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -863,7 +863,7 @@ template <class S> static int t8771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8922(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -875,7 +875,7 @@ template <class S> static int t8772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8923(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -888,7 +888,7 @@ template <class S> static int t8773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-template <class S> static int t8774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8924(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -901,7 +901,7 @@ template <class S> static int t8774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8925(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -914,7 +914,7 @@ template <class S> static int t8775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
-template <class S> static int t8776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8926(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -926,7 +926,7 @@ template <class S> static int t8776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8927(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -938,7 +938,7 @@ template <class S> static int t8777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8928(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -950,7 +950,7 @@ template <class S> static int t8778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8929(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -963,7 +963,7 @@ template <class S> static int t8779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
-template <class S> static int t8780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8930(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -975,7 +975,7 @@ template <class S> static int t8780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8931(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -987,7 +987,7 @@ template <class S> static int t8781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8932(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -999,7 +999,7 @@ template <class S> static int t8782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8933(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1013,7 +1013,7 @@ template <class S> static int t8783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8934(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1026,7 +1026,7 @@ template <class S> static int t8784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8935(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1038,7 +1038,7 @@ template <class S> static int t8785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8936(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1050,7 +1050,7 @@ template <class S> static int t8786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8937(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1062,7 +1062,7 @@ template <class S> static int t8787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8938(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1074,7 +1074,7 @@ template <class S> static int t8788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8939(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1088,7 +1088,7 @@ template <class S> static int t8789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8940(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1100,13 +1100,13 @@ template <class S> static int t8790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8941(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDnsLookup::Type> p0;
-    QTC_CVE(0, p0, 152);
+    QTC_CVE(0, p0, 159);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0) { qtc::cve(aa[0], p0, 0, 152); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0) { qtc::cve(aa[0], p0, 0, 159); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1114,7 +1114,7 @@ template <class S> static int t8791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8942(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1126,7 +1126,7 @@ template <class S> static int t8792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8943(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHostAddress> p0;
     QTC_CV(0, p0);
@@ -1141,7 +1141,7 @@ template <class S> static int t8793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t8794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8944(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1155,7 +1155,7 @@ template <class S> static int t8794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t8795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8945(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<unsigned short> p0;
     QTC_CV(0, p0);
@@ -1171,7 +1171,7 @@ template <class S> static int t8795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8946(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1185,13 +1185,13 @@ template <class S> static int t8796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8947(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDnsLookup::Protocol> p0;
-    QTC_CVE(0, p0, 151);
+    QTC_CVE(0, p0, 158);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 151); s->setNameserverProtocol(p0.get()); }) { s->setNameserverProtocol(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 158); s->setNameserverProtocol(p0.get()); }) { s->setNameserverProtocol(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1201,20 +1201,20 @@ template <class S> static int t8797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8948(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDnsLookup::Protocol> p0;
     qtc::H<QHostAddress> p1;
     qtc::H<unsigned short> p2;
-    QTC_CVE(0, p0, 151);
+    QTC_CVE(0, p0, 158);
     QTC_CV(1, p1);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0, qtc::H<QHostAddress> &p1) { qtc::cve(aa[0], p0, 0, 151); qtc::cv(aa[1], p1, 1); s->setNameserver(p0.get(), p1.get()); }) { s->setNameserver(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0, qtc::H<QHostAddress> &p1) { qtc::cve(aa[0], p0, 0, 158); qtc::cv(aa[1], p1, 1); s->setNameserver(p0.get(), p1.get()); }) { s->setNameserver(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0, qtc::H<QHostAddress> &p1, qtc::H<unsigned short> &p2) { qtc::cve(aa[0], p0, 0, 151); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); s->setNameserver(p0.get(), p1.get(), p2.get()); }) { s->setNameserver(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0, qtc::H<QHostAddress> &p1, qtc::H<unsigned short> &p2) { qtc::cve(aa[0], p0, 0, 158); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); s->setNameserver(p0.get(), p1.get(), p2.get()); }) { s->setNameserver(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1224,7 +1224,7 @@ template <class S> static int t8798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t8799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8949(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<unsigned short> p1;
@@ -1241,7 +1241,7 @@ template <class S> static int t8799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8950(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1253,7 +1253,7 @@ template <class S> static int t8800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8951(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1265,7 +1265,7 @@ template <class S> static int t8801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8952(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1277,7 +1277,7 @@ template <class S> static int t8802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8953(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1289,7 +1289,7 @@ template <class S> static int t8803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8954(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1301,7 +1301,7 @@ template <class S> static int t8804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8955(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1313,7 +1313,7 @@ template <class S> static int t8805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8956(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1326,7 +1326,7 @@ template <class S> static int t8806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8957(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1340,7 +1340,7 @@ template <class S> static int t8807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8958(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSslConfiguration> p0;
     QTC_CV(0, p0);
@@ -1356,7 +1356,7 @@ template <class S> static int t8808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1370,13 +1370,13 @@ template <class S> static int t8809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDnsLookup::Protocol> p0;
-    QTC_CVE(0, p0, 151);
+    QTC_CVE(0, p0, 158);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 151); qtc::rt(*rr, S::isProtocolSupported(p0.get())); }) { qtc::rt(*r, S::isProtocolSupported(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 158); qtc::rt(*rr, S::isProtocolSupported(p0.get())); }) { qtc::rt(*r, S::isProtocolSupported(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1385,13 +1385,13 @@ template <class S> static int t8810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDnsLookup::Protocol> p0;
-    QTC_CVE(0, p0, 151);
+    QTC_CVE(0, p0, 158);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 151); qtc::rt(*rr, S::defaultPortForProtocol(p0.get())); }) { qtc::rt(*r, S::defaultPortForProtocol(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 158); qtc::rt(*rr, S::defaultPortForProtocol(p0.get())); }) { qtc::rt(*r, S::defaultPortForProtocol(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1399,7 +1399,7 @@ template <class S> static int t8811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1411,7 +1411,7 @@ template <class S> static int t8812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1423,7 +1423,7 @@ template <class S> static int t8813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1435,7 +1435,7 @@ template <class S> static int t8814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1449,13 +1449,13 @@ template <class S> static int t8815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDnsLookup::Type> p0;
-    QTC_CVE(0, p0, 152);
+    QTC_CVE(0, p0, 159);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0) { qtc::cve(aa[0], p0, 0, 152); s->typeChanged(p0.get()); }) { s->typeChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0) { qtc::cve(aa[0], p0, 0, 159); s->typeChanged(p0.get()); }) { s->typeChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1463,7 +1463,7 @@ template <class S> static int t8816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHostAddress> p0;
     QTC_CV(0, p0);
@@ -1478,7 +1478,7 @@ template <class S> static int t8817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t8818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<unsigned short> p0;
     QTC_CV(0, p0);
@@ -1494,13 +1494,13 @@ template <class S> static int t8818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDnsLookup::Protocol> p0;
-    QTC_CVE(0, p0, 151);
+    QTC_CVE(0, p0, 158);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 151); s->nameserverProtocolChanged(p0.get()); }) { s->nameserverProtocolChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Protocol> &p0) { qtc::cve(aa[0], p0, 0, 158); s->nameserverProtocolChanged(p0.get()); }) { s->nameserverProtocolChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1509,7 +1509,7 @@ template <class S> static int t8819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1525,42 +1525,42 @@ template <class S> static int t8820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDnsLookup::Type> p0;
     qtc::H<QString> p1;
     qtc::H<QObject *> p2;
-    QTC_CVE(0, p0, 152);
+    QTC_CVE(0, p0, 159);
     QTC_CV(1, p1);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QObject *> &p2) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QObject *> &p2) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDnsLookup::Type> p0;
     qtc::H<QString> p1;
     qtc::H<QHostAddress> p2;
     qtc::H<QObject *> p3;
-    QTC_CVE(0, p0, 152);
+    QTC_CVE(0, p0, 159);
     QTC_CV(1, p1);
     QTC_CV(2, p2);
     if (n > 3) QTC_CV(3, p3);
     switch (n) {
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2, qtc::H<QObject *> &p3) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2, qtc::H<QObject *> &p3) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1568,24 +1568,24 @@ template <class S> static int t8822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t8823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDnsLookup::Type> p0;
     qtc::H<QString> p1;
     qtc::H<QHostAddress> p2;
     qtc::H<unsigned short> p3;
     qtc::H<QObject *> p4;
-    QTC_CVE(0, p0, 152);
+    QTC_CVE(0, p0, 159);
     QTC_CV(1, p1);
     QTC_CV(2, p2);
     QTC_CV(3, p3);
     if (n > 4) QTC_CV(4, p4);
     switch (n) {
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2, qtc::H<unsigned short> &p3) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2, qtc::H<unsigned short> &p3) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 5:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2, qtc::H<unsigned short> &p3, qtc::H<QObject *> &p4) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QHostAddress> &p2, qtc::H<unsigned short> &p3, qtc::H<QObject *> &p4) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1594,7 +1594,7 @@ template <class S> static int t8823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDnsLookup::Type> p0;
     qtc::H<QString> p1;
@@ -1602,21 +1602,21 @@ template <class S> static int t8824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QHostAddress> p3;
     qtc::H<unsigned short> p4;
     qtc::H<QObject *> p5;
-    QTC_CVE(0, p0, 152);
+    QTC_CVE(0, p0, 159);
     QTC_CV(1, p1);
-    QTC_CVE(2, p2, 151);
+    QTC_CVE(2, p2, 158);
     QTC_CV(3, p3);
     if (n > 4) QTC_CV(4, p4);
     if (n > 5) QTC_CV(5, p5);
     switch (n) {
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QDnsLookup::Protocol> &p2, qtc::H<QHostAddress> &p3) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 151); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QDnsLookup::Protocol> &p2, qtc::H<QHostAddress> &p3) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 158); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 5:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QDnsLookup::Protocol> &p2, qtc::H<QHostAddress> &p3, qtc::H<unsigned short> &p4) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 151); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QDnsLookup::Protocol> &p2, qtc::H<QHostAddress> &p3, qtc::H<unsigned short> &p4) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 158); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 6:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QDnsLookup::Protocol> &p2, qtc::H<QHostAddress> &p3, qtc::H<unsigned short> &p4, qtc::H<QObject *> &p5) { qtc::cve(aa[0], p0, 0, 152); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 151); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::cv(aa[5], p5, 5); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDnsLookup::Type> &p0, qtc::H<QString> &p1, qtc::H<QDnsLookup::Protocol> &p2, qtc::H<QHostAddress> &p3, qtc::H<unsigned short> &p4, qtc::H<QObject *> &p5) { qtc::cve(aa[0], p0, 0, 159); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 158); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::cv(aa[5], p5, 5); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1626,7 +1626,7 @@ template <class S> static int t8824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
-template <class S> static int t8825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1638,7 +1638,7 @@ template <class S> static int t8825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1650,7 +1650,7 @@ template <class S> static int t8826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1662,7 +1662,7 @@ template <class S> static int t8827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1674,7 +1674,7 @@ template <class S> static int t8828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1687,7 +1687,7 @@ template <class S> static int t8829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
-template <class S> static int t8830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1699,7 +1699,7 @@ template <class S> static int t8830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1711,7 +1711,7 @@ template <class S> static int t8831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1723,7 +1723,7 @@ template <class S> static int t8832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1735,7 +1735,7 @@ template <class S> static int t8833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1747,7 +1747,7 @@ template <class S> static int t8834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1759,7 +1759,7 @@ template <class S> static int t8835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1772,7 +1772,7 @@ template <class S> static int t8836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
-template <class S> static int t8837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1784,7 +1784,7 @@ template <class S> static int t8837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1796,7 +1796,7 @@ template <class S> static int t8838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1808,7 +1808,7 @@ template <class S> static int t8839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1821,7 +1821,7 @@ template <class S> static int t8840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
-template <class S> static int t8841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1833,7 +1833,7 @@ template <class S> static int t8841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1845,7 +1845,7 @@ template <class S> static int t8842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1857,7 +1857,7 @@ template <class S> static int t8843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1869,7 +1869,7 @@ template <class S> static int t8844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1881,7 +1881,7 @@ template <class S> static int t8845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1893,7 +1893,7 @@ template <class S> static int t8846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1906,7 +1906,7 @@ template <class S> static int t8847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(dtls) && __has_include(<QtNetwork/qdtls.h>)
-template <class S> static int t8848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<unsigned short> p1;
@@ -1927,7 +1927,7 @@ template <class S> static int t8848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t8999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1941,7 +1941,7 @@ template <class S> static int t8849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1953,7 +1953,7 @@ template <class S> static int t8850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1965,7 +1965,7 @@ template <class S> static int t8851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1977,7 +1977,7 @@ template <class S> static int t8852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1989,7 +1989,7 @@ template <class S> static int t8853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<unsigned short> p0;
     QTC_CV(0, p0);
@@ -2003,7 +2003,7 @@ template <class S> static int t8854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2015,7 +2015,7 @@ template <class S> static int t8855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDtlsClientVerifier::GeneratorParameters> p0;
     QTC_CV(0, p0);
@@ -2029,7 +2029,7 @@ template <class S> static int t8856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2041,7 +2041,7 @@ template <class S> static int t8857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSslConfiguration> p0;
     QTC_CV(0, p0);
@@ -2055,7 +2055,7 @@ template <class S> static int t8858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2067,7 +2067,7 @@ template <class S> static int t8859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2079,7 +2079,7 @@ template <class S> static int t8860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     qtc::H<QByteArray> p1;
@@ -2098,7 +2098,7 @@ template <class S> static int t8861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     QTC_CV(0, p0);
@@ -2113,7 +2113,7 @@ template <class S> static int t8862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     QTC_CV(0, p0);
@@ -2127,7 +2127,7 @@ template <class S> static int t8863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     QTC_CV(0, p0);
@@ -2141,7 +2141,7 @@ template <class S> static int t8864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     QTC_CV(0, p0);
@@ -2155,7 +2155,7 @@ template <class S> static int t8865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2167,7 +2167,7 @@ template <class S> static int t8866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2179,7 +2179,7 @@ template <class S> static int t8867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2191,7 +2191,7 @@ template <class S> static int t8868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     qtc::H<QByteArray> p1;
@@ -2207,7 +2207,7 @@ template <class S> static int t8869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     qtc::H<QByteArray> p1;
@@ -2223,7 +2223,7 @@ template <class S> static int t8870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2235,7 +2235,7 @@ template <class S> static int t8871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2247,7 +2247,7 @@ template <class S> static int t8872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2259,7 +2259,7 @@ template <class S> static int t8873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QSslError>> p0;
     QTC_CV(0, p0);
@@ -2273,7 +2273,7 @@ template <class S> static int t8874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2285,18 +2285,18 @@ template <class S> static int t8875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QSslSocket::SslMode> p0;
     qtc::H<QObject *> p1;
-    QTC_CVE(0, p0, 622);
+    QTC_CVE(0, p0, 646);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSslSocket::SslMode> &p0) { qtc::cve(aa[0], p0, 0, 622); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSslSocket::SslMode> &p0) { qtc::cve(aa[0], p0, 0, 646); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSslSocket::SslMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 622); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSslSocket::SslMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 646); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2305,7 +2305,7 @@ template <class S> static int t8876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(dtls) && __has_include(<QtNetwork/qdtls.h>)
-template <class S> static int t8877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDtlsClientVerifier::GeneratorParameters> p0;
     QTC_CV(0, p0);
@@ -2319,7 +2319,7 @@ template <class S> static int t8877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2331,7 +2331,7 @@ template <class S> static int t8878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUdpSocket *> p0;
     qtc::H<QByteArray> p1;
@@ -2351,7 +2351,7 @@ template <class S> static int t8879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2363,7 +2363,7 @@ template <class S> static int t8880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2375,7 +2375,7 @@ template <class S> static int t8881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2387,7 +2387,7 @@ template <class S> static int t8882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2405,7 +2405,7 @@ template <class S> static int t8883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(dtls) && __has_include(<QtNetwork/qdtls.h>)
-template <class S> static int t8884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2416,15 +2416,15 @@ template <class S> static int t8884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QCryptographicHash::Algorithm> p0;
     qtc::H<QByteArray> p1;
-    QTC_CVE(0, p0, 118);
+    QTC_CVE(0, p0, 125);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCryptographicHash::Algorithm> &p0, qtc::H<QByteArray> &p1) { qtc::cve(aa[0], p0, 0, 118); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCryptographicHash::Algorithm> &p0, qtc::H<QByteArray> &p1) { qtc::cve(aa[0], p0, 0, 125); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2433,7 +2433,7 @@ template <class S> static int t8885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qhostaddress.h>)
-template <class S> static int t8886(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -2447,7 +2447,7 @@ template <class S> static int t8886(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8887(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QIPv6Address> p0;
     QTC_CV(0, p0);
@@ -2461,7 +2461,7 @@ template <class S> static int t8887(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8888(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2475,13 +2475,13 @@ template <class S> static int t8888(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8889(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress::SpecialAddress> p0;
-    QTC_CVE(0, p0, 239);
+    QTC_CVE(0, p0, 246);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress::SpecialAddress> &p0) { qtc::cve(aa[0], p0, 0, 239); s->setAddress(p0.get()); }) { s->setAddress(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress::SpecialAddress> &p0) { qtc::cve(aa[0], p0, 0, 246); s->setAddress(p0.get()); }) { s->setAddress(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2489,7 +2489,7 @@ template <class S> static int t8889(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8890(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2501,7 +2501,7 @@ template <class S> static int t8890(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8891(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<qtc::Out<bool>> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2518,7 +2518,7 @@ template <class S> static int t8891(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8892(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2530,7 +2530,7 @@ template <class S> static int t8892(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8893(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9043(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2542,7 +2542,7 @@ template <class S> static int t8893(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8894(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9044(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2554,7 +2554,7 @@ template <class S> static int t8894(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9045(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2568,18 +2568,18 @@ template <class S> static int t8895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8896(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9046(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<QFlags<QHostAddress::ConversionModeFlag>> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 238);
+    if (n > 1) QTC_CVF(1, p1, 245);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->isEqual(p0.get())); }) { qtc::rt(*r, s->isEqual(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<QFlags<QHostAddress::ConversionModeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 238); qtc::rt(*rr, s->isEqual(p0.get(), p1.get())); }) { qtc::rt(*r, s->isEqual(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress> &p0, qtc::H<QFlags<QHostAddress::ConversionModeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 245); qtc::rt(*rr, s->isEqual(p0.get(), p1.get())); }) { qtc::rt(*r, s->isEqual(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2587,7 +2587,7 @@ template <class S> static int t8896(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8897(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9047(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2599,7 +2599,7 @@ template <class S> static int t8897(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8898(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9048(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2611,7 +2611,7 @@ template <class S> static int t8898(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8899(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9049(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<int> p1;
@@ -2627,7 +2627,7 @@ template <class S> static int t8899(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8900(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2639,7 +2639,7 @@ template <class S> static int t8900(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8901(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2651,7 +2651,7 @@ template <class S> static int t8901(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8902(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2663,7 +2663,7 @@ template <class S> static int t8902(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8903(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2675,7 +2675,7 @@ template <class S> static int t8903(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8904(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2687,7 +2687,7 @@ template <class S> static int t8904(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8905(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2699,7 +2699,7 @@ template <class S> static int t8905(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8906(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2712,7 +2712,7 @@ template <class S> static int t8906(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t8907(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2725,7 +2725,7 @@ template <class S> static int t8907(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8908(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2736,7 +2736,7 @@ template <class S> static int t8908(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8909(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -2749,7 +2749,7 @@ template <class S> static int t8909(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8910(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QIPv6Address> p0;
     QTC_CV(0, p0);
@@ -2762,7 +2762,7 @@ template <class S> static int t8910(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8911(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2775,13 +2775,13 @@ template <class S> static int t8911(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8912(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QHostAddress::SpecialAddress> p0;
-    QTC_CVE(0, p0, 239);
+    QTC_CVE(0, p0, 246);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress::SpecialAddress> &p0) { qtc::cve(aa[0], p0, 0, 239); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHostAddress::SpecialAddress> &p0) { qtc::cve(aa[0], p0, 0, 246); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2790,18 +2790,18 @@ template <class S> static int t8912(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qhstspolicy.h>)
-template <class S> static int t8913(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QUrl::ParsingMode> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 794);
+    if (n > 1) QTC_CVE(1, p1, 818);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->setHost(p0.get()); }) { s->setHost(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QUrl::ParsingMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 794); s->setHost(p0.get(), p1.get()); }) { s->setHost(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QUrl::ParsingMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 818); s->setHost(p0.get(), p1.get()); }) { s->setHost(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2809,16 +2809,16 @@ template <class S> static int t8913(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8914(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QUrl::ComponentFormattingOption>> p0;
-    if (n > 0) QTC_CVF(0, p0, 793);
+    if (n > 0) QTC_CVF(0, p0, 817);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->host()); }) { qtc::rt(*r, s->host()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QUrl::ComponentFormattingOption>> &p0) { qtc::cvf(aa[0], p0, 0, 793); qtc::rt(*rr, s->host(p0.get())); }) { qtc::rt(*r, s->host(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QUrl::ComponentFormattingOption>> &p0) { qtc::cvf(aa[0], p0, 0, 817); qtc::rt(*rr, s->host(p0.get())); }) { qtc::rt(*r, s->host(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2826,7 +2826,7 @@ template <class S> static int t8914(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8915(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDateTime> p0;
     QTC_CV(0, p0);
@@ -2840,7 +2840,7 @@ template <class S> static int t8915(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8916(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2852,7 +2852,7 @@ template <class S> static int t8916(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8917(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -2866,7 +2866,7 @@ template <class S> static int t8917(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8918(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2878,7 +2878,7 @@ template <class S> static int t8918(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8919(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2890,7 +2890,7 @@ template <class S> static int t8919(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8920(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2901,22 +2901,22 @@ template <class S> static int t8920(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8921(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDateTime> p0;
     qtc::H<QFlags<QHstsPolicy::PolicyFlag>> p1;
     qtc::H<QString> p2;
     qtc::H<QUrl::ParsingMode> p3;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 241);
+    QTC_CVF(1, p1, 248);
     QTC_CV(2, p2);
-    if (n > 3) QTC_CVE(3, p3, 794);
+    if (n > 3) QTC_CVE(3, p3, 818);
     switch (n) {
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDateTime> &p0, qtc::H<QFlags<QHstsPolicy::PolicyFlag>> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 241); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDateTime> &p0, qtc::H<QFlags<QHstsPolicy::PolicyFlag>> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 248); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDateTime> &p0, qtc::H<QFlags<QHstsPolicy::PolicyFlag>> &p1, qtc::H<QString> &p2, qtc::H<QUrl::ParsingMode> &p3) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 241); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 794); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDateTime> &p0, qtc::H<QFlags<QHstsPolicy::PolicyFlag>> &p1, qtc::H<QString> &p2, qtc::H<QUrl::ParsingMode> &p3) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 248); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 818); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2925,7 +2925,7 @@ template <class S> static int t8921(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && QT_CONFIG(http) && __has_include(<QtNetwork/qhttp1configuration.h>)
-template <class S> static int t8922(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -2939,7 +2939,7 @@ template <class S> static int t8922(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8923(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2951,7 +2951,7 @@ template <class S> static int t8923(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8924(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2964,7 +2964,7 @@ template <class S> static int t8924(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(http) && __has_include(<QtNetwork/qhttp2configuration.h>)
-template <class S> static int t8925(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -2978,7 +2978,7 @@ template <class S> static int t8925(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8926(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2990,7 +2990,7 @@ template <class S> static int t8926(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8927(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -3004,7 +3004,7 @@ template <class S> static int t8927(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8928(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3016,7 +3016,7 @@ template <class S> static int t8928(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8929(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -3030,7 +3030,7 @@ template <class S> static int t8929(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8930(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3042,7 +3042,7 @@ template <class S> static int t8930(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8931(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -3056,7 +3056,7 @@ template <class S> static int t8931(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8932(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3068,7 +3068,7 @@ template <class S> static int t8932(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8933(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -3082,7 +3082,7 @@ template <class S> static int t8933(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8934(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3095,7 +3095,7 @@ template <class S> static int t8934(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-template <class S> static int t8935(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -3111,7 +3111,7 @@ template <class S> static int t8935(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-template <class S> static int t8936(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3124,7 +3124,7 @@ template <class S> static int t8936(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8937(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3137,7 +3137,7 @@ template <class S> static int t8937(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0) && __has_include(<QtNetwork/qhttpheaders.h>)
-template <class S> static int t8938(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3150,7 +3150,7 @@ template <class S> static int t8938(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0) && __has_include(<QtNetwork/qhttpheaders.h>)
-template <class S> static int t8939(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3164,7 +3164,7 @@ template <class S> static int t8939(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtNetwork/qhttpheaders.h>)
-template <class S> static int t8940(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
@@ -3180,15 +3180,15 @@ template <class S> static int t8940(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8941(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
     qtc::H<QAnyStringView> p1;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QAnyStringView> &p1) { qtc::cve(aa[0], p0, 0, 242); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->append(p0.get(), p1.get())); }) { qtc::rt(*r, s->append(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QAnyStringView> &p1) { qtc::cve(aa[0], p0, 0, 249); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->append(p0.get(), p1.get())); }) { qtc::rt(*r, s->append(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3196,7 +3196,7 @@ template <class S> static int t8941(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8942(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QAnyStringView> p1;
@@ -3215,18 +3215,18 @@ template <class S> static int t8942(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8943(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QHttpHeaders::WellKnownHeader> p1;
     qtc::H<QAnyStringView> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 242);
+    QTC_CVE(1, p1, 249);
     QTC_CV(2, p2);
     if (!(qtc::pos(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QHttpHeaders::insert(qsizetype,QHttpHeaders::WellKnownHeader,QAnyStringView): index out of range [0, size()]");
     switch (n) {
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QHttpHeaders::WellKnownHeader> &p1, qtc::H<QAnyStringView> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 242); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->insert(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->insert(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QHttpHeaders::WellKnownHeader> &p1, qtc::H<QAnyStringView> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 249); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->insert(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->insert(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3234,7 +3234,7 @@ template <class S> static int t8943(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8944(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QAnyStringView> p1;
@@ -3253,18 +3253,18 @@ template <class S> static int t8944(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8945(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QHttpHeaders::WellKnownHeader> p1;
     qtc::H<QAnyStringView> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 242);
+    QTC_CVE(1, p1, 249);
     QTC_CV(2, p2);
     if (!(qtc::idx(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QHttpHeaders::replace(qsizetype,QHttpHeaders::WellKnownHeader,QAnyStringView): index out of range [0, size())");
     switch (n) {
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QHttpHeaders::WellKnownHeader> &p1, qtc::H<QAnyStringView> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 242); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->replace(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->replace(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QHttpHeaders::WellKnownHeader> &p1, qtc::H<QAnyStringView> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 249); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->replace(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->replace(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3273,7 +3273,7 @@ template <class S> static int t8945(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8946(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QAnyStringView> p1;
@@ -3291,15 +3291,15 @@ template <class S> static int t8946(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t8947(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
     qtc::H<QAnyStringView> p1;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QAnyStringView> &p1) { qtc::cve(aa[0], p0, 0, 242); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->replaceOrAppend(p0.get(), p1.get())); }) { qtc::rt(*r, s->replaceOrAppend(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QAnyStringView> &p1) { qtc::cve(aa[0], p0, 0, 249); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->replaceOrAppend(p0.get(), p1.get())); }) { qtc::rt(*r, s->replaceOrAppend(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3308,7 +3308,7 @@ template <class S> static int t8947(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8948(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -3322,13 +3322,13 @@ template <class S> static int t8948(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8949(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 242); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 249); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3336,7 +3336,7 @@ template <class S> static int t8949(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8950(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3348,7 +3348,7 @@ template <class S> static int t8950(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8951(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -3362,13 +3362,13 @@ template <class S> static int t8951(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8952(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 242); s->removeAll(p0.get()); }) { s->removeAll(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 249); s->removeAll(p0.get()); }) { s->removeAll(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3376,7 +3376,7 @@ template <class S> static int t8952(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8953(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -3391,7 +3391,7 @@ template <class S> static int t8953(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8954(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QByteArrayView> p1;
@@ -3410,18 +3410,18 @@ template <class S> static int t8954(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8955(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
     qtc::H<QByteArrayView> p1;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 242); qtc::rt(*rr, s->value(p0.get())); }) { qtc::rt(*r, s->value(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 249); qtc::rt(*rr, s->value(p0.get())); }) { qtc::rt(*r, s->value(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QByteArrayView> &p1) { qtc::cve(aa[0], p0, 0, 242); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->value(p0.get(), p1.get())); }) { qtc::rt(*r, s->value(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QByteArrayView> &p1) { qtc::cve(aa[0], p0, 0, 249); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->value(p0.get(), p1.get())); }) { qtc::rt(*r, s->value(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3429,7 +3429,7 @@ template <class S> static int t8955(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8956(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -3443,13 +3443,13 @@ template <class S> static int t8956(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8957(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 242); qtc::rt(*rr, s->values(p0.get())); }) { qtc::rt(*r, s->values(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 249); qtc::rt(*rr, s->values(p0.get())); }) { qtc::rt(*r, s->values(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3457,7 +3457,7 @@ template <class S> static int t8957(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8958(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -3472,7 +3472,7 @@ template <class S> static int t8958(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -3487,7 +3487,7 @@ template <class S> static int t8959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -3501,13 +3501,13 @@ template <class S> static int t8960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 242); qtc::rt(*rr, s->combinedValue(p0.get())); }) { qtc::rt(*r, s->combinedValue(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 249); qtc::rt(*rr, s->combinedValue(p0.get())); }) { qtc::rt(*r, s->combinedValue(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3516,7 +3516,7 @@ template <class S> static int t8961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t8962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QDateTime> p1;
@@ -3534,15 +3534,15 @@ template <class S> static int t8962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t8963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
     qtc::H<QDateTime> p1;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QDateTime> &p1) { qtc::cve(aa[0], p0, 0, 242); qtc::cv(aa[1], p1, 1); s->setDateTimeValue(p0.get(), p1.get()); }) { s->setDateTimeValue(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0, qtc::H<QDateTime> &p1) { qtc::cve(aa[0], p0, 0, 249); qtc::cv(aa[1], p1, 1); s->setDateTimeValue(p0.get(), p1.get()); }) { s->setDateTimeValue(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3552,7 +3552,7 @@ template <class S> static int t8963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t8964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaderRangeSet> p0;
     QTC_CV(0, p0);
@@ -3567,7 +3567,7 @@ template <class S> static int t8964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t8965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3579,7 +3579,7 @@ template <class S> static int t8965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -3594,7 +3594,7 @@ template <class S> static int t8966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3606,20 +3606,20 @@ template <class S> static int t8967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QHttpHeaders::WellKnownHeader> p0;
-    QTC_CVE(0, p0, 242);
+    QTC_CVE(0, p0, 249);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 242); qtc::rt(*rr, S::wellKnownHeaderName(p0.get())); }) { qtc::rt(*r, S::wellKnownHeaderName(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders::WellKnownHeader> &p0) { qtc::cve(aa[0], p0, 0, 249); qtc::rt(*rr, S::wellKnownHeaderName(p0.get())); }) { qtc::rt(*r, S::wellKnownHeaderName(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMultiMap<QByteArray, QByteArray>> p0;
     QTC_CV(0, p0);
@@ -3632,7 +3632,7 @@ template <class S> static int t8969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMultiHash<QByteArray, QByteArray>> p0;
     QTC_CV(0, p0);
@@ -3645,7 +3645,7 @@ template <class S> static int t8970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3657,7 +3657,7 @@ template <class S> static int t8971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3669,7 +3669,7 @@ template <class S> static int t8972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3682,13 +3682,13 @@ template <class S> static int t8973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(http) && __has_include(<QtNetwork/qhttpmultipart.h>)
-template <class S> static int t8974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QHttpMultiPart::ContentType> p0;
-    QTC_CVE(0, p0, 243);
+    QTC_CVE(0, p0, 250);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpMultiPart::ContentType> &p0) { qtc::cve(aa[0], p0, 0, 243); s->setContentType(p0.get()); }) { s->setContentType(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpMultiPart::ContentType> &p0) { qtc::cve(aa[0], p0, 0, 250); s->setContentType(p0.get()); }) { s->setContentType(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3696,7 +3696,7 @@ template <class S> static int t8974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3708,7 +3708,7 @@ template <class S> static int t8975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -3722,7 +3722,7 @@ template <class S> static int t8976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3738,18 +3738,18 @@ template <class S> static int t8977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QHttpMultiPart::ContentType> p0;
     qtc::H<QObject *> p1;
-    QTC_CVE(0, p0, 243);
+    QTC_CVE(0, p0, 250);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpMultiPart::ContentType> &p0) { qtc::cve(aa[0], p0, 0, 243); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpMultiPart::ContentType> &p0) { qtc::cve(aa[0], p0, 0, 250); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpMultiPart::ContentType> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 243); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpMultiPart::ContentType> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 250); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3758,7 +3758,7 @@ template <class S> static int t8978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(localserver) && __has_include(<QtNetwork/qlocalserver.h>)
-template <class S> static int t8979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3770,7 +3770,7 @@ template <class S> static int t8979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3782,7 +3782,7 @@ template <class S> static int t8980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3794,7 +3794,7 @@ template <class S> static int t8981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3806,7 +3806,7 @@ template <class S> static int t8982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3818,7 +3818,7 @@ template <class S> static int t8983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3832,7 +3832,7 @@ template <class S> static int t8984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -3847,7 +3847,7 @@ template <class S> static int t8985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3859,7 +3859,7 @@ template <class S> static int t8986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3871,7 +3871,7 @@ template <class S> static int t8987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3883,7 +3883,7 @@ template <class S> static int t8988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3895,7 +3895,7 @@ template <class S> static int t8989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3908,7 +3908,7 @@ template <class S> static int t8990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3920,7 +3920,7 @@ template <class S> static int t8991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3934,7 +3934,7 @@ template <class S> static int t8992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<qtc::Out<bool>> p1;
@@ -3956,7 +3956,7 @@ template <class S> static int t8993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3970,7 +3970,7 @@ template <class S> static int t8994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3982,13 +3982,13 @@ template <class S> static int t8995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QLocalServer::SocketOption>> p0;
-    QTC_CVF(0, p0, 301);
+    QTC_CVF(0, p0, 311);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QLocalServer::SocketOption>> &p0) { qtc::cvf(aa[0], p0, 0, 301); s->setSocketOptions(p0.get()); }) { s->setSocketOptions(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QLocalServer::SocketOption>> &p0) { qtc::cvf(aa[0], p0, 0, 311); s->setSocketOptions(p0.get()); }) { s->setSocketOptions(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3996,7 +3996,7 @@ template <class S> static int t8996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4008,7 +4008,7 @@ template <class S> static int t8997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4020,7 +4020,7 @@ template <class S> static int t8998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t8999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4038,16 +4038,16 @@ template <class S> static int t8999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(localserver) && __has_include(<QtNetwork/qlocalsocket.h>)
-template <class S> static int t9000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p0;
-    if (n > 0) QTC_CVF(0, p0, 244);
+    if (n > 0) QTC_CVF(0, p0, 254);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->connectToServer(); }) { s->connectToServer(); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 244); s->connectToServer(p0.get()); }) { s->connectToServer(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 254); s->connectToServer(p0.get()); }) { s->connectToServer(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4055,18 +4055,18 @@ template <class S> static int t9000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 244);
+    if (n > 1) QTC_CVF(1, p1, 254);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->connectToServer(p0.get()); }) { s->connectToServer(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 244); s->connectToServer(p0.get(), p1.get()); }) { s->connectToServer(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 254); s->connectToServer(p0.get(), p1.get()); }) { s->connectToServer(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4074,7 +4074,7 @@ template <class S> static int t9001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4086,7 +4086,7 @@ template <class S> static int t9002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -4100,7 +4100,7 @@ template <class S> static int t9003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4112,7 +4112,7 @@ template <class S> static int t9004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4124,7 +4124,7 @@ template <class S> static int t9005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4136,7 +4136,7 @@ template <class S> static int t9006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4148,7 +4148,7 @@ template <class S> static int t9007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4160,7 +4160,7 @@ template <class S> static int t9008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4172,7 +4172,7 @@ template <class S> static int t9009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4184,17 +4184,17 @@ template <class S> static int t9010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p0;
-    if (n > 0) QTC_CVF(0, p0, 244);
+    if (n > 0) QTC_CVF(0, p0, 254);
     if (n > 0 && !(qtc::nmea_open_ok(s, int((p0.get()))))) return qtc::pre_fail(QTC_ERR_STATE, "QLocalSocket::open(OpenMode): an NMEA source reads this device: open it for reading");
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->open()); }) { qtc::rt(*r, s->open()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 244); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 254); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4202,7 +4202,7 @@ template <class S> static int t9011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4214,7 +4214,7 @@ template <class S> static int t9012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4226,7 +4226,7 @@ template <class S> static int t9013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4238,7 +4238,7 @@ template <class S> static int t9014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4250,7 +4250,7 @@ template <class S> static int t9015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4262,7 +4262,7 @@ template <class S> static int t9016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -4276,24 +4276,24 @@ template <class S> static int t9017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     qtc::H<QLocalSocket::LocalSocketState> p1;
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p2;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 303);
-    if (n > 2) QTC_CVF(2, p2, 244);
+    if (n > 1) QTC_CVE(1, p1, 313);
+    if (n > 2) QTC_CVF(2, p2, 254);
     if (!(qtc::fd_open((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QLocalSocket::setSocketDescriptor(qintptr,QLocalSocket::LocalSocketState,OpenMode): the descriptor is not open");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->setSocketDescriptor(p0.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QLocalSocket::LocalSocketState> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 303); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QLocalSocket::LocalSocketState> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 313); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QLocalSocket::LocalSocketState> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 303); qtc::cvf(aa[2], p2, 2, 244); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<QLocalSocket::LocalSocketState> &p1, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 313); qtc::cvf(aa[2], p2, 2, 254); qtc::rt(*rr, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->setSocketDescriptor(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4301,7 +4301,7 @@ template <class S> static int t9018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4313,13 +4313,13 @@ template <class S> static int t9019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QLocalSocket::SocketOption>> p0;
-    QTC_CVF(0, p0, 304);
+    QTC_CVF(0, p0, 314);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QLocalSocket::SocketOption>> &p0) { qtc::cvf(aa[0], p0, 0, 304); s->setSocketOptions(p0.get()); }) { s->setSocketOptions(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QLocalSocket::SocketOption>> &p0) { qtc::cvf(aa[0], p0, 0, 314); s->setSocketOptions(p0.get()); }) { s->setSocketOptions(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4327,7 +4327,7 @@ template <class S> static int t9020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4339,7 +4339,7 @@ template <class S> static int t9021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4351,7 +4351,7 @@ template <class S> static int t9022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4368,7 +4368,7 @@ template <class S> static int t9023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4385,7 +4385,7 @@ template <class S> static int t9024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4402,7 +4402,7 @@ template <class S> static int t9025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4419,7 +4419,7 @@ template <class S> static int t9026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4431,7 +4431,7 @@ template <class S> static int t9027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4443,13 +4443,13 @@ template <class S> static int t9028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QLocalSocket::LocalSocketError> p0;
-    QTC_CVE(0, p0, 302);
+    QTC_CVE(0, p0, 312);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLocalSocket::LocalSocketError> &p0) { qtc::cve(aa[0], p0, 0, 302); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLocalSocket::LocalSocketError> &p0) { qtc::cve(aa[0], p0, 0, 312); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4457,13 +4457,13 @@ template <class S> static int t9029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QLocalSocket::LocalSocketState> p0;
-    QTC_CVE(0, p0, 303);
+    QTC_CVE(0, p0, 313);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLocalSocket::LocalSocketState> &p0) { qtc::cve(aa[0], p0, 0, 303); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLocalSocket::LocalSocketState> &p0) { qtc::cve(aa[0], p0, 0, 313); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4471,7 +4471,7 @@ template <class S> static int t9030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4489,7 +4489,7 @@ template <class S> static int t9031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkaccessmanager.h>)
-template <class S> static int t9032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4501,7 +4501,7 @@ template <class S> static int t9032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4513,7 +4513,7 @@ template <class S> static int t9033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4525,7 +4525,7 @@ template <class S> static int t9034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4537,7 +4537,7 @@ template <class S> static int t9035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkProxy> p0;
     QTC_CV(0, p0);
@@ -4551,7 +4551,7 @@ template <class S> static int t9036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4563,7 +4563,7 @@ template <class S> static int t9037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAbstractNetworkCache *> p0;
     QTC_CV(0, p0);
@@ -4579,7 +4579,7 @@ template <class S> static int t9038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4591,7 +4591,7 @@ template <class S> static int t9039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCookieJar *> p0;
     QTC_CV(0, p0);
@@ -4607,7 +4607,7 @@ template <class S> static int t9040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -4621,7 +4621,7 @@ template <class S> static int t9041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4633,7 +4633,7 @@ template <class S> static int t9042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9043(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     qtc::H<QString> p1;
@@ -4652,7 +4652,7 @@ template <class S> static int t9043(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9044(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4664,7 +4664,7 @@ template <class S> static int t9044(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9045(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QHstsPolicy>> p0;
     QTC_CV(0, p0);
@@ -4678,7 +4678,7 @@ template <class S> static int t9045(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9046(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4690,7 +4690,7 @@ template <class S> static int t9046(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9047(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     QTC_CV(0, p0);
@@ -4704,7 +4704,7 @@ template <class S> static int t9047(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9048(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     QTC_CV(0, p0);
@@ -4719,7 +4719,7 @@ template <class S> static int t9048(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9049(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QIODevice *> p1;
@@ -4737,7 +4737,7 @@ template <class S> static int t9049(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QByteArray> p1;
@@ -4754,7 +4754,7 @@ template <class S> static int t9050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QIODevice *> p1;
@@ -4770,7 +4770,7 @@ template <class S> static int t9051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QByteArray> p1;
@@ -4786,7 +4786,7 @@ template <class S> static int t9052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QIODevice *> p1;
@@ -4802,7 +4802,7 @@ template <class S> static int t9053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QByteArray> p1;
@@ -4818,7 +4818,7 @@ template <class S> static int t9054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     QTC_CV(0, p0);
@@ -4832,7 +4832,7 @@ template <class S> static int t9055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QByteArray> p1;
@@ -4853,7 +4853,7 @@ template <class S> static int t9056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QByteArray> p1;
@@ -4871,7 +4871,7 @@ template <class S> static int t9057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QHttpMultiPart *> p1;
@@ -4887,7 +4887,7 @@ template <class S> static int t9058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QHttpMultiPart *> p1;
@@ -4903,7 +4903,7 @@ template <class S> static int t9059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest> p0;
     qtc::H<QByteArray> p1;
@@ -4921,7 +4921,7 @@ template <class S> static int t9060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<unsigned short> p1;
@@ -4945,7 +4945,7 @@ template <class S> static int t9061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<unsigned short> p1;
@@ -4965,7 +4965,7 @@ template <class S> static int t9062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<unsigned short> p1;
@@ -4984,13 +4984,13 @@ template <class S> static int t9063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest::RedirectPolicy> p0;
-    QTC_CVE(0, p0, 373);
+    QTC_CVE(0, p0, 394);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::RedirectPolicy> &p0) { qtc::cve(aa[0], p0, 0, 373); s->setRedirectPolicy(p0.get()); }) { s->setRedirectPolicy(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::RedirectPolicy> &p0) { qtc::cve(aa[0], p0, 0, 394); s->setRedirectPolicy(p0.get()); }) { s->setRedirectPolicy(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4998,7 +4998,7 @@ template <class S> static int t9064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -5010,7 +5010,7 @@ template <class S> static int t9065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -5022,7 +5022,7 @@ template <class S> static int t9066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -5036,7 +5036,7 @@ template <class S> static int t9067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -5048,7 +5048,7 @@ template <class S> static int t9068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -5063,7 +5063,7 @@ template <class S> static int t9069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -5076,7 +5076,7 @@ template <class S> static int t9070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkReply *> p0;
     QTC_CV(0, p0);
@@ -5090,7 +5090,7 @@ template <class S> static int t9071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkReply *> p0;
     QTC_CV(0, p0);
@@ -5104,7 +5104,7 @@ template <class S> static int t9072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkReply *> p0;
     qtc::H<QList<QSslError>> p1;
@@ -5120,7 +5120,7 @@ template <class S> static int t9073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -5138,7 +5138,7 @@ template <class S> static int t9074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkinterface.h>)
-template <class S> static int t9075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5150,13 +5150,13 @@ template <class S> static int t9075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkAddressEntry::DnsEligibilityStatus> p0;
-    QTC_CVE(0, p0, 356);
+    QTC_CVE(0, p0, 377);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkAddressEntry::DnsEligibilityStatus> &p0) { qtc::cve(aa[0], p0, 0, 356); s->setDnsEligibility(p0.get()); }) { s->setDnsEligibility(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkAddressEntry::DnsEligibilityStatus> &p0) { qtc::cve(aa[0], p0, 0, 377); s->setDnsEligibility(p0.get()); }) { s->setDnsEligibility(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5164,7 +5164,7 @@ template <class S> static int t9076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5176,7 +5176,7 @@ template <class S> static int t9077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress> p0;
     QTC_CV(0, p0);
@@ -5190,7 +5190,7 @@ template <class S> static int t9078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5202,7 +5202,7 @@ template <class S> static int t9079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress> p0;
     QTC_CV(0, p0);
@@ -5216,7 +5216,7 @@ template <class S> static int t9080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5228,7 +5228,7 @@ template <class S> static int t9081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -5242,7 +5242,7 @@ template <class S> static int t9082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5254,7 +5254,7 @@ template <class S> static int t9083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress> p0;
     QTC_CV(0, p0);
@@ -5268,7 +5268,7 @@ template <class S> static int t9084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5280,7 +5280,7 @@ template <class S> static int t9085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5292,7 +5292,7 @@ template <class S> static int t9086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5304,7 +5304,7 @@ template <class S> static int t9087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDeadlineTimer> p0;
     qtc::H<QDeadlineTimer> p1;
@@ -5320,7 +5320,7 @@ template <class S> static int t9088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5332,7 +5332,7 @@ template <class S> static int t9089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5344,7 +5344,7 @@ template <class S> static int t9090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5356,7 +5356,7 @@ template <class S> static int t9091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -5369,7 +5369,7 @@ template <class S> static int t9092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qabstractnetworkcache.h>)
-template <class S> static int t9093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5381,7 +5381,7 @@ template <class S> static int t9093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5393,7 +5393,7 @@ template <class S> static int t9094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -5408,7 +5408,7 @@ template <class S> static int t9095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5422,7 +5422,7 @@ template <class S> static int t9096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders> p0;
     QTC_CV(0, p0);
@@ -5437,7 +5437,7 @@ template <class S> static int t9097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5449,7 +5449,7 @@ template <class S> static int t9098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDateTime> p0;
     QTC_CV(0, p0);
@@ -5463,7 +5463,7 @@ template <class S> static int t9099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5475,7 +5475,7 @@ template <class S> static int t9100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDateTime> p0;
     QTC_CV(0, p0);
@@ -5489,7 +5489,7 @@ template <class S> static int t9101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5501,7 +5501,7 @@ template <class S> static int t9102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -5515,7 +5515,7 @@ template <class S> static int t9103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5527,7 +5527,7 @@ template <class S> static int t9104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHash<QNetworkRequest::Attribute, QVariant>> p0;
     QTC_CV(0, p0);
@@ -5541,7 +5541,7 @@ template <class S> static int t9105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -5554,7 +5554,7 @@ template <class S> static int t9106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkcookie.h>)
-template <class S> static int t9107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5566,7 +5566,7 @@ template <class S> static int t9107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -5580,7 +5580,7 @@ template <class S> static int t9108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5592,7 +5592,7 @@ template <class S> static int t9109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -5606,7 +5606,7 @@ template <class S> static int t9110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5618,13 +5618,13 @@ template <class S> static int t9111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkCookie::SameSite> p0;
-    QTC_CVE(0, p0, 358);
+    QTC_CVE(0, p0, 379);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkCookie::SameSite> &p0) { qtc::cve(aa[0], p0, 0, 358); s->setSameSitePolicy(p0.get()); }) { s->setSameSitePolicy(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkCookie::SameSite> &p0) { qtc::cve(aa[0], p0, 0, 379); s->setSameSitePolicy(p0.get()); }) { s->setSameSitePolicy(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5632,7 +5632,7 @@ template <class S> static int t9112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5644,7 +5644,7 @@ template <class S> static int t9113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5656,7 +5656,7 @@ template <class S> static int t9114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDateTime> p0;
     QTC_CV(0, p0);
@@ -5670,7 +5670,7 @@ template <class S> static int t9115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5682,7 +5682,7 @@ template <class S> static int t9116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -5696,7 +5696,7 @@ template <class S> static int t9117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5708,7 +5708,7 @@ template <class S> static int t9118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -5722,7 +5722,7 @@ template <class S> static int t9119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5734,7 +5734,7 @@ template <class S> static int t9120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -5748,7 +5748,7 @@ template <class S> static int t9121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5760,7 +5760,7 @@ template <class S> static int t9122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -5774,16 +5774,16 @@ template <class S> static int t9123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkCookie::RawForm> p0;
-    if (n > 0) QTC_CVE(0, p0, 357);
+    if (n > 0) QTC_CVE(0, p0, 378);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toRawForm()); }) { qtc::rt(*r, s->toRawForm()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkCookie::RawForm> &p0) { qtc::cve(aa[0], p0, 0, 357); qtc::rt(*rr, s->toRawForm(p0.get())); }) { qtc::rt(*r, s->toRawForm(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkCookie::RawForm> &p0) { qtc::cve(aa[0], p0, 0, 378); qtc::rt(*rr, s->toRawForm(p0.get())); }) { qtc::rt(*r, s->toRawForm(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5791,7 +5791,7 @@ template <class S> static int t9124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkCookie> p0;
     QTC_CV(0, p0);
@@ -5805,7 +5805,7 @@ template <class S> static int t9125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -5820,7 +5820,7 @@ template <class S> static int t9126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QByteArrayView> p0;
     QTC_CV(0, p0);
@@ -5834,7 +5834,7 @@ template <class S> static int t9127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QByteArray> p0;
     qtc::H<QByteArray> p1;
@@ -5857,7 +5857,7 @@ template <class S> static int t9128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkcookiejar.h>)
-template <class S> static int t9129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -5871,7 +5871,7 @@ template <class S> static int t9129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QNetworkCookie>> p0;
     qtc::H<QUrl> p1;
@@ -5887,7 +5887,7 @@ template <class S> static int t9130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCookie> p0;
     QTC_CV(0, p0);
@@ -5901,7 +5901,7 @@ template <class S> static int t9131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCookie> p0;
     QTC_CV(0, p0);
@@ -5915,7 +5915,7 @@ template <class S> static int t9132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCookie> p0;
     QTC_CV(0, p0);
@@ -5929,7 +5929,7 @@ template <class S> static int t9133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -5947,7 +5947,7 @@ template <class S> static int t9134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkdatagram.h>)
-template <class S> static int t9135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5959,7 +5959,7 @@ template <class S> static int t9135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5971,7 +5971,7 @@ template <class S> static int t9136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5983,7 +5983,7 @@ template <class S> static int t9137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -5995,7 +5995,7 @@ template <class S> static int t9138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned int> p0;
     QTC_CV(0, p0);
@@ -6009,7 +6009,7 @@ template <class S> static int t9139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6021,7 +6021,7 @@ template <class S> static int t9140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6033,7 +6033,7 @@ template <class S> static int t9141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6045,7 +6045,7 @@ template <class S> static int t9142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6057,7 +6057,7 @@ template <class S> static int t9143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<unsigned short> p1;
@@ -6076,7 +6076,7 @@ template <class S> static int t9144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHostAddress> p0;
     qtc::H<unsigned short> p1;
@@ -6092,7 +6092,7 @@ template <class S> static int t9145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6104,7 +6104,7 @@ template <class S> static int t9146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -6118,7 +6118,7 @@ template <class S> static int t9147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6130,7 +6130,7 @@ template <class S> static int t9148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -6144,7 +6144,7 @@ template <class S> static int t9149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -6158,7 +6158,7 @@ template <class S> static int t9150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -6172,7 +6172,7 @@ template <class S> static int t9151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -6183,7 +6183,7 @@ template <class S> static int t9152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QByteArray> p0;
     qtc::H<QHostAddress> p1;
@@ -6208,7 +6208,7 @@ template <class S> static int t9153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_CONFIG(networkdiskcache) && __has_include(<QtNetwork/qnetworkdiskcache.h>)
-template <class S> static int t9154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6220,7 +6220,7 @@ template <class S> static int t9154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -6235,7 +6235,7 @@ template <class S> static int t9155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6247,7 +6247,7 @@ template <class S> static int t9156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -6261,7 +6261,7 @@ template <class S> static int t9157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6273,7 +6273,7 @@ template <class S> static int t9158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -6287,7 +6287,7 @@ template <class S> static int t9159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCacheMetaData> p0;
     QTC_CV(0, p0);
@@ -6301,7 +6301,7 @@ template <class S> static int t9160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -6315,7 +6315,7 @@ template <class S> static int t9161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -6329,7 +6329,7 @@ template <class S> static int t9162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkCacheMetaData> p0;
     QTC_CV(0, p0);
@@ -6343,7 +6343,7 @@ template <class S> static int t9163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QIODevice *> p0;
     QTC_CV(0, p0);
@@ -6358,7 +6358,7 @@ template <class S> static int t9164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -6372,7 +6372,7 @@ template <class S> static int t9165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6384,7 +6384,7 @@ template <class S> static int t9166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -6402,7 +6402,7 @@ template <class S> static int t9167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkinformation.h>)
-template <class S> static int t9168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6414,7 +6414,7 @@ template <class S> static int t9168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6426,7 +6426,7 @@ template <class S> static int t9169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6438,7 +6438,7 @@ template <class S> static int t9170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6450,7 +6450,7 @@ template <class S> static int t9171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6462,13 +6462,13 @@ template <class S> static int t9172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QNetworkInformation::Feature>> p0;
-    QTC_CVF(0, p0, 359);
+    QTC_CVF(0, p0, 380);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkInformation::Feature>> &p0) { qtc::cvf(aa[0], p0, 0, 359); qtc::rt(*rr, s->supports(p0.get())); }) { qtc::rt(*r, s->supports(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkInformation::Feature>> &p0) { qtc::cvf(aa[0], p0, 0, 380); qtc::rt(*rr, s->supports(p0.get())); }) { qtc::rt(*r, s->supports(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -6476,7 +6476,7 @@ template <class S> static int t9173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -6488,7 +6488,7 @@ template <class S> static int t9174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -6499,7 +6499,7 @@ template <class S> static int t9175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QStringView> p0;
     QTC_CV(0, p0);
@@ -6512,20 +6512,20 @@ template <class S> static int t9176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QFlags<QNetworkInformation::Feature>> p0;
-    QTC_CVF(0, p0, 359);
+    QTC_CVF(0, p0, 380);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkInformation::Feature>> &p0) { qtc::cvf(aa[0], p0, 0, 359); qtc::rt(*rr, S::loadBackendByFeatures(p0.get())); }) { qtc::rt(*r, S::loadBackendByFeatures(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkInformation::Feature>> &p0) { qtc::cvf(aa[0], p0, 0, 380); qtc::rt(*rr, S::loadBackendByFeatures(p0.get())); }) { qtc::rt(*r, S::loadBackendByFeatures(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QStringView> p0;
     QTC_CV(0, p0);
@@ -6538,20 +6538,20 @@ template <class S> static int t9178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QFlags<QNetworkInformation::Feature>> p0;
-    QTC_CVF(0, p0, 359);
+    QTC_CVF(0, p0, 380);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkInformation::Feature>> &p0) { qtc::cvf(aa[0], p0, 0, 359); qtc::rt(*rr, S::load(p0.get())); }) { qtc::rt(*r, S::load(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkInformation::Feature>> &p0) { qtc::cvf(aa[0], p0, 0, 380); qtc::rt(*rr, S::load(p0.get())); }) { qtc::rt(*r, S::load(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -6562,7 +6562,7 @@ template <class S> static int t9180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -6573,13 +6573,13 @@ template <class S> static int t9181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkInformation::Reachability> p0;
-    QTC_CVE(0, p0, 360);
+    QTC_CVE(0, p0, 381);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkInformation::Reachability> &p0) { qtc::cve(aa[0], p0, 0, 360); s->reachabilityChanged(p0.get()); }) { s->reachabilityChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkInformation::Reachability> &p0) { qtc::cve(aa[0], p0, 0, 381); s->reachabilityChanged(p0.get()); }) { s->reachabilityChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -6587,7 +6587,7 @@ template <class S> static int t9182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -6601,13 +6601,13 @@ template <class S> static int t9183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkInformation::TransportMedium> p0;
-    QTC_CVE(0, p0, 361);
+    QTC_CVE(0, p0, 382);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkInformation::TransportMedium> &p0) { qtc::cve(aa[0], p0, 0, 361); s->transportMediumChanged(p0.get()); }) { s->transportMediumChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkInformation::TransportMedium> &p0) { qtc::cve(aa[0], p0, 0, 382); s->transportMediumChanged(p0.get()); }) { s->transportMediumChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -6615,7 +6615,7 @@ template <class S> static int t9184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -6631,7 +6631,7 @@ template <class S> static int t9185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkinterface.h>)
-template <class S> static int t9186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6643,7 +6643,7 @@ template <class S> static int t9186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6655,7 +6655,7 @@ template <class S> static int t9187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6667,7 +6667,7 @@ template <class S> static int t9188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6679,7 +6679,7 @@ template <class S> static int t9189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6691,7 +6691,7 @@ template <class S> static int t9190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6703,7 +6703,7 @@ template <class S> static int t9191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6715,7 +6715,7 @@ template <class S> static int t9192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6727,7 +6727,7 @@ template <class S> static int t9193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6739,7 +6739,7 @@ template <class S> static int t9194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -6752,7 +6752,7 @@ template <class S> static int t9195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -6765,7 +6765,7 @@ template <class S> static int t9196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -6778,7 +6778,7 @@ template <class S> static int t9197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -6791,7 +6791,7 @@ template <class S> static int t9198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -6802,7 +6802,7 @@ template <class S> static int t9199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -6813,7 +6813,7 @@ template <class S> static int t9200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -6826,13 +6826,13 @@ template <class S> static int t9201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkproxy.h>)
-template <class S> static int t9202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkProxy::ProxyType> p0;
-    QTC_CVE(0, p0, 365);
+    QTC_CVE(0, p0, 386);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0) { qtc::cve(aa[0], p0, 0, 365); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0) { qtc::cve(aa[0], p0, 0, 386); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -6840,7 +6840,7 @@ template <class S> static int t9202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6852,13 +6852,13 @@ template <class S> static int t9203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QNetworkProxy::Capability>> p0;
-    QTC_CVF(0, p0, 364);
+    QTC_CVF(0, p0, 385);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkProxy::Capability>> &p0) { qtc::cvf(aa[0], p0, 0, 364); s->setCapabilities(p0.get()); }) { s->setCapabilities(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QNetworkProxy::Capability>> &p0) { qtc::cvf(aa[0], p0, 0, 385); s->setCapabilities(p0.get()); }) { s->setCapabilities(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -6866,7 +6866,7 @@ template <class S> static int t9204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6878,7 +6878,7 @@ template <class S> static int t9205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6890,7 +6890,7 @@ template <class S> static int t9206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6902,7 +6902,7 @@ template <class S> static int t9207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -6916,7 +6916,7 @@ template <class S> static int t9208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6928,7 +6928,7 @@ template <class S> static int t9209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -6942,7 +6942,7 @@ template <class S> static int t9210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6954,7 +6954,7 @@ template <class S> static int t9211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -6968,7 +6968,7 @@ template <class S> static int t9212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -6980,7 +6980,7 @@ template <class S> static int t9213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned short> p0;
     QTC_CV(0, p0);
@@ -6994,7 +6994,7 @@ template <class S> static int t9214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7006,7 +7006,7 @@ template <class S> static int t9215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QNetworkProxy> p0;
     QTC_CV(0, p0);
@@ -7019,7 +7019,7 @@ template <class S> static int t9216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -7031,7 +7031,7 @@ template <class S> static int t9217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     if (!(!(*s == QNetworkProxy()))) return qtc::pre_fail(QTC_ERR_STATE, "QNetworkProxy::headers(): the proxy has no settings yet (set its type first)");
     switch (n) {
@@ -7046,7 +7046,7 @@ template <class S> static int t9218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders> p0;
     QTC_CV(0, p0);
@@ -7061,14 +7061,14 @@ template <class S> static int t9219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkRequest::KnownHeaders> p0;
-    QTC_CVE(0, p0, 370);
+    QTC_CVE(0, p0, 391);
     if (!(!(*s == QNetworkProxy()))) return qtc::pre_fail(QTC_ERR_STATE, "QNetworkProxy::header(QNetworkRequest::KnownHeaders): the proxy has no settings yet (set its type first)");
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0) { qtc::cve(aa[0], p0, 0, 370); qtc::rt(*rr, s->header(p0.get())); }) { qtc::rt(*r, s->header(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0) { qtc::cve(aa[0], p0, 0, 391); qtc::rt(*rr, s->header(p0.get())); }) { qtc::rt(*r, s->header(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7076,15 +7076,15 @@ template <class S> static int t9220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkRequest::KnownHeaders> p0;
     qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 370);
+    QTC_CVE(0, p0, 391);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 370); qtc::cv(aa[1], p1, 1); s->setHeader(p0.get(), p1.get()); }) { s->setHeader(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 391); qtc::cv(aa[1], p1, 1); s->setHeader(p0.get(), p1.get()); }) { s->setHeader(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7092,7 +7092,7 @@ template <class S> static int t9221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -7107,7 +7107,7 @@ template <class S> static int t9222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     if (!(!(*s == QNetworkProxy()))) return qtc::pre_fail(QTC_ERR_STATE, "QNetworkProxy::rawHeaderList(): the proxy has no settings yet (set its type first)");
     switch (n) {
@@ -7120,7 +7120,7 @@ template <class S> static int t9223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     QTC_CV(0, p0);
@@ -7135,7 +7135,7 @@ template <class S> static int t9224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     qtc::H<QByteArray> p1;
@@ -7151,7 +7151,7 @@ template <class S> static int t9225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -7162,33 +7162,33 @@ template <class S> static int t9226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QNetworkProxy::ProxyType> p0;
     qtc::H<QString> p1;
     qtc::H<unsigned short> p2;
     qtc::H<QString> p3;
     qtc::H<QString> p4;
-    QTC_CVE(0, p0, 365);
+    QTC_CVE(0, p0, 386);
     if (n > 1) QTC_CV(1, p1);
     if (n > 2) QTC_CV(2, p2);
     if (n > 3) QTC_CV(3, p3);
     if (n > 4) QTC_CV(4, p4);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0) { qtc::cve(aa[0], p0, 0, 365); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0) { qtc::cve(aa[0], p0, 0, 386); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 365); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 386); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1, qtc::H<unsigned short> &p2) { qtc::cve(aa[0], p0, 0, 365); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1, qtc::H<unsigned short> &p2) { qtc::cve(aa[0], p0, 0, 386); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1, qtc::H<unsigned short> &p2, qtc::H<QString> &p3) { qtc::cve(aa[0], p0, 0, 365); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1, qtc::H<unsigned short> &p2, qtc::H<QString> &p3) { qtc::cve(aa[0], p0, 0, 386); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 5:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1, qtc::H<unsigned short> &p2, qtc::H<QString> &p3, qtc::H<QString> &p4) { qtc::cve(aa[0], p0, 0, 365); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxy::ProxyType> &p0, qtc::H<QString> &p1, qtc::H<unsigned short> &p2, qtc::H<QString> &p3, qtc::H<QString> &p4) { qtc::cve(aa[0], p0, 0, 386); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7197,7 +7197,7 @@ template <class S> static int t9227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkproxy.h>)
-template <class S> static int t9228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7209,13 +7209,13 @@ template <class S> static int t9228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkProxyQuery::QueryType> p0;
-    QTC_CVE(0, p0, 366);
+    QTC_CVE(0, p0, 387);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxyQuery::QueryType> &p0) { qtc::cve(aa[0], p0, 0, 366); s->setQueryType(p0.get()); }) { s->setQueryType(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkProxyQuery::QueryType> &p0) { qtc::cve(aa[0], p0, 0, 387); s->setQueryType(p0.get()); }) { s->setQueryType(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7223,7 +7223,7 @@ template <class S> static int t9229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7235,7 +7235,7 @@ template <class S> static int t9230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -7249,7 +7249,7 @@ template <class S> static int t9231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9382(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7261,7 +7261,7 @@ template <class S> static int t9232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -7275,7 +7275,7 @@ template <class S> static int t9233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7287,7 +7287,7 @@ template <class S> static int t9234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -7301,7 +7301,7 @@ template <class S> static int t9235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7313,7 +7313,7 @@ template <class S> static int t9236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -7327,7 +7327,7 @@ template <class S> static int t9237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7339,7 +7339,7 @@ template <class S> static int t9238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -7353,7 +7353,7 @@ template <class S> static int t9239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -7364,25 +7364,25 @@ template <class S> static int t9240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QUrl> p0;
     qtc::H<QNetworkProxyQuery::QueryType> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 366);
+    if (n > 1) QTC_CVE(1, p1, 387);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0, qtc::H<QNetworkProxyQuery::QueryType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 366); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0, qtc::H<QNetworkProxyQuery::QueryType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 387); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<int> p1;
@@ -7391,7 +7391,7 @@ template <class S> static int t9242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     QTC_CV(1, p1);
     if (n > 2) QTC_CV(2, p2);
-    if (n > 3) QTC_CVE(3, p3, 366);
+    if (n > 3) QTC_CVE(3, p3, 387);
     switch (n) {
         case 2:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
@@ -7400,21 +7400,21 @@ template <class S> static int t9242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<int> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<int> &p1, qtc::H<QString> &p2, qtc::H<QNetworkProxyQuery::QueryType> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 366); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<int> &p1, qtc::H<QString> &p2, qtc::H<QNetworkProxyQuery::QueryType> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 387); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<unsigned short> p0;
     qtc::H<QString> p1;
     qtc::H<QNetworkProxyQuery::QueryType> p2;
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 366);
+    if (n > 2) QTC_CVE(2, p2, 387);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned short> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
@@ -7423,7 +7423,7 @@ template <class S> static int t9243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned short> &p0, qtc::H<QString> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned short> &p0, qtc::H<QString> &p1, qtc::H<QNetworkProxyQuery::QueryType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 366); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned short> &p0, qtc::H<QString> &p1, qtc::H<QNetworkProxyQuery::QueryType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 387); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7432,7 +7432,7 @@ template <class S> static int t9243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkreply.h>)
-template <class S> static int t9244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7444,7 +7444,7 @@ template <class S> static int t9244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7456,7 +7456,7 @@ template <class S> static int t9245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7468,7 +7468,7 @@ template <class S> static int t9246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -7482,7 +7482,7 @@ template <class S> static int t9247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7494,7 +7494,7 @@ template <class S> static int t9248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7506,7 +7506,7 @@ template <class S> static int t9249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7518,7 +7518,7 @@ template <class S> static int t9250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7530,7 +7530,7 @@ template <class S> static int t9251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7542,7 +7542,7 @@ template <class S> static int t9252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7554,7 +7554,7 @@ template <class S> static int t9253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7566,13 +7566,13 @@ template <class S> static int t9254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest::KnownHeaders> p0;
-    QTC_CVE(0, p0, 370);
+    QTC_CVE(0, p0, 391);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0) { qtc::cve(aa[0], p0, 0, 370); qtc::rt(*rr, s->header(p0.get())); }) { qtc::rt(*r, s->header(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0) { qtc::cve(aa[0], p0, 0, 391); qtc::rt(*rr, s->header(p0.get())); }) { qtc::rt(*r, s->header(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7581,7 +7581,7 @@ template <class S> static int t9255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -7596,7 +7596,7 @@ template <class S> static int t9256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7609,7 +7609,7 @@ template <class S> static int t9257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -7625,7 +7625,7 @@ template <class S> static int t9258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7638,13 +7638,13 @@ template <class S> static int t9259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkRequest::Attribute> p0;
-    QTC_CVE(0, p0, 368);
+    QTC_CVE(0, p0, 389);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 368); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 389); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7652,7 +7652,7 @@ template <class S> static int t9260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7664,7 +7664,7 @@ template <class S> static int t9261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSslConfiguration> p0;
     QTC_CV(0, p0);
@@ -7678,7 +7678,7 @@ template <class S> static int t9262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QSslError>> p0;
     QTC_CV(0, p0);
@@ -7692,7 +7692,7 @@ template <class S> static int t9263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7704,7 +7704,7 @@ template <class S> static int t9264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7716,7 +7716,7 @@ template <class S> static int t9265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7728,7 +7728,7 @@ template <class S> static int t9266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7740,7 +7740,7 @@ template <class S> static int t9267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7752,7 +7752,7 @@ template <class S> static int t9268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7764,13 +7764,13 @@ template <class S> static int t9269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QNetworkReply::NetworkError> p0;
-    QTC_CVE(0, p0, 367);
+    QTC_CVE(0, p0, 388);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkReply::NetworkError> &p0) { qtc::cve(aa[0], p0, 0, 367); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkReply::NetworkError> &p0) { qtc::cve(aa[0], p0, 0, 388); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7778,7 +7778,7 @@ template <class S> static int t9270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7790,7 +7790,7 @@ template <class S> static int t9271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QSslError>> p0;
     QTC_CV(0, p0);
@@ -7804,7 +7804,7 @@ template <class S> static int t9272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -7816,7 +7816,7 @@ template <class S> static int t9273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     qtc::H<long long> p1;
@@ -7832,7 +7832,7 @@ template <class S> static int t9274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     qtc::H<long long> p1;
@@ -7850,7 +7850,7 @@ template <class S> static int t9275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtNetwork/qnetworkrequest.h>)
-template <class S> static int t9276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9426(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7862,7 +7862,7 @@ template <class S> static int t9276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -7877,7 +7877,7 @@ template <class S> static int t9277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9428(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7891,7 +7891,7 @@ template <class S> static int t9278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9429(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttpHeaders> p0;
     QTC_CV(0, p0);
@@ -7906,13 +7906,13 @@ template <class S> static int t9279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9430(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkRequest::KnownHeaders> p0;
-    QTC_CVE(0, p0, 370);
+    QTC_CVE(0, p0, 391);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0) { qtc::cve(aa[0], p0, 0, 370); qtc::rt(*rr, s->header(p0.get())); }) { qtc::rt(*r, s->header(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0) { qtc::cve(aa[0], p0, 0, 391); qtc::rt(*rr, s->header(p0.get())); }) { qtc::rt(*r, s->header(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7920,15 +7920,15 @@ template <class S> static int t9280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9431(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkRequest::KnownHeaders> p0;
     qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 370);
+    QTC_CVE(0, p0, 391);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 370); qtc::cv(aa[1], p1, 1); s->setHeader(p0.get(), p1.get()); }) { s->setHeader(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::KnownHeaders> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 391); qtc::cv(aa[1], p1, 1); s->setHeader(p0.get(), p1.get()); }) { s->setHeader(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7937,7 +7937,7 @@ template <class S> static int t9281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9432(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -7952,7 +7952,7 @@ template <class S> static int t9282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9433(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7965,7 +7965,7 @@ template <class S> static int t9283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9434(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     QTC_CV(0, p0);
@@ -7980,7 +7980,7 @@ template <class S> static int t9284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9435(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     qtc::H<QByteArray> p1;
@@ -7996,18 +7996,18 @@ template <class S> static int t9285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9436(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkRequest::Attribute> p0;
     qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 368);
+    QTC_CVE(0, p0, 389);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 368); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 389); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 368); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->attribute(p0.get(), p1.get())); }) { qtc::rt(*r, s->attribute(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 389); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->attribute(p0.get(), p1.get())); }) { qtc::rt(*r, s->attribute(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8015,15 +8015,15 @@ template <class S> static int t9286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9437(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkRequest::Attribute> p0;
     qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 368);
+    QTC_CVE(0, p0, 389);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 368); qtc::cv(aa[1], p1, 1); s->setAttribute(p0.get(), p1.get()); }) { s->setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 389); qtc::cv(aa[1], p1, 1); s->setAttribute(p0.get(), p1.get()); }) { s->setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8031,7 +8031,7 @@ template <class S> static int t9287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9438(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8043,7 +8043,7 @@ template <class S> static int t9288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9439(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSslConfiguration> p0;
     QTC_CV(0, p0);
@@ -8057,7 +8057,7 @@ template <class S> static int t9289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9440(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -8071,7 +8071,7 @@ template <class S> static int t9290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9441(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8083,7 +8083,7 @@ template <class S> static int t9291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9442(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8095,13 +8095,13 @@ template <class S> static int t9292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9443(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QNetworkRequest::Priority> p0;
-    QTC_CVE(0, p0, 372);
+    QTC_CVE(0, p0, 393);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Priority> &p0) { qtc::cve(aa[0], p0, 0, 372); s->setPriority(p0.get()); }) { s->setPriority(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Priority> &p0) { qtc::cve(aa[0], p0, 0, 393); s->setPriority(p0.get()); }) { s->setPriority(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8109,7 +8109,7 @@ template <class S> static int t9293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9444(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8121,7 +8121,7 @@ template <class S> static int t9294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9445(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -8135,7 +8135,7 @@ template <class S> static int t9295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9446(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8147,7 +8147,7 @@ template <class S> static int t9296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9447(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -8162,7 +8162,7 @@ template <class S> static int t9297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t9298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9448(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8176,7 +8176,7 @@ template <class S> static int t9298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t9299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9449(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttp1Configuration> p0;
     QTC_CV(0, p0);
@@ -8191,7 +8191,7 @@ template <class S> static int t9299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9450(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8203,7 +8203,7 @@ template <class S> static int t9300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9451(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QHttp2Configuration> p0;
     QTC_CV(0, p0);
@@ -8217,7 +8217,7 @@ template <class S> static int t9301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9452(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8229,7 +8229,7 @@ template <class S> static int t9302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9453(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -8244,7 +8244,7 @@ template <class S> static int t9303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-template <class S> static int t9304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9454(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8258,7 +8258,7 @@ template <class S> static int t9304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-template <class S> static int t9305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9455(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -8273,7 +8273,7 @@ template <class S> static int t9305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9456(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8285,7 +8285,7 @@ template <class S> static int t9306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9457(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -8300,7 +8300,7 @@ template <class S> static int t9307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t9308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9458(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8313,7 +8313,7 @@ template <class S> static int t9308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t9309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9459(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -8324,7 +8324,7 @@ template <class S> static int t9309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t9460(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -8338,1844 +8338,1258 @@ template <class S> static int t9310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtNetwork/qnetworkrequestfactory.h>)
-template <class S> static int t9311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->baseUrl()); }) { qtc::rt(*r, s->baseUrl()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QUrl> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->setBaseUrl(p0.get()); }) { s->setBaseUrl(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->sslConfiguration()); }) { qtc::rt(*r, s->sslConfiguration()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QSslConfiguration> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSslConfiguration> &p0) { qtc::cv(aa[0], p0, 0); s->setSslConfiguration(p0.get()); }) { s->setSslConfiguration(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->createRequest()); }) { qtc::rt(*r, s->createRequest()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QUrlQuery> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrlQuery> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->createRequest(p0.get())); }) { qtc::rt(*r, s->createRequest(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->createRequest(p0.get())); }) { qtc::rt(*r, s->createRequest(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    qtc::H<QUrlQuery> p1;
-    QTC_CV(0, p0);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QUrlQuery> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->createRequest(p0.get(), p1.get())); }) { qtc::rt(*r, s->createRequest(p0.get(), p1.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QHttpHeaders> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHttpHeaders> &p0) { qtc::cv(aa[0], p0, 0); s->setCommonHeaders(p0.get()); }) { s->setCommonHeaders(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->commonHeaders()); }) { qtc::rt(*r, s->commonHeaders()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clearCommonHeaders(); }) { s->clearCommonHeaders(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->bearerToken()); }) { qtc::rt(*r, s->bearerToken()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QByteArray> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QByteArray> &p0) { qtc::cv(aa[0], p0, 0); s->setBearerToken(p0.get()); }) { s->setBearerToken(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clearBearerToken(); }) { s->clearBearerToken(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->userName()); }) { qtc::rt(*r, s->userName()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->setUserName(p0.get()); }) { s->setUserName(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clearUserName(); }) { s->clearUserName(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->password()); }) { qtc::rt(*r, s->password()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->setPassword(p0.get()); }) { s->setPassword(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clearPassword(); }) { s->clearPassword(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->queryParameters()); }) { qtc::rt(*r, s->queryParameters()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QUrlQuery> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrlQuery> &p0) { qtc::cv(aa[0], p0, 0); s->setQueryParameters(p0.get()); }) { s->setQueryParameters(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clearQueryParameters(); }) { s->clearQueryParameters(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QNetworkRequest::Priority> p0;
-    QTC_CVE(0, p0, 372);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Priority> &p0) { qtc::cve(aa[0], p0, 0, 372); s->setPriority(p0.get()); }) { s->setPriority(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->priority()); }) { qtc::rt(*r, s->priority()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QNetworkRequest::Attribute> p0;
-    QTC_CVE(0, p0, 368);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 368); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QNetworkRequest::Attribute> p0;
-    qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 368);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 368); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->attribute(p0.get(), p1.get())); }) { qtc::rt(*r, s->attribute(p0.get(), p1.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QNetworkRequest::Attribute> p0;
-    qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 368);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 368); qtc::cv(aa[1], p1, 1); s->setAttribute(p0.get(), p1.get()); }) { s->setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QNetworkRequest::Attribute> p0;
-    QTC_CVE(0, p0, 368);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNetworkRequest::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 368); s->clearAttribute(p0.get()); }) { s->clearAttribute(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t9340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clearAttributes(); }) { s->clearAttributes(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t9341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<QUrl> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_CONFIG(ssl) && __has_include(<QtNetwork/qocspresponse.h>)
-template <class S> static int t9343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->certificateStatus()); }) { qtc::rt(*r, s->certificateStatus()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->revocationReason()); }) { qtc::rt(*r, s->revocationReason()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->responder()); }) { qtc::rt(*r, s->responder()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->subject()); }) { qtc::rt(*r, s->subject()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t9347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-static const qtc::ParamDesc P8712[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P8713[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
-static const qtc::ParamDesc P8714[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P8715[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P8717[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
-static const qtc::ParamDesc P8718[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P8862[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P8863[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
+static const qtc::ParamDesc P8864[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P8865[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P8867[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
+static const qtc::ParamDesc P8868[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
 #if __has_include(<QtNetwork/qabstractnetworkcache.h>)
 static const qtc::MethodDef M_QAbstractNetworkCache[] = {
-    {"metaData", "metaData(QUrl)", t8712<QAbstractNetworkCache>, P8712, 1, 1, 0, QTC_T_VALUE, "QNetworkCacheMetaData"},
-    {"updateMetaData", "updateMetaData(QNetworkCacheMetaData)", t8713<QAbstractNetworkCache>, P8713, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"data", "data(QUrl)", t8714<QAbstractNetworkCache>, P8714, 1, 1, 0, QTC_T_OBJ, "QIODevice*"},
-    {"remove", "remove(QUrl)", t8715<QAbstractNetworkCache>, P8715, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"cacheSize", "cacheSize()", t8716<QAbstractNetworkCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"prepare", "prepare(QNetworkCacheMetaData)", t8717<QAbstractNetworkCache>, P8717, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
-    {"insert", "insert(QIODevice*)", t8718<QAbstractNetworkCache>, P8718, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"clear", "clear()", t8719<QAbstractNetworkCache>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"metaData", "metaData(QUrl)", t8862<QAbstractNetworkCache>, P8862, 1, 1, 0, QTC_T_VALUE, "QNetworkCacheMetaData"},
+    {"updateMetaData", "updateMetaData(QNetworkCacheMetaData)", t8863<QAbstractNetworkCache>, P8863, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"data", "data(QUrl)", t8864<QAbstractNetworkCache>, P8864, 1, 1, 0, QTC_T_OBJ, "QIODevice*"},
+    {"remove", "remove(QUrl)", t8865<QAbstractNetworkCache>, P8865, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"cacheSize", "cacheSize()", t8866<QAbstractNetworkCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"prepare", "prepare(QNetworkCacheMetaData)", t8867<QAbstractNetworkCache>, P8867, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
+    {"insert", "insert(QIODevice*)", t8868<QAbstractNetworkCache>, P8868, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"clear", "clear()", t8869<QAbstractNetworkCache>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAbstractNetworkCache[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8722[] = {{qtc::PK_FLAGS, 23, "QFlags<QAbstractSocket::PauseMode>", nullptr}};
-static const qtc::ParamDesc P8723[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 21, "QFlags<QAbstractSocket::BindFlag>", nullptr}};
-static const qtc::ParamDesc P8724[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 21, "QFlags<QAbstractSocket::BindFlag>", nullptr}};
-static const qtc::ParamDesc P8725[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}, {qtc::PK_ENUM, 22, "QAbstractSocket::NetworkLayerProtocol", nullptr}};
-static const qtc::ParamDesc P8726[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P8737[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P8740[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 26, "QAbstractSocket::SocketState", nullptr}, {qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P8741[] = {{qtc::PK_ENUM, 25, "QAbstractSocket::SocketOption", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P8742[] = {{qtc::PK_ENUM, 25, "QAbstractSocket::SocketOption", nullptr}};
-static const qtc::ParamDesc P8749[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P8750[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P8751[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P8752[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P8753[] = {{qtc::PK_VALUE, -1, "QNetworkProxy", nullptr}};
-static const qtc::ParamDesc P8756[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8760[] = {{qtc::PK_ENUM, 26, "QAbstractSocket::SocketState", nullptr}};
-static const qtc::ParamDesc P8761[] = {{qtc::PK_ENUM, 24, "QAbstractSocket::SocketError", nullptr}};
-static const qtc::ParamDesc P8762[] = {{qtc::PK_ENUM, 27, "QAbstractSocket::SocketType", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P8872[] = {{qtc::PK_FLAGS, 28, "QFlags<QAbstractSocket::PauseMode>", nullptr}};
+static const qtc::ParamDesc P8873[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 26, "QFlags<QAbstractSocket::BindFlag>", nullptr}};
+static const qtc::ParamDesc P8874[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 26, "QFlags<QAbstractSocket::BindFlag>", nullptr}};
+static const qtc::ParamDesc P8875[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}, {qtc::PK_ENUM, 27, "QAbstractSocket::NetworkLayerProtocol", nullptr}};
+static const qtc::ParamDesc P8876[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P8887[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P8890[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 31, "QAbstractSocket::SocketState", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P8891[] = {{qtc::PK_ENUM, 30, "QAbstractSocket::SocketOption", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P8892[] = {{qtc::PK_ENUM, 30, "QAbstractSocket::SocketOption", nullptr}};
+static const qtc::ParamDesc P8899[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P8900[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P8901[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P8902[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P8903[] = {{qtc::PK_VALUE, -1, "QNetworkProxy", nullptr}};
+static const qtc::ParamDesc P8906[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8910[] = {{qtc::PK_ENUM, 31, "QAbstractSocket::SocketState", nullptr}};
+static const qtc::ParamDesc P8911[] = {{qtc::PK_ENUM, 29, "QAbstractSocket::SocketError", nullptr}};
+static const qtc::ParamDesc P8912[] = {{qtc::PK_ENUM, 32, "QAbstractSocket::SocketType", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtNetwork/qabstractsocket.h>)
 static const qtc::MethodDef M_QAbstractSocket[] = {
-    {"resume", "resume()", t8720<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"pauseMode", "pauseMode()", t8721<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QAbstractSocket::PauseMode>"},
-    {"setPauseMode", "setPauseMode(QAbstractSocket::PauseModes)", t8722<QAbstractSocket>, P8722, 1, 1, 0, QTC_T_NONE, "void"},
-    {"bind", "bind(QHostAddress,quint16,QAbstractSocket::BindMode)", t8723<QAbstractSocket>, P8723, 3, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"bind", "bind(quint16,QAbstractSocket::BindMode)", t8724<QAbstractSocket>, P8724, 2, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"connectToHost", "connectToHost(QString,quint16,OpenMode,QAbstractSocket::NetworkLayerProtocol)", t8725<QAbstractSocket>, P8725, 4, 2, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"connectToHost", "connectToHost(QHostAddress,quint16,OpenMode)", t8726<QAbstractSocket>, P8726, 3, 2, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"disconnectFromHost", "disconnectFromHost()", t8727<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isValid", "isValid()", t8728<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"bytesAvailable", "bytesAvailable()", t8729<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"bytesToWrite", "bytesToWrite()", t8730<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"localPort", "localPort()", t8731<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"localAddress", "localAddress()", t8732<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"peerPort", "peerPort()", t8733<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"peerAddress", "peerAddress()", t8734<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"peerName", "peerName()", t8735<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"readBufferSize", "readBufferSize()", t8736<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setReadBufferSize", "setReadBufferSize(qint64)", t8737<QAbstractSocket>, P8737, 1, 1, 0, QTC_T_NONE, "void"},
-    {"abort", "abort()", t8738<QAbstractSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"socketDescriptor", "socketDescriptor()", t8739<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setSocketDescriptor", "setSocketDescriptor(qintptr,QAbstractSocket::SocketState,OpenMode)", t8740<QAbstractSocket>, P8740, 3, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"setSocketOption", "setSocketOption(QAbstractSocket::SocketOption,QVariant)", t8741<QAbstractSocket>, P8741, 2, 2, 0, QTC_T_NONE, "void"},
-    {"socketOption", "socketOption(QAbstractSocket::SocketOption)", t8742<QAbstractSocket>, P8742, 1, 1, 0, QTC_T_VALUE, "QVariant"},
-    {"socketType", "socketType()", t8743<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketType"},
-    {"state", "state()", t8744<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketState"},
-    {"error", "error()", t8745<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketError"},
-    {"close", "close()", t8746<QAbstractSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"isSequential", "isSequential()", t8747<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"flush", "flush()", t8748<QAbstractSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"waitForConnected", "waitForConnected(int)", t8749<QAbstractSocket>, P8749, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"waitForReadyRead", "waitForReadyRead(int)", t8750<QAbstractSocket>, P8750, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"waitForBytesWritten", "waitForBytesWritten(int)", t8751<QAbstractSocket>, P8751, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"waitForDisconnected", "waitForDisconnected(int)", t8752<QAbstractSocket>, P8752, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"setProxy", "setProxy(QNetworkProxy)", t8753<QAbstractSocket>, P8753, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"proxy", "proxy()", t8754<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QNetworkProxy"},
-    {"protocolTag", "protocolTag()", t8755<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setProtocolTag", "setProtocolTag(QString)", t8756<QAbstractSocket>, P8756, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hostFound", "hostFound()", t8757<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"connected", "connected()", t8758<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"disconnected", "disconnected()", t8759<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stateChanged", "stateChanged(QAbstractSocket::SocketState)", t8760<QAbstractSocket>, P8760, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QAbstractSocket::SocketError)", t8761<QAbstractSocket>, P8761, 1, 1, 0, QTC_T_NONE, "void"},
+    {"resume", "resume()", t8870<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"pauseMode", "pauseMode()", t8871<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QAbstractSocket::PauseMode>"},
+    {"setPauseMode", "setPauseMode(QAbstractSocket::PauseModes)", t8872<QAbstractSocket>, P8872, 1, 1, 0, QTC_T_NONE, "void"},
+    {"bind", "bind(QHostAddress,quint16,QAbstractSocket::BindMode)", t8873<QAbstractSocket>, P8873, 3, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"bind", "bind(quint16,QAbstractSocket::BindMode)", t8874<QAbstractSocket>, P8874, 2, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"connectToHost", "connectToHost(QString,quint16,OpenMode,QAbstractSocket::NetworkLayerProtocol)", t8875<QAbstractSocket>, P8875, 4, 2, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"connectToHost", "connectToHost(QHostAddress,quint16,OpenMode)", t8876<QAbstractSocket>, P8876, 3, 2, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"disconnectFromHost", "disconnectFromHost()", t8877<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isValid", "isValid()", t8878<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"bytesAvailable", "bytesAvailable()", t8879<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bytesToWrite", "bytesToWrite()", t8880<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"localPort", "localPort()", t8881<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"localAddress", "localAddress()", t8882<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"peerPort", "peerPort()", t8883<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"peerAddress", "peerAddress()", t8884<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"peerName", "peerName()", t8885<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"readBufferSize", "readBufferSize()", t8886<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setReadBufferSize", "setReadBufferSize(qint64)", t8887<QAbstractSocket>, P8887, 1, 1, 0, QTC_T_NONE, "void"},
+    {"abort", "abort()", t8888<QAbstractSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"socketDescriptor", "socketDescriptor()", t8889<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setSocketDescriptor", "setSocketDescriptor(qintptr,QAbstractSocket::SocketState,OpenMode)", t8890<QAbstractSocket>, P8890, 3, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"setSocketOption", "setSocketOption(QAbstractSocket::SocketOption,QVariant)", t8891<QAbstractSocket>, P8891, 2, 2, 0, QTC_T_NONE, "void"},
+    {"socketOption", "socketOption(QAbstractSocket::SocketOption)", t8892<QAbstractSocket>, P8892, 1, 1, 0, QTC_T_VALUE, "QVariant"},
+    {"socketType", "socketType()", t8893<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketType"},
+    {"state", "state()", t8894<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketState"},
+    {"error", "error()", t8895<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketError"},
+    {"close", "close()", t8896<QAbstractSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"isSequential", "isSequential()", t8897<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"flush", "flush()", t8898<QAbstractSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"waitForConnected", "waitForConnected(int)", t8899<QAbstractSocket>, P8899, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"waitForReadyRead", "waitForReadyRead(int)", t8900<QAbstractSocket>, P8900, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"waitForBytesWritten", "waitForBytesWritten(int)", t8901<QAbstractSocket>, P8901, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"waitForDisconnected", "waitForDisconnected(int)", t8902<QAbstractSocket>, P8902, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"setProxy", "setProxy(QNetworkProxy)", t8903<QAbstractSocket>, P8903, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"proxy", "proxy()", t8904<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QNetworkProxy"},
+    {"protocolTag", "protocolTag()", t8905<QAbstractSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setProtocolTag", "setProtocolTag(QString)", t8906<QAbstractSocket>, P8906, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hostFound", "hostFound()", t8907<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"connected", "connected()", t8908<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"disconnected", "disconnected()", t8909<QAbstractSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stateChanged", "stateChanged(QAbstractSocket::SocketState)", t8910<QAbstractSocket>, P8910, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QAbstractSocket::SocketError)", t8911<QAbstractSocket>, P8911, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAbstractSocket[] = {
-    {"QAbstractSocket", "QAbstractSocket(QAbstractSocket::SocketType,QObject*)", t8762<QAbstractSocket>, P8762, 2, 2, 0, QTC_T_OBJ, "QAbstractSocket"},
+    {"QAbstractSocket", "QAbstractSocket(QAbstractSocket::SocketType,QObject*)", t8912<QAbstractSocket>, P8912, 2, 2, 0, QTC_T_OBJ, "QAbstractSocket"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8764[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8766[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8768[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8769[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8771[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P8914[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8916[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8918[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8919[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8921[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
 #if __has_include(<QtNetwork/qauthenticator.h>)
 static const qtc::MethodDef M_QAuthenticator[] = {
-    {"user", "user()", t8763<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setUser", "setUser(QString)", t8764<QAuthenticator>, P8764, 1, 1, 0, QTC_T_NONE, "void"},
-    {"password", "password()", t8765<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPassword", "setPassword(QString)", t8766<QAuthenticator>, P8766, 1, 1, 0, QTC_T_NONE, "void"},
-    {"realm", "realm()", t8767<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setRealm", "setRealm(QString)", t8768<QAuthenticator>, P8768, 1, 1, 0, QTC_T_NONE, "void"},
-    {"option", "option(QString)", t8769<QAuthenticator>, P8769, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"options", "options()", t8770<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QHash<QString, QVariant>"},
-    {"setOption", "setOption(QString,QVariant)", t8771<QAuthenticator>, P8771, 2, 2, 0, QTC_T_NONE, "void"},
-    {"isNull", "isNull()", t8772<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"detach", "detach()", t8773<QAuthenticator>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"user", "user()", t8913<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setUser", "setUser(QString)", t8914<QAuthenticator>, P8914, 1, 1, 0, QTC_T_NONE, "void"},
+    {"password", "password()", t8915<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPassword", "setPassword(QString)", t8916<QAuthenticator>, P8916, 1, 1, 0, QTC_T_NONE, "void"},
+    {"realm", "realm()", t8917<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setRealm", "setRealm(QString)", t8918<QAuthenticator>, P8918, 1, 1, 0, QTC_T_NONE, "void"},
+    {"option", "option(QString)", t8919<QAuthenticator>, P8919, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"options", "options()", t8920<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QHash<QString, QVariant>"},
+    {"setOption", "setOption(QString,QVariant)", t8921<QAuthenticator>, P8921, 2, 2, 0, QTC_T_NONE, "void"},
+    {"isNull", "isNull()", t8922<QAuthenticator>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"detach", "detach()", t8923<QAuthenticator>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-    {"clear", "clear()", t8774<QAuthenticator>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"clear", "clear()", t8924<QAuthenticator>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAuthenticator[] = {
-    {"QAuthenticator", "QAuthenticator()", t8775<QAuthenticator>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAuthenticator"},
+    {"QAuthenticator", "QAuthenticator()", t8925<QAuthenticator>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAuthenticator"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 static const qtc::MethodDef M_QDnsDomainNameRecord[] = {
-    {"name", "name()", t8776<QDnsDomainNameRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"timeToLive", "timeToLive()", t8777<QDnsDomainNameRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"value", "value()", t8778<QDnsDomainNameRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"name", "name()", t8926<QDnsDomainNameRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"timeToLive", "timeToLive()", t8927<QDnsDomainNameRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"value", "value()", t8928<QDnsDomainNameRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDnsDomainNameRecord[] = {
-    {"QDnsDomainNameRecord", "QDnsDomainNameRecord()", t8779<QDnsDomainNameRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsDomainNameRecord"},
+    {"QDnsDomainNameRecord", "QDnsDomainNameRecord()", t8929<QDnsDomainNameRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsDomainNameRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 static const qtc::MethodDef M_QDnsHostAddressRecord[] = {
-    {"name", "name()", t8780<QDnsHostAddressRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"timeToLive", "timeToLive()", t8781<QDnsHostAddressRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"value", "value()", t8782<QDnsHostAddressRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"name", "name()", t8930<QDnsHostAddressRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"timeToLive", "timeToLive()", t8931<QDnsHostAddressRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"value", "value()", t8932<QDnsHostAddressRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDnsHostAddressRecord[] = {
-    {"QDnsHostAddressRecord", "QDnsHostAddressRecord()", t8783<QDnsHostAddressRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsHostAddressRecord"},
+    {"QDnsHostAddressRecord", "QDnsHostAddressRecord()", t8933<QDnsHostAddressRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsHostAddressRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8789[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8791[] = {{qtc::PK_ENUM, 152, "QDnsLookup::Type", nullptr}};
-static const qtc::ParamDesc P8793[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
+static const qtc::ParamDesc P8939[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8941[] = {{qtc::PK_ENUM, 159, "QDnsLookup::Type", nullptr}};
+static const qtc::ParamDesc P8943[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P8795[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P8945[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8797[] = {{qtc::PK_ENUM, 151, "QDnsLookup::Protocol", nullptr}};
+static const qtc::ParamDesc P8947[] = {{qtc::PK_ENUM, 158, "QDnsLookup::Protocol", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8798[] = {{qtc::PK_ENUM, 151, "QDnsLookup::Protocol", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P8948[] = {{qtc::PK_ENUM, 158, "QDnsLookup::Protocol", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P8799[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P8949[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8808[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
+static const qtc::ParamDesc P8958[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8810[] = {{qtc::PK_ENUM, 151, "QDnsLookup::Protocol", nullptr}};
+static const qtc::ParamDesc P8960[] = {{qtc::PK_ENUM, 158, "QDnsLookup::Protocol", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8811[] = {{qtc::PK_ENUM, 151, "QDnsLookup::Protocol", nullptr}};
+static const qtc::ParamDesc P8961[] = {{qtc::PK_ENUM, 158, "QDnsLookup::Protocol", nullptr}};
 #endif
-static const qtc::ParamDesc P8815[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8816[] = {{qtc::PK_ENUM, 152, "QDnsLookup::Type", nullptr}};
-static const qtc::ParamDesc P8817[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
+static const qtc::ParamDesc P8965[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8966[] = {{qtc::PK_ENUM, 159, "QDnsLookup::Type", nullptr}};
+static const qtc::ParamDesc P8967[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P8818[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P8968[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8819[] = {{qtc::PK_ENUM, 151, "QDnsLookup::Protocol", nullptr}};
+static const qtc::ParamDesc P8969[] = {{qtc::PK_ENUM, 158, "QDnsLookup::Protocol", nullptr}};
 #endif
-static const qtc::ParamDesc P8820[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P8821[] = {{qtc::PK_ENUM, 152, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P8822[] = {{qtc::PK_ENUM, 152, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P8970[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P8971[] = {{qtc::PK_ENUM, 159, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P8972[] = {{qtc::PK_ENUM, 159, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P8823[] = {{qtc::PK_ENUM, 152, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P8973[] = {{qtc::PK_ENUM, 159, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8824[] = {{qtc::PK_ENUM, 152, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 151, "QDnsLookup::Protocol", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P8974[] = {{qtc::PK_ENUM, 159, "QDnsLookup::Type", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 158, "QDnsLookup::Protocol", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 static const qtc::MethodDef M_QDnsLookup[] = {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"isAuthenticData", "isAuthenticData()", t8784<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isAuthenticData", "isAuthenticData()", t8934<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
-    {"error", "error()", t8785<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsLookup::Error"},
-    {"errorString", "errorString()", t8786<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isFinished", "isFinished()", t8787<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"name", "name()", t8788<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setName", "setName(QString)", t8789<QDnsLookup>, P8789, 1, 1, 0, QTC_T_NONE, "void"},
-    {"type", "type()", t8790<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsLookup::Type"},
-    {"setType", "setType(QDnsLookup::Type)", t8791<QDnsLookup>, P8791, 1, 1, 0, QTC_T_NONE, "void"},
-    {"nameserver", "nameserver()", t8792<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"setNameserver", "setNameserver(QHostAddress)", t8793<QDnsLookup>, P8793, 1, 1, 0, QTC_T_NONE, "void"},
+    {"error", "error()", t8935<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsLookup::Error"},
+    {"errorString", "errorString()", t8936<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isFinished", "isFinished()", t8937<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"name", "name()", t8938<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setName", "setName(QString)", t8939<QDnsLookup>, P8939, 1, 1, 0, QTC_T_NONE, "void"},
+    {"type", "type()", t8940<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsLookup::Type"},
+    {"setType", "setType(QDnsLookup::Type)", t8941<QDnsLookup>, P8941, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nameserver", "nameserver()", t8942<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"setNameserver", "setNameserver(QHostAddress)", t8943<QDnsLookup>, P8943, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"nameserverPort", "nameserverPort()", t8794<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"setNameserverPort", "setNameserverPort(quint16)", t8795<QDnsLookup>, P8795, 1, 1, 0, QTC_T_NONE, "void"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"nameserverProtocol", "nameserverProtocol()", t8796<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsLookup::Protocol"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setNameserverProtocol", "setNameserverProtocol(QDnsLookup::Protocol)", t8797<QDnsLookup>, P8797, 1, 1, 0, QTC_T_NONE, "void"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setNameserver", "setNameserver(QDnsLookup::Protocol,QHostAddress,quint16)", t8798<QDnsLookup>, P8798, 3, 2, 0, QTC_T_NONE, "void"},
+    {"nameserverPort", "nameserverPort()", t8944<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"setNameserver", "setNameserver(QHostAddress,quint16)", t8799<QDnsLookup>, P8799, 2, 2, 0, QTC_T_NONE, "void"},
-#endif
-    {"canonicalNameRecords", "canonicalNameRecords()", t8800<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsDomainNameRecord>"},
-    {"hostAddressRecords", "hostAddressRecords()", t8801<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsHostAddressRecord>"},
-    {"mailExchangeRecords", "mailExchangeRecords()", t8802<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsMailExchangeRecord>"},
-    {"nameServerRecords", "nameServerRecords()", t8803<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsDomainNameRecord>"},
-    {"pointerRecords", "pointerRecords()", t8804<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsDomainNameRecord>"},
-    {"serviceRecords", "serviceRecords()", t8805<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsServiceRecord>"},
-    {"textRecords", "textRecords()", t8806<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsTextRecord>"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"tlsAssociationRecords", "tlsAssociationRecords()", t8807<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsTlsAssociationRecord>"},
+    {"setNameserverPort", "setNameserverPort(quint16)", t8945<QDnsLookup>, P8945, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setSslConfiguration", "setSslConfiguration(QSslConfiguration)", t8808<QDnsLookup>, P8808, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nameserverProtocol", "nameserverProtocol()", t8946<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsLookup::Protocol"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"sslConfiguration", "sslConfiguration()", t8809<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
+    {"setNameserverProtocol", "setNameserverProtocol(QDnsLookup::Protocol)", t8947<QDnsLookup>, P8947, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"isProtocolSupported", "isProtocolSupported(QDnsLookup::Protocol)", t8810<QDnsLookup>, P8810, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"setNameserver", "setNameserver(QDnsLookup::Protocol,QHostAddress,quint16)", t8948<QDnsLookup>, P8948, 3, 2, 0, QTC_T_NONE, "void"},
 #endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"defaultPortForProtocol", "defaultPortForProtocol(QDnsLookup::Protocol)", t8811<QDnsLookup>, P8811, 1, 1, qtc::MF_STATIC, QTC_T_UINT, "unsigned short"},
-#endif
-    {"abort", "abort()", t8812<QDnsLookup>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"lookup", "lookup()", t8813<QDnsLookup>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"finished", "finished()", t8814<QDnsLookup>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"nameChanged", "nameChanged(QString)", t8815<QDnsLookup>, P8815, 1, 1, 0, QTC_T_NONE, "void"},
-    {"typeChanged", "typeChanged(QDnsLookup::Type)", t8816<QDnsLookup>, P8816, 1, 1, 0, QTC_T_NONE, "void"},
-    {"nameserverChanged", "nameserverChanged(QHostAddress)", t8817<QDnsLookup>, P8817, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"nameserverPortChanged", "nameserverPortChanged(quint16)", t8818<QDnsLookup>, P8818, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setNameserver", "setNameserver(QHostAddress,quint16)", t8949<QDnsLookup>, P8949, 2, 2, 0, QTC_T_NONE, "void"},
+#endif
+    {"canonicalNameRecords", "canonicalNameRecords()", t8950<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsDomainNameRecord>"},
+    {"hostAddressRecords", "hostAddressRecords()", t8951<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsHostAddressRecord>"},
+    {"mailExchangeRecords", "mailExchangeRecords()", t8952<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsMailExchangeRecord>"},
+    {"nameServerRecords", "nameServerRecords()", t8953<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsDomainNameRecord>"},
+    {"pointerRecords", "pointerRecords()", t8954<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsDomainNameRecord>"},
+    {"serviceRecords", "serviceRecords()", t8955<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsServiceRecord>"},
+    {"textRecords", "textRecords()", t8956<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsTextRecord>"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"tlsAssociationRecords", "tlsAssociationRecords()", t8957<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QDnsTlsAssociationRecord>"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"nameserverProtocolChanged", "nameserverProtocolChanged(QDnsLookup::Protocol)", t8819<QDnsLookup>, P8819, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setSslConfiguration", "setSslConfiguration(QSslConfiguration)", t8958<QDnsLookup>, P8958, 1, 1, 0, QTC_T_NONE, "void"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"sslConfiguration", "sslConfiguration()", t8959<QDnsLookup>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"isProtocolSupported", "isProtocolSupported(QDnsLookup::Protocol)", t8960<QDnsLookup>, P8960, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"defaultPortForProtocol", "defaultPortForProtocol(QDnsLookup::Protocol)", t8961<QDnsLookup>, P8961, 1, 1, qtc::MF_STATIC, QTC_T_UINT, "unsigned short"},
+#endif
+    {"abort", "abort()", t8962<QDnsLookup>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"lookup", "lookup()", t8963<QDnsLookup>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"finished", "finished()", t8964<QDnsLookup>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"nameChanged", "nameChanged(QString)", t8965<QDnsLookup>, P8965, 1, 1, 0, QTC_T_NONE, "void"},
+    {"typeChanged", "typeChanged(QDnsLookup::Type)", t8966<QDnsLookup>, P8966, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nameserverChanged", "nameserverChanged(QHostAddress)", t8967<QDnsLookup>, P8967, 1, 1, 0, QTC_T_NONE, "void"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    {"nameserverPortChanged", "nameserverPortChanged(quint16)", t8968<QDnsLookup>, P8968, 1, 1, 0, QTC_T_NONE, "void"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"nameserverProtocolChanged", "nameserverProtocolChanged(QDnsLookup::Protocol)", t8969<QDnsLookup>, P8969, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDnsLookup[] = {
-    {"QDnsLookup", "QDnsLookup(QObject*)", t8820<QDnsLookup>, P8820, 1, 0, 0, QTC_T_OBJ, "QDnsLookup"},
-    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QObject*)", t8821<QDnsLookup>, P8821, 3, 2, 0, QTC_T_OBJ, "QDnsLookup"},
-    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QHostAddress,QObject*)", t8822<QDnsLookup>, P8822, 4, 3, 0, QTC_T_OBJ, "QDnsLookup"},
+    {"QDnsLookup", "QDnsLookup(QObject*)", t8970<QDnsLookup>, P8970, 1, 0, 0, QTC_T_OBJ, "QDnsLookup"},
+    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QObject*)", t8971<QDnsLookup>, P8971, 3, 2, 0, QTC_T_OBJ, "QDnsLookup"},
+    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QHostAddress,QObject*)", t8972<QDnsLookup>, P8972, 4, 3, 0, QTC_T_OBJ, "QDnsLookup"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QHostAddress,quint16,QObject*)", t8823<QDnsLookup>, P8823, 5, 4, 0, QTC_T_OBJ, "QDnsLookup"},
+    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QHostAddress,quint16,QObject*)", t8973<QDnsLookup>, P8973, 5, 4, 0, QTC_T_OBJ, "QDnsLookup"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QDnsLookup::Protocol,QHostAddress,quint16,QObject*)", t8824<QDnsLookup>, P8824, 6, 4, 0, QTC_T_OBJ, "QDnsLookup"},
+    {"QDnsLookup", "QDnsLookup(QDnsLookup::Type,QString,QDnsLookup::Protocol,QHostAddress,quint16,QObject*)", t8974<QDnsLookup>, P8974, 6, 4, 0, QTC_T_OBJ, "QDnsLookup"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 static const qtc::MethodDef M_QDnsMailExchangeRecord[] = {
-    {"exchange", "exchange()", t8825<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"name", "name()", t8826<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"preference", "preference()", t8827<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"timeToLive", "timeToLive()", t8828<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"exchange", "exchange()", t8975<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"name", "name()", t8976<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"preference", "preference()", t8977<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"timeToLive", "timeToLive()", t8978<QDnsMailExchangeRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDnsMailExchangeRecord[] = {
-    {"QDnsMailExchangeRecord", "QDnsMailExchangeRecord()", t8829<QDnsMailExchangeRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsMailExchangeRecord"},
+    {"QDnsMailExchangeRecord", "QDnsMailExchangeRecord()", t8979<QDnsMailExchangeRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsMailExchangeRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 static const qtc::MethodDef M_QDnsServiceRecord[] = {
-    {"name", "name()", t8830<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"port", "port()", t8831<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"priority", "priority()", t8832<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"target", "target()", t8833<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"timeToLive", "timeToLive()", t8834<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"weight", "weight()", t8835<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"name", "name()", t8980<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"port", "port()", t8981<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"priority", "priority()", t8982<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"target", "target()", t8983<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"timeToLive", "timeToLive()", t8984<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"weight", "weight()", t8985<QDnsServiceRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDnsServiceRecord[] = {
-    {"QDnsServiceRecord", "QDnsServiceRecord()", t8836<QDnsServiceRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsServiceRecord"},
+    {"QDnsServiceRecord", "QDnsServiceRecord()", t8986<QDnsServiceRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsServiceRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 static const qtc::MethodDef M_QDnsTextRecord[] = {
-    {"name", "name()", t8837<QDnsTextRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"timeToLive", "timeToLive()", t8838<QDnsTextRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"values", "values()", t8839<QDnsTextRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
+    {"name", "name()", t8987<QDnsTextRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"timeToLive", "timeToLive()", t8988<QDnsTextRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"values", "values()", t8989<QDnsTextRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDnsTextRecord[] = {
-    {"QDnsTextRecord", "QDnsTextRecord()", t8840<QDnsTextRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsTextRecord"},
+    {"QDnsTextRecord", "QDnsTextRecord()", t8990<QDnsTextRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsTextRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && QT_CONFIG(dnslookup) && __has_include(<QtNetwork/qdnslookup.h>)
 static const qtc::MethodDef M_QDnsTlsAssociationRecord[] = {
-    {"name", "name()", t8841<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"timeToLive", "timeToLive()", t8842<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"usage", "usage()", t8843<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsTlsAssociationRecord::CertificateUsage"},
-    {"selector", "selector()", t8844<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsTlsAssociationRecord::Selector"},
-    {"matchType", "matchType()", t8845<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsTlsAssociationRecord::MatchingType"},
-    {"value", "value()", t8846<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"name", "name()", t8991<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"timeToLive", "timeToLive()", t8992<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"usage", "usage()", t8993<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsTlsAssociationRecord::CertificateUsage"},
+    {"selector", "selector()", t8994<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsTlsAssociationRecord::Selector"},
+    {"matchType", "matchType()", t8995<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDnsTlsAssociationRecord::MatchingType"},
+    {"value", "value()", t8996<QDnsTlsAssociationRecord>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDnsTlsAssociationRecord[] = {
-    {"QDnsTlsAssociationRecord", "QDnsTlsAssociationRecord()", t8847<QDnsTlsAssociationRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsTlsAssociationRecord"},
+    {"QDnsTlsAssociationRecord", "QDnsTlsAssociationRecord()", t8997<QDnsTlsAssociationRecord>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDnsTlsAssociationRecord"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8848[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8849[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8854[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
-static const qtc::ParamDesc P8856[] = {{qtc::PK_VALUE, -1, "QDtlsClientVerifier::GeneratorParameters", nullptr}};
-static const qtc::ParamDesc P8858[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
-static const qtc::ParamDesc P8861[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P8862[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
-static const qtc::ParamDesc P8863[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
-static const qtc::ParamDesc P8864[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
-static const qtc::ParamDesc P8865[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
-static const qtc::ParamDesc P8869[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P8870[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P8874[] = {{qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
-static const qtc::ParamDesc P8876[] = {{qtc::PK_ENUM, 622, "QSslSocket::SslMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P8998[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P8999[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9004[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P9006[] = {{qtc::PK_VALUE, -1, "QDtlsClientVerifier::GeneratorParameters", nullptr}};
+static const qtc::ParamDesc P9008[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
+static const qtc::ParamDesc P9011[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9012[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
+static const qtc::ParamDesc P9013[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
+static const qtc::ParamDesc P9014[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
+static const qtc::ParamDesc P9015[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}};
+static const qtc::ParamDesc P9019[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9020[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9024[] = {{qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
+static const qtc::ParamDesc P9026[] = {{qtc::PK_ENUM, 646, "QSslSocket::SslMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(dtls) && __has_include(<QtNetwork/qdtls.h>)
 static const qtc::MethodDef M_QDtls[] = {
-    {"setPeer", "setPeer(QHostAddress,quint16,QString)", t8848<QDtls>, P8848, 3, 2, 0, QTC_T_BOOL, "bool"},
-    {"setPeerVerificationName", "setPeerVerificationName(QString)", t8849<QDtls>, P8849, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"peerAddress", "peerAddress()", t8850<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"peerPort", "peerPort()", t8851<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"peerVerificationName", "peerVerificationName()", t8852<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"sslMode", "sslMode()", t8853<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSslSocket::SslMode"},
-    {"setMtuHint", "setMtuHint(quint16)", t8854<QDtls>, P8854, 1, 1, 0, QTC_T_NONE, "void"},
-    {"mtuHint", "mtuHint()", t8855<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"setCookieGeneratorParameters", "setCookieGeneratorParameters(GeneratorParameters)", t8856<QDtls>, P8856, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"cookieGeneratorParameters", "cookieGeneratorParameters()", t8857<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
-    {"setDtlsConfiguration", "setDtlsConfiguration(QSslConfiguration)", t8858<QDtls>, P8858, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"dtlsConfiguration", "dtlsConfiguration()", t8859<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
-    {"handshakeState", "handshakeState()", t8860<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDtls::HandshakeState"},
-    {"doHandshake", "doHandshake(QUdpSocket*,QByteArray)", t8861<QDtls>, P8861, 2, 1, 0, QTC_T_BOOL, "bool"},
-    {"handleTimeout", "handleTimeout(QUdpSocket*)", t8862<QDtls>, P8862, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"resumeHandshake", "resumeHandshake(QUdpSocket*)", t8863<QDtls>, P8863, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"abortHandshake", "abortHandshake(QUdpSocket*)", t8864<QDtls>, P8864, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"shutdown", "shutdown(QUdpSocket*)", t8865<QDtls>, P8865, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"isConnectionEncrypted", "isConnectionEncrypted()", t8866<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"sessionCipher", "sessionCipher()", t8867<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslCipher"},
-    {"sessionProtocol", "sessionProtocol()", t8868<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSsl::SslProtocol"},
-    {"writeDatagramEncrypted", "writeDatagramEncrypted(QUdpSocket*,QByteArray)", t8869<QDtls>, P8869, 2, 2, 0, QTC_T_INT, "long long"},
-    {"decryptDatagram", "decryptDatagram(QUdpSocket*,QByteArray)", t8870<QDtls>, P8870, 2, 2, 0, QTC_T_BYTES, "QByteArray"},
-    {"dtlsError", "dtlsError()", t8871<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDtlsError"},
-    {"dtlsErrorString", "dtlsErrorString()", t8872<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"peerVerificationErrors", "peerVerificationErrors()", t8873<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QSslError>"},
-    {"ignoreVerificationErrors", "ignoreVerificationErrors(QList<QSslError>)", t8874<QDtls>, P8874, 1, 1, 0, QTC_T_NONE, "void"},
-    {"handshakeTimeout", "handshakeTimeout()", t8875<QDtls>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setPeer", "setPeer(QHostAddress,quint16,QString)", t8998<QDtls>, P8998, 3, 2, 0, QTC_T_BOOL, "bool"},
+    {"setPeerVerificationName", "setPeerVerificationName(QString)", t8999<QDtls>, P8999, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"peerAddress", "peerAddress()", t9000<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"peerPort", "peerPort()", t9001<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"peerVerificationName", "peerVerificationName()", t9002<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"sslMode", "sslMode()", t9003<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSslSocket::SslMode"},
+    {"setMtuHint", "setMtuHint(quint16)", t9004<QDtls>, P9004, 1, 1, 0, QTC_T_NONE, "void"},
+    {"mtuHint", "mtuHint()", t9005<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"setCookieGeneratorParameters", "setCookieGeneratorParameters(GeneratorParameters)", t9006<QDtls>, P9006, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"cookieGeneratorParameters", "cookieGeneratorParameters()", t9007<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
+    {"setDtlsConfiguration", "setDtlsConfiguration(QSslConfiguration)", t9008<QDtls>, P9008, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"dtlsConfiguration", "dtlsConfiguration()", t9009<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
+    {"handshakeState", "handshakeState()", t9010<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDtls::HandshakeState"},
+    {"doHandshake", "doHandshake(QUdpSocket*,QByteArray)", t9011<QDtls>, P9011, 2, 1, 0, QTC_T_BOOL, "bool"},
+    {"handleTimeout", "handleTimeout(QUdpSocket*)", t9012<QDtls>, P9012, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"resumeHandshake", "resumeHandshake(QUdpSocket*)", t9013<QDtls>, P9013, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"abortHandshake", "abortHandshake(QUdpSocket*)", t9014<QDtls>, P9014, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"shutdown", "shutdown(QUdpSocket*)", t9015<QDtls>, P9015, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"isConnectionEncrypted", "isConnectionEncrypted()", t9016<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"sessionCipher", "sessionCipher()", t9017<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslCipher"},
+    {"sessionProtocol", "sessionProtocol()", t9018<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSsl::SslProtocol"},
+    {"writeDatagramEncrypted", "writeDatagramEncrypted(QUdpSocket*,QByteArray)", t9019<QDtls>, P9019, 2, 2, 0, QTC_T_INT, "long long"},
+    {"decryptDatagram", "decryptDatagram(QUdpSocket*,QByteArray)", t9020<QDtls>, P9020, 2, 2, 0, QTC_T_BYTES, "QByteArray"},
+    {"dtlsError", "dtlsError()", t9021<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDtlsError"},
+    {"dtlsErrorString", "dtlsErrorString()", t9022<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"peerVerificationErrors", "peerVerificationErrors()", t9023<QDtls>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QSslError>"},
+    {"ignoreVerificationErrors", "ignoreVerificationErrors(QList<QSslError>)", t9024<QDtls>, P9024, 1, 1, 0, QTC_T_NONE, "void"},
+    {"handshakeTimeout", "handshakeTimeout()", t9025<QDtls>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDtls[] = {
-    {"QDtls", "QDtls(QSslSocket::SslMode,QObject*)", t8876<QDtls>, P8876, 2, 1, 0, QTC_T_OBJ, "QDtls"},
+    {"QDtls", "QDtls(QSslSocket::SslMode,QObject*)", t9026<QDtls>, P9026, 2, 1, 0, QTC_T_OBJ, "QDtls"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8877[] = {{qtc::PK_VALUE, -1, "QDtlsClientVerifier::GeneratorParameters", nullptr}};
-static const qtc::ParamDesc P8879[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
-static const qtc::ParamDesc P8883[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9027[] = {{qtc::PK_VALUE, -1, "QDtlsClientVerifier::GeneratorParameters", nullptr}};
+static const qtc::ParamDesc P9029[] = {{qtc::PK_OBJ, -1, "QUdpSocket*", &QUdpSocket::staticMetaObject}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P9033[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(dtls) && __has_include(<QtNetwork/qdtls.h>)
 static const qtc::MethodDef M_QDtlsClientVerifier[] = {
-    {"setCookieGeneratorParameters", "setCookieGeneratorParameters(QDtlsClientVerifier::GeneratorParameters)", t8877<QDtlsClientVerifier>, P8877, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"cookieGeneratorParameters", "cookieGeneratorParameters()", t8878<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
-    {"verifyClient", "verifyClient(QUdpSocket*,QByteArray,QHostAddress,quint16)", t8879<QDtlsClientVerifier>, P8879, 4, 4, 0, QTC_T_BOOL, "bool"},
-    {"verifiedHello", "verifiedHello()", t8880<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"dtlsError", "dtlsError()", t8881<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDtlsError"},
-    {"dtlsErrorString", "dtlsErrorString()", t8882<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setCookieGeneratorParameters", "setCookieGeneratorParameters(QDtlsClientVerifier::GeneratorParameters)", t9027<QDtlsClientVerifier>, P9027, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"cookieGeneratorParameters", "cookieGeneratorParameters()", t9028<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
+    {"verifyClient", "verifyClient(QUdpSocket*,QByteArray,QHostAddress,quint16)", t9029<QDtlsClientVerifier>, P9029, 4, 4, 0, QTC_T_BOOL, "bool"},
+    {"verifiedHello", "verifiedHello()", t9030<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"dtlsError", "dtlsError()", t9031<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDtlsError"},
+    {"dtlsErrorString", "dtlsErrorString()", t9032<QDtlsClientVerifier>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDtlsClientVerifier[] = {
-    {"QDtlsClientVerifier", "QDtlsClientVerifier(QObject*)", t8883<QDtlsClientVerifier>, P8883, 1, 0, 0, QTC_T_OBJ, "QDtlsClientVerifier"},
+    {"QDtlsClientVerifier", "QDtlsClientVerifier(QObject*)", t9033<QDtlsClientVerifier>, P9033, 1, 0, 0, QTC_T_OBJ, "QDtlsClientVerifier"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8885[] = {{qtc::PK_ENUM, 118, "QCryptographicHash::Algorithm", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9035[] = {{qtc::PK_ENUM, 125, "QCryptographicHash::Algorithm", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
 #if QT_CONFIG(dtls) && __has_include(<QtNetwork/qdtls.h>)
 static const qtc::MethodDef M_QDtlsClientVerifier__GeneratorParameters[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDtlsClientVerifier__GeneratorParameters[] = {
-    {"QDtlsClientVerifier::GeneratorParameters", "GeneratorParameters()", t8884<QDtlsClientVerifier::GeneratorParameters>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
-    {"QDtlsClientVerifier::GeneratorParameters", "GeneratorParameters(QCryptographicHash::Algorithm,QByteArray)", t8885<QDtlsClientVerifier::GeneratorParameters>, P8885, 2, 2, 0, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
+    {"QDtlsClientVerifier::GeneratorParameters", "GeneratorParameters()", t9034<QDtlsClientVerifier::GeneratorParameters>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
+    {"QDtlsClientVerifier::GeneratorParameters", "GeneratorParameters(QCryptographicHash::Algorithm,QByteArray)", t9035<QDtlsClientVerifier::GeneratorParameters>, P9035, 2, 2, 0, QTC_T_VALUE, "QDtlsClientVerifier::GeneratorParameters"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8886[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P8887[] = {{qtc::PK_VALUE, -1, "QIPv6Address", nullptr}};
-static const qtc::ParamDesc P8888[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8889[] = {{qtc::PK_ENUM, 239, "QHostAddress::SpecialAddress", nullptr}};
-static const qtc::ParamDesc P8891[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
-static const qtc::ParamDesc P8895[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8896[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_FLAGS, 238, "QFlags<QHostAddress::ConversionModeFlag>", nullptr}};
-static const qtc::ParamDesc P8899[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P8909[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P8910[] = {{qtc::PK_VALUE, -1, "QIPv6Address", nullptr}};
-static const qtc::ParamDesc P8911[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8912[] = {{qtc::PK_ENUM, 239, "QHostAddress::SpecialAddress", nullptr}};
+static const qtc::ParamDesc P9036[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P9037[] = {{qtc::PK_VALUE, -1, "QIPv6Address", nullptr}};
+static const qtc::ParamDesc P9038[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9039[] = {{qtc::PK_ENUM, 246, "QHostAddress::SpecialAddress", nullptr}};
+static const qtc::ParamDesc P9041[] = {{qtc::PK_OUT, -1, "bool*", nullptr}};
+static const qtc::ParamDesc P9045[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9046[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_FLAGS, 245, "QFlags<QHostAddress::ConversionModeFlag>", nullptr}};
+static const qtc::ParamDesc P9049[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9059[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P9060[] = {{qtc::PK_VALUE, -1, "QIPv6Address", nullptr}};
+static const qtc::ParamDesc P9061[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9062[] = {{qtc::PK_ENUM, 246, "QHostAddress::SpecialAddress", nullptr}};
 #if __has_include(<QtNetwork/qhostaddress.h>)
 static const qtc::MethodDef M_QHostAddress[] = {
-    {"setAddress", "setAddress(quint32)", t8886<QHostAddress>, P8886, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setAddress", "setAddress(Q_IPV6ADDR)", t8887<QHostAddress>, P8887, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setAddress", "setAddress(QString)", t8888<QHostAddress>, P8888, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"setAddress", "setAddress(QHostAddress::SpecialAddress)", t8889<QHostAddress>, P8889, 1, 1, 0, QTC_T_NONE, "void"},
-    {"protocol", "protocol()", t8890<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::NetworkLayerProtocol"},
-    {"toIPv4Address", "toIPv4Address(bool*)", t8891<QHostAddress>, P8891, 1, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"toIPv6Address", "toIPv6Address()", t8892<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QIPv6Address"},
-    {"toString", "toString()", t8893<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"scopeId", "scopeId()", t8894<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setScopeId", "setScopeId(QString)", t8895<QHostAddress>, P8895, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isEqual", "isEqual(QHostAddress,QHostAddress::ConversionMode)", t8896<QHostAddress>, P8896, 2, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNull", "isNull()", t8897<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t8898<QHostAddress>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isInSubnet", "isInSubnet(QHostAddress,int)", t8899<QHostAddress>, P8899, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isLoopback", "isLoopback()", t8900<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isGlobal", "isGlobal()", t8901<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isLinkLocal", "isLinkLocal()", t8902<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isSiteLocal", "isSiteLocal()", t8903<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isUniqueLocalUnicast", "isUniqueLocalUnicast()", t8904<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isMulticast", "isMulticast()", t8905<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isBroadcast", "isBroadcast()", t8906<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setAddress", "setAddress(quint32)", t9036<QHostAddress>, P9036, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAddress", "setAddress(Q_IPV6ADDR)", t9037<QHostAddress>, P9037, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAddress", "setAddress(QString)", t9038<QHostAddress>, P9038, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"setAddress", "setAddress(QHostAddress::SpecialAddress)", t9039<QHostAddress>, P9039, 1, 1, 0, QTC_T_NONE, "void"},
+    {"protocol", "protocol()", t9040<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::NetworkLayerProtocol"},
+    {"toIPv4Address", "toIPv4Address(bool*)", t9041<QHostAddress>, P9041, 1, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"toIPv6Address", "toIPv6Address()", t9042<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QIPv6Address"},
+    {"toString", "toString()", t9043<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"scopeId", "scopeId()", t9044<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setScopeId", "setScopeId(QString)", t9045<QHostAddress>, P9045, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isEqual", "isEqual(QHostAddress,QHostAddress::ConversionMode)", t9046<QHostAddress>, P9046, 2, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull()", t9047<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t9048<QHostAddress>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isInSubnet", "isInSubnet(QHostAddress,int)", t9049<QHostAddress>, P9049, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isLoopback", "isLoopback()", t9050<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isGlobal", "isGlobal()", t9051<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isLinkLocal", "isLinkLocal()", t9052<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isSiteLocal", "isSiteLocal()", t9053<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isUniqueLocalUnicast", "isUniqueLocalUnicast()", t9054<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isMulticast", "isMulticast()", t9055<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isBroadcast", "isBroadcast()", t9056<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"isPrivateUse", "isPrivateUse()", t8907<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isPrivateUse", "isPrivateUse()", t9057<QHostAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHostAddress[] = {
-    {"QHostAddress", "QHostAddress()", t8908<QHostAddress>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHostAddress"},
-    {"QHostAddress", "QHostAddress(quint32)", t8909<QHostAddress>, P8909, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
-    {"QHostAddress", "QHostAddress(Q_IPV6ADDR)", t8910<QHostAddress>, P8910, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
-    {"QHostAddress", "QHostAddress(QString)", t8911<QHostAddress>, P8911, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
-    {"QHostAddress", "QHostAddress(QHostAddress::SpecialAddress)", t8912<QHostAddress>, P8912, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
+    {"QHostAddress", "QHostAddress()", t9058<QHostAddress>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHostAddress"},
+    {"QHostAddress", "QHostAddress(quint32)", t9059<QHostAddress>, P9059, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
+    {"QHostAddress", "QHostAddress(Q_IPV6ADDR)", t9060<QHostAddress>, P9060, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
+    {"QHostAddress", "QHostAddress(QString)", t9061<QHostAddress>, P9061, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
+    {"QHostAddress", "QHostAddress(QHostAddress::SpecialAddress)", t9062<QHostAddress>, P9062, 1, 1, 0, QTC_T_VALUE, "QHostAddress"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8913[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 794, "QUrl::ParsingMode", nullptr}};
-static const qtc::ParamDesc P8914[] = {{qtc::PK_FLAGS, 793, "QFlags<QUrl::ComponentFormattingOption>", nullptr}};
-static const qtc::ParamDesc P8915[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
-static const qtc::ParamDesc P8917[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P8921[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}, {qtc::PK_FLAGS, 241, "QFlags<QHstsPolicy::PolicyFlag>", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 794, "QUrl::ParsingMode", nullptr}};
+static const qtc::ParamDesc P9063[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 818, "QUrl::ParsingMode", nullptr}};
+static const qtc::ParamDesc P9064[] = {{qtc::PK_FLAGS, 817, "QFlags<QUrl::ComponentFormattingOption>", nullptr}};
+static const qtc::ParamDesc P9065[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P9067[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9071[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}, {qtc::PK_FLAGS, 248, "QFlags<QHstsPolicy::PolicyFlag>", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 818, "QUrl::ParsingMode", nullptr}};
 #if __has_include(<QtNetwork/qhstspolicy.h>)
 static const qtc::MethodDef M_QHstsPolicy[] = {
-    {"setHost", "setHost(QString,QUrl::ParsingMode)", t8913<QHstsPolicy>, P8913, 2, 1, 0, QTC_T_NONE, "void"},
-    {"host", "host(QUrl::ComponentFormattingOptions)", t8914<QHstsPolicy>, P8914, 1, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setExpiry", "setExpiry(QDateTime)", t8915<QHstsPolicy>, P8915, 1, 1, 0, QTC_T_NONE, "void"},
-    {"expiry", "expiry()", t8916<QHstsPolicy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
-    {"setIncludesSubDomains", "setIncludesSubDomains(bool)", t8917<QHstsPolicy>, P8917, 1, 1, 0, QTC_T_NONE, "void"},
-    {"includesSubDomains", "includesSubDomains()", t8918<QHstsPolicy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isExpired", "isExpired()", t8919<QHstsPolicy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setHost", "setHost(QString,QUrl::ParsingMode)", t9063<QHstsPolicy>, P9063, 2, 1, 0, QTC_T_NONE, "void"},
+    {"host", "host(QUrl::ComponentFormattingOptions)", t9064<QHstsPolicy>, P9064, 1, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setExpiry", "setExpiry(QDateTime)", t9065<QHstsPolicy>, P9065, 1, 1, 0, QTC_T_NONE, "void"},
+    {"expiry", "expiry()", t9066<QHstsPolicy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
+    {"setIncludesSubDomains", "setIncludesSubDomains(bool)", t9067<QHstsPolicy>, P9067, 1, 1, 0, QTC_T_NONE, "void"},
+    {"includesSubDomains", "includesSubDomains()", t9068<QHstsPolicy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isExpired", "isExpired()", t9069<QHstsPolicy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHstsPolicy[] = {
-    {"QHstsPolicy", "QHstsPolicy()", t8920<QHstsPolicy>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHstsPolicy"},
-    {"QHstsPolicy", "QHstsPolicy(QDateTime,QHstsPolicy::PolicyFlags,QString,QUrl::ParsingMode)", t8921<QHstsPolicy>, P8921, 4, 3, 0, QTC_T_VALUE, "QHstsPolicy"},
+    {"QHstsPolicy", "QHstsPolicy()", t9070<QHstsPolicy>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHstsPolicy"},
+    {"QHstsPolicy", "QHstsPolicy(QDateTime,QHstsPolicy::PolicyFlags,QString,QUrl::ParsingMode)", t9071<QHstsPolicy>, P9071, 4, 3, 0, QTC_T_VALUE, "QHstsPolicy"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8922[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9072[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && QT_CONFIG(http) && __has_include(<QtNetwork/qhttp1configuration.h>)
 static const qtc::MethodDef M_QHttp1Configuration[] = {
-    {"setNumberOfConnectionsPerHost", "setNumberOfConnectionsPerHost(qsizetype)", t8922<QHttp1Configuration>, P8922, 1, 1, 0, QTC_T_NONE, "void"},
-    {"numberOfConnectionsPerHost", "numberOfConnectionsPerHost()", t8923<QHttp1Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setNumberOfConnectionsPerHost", "setNumberOfConnectionsPerHost(qsizetype)", t9072<QHttp1Configuration>, P9072, 1, 1, 0, QTC_T_NONE, "void"},
+    {"numberOfConnectionsPerHost", "numberOfConnectionsPerHost()", t9073<QHttp1Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHttp1Configuration[] = {
-    {"QHttp1Configuration", "QHttp1Configuration()", t8924<QHttp1Configuration>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttp1Configuration"},
+    {"QHttp1Configuration", "QHttp1Configuration()", t9074<QHttp1Configuration>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttp1Configuration"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8925[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P8927[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P8929[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P8931[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P8933[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P9075[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9077[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9079[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P9081[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P9083[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-static const qtc::ParamDesc P8935[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P9085[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
 #endif
 #if QT_CONFIG(http) && __has_include(<QtNetwork/qhttp2configuration.h>)
 static const qtc::MethodDef M_QHttp2Configuration[] = {
-    {"setServerPushEnabled", "setServerPushEnabled(bool)", t8925<QHttp2Configuration>, P8925, 1, 1, 0, QTC_T_NONE, "void"},
-    {"serverPushEnabled", "serverPushEnabled()", t8926<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setHuffmanCompressionEnabled", "setHuffmanCompressionEnabled(bool)", t8927<QHttp2Configuration>, P8927, 1, 1, 0, QTC_T_NONE, "void"},
-    {"huffmanCompressionEnabled", "huffmanCompressionEnabled()", t8928<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setSessionReceiveWindowSize", "setSessionReceiveWindowSize(uint)", t8929<QHttp2Configuration>, P8929, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"sessionReceiveWindowSize", "sessionReceiveWindowSize()", t8930<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"setStreamReceiveWindowSize", "setStreamReceiveWindowSize(uint)", t8931<QHttp2Configuration>, P8931, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"streamReceiveWindowSize", "streamReceiveWindowSize()", t8932<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"setMaxFrameSize", "setMaxFrameSize(uint)", t8933<QHttp2Configuration>, P8933, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"maxFrameSize", "maxFrameSize()", t8934<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"setServerPushEnabled", "setServerPushEnabled(bool)", t9075<QHttp2Configuration>, P9075, 1, 1, 0, QTC_T_NONE, "void"},
+    {"serverPushEnabled", "serverPushEnabled()", t9076<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setHuffmanCompressionEnabled", "setHuffmanCompressionEnabled(bool)", t9077<QHttp2Configuration>, P9077, 1, 1, 0, QTC_T_NONE, "void"},
+    {"huffmanCompressionEnabled", "huffmanCompressionEnabled()", t9078<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setSessionReceiveWindowSize", "setSessionReceiveWindowSize(uint)", t9079<QHttp2Configuration>, P9079, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"sessionReceiveWindowSize", "sessionReceiveWindowSize()", t9080<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"setStreamReceiveWindowSize", "setStreamReceiveWindowSize(uint)", t9081<QHttp2Configuration>, P9081, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"streamReceiveWindowSize", "streamReceiveWindowSize()", t9082<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"setMaxFrameSize", "setMaxFrameSize(uint)", t9083<QHttp2Configuration>, P9083, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"maxFrameSize", "maxFrameSize()", t9084<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-    {"setMaxConcurrentStreams", "setMaxConcurrentStreams(uint)", t8935<QHttp2Configuration>, P8935, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setMaxConcurrentStreams", "setMaxConcurrentStreams(uint)", t9085<QHttp2Configuration>, P9085, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-    {"maxConcurrentStreams", "maxConcurrentStreams()", t8936<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"maxConcurrentStreams", "maxConcurrentStreams()", t9086<QHttp2Configuration>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHttp2Configuration[] = {
-    {"QHttp2Configuration", "QHttp2Configuration()", t8937<QHttp2Configuration>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttp2Configuration"},
+    {"QHttp2Configuration", "QHttp2Configuration()", t9087<QHttp2Configuration>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttp2Configuration"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0) && __has_include(<QtNetwork/qhttpheaders.h>)
 static const qtc::MethodDef M_QHttpHeaderRangeSet[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHttpHeaderRangeSet[] = {
-    {"QHttpHeaderRangeSet", "QHttpHeaderRangeSet()", t8938<QHttpHeaderRangeSet>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttpHeaderRangeSet"},
+    {"QHttpHeaderRangeSet", "QHttpHeaderRangeSet()", t9088<QHttpHeaderRangeSet>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttpHeaderRangeSet"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0) && __has_include(<QtNetwork/qhttpheaders.h>)
 static const qtc::MethodDef M_QHttpHeaderRangeSpec[] = {
-    {"isValid", "isValid()", t8939<QHttpHeaderRangeSpec>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isValid", "isValid()", t9089<QHttpHeaderRangeSpec>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHttpHeaderRangeSpec[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8940[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8941[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8942[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8943[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8944[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8945[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9090[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9091[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9092[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9093[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9094[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9095[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8946[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9096[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P8947[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9097[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P8948[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8949[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}};
-static const qtc::ParamDesc P8951[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8952[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}};
-static const qtc::ParamDesc P8953[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P8954[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_BYTES, -1, "QByteArrayView", nullptr}};
-static const qtc::ParamDesc P8955[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_BYTES, -1, "QByteArrayView", nullptr}};
-static const qtc::ParamDesc P8956[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8957[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}};
-static const qtc::ParamDesc P8958[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P8959[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P8960[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
-static const qtc::ParamDesc P8961[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}};
+static const qtc::ParamDesc P9098[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9099[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}};
+static const qtc::ParamDesc P9101[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9102[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}};
+static const qtc::ParamDesc P9103[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9104[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_BYTES, -1, "QByteArrayView", nullptr}};
+static const qtc::ParamDesc P9105[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_BYTES, -1, "QByteArrayView", nullptr}};
+static const qtc::ParamDesc P9106[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9107[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}};
+static const qtc::ParamDesc P9108[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9109[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9110[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9111[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P8962[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P9112[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_VALUE, -1, "QDateTime", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P8963[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P9113[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}, {qtc::PK_VALUE, -1, "QDateTime", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-static const qtc::ParamDesc P8964[] = {{qtc::PK_VALUE, -1, "QHttpHeaderRangeSet", nullptr}};
+static const qtc::ParamDesc P9114[] = {{qtc::PK_VALUE, -1, "QHttpHeaderRangeSet", nullptr}};
 #endif
-static const qtc::ParamDesc P8966[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P8968[] = {{qtc::PK_ENUM, 242, "QHttpHeaders::WellKnownHeader", nullptr}};
-static const qtc::ParamDesc P8969[] = {{qtc::PK_VALUE, -1, "QMultiMap<QByteArray, QByteArray>", nullptr}};
-static const qtc::ParamDesc P8970[] = {{qtc::PK_VALUE, -1, "QMultiHash<QByteArray, QByteArray>", nullptr}};
+static const qtc::ParamDesc P9116[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9118[] = {{qtc::PK_ENUM, 249, "QHttpHeaders::WellKnownHeader", nullptr}};
+static const qtc::ParamDesc P9119[] = {{qtc::PK_VALUE, -1, "QMultiMap<QByteArray, QByteArray>", nullptr}};
+static const qtc::ParamDesc P9120[] = {{qtc::PK_VALUE, -1, "QMultiHash<QByteArray, QByteArray>", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtNetwork/qhttpheaders.h>)
 static const qtc::MethodDef M_QHttpHeaders[] = {
-    {"append", "append(QAnyStringView,QAnyStringView)", t8940<QHttpHeaders>, P8940, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"append", "append(QHttpHeaders::WellKnownHeader,QAnyStringView)", t8941<QHttpHeaders>, P8941, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"insert", "insert(qsizetype,QAnyStringView,QAnyStringView)", t8942<QHttpHeaders>, P8942, 3, 3, 0, QTC_T_BOOL, "bool"},
-    {"insert", "insert(qsizetype,QHttpHeaders::WellKnownHeader,QAnyStringView)", t8943<QHttpHeaders>, P8943, 3, 3, 0, QTC_T_BOOL, "bool"},
-    {"replace", "replace(qsizetype,QAnyStringView,QAnyStringView)", t8944<QHttpHeaders>, P8944, 3, 3, 0, QTC_T_BOOL, "bool"},
-    {"replace", "replace(qsizetype,QHttpHeaders::WellKnownHeader,QAnyStringView)", t8945<QHttpHeaders>, P8945, 3, 3, 0, QTC_T_BOOL, "bool"},
+    {"append", "append(QAnyStringView,QAnyStringView)", t9090<QHttpHeaders>, P9090, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"append", "append(QHttpHeaders::WellKnownHeader,QAnyStringView)", t9091<QHttpHeaders>, P9091, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"insert", "insert(qsizetype,QAnyStringView,QAnyStringView)", t9092<QHttpHeaders>, P9092, 3, 3, 0, QTC_T_BOOL, "bool"},
+    {"insert", "insert(qsizetype,QHttpHeaders::WellKnownHeader,QAnyStringView)", t9093<QHttpHeaders>, P9093, 3, 3, 0, QTC_T_BOOL, "bool"},
+    {"replace", "replace(qsizetype,QAnyStringView,QAnyStringView)", t9094<QHttpHeaders>, P9094, 3, 3, 0, QTC_T_BOOL, "bool"},
+    {"replace", "replace(qsizetype,QHttpHeaders::WellKnownHeader,QAnyStringView)", t9095<QHttpHeaders>, P9095, 3, 3, 0, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"replaceOrAppend", "replaceOrAppend(QAnyStringView,QAnyStringView)", t8946<QHttpHeaders>, P8946, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"replaceOrAppend", "replaceOrAppend(QAnyStringView,QAnyStringView)", t9096<QHttpHeaders>, P9096, 2, 2, 0, QTC_T_BOOL, "bool"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"replaceOrAppend", "replaceOrAppend(QHttpHeaders::WellKnownHeader,QAnyStringView)", t8947<QHttpHeaders>, P8947, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"replaceOrAppend", "replaceOrAppend(QHttpHeaders::WellKnownHeader,QAnyStringView)", t9097<QHttpHeaders>, P9097, 2, 2, 0, QTC_T_BOOL, "bool"},
 #endif
-    {"contains", "contains(QAnyStringView)", t8948<QHttpHeaders>, P8948, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"contains", "contains(QHttpHeaders::WellKnownHeader)", t8949<QHttpHeaders>, P8949, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t8950<QHttpHeaders>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"removeAll", "removeAll(QAnyStringView)", t8951<QHttpHeaders>, P8951, 1, 1, 0, QTC_T_NONE, "void"},
-    {"removeAll", "removeAll(QHttpHeaders::WellKnownHeader)", t8952<QHttpHeaders>, P8952, 1, 1, 0, QTC_T_NONE, "void"},
-    {"removeAt", "removeAt(qsizetype)", t8953<QHttpHeaders>, P8953, 1, 1, 0, QTC_T_NONE, "void"},
-    {"value", "value(QAnyStringView,QByteArrayView)", t8954<QHttpHeaders>, P8954, 2, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArrayView"},
-    {"value", "value(QHttpHeaders::WellKnownHeader,QByteArrayView)", t8955<QHttpHeaders>, P8955, 2, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArrayView"},
-    {"values", "values(QAnyStringView)", t8956<QHttpHeaders>, P8956, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
-    {"values", "values(QHttpHeaders::WellKnownHeader)", t8957<QHttpHeaders>, P8957, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
-    {"valueAt", "valueAt(qsizetype)", t8958<QHttpHeaders>, P8958, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArrayView"},
-    {"nameAt", "nameAt(qsizetype)", t8959<QHttpHeaders>, P8959, 1, 1, qtc::MF_CONST, QTC_T_STR, "QLatin1String"},
-    {"combinedValue", "combinedValue(QAnyStringView)", t8960<QHttpHeaders>, P8960, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"combinedValue", "combinedValue(QHttpHeaders::WellKnownHeader)", t8961<QHttpHeaders>, P8961, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"contains", "contains(QAnyStringView)", t9098<QHttpHeaders>, P9098, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"contains", "contains(QHttpHeaders::WellKnownHeader)", t9099<QHttpHeaders>, P9099, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t9100<QHttpHeaders>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"removeAll", "removeAll(QAnyStringView)", t9101<QHttpHeaders>, P9101, 1, 1, 0, QTC_T_NONE, "void"},
+    {"removeAll", "removeAll(QHttpHeaders::WellKnownHeader)", t9102<QHttpHeaders>, P9102, 1, 1, 0, QTC_T_NONE, "void"},
+    {"removeAt", "removeAt(qsizetype)", t9103<QHttpHeaders>, P9103, 1, 1, 0, QTC_T_NONE, "void"},
+    {"value", "value(QAnyStringView,QByteArrayView)", t9104<QHttpHeaders>, P9104, 2, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArrayView"},
+    {"value", "value(QHttpHeaders::WellKnownHeader,QByteArrayView)", t9105<QHttpHeaders>, P9105, 2, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArrayView"},
+    {"values", "values(QAnyStringView)", t9106<QHttpHeaders>, P9106, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
+    {"values", "values(QHttpHeaders::WellKnownHeader)", t9107<QHttpHeaders>, P9107, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
+    {"valueAt", "valueAt(qsizetype)", t9108<QHttpHeaders>, P9108, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArrayView"},
+    {"nameAt", "nameAt(qsizetype)", t9109<QHttpHeaders>, P9109, 1, 1, qtc::MF_CONST, QTC_T_STR, "QLatin1String"},
+    {"combinedValue", "combinedValue(QAnyStringView)", t9110<QHttpHeaders>, P9110, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"combinedValue", "combinedValue(QHttpHeaders::WellKnownHeader)", t9111<QHttpHeaders>, P9111, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setDateTimeValue", "setDateTimeValue(QAnyStringView,QDateTime)", t8962<QHttpHeaders>, P8962, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setDateTimeValue", "setDateTimeValue(QAnyStringView,QDateTime)", t9112<QHttpHeaders>, P9112, 2, 2, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setDateTimeValue", "setDateTimeValue(QHttpHeaders::WellKnownHeader,QDateTime)", t8963<QHttpHeaders>, P8963, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setDateTimeValue", "setDateTimeValue(QHttpHeaders::WellKnownHeader,QDateTime)", t9113<QHttpHeaders>, P9113, 2, 2, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"setRangeValues", "setRangeValues(QHttpHeaderRangeSet)", t8964<QHttpHeaders>, P8964, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setRangeValues", "setRangeValues(QHttpHeaderRangeSet)", t9114<QHttpHeaders>, P9114, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"size", "size()", t8965<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"reserve", "reserve(qsizetype)", t8966<QHttpHeaders>, P8966, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isEmpty", "isEmpty()", t8967<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"wellKnownHeaderName", "wellKnownHeaderName(QHttpHeaders::WellKnownHeader)", t8968<QHttpHeaders>, P8968, 1, 1, qtc::MF_STATIC, QTC_T_BYTES, "QByteArrayView"},
-    {"fromMultiMap", "fromMultiMap(QMultiMap<QByteArray,QByteArray>)", t8969<QHttpHeaders>, P8969, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QHttpHeaders"},
-    {"fromMultiHash", "fromMultiHash(QMultiHash<QByteArray,QByteArray>)", t8970<QHttpHeaders>, P8970, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QHttpHeaders"},
-    {"toMultiMap", "toMultiMap()", t8971<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMultiMap<QByteArray, QByteArray>"},
-    {"toMultiHash", "toMultiHash()", t8972<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMultiHash<QByteArray, QByteArray>"},
+    {"size", "size()", t9115<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"reserve", "reserve(qsizetype)", t9116<QHttpHeaders>, P9116, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isEmpty", "isEmpty()", t9117<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"wellKnownHeaderName", "wellKnownHeaderName(QHttpHeaders::WellKnownHeader)", t9118<QHttpHeaders>, P9118, 1, 1, qtc::MF_STATIC, QTC_T_BYTES, "QByteArrayView"},
+    {"fromMultiMap", "fromMultiMap(QMultiMap<QByteArray,QByteArray>)", t9119<QHttpHeaders>, P9119, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QHttpHeaders"},
+    {"fromMultiHash", "fromMultiHash(QMultiHash<QByteArray,QByteArray>)", t9120<QHttpHeaders>, P9120, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QHttpHeaders"},
+    {"toMultiMap", "toMultiMap()", t9121<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMultiMap<QByteArray, QByteArray>"},
+    {"toMultiHash", "toMultiHash()", t9122<QHttpHeaders>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMultiHash<QByteArray, QByteArray>"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHttpHeaders[] = {
-    {"QHttpHeaders", "QHttpHeaders()", t8973<QHttpHeaders>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttpHeaders"},
+    {"QHttpHeaders", "QHttpHeaders()", t9123<QHttpHeaders>, nullptr, 0, 0, 0, QTC_T_VALUE, "QHttpHeaders"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8974[] = {{qtc::PK_ENUM, 243, "QHttpMultiPart::ContentType", nullptr}};
-static const qtc::ParamDesc P8976[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P8977[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P8978[] = {{qtc::PK_ENUM, 243, "QHttpMultiPart::ContentType", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9124[] = {{qtc::PK_ENUM, 250, "QHttpMultiPart::ContentType", nullptr}};
+static const qtc::ParamDesc P9126[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9127[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9128[] = {{qtc::PK_ENUM, 250, "QHttpMultiPart::ContentType", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(http) && __has_include(<QtNetwork/qhttpmultipart.h>)
 static const qtc::MethodDef M_QHttpMultiPart[] = {
-    {"setContentType", "setContentType(QHttpMultiPart::ContentType)", t8974<QHttpMultiPart>, P8974, 1, 1, 0, QTC_T_NONE, "void"},
-    {"boundary", "boundary()", t8975<QHttpMultiPart>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"setBoundary", "setBoundary(QByteArray)", t8976<QHttpMultiPart>, P8976, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setContentType", "setContentType(QHttpMultiPart::ContentType)", t9124<QHttpMultiPart>, P9124, 1, 1, 0, QTC_T_NONE, "void"},
+    {"boundary", "boundary()", t9125<QHttpMultiPart>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"setBoundary", "setBoundary(QByteArray)", t9126<QHttpMultiPart>, P9126, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QHttpMultiPart[] = {
-    {"QHttpMultiPart", "QHttpMultiPart(QObject*)", t8977<QHttpMultiPart>, P8977, 1, 0, 0, QTC_T_OBJ, "QHttpMultiPart"},
-    {"QHttpMultiPart", "QHttpMultiPart(QHttpMultiPart::ContentType,QObject*)", t8978<QHttpMultiPart>, P8978, 2, 1, 0, QTC_T_OBJ, "QHttpMultiPart"},
+    {"QHttpMultiPart", "QHttpMultiPart(QObject*)", t9127<QHttpMultiPart>, P9127, 1, 0, 0, QTC_T_OBJ, "QHttpMultiPart"},
+    {"QHttpMultiPart", "QHttpMultiPart(QHttpMultiPart::ContentType,QObject*)", t9128<QHttpMultiPart>, P9128, 2, 1, 0, QTC_T_OBJ, "QHttpMultiPart"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P8984[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8985[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P8990[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P8992[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P8993[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_OUT, -1, "bool*", nullptr}};
-static const qtc::ParamDesc P8994[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P8996[] = {{qtc::PK_FLAGS, 301, "QFlags<QLocalServer::SocketOption>", nullptr}};
-static const qtc::ParamDesc P8999[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9134[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9135[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9140[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9142[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9143[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_OUT, -1, "bool*", nullptr}};
+static const qtc::ParamDesc P9144[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9146[] = {{qtc::PK_FLAGS, 311, "QFlags<QLocalServer::SocketOption>", nullptr}};
+static const qtc::ParamDesc P9149[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(localserver) && __has_include(<QtNetwork/qlocalserver.h>)
 static const qtc::MethodDef M_QLocalServer[] = {
-    {"newConnection", "newConnection()", t8979<QLocalServer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"close", "close()", t8980<QLocalServer>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"errorString", "errorString()", t8981<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"hasPendingConnections", "hasPendingConnections()", t8982<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isListening", "isListening()", t8983<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"listen", "listen(QString)", t8984<QLocalServer>, P8984, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"listen", "listen(qintptr)", t8985<QLocalServer>, P8985, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"maxPendingConnections", "maxPendingConnections()", t8986<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"nextPendingConnection", "nextPendingConnection()", t8987<QLocalServer>, nullptr, 0, 0, 0, QTC_T_OBJ, "QLocalSocket*"},
-    {"serverName", "serverName()", t8988<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"fullServerName", "fullServerName()", t8989<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"removeServer", "removeServer(QString)", t8990<QLocalServer>, P8990, 1, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"serverError", "serverError()", t8991<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketError"},
-    {"setMaxPendingConnections", "setMaxPendingConnections(int)", t8992<QLocalServer>, P8992, 1, 1, 0, QTC_T_NONE, "void"},
-    {"waitForNewConnection", "waitForNewConnection(int,bool*)", t8993<QLocalServer>, P8993, 2, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"setListenBacklogSize", "setListenBacklogSize(int)", t8994<QLocalServer>, P8994, 1, 1, 0, QTC_T_NONE, "void"},
-    {"listenBacklogSize", "listenBacklogSize()", t8995<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSocketOptions", "setSocketOptions(QLocalServer::SocketOptions)", t8996<QLocalServer>, P8996, 1, 1, 0, QTC_T_NONE, "void"},
-    {"socketOptions", "socketOptions()", t8997<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QLocalServer::SocketOption>"},
-    {"socketDescriptor", "socketDescriptor()", t8998<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"newConnection", "newConnection()", t9129<QLocalServer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"close", "close()", t9130<QLocalServer>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"errorString", "errorString()", t9131<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"hasPendingConnections", "hasPendingConnections()", t9132<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isListening", "isListening()", t9133<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"listen", "listen(QString)", t9134<QLocalServer>, P9134, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"listen", "listen(qintptr)", t9135<QLocalServer>, P9135, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"maxPendingConnections", "maxPendingConnections()", t9136<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"nextPendingConnection", "nextPendingConnection()", t9137<QLocalServer>, nullptr, 0, 0, 0, QTC_T_OBJ, "QLocalSocket*"},
+    {"serverName", "serverName()", t9138<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"fullServerName", "fullServerName()", t9139<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"removeServer", "removeServer(QString)", t9140<QLocalServer>, P9140, 1, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"serverError", "serverError()", t9141<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAbstractSocket::SocketError"},
+    {"setMaxPendingConnections", "setMaxPendingConnections(int)", t9142<QLocalServer>, P9142, 1, 1, 0, QTC_T_NONE, "void"},
+    {"waitForNewConnection", "waitForNewConnection(int,bool*)", t9143<QLocalServer>, P9143, 2, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"setListenBacklogSize", "setListenBacklogSize(int)", t9144<QLocalServer>, P9144, 1, 1, 0, QTC_T_NONE, "void"},
+    {"listenBacklogSize", "listenBacklogSize()", t9145<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSocketOptions", "setSocketOptions(QLocalServer::SocketOptions)", t9146<QLocalServer>, P9146, 1, 1, 0, QTC_T_NONE, "void"},
+    {"socketOptions", "socketOptions()", t9147<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QLocalServer::SocketOption>"},
+    {"socketDescriptor", "socketDescriptor()", t9148<QLocalServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QLocalServer[] = {
-    {"QLocalServer", "QLocalServer(QObject*)", t8999<QLocalServer>, P8999, 1, 0, 0, QTC_T_OBJ, "QLocalServer"},
+    {"QLocalServer", "QLocalServer(QObject*)", t9149<QLocalServer>, P9149, 1, 0, 0, QTC_T_OBJ, "QLocalServer"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9000[] = {{qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P9001[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P9003[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9011[] = {{qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P9017[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P9018[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 303, "QLocalSocket::LocalSocketState", nullptr}, {qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P9020[] = {{qtc::PK_FLAGS, 304, "QFlags<QLocalSocket::SocketOption>", nullptr}};
-static const qtc::ParamDesc P9023[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9024[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9025[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9026[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9029[] = {{qtc::PK_ENUM, 302, "QLocalSocket::LocalSocketError", nullptr}};
-static const qtc::ParamDesc P9030[] = {{qtc::PK_ENUM, 303, "QLocalSocket::LocalSocketState", nullptr}};
-static const qtc::ParamDesc P9031[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9150[] = {{qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P9151[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P9153[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9161[] = {{qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P9167[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9168[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 313, "QLocalSocket::LocalSocketState", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P9170[] = {{qtc::PK_FLAGS, 314, "QFlags<QLocalSocket::SocketOption>", nullptr}};
+static const qtc::ParamDesc P9173[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9174[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9175[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9176[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9179[] = {{qtc::PK_ENUM, 312, "QLocalSocket::LocalSocketError", nullptr}};
+static const qtc::ParamDesc P9180[] = {{qtc::PK_ENUM, 313, "QLocalSocket::LocalSocketState", nullptr}};
+static const qtc::ParamDesc P9181[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(localserver) && __has_include(<QtNetwork/qlocalsocket.h>)
 static const qtc::MethodDef M_QLocalSocket[] = {
-    {"connectToServer", "connectToServer(OpenMode)", t9000<QLocalSocket>, P9000, 1, 0, 0, QTC_T_NONE, "void"},
-    {"connectToServer", "connectToServer(QString,OpenMode)", t9001<QLocalSocket>, P9001, 2, 1, 0, QTC_T_NONE, "void"},
-    {"disconnectFromServer", "disconnectFromServer()", t9002<QLocalSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setServerName", "setServerName(QString)", t9003<QLocalSocket>, P9003, 1, 1, 0, QTC_T_NONE, "void"},
-    {"serverName", "serverName()", t9004<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"fullServerName", "fullServerName()", t9005<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"abort", "abort()", t9006<QLocalSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"isSequential", "isSequential()", t9007<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"bytesAvailable", "bytesAvailable()", t9008<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"bytesToWrite", "bytesToWrite()", t9009<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"canReadLine", "canReadLine()", t9010<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"open", "open(OpenMode)", t9011<QLocalSocket>, P9011, 1, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"close", "close()", t9012<QLocalSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"error", "error()", t9013<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QLocalSocket::LocalSocketError"},
-    {"flush", "flush()", t9014<QLocalSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"isValid", "isValid()", t9015<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"readBufferSize", "readBufferSize()", t9016<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setReadBufferSize", "setReadBufferSize(qint64)", t9017<QLocalSocket>, P9017, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setSocketDescriptor", "setSocketDescriptor(qintptr,QLocalSocket::LocalSocketState,OpenMode)", t9018<QLocalSocket>, P9018, 3, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"socketDescriptor", "socketDescriptor()", t9019<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setSocketOptions", "setSocketOptions(QLocalSocket::SocketOptions)", t9020<QLocalSocket>, P9020, 1, 1, 0, QTC_T_NONE, "void"},
-    {"socketOptions", "socketOptions()", t9021<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QLocalSocket::SocketOption>"},
-    {"state", "state()", t9022<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QLocalSocket::LocalSocketState"},
-    {"waitForBytesWritten", "waitForBytesWritten(int)", t9023<QLocalSocket>, P9023, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"waitForConnected", "waitForConnected(int)", t9024<QLocalSocket>, P9024, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"waitForDisconnected", "waitForDisconnected(int)", t9025<QLocalSocket>, P9025, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"waitForReadyRead", "waitForReadyRead(int)", t9026<QLocalSocket>, P9026, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
-    {"connected", "connected()", t9027<QLocalSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"disconnected", "disconnected()", t9028<QLocalSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QLocalSocket::LocalSocketError)", t9029<QLocalSocket>, P9029, 1, 1, 0, QTC_T_NONE, "void"},
-    {"stateChanged", "stateChanged(QLocalSocket::LocalSocketState)", t9030<QLocalSocket>, P9030, 1, 1, 0, QTC_T_NONE, "void"},
+    {"connectToServer", "connectToServer(OpenMode)", t9150<QLocalSocket>, P9150, 1, 0, 0, QTC_T_NONE, "void"},
+    {"connectToServer", "connectToServer(QString,OpenMode)", t9151<QLocalSocket>, P9151, 2, 1, 0, QTC_T_NONE, "void"},
+    {"disconnectFromServer", "disconnectFromServer()", t9152<QLocalSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setServerName", "setServerName(QString)", t9153<QLocalSocket>, P9153, 1, 1, 0, QTC_T_NONE, "void"},
+    {"serverName", "serverName()", t9154<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"fullServerName", "fullServerName()", t9155<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"abort", "abort()", t9156<QLocalSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"isSequential", "isSequential()", t9157<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"bytesAvailable", "bytesAvailable()", t9158<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bytesToWrite", "bytesToWrite()", t9159<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"canReadLine", "canReadLine()", t9160<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"open", "open(OpenMode)", t9161<QLocalSocket>, P9161, 1, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"close", "close()", t9162<QLocalSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"error", "error()", t9163<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QLocalSocket::LocalSocketError"},
+    {"flush", "flush()", t9164<QLocalSocket>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"isValid", "isValid()", t9165<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"readBufferSize", "readBufferSize()", t9166<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setReadBufferSize", "setReadBufferSize(qint64)", t9167<QLocalSocket>, P9167, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setSocketDescriptor", "setSocketDescriptor(qintptr,QLocalSocket::LocalSocketState,OpenMode)", t9168<QLocalSocket>, P9168, 3, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"socketDescriptor", "socketDescriptor()", t9169<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setSocketOptions", "setSocketOptions(QLocalSocket::SocketOptions)", t9170<QLocalSocket>, P9170, 1, 1, 0, QTC_T_NONE, "void"},
+    {"socketOptions", "socketOptions()", t9171<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QLocalSocket::SocketOption>"},
+    {"state", "state()", t9172<QLocalSocket>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QLocalSocket::LocalSocketState"},
+    {"waitForBytesWritten", "waitForBytesWritten(int)", t9173<QLocalSocket>, P9173, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"waitForConnected", "waitForConnected(int)", t9174<QLocalSocket>, P9174, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"waitForDisconnected", "waitForDisconnected(int)", t9175<QLocalSocket>, P9175, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"waitForReadyRead", "waitForReadyRead(int)", t9176<QLocalSocket>, P9176, 1, 0, qtc::MF_BLOCKING, QTC_T_BOOL, "bool"},
+    {"connected", "connected()", t9177<QLocalSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"disconnected", "disconnected()", t9178<QLocalSocket>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QLocalSocket::LocalSocketError)", t9179<QLocalSocket>, P9179, 1, 1, 0, QTC_T_NONE, "void"},
+    {"stateChanged", "stateChanged(QLocalSocket::LocalSocketState)", t9180<QLocalSocket>, P9180, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QLocalSocket[] = {
-    {"QLocalSocket", "QLocalSocket(QObject*)", t9031<QLocalSocket>, P9031, 1, 0, 0, QTC_T_OBJ, "QLocalSocket"},
+    {"QLocalSocket", "QLocalSocket(QObject*)", t9181<QLocalSocket>, P9181, 1, 0, 0, QTC_T_OBJ, "QLocalSocket"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9036[] = {{qtc::PK_VALUE, -1, "QNetworkProxy", nullptr}};
-static const qtc::ParamDesc P9038[] = {{qtc::PK_OBJ, -1, "QAbstractNetworkCache*", &QAbstractNetworkCache::staticMetaObject}};
-static const qtc::ParamDesc P9040[] = {{qtc::PK_OBJ, -1, "QNetworkCookieJar*", &QNetworkCookieJar::staticMetaObject}};
-static const qtc::ParamDesc P9041[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9043[] = {{qtc::PK_BOOL, -1, "bool", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9045[] = {{qtc::PK_LIST, -1, "QList<QHstsPolicy>", nullptr}};
-static const qtc::ParamDesc P9047[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}};
-static const qtc::ParamDesc P9048[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}};
+static const qtc::ParamDesc P9186[] = {{qtc::PK_VALUE, -1, "QNetworkProxy", nullptr}};
+static const qtc::ParamDesc P9188[] = {{qtc::PK_OBJ, -1, "QAbstractNetworkCache*", &QAbstractNetworkCache::staticMetaObject}};
+static const qtc::ParamDesc P9190[] = {{qtc::PK_OBJ, -1, "QNetworkCookieJar*", &QNetworkCookieJar::staticMetaObject}};
+static const qtc::ParamDesc P9191[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9193[] = {{qtc::PK_BOOL, -1, "bool", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9195[] = {{qtc::PK_LIST, -1, "QList<QHstsPolicy>", nullptr}};
+static const qtc::ParamDesc P9197[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}};
+static const qtc::ParamDesc P9198[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9049[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P9199[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9050[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9200[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
 #endif
-static const qtc::ParamDesc P9051[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P9052[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9053[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P9054[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9055[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}};
-static const qtc::ParamDesc P9056[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P9057[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9058[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QHttpMultiPart*", &QHttpMultiPart::staticMetaObject}};
-static const qtc::ParamDesc P9059[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QHttpMultiPart*", &QHttpMultiPart::staticMetaObject}};
-static const qtc::ParamDesc P9060[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_OBJ, -1, "QHttpMultiPart*", &QHttpMultiPart::staticMetaObject}};
-static const qtc::ParamDesc P9061[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
-static const qtc::ParamDesc P9062[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9063[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
-static const qtc::ParamDesc P9064[] = {{qtc::PK_ENUM, 373, "QNetworkRequest::RedirectPolicy", nullptr}};
-static const qtc::ParamDesc P9067[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9069[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9071[] = {{qtc::PK_OBJ, -1, "QNetworkReply*", &QNetworkReply::staticMetaObject}};
-static const qtc::ParamDesc P9072[] = {{qtc::PK_OBJ, -1, "QNetworkReply*", &QNetworkReply::staticMetaObject}};
-static const qtc::ParamDesc P9073[] = {{qtc::PK_OBJ, -1, "QNetworkReply*", &QNetworkReply::staticMetaObject}, {qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
-static const qtc::ParamDesc P9074[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9201[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P9202[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9203[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P9204[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9205[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}};
+static const qtc::ParamDesc P9206[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P9207[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9208[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QHttpMultiPart*", &QHttpMultiPart::staticMetaObject}};
+static const qtc::ParamDesc P9209[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_OBJ, -1, "QHttpMultiPart*", &QHttpMultiPart::staticMetaObject}};
+static const qtc::ParamDesc P9210[] = {{qtc::PK_VALUE, -1, "QNetworkRequest", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_OBJ, -1, "QHttpMultiPart*", &QHttpMultiPart::staticMetaObject}};
+static const qtc::ParamDesc P9211[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
+static const qtc::ParamDesc P9212[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9213[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P9214[] = {{qtc::PK_ENUM, 394, "QNetworkRequest::RedirectPolicy", nullptr}};
+static const qtc::ParamDesc P9217[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9219[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9221[] = {{qtc::PK_OBJ, -1, "QNetworkReply*", &QNetworkReply::staticMetaObject}};
+static const qtc::ParamDesc P9222[] = {{qtc::PK_OBJ, -1, "QNetworkReply*", &QNetworkReply::staticMetaObject}};
+static const qtc::ParamDesc P9223[] = {{qtc::PK_OBJ, -1, "QNetworkReply*", &QNetworkReply::staticMetaObject}, {qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
+static const qtc::ParamDesc P9224[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtNetwork/qnetworkaccessmanager.h>)
 static const qtc::MethodDef M_QNetworkAccessManager[] = {
-    {"supportedSchemes", "supportedSchemes()", t9032<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"clearAccessCache", "clearAccessCache()", t9033<QNetworkAccessManager>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"clearConnectionCache", "clearConnectionCache()", t9034<QNetworkAccessManager>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"proxy", "proxy()", t9035<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QNetworkProxy"},
-    {"setProxy", "setProxy(QNetworkProxy)", t9036<QNetworkAccessManager>, P9036, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"cache", "cache()", t9037<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAbstractNetworkCache*"},
-    {"setCache", "setCache(QAbstractNetworkCache*)", t9038<QNetworkAccessManager>, P9038, 1, 1, 0, QTC_T_NONE, "void"},
-    {"cookieJar", "cookieJar()", t9039<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QNetworkCookieJar*"},
-    {"setCookieJar", "setCookieJar(QNetworkCookieJar*)", t9040<QNetworkAccessManager>, P9040, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setStrictTransportSecurityEnabled", "setStrictTransportSecurityEnabled(bool)", t9041<QNetworkAccessManager>, P9041, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isStrictTransportSecurityEnabled", "isStrictTransportSecurityEnabled()", t9042<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"enableStrictTransportSecurityStore", "enableStrictTransportSecurityStore(bool,QString)", t9043<QNetworkAccessManager>, P9043, 2, 1, 0, QTC_T_NONE, "void"},
-    {"isStrictTransportSecurityStoreEnabled", "isStrictTransportSecurityStoreEnabled()", t9044<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"addStrictTransportSecurityHosts", "addStrictTransportSecurityHosts(QList<QHstsPolicy>)", t9045<QNetworkAccessManager>, P9045, 1, 1, 0, QTC_T_NONE, "void"},
-    {"strictTransportSecurityHosts", "strictTransportSecurityHosts()", t9046<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QHstsPolicy>"},
-    {"head", "head(QNetworkRequest)", t9047<QNetworkAccessManager>, P9047, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"get", "get(QNetworkRequest)", t9048<QNetworkAccessManager>, P9048, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"supportedSchemes", "supportedSchemes()", t9182<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"clearAccessCache", "clearAccessCache()", t9183<QNetworkAccessManager>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"clearConnectionCache", "clearConnectionCache()", t9184<QNetworkAccessManager>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"proxy", "proxy()", t9185<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QNetworkProxy"},
+    {"setProxy", "setProxy(QNetworkProxy)", t9186<QNetworkAccessManager>, P9186, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"cache", "cache()", t9187<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAbstractNetworkCache*"},
+    {"setCache", "setCache(QAbstractNetworkCache*)", t9188<QNetworkAccessManager>, P9188, 1, 1, 0, QTC_T_NONE, "void"},
+    {"cookieJar", "cookieJar()", t9189<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QNetworkCookieJar*"},
+    {"setCookieJar", "setCookieJar(QNetworkCookieJar*)", t9190<QNetworkAccessManager>, P9190, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setStrictTransportSecurityEnabled", "setStrictTransportSecurityEnabled(bool)", t9191<QNetworkAccessManager>, P9191, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isStrictTransportSecurityEnabled", "isStrictTransportSecurityEnabled()", t9192<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"enableStrictTransportSecurityStore", "enableStrictTransportSecurityStore(bool,QString)", t9193<QNetworkAccessManager>, P9193, 2, 1, 0, QTC_T_NONE, "void"},
+    {"isStrictTransportSecurityStoreEnabled", "isStrictTransportSecurityStoreEnabled()", t9194<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"addStrictTransportSecurityHosts", "addStrictTransportSecurityHosts(QList<QHstsPolicy>)", t9195<QNetworkAccessManager>, P9195, 1, 1, 0, QTC_T_NONE, "void"},
+    {"strictTransportSecurityHosts", "strictTransportSecurityHosts()", t9196<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QHstsPolicy>"},
+    {"head", "head(QNetworkRequest)", t9197<QNetworkAccessManager>, P9197, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"get", "get(QNetworkRequest)", t9198<QNetworkAccessManager>, P9198, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"get", "get(QNetworkRequest,QIODevice*)", t9049<QNetworkAccessManager>, P9049, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"get", "get(QNetworkRequest,QIODevice*)", t9199<QNetworkAccessManager>, P9199, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"get", "get(QNetworkRequest,QByteArray)", t9050<QNetworkAccessManager>, P9050, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"get", "get(QNetworkRequest,QByteArray)", t9200<QNetworkAccessManager>, P9200, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
 #endif
-    {"post", "post(QNetworkRequest,QIODevice*)", t9051<QNetworkAccessManager>, P9051, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"post", "post(QNetworkRequest,QByteArray)", t9052<QNetworkAccessManager>, P9052, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"put", "put(QNetworkRequest,QIODevice*)", t9053<QNetworkAccessManager>, P9053, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"put", "put(QNetworkRequest,QByteArray)", t9054<QNetworkAccessManager>, P9054, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"deleteResource", "deleteResource(QNetworkRequest)", t9055<QNetworkAccessManager>, P9055, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"sendCustomRequest", "sendCustomRequest(QNetworkRequest,QByteArray,QIODevice*)", t9056<QNetworkAccessManager>, P9056, 3, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"sendCustomRequest", "sendCustomRequest(QNetworkRequest,QByteArray,QByteArray)", t9057<QNetworkAccessManager>, P9057, 3, 3, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"post", "post(QNetworkRequest,QHttpMultiPart*)", t9058<QNetworkAccessManager>, P9058, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"put", "put(QNetworkRequest,QHttpMultiPart*)", t9059<QNetworkAccessManager>, P9059, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"sendCustomRequest", "sendCustomRequest(QNetworkRequest,QByteArray,QHttpMultiPart*)", t9060<QNetworkAccessManager>, P9060, 3, 3, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
-    {"connectToHostEncrypted", "connectToHostEncrypted(QString,quint16,QSslConfiguration)", t9061<QNetworkAccessManager>, P9061, 3, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"connectToHostEncrypted", "connectToHostEncrypted(QString,quint16,QSslConfiguration,QString)", t9062<QNetworkAccessManager>, P9062, 4, 4, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"connectToHost", "connectToHost(QString,quint16)", t9063<QNetworkAccessManager>, P9063, 2, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"setRedirectPolicy", "setRedirectPolicy(QNetworkRequest::RedirectPolicy)", t9064<QNetworkAccessManager>, P9064, 1, 1, 0, QTC_T_NONE, "void"},
-    {"redirectPolicy", "redirectPolicy()", t9065<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkRequest::RedirectPolicy"},
-    {"autoDeleteReplies", "autoDeleteReplies()", t9066<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setAutoDeleteReplies", "setAutoDeleteReplies(bool)", t9067<QNetworkAccessManager>, P9067, 1, 1, 0, QTC_T_NONE, "void"},
-    {"transferTimeout", "transferTimeout()", t9068<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setTransferTimeout", "setTransferTimeout(int)", t9069<QNetworkAccessManager>, P9069, 1, 1, 0, QTC_T_NONE, "void"},
+    {"post", "post(QNetworkRequest,QIODevice*)", t9201<QNetworkAccessManager>, P9201, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"post", "post(QNetworkRequest,QByteArray)", t9202<QNetworkAccessManager>, P9202, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"put", "put(QNetworkRequest,QIODevice*)", t9203<QNetworkAccessManager>, P9203, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"put", "put(QNetworkRequest,QByteArray)", t9204<QNetworkAccessManager>, P9204, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"deleteResource", "deleteResource(QNetworkRequest)", t9205<QNetworkAccessManager>, P9205, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"sendCustomRequest", "sendCustomRequest(QNetworkRequest,QByteArray,QIODevice*)", t9206<QNetworkAccessManager>, P9206, 3, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"sendCustomRequest", "sendCustomRequest(QNetworkRequest,QByteArray,QByteArray)", t9207<QNetworkAccessManager>, P9207, 3, 3, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"post", "post(QNetworkRequest,QHttpMultiPart*)", t9208<QNetworkAccessManager>, P9208, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"put", "put(QNetworkRequest,QHttpMultiPart*)", t9209<QNetworkAccessManager>, P9209, 2, 2, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"sendCustomRequest", "sendCustomRequest(QNetworkRequest,QByteArray,QHttpMultiPart*)", t9210<QNetworkAccessManager>, P9210, 3, 3, qtc::MF_NOFUZZ, QTC_T_OBJ, "QNetworkReply*"},
+    {"connectToHostEncrypted", "connectToHostEncrypted(QString,quint16,QSslConfiguration)", t9211<QNetworkAccessManager>, P9211, 3, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"connectToHostEncrypted", "connectToHostEncrypted(QString,quint16,QSslConfiguration,QString)", t9212<QNetworkAccessManager>, P9212, 4, 4, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"connectToHost", "connectToHost(QString,quint16)", t9213<QNetworkAccessManager>, P9213, 2, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"setRedirectPolicy", "setRedirectPolicy(QNetworkRequest::RedirectPolicy)", t9214<QNetworkAccessManager>, P9214, 1, 1, 0, QTC_T_NONE, "void"},
+    {"redirectPolicy", "redirectPolicy()", t9215<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkRequest::RedirectPolicy"},
+    {"autoDeleteReplies", "autoDeleteReplies()", t9216<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setAutoDeleteReplies", "setAutoDeleteReplies(bool)", t9217<QNetworkAccessManager>, P9217, 1, 1, 0, QTC_T_NONE, "void"},
+    {"transferTimeout", "transferTimeout()", t9218<QNetworkAccessManager>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setTransferTimeout", "setTransferTimeout(int)", t9219<QNetworkAccessManager>, P9219, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"setTransferTimeout", "setTransferTimeout()", t9070<QNetworkAccessManager>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setTransferTimeout", "setTransferTimeout()", t9220<QNetworkAccessManager>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
-    {"finished", "finished(QNetworkReply*)", t9071<QNetworkAccessManager>, P9071, 1, 1, 0, QTC_T_NONE, "void"},
-    {"encrypted", "encrypted(QNetworkReply*)", t9072<QNetworkAccessManager>, P9072, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sslErrors", "sslErrors(QNetworkReply*,QList<QSslError>)", t9073<QNetworkAccessManager>, P9073, 2, 2, 0, QTC_T_NONE, "void"},
+    {"finished", "finished(QNetworkReply*)", t9221<QNetworkAccessManager>, P9221, 1, 1, 0, QTC_T_NONE, "void"},
+    {"encrypted", "encrypted(QNetworkReply*)", t9222<QNetworkAccessManager>, P9222, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sslErrors", "sslErrors(QNetworkReply*,QList<QSslError>)", t9223<QNetworkAccessManager>, P9223, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkAccessManager[] = {
-    {"QNetworkAccessManager", "QNetworkAccessManager(QObject*)", t9074<QNetworkAccessManager>, P9074, 1, 0, 0, QTC_T_OBJ, "QNetworkAccessManager"},
+    {"QNetworkAccessManager", "QNetworkAccessManager(QObject*)", t9224<QNetworkAccessManager>, P9224, 1, 0, 0, QTC_T_OBJ, "QNetworkAccessManager"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9076[] = {{qtc::PK_ENUM, 356, "QNetworkAddressEntry::DnsEligibilityStatus", nullptr}};
-static const qtc::ParamDesc P9078[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
-static const qtc::ParamDesc P9080[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
-static const qtc::ParamDesc P9082[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9084[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
-static const qtc::ParamDesc P9088[] = {{qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}, {qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}};
+static const qtc::ParamDesc P9226[] = {{qtc::PK_ENUM, 377, "QNetworkAddressEntry::DnsEligibilityStatus", nullptr}};
+static const qtc::ParamDesc P9228[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
+static const qtc::ParamDesc P9230[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
+static const qtc::ParamDesc P9232[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9234[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}};
+static const qtc::ParamDesc P9238[] = {{qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}, {qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}};
 #if __has_include(<QtNetwork/qnetworkinterface.h>)
 static const qtc::MethodDef M_QNetworkAddressEntry[] = {
-    {"dnsEligibility", "dnsEligibility()", t9075<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkAddressEntry::DnsEligibilityStatus"},
-    {"setDnsEligibility", "setDnsEligibility(QNetworkAddressEntry::DnsEligibilityStatus)", t9076<QNetworkAddressEntry>, P9076, 1, 1, 0, QTC_T_NONE, "void"},
-    {"ip", "ip()", t9077<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"setIp", "setIp(QHostAddress)", t9078<QNetworkAddressEntry>, P9078, 1, 1, 0, QTC_T_NONE, "void"},
-    {"netmask", "netmask()", t9079<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"setNetmask", "setNetmask(QHostAddress)", t9080<QNetworkAddressEntry>, P9080, 1, 1, 0, QTC_T_NONE, "void"},
-    {"prefixLength", "prefixLength()", t9081<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setPrefixLength", "setPrefixLength(int)", t9082<QNetworkAddressEntry>, P9082, 1, 1, 0, QTC_T_NONE, "void"},
-    {"broadcast", "broadcast()", t9083<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"setBroadcast", "setBroadcast(QHostAddress)", t9084<QNetworkAddressEntry>, P9084, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isLifetimeKnown", "isLifetimeKnown()", t9085<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"preferredLifetime", "preferredLifetime()", t9086<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDeadlineTimer"},
-    {"validityLifetime", "validityLifetime()", t9087<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDeadlineTimer"},
-    {"setAddressLifetime", "setAddressLifetime(QDeadlineTimer,QDeadlineTimer)", t9088<QNetworkAddressEntry>, P9088, 2, 2, 0, QTC_T_NONE, "void"},
-    {"clearAddressLifetime", "clearAddressLifetime()", t9089<QNetworkAddressEntry>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isPermanent", "isPermanent()", t9090<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isTemporary", "isTemporary()", t9091<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"dnsEligibility", "dnsEligibility()", t9225<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkAddressEntry::DnsEligibilityStatus"},
+    {"setDnsEligibility", "setDnsEligibility(QNetworkAddressEntry::DnsEligibilityStatus)", t9226<QNetworkAddressEntry>, P9226, 1, 1, 0, QTC_T_NONE, "void"},
+    {"ip", "ip()", t9227<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"setIp", "setIp(QHostAddress)", t9228<QNetworkAddressEntry>, P9228, 1, 1, 0, QTC_T_NONE, "void"},
+    {"netmask", "netmask()", t9229<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"setNetmask", "setNetmask(QHostAddress)", t9230<QNetworkAddressEntry>, P9230, 1, 1, 0, QTC_T_NONE, "void"},
+    {"prefixLength", "prefixLength()", t9231<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setPrefixLength", "setPrefixLength(int)", t9232<QNetworkAddressEntry>, P9232, 1, 1, 0, QTC_T_NONE, "void"},
+    {"broadcast", "broadcast()", t9233<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"setBroadcast", "setBroadcast(QHostAddress)", t9234<QNetworkAddressEntry>, P9234, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isLifetimeKnown", "isLifetimeKnown()", t9235<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"preferredLifetime", "preferredLifetime()", t9236<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDeadlineTimer"},
+    {"validityLifetime", "validityLifetime()", t9237<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDeadlineTimer"},
+    {"setAddressLifetime", "setAddressLifetime(QDeadlineTimer,QDeadlineTimer)", t9238<QNetworkAddressEntry>, P9238, 2, 2, 0, QTC_T_NONE, "void"},
+    {"clearAddressLifetime", "clearAddressLifetime()", t9239<QNetworkAddressEntry>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isPermanent", "isPermanent()", t9240<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isTemporary", "isTemporary()", t9241<QNetworkAddressEntry>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkAddressEntry[] = {
-    {"QNetworkAddressEntry", "QNetworkAddressEntry()", t9092<QNetworkAddressEntry>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkAddressEntry"},
+    {"QNetworkAddressEntry", "QNetworkAddressEntry()", t9242<QNetworkAddressEntry>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkAddressEntry"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9095[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9245[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9097[] = {{qtc::PK_VALUE, -1, "QHttpHeaders", nullptr}};
+static const qtc::ParamDesc P9247[] = {{qtc::PK_VALUE, -1, "QHttpHeaders", nullptr}};
 #endif
-static const qtc::ParamDesc P9099[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
-static const qtc::ParamDesc P9101[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
-static const qtc::ParamDesc P9103[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9105[] = {{qtc::PK_VALUE, -1, "QHash<QNetworkRequest::Attribute, QVariant>", nullptr}};
+static const qtc::ParamDesc P9249[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P9251[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P9253[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9255[] = {{qtc::PK_VALUE, -1, "QHash<QNetworkRequest::Attribute, QVariant>", nullptr}};
 #if __has_include(<QtNetwork/qabstractnetworkcache.h>)
 static const qtc::MethodDef M_QNetworkCacheMetaData[] = {
-    {"isValid", "isValid()", t9093<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"url", "url()", t9094<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setUrl", "setUrl(QUrl)", t9095<QNetworkCacheMetaData>, P9095, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isValid", "isValid()", t9243<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"url", "url()", t9244<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setUrl", "setUrl(QUrl)", t9245<QNetworkCacheMetaData>, P9245, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"headers", "headers()", t9096<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
+    {"headers", "headers()", t9246<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setHeaders", "setHeaders(QHttpHeaders)", t9097<QNetworkCacheMetaData>, P9097, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setHeaders", "setHeaders(QHttpHeaders)", t9247<QNetworkCacheMetaData>, P9247, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"lastModified", "lastModified()", t9098<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
-    {"setLastModified", "setLastModified(QDateTime)", t9099<QNetworkCacheMetaData>, P9099, 1, 1, 0, QTC_T_NONE, "void"},
-    {"expirationDate", "expirationDate()", t9100<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
-    {"setExpirationDate", "setExpirationDate(QDateTime)", t9101<QNetworkCacheMetaData>, P9101, 1, 1, 0, QTC_T_NONE, "void"},
-    {"saveToDisk", "saveToDisk()", t9102<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setSaveToDisk", "setSaveToDisk(bool)", t9103<QNetworkCacheMetaData>, P9103, 1, 1, 0, QTC_T_NONE, "void"},
-    {"attributes", "attributes()", t9104<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHash<QNetworkRequest::Attribute, QVariant>"},
-    {"setAttributes", "setAttributes(AttributesMap)", t9105<QNetworkCacheMetaData>, P9105, 1, 1, 0, QTC_T_NONE, "void"},
+    {"lastModified", "lastModified()", t9248<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
+    {"setLastModified", "setLastModified(QDateTime)", t9249<QNetworkCacheMetaData>, P9249, 1, 1, 0, QTC_T_NONE, "void"},
+    {"expirationDate", "expirationDate()", t9250<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
+    {"setExpirationDate", "setExpirationDate(QDateTime)", t9251<QNetworkCacheMetaData>, P9251, 1, 1, 0, QTC_T_NONE, "void"},
+    {"saveToDisk", "saveToDisk()", t9252<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setSaveToDisk", "setSaveToDisk(bool)", t9253<QNetworkCacheMetaData>, P9253, 1, 1, 0, QTC_T_NONE, "void"},
+    {"attributes", "attributes()", t9254<QNetworkCacheMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHash<QNetworkRequest::Attribute, QVariant>"},
+    {"setAttributes", "setAttributes(AttributesMap)", t9255<QNetworkCacheMetaData>, P9255, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkCacheMetaData[] = {
-    {"QNetworkCacheMetaData", "QNetworkCacheMetaData()", t9106<QNetworkCacheMetaData>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkCacheMetaData"},
+    {"QNetworkCacheMetaData", "QNetworkCacheMetaData()", t9256<QNetworkCacheMetaData>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkCacheMetaData"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9108[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9110[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9112[] = {{qtc::PK_ENUM, 358, "QNetworkCookie::SameSite", nullptr}};
-static const qtc::ParamDesc P9115[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
-static const qtc::ParamDesc P9117[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9119[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9121[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9123[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9124[] = {{qtc::PK_ENUM, 357, "QNetworkCookie::RawForm", nullptr}};
-static const qtc::ParamDesc P9125[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
-static const qtc::ParamDesc P9126[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9258[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9260[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9262[] = {{qtc::PK_ENUM, 379, "QNetworkCookie::SameSite", nullptr}};
+static const qtc::ParamDesc P9265[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P9267[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9269[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9271[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9273[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9274[] = {{qtc::PK_ENUM, 378, "QNetworkCookie::RawForm", nullptr}};
+static const qtc::ParamDesc P9275[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
+static const qtc::ParamDesc P9276[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9127[] = {{qtc::PK_BYTES, -1, "QByteArrayView", nullptr}};
+static const qtc::ParamDesc P9277[] = {{qtc::PK_BYTES, -1, "QByteArrayView", nullptr}};
 #endif
-static const qtc::ParamDesc P9128[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9278[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
 #if __has_include(<QtNetwork/qnetworkcookie.h>)
 static const qtc::MethodDef M_QNetworkCookie[] = {
-    {"isSecure", "isSecure()", t9107<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setSecure", "setSecure(bool)", t9108<QNetworkCookie>, P9108, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isHttpOnly", "isHttpOnly()", t9109<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setHttpOnly", "setHttpOnly(bool)", t9110<QNetworkCookie>, P9110, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sameSitePolicy", "sameSitePolicy()", t9111<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkCookie::SameSite"},
-    {"setSameSitePolicy", "setSameSitePolicy(QNetworkCookie::SameSite)", t9112<QNetworkCookie>, P9112, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isSessionCookie", "isSessionCookie()", t9113<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"expirationDate", "expirationDate()", t9114<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
-    {"setExpirationDate", "setExpirationDate(QDateTime)", t9115<QNetworkCookie>, P9115, 1, 1, 0, QTC_T_NONE, "void"},
-    {"domain", "domain()", t9116<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setDomain", "setDomain(QString)", t9117<QNetworkCookie>, P9117, 1, 1, 0, QTC_T_NONE, "void"},
-    {"path", "path()", t9118<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPath", "setPath(QString)", t9119<QNetworkCookie>, P9119, 1, 1, 0, QTC_T_NONE, "void"},
-    {"name", "name()", t9120<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"setName", "setName(QByteArray)", t9121<QNetworkCookie>, P9121, 1, 1, 0, QTC_T_NONE, "void"},
-    {"value", "value()", t9122<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"setValue", "setValue(QByteArray)", t9123<QNetworkCookie>, P9123, 1, 1, 0, QTC_T_NONE, "void"},
-    {"toRawForm", "toRawForm(QNetworkCookie::RawForm)", t9124<QNetworkCookie>, P9124, 1, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"hasSameIdentifier", "hasSameIdentifier(QNetworkCookie)", t9125<QNetworkCookie>, P9125, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"normalize", "normalize(QUrl)", t9126<QNetworkCookie>, P9126, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isSecure", "isSecure()", t9257<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setSecure", "setSecure(bool)", t9258<QNetworkCookie>, P9258, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isHttpOnly", "isHttpOnly()", t9259<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setHttpOnly", "setHttpOnly(bool)", t9260<QNetworkCookie>, P9260, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sameSitePolicy", "sameSitePolicy()", t9261<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkCookie::SameSite"},
+    {"setSameSitePolicy", "setSameSitePolicy(QNetworkCookie::SameSite)", t9262<QNetworkCookie>, P9262, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isSessionCookie", "isSessionCookie()", t9263<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"expirationDate", "expirationDate()", t9264<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
+    {"setExpirationDate", "setExpirationDate(QDateTime)", t9265<QNetworkCookie>, P9265, 1, 1, 0, QTC_T_NONE, "void"},
+    {"domain", "domain()", t9266<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setDomain", "setDomain(QString)", t9267<QNetworkCookie>, P9267, 1, 1, 0, QTC_T_NONE, "void"},
+    {"path", "path()", t9268<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPath", "setPath(QString)", t9269<QNetworkCookie>, P9269, 1, 1, 0, QTC_T_NONE, "void"},
+    {"name", "name()", t9270<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"setName", "setName(QByteArray)", t9271<QNetworkCookie>, P9271, 1, 1, 0, QTC_T_NONE, "void"},
+    {"value", "value()", t9272<QNetworkCookie>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"setValue", "setValue(QByteArray)", t9273<QNetworkCookie>, P9273, 1, 1, 0, QTC_T_NONE, "void"},
+    {"toRawForm", "toRawForm(QNetworkCookie::RawForm)", t9274<QNetworkCookie>, P9274, 1, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"hasSameIdentifier", "hasSameIdentifier(QNetworkCookie)", t9275<QNetworkCookie>, P9275, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"normalize", "normalize(QUrl)", t9276<QNetworkCookie>, P9276, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"parseCookies", "parseCookies(QByteArrayView)", t9127<QNetworkCookie>, P9127, 1, 1, qtc::MF_STATIC, QTC_T_LIST, "QList<QNetworkCookie>"},
+    {"parseCookies", "parseCookies(QByteArrayView)", t9277<QNetworkCookie>, P9277, 1, 1, qtc::MF_STATIC, QTC_T_LIST, "QList<QNetworkCookie>"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkCookie[] = {
-    {"QNetworkCookie", "QNetworkCookie(QByteArray,QByteArray)", t9128<QNetworkCookie>, P9128, 2, 0, 0, QTC_T_VALUE, "QNetworkCookie"},
+    {"QNetworkCookie", "QNetworkCookie(QByteArray,QByteArray)", t9278<QNetworkCookie>, P9278, 2, 0, 0, QTC_T_VALUE, "QNetworkCookie"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9129[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P9130[] = {{qtc::PK_LIST, -1, "QList<QNetworkCookie>", nullptr}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P9131[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
-static const qtc::ParamDesc P9132[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
-static const qtc::ParamDesc P9133[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
-static const qtc::ParamDesc P9134[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9279[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9280[] = {{qtc::PK_LIST, -1, "QList<QNetworkCookie>", nullptr}, {qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9281[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
+static const qtc::ParamDesc P9282[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
+static const qtc::ParamDesc P9283[] = {{qtc::PK_VALUE, -1, "QNetworkCookie", nullptr}};
+static const qtc::ParamDesc P9284[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtNetwork/qnetworkcookiejar.h>)
 static const qtc::MethodDef M_QNetworkCookieJar[] = {
-    {"cookiesForUrl", "cookiesForUrl(QUrl)", t9129<QNetworkCookieJar>, P9129, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QNetworkCookie>"},
-    {"setCookiesFromUrl", "setCookiesFromUrl(QList<QNetworkCookie>,QUrl)", t9130<QNetworkCookieJar>, P9130, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"insertCookie", "insertCookie(QNetworkCookie)", t9131<QNetworkCookieJar>, P9131, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"updateCookie", "updateCookie(QNetworkCookie)", t9132<QNetworkCookieJar>, P9132, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"deleteCookie", "deleteCookie(QNetworkCookie)", t9133<QNetworkCookieJar>, P9133, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"cookiesForUrl", "cookiesForUrl(QUrl)", t9279<QNetworkCookieJar>, P9279, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QNetworkCookie>"},
+    {"setCookiesFromUrl", "setCookiesFromUrl(QList<QNetworkCookie>,QUrl)", t9280<QNetworkCookieJar>, P9280, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"insertCookie", "insertCookie(QNetworkCookie)", t9281<QNetworkCookieJar>, P9281, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"updateCookie", "updateCookie(QNetworkCookie)", t9282<QNetworkCookieJar>, P9282, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"deleteCookie", "deleteCookie(QNetworkCookie)", t9283<QNetworkCookieJar>, P9283, 1, 1, 0, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkCookieJar[] = {
-    {"QNetworkCookieJar", "QNetworkCookieJar(QObject*)", t9134<QNetworkCookieJar>, P9134, 1, 0, 0, QTC_T_OBJ, "QNetworkCookieJar"},
+    {"QNetworkCookieJar", "QNetworkCookieJar(QObject*)", t9284<QNetworkCookieJar>, P9284, 1, 0, 0, QTC_T_OBJ, "QNetworkCookieJar"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9139[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P9144[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
-static const qtc::ParamDesc P9145[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
-static const qtc::ParamDesc P9147[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9149[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9150[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9151[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9153[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P9289[] = {{qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P9294[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P9295[] = {{qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P9297[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9299[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9300[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9301[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9303[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QHostAddress", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}};
 #if __has_include(<QtNetwork/qnetworkdatagram.h>)
 static const qtc::MethodDef M_QNetworkDatagram[] = {
-    {"clear", "clear()", t9135<QNetworkDatagram>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isValid", "isValid()", t9136<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNull", "isNull()", t9137<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"interfaceIndex", "interfaceIndex()", t9138<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
-    {"setInterfaceIndex", "setInterfaceIndex(uint)", t9139<QNetworkDatagram>, P9139, 1, 1, 0, QTC_T_NONE, "void"},
-    {"senderAddress", "senderAddress()", t9140<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"destinationAddress", "destinationAddress()", t9141<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
-    {"senderPort", "senderPort()", t9142<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"destinationPort", "destinationPort()", t9143<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSender", "setSender(QHostAddress,quint16)", t9144<QNetworkDatagram>, P9144, 2, 1, 0, QTC_T_NONE, "void"},
-    {"setDestination", "setDestination(QHostAddress,quint16)", t9145<QNetworkDatagram>, P9145, 2, 2, 0, QTC_T_NONE, "void"},
-    {"hopLimit", "hopLimit()", t9146<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setHopLimit", "setHopLimit(int)", t9147<QNetworkDatagram>, P9147, 1, 1, 0, QTC_T_NONE, "void"},
-    {"data", "data()", t9148<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"setData", "setData(QByteArray)", t9149<QNetworkDatagram>, P9149, 1, 1, 0, QTC_T_NONE, "void"},
-    {"makeReply", "makeReply(QByteArray)", t9150<QNetworkDatagram>, P9150, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QNetworkDatagram"},
-    {"makeReply", "makeReply(QByteArray)", t9151<QNetworkDatagram>, P9151, 1, 1, 0, QTC_T_VALUE, "QNetworkDatagram"},
+    {"clear", "clear()", t9285<QNetworkDatagram>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isValid", "isValid()", t9286<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNull", "isNull()", t9287<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"interfaceIndex", "interfaceIndex()", t9288<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned int"},
+    {"setInterfaceIndex", "setInterfaceIndex(uint)", t9289<QNetworkDatagram>, P9289, 1, 1, 0, QTC_T_NONE, "void"},
+    {"senderAddress", "senderAddress()", t9290<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"destinationAddress", "destinationAddress()", t9291<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHostAddress"},
+    {"senderPort", "senderPort()", t9292<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"destinationPort", "destinationPort()", t9293<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSender", "setSender(QHostAddress,quint16)", t9294<QNetworkDatagram>, P9294, 2, 1, 0, QTC_T_NONE, "void"},
+    {"setDestination", "setDestination(QHostAddress,quint16)", t9295<QNetworkDatagram>, P9295, 2, 2, 0, QTC_T_NONE, "void"},
+    {"hopLimit", "hopLimit()", t9296<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setHopLimit", "setHopLimit(int)", t9297<QNetworkDatagram>, P9297, 1, 1, 0, QTC_T_NONE, "void"},
+    {"data", "data()", t9298<QNetworkDatagram>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"setData", "setData(QByteArray)", t9299<QNetworkDatagram>, P9299, 1, 1, 0, QTC_T_NONE, "void"},
+    {"makeReply", "makeReply(QByteArray)", t9300<QNetworkDatagram>, P9300, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QNetworkDatagram"},
+    {"makeReply", "makeReply(QByteArray)", t9301<QNetworkDatagram>, P9301, 1, 1, 0, QTC_T_VALUE, "QNetworkDatagram"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkDatagram[] = {
-    {"QNetworkDatagram", "QNetworkDatagram()", t9152<QNetworkDatagram>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkDatagram"},
-    {"QNetworkDatagram", "QNetworkDatagram(QByteArray,QHostAddress,quint16)", t9153<QNetworkDatagram>, P9153, 3, 1, 0, QTC_T_VALUE, "QNetworkDatagram"},
+    {"QNetworkDatagram", "QNetworkDatagram()", t9302<QNetworkDatagram>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkDatagram"},
+    {"QNetworkDatagram", "QNetworkDatagram(QByteArray,QHostAddress,quint16)", t9303<QNetworkDatagram>, P9303, 3, 1, 0, QTC_T_VALUE, "QNetworkDatagram"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9155[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9157[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P9159[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P9160[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
-static const qtc::ParamDesc P9161[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P9162[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P9163[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
-static const qtc::ParamDesc P9164[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P9165[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9167[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9305[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9307[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9309[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9310[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
+static const qtc::ParamDesc P9311[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9312[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9313[] = {{qtc::PK_VALUE, -1, "QNetworkCacheMetaData", nullptr}};
+static const qtc::ParamDesc P9314[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P9315[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9317[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(networkdiskcache) && __has_include(<QtNetwork/qnetworkdiskcache.h>)
 static const qtc::MethodDef M_QNetworkDiskCache[] = {
-    {"cacheDirectory", "cacheDirectory()", t9154<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setCacheDirectory", "setCacheDirectory(QString)", t9155<QNetworkDiskCache>, P9155, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"maximumCacheSize", "maximumCacheSize()", t9156<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setMaximumCacheSize", "setMaximumCacheSize(qint64)", t9157<QNetworkDiskCache>, P9157, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"cacheSize", "cacheSize()", t9158<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"metaData", "metaData(QUrl)", t9159<QNetworkDiskCache>, P9159, 1, 1, 0, QTC_T_VALUE, "QNetworkCacheMetaData"},
-    {"updateMetaData", "updateMetaData(QNetworkCacheMetaData)", t9160<QNetworkDiskCache>, P9160, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"data", "data(QUrl)", t9161<QNetworkDiskCache>, P9161, 1, 1, 0, QTC_T_OBJ, "QIODevice*"},
-    {"remove", "remove(QUrl)", t9162<QNetworkDiskCache>, P9162, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"prepare", "prepare(QNetworkCacheMetaData)", t9163<QNetworkDiskCache>, P9163, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
-    {"insert", "insert(QIODevice*)", t9164<QNetworkDiskCache>, P9164, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"fileMetaData", "fileMetaData(QString)", t9165<QNetworkDiskCache>, P9165, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QNetworkCacheMetaData"},
-    {"clear", "clear()", t9166<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"cacheDirectory", "cacheDirectory()", t9304<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setCacheDirectory", "setCacheDirectory(QString)", t9305<QNetworkDiskCache>, P9305, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"maximumCacheSize", "maximumCacheSize()", t9306<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setMaximumCacheSize", "setMaximumCacheSize(qint64)", t9307<QNetworkDiskCache>, P9307, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"cacheSize", "cacheSize()", t9308<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"metaData", "metaData(QUrl)", t9309<QNetworkDiskCache>, P9309, 1, 1, 0, QTC_T_VALUE, "QNetworkCacheMetaData"},
+    {"updateMetaData", "updateMetaData(QNetworkCacheMetaData)", t9310<QNetworkDiskCache>, P9310, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"data", "data(QUrl)", t9311<QNetworkDiskCache>, P9311, 1, 1, 0, QTC_T_OBJ, "QIODevice*"},
+    {"remove", "remove(QUrl)", t9312<QNetworkDiskCache>, P9312, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"prepare", "prepare(QNetworkCacheMetaData)", t9313<QNetworkDiskCache>, P9313, 1, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
+    {"insert", "insert(QIODevice*)", t9314<QNetworkDiskCache>, P9314, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"fileMetaData", "fileMetaData(QString)", t9315<QNetworkDiskCache>, P9315, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QNetworkCacheMetaData"},
+    {"clear", "clear()", t9316<QNetworkDiskCache>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkDiskCache[] = {
-    {"QNetworkDiskCache", "QNetworkDiskCache(QObject*)", t9167<QNetworkDiskCache>, P9167, 1, 0, 0, QTC_T_OBJ, "QNetworkDiskCache"},
+    {"QNetworkDiskCache", "QNetworkDiskCache(QObject*)", t9317<QNetworkDiskCache>, P9317, 1, 0, 0, QTC_T_OBJ, "QNetworkDiskCache"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9173[] = {{qtc::PK_FLAGS, 359, "QFlags<QNetworkInformation::Feature>", nullptr}};
-static const qtc::ParamDesc P9176[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
-static const qtc::ParamDesc P9177[] = {{qtc::PK_FLAGS, 359, "QFlags<QNetworkInformation::Feature>", nullptr}};
-static const qtc::ParamDesc P9178[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
-static const qtc::ParamDesc P9179[] = {{qtc::PK_FLAGS, 359, "QFlags<QNetworkInformation::Feature>", nullptr}};
-static const qtc::ParamDesc P9182[] = {{qtc::PK_ENUM, 360, "QNetworkInformation::Reachability", nullptr}};
-static const qtc::ParamDesc P9183[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9184[] = {{qtc::PK_ENUM, 361, "QNetworkInformation::TransportMedium", nullptr}};
-static const qtc::ParamDesc P9185[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9323[] = {{qtc::PK_FLAGS, 380, "QFlags<QNetworkInformation::Feature>", nullptr}};
+static const qtc::ParamDesc P9326[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
+static const qtc::ParamDesc P9327[] = {{qtc::PK_FLAGS, 380, "QFlags<QNetworkInformation::Feature>", nullptr}};
+static const qtc::ParamDesc P9328[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
+static const qtc::ParamDesc P9329[] = {{qtc::PK_FLAGS, 380, "QFlags<QNetworkInformation::Feature>", nullptr}};
+static const qtc::ParamDesc P9332[] = {{qtc::PK_ENUM, 381, "QNetworkInformation::Reachability", nullptr}};
+static const qtc::ParamDesc P9333[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P9334[] = {{qtc::PK_ENUM, 382, "QNetworkInformation::TransportMedium", nullptr}};
+static const qtc::ParamDesc P9335[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if __has_include(<QtNetwork/qnetworkinformation.h>)
 static const qtc::MethodDef M_QNetworkInformation[] = {
-    {"reachability", "reachability()", t9168<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkInformation::Reachability"},
-    {"isBehindCaptivePortal", "isBehindCaptivePortal()", t9169<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"transportMedium", "transportMedium()", t9170<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkInformation::TransportMedium"},
-    {"isMetered", "isMetered()", t9171<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"backendName", "backendName()", t9172<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"supports", "supports(QNetworkInformation::Features)", t9173<QNetworkInformation>, P9173, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"supportedFeatures", "supportedFeatures()", t9174<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QNetworkInformation::Feature>"},
-    {"loadDefaultBackend", "loadDefaultBackend()", t9175<QNetworkInformation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"loadBackendByName", "loadBackendByName(QStringView)", t9176<QNetworkInformation>, P9176, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"loadBackendByFeatures", "loadBackendByFeatures(QNetworkInformation::Features)", t9177<QNetworkInformation>, P9177, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
-    {"load", "load(QStringView)", t9178<QNetworkInformation>, P9178, 1, 1, qtc::MF_STATIC|qtc::MF_DEPRECATED|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"load", "load(QNetworkInformation::Features)", t9179<QNetworkInformation>, P9179, 1, 1, qtc::MF_STATIC|qtc::MF_DEPRECATED|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"availableBackends", "availableBackends()", t9180<QNetworkInformation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
-    {"instance", "instance()", t9181<QNetworkInformation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_OBJ, "QNetworkInformation*"},
-    {"reachabilityChanged", "reachabilityChanged(QNetworkInformation::Reachability)", t9182<QNetworkInformation>, P9182, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isBehindCaptivePortalChanged", "isBehindCaptivePortalChanged(bool)", t9183<QNetworkInformation>, P9183, 1, 1, 0, QTC_T_NONE, "void"},
-    {"transportMediumChanged", "transportMediumChanged(QNetworkInformation::TransportMedium)", t9184<QNetworkInformation>, P9184, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isMeteredChanged", "isMeteredChanged(bool)", t9185<QNetworkInformation>, P9185, 1, 1, 0, QTC_T_NONE, "void"},
+    {"reachability", "reachability()", t9318<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkInformation::Reachability"},
+    {"isBehindCaptivePortal", "isBehindCaptivePortal()", t9319<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"transportMedium", "transportMedium()", t9320<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkInformation::TransportMedium"},
+    {"isMetered", "isMetered()", t9321<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"backendName", "backendName()", t9322<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"supports", "supports(QNetworkInformation::Features)", t9323<QNetworkInformation>, P9323, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"supportedFeatures", "supportedFeatures()", t9324<QNetworkInformation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QNetworkInformation::Feature>"},
+    {"loadDefaultBackend", "loadDefaultBackend()", t9325<QNetworkInformation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"loadBackendByName", "loadBackendByName(QStringView)", t9326<QNetworkInformation>, P9326, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"loadBackendByFeatures", "loadBackendByFeatures(QNetworkInformation::Features)", t9327<QNetworkInformation>, P9327, 1, 1, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"load", "load(QStringView)", t9328<QNetworkInformation>, P9328, 1, 1, qtc::MF_STATIC|qtc::MF_DEPRECATED|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"load", "load(QNetworkInformation::Features)", t9329<QNetworkInformation>, P9329, 1, 1, qtc::MF_STATIC|qtc::MF_DEPRECATED|qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"availableBackends", "availableBackends()", t9330<QNetworkInformation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
+    {"instance", "instance()", t9331<QNetworkInformation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_OBJ, "QNetworkInformation*"},
+    {"reachabilityChanged", "reachabilityChanged(QNetworkInformation::Reachability)", t9332<QNetworkInformation>, P9332, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isBehindCaptivePortalChanged", "isBehindCaptivePortalChanged(bool)", t9333<QNetworkInformation>, P9333, 1, 1, 0, QTC_T_NONE, "void"},
+    {"transportMediumChanged", "transportMediumChanged(QNetworkInformation::TransportMedium)", t9334<QNetworkInformation>, P9334, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isMeteredChanged", "isMeteredChanged(bool)", t9335<QNetworkInformation>, P9335, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkInformation[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9195[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9196[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9197[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9198[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9345[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9346[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9347[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9348[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if __has_include(<QtNetwork/qnetworkinterface.h>)
 static const qtc::MethodDef M_QNetworkInterface[] = {
-    {"isValid", "isValid()", t9186<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"index", "index()", t9187<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"maximumTransmissionUnit", "maximumTransmissionUnit()", t9188<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"name", "name()", t9189<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"humanReadableName", "humanReadableName()", t9190<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"flags", "flags()", t9191<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QNetworkInterface::InterfaceFlag>"},
-    {"type", "type()", t9192<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkInterface::InterfaceType"},
-    {"hardwareAddress", "hardwareAddress()", t9193<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"addressEntries", "addressEntries()", t9194<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QNetworkAddressEntry>"},
-    {"interfaceIndexFromName", "interfaceIndexFromName(QString)", t9195<QNetworkInterface>, P9195, 1, 1, qtc::MF_STATIC, QTC_T_INT, "int"},
-    {"interfaceFromName", "interfaceFromName(QString)", t9196<QNetworkInterface>, P9196, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QNetworkInterface"},
-    {"interfaceFromIndex", "interfaceFromIndex(int)", t9197<QNetworkInterface>, P9197, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QNetworkInterface"},
-    {"interfaceNameFromIndex", "interfaceNameFromIndex(int)", t9198<QNetworkInterface>, P9198, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"allInterfaces", "allInterfaces()", t9199<QNetworkInterface>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QNetworkInterface>"},
-    {"allAddresses", "allAddresses()", t9200<QNetworkInterface>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QHostAddress>"},
+    {"isValid", "isValid()", t9336<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"index", "index()", t9337<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"maximumTransmissionUnit", "maximumTransmissionUnit()", t9338<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"name", "name()", t9339<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"humanReadableName", "humanReadableName()", t9340<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"flags", "flags()", t9341<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QNetworkInterface::InterfaceFlag>"},
+    {"type", "type()", t9342<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkInterface::InterfaceType"},
+    {"hardwareAddress", "hardwareAddress()", t9343<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"addressEntries", "addressEntries()", t9344<QNetworkInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QNetworkAddressEntry>"},
+    {"interfaceIndexFromName", "interfaceIndexFromName(QString)", t9345<QNetworkInterface>, P9345, 1, 1, qtc::MF_STATIC, QTC_T_INT, "int"},
+    {"interfaceFromName", "interfaceFromName(QString)", t9346<QNetworkInterface>, P9346, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QNetworkInterface"},
+    {"interfaceFromIndex", "interfaceFromIndex(int)", t9347<QNetworkInterface>, P9347, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QNetworkInterface"},
+    {"interfaceNameFromIndex", "interfaceNameFromIndex(int)", t9348<QNetworkInterface>, P9348, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"allInterfaces", "allInterfaces()", t9349<QNetworkInterface>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QNetworkInterface>"},
+    {"allAddresses", "allAddresses()", t9350<QNetworkInterface>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QHostAddress>"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkInterface[] = {
-    {"QNetworkInterface", "QNetworkInterface()", t9201<QNetworkInterface>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkInterface"},
+    {"QNetworkInterface", "QNetworkInterface()", t9351<QNetworkInterface>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkInterface"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9202[] = {{qtc::PK_ENUM, 365, "QNetworkProxy::ProxyType", nullptr}};
-static const qtc::ParamDesc P9204[] = {{qtc::PK_FLAGS, 364, "QFlags<QNetworkProxy::Capability>", nullptr}};
-static const qtc::ParamDesc P9208[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9210[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9212[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9214[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
-static const qtc::ParamDesc P9216[] = {{qtc::PK_VALUE, -1, "QNetworkProxy", nullptr}};
+static const qtc::ParamDesc P9352[] = {{qtc::PK_ENUM, 386, "QNetworkProxy::ProxyType", nullptr}};
+static const qtc::ParamDesc P9354[] = {{qtc::PK_FLAGS, 385, "QFlags<QNetworkProxy::Capability>", nullptr}};
+static const qtc::ParamDesc P9358[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9360[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9362[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9364[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}};
+static const qtc::ParamDesc P9366[] = {{qtc::PK_VALUE, -1, "QNetworkProxy", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9219[] = {{qtc::PK_VALUE, -1, "QHttpHeaders", nullptr}};
+static const qtc::ParamDesc P9369[] = {{qtc::PK_VALUE, -1, "QHttpHeaders", nullptr}};
 #endif
-static const qtc::ParamDesc P9220[] = {{qtc::PK_ENUM, 370, "QNetworkRequest::KnownHeaders", nullptr}};
-static const qtc::ParamDesc P9221[] = {{qtc::PK_ENUM, 370, "QNetworkRequest::KnownHeaders", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P9222[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9224[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9225[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9227[] = {{qtc::PK_ENUM, 365, "QNetworkProxy::ProxyType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9370[] = {{qtc::PK_ENUM, 391, "QNetworkRequest::KnownHeaders", nullptr}};
+static const qtc::ParamDesc P9371[] = {{qtc::PK_ENUM, 391, "QNetworkRequest::KnownHeaders", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9372[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9374[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9375[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9377[] = {{qtc::PK_ENUM, 386, "QNetworkProxy::ProxyType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtNetwork/qnetworkproxy.h>)
 static const qtc::MethodDef M_QNetworkProxy[] = {
-    {"setType", "setType(QNetworkProxy::ProxyType)", t9202<QNetworkProxy>, P9202, 1, 1, 0, QTC_T_NONE, "void"},
-    {"type", "type()", t9203<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkProxy::ProxyType"},
-    {"setCapabilities", "setCapabilities(QNetworkProxy::Capabilities)", t9204<QNetworkProxy>, P9204, 1, 1, 0, QTC_T_NONE, "void"},
-    {"capabilities", "capabilities()", t9205<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QNetworkProxy::Capability>"},
-    {"isCachingProxy", "isCachingProxy()", t9206<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isTransparentProxy", "isTransparentProxy()", t9207<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setUser", "setUser(QString)", t9208<QNetworkProxy>, P9208, 1, 1, 0, QTC_T_NONE, "void"},
-    {"user", "user()", t9209<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPassword", "setPassword(QString)", t9210<QNetworkProxy>, P9210, 1, 1, 0, QTC_T_NONE, "void"},
-    {"password", "password()", t9211<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setHostName", "setHostName(QString)", t9212<QNetworkProxy>, P9212, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hostName", "hostName()", t9213<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPort", "setPort(quint16)", t9214<QNetworkProxy>, P9214, 1, 1, 0, QTC_T_NONE, "void"},
-    {"port", "port()", t9215<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
-    {"setApplicationProxy", "setApplicationProxy(QNetworkProxy)", t9216<QNetworkProxy>, P9216, 1, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"applicationProxy", "applicationProxy()", t9217<QNetworkProxy>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QNetworkProxy"},
+    {"setType", "setType(QNetworkProxy::ProxyType)", t9352<QNetworkProxy>, P9352, 1, 1, 0, QTC_T_NONE, "void"},
+    {"type", "type()", t9353<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkProxy::ProxyType"},
+    {"setCapabilities", "setCapabilities(QNetworkProxy::Capabilities)", t9354<QNetworkProxy>, P9354, 1, 1, 0, QTC_T_NONE, "void"},
+    {"capabilities", "capabilities()", t9355<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QNetworkProxy::Capability>"},
+    {"isCachingProxy", "isCachingProxy()", t9356<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isTransparentProxy", "isTransparentProxy()", t9357<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setUser", "setUser(QString)", t9358<QNetworkProxy>, P9358, 1, 1, 0, QTC_T_NONE, "void"},
+    {"user", "user()", t9359<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPassword", "setPassword(QString)", t9360<QNetworkProxy>, P9360, 1, 1, 0, QTC_T_NONE, "void"},
+    {"password", "password()", t9361<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setHostName", "setHostName(QString)", t9362<QNetworkProxy>, P9362, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hostName", "hostName()", t9363<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPort", "setPort(quint16)", t9364<QNetworkProxy>, P9364, 1, 1, 0, QTC_T_NONE, "void"},
+    {"port", "port()", t9365<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_UINT, "unsigned short"},
+    {"setApplicationProxy", "setApplicationProxy(QNetworkProxy)", t9366<QNetworkProxy>, P9366, 1, 1, qtc::MF_STATIC|qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"applicationProxy", "applicationProxy()", t9367<QNetworkProxy>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QNetworkProxy"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"headers", "headers()", t9218<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
+    {"headers", "headers()", t9368<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setHeaders", "setHeaders(QHttpHeaders)", t9219<QNetworkProxy>, P9219, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setHeaders", "setHeaders(QHttpHeaders)", t9369<QNetworkProxy>, P9369, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"header", "header(QNetworkRequest::KnownHeaders)", t9220<QNetworkProxy>, P9220, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setHeader", "setHeader(QNetworkRequest::KnownHeaders,QVariant)", t9221<QNetworkProxy>, P9221, 2, 2, 0, QTC_T_NONE, "void"},
-    {"hasRawHeader", "hasRawHeader(QByteArray)", t9222<QNetworkProxy>, P9222, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"rawHeaderList", "rawHeaderList()", t9223<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
-    {"rawHeader", "rawHeader(QByteArray)", t9224<QNetworkProxy>, P9224, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"setRawHeader", "setRawHeader(QByteArray,QByteArray)", t9225<QNetworkProxy>, P9225, 2, 2, 0, QTC_T_NONE, "void"},
+    {"header", "header(QNetworkRequest::KnownHeaders)", t9370<QNetworkProxy>, P9370, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setHeader", "setHeader(QNetworkRequest::KnownHeaders,QVariant)", t9371<QNetworkProxy>, P9371, 2, 2, 0, QTC_T_NONE, "void"},
+    {"hasRawHeader", "hasRawHeader(QByteArray)", t9372<QNetworkProxy>, P9372, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"rawHeaderList", "rawHeaderList()", t9373<QNetworkProxy>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
+    {"rawHeader", "rawHeader(QByteArray)", t9374<QNetworkProxy>, P9374, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"setRawHeader", "setRawHeader(QByteArray,QByteArray)", t9375<QNetworkProxy>, P9375, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkProxy[] = {
-    {"QNetworkProxy", "QNetworkProxy()", t9226<QNetworkProxy>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkProxy"},
-    {"QNetworkProxy", "QNetworkProxy(QNetworkProxy::ProxyType,QString,quint16,QString,QString)", t9227<QNetworkProxy>, P9227, 5, 1, 0, QTC_T_VALUE, "QNetworkProxy"},
+    {"QNetworkProxy", "QNetworkProxy()", t9376<QNetworkProxy>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkProxy"},
+    {"QNetworkProxy", "QNetworkProxy(QNetworkProxy::ProxyType,QString,quint16,QString,QString)", t9377<QNetworkProxy>, P9377, 5, 1, 0, QTC_T_VALUE, "QNetworkProxy"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9229[] = {{qtc::PK_ENUM, 366, "QNetworkProxyQuery::QueryType", nullptr}};
-static const qtc::ParamDesc P9231[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9233[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9235[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9237[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9239[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P9241[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 366, "QNetworkProxyQuery::QueryType", nullptr}};
-static const qtc::ParamDesc P9242[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 366, "QNetworkProxyQuery::QueryType", nullptr}};
-static const qtc::ParamDesc P9243[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 366, "QNetworkProxyQuery::QueryType", nullptr}};
+static const qtc::ParamDesc P9379[] = {{qtc::PK_ENUM, 387, "QNetworkProxyQuery::QueryType", nullptr}};
+static const qtc::ParamDesc P9381[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9383[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9385[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9387[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9389[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9391[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}, {qtc::PK_ENUM, 387, "QNetworkProxyQuery::QueryType", nullptr}};
+static const qtc::ParamDesc P9392[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 387, "QNetworkProxyQuery::QueryType", nullptr}};
+static const qtc::ParamDesc P9393[] = {{qtc::PK_UINT, -1, "unsigned short", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 387, "QNetworkProxyQuery::QueryType", nullptr}};
 #if __has_include(<QtNetwork/qnetworkproxy.h>)
 static const qtc::MethodDef M_QNetworkProxyQuery[] = {
-    {"queryType", "queryType()", t9228<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkProxyQuery::QueryType"},
-    {"setQueryType", "setQueryType(QNetworkProxyQuery::QueryType)", t9229<QNetworkProxyQuery>, P9229, 1, 1, 0, QTC_T_NONE, "void"},
-    {"peerPort", "peerPort()", t9230<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setPeerPort", "setPeerPort(int)", t9231<QNetworkProxyQuery>, P9231, 1, 1, 0, QTC_T_NONE, "void"},
-    {"peerHostName", "peerHostName()", t9232<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPeerHostName", "setPeerHostName(QString)", t9233<QNetworkProxyQuery>, P9233, 1, 1, 0, QTC_T_NONE, "void"},
-    {"localPort", "localPort()", t9234<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setLocalPort", "setLocalPort(int)", t9235<QNetworkProxyQuery>, P9235, 1, 1, 0, QTC_T_NONE, "void"},
-    {"protocolTag", "protocolTag()", t9236<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setProtocolTag", "setProtocolTag(QString)", t9237<QNetworkProxyQuery>, P9237, 1, 1, 0, QTC_T_NONE, "void"},
-    {"url", "url()", t9238<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setUrl", "setUrl(QUrl)", t9239<QNetworkProxyQuery>, P9239, 1, 1, 0, QTC_T_NONE, "void"},
+    {"queryType", "queryType()", t9378<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkProxyQuery::QueryType"},
+    {"setQueryType", "setQueryType(QNetworkProxyQuery::QueryType)", t9379<QNetworkProxyQuery>, P9379, 1, 1, 0, QTC_T_NONE, "void"},
+    {"peerPort", "peerPort()", t9380<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setPeerPort", "setPeerPort(int)", t9381<QNetworkProxyQuery>, P9381, 1, 1, 0, QTC_T_NONE, "void"},
+    {"peerHostName", "peerHostName()", t9382<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPeerHostName", "setPeerHostName(QString)", t9383<QNetworkProxyQuery>, P9383, 1, 1, 0, QTC_T_NONE, "void"},
+    {"localPort", "localPort()", t9384<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setLocalPort", "setLocalPort(int)", t9385<QNetworkProxyQuery>, P9385, 1, 1, 0, QTC_T_NONE, "void"},
+    {"protocolTag", "protocolTag()", t9386<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setProtocolTag", "setProtocolTag(QString)", t9387<QNetworkProxyQuery>, P9387, 1, 1, 0, QTC_T_NONE, "void"},
+    {"url", "url()", t9388<QNetworkProxyQuery>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setUrl", "setUrl(QUrl)", t9389<QNetworkProxyQuery>, P9389, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkProxyQuery[] = {
-    {"QNetworkProxyQuery", "QNetworkProxyQuery()", t9240<QNetworkProxyQuery>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
-    {"QNetworkProxyQuery", "QNetworkProxyQuery(QUrl,QNetworkProxyQuery::QueryType)", t9241<QNetworkProxyQuery>, P9241, 2, 1, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
-    {"QNetworkProxyQuery", "QNetworkProxyQuery(QString,int,QString,QNetworkProxyQuery::QueryType)", t9242<QNetworkProxyQuery>, P9242, 4, 2, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
-    {"QNetworkProxyQuery", "QNetworkProxyQuery(quint16,QString,QNetworkProxyQuery::QueryType)", t9243<QNetworkProxyQuery>, P9243, 3, 1, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
+    {"QNetworkProxyQuery", "QNetworkProxyQuery()", t9390<QNetworkProxyQuery>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
+    {"QNetworkProxyQuery", "QNetworkProxyQuery(QUrl,QNetworkProxyQuery::QueryType)", t9391<QNetworkProxyQuery>, P9391, 2, 1, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
+    {"QNetworkProxyQuery", "QNetworkProxyQuery(QString,int,QString,QNetworkProxyQuery::QueryType)", t9392<QNetworkProxyQuery>, P9392, 4, 2, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
+    {"QNetworkProxyQuery", "QNetworkProxyQuery(quint16,QString,QNetworkProxyQuery::QueryType)", t9393<QNetworkProxyQuery>, P9393, 3, 1, 0, QTC_T_VALUE, "QNetworkProxyQuery"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9247[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P9255[] = {{qtc::PK_ENUM, 370, "QNetworkRequest::KnownHeaders", nullptr}};
+static const qtc::ParamDesc P9397[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9405[] = {{qtc::PK_ENUM, 391, "QNetworkRequest::KnownHeaders", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9256[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9406[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9258[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9408[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9260[] = {{qtc::PK_ENUM, 368, "QNetworkRequest::Attribute", nullptr}};
-static const qtc::ParamDesc P9262[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
-static const qtc::ParamDesc P9263[] = {{qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
-static const qtc::ParamDesc P9270[] = {{qtc::PK_ENUM, 367, "QNetworkReply::NetworkError", nullptr}};
-static const qtc::ParamDesc P9272[] = {{qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
-static const qtc::ParamDesc P9274[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P9275[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9410[] = {{qtc::PK_ENUM, 389, "QNetworkRequest::Attribute", nullptr}};
+static const qtc::ParamDesc P9412[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
+static const qtc::ParamDesc P9413[] = {{qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
+static const qtc::ParamDesc P9420[] = {{qtc::PK_ENUM, 388, "QNetworkReply::NetworkError", nullptr}};
+static const qtc::ParamDesc P9422[] = {{qtc::PK_LIST, -1, "QList<QSslError>", nullptr}};
+static const qtc::ParamDesc P9424[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9425[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
 #if __has_include(<QtNetwork/qnetworkreply.h>)
 static const qtc::MethodDef M_QNetworkReply[] = {
-    {"close", "close()", t9244<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isSequential", "isSequential()", t9245<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"readBufferSize", "readBufferSize()", t9246<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setReadBufferSize", "setReadBufferSize(qint64)", t9247<QNetworkReply>, P9247, 1, 1, 0, QTC_T_NONE, "void"},
-    {"manager", "manager()", t9248<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QNetworkAccessManager*"},
-    {"operation", "operation()", t9249<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkAccessManager::Operation"},
-    {"request", "request()", t9250<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QNetworkRequest"},
-    {"error", "error()", t9251<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkReply::NetworkError"},
-    {"isFinished", "isFinished()", t9252<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isRunning", "isRunning()", t9253<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"url", "url()", t9254<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"header", "header(QNetworkRequest::KnownHeaders)", t9255<QNetworkReply>, P9255, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"close", "close()", t9394<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isSequential", "isSequential()", t9395<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"readBufferSize", "readBufferSize()", t9396<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setReadBufferSize", "setReadBufferSize(qint64)", t9397<QNetworkReply>, P9397, 1, 1, 0, QTC_T_NONE, "void"},
+    {"manager", "manager()", t9398<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QNetworkAccessManager*"},
+    {"operation", "operation()", t9399<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkAccessManager::Operation"},
+    {"request", "request()", t9400<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QNetworkRequest"},
+    {"error", "error()", t9401<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkReply::NetworkError"},
+    {"isFinished", "isFinished()", t9402<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isRunning", "isRunning()", t9403<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"url", "url()", t9404<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"header", "header(QNetworkRequest::KnownHeaders)", t9405<QNetworkReply>, P9405, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"hasRawHeader", "hasRawHeader(QAnyStringView)", t9256<QNetworkReply>, P9256, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"hasRawHeader", "hasRawHeader(QAnyStringView)", t9406<QNetworkReply>, P9406, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
-    {"rawHeaderList", "rawHeaderList()", t9257<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
+    {"rawHeaderList", "rawHeaderList()", t9407<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"rawHeader", "rawHeader(QAnyStringView)", t9258<QNetworkReply>, P9258, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"rawHeader", "rawHeader(QAnyStringView)", t9408<QNetworkReply>, P9408, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"headers", "headers()", t9259<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
+    {"headers", "headers()", t9409<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
 #endif
-    {"attribute", "attribute(QNetworkRequest::Attribute)", t9260<QNetworkReply>, P9260, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"sslConfiguration", "sslConfiguration()", t9261<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
-    {"setSslConfiguration", "setSslConfiguration(QSslConfiguration)", t9262<QNetworkReply>, P9262, 1, 1, 0, QTC_T_NONE, "void"},
-    {"ignoreSslErrors", "ignoreSslErrors(QList<QSslError>)", t9263<QNetworkReply>, P9263, 1, 1, 0, QTC_T_NONE, "void"},
-    {"abort", "abort()", t9264<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"ignoreSslErrors", "ignoreSslErrors()", t9265<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"socketStartedConnecting", "socketStartedConnecting()", t9266<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"requestSent", "requestSent()", t9267<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"metaDataChanged", "metaDataChanged()", t9268<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"finished", "finished()", t9269<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QNetworkReply::NetworkError)", t9270<QNetworkReply>, P9270, 1, 1, 0, QTC_T_NONE, "void"},
-    {"encrypted", "encrypted()", t9271<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"sslErrors", "sslErrors(QList<QSslError>)", t9272<QNetworkReply>, P9272, 1, 1, 0, QTC_T_NONE, "void"},
-    {"redirectAllowed", "redirectAllowed()", t9273<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"uploadProgress", "uploadProgress(qint64,qint64)", t9274<QNetworkReply>, P9274, 2, 2, 0, QTC_T_NONE, "void"},
-    {"downloadProgress", "downloadProgress(qint64,qint64)", t9275<QNetworkReply>, P9275, 2, 2, 0, QTC_T_NONE, "void"},
+    {"attribute", "attribute(QNetworkRequest::Attribute)", t9410<QNetworkReply>, P9410, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"sslConfiguration", "sslConfiguration()", t9411<QNetworkReply>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
+    {"setSslConfiguration", "setSslConfiguration(QSslConfiguration)", t9412<QNetworkReply>, P9412, 1, 1, 0, QTC_T_NONE, "void"},
+    {"ignoreSslErrors", "ignoreSslErrors(QList<QSslError>)", t9413<QNetworkReply>, P9413, 1, 1, 0, QTC_T_NONE, "void"},
+    {"abort", "abort()", t9414<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"ignoreSslErrors", "ignoreSslErrors()", t9415<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"socketStartedConnecting", "socketStartedConnecting()", t9416<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"requestSent", "requestSent()", t9417<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"metaDataChanged", "metaDataChanged()", t9418<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"finished", "finished()", t9419<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QNetworkReply::NetworkError)", t9420<QNetworkReply>, P9420, 1, 1, 0, QTC_T_NONE, "void"},
+    {"encrypted", "encrypted()", t9421<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"sslErrors", "sslErrors(QList<QSslError>)", t9422<QNetworkReply>, P9422, 1, 1, 0, QTC_T_NONE, "void"},
+    {"redirectAllowed", "redirectAllowed()", t9423<QNetworkReply>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"uploadProgress", "uploadProgress(qint64,qint64)", t9424<QNetworkReply>, P9424, 2, 2, 0, QTC_T_NONE, "void"},
+    {"downloadProgress", "downloadProgress(qint64,qint64)", t9425<QNetworkReply>, P9425, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkReply[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P9277[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9427[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9279[] = {{qtc::PK_VALUE, -1, "QHttpHeaders", nullptr}};
+static const qtc::ParamDesc P9429[] = {{qtc::PK_VALUE, -1, "QHttpHeaders", nullptr}};
 #endif
-static const qtc::ParamDesc P9280[] = {{qtc::PK_ENUM, 370, "QNetworkRequest::KnownHeaders", nullptr}};
-static const qtc::ParamDesc P9281[] = {{qtc::PK_ENUM, 370, "QNetworkRequest::KnownHeaders", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9430[] = {{qtc::PK_ENUM, 391, "QNetworkRequest::KnownHeaders", nullptr}};
+static const qtc::ParamDesc P9431[] = {{qtc::PK_ENUM, 391, "QNetworkRequest::KnownHeaders", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9282[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9432[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P9284[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
+static const qtc::ParamDesc P9434[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}};
 #endif
-static const qtc::ParamDesc P9285[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9286[] = {{qtc::PK_ENUM, 368, "QNetworkRequest::Attribute", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P9287[] = {{qtc::PK_ENUM, 368, "QNetworkRequest::Attribute", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P9289[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
-static const qtc::ParamDesc P9290[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P9293[] = {{qtc::PK_ENUM, 372, "QNetworkRequest::Priority", nullptr}};
-static const qtc::ParamDesc P9295[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9297[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P9435[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P9436[] = {{qtc::PK_ENUM, 389, "QNetworkRequest::Attribute", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9437[] = {{qtc::PK_ENUM, 389, "QNetworkRequest::Attribute", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P9439[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
+static const qtc::ParamDesc P9440[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P9443[] = {{qtc::PK_ENUM, 393, "QNetworkRequest::Priority", nullptr}};
+static const qtc::ParamDesc P9445[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9447[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P9299[] = {{qtc::PK_VALUE, -1, "QHttp1Configuration", nullptr}};
+static const qtc::ParamDesc P9449[] = {{qtc::PK_VALUE, -1, "QHttp1Configuration", nullptr}};
 #endif
-static const qtc::ParamDesc P9301[] = {{qtc::PK_VALUE, -1, "QHttp2Configuration", nullptr}};
-static const qtc::ParamDesc P9303[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P9451[] = {{qtc::PK_VALUE, -1, "QHttp2Configuration", nullptr}};
+static const qtc::ParamDesc P9453[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-static const qtc::ParamDesc P9305[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9455[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #endif
-static const qtc::ParamDesc P9307[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P9310[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P9457[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P9460[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
 #if __has_include(<QtNetwork/qnetworkrequest.h>)
 static const qtc::MethodDef M_QNetworkRequest[] = {
-    {"url", "url()", t9276<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setUrl", "setUrl(QUrl)", t9277<QNetworkRequest>, P9277, 1, 1, 0, QTC_T_NONE, "void"},
+    {"url", "url()", t9426<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setUrl", "setUrl(QUrl)", t9427<QNetworkRequest>, P9427, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"headers", "headers()", t9278<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
+    {"headers", "headers()", t9428<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setHeaders", "setHeaders(QHttpHeaders)", t9279<QNetworkRequest>, P9279, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setHeaders", "setHeaders(QHttpHeaders)", t9429<QNetworkRequest>, P9429, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"header", "header(QNetworkRequest::KnownHeaders)", t9280<QNetworkRequest>, P9280, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setHeader", "setHeader(QNetworkRequest::KnownHeaders,QVariant)", t9281<QNetworkRequest>, P9281, 2, 2, 0, QTC_T_NONE, "void"},
+    {"header", "header(QNetworkRequest::KnownHeaders)", t9430<QNetworkRequest>, P9430, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setHeader", "setHeader(QNetworkRequest::KnownHeaders,QVariant)", t9431<QNetworkRequest>, P9431, 2, 2, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"hasRawHeader", "hasRawHeader(QAnyStringView)", t9282<QNetworkRequest>, P9282, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"hasRawHeader", "hasRawHeader(QAnyStringView)", t9432<QNetworkRequest>, P9432, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
-    {"rawHeaderList", "rawHeaderList()", t9283<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
+    {"rawHeaderList", "rawHeaderList()", t9433<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QByteArray>"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"rawHeader", "rawHeader(QAnyStringView)", t9284<QNetworkRequest>, P9284, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"rawHeader", "rawHeader(QAnyStringView)", t9434<QNetworkRequest>, P9434, 1, 1, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
 #endif
-    {"setRawHeader", "setRawHeader(QByteArray,QByteArray)", t9285<QNetworkRequest>, P9285, 2, 2, 0, QTC_T_NONE, "void"},
-    {"attribute", "attribute(QNetworkRequest::Attribute,QVariant)", t9286<QNetworkRequest>, P9286, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"setAttribute", "setAttribute(QNetworkRequest::Attribute,QVariant)", t9287<QNetworkRequest>, P9287, 2, 2, 0, QTC_T_NONE, "void"},
-    {"sslConfiguration", "sslConfiguration()", t9288<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
-    {"setSslConfiguration", "setSslConfiguration(QSslConfiguration)", t9289<QNetworkRequest>, P9289, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setOriginatingObject", "setOriginatingObject(QObject*)", t9290<QNetworkRequest>, P9290, 1, 1, 0, QTC_T_NONE, "void"},
-    {"originatingObject", "originatingObject()", t9291<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"priority", "priority()", t9292<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkRequest::Priority"},
-    {"setPriority", "setPriority(QNetworkRequest::Priority)", t9293<QNetworkRequest>, P9293, 1, 1, 0, QTC_T_NONE, "void"},
-    {"maximumRedirectsAllowed", "maximumRedirectsAllowed()", t9294<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setMaximumRedirectsAllowed", "setMaximumRedirectsAllowed(int)", t9295<QNetworkRequest>, P9295, 1, 1, 0, QTC_T_NONE, "void"},
-    {"peerVerifyName", "peerVerifyName()", t9296<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPeerVerifyName", "setPeerVerifyName(QString)", t9297<QNetworkRequest>, P9297, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setRawHeader", "setRawHeader(QByteArray,QByteArray)", t9435<QNetworkRequest>, P9435, 2, 2, 0, QTC_T_NONE, "void"},
+    {"attribute", "attribute(QNetworkRequest::Attribute,QVariant)", t9436<QNetworkRequest>, P9436, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setAttribute", "setAttribute(QNetworkRequest::Attribute,QVariant)", t9437<QNetworkRequest>, P9437, 2, 2, 0, QTC_T_NONE, "void"},
+    {"sslConfiguration", "sslConfiguration()", t9438<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
+    {"setSslConfiguration", "setSslConfiguration(QSslConfiguration)", t9439<QNetworkRequest>, P9439, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setOriginatingObject", "setOriginatingObject(QObject*)", t9440<QNetworkRequest>, P9440, 1, 1, 0, QTC_T_NONE, "void"},
+    {"originatingObject", "originatingObject()", t9441<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"priority", "priority()", t9442<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkRequest::Priority"},
+    {"setPriority", "setPriority(QNetworkRequest::Priority)", t9443<QNetworkRequest>, P9443, 1, 1, 0, QTC_T_NONE, "void"},
+    {"maximumRedirectsAllowed", "maximumRedirectsAllowed()", t9444<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setMaximumRedirectsAllowed", "setMaximumRedirectsAllowed(int)", t9445<QNetworkRequest>, P9445, 1, 1, 0, QTC_T_NONE, "void"},
+    {"peerVerifyName", "peerVerifyName()", t9446<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPeerVerifyName", "setPeerVerifyName(QString)", t9447<QNetworkRequest>, P9447, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"http1Configuration", "http1Configuration()", t9298<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttp1Configuration"},
+    {"http1Configuration", "http1Configuration()", t9448<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttp1Configuration"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"setHttp1Configuration", "setHttp1Configuration(QHttp1Configuration)", t9299<QNetworkRequest>, P9299, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setHttp1Configuration", "setHttp1Configuration(QHttp1Configuration)", t9449<QNetworkRequest>, P9449, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"http2Configuration", "http2Configuration()", t9300<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttp2Configuration"},
-    {"setHttp2Configuration", "setHttp2Configuration(QHttp2Configuration)", t9301<QNetworkRequest>, P9301, 1, 1, 0, QTC_T_NONE, "void"},
-    {"decompressedSafetyCheckThreshold", "decompressedSafetyCheckThreshold()", t9302<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setDecompressedSafetyCheckThreshold", "setDecompressedSafetyCheckThreshold(qint64)", t9303<QNetworkRequest>, P9303, 1, 1, 0, QTC_T_NONE, "void"},
+    {"http2Configuration", "http2Configuration()", t9450<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttp2Configuration"},
+    {"setHttp2Configuration", "setHttp2Configuration(QHttp2Configuration)", t9451<QNetworkRequest>, P9451, 1, 1, 0, QTC_T_NONE, "void"},
+    {"decompressedSafetyCheckThreshold", "decompressedSafetyCheckThreshold()", t9452<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setDecompressedSafetyCheckThreshold", "setDecompressedSafetyCheckThreshold(qint64)", t9453<QNetworkRequest>, P9453, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-    {"tcpKeepAliveProbeCount", "tcpKeepAliveProbeCount()", t9304<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"tcpKeepAliveProbeCount", "tcpKeepAliveProbeCount()", t9454<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
-    {"setTcpKeepAliveProbeCount", "setTcpKeepAliveProbeCount(int)", t9305<QNetworkRequest>, P9305, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setTcpKeepAliveProbeCount", "setTcpKeepAliveProbeCount(int)", t9455<QNetworkRequest>, P9455, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"transferTimeout", "transferTimeout()", t9306<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setTransferTimeout", "setTransferTimeout(int)", t9307<QNetworkRequest>, P9307, 1, 1, 0, QTC_T_NONE, "void"},
+    {"transferTimeout", "transferTimeout()", t9456<QNetworkRequest>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setTransferTimeout", "setTransferTimeout(int)", t9457<QNetworkRequest>, P9457, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"setTransferTimeout", "setTransferTimeout()", t9308<QNetworkRequest>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setTransferTimeout", "setTransferTimeout()", t9458<QNetworkRequest>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNetworkRequest[] = {
-    {"QNetworkRequest", "QNetworkRequest()", t9309<QNetworkRequest>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkRequest"},
-    {"QNetworkRequest", "QNetworkRequest(QUrl)", t9310<QNetworkRequest>, P9310, 1, 1, 0, QTC_T_VALUE, "QNetworkRequest"},
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-#endif
-static const qtc::ParamDesc P9312[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P9314[] = {{qtc::PK_VALUE, -1, "QSslConfiguration", nullptr}};
-static const qtc::ParamDesc P9316[] = {{qtc::PK_VALUE, -1, "QUrlQuery", nullptr}};
-static const qtc::ParamDesc P9317[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9318[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QUrlQuery", nullptr}};
-static const qtc::ParamDesc P9319[] = {{qtc::PK_VALUE, -1, "QHttpHeaders", nullptr}};
-static const qtc::ParamDesc P9323[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P9326[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9329[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9332[] = {{qtc::PK_VALUE, -1, "QUrlQuery", nullptr}};
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9334[] = {{qtc::PK_ENUM, 372, "QNetworkRequest::Priority", nullptr}};
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9336[] = {{qtc::PK_ENUM, 368, "QNetworkRequest::Attribute", nullptr}};
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9337[] = {{qtc::PK_ENUM, 368, "QNetworkRequest::Attribute", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9338[] = {{qtc::PK_ENUM, 368, "QNetworkRequest::Attribute", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P9339[] = {{qtc::PK_ENUM, 368, "QNetworkRequest::Attribute", nullptr}};
-#endif
-static const qtc::ParamDesc P9342[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtNetwork/qnetworkrequestfactory.h>)
-static const qtc::MethodDef M_QNetworkRequestFactory[] = {
-    {"baseUrl", "baseUrl()", t9311<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setBaseUrl", "setBaseUrl(QUrl)", t9312<QNetworkRequestFactory>, P9312, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sslConfiguration", "sslConfiguration()", t9313<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslConfiguration"},
-    {"setSslConfiguration", "setSslConfiguration(QSslConfiguration)", t9314<QNetworkRequestFactory>, P9314, 1, 1, 0, QTC_T_NONE, "void"},
-    {"createRequest", "createRequest()", t9315<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QNetworkRequest"},
-    {"createRequest", "createRequest(QUrlQuery)", t9316<QNetworkRequestFactory>, P9316, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QNetworkRequest"},
-    {"createRequest", "createRequest(QString)", t9317<QNetworkRequestFactory>, P9317, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QNetworkRequest"},
-    {"createRequest", "createRequest(QString,QUrlQuery)", t9318<QNetworkRequestFactory>, P9318, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QNetworkRequest"},
-    {"setCommonHeaders", "setCommonHeaders(QHttpHeaders)", t9319<QNetworkRequestFactory>, P9319, 1, 1, 0, QTC_T_NONE, "void"},
-    {"commonHeaders", "commonHeaders()", t9320<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QHttpHeaders"},
-    {"clearCommonHeaders", "clearCommonHeaders()", t9321<QNetworkRequestFactory>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"bearerToken", "bearerToken()", t9322<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"setBearerToken", "setBearerToken(QByteArray)", t9323<QNetworkRequestFactory>, P9323, 1, 1, 0, QTC_T_NONE, "void"},
-    {"clearBearerToken", "clearBearerToken()", t9324<QNetworkRequestFactory>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"userName", "userName()", t9325<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setUserName", "setUserName(QString)", t9326<QNetworkRequestFactory>, P9326, 1, 1, 0, QTC_T_NONE, "void"},
-    {"clearUserName", "clearUserName()", t9327<QNetworkRequestFactory>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"password", "password()", t9328<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPassword", "setPassword(QString)", t9329<QNetworkRequestFactory>, P9329, 1, 1, 0, QTC_T_NONE, "void"},
-    {"clearPassword", "clearPassword()", t9330<QNetworkRequestFactory>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"queryParameters", "queryParameters()", t9331<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrlQuery"},
-    {"setQueryParameters", "setQueryParameters(QUrlQuery)", t9332<QNetworkRequestFactory>, P9332, 1, 1, 0, QTC_T_NONE, "void"},
-    {"clearQueryParameters", "clearQueryParameters()", t9333<QNetworkRequestFactory>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setPriority", "setPriority(QNetworkRequest::Priority)", t9334<QNetworkRequestFactory>, P9334, 1, 1, 0, QTC_T_NONE, "void"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"priority", "priority()", t9335<QNetworkRequestFactory>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNetworkRequest::Priority"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"attribute", "attribute(QNetworkRequest::Attribute)", t9336<QNetworkRequestFactory>, P9336, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"attribute", "attribute(QNetworkRequest::Attribute,QVariant)", t9337<QNetworkRequestFactory>, P9337, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setAttribute", "setAttribute(QNetworkRequest::Attribute,QVariant)", t9338<QNetworkRequestFactory>, P9338, 2, 2, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"clearAttribute", "clearAttribute(QNetworkRequest::Attribute)", t9339<QNetworkRequestFactory>, P9339, 1, 1, 0, QTC_T_NONE, "void"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"clearAttributes", "clearAttributes()", t9340<QNetworkRequestFactory>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-#endif
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-static const qtc::MethodDef C_QNetworkRequestFactory[] = {
-    {"QNetworkRequestFactory", "QNetworkRequestFactory()", t9341<QNetworkRequestFactory>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkRequestFactory"},
-    {"QNetworkRequestFactory", "QNetworkRequestFactory(QUrl)", t9342<QNetworkRequestFactory>, P9342, 1, 1, 0, QTC_T_VALUE, "QNetworkRequestFactory"},
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-#endif
-#if QT_CONFIG(ssl) && __has_include(<QtNetwork/qocspresponse.h>)
-static const qtc::MethodDef M_QOcspResponse[] = {
-    {"certificateStatus", "certificateStatus()", t9343<QOcspResponse>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOcspCertificateStatus"},
-    {"revocationReason", "revocationReason()", t9344<QOcspResponse>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QOcspRevocationReason"},
-    {"responder", "responder()", t9345<QOcspResponse>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslCertificate"},
-    {"subject", "subject()", t9346<QOcspResponse>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSslCertificate"},
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-static const qtc::MethodDef C_QOcspResponse[] = {
-    {"QOcspResponse", "QOcspResponse()", t9347<QOcspResponse>, nullptr, 0, 0, 0, QTC_T_VALUE, "QOcspResponse"},
+    {"QNetworkRequest", "QNetworkRequest()", t9459<QNetworkRequest>, nullptr, 0, 0, 0, QTC_T_VALUE, "QNetworkRequest"},
+    {"QNetworkRequest", "QNetworkRequest(QUrl)", t9460<QNetworkRequest>, P9460, 1, 1, 0, QTC_T_VALUE, "QNetworkRequest"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {
@@ -10286,12 +9700,6 @@ static const qtc::ClassDef CLASSES[] = {
 #endif
 #if __has_include(<QtNetwork/qnetworkrequest.h>)
     {"QNetworkRequest", "Network", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QNetworkRequest>, nullptr, nullptr, M_QNetworkRequest, sizeof(M_QNetworkRequest) / sizeof(M_QNetworkRequest[0]) - 1, C_QNetworkRequest, sizeof(C_QNetworkRequest) / sizeof(C_QNetworkRequest[0]) - 1},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0) && __has_include(<QtNetwork/qnetworkrequestfactory.h>)
-    {"QNetworkRequestFactory", "Network", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QNetworkRequestFactory>, nullptr, nullptr, M_QNetworkRequestFactory, sizeof(M_QNetworkRequestFactory) / sizeof(M_QNetworkRequestFactory[0]) - 1, C_QNetworkRequestFactory, sizeof(C_QNetworkRequestFactory) / sizeof(C_QNetworkRequestFactory[0]) - 1},
-#endif
-#if QT_CONFIG(ssl) && __has_include(<QtNetwork/qocspresponse.h>)
-    {"QOcspResponse", "Network", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QOcspResponse>, nullptr, nullptr, M_QOcspResponse, sizeof(M_QOcspResponse) / sizeof(M_QOcspResponse[0]) - 1, C_QOcspResponse, sizeof(C_QOcspResponse) / sizeof(C_QOcspResponse[0]) - 1},
 #endif
     {nullptr, nullptr, 0, 0, 0, nullptr, nullptr, nullptr, nullptr, nullptr, 0, nullptr, 0}};
 }  // namespace

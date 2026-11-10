@@ -94,7 +94,17 @@ public:
 
     uint64_t handle_for(QObject *o);                // existing handle or a new one; 0 for nullptr
     uint64_t adopt_new(QObject *o, bool owned);     // for objects qtc just created
+    // Living in this thread. An object whose QThread was destroyed (no thread affinity) is moved
+    // back to the calling GUI thread on the way.
     QObject *object(uint64_t h, qtc_status *err, bool allow_dying = false);
+    // In any thread. For one in another thread only what is safe across threads, with mu held
+    // for as long as the pointer is used (it cannot finish dying meanwhile: see destroy_far).
+    QObject *object_anywhere(uint64_t h, qtc_status *err, bool allow_dying = false);
+    // qtc_destroy of an object living in another thread: deleted by its thread, or here when
+    // nothing runs in that thread (not started, or finished).
+    qtc_status destroy_far(uint64_t h);
+    // The handle of an object qtc already knows and that still lives (0 otherwise); never makes one.
+    uint64_t known_handle(const QObject *o);
     QVariant *value(uint64_t h, qtc_status *err);
     uint64_t new_value(QVariant v);
     qtc_status free_value(uint64_t h);
@@ -113,6 +123,8 @@ public:
     void clear_all();                                // at shutdown
     std::vector<QPointer<QObject>> owned_roots();    // newest first
 private:
+    QObject *lookup_locked(uint64_t h, qtc_status *err, bool allow_dying);
+    bool pull_orphan(QObject *o);
     uint32_t alloc_slot(qtc_status *err);
     void release_slot(uint32_t idx);
     void forget_dead(uint32_t idx);                  // the slot's object is gone without notice
@@ -223,7 +235,17 @@ QByteArray bound_method_for_signal(QObject *o, const QByteArray &name, const QLi
 
 // Variant helpers: values crossing into C hold ObjRef instead of QObject pointers.
 QVariant sanitize(const QVariant &v);
+// The same for values that come from another thread: an object pointer there may already be
+// dangling, so only objects qtc knows and that still live get their handles (others become 0).
+QVariant sanitize_known(const QVariant &v);
 QVariant desanitize(const QVariant &v);
+// Whether a value holds an object (a pointer, an ObjRef, or one inside a list or map).
+bool holds_object(const QVariant &v);
+// Meta-object methods (slots, signals, invokables) of o that qtc_call reaches through the
+// meta-object, by name or signature, as qtc_call would list them (see collect_object).
+std::vector<QMetaMethod> meta_candidates(QObject *o, const QByteArray &spec);
+// The most derived class of o that qtc binds (QObject at least).
+const struct ClassDef *bound_class_of(const QObject *o);
 int variant_kind(const QVariant &v);
 QVariant arg_to_variant(const Arg &a);                        // natural variant of an argument
 int arg_to_metatype(const Arg &a, QMetaType target, QVariant &out, int index);   // strict conversion
@@ -292,6 +314,14 @@ struct ClassDef {
 };
 
 void register_classes(const ClassDef *defs, int count);
+// qtc_new's work with a given set of constructors (c, if any, for messages and needs)
+uint64_t new_with_ctors(const char *cls, const MethodDef *ctors, uint32_t nctors, const ClassDef *c = nullptr);
+void unregister_class(const QByteArray &name);
+// runtime classes (qtc_class.cpp)
+bool dyn_class_named(const QByteArray &name);
+uint64_t dyn_new(const QByteArray &name, bool *handled);   // qtc_new of a runtime class
+void classes_shutdown();
+void rhi_shutdown();   // qtc_rhi.cpp: RHIs, their resources, shaders and Vulkan instances
 const ClassDef *find_class(const QByteArray &name);
 int app_kind();   // QTC_APP_*, or -1 before init
 
@@ -708,6 +738,10 @@ void roles_clear();                           // qtc_shutdown
 void roles_init();                      // after the application object exists: watch Qt's own deletions
 QString roles_prepare_destroy(QObject *victim);   // releases it from its owners; non-empty: must not be deleted
 QObject *roles_holder(QObject *x);            // an owner holding x in a role, if any
+// qtc_move_to_thread: why root (and what is inside it) cannot live in another thread, or empty
+QString roles_movable(QObject *root);
+void roles_forget_tree(QObject *root);        // it moved to another thread: the GUI-thread index lets go
+void roles_register_tree(QObject *root);      // it came back: objects with handles are registered again
 // Bumped by whatever may give an owner something new to hold; the held-object index follows it.
 extern uint64_t roles_epoch;
 void roles_note_call(const QObject *o);       // a call on o is about to run

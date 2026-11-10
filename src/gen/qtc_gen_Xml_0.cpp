@@ -15,7 +15,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t9959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -27,7 +27,7 @@ template <class S> static int t9959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -39,7 +39,7 @@ template <class S> static int t9960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     if (!(!s->isNull())) return qtc::pre_fail(QTC_ERR_STATE, "QDomAttr::ownerElement(): the attribute is null");
     switch (n) {
@@ -52,7 +52,7 @@ template <class S> static int t9961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -64,7 +64,7 @@ template <class S> static int t9962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -78,7 +78,7 @@ template <class S> static int t9963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -90,7 +90,7 @@ template <class S> static int t9964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -103,7 +103,7 @@ template <class S> static int t9965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t9966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -115,7 +115,7 @@ template <class S> static int t9966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -128,7 +128,7 @@ template <class S> static int t9967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t9968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned long> p0;
     qtc::H<unsigned long> p1;
@@ -144,7 +144,7 @@ template <class S> static int t9968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -158,7 +158,7 @@ template <class S> static int t9969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned long> p0;
     qtc::H<QString> p1;
@@ -174,7 +174,7 @@ template <class S> static int t9970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned long> p0;
     qtc::H<unsigned long> p1;
@@ -190,7 +190,7 @@ template <class S> static int t9971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<unsigned long> p0;
     qtc::H<unsigned long> p1;
@@ -208,7 +208,7 @@ template <class S> static int t9972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -220,7 +220,7 @@ template <class S> static int t9973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -232,7 +232,7 @@ template <class S> static int t9974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -246,7 +246,7 @@ template <class S> static int t9975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -258,7 +258,7 @@ template <class S> static int t9976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -271,7 +271,7 @@ template <class S> static int t9977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t9978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -283,7 +283,7 @@ template <class S> static int t9978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -296,7 +296,7 @@ template <class S> static int t9979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t9980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -310,7 +310,7 @@ template <class S> static int t9980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -322,7 +322,7 @@ template <class S> static int t9981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -336,7 +336,7 @@ template <class S> static int t9982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -350,7 +350,7 @@ template <class S> static int t9983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -364,7 +364,7 @@ template <class S> static int t9984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -380,7 +380,7 @@ template <class S> static int t9985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -394,7 +394,7 @@ template <class S> static int t9986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -408,7 +408,7 @@ template <class S> static int t9987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -422,7 +422,7 @@ template <class S> static int t9988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     qtc::H<bool> p1;
@@ -438,7 +438,7 @@ template <class S> static int t9989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -454,7 +454,7 @@ template <class S> static int t9990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -470,7 +470,7 @@ template <class S> static int t9991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -486,7 +486,7 @@ template <class S> static int t9992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -500,7 +500,7 @@ template <class S> static int t9993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -512,7 +512,7 @@ template <class S> static int t9994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -524,7 +524,7 @@ template <class S> static int t9995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -536,7 +536,7 @@ template <class S> static int t9996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -548,7 +548,7 @@ template <class S> static int t9997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QByteArray> p0;
     qtc::H<bool> p1;
@@ -564,7 +564,7 @@ template <class S> static int t9998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t9999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<bool> p1;
@@ -580,7 +580,7 @@ template <class S> static int t9999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QIODevice *> p0;
     qtc::H<bool> p1;
@@ -598,18 +598,18 @@ template <class S> static int t10000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAnyStringView> p0;
     qtc::H<QFlags<QDomDocument::ParseOption>> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 157);
+    if (n > 1) QTC_CVF(1, p1, 164);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAnyStringView> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->setContent(p0.get())); }) { qtc::rt(*r, s->setContent(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAnyStringView> &p0, qtc::H<QFlags<QDomDocument::ParseOption>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 157); qtc::rt(*rr, s->setContent(p0.get(), p1.get())); }) { qtc::rt(*r, s->setContent(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAnyStringView> &p0, qtc::H<QFlags<QDomDocument::ParseOption>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 164); qtc::rt(*rr, s->setContent(p0.get(), p1.get())); }) { qtc::rt(*r, s->setContent(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -619,19 +619,19 @@ template <class S> static int t10001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t10002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QIODevice *> p0;
     qtc::H<QFlags<QDomDocument::ParseOption>> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 157);
+    if (n > 1) QTC_CVF(1, p1, 164);
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QDomDocument::setContent(QIODevice*,QDomDocument::ParseOptions): argument 1 must not be null");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QIODevice *> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->setContent(p0.get())); }) { qtc::rt(*r, s->setContent(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QIODevice *> &p0, qtc::H<QFlags<QDomDocument::ParseOption>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 157); qtc::rt(*rr, s->setContent(p0.get(), p1.get())); }) { qtc::rt(*r, s->setContent(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QIODevice *> &p0, qtc::H<QFlags<QDomDocument::ParseOption>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 164); qtc::rt(*rr, s->setContent(p0.get(), p1.get())); }) { qtc::rt(*r, s->setContent(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -640,7 +640,7 @@ template <class S> static int t10002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -657,7 +657,7 @@ template <class S> static int t10003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -674,7 +674,7 @@ template <class S> static int t10004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -685,7 +685,7 @@ template <class S> static int t10005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -698,7 +698,7 @@ template <class S> static int t10006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDomDocumentType> p0;
     QTC_CV(0, p0);
@@ -713,7 +713,7 @@ template <class S> static int t10007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -725,7 +725,7 @@ template <class S> static int t10008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -738,7 +738,7 @@ template <class S> static int t10009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -750,7 +750,7 @@ template <class S> static int t10010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -762,7 +762,7 @@ template <class S> static int t10011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -774,7 +774,7 @@ template <class S> static int t10012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -786,7 +786,7 @@ template <class S> static int t10013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -798,7 +798,7 @@ template <class S> static int t10014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -810,7 +810,7 @@ template <class S> static int t10015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -822,7 +822,7 @@ template <class S> static int t10016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -835,7 +835,7 @@ template <class S> static int t10017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -854,7 +854,7 @@ template <class S> static int t10018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -870,7 +870,7 @@ template <class S> static int t10019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<long long> p1;
@@ -886,7 +886,7 @@ template <class S> static int t10020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<unsigned long long> p1;
@@ -902,7 +902,7 @@ template <class S> static int t10021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<int> p1;
@@ -918,7 +918,7 @@ template <class S> static int t10022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<unsigned int> p1;
@@ -934,7 +934,7 @@ template <class S> static int t10023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<float> p1;
@@ -950,7 +950,7 @@ template <class S> static int t10024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<double> p1;
@@ -966,7 +966,7 @@ template <class S> static int t10025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -980,7 +980,7 @@ template <class S> static int t10026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -994,7 +994,7 @@ template <class S> static int t10027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomAttr> p0;
     QTC_CV(0, p0);
@@ -1008,7 +1008,7 @@ template <class S> static int t10028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomAttr> p0;
     QTC_CV(0, p0);
@@ -1022,7 +1022,7 @@ template <class S> static int t10029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1036,7 +1036,7 @@ template <class S> static int t10030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1050,7 +1050,7 @@ template <class S> static int t10031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1071,7 +1071,7 @@ template <class S> static int t10032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1089,7 +1089,7 @@ template <class S> static int t10033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1107,7 +1107,7 @@ template <class S> static int t10034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1125,7 +1125,7 @@ template <class S> static int t10035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1143,7 +1143,7 @@ template <class S> static int t10036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1161,7 +1161,7 @@ template <class S> static int t10037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1179,7 +1179,7 @@ template <class S> static int t10038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1195,7 +1195,7 @@ template <class S> static int t10039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1211,7 +1211,7 @@ template <class S> static int t10040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomAttr> p0;
     QTC_CV(0, p0);
@@ -1225,7 +1225,7 @@ template <class S> static int t10041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1241,7 +1241,7 @@ template <class S> static int t10042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10043(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1257,7 +1257,7 @@ template <class S> static int t10043(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10044(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1269,7 +1269,7 @@ template <class S> static int t10044(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10045(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1283,7 +1283,7 @@ template <class S> static int t10045(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10046(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1295,7 +1295,7 @@ template <class S> static int t10046(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10047(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1307,7 +1307,7 @@ template <class S> static int t10047(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10048(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1319,7 +1319,7 @@ template <class S> static int t10048(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10049(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1332,7 +1332,7 @@ template <class S> static int t10049(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1344,7 +1344,7 @@ template <class S> static int t10050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1356,7 +1356,7 @@ template <class S> static int t10051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1368,7 +1368,7 @@ template <class S> static int t10052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1380,7 +1380,7 @@ template <class S> static int t10053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1393,7 +1393,7 @@ template <class S> static int t10054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1405,7 +1405,7 @@ template <class S> static int t10055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1418,7 +1418,7 @@ template <class S> static int t10056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1434,7 +1434,7 @@ template <class S> static int t10057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1452,7 +1452,7 @@ template <class S> static int t10058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1470,7 +1470,7 @@ template <class S> static int t10059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1481,20 +1481,20 @@ template <class S> static int t10060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDomImplementation::InvalidDataPolicy> p0;
-    QTC_CVE(0, p0, 158);
+    QTC_CVE(0, p0, 165);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDomImplementation::InvalidDataPolicy> &p0) { qtc::cve(aa[0], p0, 0, 158); S::setInvalidDataPolicy(p0.get()); }) { S::setInvalidDataPolicy(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDomImplementation::InvalidDataPolicy> &p0) { qtc::cve(aa[0], p0, 0, 165); S::setInvalidDataPolicy(p0.get()); }) { S::setInvalidDataPolicy(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1506,7 +1506,7 @@ template <class S> static int t10062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1519,7 +1519,7 @@ template <class S> static int t10063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1533,7 +1533,7 @@ template <class S> static int t10064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     QTC_CV(0, p0);
@@ -1547,7 +1547,7 @@ template <class S> static int t10065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1561,7 +1561,7 @@ template <class S> static int t10066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1575,7 +1575,7 @@ template <class S> static int t10067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1591,7 +1591,7 @@ template <class S> static int t10068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     QTC_CV(0, p0);
@@ -1605,7 +1605,7 @@ template <class S> static int t10069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1621,7 +1621,7 @@ template <class S> static int t10070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1633,7 +1633,7 @@ template <class S> static int t10071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1645,7 +1645,7 @@ template <class S> static int t10072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1657,7 +1657,7 @@ template <class S> static int t10073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1669,7 +1669,7 @@ template <class S> static int t10074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1683,7 +1683,7 @@ template <class S> static int t10075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1696,7 +1696,7 @@ template <class S> static int t10076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     qtc::H<QDomNode> p1;
@@ -1712,7 +1712,7 @@ template <class S> static int t10077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     qtc::H<QDomNode> p1;
@@ -1728,7 +1728,7 @@ template <class S> static int t10078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     qtc::H<QDomNode> p1;
@@ -1744,7 +1744,7 @@ template <class S> static int t10079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     QTC_CV(0, p0);
@@ -1758,7 +1758,7 @@ template <class S> static int t10080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDomNode> p0;
     QTC_CV(0, p0);
@@ -1772,7 +1772,7 @@ template <class S> static int t10081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1784,7 +1784,7 @@ template <class S> static int t10082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1801,7 +1801,7 @@ template <class S> static int t10083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1813,7 +1813,7 @@ template <class S> static int t10084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1829,7 +1829,7 @@ template <class S> static int t10085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1841,7 +1841,7 @@ template <class S> static int t10086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1853,7 +1853,7 @@ template <class S> static int t10087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1865,7 +1865,7 @@ template <class S> static int t10088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1877,7 +1877,7 @@ template <class S> static int t10089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1889,7 +1889,7 @@ template <class S> static int t10090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1901,7 +1901,7 @@ template <class S> static int t10091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1913,7 +1913,7 @@ template <class S> static int t10092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1925,7 +1925,7 @@ template <class S> static int t10093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1937,7 +1937,7 @@ template <class S> static int t10094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1949,7 +1949,7 @@ template <class S> static int t10095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1961,7 +1961,7 @@ template <class S> static int t10096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1973,7 +1973,7 @@ template <class S> static int t10097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1985,7 +1985,7 @@ template <class S> static int t10098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1997,7 +1997,7 @@ template <class S> static int t10099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2011,7 +2011,7 @@ template <class S> static int t10100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2023,7 +2023,7 @@ template <class S> static int t10101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2037,7 +2037,7 @@ template <class S> static int t10102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2049,7 +2049,7 @@ template <class S> static int t10103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2061,7 +2061,7 @@ template <class S> static int t10104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2073,7 +2073,7 @@ template <class S> static int t10105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2085,7 +2085,7 @@ template <class S> static int t10106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2097,7 +2097,7 @@ template <class S> static int t10107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2109,7 +2109,7 @@ template <class S> static int t10108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2121,7 +2121,7 @@ template <class S> static int t10109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2133,7 +2133,7 @@ template <class S> static int t10110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2145,7 +2145,7 @@ template <class S> static int t10111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2157,7 +2157,7 @@ template <class S> static int t10112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2169,7 +2169,7 @@ template <class S> static int t10113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2181,7 +2181,7 @@ template <class S> static int t10114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2193,7 +2193,7 @@ template <class S> static int t10115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2207,7 +2207,7 @@ template <class S> static int t10116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2219,7 +2219,7 @@ template <class S> static int t10117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2231,7 +2231,7 @@ template <class S> static int t10118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2243,7 +2243,7 @@ template <class S> static int t10119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2255,7 +2255,7 @@ template <class S> static int t10120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2267,7 +2267,7 @@ template <class S> static int t10121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2279,7 +2279,7 @@ template <class S> static int t10122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2291,7 +2291,7 @@ template <class S> static int t10123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2303,7 +2303,7 @@ template <class S> static int t10124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2315,7 +2315,7 @@ template <class S> static int t10125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2327,7 +2327,7 @@ template <class S> static int t10126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2339,7 +2339,7 @@ template <class S> static int t10127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2351,7 +2351,7 @@ template <class S> static int t10128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2363,7 +2363,7 @@ template <class S> static int t10129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2375,7 +2375,7 @@ template <class S> static int t10130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2387,7 +2387,7 @@ template <class S> static int t10131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -2409,7 +2409,7 @@ template <class S> static int t10132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -2431,7 +2431,7 @@ template <class S> static int t10133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -2453,7 +2453,7 @@ template <class S> static int t10134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -2475,7 +2475,7 @@ template <class S> static int t10135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2487,7 +2487,7 @@ template <class S> static int t10136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2499,7 +2499,7 @@ template <class S> static int t10137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2512,7 +2512,7 @@ template <class S> static int t10138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2526,7 +2526,7 @@ template <class S> static int t10139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2540,7 +2540,7 @@ template <class S> static int t10140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2552,7 +2552,7 @@ template <class S> static int t10141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2564,7 +2564,7 @@ template <class S> static int t10142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2576,7 +2576,7 @@ template <class S> static int t10143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2588,7 +2588,7 @@ template <class S> static int t10144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2601,7 +2601,7 @@ template <class S> static int t10145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2613,7 +2613,7 @@ template <class S> static int t10146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2625,7 +2625,7 @@ template <class S> static int t10147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2637,7 +2637,7 @@ template <class S> static int t10148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2650,7 +2650,7 @@ template <class S> static int t10149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2662,7 +2662,7 @@ template <class S> static int t10150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2674,7 +2674,7 @@ template <class S> static int t10151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2688,7 +2688,7 @@ template <class S> static int t10152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2700,7 +2700,7 @@ template <class S> static int t10153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2713,7 +2713,7 @@ template <class S> static int t10154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtXml/qdom.h>)
-template <class S> static int t10155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2727,7 +2727,7 @@ template <class S> static int t10155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2739,7 +2739,7 @@ template <class S> static int t10156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2751,423 +2751,423 @@ template <class S> static int t10157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P9963[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10115[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomAttr[] = {
-    {"name", "name()", t9959<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"specified", "specified()", t9960<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"ownerElement", "ownerElement()", t9961<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
-    {"value", "value()", t9962<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setValue", "setValue(QString)", t9963<QDomAttr>, P9963, 1, 1, 0, QTC_T_NONE, "void"},
-    {"nodeType", "nodeType()", t9964<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"name", "name()", t10111<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"specified", "specified()", t10112<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"ownerElement", "ownerElement()", t10113<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
+    {"value", "value()", t10114<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setValue", "setValue(QString)", t10115<QDomAttr>, P10115, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nodeType", "nodeType()", t10116<QDomAttr>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomAttr[] = {
-    {"QDomAttr", "QDomAttr()", t9965<QDomAttr>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomAttr"},
+    {"QDomAttr", "QDomAttr()", t10117<QDomAttr>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomAttr"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomAttr[] = {"QDomNode", nullptr};
 static void *U_QDomAttr(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomAttr *>(p)); default: return p; } }
 #endif
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomCDATASection[] = {
-    {"nodeType", "nodeType()", t9966<QDomCDATASection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"nodeType", "nodeType()", t10118<QDomCDATASection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomCDATASection[] = {
-    {"QDomCDATASection", "QDomCDATASection()", t9967<QDomCDATASection>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomCDATASection"},
+    {"QDomCDATASection", "QDomCDATASection()", t10119<QDomCDATASection>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomCDATASection"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomCDATASection[] = {"QDomText", nullptr};
 static void *U_QDomCDATASection(void *p, int b) { switch (b) { case 0: return static_cast<QDomText *>(static_cast<QDomCDATASection *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P9968[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_UINT, -1, "unsigned long", nullptr}};
-static const qtc::ParamDesc P9969[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9970[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9971[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_UINT, -1, "unsigned long", nullptr}};
-static const qtc::ParamDesc P9972[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9975[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10120[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_UINT, -1, "unsigned long", nullptr}};
+static const qtc::ParamDesc P10121[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10122[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10123[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_UINT, -1, "unsigned long", nullptr}};
+static const qtc::ParamDesc P10124[] = {{qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_UINT, -1, "unsigned long", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10127[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomCharacterData[] = {
-    {"substringData", "substringData(ulong,ulong)", t9968<QDomCharacterData>, P9968, 2, 2, 0, QTC_T_STR, "QString"},
-    {"appendData", "appendData(QString)", t9969<QDomCharacterData>, P9969, 1, 1, 0, QTC_T_NONE, "void"},
-    {"insertData", "insertData(ulong,QString)", t9970<QDomCharacterData>, P9970, 2, 2, 0, QTC_T_NONE, "void"},
-    {"deleteData", "deleteData(ulong,ulong)", t9971<QDomCharacterData>, P9971, 2, 2, 0, QTC_T_NONE, "void"},
-    {"replaceData", "replaceData(ulong,ulong,QString)", t9972<QDomCharacterData>, P9972, 3, 3, 0, QTC_T_NONE, "void"},
-    {"length", "length()", t9973<QDomCharacterData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"data", "data()", t9974<QDomCharacterData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setData", "setData(QString)", t9975<QDomCharacterData>, P9975, 1, 1, 0, QTC_T_NONE, "void"},
-    {"nodeType", "nodeType()", t9976<QDomCharacterData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"substringData", "substringData(ulong,ulong)", t10120<QDomCharacterData>, P10120, 2, 2, 0, QTC_T_STR, "QString"},
+    {"appendData", "appendData(QString)", t10121<QDomCharacterData>, P10121, 1, 1, 0, QTC_T_NONE, "void"},
+    {"insertData", "insertData(ulong,QString)", t10122<QDomCharacterData>, P10122, 2, 2, 0, QTC_T_NONE, "void"},
+    {"deleteData", "deleteData(ulong,ulong)", t10123<QDomCharacterData>, P10123, 2, 2, 0, QTC_T_NONE, "void"},
+    {"replaceData", "replaceData(ulong,ulong,QString)", t10124<QDomCharacterData>, P10124, 3, 3, 0, QTC_T_NONE, "void"},
+    {"length", "length()", t10125<QDomCharacterData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"data", "data()", t10126<QDomCharacterData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setData", "setData(QString)", t10127<QDomCharacterData>, P10127, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nodeType", "nodeType()", t10128<QDomCharacterData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomCharacterData[] = {
-    {"QDomCharacterData", "QDomCharacterData()", t9977<QDomCharacterData>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomCharacterData"},
+    {"QDomCharacterData", "QDomCharacterData()", t10129<QDomCharacterData>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomCharacterData"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomCharacterData[] = {"QDomNode", nullptr};
 static void *U_QDomCharacterData(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomCharacterData *>(p)); default: return p; } }
 #endif
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomComment[] = {
-    {"nodeType", "nodeType()", t9978<QDomComment>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"nodeType", "nodeType()", t10130<QDomComment>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomComment[] = {
-    {"QDomComment", "QDomComment()", t9979<QDomComment>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomComment"},
+    {"QDomComment", "QDomComment()", t10131<QDomComment>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomComment"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomComment[] = {"QDomCharacterData", nullptr};
 static void *U_QDomComment(void *p, int b) { switch (b) { case 0: return static_cast<QDomCharacterData *>(static_cast<QDomComment *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P9980[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9982[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9983[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9984[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9985[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9986[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9987[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9988[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9989[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9990[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9991[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9992[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9993[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P9998[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P9999[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10000[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10132[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10134[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10135[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10136[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10137[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10138[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10139[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10140[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10141[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10142[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10143[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10144[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10145[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10150[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10151[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10152[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_BOOL, -1, "bool", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10001[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_FLAGS, 157, "QFlags<QDomDocument::ParseOption>", nullptr}};
+static const qtc::ParamDesc P10153[] = {{qtc::PK_STR, -1, "QAnyStringView", nullptr}, {qtc::PK_FLAGS, 164, "QFlags<QDomDocument::ParseOption>", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P10002[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_FLAGS, 157, "QFlags<QDomDocument::ParseOption>", nullptr}};
+static const qtc::ParamDesc P10154[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_FLAGS, 164, "QFlags<QDomDocument::ParseOption>", nullptr}};
 #endif
-static const qtc::ParamDesc P10003[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10004[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10006[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10007[] = {{qtc::PK_VALUE, -1, "QDomDocumentType", nullptr}};
+static const qtc::ParamDesc P10155[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10156[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10158[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10159[] = {{qtc::PK_VALUE, -1, "QDomDocumentType", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomDocument[] = {
-    {"createElement", "createElement(QString)", t9980<QDomDocument>, P9980, 1, 1, 0, QTC_T_VALUE, "QDomElement"},
-    {"createDocumentFragment", "createDocumentFragment()", t9981<QDomDocument>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocumentFragment"},
-    {"createTextNode", "createTextNode(QString)", t9982<QDomDocument>, P9982, 1, 1, 0, QTC_T_VALUE, "QDomText"},
-    {"createComment", "createComment(QString)", t9983<QDomDocument>, P9983, 1, 1, 0, QTC_T_VALUE, "QDomComment"},
-    {"createCDATASection", "createCDATASection(QString)", t9984<QDomDocument>, P9984, 1, 1, 0, QTC_T_VALUE, "QDomCDATASection"},
-    {"createProcessingInstruction", "createProcessingInstruction(QString,QString)", t9985<QDomDocument>, P9985, 2, 2, 0, QTC_T_VALUE, "QDomProcessingInstruction"},
-    {"createAttribute", "createAttribute(QString)", t9986<QDomDocument>, P9986, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
-    {"createEntityReference", "createEntityReference(QString)", t9987<QDomDocument>, P9987, 1, 1, 0, QTC_T_VALUE, "QDomEntityReference"},
-    {"elementsByTagName", "elementsByTagName(QString)", t9988<QDomDocument>, P9988, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
-    {"importNode", "importNode(QDomNode,bool)", t9989<QDomDocument>, P9989, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
-    {"createElementNS", "createElementNS(QString,QString)", t9990<QDomDocument>, P9990, 2, 2, 0, QTC_T_VALUE, "QDomElement"},
-    {"createAttributeNS", "createAttributeNS(QString,QString)", t9991<QDomDocument>, P9991, 2, 2, 0, QTC_T_VALUE, "QDomAttr"},
-    {"elementsByTagNameNS", "elementsByTagNameNS(QString,QString)", t9992<QDomDocument>, P9992, 2, 2, 0, QTC_T_VALUE, "QDomNodeList"},
-    {"elementById", "elementById(QString)", t9993<QDomDocument>, P9993, 1, 1, 0, QTC_T_VALUE, "QDomElement"},
-    {"doctype", "doctype()", t9994<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocumentType"},
-    {"implementation", "implementation()", t9995<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomImplementation"},
-    {"documentElement", "documentElement()", t9996<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
-    {"nodeType", "nodeType()", t9997<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
-    {"setContent", "setContent(QByteArray,bool)", t9998<QDomDocument>, P9998, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
-    {"setContent", "setContent(QString,bool)", t9999<QDomDocument>, P9999, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
-    {"setContent", "setContent(QIODevice*,bool)", t10000<QDomDocument>, P10000, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
+    {"createElement", "createElement(QString)", t10132<QDomDocument>, P10132, 1, 1, 0, QTC_T_VALUE, "QDomElement"},
+    {"createDocumentFragment", "createDocumentFragment()", t10133<QDomDocument>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocumentFragment"},
+    {"createTextNode", "createTextNode(QString)", t10134<QDomDocument>, P10134, 1, 1, 0, QTC_T_VALUE, "QDomText"},
+    {"createComment", "createComment(QString)", t10135<QDomDocument>, P10135, 1, 1, 0, QTC_T_VALUE, "QDomComment"},
+    {"createCDATASection", "createCDATASection(QString)", t10136<QDomDocument>, P10136, 1, 1, 0, QTC_T_VALUE, "QDomCDATASection"},
+    {"createProcessingInstruction", "createProcessingInstruction(QString,QString)", t10137<QDomDocument>, P10137, 2, 2, 0, QTC_T_VALUE, "QDomProcessingInstruction"},
+    {"createAttribute", "createAttribute(QString)", t10138<QDomDocument>, P10138, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
+    {"createEntityReference", "createEntityReference(QString)", t10139<QDomDocument>, P10139, 1, 1, 0, QTC_T_VALUE, "QDomEntityReference"},
+    {"elementsByTagName", "elementsByTagName(QString)", t10140<QDomDocument>, P10140, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
+    {"importNode", "importNode(QDomNode,bool)", t10141<QDomDocument>, P10141, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
+    {"createElementNS", "createElementNS(QString,QString)", t10142<QDomDocument>, P10142, 2, 2, 0, QTC_T_VALUE, "QDomElement"},
+    {"createAttributeNS", "createAttributeNS(QString,QString)", t10143<QDomDocument>, P10143, 2, 2, 0, QTC_T_VALUE, "QDomAttr"},
+    {"elementsByTagNameNS", "elementsByTagNameNS(QString,QString)", t10144<QDomDocument>, P10144, 2, 2, 0, QTC_T_VALUE, "QDomNodeList"},
+    {"elementById", "elementById(QString)", t10145<QDomDocument>, P10145, 1, 1, 0, QTC_T_VALUE, "QDomElement"},
+    {"doctype", "doctype()", t10146<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocumentType"},
+    {"implementation", "implementation()", t10147<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomImplementation"},
+    {"documentElement", "documentElement()", t10148<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
+    {"nodeType", "nodeType()", t10149<QDomDocument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"setContent", "setContent(QByteArray,bool)", t10150<QDomDocument>, P10150, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
+    {"setContent", "setContent(QString,bool)", t10151<QDomDocument>, P10151, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
+    {"setContent", "setContent(QIODevice*,bool)", t10152<QDomDocument>, P10152, 2, 2, qtc::MF_DEPRECATED, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"setContent", "setContent(QAnyStringView,QDomDocument::ParseOptions)", t10001<QDomDocument>, P10001, 2, 1, 0, QTC_T_VALUE, "QDomDocument::ParseResult"},
+    {"setContent", "setContent(QAnyStringView,QDomDocument::ParseOptions)", t10153<QDomDocument>, P10153, 2, 1, 0, QTC_T_VALUE, "QDomDocument::ParseResult"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"setContent", "setContent(QIODevice*,QDomDocument::ParseOptions)", t10002<QDomDocument>, P10002, 2, 1, 0, QTC_T_VALUE, "QDomDocument::ParseResult"},
+    {"setContent", "setContent(QIODevice*,QDomDocument::ParseOptions)", t10154<QDomDocument>, P10154, 2, 1, 0, QTC_T_VALUE, "QDomDocument::ParseResult"},
 #endif
-    {"toString", "toString(int)", t10003<QDomDocument>, P10003, 1, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"toByteArray", "toByteArray(int)", t10004<QDomDocument>, P10004, 1, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"toString", "toString(int)", t10155<QDomDocument>, P10155, 1, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"toByteArray", "toByteArray(int)", t10156<QDomDocument>, P10156, 1, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomDocument[] = {
-    {"QDomDocument", "QDomDocument()", t10005<QDomDocument>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocument"},
-    {"QDomDocument", "QDomDocument(QString)", t10006<QDomDocument>, P10006, 1, 1, 0, QTC_T_VALUE, "QDomDocument"},
-    {"QDomDocument", "QDomDocument(QDomDocumentType)", t10007<QDomDocument>, P10007, 1, 1, 0, QTC_T_VALUE, "QDomDocument"},
+    {"QDomDocument", "QDomDocument()", t10157<QDomDocument>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocument"},
+    {"QDomDocument", "QDomDocument(QString)", t10158<QDomDocument>, P10158, 1, 1, 0, QTC_T_VALUE, "QDomDocument"},
+    {"QDomDocument", "QDomDocument(QDomDocumentType)", t10159<QDomDocument>, P10159, 1, 1, 0, QTC_T_VALUE, "QDomDocument"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomDocument[] = {"QDomNode", nullptr};
 static void *U_QDomDocument(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomDocument *>(p)); default: return p; } }
 #endif
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomDocumentFragment[] = {
-    {"nodeType", "nodeType()", t10008<QDomDocumentFragment>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"nodeType", "nodeType()", t10160<QDomDocumentFragment>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomDocumentFragment[] = {
-    {"QDomDocumentFragment", "QDomDocumentFragment()", t10009<QDomDocumentFragment>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocumentFragment"},
+    {"QDomDocumentFragment", "QDomDocumentFragment()", t10161<QDomDocumentFragment>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocumentFragment"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomDocumentFragment[] = {"QDomNode", nullptr};
 static void *U_QDomDocumentFragment(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomDocumentFragment *>(p)); default: return p; } }
 #endif
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomDocumentType[] = {
-    {"name", "name()", t10010<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"entities", "entities()", t10011<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
-    {"notations", "notations()", t10012<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
-    {"publicId", "publicId()", t10013<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"systemId", "systemId()", t10014<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"internalSubset", "internalSubset()", t10015<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"nodeType", "nodeType()", t10016<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"name", "name()", t10162<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"entities", "entities()", t10163<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
+    {"notations", "notations()", t10164<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
+    {"publicId", "publicId()", t10165<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"systemId", "systemId()", t10166<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"internalSubset", "internalSubset()", t10167<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"nodeType", "nodeType()", t10168<QDomDocumentType>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomDocumentType[] = {
-    {"QDomDocumentType", "QDomDocumentType()", t10017<QDomDocumentType>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocumentType"},
+    {"QDomDocumentType", "QDomDocumentType()", t10169<QDomDocumentType>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomDocumentType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomDocumentType[] = {"QDomNode", nullptr};
 static void *U_QDomDocumentType(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomDocumentType *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P10018[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10019[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10020[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P10021[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned long long", nullptr}};
-static const qtc::ParamDesc P10022[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10023[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P10024[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P10025[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P10026[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10027[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10028[] = {{qtc::PK_VALUE, -1, "QDomAttr", nullptr}};
-static const qtc::ParamDesc P10029[] = {{qtc::PK_VALUE, -1, "QDomAttr", nullptr}};
-static const qtc::ParamDesc P10030[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10031[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10032[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10033[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10034[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10035[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}};
-static const qtc::ParamDesc P10036[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P10037[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned long long", nullptr}};
-static const qtc::ParamDesc P10038[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P10039[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10040[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10041[] = {{qtc::PK_VALUE, -1, "QDomAttr", nullptr}};
-static const qtc::ParamDesc P10042[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10043[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10045[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10170[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10171[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10172[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P10173[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned long long", nullptr}};
+static const qtc::ParamDesc P10174[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10175[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10176[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P10177[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10178[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10179[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10180[] = {{qtc::PK_VALUE, -1, "QDomAttr", nullptr}};
+static const qtc::ParamDesc P10181[] = {{qtc::PK_VALUE, -1, "QDomAttr", nullptr}};
+static const qtc::ParamDesc P10182[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10183[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10184[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10185[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10186[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10187[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned int", nullptr}};
+static const qtc::ParamDesc P10188[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P10189[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_UINT, -1, "unsigned long long", nullptr}};
+static const qtc::ParamDesc P10190[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P10191[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10192[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10193[] = {{qtc::PK_VALUE, -1, "QDomAttr", nullptr}};
+static const qtc::ParamDesc P10194[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10195[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10197[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomElement[] = {
-    {"attribute", "attribute(QString,QString)", t10018<QDomElement>, P10018, 2, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setAttribute", "setAttribute(QString,QString)", t10019<QDomElement>, P10019, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setAttribute", "setAttribute(QString,qlonglong)", t10020<QDomElement>, P10020, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setAttribute", "setAttribute(QString,qulonglong)", t10021<QDomElement>, P10021, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setAttribute", "setAttribute(QString,int)", t10022<QDomElement>, P10022, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setAttribute", "setAttribute(QString,uint)", t10023<QDomElement>, P10023, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setAttribute", "setAttribute(QString,float)", t10024<QDomElement>, P10024, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setAttribute", "setAttribute(QString,double)", t10025<QDomElement>, P10025, 2, 2, 0, QTC_T_NONE, "void"},
-    {"removeAttribute", "removeAttribute(QString)", t10026<QDomElement>, P10026, 1, 1, 0, QTC_T_NONE, "void"},
-    {"attributeNode", "attributeNode(QString)", t10027<QDomElement>, P10027, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
-    {"setAttributeNode", "setAttributeNode(QDomAttr)", t10028<QDomElement>, P10028, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
-    {"removeAttributeNode", "removeAttributeNode(QDomAttr)", t10029<QDomElement>, P10029, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
-    {"elementsByTagName", "elementsByTagName(QString)", t10030<QDomElement>, P10030, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
-    {"hasAttribute", "hasAttribute(QString)", t10031<QDomElement>, P10031, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"attributeNS", "attributeNS(QString,QString,QString)", t10032<QDomElement>, P10032, 3, 2, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setAttributeNS", "setAttributeNS(QString,QString,QString)", t10033<QDomElement>, P10033, 3, 3, 0, QTC_T_NONE, "void"},
-    {"setAttributeNS", "setAttributeNS(QString,QString,int)", t10034<QDomElement>, P10034, 3, 3, 0, QTC_T_NONE, "void"},
-    {"setAttributeNS", "setAttributeNS(QString,QString,uint)", t10035<QDomElement>, P10035, 3, 3, 0, QTC_T_NONE, "void"},
-    {"setAttributeNS", "setAttributeNS(QString,QString,qlonglong)", t10036<QDomElement>, P10036, 3, 3, 0, QTC_T_NONE, "void"},
-    {"setAttributeNS", "setAttributeNS(QString,QString,qulonglong)", t10037<QDomElement>, P10037, 3, 3, 0, QTC_T_NONE, "void"},
-    {"setAttributeNS", "setAttributeNS(QString,QString,double)", t10038<QDomElement>, P10038, 3, 3, 0, QTC_T_NONE, "void"},
-    {"removeAttributeNS", "removeAttributeNS(QString,QString)", t10039<QDomElement>, P10039, 2, 2, 0, QTC_T_NONE, "void"},
-    {"attributeNodeNS", "attributeNodeNS(QString,QString)", t10040<QDomElement>, P10040, 2, 2, 0, QTC_T_VALUE, "QDomAttr"},
-    {"setAttributeNodeNS", "setAttributeNodeNS(QDomAttr)", t10041<QDomElement>, P10041, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
-    {"elementsByTagNameNS", "elementsByTagNameNS(QString,QString)", t10042<QDomElement>, P10042, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
-    {"hasAttributeNS", "hasAttributeNS(QString,QString)", t10043<QDomElement>, P10043, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"tagName", "tagName()", t10044<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setTagName", "setTagName(QString)", t10045<QDomElement>, P10045, 1, 1, 0, QTC_T_NONE, "void"},
-    {"attributes", "attributes()", t10046<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
-    {"nodeType", "nodeType()", t10047<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
-    {"text", "text()", t10048<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"attribute", "attribute(QString,QString)", t10170<QDomElement>, P10170, 2, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setAttribute", "setAttribute(QString,QString)", t10171<QDomElement>, P10171, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setAttribute", "setAttribute(QString,qlonglong)", t10172<QDomElement>, P10172, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setAttribute", "setAttribute(QString,qulonglong)", t10173<QDomElement>, P10173, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setAttribute", "setAttribute(QString,int)", t10174<QDomElement>, P10174, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setAttribute", "setAttribute(QString,uint)", t10175<QDomElement>, P10175, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setAttribute", "setAttribute(QString,float)", t10176<QDomElement>, P10176, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setAttribute", "setAttribute(QString,double)", t10177<QDomElement>, P10177, 2, 2, 0, QTC_T_NONE, "void"},
+    {"removeAttribute", "removeAttribute(QString)", t10178<QDomElement>, P10178, 1, 1, 0, QTC_T_NONE, "void"},
+    {"attributeNode", "attributeNode(QString)", t10179<QDomElement>, P10179, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
+    {"setAttributeNode", "setAttributeNode(QDomAttr)", t10180<QDomElement>, P10180, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
+    {"removeAttributeNode", "removeAttributeNode(QDomAttr)", t10181<QDomElement>, P10181, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
+    {"elementsByTagName", "elementsByTagName(QString)", t10182<QDomElement>, P10182, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
+    {"hasAttribute", "hasAttribute(QString)", t10183<QDomElement>, P10183, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"attributeNS", "attributeNS(QString,QString,QString)", t10184<QDomElement>, P10184, 3, 2, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setAttributeNS", "setAttributeNS(QString,QString,QString)", t10185<QDomElement>, P10185, 3, 3, 0, QTC_T_NONE, "void"},
+    {"setAttributeNS", "setAttributeNS(QString,QString,int)", t10186<QDomElement>, P10186, 3, 3, 0, QTC_T_NONE, "void"},
+    {"setAttributeNS", "setAttributeNS(QString,QString,uint)", t10187<QDomElement>, P10187, 3, 3, 0, QTC_T_NONE, "void"},
+    {"setAttributeNS", "setAttributeNS(QString,QString,qlonglong)", t10188<QDomElement>, P10188, 3, 3, 0, QTC_T_NONE, "void"},
+    {"setAttributeNS", "setAttributeNS(QString,QString,qulonglong)", t10189<QDomElement>, P10189, 3, 3, 0, QTC_T_NONE, "void"},
+    {"setAttributeNS", "setAttributeNS(QString,QString,double)", t10190<QDomElement>, P10190, 3, 3, 0, QTC_T_NONE, "void"},
+    {"removeAttributeNS", "removeAttributeNS(QString,QString)", t10191<QDomElement>, P10191, 2, 2, 0, QTC_T_NONE, "void"},
+    {"attributeNodeNS", "attributeNodeNS(QString,QString)", t10192<QDomElement>, P10192, 2, 2, 0, QTC_T_VALUE, "QDomAttr"},
+    {"setAttributeNodeNS", "setAttributeNodeNS(QDomAttr)", t10193<QDomElement>, P10193, 1, 1, 0, QTC_T_VALUE, "QDomAttr"},
+    {"elementsByTagNameNS", "elementsByTagNameNS(QString,QString)", t10194<QDomElement>, P10194, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
+    {"hasAttributeNS", "hasAttributeNS(QString,QString)", t10195<QDomElement>, P10195, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"tagName", "tagName()", t10196<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setTagName", "setTagName(QString)", t10197<QDomElement>, P10197, 1, 1, 0, QTC_T_NONE, "void"},
+    {"attributes", "attributes()", t10198<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
+    {"nodeType", "nodeType()", t10199<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"text", "text()", t10200<QDomElement>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomElement[] = {
-    {"QDomElement", "QDomElement()", t10049<QDomElement>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomElement"},
+    {"QDomElement", "QDomElement()", t10201<QDomElement>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomElement"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomElement[] = {"QDomNode", nullptr};
 static void *U_QDomElement(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomElement *>(p)); default: return p; } }
 #endif
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomEntity[] = {
-    {"publicId", "publicId()", t10050<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"systemId", "systemId()", t10051<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"notationName", "notationName()", t10052<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"nodeType", "nodeType()", t10053<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"publicId", "publicId()", t10202<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"systemId", "systemId()", t10203<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"notationName", "notationName()", t10204<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"nodeType", "nodeType()", t10205<QDomEntity>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomEntity[] = {
-    {"QDomEntity", "QDomEntity()", t10054<QDomEntity>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomEntity"},
+    {"QDomEntity", "QDomEntity()", t10206<QDomEntity>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomEntity"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomEntity[] = {"QDomNode", nullptr};
 static void *U_QDomEntity(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomEntity *>(p)); default: return p; } }
 #endif
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomEntityReference[] = {
-    {"nodeType", "nodeType()", t10055<QDomEntityReference>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"nodeType", "nodeType()", t10207<QDomEntityReference>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomEntityReference[] = {
-    {"QDomEntityReference", "QDomEntityReference()", t10056<QDomEntityReference>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomEntityReference"},
+    {"QDomEntityReference", "QDomEntityReference()", t10208<QDomEntityReference>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomEntityReference"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomEntityReference[] = {"QDomNode", nullptr};
 static void *U_QDomEntityReference(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomEntityReference *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P10057[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10058[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10059[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QDomDocumentType", nullptr}};
-static const qtc::ParamDesc P10061[] = {{qtc::PK_ENUM, 158, "QDomImplementation::InvalidDataPolicy", nullptr}};
+static const qtc::ParamDesc P10209[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10210[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10211[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QDomDocumentType", nullptr}};
+static const qtc::ParamDesc P10213[] = {{qtc::PK_ENUM, 165, "QDomImplementation::InvalidDataPolicy", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomImplementation[] = {
-    {"hasFeature", "hasFeature(QString,QString)", t10057<QDomImplementation>, P10057, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"createDocumentType", "createDocumentType(QString,QString,QString)", t10058<QDomImplementation>, P10058, 3, 3, 0, QTC_T_VALUE, "QDomDocumentType"},
-    {"createDocument", "createDocument(QString,QString,QDomDocumentType)", t10059<QDomImplementation>, P10059, 3, 3, 0, QTC_T_VALUE, "QDomDocument"},
-    {"invalidDataPolicy", "invalidDataPolicy()", t10060<QDomImplementation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_INT, "QDomImplementation::InvalidDataPolicy"},
-    {"setInvalidDataPolicy", "setInvalidDataPolicy(QDomImplementation::InvalidDataPolicy)", t10061<QDomImplementation>, P10061, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
-    {"isNull", "isNull()", t10062<QDomImplementation>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
+    {"hasFeature", "hasFeature(QString,QString)", t10209<QDomImplementation>, P10209, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"createDocumentType", "createDocumentType(QString,QString,QString)", t10210<QDomImplementation>, P10210, 3, 3, 0, QTC_T_VALUE, "QDomDocumentType"},
+    {"createDocument", "createDocument(QString,QString,QDomDocumentType)", t10211<QDomImplementation>, P10211, 3, 3, 0, QTC_T_VALUE, "QDomDocument"},
+    {"invalidDataPolicy", "invalidDataPolicy()", t10212<QDomImplementation>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_INT, "QDomImplementation::InvalidDataPolicy"},
+    {"setInvalidDataPolicy", "setInvalidDataPolicy(QDomImplementation::InvalidDataPolicy)", t10213<QDomImplementation>, P10213, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"isNull", "isNull()", t10214<QDomImplementation>, nullptr, 0, 0, 0, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomImplementation[] = {
-    {"QDomImplementation", "QDomImplementation()", t10063<QDomImplementation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomImplementation"},
+    {"QDomImplementation", "QDomImplementation()", t10215<QDomImplementation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomImplementation"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10064[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10065[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
-static const qtc::ParamDesc P10066[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10067[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10068[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10069[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
-static const qtc::ParamDesc P10070[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10075[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10216[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10217[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
+static const qtc::ParamDesc P10218[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10219[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10220[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10221[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
+static const qtc::ParamDesc P10222[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10227[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomNamedNodeMap[] = {
-    {"namedItem", "namedItem(QString)", t10064<QDomNamedNodeMap>, P10064, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"setNamedItem", "setNamedItem(QDomNode)", t10065<QDomNamedNodeMap>, P10065, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
-    {"removeNamedItem", "removeNamedItem(QString)", t10066<QDomNamedNodeMap>, P10066, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
-    {"item", "item(int)", t10067<QDomNamedNodeMap>, P10067, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"namedItemNS", "namedItemNS(QString,QString)", t10068<QDomNamedNodeMap>, P10068, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"setNamedItemNS", "setNamedItemNS(QDomNode)", t10069<QDomNamedNodeMap>, P10069, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
-    {"removeNamedItemNS", "removeNamedItemNS(QString,QString)", t10070<QDomNamedNodeMap>, P10070, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
-    {"length", "length()", t10071<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"count", "count()", t10072<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"size", "size()", t10073<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"isEmpty", "isEmpty()", t10074<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"contains", "contains(QString)", t10075<QDomNamedNodeMap>, P10075, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"namedItem", "namedItem(QString)", t10216<QDomNamedNodeMap>, P10216, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"setNamedItem", "setNamedItem(QDomNode)", t10217<QDomNamedNodeMap>, P10217, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
+    {"removeNamedItem", "removeNamedItem(QString)", t10218<QDomNamedNodeMap>, P10218, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
+    {"item", "item(int)", t10219<QDomNamedNodeMap>, P10219, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"namedItemNS", "namedItemNS(QString,QString)", t10220<QDomNamedNodeMap>, P10220, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"setNamedItemNS", "setNamedItemNS(QDomNode)", t10221<QDomNamedNodeMap>, P10221, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
+    {"removeNamedItemNS", "removeNamedItemNS(QString,QString)", t10222<QDomNamedNodeMap>, P10222, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
+    {"length", "length()", t10223<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"count", "count()", t10224<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"size", "size()", t10225<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"isEmpty", "isEmpty()", t10226<QDomNamedNodeMap>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"contains", "contains(QString)", t10227<QDomNamedNodeMap>, P10227, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomNamedNodeMap[] = {
-    {"QDomNamedNodeMap", "QDomNamedNodeMap()", t10076<QDomNamedNodeMap>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNamedNodeMap"},
+    {"QDomNamedNodeMap", "QDomNamedNodeMap()", t10228<QDomNamedNodeMap>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNamedNodeMap"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10077[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_VALUE, -1, "QDomNode", nullptr}};
-static const qtc::ParamDesc P10078[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_VALUE, -1, "QDomNode", nullptr}};
-static const qtc::ParamDesc P10079[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_VALUE, -1, "QDomNode", nullptr}};
-static const qtc::ParamDesc P10080[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
-static const qtc::ParamDesc P10081[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
-static const qtc::ParamDesc P10083[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10085[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10100[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10102[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10116[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10132[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10133[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10134[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10135[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10229[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_VALUE, -1, "QDomNode", nullptr}};
+static const qtc::ParamDesc P10230[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_VALUE, -1, "QDomNode", nullptr}};
+static const qtc::ParamDesc P10231[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}, {qtc::PK_VALUE, -1, "QDomNode", nullptr}};
+static const qtc::ParamDesc P10232[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
+static const qtc::ParamDesc P10233[] = {{qtc::PK_VALUE, -1, "QDomNode", nullptr}};
+static const qtc::ParamDesc P10235[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10237[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10252[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10254[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10268[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10284[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10285[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10286[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10287[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomNode[] = {
-    {"insertBefore", "insertBefore(QDomNode,QDomNode)", t10077<QDomNode>, P10077, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
-    {"insertAfter", "insertAfter(QDomNode,QDomNode)", t10078<QDomNode>, P10078, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
-    {"replaceChild", "replaceChild(QDomNode,QDomNode)", t10079<QDomNode>, P10079, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
-    {"removeChild", "removeChild(QDomNode)", t10080<QDomNode>, P10080, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
-    {"appendChild", "appendChild(QDomNode)", t10081<QDomNode>, P10081, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
-    {"hasChildNodes", "hasChildNodes()", t10082<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"cloneNode", "cloneNode(bool)", t10083<QDomNode>, P10083, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"normalize", "normalize()", t10084<QDomNode>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isSupported", "isSupported(QString,QString)", t10085<QDomNode>, P10085, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"nodeName", "nodeName()", t10086<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"nodeType", "nodeType()", t10087<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
-    {"parentNode", "parentNode()", t10088<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"childNodes", "childNodes()", t10089<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
-    {"firstChild", "firstChild()", t10090<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"lastChild", "lastChild()", t10091<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"previousSibling", "previousSibling()", t10092<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"nextSibling", "nextSibling()", t10093<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"attributes", "attributes()", t10094<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
-    {"ownerDocument", "ownerDocument()", t10095<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocument"},
-    {"namespaceURI", "namespaceURI()", t10096<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"localName", "localName()", t10097<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"hasAttributes", "hasAttributes()", t10098<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"nodeValue", "nodeValue()", t10099<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setNodeValue", "setNodeValue(QString)", t10100<QDomNode>, P10100, 1, 1, 0, QTC_T_NONE, "void"},
-    {"prefix", "prefix()", t10101<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPrefix", "setPrefix(QString)", t10102<QDomNode>, P10102, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isAttr", "isAttr()", t10103<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isCDATASection", "isCDATASection()", t10104<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isDocumentFragment", "isDocumentFragment()", t10105<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isDocument", "isDocument()", t10106<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isDocumentType", "isDocumentType()", t10107<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isElement", "isElement()", t10108<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isEntityReference", "isEntityReference()", t10109<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isText", "isText()", t10110<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isEntity", "isEntity()", t10111<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNotation", "isNotation()", t10112<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isProcessingInstruction", "isProcessingInstruction()", t10113<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isCharacterData", "isCharacterData()", t10114<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isComment", "isComment()", t10115<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"namedItem", "namedItem(QString)", t10116<QDomNode>, P10116, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"isNull", "isNull()", t10117<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t10118<QDomNode>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"toAttr", "toAttr()", t10119<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomAttr"},
-    {"toCDATASection", "toCDATASection()", t10120<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomCDATASection"},
-    {"toDocumentFragment", "toDocumentFragment()", t10121<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocumentFragment"},
-    {"toDocument", "toDocument()", t10122<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocument"},
-    {"toDocumentType", "toDocumentType()", t10123<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocumentType"},
-    {"toElement", "toElement()", t10124<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
-    {"toEntityReference", "toEntityReference()", t10125<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomEntityReference"},
-    {"toText", "toText()", t10126<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomText"},
-    {"toEntity", "toEntity()", t10127<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomEntity"},
-    {"toNotation", "toNotation()", t10128<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNotation"},
-    {"toProcessingInstruction", "toProcessingInstruction()", t10129<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomProcessingInstruction"},
-    {"toCharacterData", "toCharacterData()", t10130<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomCharacterData"},
-    {"toComment", "toComment()", t10131<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomComment"},
-    {"firstChildElement", "firstChildElement(QString,QString)", t10132<QDomNode>, P10132, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
-    {"lastChildElement", "lastChildElement(QString,QString)", t10133<QDomNode>, P10133, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
-    {"previousSiblingElement", "previousSiblingElement(QString,QString)", t10134<QDomNode>, P10134, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
-    {"nextSiblingElement", "nextSiblingElement(QString,QString)", t10135<QDomNode>, P10135, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
-    {"lineNumber", "lineNumber()", t10136<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"columnNumber", "columnNumber()", t10137<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"insertBefore", "insertBefore(QDomNode,QDomNode)", t10229<QDomNode>, P10229, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
+    {"insertAfter", "insertAfter(QDomNode,QDomNode)", t10230<QDomNode>, P10230, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
+    {"replaceChild", "replaceChild(QDomNode,QDomNode)", t10231<QDomNode>, P10231, 2, 2, 0, QTC_T_VALUE, "QDomNode"},
+    {"removeChild", "removeChild(QDomNode)", t10232<QDomNode>, P10232, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
+    {"appendChild", "appendChild(QDomNode)", t10233<QDomNode>, P10233, 1, 1, 0, QTC_T_VALUE, "QDomNode"},
+    {"hasChildNodes", "hasChildNodes()", t10234<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"cloneNode", "cloneNode(bool)", t10235<QDomNode>, P10235, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"normalize", "normalize()", t10236<QDomNode>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isSupported", "isSupported(QString,QString)", t10237<QDomNode>, P10237, 2, 2, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"nodeName", "nodeName()", t10238<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"nodeType", "nodeType()", t10239<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"parentNode", "parentNode()", t10240<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"childNodes", "childNodes()", t10241<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNodeList"},
+    {"firstChild", "firstChild()", t10242<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"lastChild", "lastChild()", t10243<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"previousSibling", "previousSibling()", t10244<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"nextSibling", "nextSibling()", t10245<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"attributes", "attributes()", t10246<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNamedNodeMap"},
+    {"ownerDocument", "ownerDocument()", t10247<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocument"},
+    {"namespaceURI", "namespaceURI()", t10248<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"localName", "localName()", t10249<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"hasAttributes", "hasAttributes()", t10250<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"nodeValue", "nodeValue()", t10251<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setNodeValue", "setNodeValue(QString)", t10252<QDomNode>, P10252, 1, 1, 0, QTC_T_NONE, "void"},
+    {"prefix", "prefix()", t10253<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPrefix", "setPrefix(QString)", t10254<QDomNode>, P10254, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isAttr", "isAttr()", t10255<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isCDATASection", "isCDATASection()", t10256<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isDocumentFragment", "isDocumentFragment()", t10257<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isDocument", "isDocument()", t10258<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isDocumentType", "isDocumentType()", t10259<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isElement", "isElement()", t10260<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isEntityReference", "isEntityReference()", t10261<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isText", "isText()", t10262<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isEntity", "isEntity()", t10263<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNotation", "isNotation()", t10264<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isProcessingInstruction", "isProcessingInstruction()", t10265<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isCharacterData", "isCharacterData()", t10266<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isComment", "isComment()", t10267<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"namedItem", "namedItem(QString)", t10268<QDomNode>, P10268, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"isNull", "isNull()", t10269<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t10270<QDomNode>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"toAttr", "toAttr()", t10271<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomAttr"},
+    {"toCDATASection", "toCDATASection()", t10272<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomCDATASection"},
+    {"toDocumentFragment", "toDocumentFragment()", t10273<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocumentFragment"},
+    {"toDocument", "toDocument()", t10274<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocument"},
+    {"toDocumentType", "toDocumentType()", t10275<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomDocumentType"},
+    {"toElement", "toElement()", t10276<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
+    {"toEntityReference", "toEntityReference()", t10277<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomEntityReference"},
+    {"toText", "toText()", t10278<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomText"},
+    {"toEntity", "toEntity()", t10279<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomEntity"},
+    {"toNotation", "toNotation()", t10280<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomNotation"},
+    {"toProcessingInstruction", "toProcessingInstruction()", t10281<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomProcessingInstruction"},
+    {"toCharacterData", "toCharacterData()", t10282<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomCharacterData"},
+    {"toComment", "toComment()", t10283<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomComment"},
+    {"firstChildElement", "firstChildElement(QString,QString)", t10284<QDomNode>, P10284, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
+    {"lastChildElement", "lastChildElement(QString,QString)", t10285<QDomNode>, P10285, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
+    {"previousSiblingElement", "previousSiblingElement(QString,QString)", t10286<QDomNode>, P10286, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
+    {"nextSiblingElement", "nextSiblingElement(QString,QString)", t10287<QDomNode>, P10287, 2, 0, qtc::MF_CONST, QTC_T_VALUE, "QDomElement"},
+    {"lineNumber", "lineNumber()", t10288<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"columnNumber", "columnNumber()", t10289<QDomNode>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomNode[] = {
-    {"QDomNode", "QDomNode()", t10138<QDomNode>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNode"},
+    {"QDomNode", "QDomNode()", t10290<QDomNode>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNode"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10139[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10140[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10291[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10292[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomNodeList[] = {
-    {"item", "item(int)", t10139<QDomNodeList>, P10139, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"at", "at(int)", t10140<QDomNodeList>, P10140, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
-    {"length", "length()", t10141<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"count", "count()", t10142<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"size", "size()", t10143<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"isEmpty", "isEmpty()", t10144<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"item", "item(int)", t10291<QDomNodeList>, P10291, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"at", "at(int)", t10292<QDomNodeList>, P10292, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDomNode"},
+    {"length", "length()", t10293<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"count", "count()", t10294<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"size", "size()", t10295<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"isEmpty", "isEmpty()", t10296<QDomNodeList>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomNodeList[] = {
-    {"QDomNodeList", "QDomNodeList()", t10145<QDomNodeList>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNodeList"},
+    {"QDomNodeList", "QDomNodeList()", t10297<QDomNodeList>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNodeList"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomNotation[] = {
-    {"publicId", "publicId()", t10146<QDomNotation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"systemId", "systemId()", t10147<QDomNotation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"nodeType", "nodeType()", t10148<QDomNotation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"publicId", "publicId()", t10298<QDomNotation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"systemId", "systemId()", t10299<QDomNotation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"nodeType", "nodeType()", t10300<QDomNotation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomNotation[] = {
-    {"QDomNotation", "QDomNotation()", t10149<QDomNotation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNotation"},
+    {"QDomNotation", "QDomNotation()", t10301<QDomNotation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomNotation"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomNotation[] = {"QDomNode", nullptr};
 static void *U_QDomNotation(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomNotation *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P10152[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10304[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomProcessingInstruction[] = {
-    {"target", "target()", t10150<QDomProcessingInstruction>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"data", "data()", t10151<QDomProcessingInstruction>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setData", "setData(QString)", t10152<QDomProcessingInstruction>, P10152, 1, 1, 0, QTC_T_NONE, "void"},
-    {"nodeType", "nodeType()", t10153<QDomProcessingInstruction>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"target", "target()", t10302<QDomProcessingInstruction>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"data", "data()", t10303<QDomProcessingInstruction>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setData", "setData(QString)", t10304<QDomProcessingInstruction>, P10304, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nodeType", "nodeType()", t10305<QDomProcessingInstruction>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomProcessingInstruction[] = {
-    {"QDomProcessingInstruction", "QDomProcessingInstruction()", t10154<QDomProcessingInstruction>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomProcessingInstruction"},
+    {"QDomProcessingInstruction", "QDomProcessingInstruction()", t10306<QDomProcessingInstruction>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomProcessingInstruction"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomProcessingInstruction[] = {"QDomNode", nullptr};
 static void *U_QDomProcessingInstruction(void *p, int b) { switch (b) { case 0: return static_cast<QDomNode *>(static_cast<QDomProcessingInstruction *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P10155[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10307[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if __has_include(<QtXml/qdom.h>)
 static const qtc::MethodDef M_QDomText[] = {
-    {"splitText", "splitText(int)", t10155<QDomText>, P10155, 1, 1, 0, QTC_T_VALUE, "QDomText"},
-    {"nodeType", "nodeType()", t10156<QDomText>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
+    {"splitText", "splitText(int)", t10307<QDomText>, P10307, 1, 1, 0, QTC_T_VALUE, "QDomText"},
+    {"nodeType", "nodeType()", t10308<QDomText>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDomNode::NodeType"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDomText[] = {
-    {"QDomText", "QDomText()", t10157<QDomText>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomText"},
+    {"QDomText", "QDomText()", t10309<QDomText>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDomText"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QDomText[] = {"QDomCharacterData", nullptr};
 static void *U_QDomText(void *p, int b) { switch (b) { case 0: return static_cast<QDomCharacterData *>(static_cast<QDomText *>(p)); default: return p; } }

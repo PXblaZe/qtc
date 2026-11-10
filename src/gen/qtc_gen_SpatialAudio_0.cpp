@@ -18,7 +18,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtSpatialAudio/qambientsound.h>)
-template <class S> static int t11770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11928(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -32,7 +32,7 @@ template <class S> static int t11770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11929(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -44,7 +44,7 @@ template <class S> static int t11771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11930(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -56,7 +56,7 @@ template <class S> static int t11772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11931(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -70,7 +70,7 @@ template <class S> static int t11773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11932(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -82,7 +82,7 @@ template <class S> static int t11774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11933(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -96,7 +96,7 @@ template <class S> static int t11775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11934(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -110,7 +110,7 @@ template <class S> static int t11776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11935(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -122,7 +122,7 @@ template <class S> static int t11777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11936(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -134,7 +134,7 @@ template <class S> static int t11778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11937(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -146,7 +146,7 @@ template <class S> static int t11779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11938(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -158,7 +158,7 @@ template <class S> static int t11780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11939(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -170,7 +170,7 @@ template <class S> static int t11781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11940(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -182,7 +182,7 @@ template <class S> static int t11782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11941(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::note_sound(s, true))) return qtc::pre_fail(QTC_ERR_STATE, "QAmbientSound::play(): -");
     switch (n) {
@@ -195,7 +195,7 @@ template <class S> static int t11783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11942(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::sound_playing(s))) return qtc::pre_fail(QTC_ERR_STATE, "QAmbientSound::pause(): the sound is not playing: call play() first (Qt aborts on pause() before play() or after stop())");
     switch (n) {
@@ -208,7 +208,7 @@ template <class S> static int t11784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11943(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::note_sound(s, false))) return qtc::pre_fail(QTC_ERR_STATE, "QAmbientSound::stop(): -");
     switch (n) {
@@ -221,7 +221,7 @@ template <class S> static int t11785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11944(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioEngine *> p0;
     QTC_CV(0, p0);
@@ -237,13 +237,13 @@ template <class S> static int t11786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSpatialAudio/qaudioengine.h>)
-template <class S> static int t11787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11945(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioEngine::OutputMode> p0;
-    QTC_CVE(0, p0, 54);
+    QTC_CVE(0, p0, 59);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine::OutputMode> &p0) { qtc::cve(aa[0], p0, 0, 54); s->setOutputMode(p0.get()); }) { s->setOutputMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine::OutputMode> &p0) { qtc::cve(aa[0], p0, 0, 59); s->setOutputMode(p0.get()); }) { s->setOutputMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -251,7 +251,7 @@ template <class S> static int t11787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11946(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -263,7 +263,7 @@ template <class S> static int t11788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11947(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -275,7 +275,7 @@ template <class S> static int t11789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11948(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioDevice> p0;
     QTC_CV(0, p0);
@@ -289,7 +289,7 @@ template <class S> static int t11790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11949(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -301,7 +301,7 @@ template <class S> static int t11791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11950(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -315,7 +315,7 @@ template <class S> static int t11792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11951(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -327,7 +327,7 @@ template <class S> static int t11793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11952(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -341,7 +341,7 @@ template <class S> static int t11794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11953(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -353,7 +353,7 @@ template <class S> static int t11795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11954(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -367,7 +367,7 @@ template <class S> static int t11796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11955(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -379,7 +379,7 @@ template <class S> static int t11797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11956(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -393,7 +393,7 @@ template <class S> static int t11798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11957(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -405,7 +405,7 @@ template <class S> static int t11799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11958(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -417,7 +417,7 @@ template <class S> static int t11800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11959(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -429,7 +429,7 @@ template <class S> static int t11801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11960(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -441,7 +441,7 @@ template <class S> static int t11802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11961(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -453,7 +453,7 @@ template <class S> static int t11803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11962(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -465,7 +465,7 @@ template <class S> static int t11804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11963(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -477,7 +477,7 @@ template <class S> static int t11805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11964(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(QT_VERSION >= QT_VERSION_CHECK(6, 12, 0))) return qtc::pre_fail(QTC_ERR_STATE, "QAudioEngine::stop(): this Qt version crashes on sounds made after stop(): pause() the engine or destroy it");
     switch (n) {
@@ -490,7 +490,7 @@ template <class S> static int t11806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11965(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -502,7 +502,7 @@ template <class S> static int t11807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11966(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -514,7 +514,7 @@ template <class S> static int t11808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -525,7 +525,7 @@ template <class S> static int t11809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -538,7 +538,7 @@ template <class S> static int t11810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     qtc::H<QObject *> p1;
@@ -559,7 +559,7 @@ template <class S> static int t11811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSpatialAudio/qaudioroom.h>)
-template <class S> static int t11812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11970(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVector3D> p0;
     QTC_CV(0, p0);
@@ -573,7 +573,7 @@ template <class S> static int t11812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11971(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -585,7 +585,7 @@ template <class S> static int t11813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11972(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVector3D> p0;
     QTC_CV(0, p0);
@@ -599,7 +599,7 @@ template <class S> static int t11814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11973(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -611,7 +611,7 @@ template <class S> static int t11815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11974(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQuaternion> p0;
     QTC_CV(0, p0);
@@ -625,7 +625,7 @@ template <class S> static int t11816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11975(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -637,15 +637,15 @@ template <class S> static int t11817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11976(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioRoom::Wall> p0;
     qtc::H<QAudioRoom::Material> p1;
-    QTC_CVE(0, p0, 59);
-    QTC_CVE(1, p1, 58);
+    QTC_CVE(0, p0, 64);
+    QTC_CVE(1, p1, 63);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioRoom::Wall> &p0, qtc::H<QAudioRoom::Material> &p1) { qtc::cve(aa[0], p0, 0, 59); qtc::cve(aa[1], p1, 1, 58); s->setWallMaterial(p0.get(), p1.get()); }) { s->setWallMaterial(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioRoom::Wall> &p0, qtc::H<QAudioRoom::Material> &p1) { qtc::cve(aa[0], p0, 0, 64); qtc::cve(aa[1], p1, 1, 63); s->setWallMaterial(p0.get(), p1.get()); }) { s->setWallMaterial(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -653,13 +653,13 @@ template <class S> static int t11818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11977(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioRoom::Wall> p0;
-    QTC_CVE(0, p0, 59);
+    QTC_CVE(0, p0, 64);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioRoom::Wall> &p0) { qtc::cve(aa[0], p0, 0, 59); qtc::rt(*rr, s->wallMaterial(p0.get())); }) { qtc::rt(*r, s->wallMaterial(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioRoom::Wall> &p0) { qtc::cve(aa[0], p0, 0, 64); qtc::rt(*rr, s->wallMaterial(p0.get())); }) { qtc::rt(*r, s->wallMaterial(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -667,7 +667,7 @@ template <class S> static int t11819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11978(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -681,7 +681,7 @@ template <class S> static int t11820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11979(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -693,7 +693,7 @@ template <class S> static int t11821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11980(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -707,7 +707,7 @@ template <class S> static int t11822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11981(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -719,7 +719,7 @@ template <class S> static int t11823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11982(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -733,7 +733,7 @@ template <class S> static int t11824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11983(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -745,7 +745,7 @@ template <class S> static int t11825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11984(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -759,7 +759,7 @@ template <class S> static int t11826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -771,7 +771,7 @@ template <class S> static int t11827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -783,7 +783,7 @@ template <class S> static int t11828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11987(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -795,7 +795,7 @@ template <class S> static int t11829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11988(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -807,7 +807,7 @@ template <class S> static int t11830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11989(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -819,7 +819,7 @@ template <class S> static int t11831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11990(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -831,7 +831,7 @@ template <class S> static int t11832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11991(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -843,7 +843,7 @@ template <class S> static int t11833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11992(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -855,7 +855,7 @@ template <class S> static int t11834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11993(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -867,7 +867,7 @@ template <class S> static int t11835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioEngine *> p0;
     QTC_CV(0, p0);
@@ -883,7 +883,7 @@ template <class S> static int t11836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtSpatialAudio/qspatialsound.h>)
-template <class S> static int t11837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -897,7 +897,7 @@ template <class S> static int t11837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -909,7 +909,7 @@ template <class S> static int t11838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11997(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -921,7 +921,7 @@ template <class S> static int t11839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11998(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -935,7 +935,7 @@ template <class S> static int t11840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11999(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -947,7 +947,7 @@ template <class S> static int t11841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12000(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -961,7 +961,7 @@ template <class S> static int t11842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVector3D> p0;
     QTC_CV(0, p0);
@@ -975,7 +975,7 @@ template <class S> static int t11843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -987,7 +987,7 @@ template <class S> static int t11844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QQuaternion> p0;
     QTC_CV(0, p0);
@@ -1001,7 +1001,7 @@ template <class S> static int t11845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12004(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1013,7 +1013,7 @@ template <class S> static int t11846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12005(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1027,7 +1027,7 @@ template <class S> static int t11847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1039,13 +1039,13 @@ template <class S> static int t11848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12007(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSpatialSound::DistanceModel> p0;
-    QTC_CVE(0, p0, 590);
+    QTC_CVE(0, p0, 614);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSpatialSound::DistanceModel> &p0) { qtc::cve(aa[0], p0, 0, 590); s->setDistanceModel(p0.get()); }) { s->setDistanceModel(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSpatialSound::DistanceModel> &p0) { qtc::cve(aa[0], p0, 0, 614); s->setDistanceModel(p0.get()); }) { s->setDistanceModel(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1053,7 +1053,7 @@ template <class S> static int t11849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1065,7 +1065,7 @@ template <class S> static int t11850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12009(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1079,7 +1079,7 @@ template <class S> static int t11851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12010(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1091,7 +1091,7 @@ template <class S> static int t11852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12011(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1105,7 +1105,7 @@ template <class S> static int t11853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12012(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1117,7 +1117,7 @@ template <class S> static int t11854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12013(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1131,7 +1131,7 @@ template <class S> static int t11855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12014(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1143,7 +1143,7 @@ template <class S> static int t11856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12015(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1157,7 +1157,7 @@ template <class S> static int t11857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12016(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1169,7 +1169,7 @@ template <class S> static int t11858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12017(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1183,7 +1183,7 @@ template <class S> static int t11859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1195,7 +1195,7 @@ template <class S> static int t11860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1209,7 +1209,7 @@ template <class S> static int t11861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12020(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1221,7 +1221,7 @@ template <class S> static int t11862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1235,7 +1235,7 @@ template <class S> static int t11863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1247,7 +1247,7 @@ template <class S> static int t11864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1259,7 +1259,7 @@ template <class S> static int t11865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1271,7 +1271,7 @@ template <class S> static int t11866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1283,7 +1283,7 @@ template <class S> static int t11867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1295,7 +1295,7 @@ template <class S> static int t11868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1307,7 +1307,7 @@ template <class S> static int t11869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1319,7 +1319,7 @@ template <class S> static int t11870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1331,7 +1331,7 @@ template <class S> static int t11871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1343,7 +1343,7 @@ template <class S> static int t11872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1355,7 +1355,7 @@ template <class S> static int t11873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1367,7 +1367,7 @@ template <class S> static int t11874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1379,7 +1379,7 @@ template <class S> static int t11875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1391,7 +1391,7 @@ template <class S> static int t11876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1403,7 +1403,7 @@ template <class S> static int t11877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1415,7 +1415,7 @@ template <class S> static int t11878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1427,7 +1427,7 @@ template <class S> static int t11879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::note_sound(s, true))) return qtc::pre_fail(QTC_ERR_STATE, "QSpatialSound::play(): -");
     switch (n) {
@@ -1440,7 +1440,7 @@ template <class S> static int t11880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::sound_playing(s))) return qtc::pre_fail(QTC_ERR_STATE, "QSpatialSound::pause(): the sound is not playing: call play() first (Qt aborts on pause() before play() or after stop())");
     switch (n) {
@@ -1453,7 +1453,7 @@ template <class S> static int t11881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(qtc::note_sound(s, false))) return qtc::pre_fail(QTC_ERR_STATE, "QSpatialSound::stop(): -");
     switch (n) {
@@ -1466,7 +1466,7 @@ template <class S> static int t11882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t12041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioEngine *> p0;
     QTC_CV(0, p0);
@@ -1481,180 +1481,180 @@ template <class S> static int t11883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P11770[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P11773[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11775[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11776[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11786[] = {{qtc::PK_OBJ, -1, "QAudioEngine*", &QAudioEngine::staticMetaObject}};
+static const qtc::ParamDesc P11928[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11931[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11933[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11934[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11944[] = {{qtc::PK_OBJ, -1, "QAudioEngine*", &QAudioEngine::staticMetaObject}};
 #if __has_include(<QtSpatialAudio/qambientsound.h>)
 static const qtc::MethodDef M_QAmbientSound[] = {
-    {"setSource", "setSource(QUrl)", t11770<QAmbientSound>, P11770, 1, 1, 0, QTC_T_NONE, "void"},
-    {"source", "source()", t11771<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"loops", "loops()", t11772<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setLoops", "setLoops(int)", t11773<QAmbientSound>, P11773, 1, 1, 0, QTC_T_NONE, "void"},
-    {"autoPlay", "autoPlay()", t11774<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setAutoPlay", "setAutoPlay(bool)", t11775<QAmbientSound>, P11775, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setVolume", "setVolume(float)", t11776<QAmbientSound>, P11776, 1, 1, 0, QTC_T_NONE, "void"},
-    {"volume", "volume()", t11777<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"engine", "engine()", t11778<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioEngine*"},
-    {"sourceChanged", "sourceChanged()", t11779<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"loopsChanged", "loopsChanged()", t11780<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"autoPlayChanged", "autoPlayChanged()", t11781<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"volumeChanged", "volumeChanged()", t11782<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"play", "play()", t11783<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"pause", "pause()", t11784<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11785<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setSource", "setSource(QUrl)", t11928<QAmbientSound>, P11928, 1, 1, 0, QTC_T_NONE, "void"},
+    {"source", "source()", t11929<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"loops", "loops()", t11930<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setLoops", "setLoops(int)", t11931<QAmbientSound>, P11931, 1, 1, 0, QTC_T_NONE, "void"},
+    {"autoPlay", "autoPlay()", t11932<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setAutoPlay", "setAutoPlay(bool)", t11933<QAmbientSound>, P11933, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVolume", "setVolume(float)", t11934<QAmbientSound>, P11934, 1, 1, 0, QTC_T_NONE, "void"},
+    {"volume", "volume()", t11935<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"engine", "engine()", t11936<QAmbientSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioEngine*"},
+    {"sourceChanged", "sourceChanged()", t11937<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"loopsChanged", "loopsChanged()", t11938<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"autoPlayChanged", "autoPlayChanged()", t11939<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"volumeChanged", "volumeChanged()", t11940<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"play", "play()", t11941<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"pause", "pause()", t11942<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11943<QAmbientSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAmbientSound[] = {
-    {"QAmbientSound", "QAmbientSound(QAudioEngine*)", t11786<QAmbientSound>, P11786, 1, 1, 0, QTC_T_OBJ, "QAmbientSound"},
+    {"QAmbientSound", "QAmbientSound(QAudioEngine*)", t11944<QAmbientSound>, P11944, 1, 1, 0, QTC_T_OBJ, "QAmbientSound"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11787[] = {{qtc::PK_ENUM, 54, "QAudioEngine::OutputMode", nullptr}};
-static const qtc::ParamDesc P11790[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
-static const qtc::ParamDesc P11792[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11794[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11796[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11798[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11810[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11811[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11945[] = {{qtc::PK_ENUM, 59, "QAudioEngine::OutputMode", nullptr}};
+static const qtc::ParamDesc P11948[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
+static const qtc::ParamDesc P11950[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11952[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11954[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11956[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11968[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11969[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtSpatialAudio/qaudioengine.h>)
 static const qtc::MethodDef M_QAudioEngine[] = {
-    {"setOutputMode", "setOutputMode(QAudioEngine::OutputMode)", t11787<QAudioEngine>, P11787, 1, 1, 0, QTC_T_NONE, "void"},
-    {"outputMode", "outputMode()", t11788<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioEngine::OutputMode"},
-    {"sampleRate", "sampleRate()", t11789<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setOutputDevice", "setOutputDevice(QAudioDevice)", t11790<QAudioEngine>, P11790, 1, 1, 0, QTC_T_NONE, "void"},
-    {"outputDevice", "outputDevice()", t11791<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioDevice"},
-    {"setMasterVolume", "setMasterVolume(float)", t11792<QAudioEngine>, P11792, 1, 1, 0, QTC_T_NONE, "void"},
-    {"masterVolume", "masterVolume()", t11793<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setPaused", "setPaused(bool)", t11794<QAudioEngine>, P11794, 1, 1, 0, QTC_T_NONE, "void"},
-    {"paused", "paused()", t11795<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setRoomEffectsEnabled", "setRoomEffectsEnabled(bool)", t11796<QAudioEngine>, P11796, 1, 1, 0, QTC_T_NONE, "void"},
-    {"roomEffectsEnabled", "roomEffectsEnabled()", t11797<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setDistanceScale", "setDistanceScale(float)", t11798<QAudioEngine>, P11798, 1, 1, 0, QTC_T_NONE, "void"},
-    {"distanceScale", "distanceScale()", t11799<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"outputModeChanged", "outputModeChanged()", t11800<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"outputDeviceChanged", "outputDeviceChanged()", t11801<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"masterVolumeChanged", "masterVolumeChanged()", t11802<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"pausedChanged", "pausedChanged()", t11803<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"distanceScaleChanged", "distanceScaleChanged()", t11804<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"start", "start()", t11805<QAudioEngine>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11806<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"pause", "pause()", t11807<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"resume", "resume()", t11808<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setOutputMode", "setOutputMode(QAudioEngine::OutputMode)", t11945<QAudioEngine>, P11945, 1, 1, 0, QTC_T_NONE, "void"},
+    {"outputMode", "outputMode()", t11946<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioEngine::OutputMode"},
+    {"sampleRate", "sampleRate()", t11947<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setOutputDevice", "setOutputDevice(QAudioDevice)", t11948<QAudioEngine>, P11948, 1, 1, 0, QTC_T_NONE, "void"},
+    {"outputDevice", "outputDevice()", t11949<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioDevice"},
+    {"setMasterVolume", "setMasterVolume(float)", t11950<QAudioEngine>, P11950, 1, 1, 0, QTC_T_NONE, "void"},
+    {"masterVolume", "masterVolume()", t11951<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setPaused", "setPaused(bool)", t11952<QAudioEngine>, P11952, 1, 1, 0, QTC_T_NONE, "void"},
+    {"paused", "paused()", t11953<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setRoomEffectsEnabled", "setRoomEffectsEnabled(bool)", t11954<QAudioEngine>, P11954, 1, 1, 0, QTC_T_NONE, "void"},
+    {"roomEffectsEnabled", "roomEffectsEnabled()", t11955<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setDistanceScale", "setDistanceScale(float)", t11956<QAudioEngine>, P11956, 1, 1, 0, QTC_T_NONE, "void"},
+    {"distanceScale", "distanceScale()", t11957<QAudioEngine>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"outputModeChanged", "outputModeChanged()", t11958<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"outputDeviceChanged", "outputDeviceChanged()", t11959<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"masterVolumeChanged", "masterVolumeChanged()", t11960<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"pausedChanged", "pausedChanged()", t11961<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"distanceScaleChanged", "distanceScaleChanged()", t11962<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"start", "start()", t11963<QAudioEngine>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11964<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"pause", "pause()", t11965<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"resume", "resume()", t11966<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioEngine[] = {
-    {"QAudioEngine", "QAudioEngine()", t11809<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_OBJ, "QAudioEngine"},
-    {"QAudioEngine", "QAudioEngine(QObject*)", t11810<QAudioEngine>, P11810, 1, 1, 0, QTC_T_OBJ, "QAudioEngine"},
-    {"QAudioEngine", "QAudioEngine(int,QObject*)", t11811<QAudioEngine>, P11811, 2, 1, 0, QTC_T_OBJ, "QAudioEngine"},
+    {"QAudioEngine", "QAudioEngine()", t11967<QAudioEngine>, nullptr, 0, 0, 0, QTC_T_OBJ, "QAudioEngine"},
+    {"QAudioEngine", "QAudioEngine(QObject*)", t11968<QAudioEngine>, P11968, 1, 1, 0, QTC_T_OBJ, "QAudioEngine"},
+    {"QAudioEngine", "QAudioEngine(int,QObject*)", t11969<QAudioEngine>, P11969, 2, 1, 0, QTC_T_OBJ, "QAudioEngine"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11812[] = {{qtc::PK_VALUE, -1, "QVector3D", nullptr}};
-static const qtc::ParamDesc P11814[] = {{qtc::PK_VALUE, -1, "QVector3D", nullptr}};
-static const qtc::ParamDesc P11816[] = {{qtc::PK_VALUE, -1, "QQuaternion", nullptr}};
-static const qtc::ParamDesc P11818[] = {{qtc::PK_ENUM, 59, "QAudioRoom::Wall", nullptr}, {qtc::PK_ENUM, 58, "QAudioRoom::Material", nullptr}};
-static const qtc::ParamDesc P11819[] = {{qtc::PK_ENUM, 59, "QAudioRoom::Wall", nullptr}};
-static const qtc::ParamDesc P11820[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11822[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11824[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11826[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11836[] = {{qtc::PK_OBJ, -1, "QAudioEngine*", &QAudioEngine::staticMetaObject}};
+static const qtc::ParamDesc P11970[] = {{qtc::PK_VALUE, -1, "QVector3D", nullptr}};
+static const qtc::ParamDesc P11972[] = {{qtc::PK_VALUE, -1, "QVector3D", nullptr}};
+static const qtc::ParamDesc P11974[] = {{qtc::PK_VALUE, -1, "QQuaternion", nullptr}};
+static const qtc::ParamDesc P11976[] = {{qtc::PK_ENUM, 64, "QAudioRoom::Wall", nullptr}, {qtc::PK_ENUM, 63, "QAudioRoom::Material", nullptr}};
+static const qtc::ParamDesc P11977[] = {{qtc::PK_ENUM, 64, "QAudioRoom::Wall", nullptr}};
+static const qtc::ParamDesc P11978[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11980[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11982[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11984[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11994[] = {{qtc::PK_OBJ, -1, "QAudioEngine*", &QAudioEngine::staticMetaObject}};
 #if __has_include(<QtSpatialAudio/qaudioroom.h>)
 static const qtc::MethodDef M_QAudioRoom[] = {
-    {"setPosition", "setPosition(QVector3D)", t11812<QAudioRoom>, P11812, 1, 1, 0, QTC_T_NONE, "void"},
-    {"position", "position()", t11813<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVector3D"},
-    {"setDimensions", "setDimensions(QVector3D)", t11814<QAudioRoom>, P11814, 1, 1, 0, QTC_T_NONE, "void"},
-    {"dimensions", "dimensions()", t11815<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVector3D"},
-    {"setRotation", "setRotation(QQuaternion)", t11816<QAudioRoom>, P11816, 1, 1, 0, QTC_T_NONE, "void"},
-    {"rotation", "rotation()", t11817<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QQuaternion"},
-    {"setWallMaterial", "setWallMaterial(QAudioRoom::Wall,QAudioRoom::Material)", t11818<QAudioRoom>, P11818, 2, 2, 0, QTC_T_NONE, "void"},
-    {"wallMaterial", "wallMaterial(QAudioRoom::Wall)", t11819<QAudioRoom>, P11819, 1, 1, qtc::MF_CONST, QTC_T_INT, "QAudioRoom::Material"},
-    {"setReflectionGain", "setReflectionGain(float)", t11820<QAudioRoom>, P11820, 1, 1, 0, QTC_T_NONE, "void"},
-    {"reflectionGain", "reflectionGain()", t11821<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setReverbGain", "setReverbGain(float)", t11822<QAudioRoom>, P11822, 1, 1, 0, QTC_T_NONE, "void"},
-    {"reverbGain", "reverbGain()", t11823<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setReverbTime", "setReverbTime(float)", t11824<QAudioRoom>, P11824, 1, 1, 0, QTC_T_NONE, "void"},
-    {"reverbTime", "reverbTime()", t11825<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setReverbBrightness", "setReverbBrightness(float)", t11826<QAudioRoom>, P11826, 1, 1, 0, QTC_T_NONE, "void"},
-    {"reverbBrightness", "reverbBrightness()", t11827<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"positionChanged", "positionChanged()", t11828<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"dimensionsChanged", "dimensionsChanged()", t11829<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"rotationChanged", "rotationChanged()", t11830<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"wallsChanged", "wallsChanged()", t11831<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"reflectionGainChanged", "reflectionGainChanged()", t11832<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"reverbGainChanged", "reverbGainChanged()", t11833<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"reverbTimeChanged", "reverbTimeChanged()", t11834<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"reverbBrightnessChanged", "reverbBrightnessChanged()", t11835<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setPosition", "setPosition(QVector3D)", t11970<QAudioRoom>, P11970, 1, 1, 0, QTC_T_NONE, "void"},
+    {"position", "position()", t11971<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVector3D"},
+    {"setDimensions", "setDimensions(QVector3D)", t11972<QAudioRoom>, P11972, 1, 1, 0, QTC_T_NONE, "void"},
+    {"dimensions", "dimensions()", t11973<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVector3D"},
+    {"setRotation", "setRotation(QQuaternion)", t11974<QAudioRoom>, P11974, 1, 1, 0, QTC_T_NONE, "void"},
+    {"rotation", "rotation()", t11975<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QQuaternion"},
+    {"setWallMaterial", "setWallMaterial(QAudioRoom::Wall,QAudioRoom::Material)", t11976<QAudioRoom>, P11976, 2, 2, 0, QTC_T_NONE, "void"},
+    {"wallMaterial", "wallMaterial(QAudioRoom::Wall)", t11977<QAudioRoom>, P11977, 1, 1, qtc::MF_CONST, QTC_T_INT, "QAudioRoom::Material"},
+    {"setReflectionGain", "setReflectionGain(float)", t11978<QAudioRoom>, P11978, 1, 1, 0, QTC_T_NONE, "void"},
+    {"reflectionGain", "reflectionGain()", t11979<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setReverbGain", "setReverbGain(float)", t11980<QAudioRoom>, P11980, 1, 1, 0, QTC_T_NONE, "void"},
+    {"reverbGain", "reverbGain()", t11981<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setReverbTime", "setReverbTime(float)", t11982<QAudioRoom>, P11982, 1, 1, 0, QTC_T_NONE, "void"},
+    {"reverbTime", "reverbTime()", t11983<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setReverbBrightness", "setReverbBrightness(float)", t11984<QAudioRoom>, P11984, 1, 1, 0, QTC_T_NONE, "void"},
+    {"reverbBrightness", "reverbBrightness()", t11985<QAudioRoom>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"positionChanged", "positionChanged()", t11986<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"dimensionsChanged", "dimensionsChanged()", t11987<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"rotationChanged", "rotationChanged()", t11988<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"wallsChanged", "wallsChanged()", t11989<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"reflectionGainChanged", "reflectionGainChanged()", t11990<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"reverbGainChanged", "reverbGainChanged()", t11991<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"reverbTimeChanged", "reverbTimeChanged()", t11992<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"reverbBrightnessChanged", "reverbBrightnessChanged()", t11993<QAudioRoom>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioRoom[] = {
-    {"QAudioRoom", "QAudioRoom(QAudioEngine*)", t11836<QAudioRoom>, P11836, 1, 1, 0, QTC_T_OBJ, "QAudioRoom"},
+    {"QAudioRoom", "QAudioRoom(QAudioEngine*)", t11994<QAudioRoom>, P11994, 1, 1, 0, QTC_T_OBJ, "QAudioRoom"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11837[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P11840[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11842[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11843[] = {{qtc::PK_VALUE, -1, "QVector3D", nullptr}};
-static const qtc::ParamDesc P11845[] = {{qtc::PK_VALUE, -1, "QQuaternion", nullptr}};
-static const qtc::ParamDesc P11847[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11849[] = {{qtc::PK_ENUM, 590, "QSpatialSound::DistanceModel", nullptr}};
-static const qtc::ParamDesc P11851[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11853[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11855[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11857[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11859[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11861[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11863[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11883[] = {{qtc::PK_OBJ, -1, "QAudioEngine*", &QAudioEngine::staticMetaObject}};
+static const qtc::ParamDesc P11995[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11998[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P12000[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P12001[] = {{qtc::PK_VALUE, -1, "QVector3D", nullptr}};
+static const qtc::ParamDesc P12003[] = {{qtc::PK_VALUE, -1, "QQuaternion", nullptr}};
+static const qtc::ParamDesc P12005[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12007[] = {{qtc::PK_ENUM, 614, "QSpatialSound::DistanceModel", nullptr}};
+static const qtc::ParamDesc P12009[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12011[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12013[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12015[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12017[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12019[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12021[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P12041[] = {{qtc::PK_OBJ, -1, "QAudioEngine*", &QAudioEngine::staticMetaObject}};
 #if __has_include(<QtSpatialAudio/qspatialsound.h>)
 static const qtc::MethodDef M_QSpatialSound[] = {
-    {"setSource", "setSource(QUrl)", t11837<QSpatialSound>, P11837, 1, 1, 0, QTC_T_NONE, "void"},
-    {"source", "source()", t11838<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"loops", "loops()", t11839<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setLoops", "setLoops(int)", t11840<QSpatialSound>, P11840, 1, 1, 0, QTC_T_NONE, "void"},
-    {"autoPlay", "autoPlay()", t11841<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setAutoPlay", "setAutoPlay(bool)", t11842<QSpatialSound>, P11842, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setPosition", "setPosition(QVector3D)", t11843<QSpatialSound>, P11843, 1, 1, 0, QTC_T_NONE, "void"},
-    {"position", "position()", t11844<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVector3D"},
-    {"setRotation", "setRotation(QQuaternion)", t11845<QSpatialSound>, P11845, 1, 1, 0, QTC_T_NONE, "void"},
-    {"rotation", "rotation()", t11846<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QQuaternion"},
-    {"setVolume", "setVolume(float)", t11847<QSpatialSound>, P11847, 1, 1, 0, QTC_T_NONE, "void"},
-    {"volume", "volume()", t11848<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setDistanceModel", "setDistanceModel(QSpatialSound::DistanceModel)", t11849<QSpatialSound>, P11849, 1, 1, 0, QTC_T_NONE, "void"},
-    {"distanceModel", "distanceModel()", t11850<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSpatialSound::DistanceModel"},
-    {"setSize", "setSize(float)", t11851<QSpatialSound>, P11851, 1, 1, 0, QTC_T_NONE, "void"},
-    {"size", "size()", t11852<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setDistanceCutoff", "setDistanceCutoff(float)", t11853<QSpatialSound>, P11853, 1, 1, 0, QTC_T_NONE, "void"},
-    {"distanceCutoff", "distanceCutoff()", t11854<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setManualAttenuation", "setManualAttenuation(float)", t11855<QSpatialSound>, P11855, 1, 1, 0, QTC_T_NONE, "void"},
-    {"manualAttenuation", "manualAttenuation()", t11856<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setOcclusionIntensity", "setOcclusionIntensity(float)", t11857<QSpatialSound>, P11857, 1, 1, 0, QTC_T_NONE, "void"},
-    {"occlusionIntensity", "occlusionIntensity()", t11858<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setDirectivity", "setDirectivity(float)", t11859<QSpatialSound>, P11859, 1, 1, 0, QTC_T_NONE, "void"},
-    {"directivity", "directivity()", t11860<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setDirectivityOrder", "setDirectivityOrder(float)", t11861<QSpatialSound>, P11861, 1, 1, 0, QTC_T_NONE, "void"},
-    {"directivityOrder", "directivityOrder()", t11862<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setNearFieldGain", "setNearFieldGain(float)", t11863<QSpatialSound>, P11863, 1, 1, 0, QTC_T_NONE, "void"},
-    {"nearFieldGain", "nearFieldGain()", t11864<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"engine", "engine()", t11865<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioEngine*"},
-    {"sourceChanged", "sourceChanged()", t11866<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"loopsChanged", "loopsChanged()", t11867<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"autoPlayChanged", "autoPlayChanged()", t11868<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"positionChanged", "positionChanged()", t11869<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"rotationChanged", "rotationChanged()", t11870<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"volumeChanged", "volumeChanged()", t11871<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"distanceModelChanged", "distanceModelChanged()", t11872<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"sizeChanged", "sizeChanged()", t11873<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"distanceCutoffChanged", "distanceCutoffChanged()", t11874<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"manualAttenuationChanged", "manualAttenuationChanged()", t11875<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"occlusionIntensityChanged", "occlusionIntensityChanged()", t11876<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"directivityChanged", "directivityChanged()", t11877<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"directivityOrderChanged", "directivityOrderChanged()", t11878<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"nearFieldGainChanged", "nearFieldGainChanged()", t11879<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"play", "play()", t11880<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"pause", "pause()", t11881<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11882<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setSource", "setSource(QUrl)", t11995<QSpatialSound>, P11995, 1, 1, 0, QTC_T_NONE, "void"},
+    {"source", "source()", t11996<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"loops", "loops()", t11997<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setLoops", "setLoops(int)", t11998<QSpatialSound>, P11998, 1, 1, 0, QTC_T_NONE, "void"},
+    {"autoPlay", "autoPlay()", t11999<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setAutoPlay", "setAutoPlay(bool)", t12000<QSpatialSound>, P12000, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setPosition", "setPosition(QVector3D)", t12001<QSpatialSound>, P12001, 1, 1, 0, QTC_T_NONE, "void"},
+    {"position", "position()", t12002<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVector3D"},
+    {"setRotation", "setRotation(QQuaternion)", t12003<QSpatialSound>, P12003, 1, 1, 0, QTC_T_NONE, "void"},
+    {"rotation", "rotation()", t12004<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QQuaternion"},
+    {"setVolume", "setVolume(float)", t12005<QSpatialSound>, P12005, 1, 1, 0, QTC_T_NONE, "void"},
+    {"volume", "volume()", t12006<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setDistanceModel", "setDistanceModel(QSpatialSound::DistanceModel)", t12007<QSpatialSound>, P12007, 1, 1, 0, QTC_T_NONE, "void"},
+    {"distanceModel", "distanceModel()", t12008<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSpatialSound::DistanceModel"},
+    {"setSize", "setSize(float)", t12009<QSpatialSound>, P12009, 1, 1, 0, QTC_T_NONE, "void"},
+    {"size", "size()", t12010<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setDistanceCutoff", "setDistanceCutoff(float)", t12011<QSpatialSound>, P12011, 1, 1, 0, QTC_T_NONE, "void"},
+    {"distanceCutoff", "distanceCutoff()", t12012<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setManualAttenuation", "setManualAttenuation(float)", t12013<QSpatialSound>, P12013, 1, 1, 0, QTC_T_NONE, "void"},
+    {"manualAttenuation", "manualAttenuation()", t12014<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setOcclusionIntensity", "setOcclusionIntensity(float)", t12015<QSpatialSound>, P12015, 1, 1, 0, QTC_T_NONE, "void"},
+    {"occlusionIntensity", "occlusionIntensity()", t12016<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setDirectivity", "setDirectivity(float)", t12017<QSpatialSound>, P12017, 1, 1, 0, QTC_T_NONE, "void"},
+    {"directivity", "directivity()", t12018<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setDirectivityOrder", "setDirectivityOrder(float)", t12019<QSpatialSound>, P12019, 1, 1, 0, QTC_T_NONE, "void"},
+    {"directivityOrder", "directivityOrder()", t12020<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setNearFieldGain", "setNearFieldGain(float)", t12021<QSpatialSound>, P12021, 1, 1, 0, QTC_T_NONE, "void"},
+    {"nearFieldGain", "nearFieldGain()", t12022<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"engine", "engine()", t12023<QSpatialSound>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioEngine*"},
+    {"sourceChanged", "sourceChanged()", t12024<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"loopsChanged", "loopsChanged()", t12025<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"autoPlayChanged", "autoPlayChanged()", t12026<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"positionChanged", "positionChanged()", t12027<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"rotationChanged", "rotationChanged()", t12028<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"volumeChanged", "volumeChanged()", t12029<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"distanceModelChanged", "distanceModelChanged()", t12030<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"sizeChanged", "sizeChanged()", t12031<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"distanceCutoffChanged", "distanceCutoffChanged()", t12032<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"manualAttenuationChanged", "manualAttenuationChanged()", t12033<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"occlusionIntensityChanged", "occlusionIntensityChanged()", t12034<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"directivityChanged", "directivityChanged()", t12035<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"directivityOrderChanged", "directivityOrderChanged()", t12036<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"nearFieldGainChanged", "nearFieldGainChanged()", t12037<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"play", "play()", t12038<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"pause", "pause()", t12039<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stop", "stop()", t12040<QSpatialSound>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSpatialSound[] = {
-    {"QSpatialSound", "QSpatialSound(QAudioEngine*)", t11883<QSpatialSound>, P11883, 1, 1, 0, QTC_T_OBJ, "QSpatialSound"},
+    {"QSpatialSound", "QSpatialSound(QAudioEngine*)", t12041<QSpatialSound>, P12041, 1, 1, 0, QTC_T_OBJ, "QSpatialSound"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

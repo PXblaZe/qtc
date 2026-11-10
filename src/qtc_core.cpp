@@ -1,6 +1,7 @@
 // qtc runtime: lifecycle, errors, handles, values, calls, properties, introspection.
 #include "qtc_internal.h"
 #include "qtc_events.h"
+#include "qtc_override.h"
 
 #include <QtCore/QAbstractProxyModel>
 #include <cmath>
@@ -267,8 +268,68 @@ void Registry::set_owned(uint64_t h, bool owned) {
 }
 
 QObject *Registry::object(uint64_t h, qtc_status *err, bool allow_dying) {
-    if (h == 0) { *err = QTC_ERR_NULL_HANDLE; return nullptr; }
     std::lock_guard<std::recursive_mutex> lk(mu);
+    QObject *o = lookup_locked(h, err, allow_dying);
+    if (!o) return nullptr;
+    // read under mu: an object of another thread cannot finish dying while mu is held
+    QThread *t = o->thread();
+    if (t == QThread::currentThread()) return o;
+    if (!t && pull_orphan(o)) return o;
+    *err = QTC_ERR_WRONG_THREAD;
+    return nullptr;
+}
+
+QObject *Registry::object_anywhere(uint64_t h, qtc_status *err, bool allow_dying) {
+    std::lock_guard<std::recursive_mutex> lk(mu);
+    return lookup_locked(h, err, allow_dying);
+}
+
+// An object whose QThread was destroyed has no thread affinity, and Qt lets the current thread
+// pull it (and the tree it is in) over. GUI thread only: it becomes an ordinary object again.
+bool Registry::pull_orphan(QObject *o) {
+    if (!gui_thread_ok()) return false;
+    QObject *root = o;
+    for (int d = 0; root->parent() && d < 10000; d++) root = root->parent();
+    if (root->thread()) return false;
+    root->moveToThread(QThread::currentThread());
+    if (o->thread() != QThread::currentThread()) return false;
+    roles_register_tree(root);
+    return true;
+}
+
+uint64_t Registry::known_handle(const QObject *o) {
+    if (!o) return 0;
+    std::lock_guard<std::recursive_mutex> lk(mu);
+    if (g_recently_destroyed->contains(const_cast<QObject *>(o))) return 0;
+    auto it = by_ptr.constFind(const_cast<QObject *>(o));
+    if (it == by_ptr.constEnd()) return 0;
+    const Slot &s = table[*it];
+    if (s.kind != SK_OBJ || !s.qp || (s.flags & SF_DYING)) return 0;
+    return make_handle(*it, s.gen);
+}
+
+qtc_status Registry::destroy_far(uint64_t h) {
+    // mu stays held throughout: the object's own thread, if it is destroying it right now, waits in
+    // on_destroyed (emitted before ~QObject frees anything or drops posted events) until we are done
+    std::lock_guard<std::recursive_mutex> lk(mu);
+    qtc_status err = 0;
+    QObject *o = lookup_locked(h, &err, false);
+    if (!o) return err;
+    QThread *t = o->thread();
+    if (t == QThread::currentThread()) return QTC_ERR_STATE;   // not far: the caller's usual path
+    table[handle_index(h)].flags |= SF_DYING;
+    // wait(0) is true only when the thread never started or has completely finished: then nothing
+    // can be running in it, and it would never process a deleteLater
+    if (t && !t->wait(QDeadlineTimer(0))) {
+        o->deleteLater();
+        return QTC_OK;
+    }
+    delete o;
+    return QTC_OK;
+}
+
+QObject *Registry::lookup_locked(uint64_t h, qtc_status *err, bool allow_dying) {
+    if (h == 0) { *err = QTC_ERR_NULL_HANDLE; return nullptr; }
     uint32_t idx = handle_index(h);
     if (idx >= table.size() || handle_gen(h) == 0) { *err = QTC_ERR_BAD_HANDLE; return nullptr; }
     Slot &s = table[idx];
@@ -279,12 +340,11 @@ QObject *Registry::object(uint64_t h, qtc_status *err, bool allow_dying) {
     if (s.kind == SK_FREE) { *err = QTC_ERR_STALE_HANDLE; return nullptr; }
     if (s.kind != SK_OBJ) { *err = QTC_ERR_WRONG_TYPE; return nullptr; }
     if (!s.qp) {   // deleted while its signals were blocked
-        if (QThread::currentThread() == QCoreApplication::instance()->thread()) forget_dead(idx);
+        if (gui_thread_ok()) forget_dead(idx);
         *err = QTC_ERR_STALE_HANDLE;
         return nullptr;
     }
     if ((s.flags & SF_DYING) && !allow_dying) { *err = QTC_ERR_STALE_HANDLE; return nullptr; }
-    if (s.obj->thread() != QThread::currentThread()) { *err = QTC_ERR_WRONG_THREAD; return nullptr; }
     *err = 0;
     return s.obj;
 }
@@ -332,7 +392,7 @@ qtc_status Registry::free_value(uint64_t h) {
 
 qtc_status Registry::mark_dying(uint64_t h, QObject **out) {
     qtc_status err = 0;
-    QObject *o = object(h, &err);
+    QObject *o = object_anywhere(h, &err);
     if (!o) return err;
     std::lock_guard<std::recursive_mutex> lk(mu);
     table[handle_index(h)].flags |= SF_DYING;
@@ -371,7 +431,8 @@ void Registry::on_destroyed(QObject *o) {
         live_objects--;
         g_recently_destroyed->insert(o);
     }
-    roles_forget(o, true);
+    // an object moved to a worker thread dies there: the roles index (GUI thread) never had it
+    if (gui_thread_ok()) roles_forget(o, true);
     if (on_object_destroyed_hook) on_object_destroyed_hook(o, handle);
 }
 
@@ -481,40 +542,75 @@ void top_level_point() {
 
 QVariant out_variant_obj(QObject *o) { return QVariant::fromValue(ObjRef{reg().handle_for(o)}); }
 
-QVariant sanitize(const QVariant &v) {
+static QVariant sanitize_impl(const QVariant &v, bool known) {
     const QMetaType mt = v.metaType();
     if (!mt.isValid()) return v;
     if (mt.flags() & QMetaType::PointerToQObject) {
         QObject *o = *static_cast<QObject *const *>(v.constData());
-        return out_variant_obj(o);
+        return known ? QVariant::fromValue(ObjRef{reg().known_handle(o)}) : out_variant_obj(o);
     }
     const int id = mt.id();
     if (id == QMetaType::QVariantList) {
         QVariantList l = v.toList();
-        for (QVariant &e : l) e = sanitize(e);
+        for (QVariant &e : l) e = sanitize_impl(e, known);
         return QVariant(l);
     }
     if (id == QMetaType::QVariantMap) {
         QVariantMap m = v.toMap();
-        for (auto it = m.begin(); it != m.end(); ++it) it.value() = sanitize(it.value());
+        for (auto it = m.begin(); it != m.end(); ++it) it.value() = sanitize_impl(it.value(), known);
         return QVariant(m);
     }
     if (id == QMetaType::QVariantHash) {
         QVariantHash m = v.toHash();
-        for (auto it = m.begin(); it != m.end(); ++it) it.value() = sanitize(it.value());
+        for (auto it = m.begin(); it != m.end(); ++it) it.value() = sanitize_impl(it.value(), known);
         return QVariant(m);
     }
-    if (id == QMetaType::QModelIndex) return QVariant::fromValue(QPersistentModelIndex(v.value<QModelIndex>()));
-    if (id == QMetaType::QObjectStar) return out_variant_obj(v.value<QObject *>());
+    // an index of a model in another thread cannot be made persistent from here
+    if (id == QMetaType::QModelIndex) return known ? QVariant() : QVariant::fromValue(QPersistentModelIndex(v.value<QModelIndex>()));
+    if (known && id == QMetaType::QPersistentModelIndex) return QVariant();
+    if (id == QMetaType::QObjectStar) {
+        QObject *o = v.value<QObject *>();
+        return known ? QVariant::fromValue(ObjRef{reg().known_handle(o)}) : out_variant_obj(o);
+    }
 #ifdef QTC_HAS_MODULE_Qml
     // a JavaScript value (a QML var, an object QML passes as a QVariant: older Qt keeps these as
     // QJSValue) becomes the maps, lists and scalars it holds
     if (mt == QMetaType::fromType<QJSValue>()) {
         const QVariant plain = v.value<QJSValue>().toVariant();
-        return plain.metaType() == mt ? QVariant() : sanitize(plain);
+        return plain.metaType() == mt ? QVariant() : sanitize_impl(plain, known);
     }
 #endif
     return v;
+}
+
+QVariant sanitize(const QVariant &v) { return sanitize_impl(v, false); }
+QVariant sanitize_known(const QVariant &v) { return sanitize_impl(v, true); }
+
+bool holds_object(const QVariant &v) {
+    const QMetaType mt = v.metaType();
+    if (!mt.isValid()) return false;
+    if ((mt.flags() & QMetaType::PointerToQObject) || mt.id() == QMetaType::QObjectStar || mt == QMetaType::fromType<ObjRef>())
+        return true;
+    switch (mt.id()) {
+    case QMetaType::QVariantList:
+        for (const QVariant &e : v.toList())
+            if (holds_object(e)) return true;
+        return false;
+    case QMetaType::QVariantMap: {
+        const QVariantMap m = v.toMap();
+        for (auto it = m.cbegin(); it != m.cend(); ++it)
+            if (holds_object(it.value())) return true;
+        return false;
+    }
+    case QMetaType::QVariantHash: {
+        const QVariantHash m = v.toHash();
+        for (auto it = m.cbegin(); it != m.cend(); ++it)
+            if (holds_object(it.value())) return true;
+        return false;
+    }
+    default:
+        return false;
+    }
 }
 
 QVariant desanitize(const QVariant &v) {
@@ -1136,6 +1232,13 @@ void register_classes(const ClassDef *defs, int count) {
     }
 }
 const ClassDef *find_class(const QByteArray &name) { return classes().value(name, nullptr); }
+void unregister_class(const QByteArray &name) {
+    const ClassDef *c = classes().value(name, nullptr);
+    if (!c) return;
+    classes().remove(name);
+    class_names().removeAll(name);
+    delete name_indexes().take(c);
+}
 
 static const QList<const MethodDef *> &methods_named(const ClassDef *c, const QByteArray &name) {
     NameIndex *ni = name_indexes().value(c, nullptr);
@@ -1610,7 +1713,23 @@ static QHash<CandKey, std::vector<Cand>> &cand_cache() {
 }
 void clear_cand_cache() { cand_cache().clear(); }
 
+// The protected methods an overridable object makes callable (qtc_override.h): its own, never
+// cached by class (the same meta-object serves plain objects of the class).
+static void collect_extras(QObject *o, const QByteArray &name, const QByteArray &sig, std::vector<Cand> &out) {
+    uint32_t n = 0;
+    const MethodDef *ex = ov_extras(o, &n);
+    for (uint32_t i = 0; i < n; i++) {
+        if (name != ex[i].name || !sig_matches(&ex[i], sig)) continue;
+        Cand k;
+        k.md = &ex[i];
+        k.cls = nullptr;
+        k.depth = 0;
+        out.push_back(k);
+    }
+}
+
 static void collect_object_cached(QObject *o, const QByteArray &name, const QByteArray &sig, bool want_static, std::vector<Cand> &out) {
+    if (!want_static) collect_extras(o, name, sig, out);
     const QObjectData *d = DPtrPeek::of(o);
     if (d && d->metaObject) {   // a dynamic meta-object: it can change, and its address can be reused
         collect_object(o, name, sig, want_static, out);
@@ -1636,6 +1755,27 @@ bool method_callable(QObject *o, const QByteArray &signature, QString *why) {
     *why = QStringLiteral("%1::%2 is not available through qtc").arg(QLatin1StringView(o->metaObject()->className()),
                                                                      QString::fromLatin1(p < 0 ? name : sig));
     return false;
+}
+
+std::vector<QMetaMethod> meta_candidates(QObject *o, const QByteArray &spec) {
+    const int p = spec.indexOf('(');
+    const QByteArray name = p < 0 ? spec : spec.left(p);
+    const QByteArray sig = p < 0 ? QByteArray() : QMetaObject::normalizedSignature(spec.constData());
+    std::vector<Cand> cands;
+    collect_object_cached(o, name, sig, false, cands);
+    std::vector<QMetaMethod> out;
+    for (const Cand &k : cands)
+        if (!k.md && k.mm.isValid()) out.push_back(k.mm);
+    return out;
+}
+
+const ClassDef *bound_class_of(const QObject *o) {
+    for (const QMetaObject *mo = o->metaObject(); mo; mo = mo->superClass()) {
+        const QByteArray n(mo->className());
+        if (dyn_class_named(n)) continue;   // a runtime class: its Qt base counts
+        if (const ClassDef *c = find_class(n)) return c;
+    }
+    return nullptr;
 }
 
 QByteArray bound_method_for_signal(QObject *o, const QByteArray &name, const QList<QByteArray> &types, int *nargs) {
@@ -1698,8 +1838,12 @@ static int invoke_meta(QObject *o, const QMetaMethod &m, ArgStack &st, Ret &r) {
     QVariant vals[kMaxArgs];
     void *argv[kMaxArgs + 1];
     for (int i = 0; i < n; i++) {
-        if (int e = arg_to_metatype(st.a[i], m.parameterMetaType(i), vals[i], i)) return e;
-        argv[i + 1] = vals[i].data();
+        const QMetaType pt = m.parameterMetaType(i);
+        if (int e = arg_to_metatype(st.a[i], pt, vals[i], i)) return e;
+        // A QVariant parameter (every untyped QML function parameter) takes the variant itself.
+        // data() would point at the value inside it, which is the variant's own address only while
+        // the value is stored inline: a large value (a QTransform) would be read as a variant.
+        argv[i + 1] = pt == QMetaType::fromType<QVariant>() ? static_cast<void *>(&vals[i]) : vals[i].data();
     }
     QMetaType rtype = m.returnMetaType();
     QVariant rv;
@@ -1757,7 +1901,12 @@ static qtc_status run_candidates(std::vector<Cand> &cands, void *self_obj, QVari
     r.clear();
     if (bc->md) {
         QString why;
-        if (!need_ok(bc->cls, &why)) return fail(QTC_ERR_STATE, why);
+        if (bc->cls && !need_ok(bc->cls, &why)) return fail(QTC_ERR_STATE, why);
+        // a nested event loop (exec, waitFor...) inside a virtual call Qt is making would run
+        // anything (another paint, a deferred delete of what Qt is using) in the middle of it
+        if ((bc->md->flags & MF_BLOCKING) && ov_depth() > 0)
+            return fail(QTC_ERR_STATE, QStringLiteral("%1: %2 waits in an event loop, which an override handler may not start")
+                                           .arg(what(), QLatin1StringView(bc->md->sig)));
         void *self = nullptr;
         if (!(bc->md->flags & MF_STATIC)) {
             if (self_obj) self = self_obj;
@@ -1795,6 +1944,37 @@ static qtc_status run_candidates(std::vector<Cand> &cands, void *self_obj, QVari
     if (!self_obj) return fail(QTC_ERR_UNSUPPORTED, what());
     return invoke_meta(static_cast<QObject *>(self_obj), bc->mm, st, r) ? t_err : QTC_OK;
 }
+
+// Creates an object with one of these constructors, chosen by the pushed arguments as qtc_new
+// chooses (the arguments are consumed). GUI thread, inside guarded().
+uint64_t new_with_ctors(const char *cls, const MethodDef *ctors, uint32_t nctors, const ClassDef *c) {
+    CallFrame f;
+    Ret &r = *f.r;
+    std::vector<Cand> cands;
+    for (uint32_t i = 0; i < nctors; i++) {
+        Cand k;
+        k.md = &ctors[i];
+        k.cls = c;
+        cands.push_back(k);
+    }
+    const Label what{QLatin1StringView(cls), QLatin1StringView(), "new %1"};
+    if (run_candidates(cands, nullptr, nullptr, what, *f.st, r) != QTC_OK) return 0;
+    if (r.kind != QTC_T_OBJ || !r.h) { fail(QTC_ERR_REJECTED, what.str()); return 0; }
+    qtc_status e = 0;
+    QObject *o = reg().object(r.h, &e);
+    if (o) {
+        reg().set_made(r.h);
+        QList<QObject *> made_with;
+        for (int i = 0; i < f.st->n; i++)
+            if (f.st->a[i].kind == AK_OBJ)
+                if (QObject *x = reg().object(f.st->a[i].h, &e)) made_with.append(x);
+        roles_adopt_new(o, made_with);
+        roles_constructed(o);
+    }
+    if (o && !o->parent()) reg().set_owned(r.h, true);
+    return r.h;
+}
+
 
 struct ArgsConsumer {
     ~ArgsConsumer() { args().clear(); }
@@ -1982,6 +2162,7 @@ static qtc_status init_common(int32_t kind) {
     s.inited.store(true, std::memory_order_release);
     events_init();
     roles_init();
+    concurrent_init();
     return QTC_OK;
 }
 
@@ -2013,9 +2194,14 @@ QTC_API qtc_status qtc_shutdown(void) {
     State &s = st();
     if (!s.inited) return fail(QTC_ERR_NOT_INITIALIZED, "qtc_init has not been called");
     if (!gui_thread_ok()) return fail(QTC_ERR_WRONG_THREAD, "qtc_shutdown must be called from the GUI thread");
+    if (ov_depth() > 0) return fail(QTC_ERR_STATE, "qtc_shutdown cannot run inside an override handler (Qt is in the middle of a call)");
     try {
         reg().sweep_dead();   // objects deleted with their signals blocked, before anything walks them
+        // futures end and worker threads stop first: what runs there may still emit and post
+        concurrent_shutdown();
         events_shutdown();
+        // GPU resources go while their windows and widgets (and the QRhi of a widget's window) exist
+        rhi_shutdown();
         // Newest first, with the checks qtc_destroy makes: owners that hold an object let go
         // (one that owns it, like a QDrag its mime data, deletes it), and an object something
         // still uses (an engine a context was made for) waits for a later round.
@@ -2024,6 +2210,9 @@ QTC_API qtc_status qtc_shutdown(void) {
             std::vector<QPointer<QObject>> later;
             for (QPointer<QObject> &p : roots) {
                 if (!p || p->parent()) continue;
+                // an object of a worker thread that did not stop (concurrent_shutdown asked them
+                // all to) cannot be deleted from here safely: the process ends it
+                if (QThread *t = p->thread(); t && t != QThread::currentThread() && !t->wait(QDeadlineTimer(0))) continue;
                 // a thread that still runs would abort the program when deleted
                 if (auto *t = qobject_cast<QThread *>(p.data()); t && t->isRunning() && t != QThread::currentThread()) {
                     t->quit();
@@ -2045,6 +2234,7 @@ QTC_API qtc_status qtc_shutdown(void) {
         clear_cand_cache();
         delete s.app;
         s.app = nullptr;
+        classes_shutdown();
         reg().clear_all();
     } catch (...) {
     }
@@ -2066,6 +2256,16 @@ QTC_API qtc_obj qtc_new(qtc_str class_name) {
         Ret &r = *f.r;
         QByteArray cn;
         if (!read_bytes(class_name, cn, "class_name")) return 0;
+        bool runtime = false;
+        // a runtime class (qtc_class_*): made like qtc_class_new makes it (the frame gives the
+        // arguments back first)
+        if (dyn_class_named(cn.trimmed())) {
+            ArgStack &g = args();
+            g.clear();
+            for (int i = 0; i < f.st->n; i++) g.a[i] = f.st->a[i];
+            g.n = f.st->n;
+            return dyn_new(cn.trimmed(), &runtime);
+        }
         const ClassDef *c = find_class(cn.trimmed());
         if (!c) { fail(QTC_ERR_NOT_FOUND, QStringLiteral("no class named %1").arg(QString::fromUtf8(cn))); return 0; }
         if (c->kind != CK_OBJECT) { fail(QTC_ERR_WRONG_TYPE, QStringLiteral("%1 is a value type: use qtc_val_new").arg(QLatin1StringView(c->name))); return 0; }
@@ -2100,6 +2300,12 @@ QTC_API qtc_status qtc_destroy(qtc_obj obj) {
     return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
         qtc_status err = 0;
         QObject *o = reg().object(obj, &err);
+        if (!o && err == QTC_ERR_WRONG_THREAD) {
+            // moved to a worker thread (qtc_move_to_thread): nothing in the GUI thread holds it
+            // (moving refused objects held by others), and its own thread deletes it
+            if (qtc_status e = reg().destroy_far(obj)) return fail(e, "qtc_destroy");
+            return QTC_OK;
+        }
         if (!o) return fail(err, "qtc_destroy");
         if (o == QCoreApplication::instance()) return fail(QTC_ERR_STATE, "the application object is destroyed by qtc_shutdown");
         // owners holding it by a plain pointer let go of it first (see qtc_roles.cpp)
@@ -3533,6 +3739,12 @@ QTC_API qtc_view qtc_stats(void) {
         j.insert(QStringLiteral("constructors"), qint64(nc));
         j.insert(QStringLiteral("enums"), g_enum_count);
         j.insert(QStringLiteral("modules"), mods);
+        // Qt modules this build links that are available under the GPL-3.0 only (docs/LICENSING.md);
+        // empty for the default build, whose Qt modules are all available under the LGPL-3.0
+        QJsonArray gpl;
+        for (const char *m : {"Charts", "NetworkAuth", "HttpServer", "Mqtt", "Coap"})
+            if (mods.contains(QLatin1StringView(m))) gpl.append(QLatin1StringView(m));
+        j.insert(QStringLiteral("gpl_only_modules"), gpl);
         return view_of(QJsonDocument(j).toJson(QJsonDocument::Compact));
     });
 }

@@ -50,6 +50,11 @@
 #include <QtCore/QFileSelector>
 #include <QtCore/QSet>
 #include <QtCore/QThread>
+#include <QtCore/QThreadPool>
+#include <QtCore/QAbstractAnimation>
+#include <QtCore/QTranslator>
+#include <QtCore/QMimeData>
+#include <cstring>
 
 #ifdef QTC_HAS_GUI
 #include <QtGui/qtguiglobal.h>
@@ -760,6 +765,7 @@ QString qt_owned(QObject *x) {
         if (t->isRunning()) return QStringLiteral("a running thread; quit() and wait() for it first");
     }
     if (qobject_cast<QAbstractEventDispatcher *>(x)) return QStringLiteral("the event dispatcher of a thread");
+    if (qobject_cast<QThreadPool *>(x) && x == QThreadPool::globalInstance()) return QStringLiteral("Qt's global thread pool");
 #ifdef QTC_HAS_GUI
     if (qobject_cast<QScreen *>(x)) return QStringLiteral("a screen (screens belong to the windowing system)");
     if (qobject_cast<QStyleHints *>(x)) return QStringLiteral("the application's style hints");
@@ -1292,6 +1298,77 @@ QObject *roles_holder(QObject *x) {
     for (const auto &[o, kinds] : candidates(x))
         if ((kinds & kPlaceKinds) && o != x && !inside(o, x) && visit(o, kinds & kPlaceKinds, x, false) != NOT_HELD) return o;
     return nullptr;
+}
+
+// qtc_move_to_thread. Qt classes of these modules may live in a worker thread; the others (GUI,
+// widgets, QML, multimedia, SQL connections, positioning backends, qtc's own) belong to the GUI
+// thread. Classes qtc does not bind (the program's own) count by the Qt class they derive from.
+static bool movable_module(const char *m) {
+    static const char *const ok[] = {"Core", "Network", "WebSockets", "Mqtt", "Coap", "SerialPort", "NetworkAuth", "HttpServer"};
+    for (const char *x : ok)
+        if (std::strcmp(m, x) == 0) return true;
+    return false;
+}
+
+QString roles_movable(QObject *root) {
+    QList<QObject *> tree = root->findChildren<QObject *>();
+    tree.prepend(root);
+    for (QObject *x : tree) {
+        if (QString why = qt_owned(x); !why.isEmpty()) return QStringLiteral("%1 is %2").arg(label(x), why);
+        if (x->isWidgetType() || x->isWindowType()) return QStringLiteral("%1 is a widget or a window").arg(label(x));
+#ifdef QTC_HAS_MODULE_Qml
+        if (qmlContext(x) || qmlEngine(x)) return QStringLiteral("%1 belongs to a QML engine").arg(label(x));
+#endif
+        if (qobject_cast<QThread *>(x) || qobject_cast<QThreadPool *>(x) || qobject_cast<QAbstractItemModel *>(x) ||
+            qobject_cast<QAbstractAnimation *>(x) || qobject_cast<QTranslator *>(x) || qobject_cast<QMimeData *>(x) ||
+            x->inherits("QNetworkInformation"))
+            return QStringLiteral("%1 stays in the GUI thread").arg(label(x));
+        const ClassDef *c = bound_class_of(x);
+        if (!c || !movable_module(c->module))
+            return QStringLiteral("%1 (Qt %2) stays in the GUI thread").arg(label(x), QLatin1StringView(c ? c->module : "?"));
+        if (QObject *b = bound_parent(x); b && !inside(b, root)) return QStringLiteral("%1 belongs to %2").arg(label(x), label(b));
+        // what it holds must go with it ...
+        if (uint64_t k = kinds_of(x)) {
+            QList<QObject *> held;
+            visit(x, k, nullptr, false, &held);
+            for (QObject *h : held)
+                if (h && !inside(h, root)) return QStringLiteral("%1 uses %2, which stays in the GUI thread").arg(label(x), label(h));
+        }
+        // ... and nothing that stays may hold it
+        for (const auto &[o, kinds] : candidates(x)) {
+            if (o == x || inside(o, root)) continue;
+            if (visit(o, kinds, x, false) != NOT_HELD) return QStringLiteral("%1 is used by %2").arg(label(x), label(o));
+        }
+    }
+    for (const MadePin &p : made_pins()) {
+        if (!p.user || !p.used) continue;
+        if (inside(p.user, root) != inside(p.used, root))
+            return QStringLiteral("%1 was made with %2 and uses it while it lives").arg(label(p.user), label(p.used));
+    }
+    return QString();
+}
+
+void roles_forget_tree(QObject *root) {
+    QList<QObject *> tree = root->findChildren<QObject *>();
+    tree.prepend(root);
+    for (QObject *x : tree) {
+        roles_forget(x, true);
+        parts_map().remove(x);
+    }
+    QList<MadePin> &pins = made_pins();
+    for (qsizetype i = 0; i < pins.size();) {
+        if (!pins[i].user || !pins[i].used || inside(pins[i].user, root) || inside(pins[i].used, root)) pins.removeAt(i);
+        else i++;
+    }
+    roles_epoch++;   // the held-object index looks again
+}
+
+void roles_register_tree(QObject *root) {
+    QList<QObject *> tree = root->findChildren<QObject *>();
+    tree.prepend(root);
+    for (QObject *x : tree)
+        if (reg().known_handle(x)) roles_register(x);
+    roles_epoch++;
 }
 
 // Also when the receiver is the holder: Qt deletes the old object before taking the new one in

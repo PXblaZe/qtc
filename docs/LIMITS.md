@@ -66,9 +66,29 @@ It does not cover:
   `QDBusUnixFileDescriptor::giveFileDescriptor`) are refused for a descriptor that
   is not open, but qtc cannot tell whether an open one is the program's to give:
   handing over one Qt itself uses breaks Qt.
-- **Threads.** Only the thread that called `qtc_init` may use qtc; calls from
-  others fail with `QTC_ERR_WRONG_THREAD` (except `qtc_post`), but nothing stops
-  a program from sharing qtc's views or handles with another thread's own code.
+- **Threads.** Only the thread that called `qtc_init` may use most of qtc; calls
+  from others fail with `QTC_ERR_WRONG_THREAD`. The exceptions are marked "any
+  thread" in `qtc.h` (posting, promises, futures, tasks) and the calls an
+  override handler or a worker object's slot makes about its own call. Nothing
+  stops a program from sharing qtc's views or handles with another thread's own
+  code.
+- **What override handlers do with the call.** A handler that sets a result Qt
+  cannot use (a row count that disagrees with the rows a model reported through
+  its begin/end calls, a size hint of a billion pixels) is refused where qtc can
+  see it (negative counts, model indexes of other models, begin/end pairs out of
+  order) but not where it cannot: a model whose `data()` contradicts its
+  `rowCount()` gives views wrong answers, as in C++.
+- **What shaders compute.** Every RHI command is checked against what qtc can
+  see: the frame and pass, the pipeline's inputs and bindings against the
+  shaders' reflection data, every vertex and index a draw fetches against the
+  buffers' sizes (and the indices the GPU will see), dispatch sizes against the
+  device's limits. A shader that indexes a storage buffer or an image out of
+  bounds is undefined behaviour on the GPU, as in C++. On real GPUs that hangs or
+  loses the device (reported as `QTC_ERR_REJECTED`, after which the RHI is made
+  again); with a software rasterizer (llvmpipe, lavapipe) it is undefined
+  behaviour in the process. The same holds for native commands a program
+  records itself (`qtc_rhi_begin_external`) and for what it does with native
+  handles.
 - **The operating system.** Files, sockets, processes and devices behave as the
   OS makes them behave; a blocking call (`QDialog::exec`, `waitForFinished`) blocks.
 
@@ -261,6 +281,42 @@ explained:
   reading, which this release refuses (see above); it was not reduced to its
   calls to make sure, and no round since has met it.
 
+## Graphics
+
+- **Backends.** The Null backend, OpenGL (Mesa llvmpipe, under Xvfb) and Vulkan
+  (Mesa lavapipe) are tested, rendering included. The Direct3D 11/12 and Metal
+  code paths (backend creation, native handles) are written against Qt's headers
+  but cannot be compiled or run on Linux: they are untested.
+- **What the RHI layer leaves out**: textures other than 2D with one mip level
+  (no cube maps, arrays, 3D textures, mipmaps or multisampling), depth textures,
+  formats beyond RGBA8, BGRA8, R8, RGBA16F, RGBA32F and R32F, multiple render
+  targets, scissors, stencil operations, blend modes other than premultiplied
+  alpha, dynamic uniform-buffer offsets, push constants, separate samplers,
+  tessellation and geometry shaders, buffer-to-buffer copies, timestamps, and
+  Qt Quick's own rendering hooks (`QQuickRhiItem` and the scene graph's render
+  passes run on Qt Quick's render thread). Shaders with matrix, double or array
+  vertex inputs are refused.
+- **Index buffers** are `QTC_RHI_IMMUTABLE` or `QTC_RHI_STATIC` and keep a CPU
+  copy of their contents (twice their size in memory) so indexed draws can be
+  checked; each check reads the indices it draws (cached while they do not
+  change). Draws of very large index ranges cost CPU time for that.
+- **Widgets.** A `QRhiWidget` renders through its window's RHI. A second
+  `grabFramebuffer()` on a hidden widget with OpenGL was seen to render into a
+  texture the grab does not read (Qt's behaviour: the grab makes a new RHI
+  without calling `initialize` again); shown widgets and Vulkan behave.
+- **Thread.** RHI calls are GUI-thread calls; Qt's RHI objects are not
+  thread-safe.
+
+## Private Qt APIs
+
+Runtime classes use Qt's private `QMetaObjectBuilder` (Qt6::CorePrivate) and the
+graphics layer Qt's semi-public RHI and shader baker (Qt6::GuiPrivate,
+Qt6::ShaderToolsPrivate). Qt does not keep those compatible across minor
+releases: a libqtc built against Qt 6.12 must run on Qt 6.12.x, and needs a
+rebuild (and possibly changes) for another minor release. Without the private
+modules the configure step leaves those parts out (`QTC_ERR_UNSUPPORTED` at run
+time) instead of failing.
+
 ## Qt versions
 
 Qt 6.12 LTS is the supported release, and the only one this release of qtc was
@@ -282,5 +338,11 @@ untested.
 ## goose-qt
 
 The Goose binding is generated from qtc's manifest and inherits all of the above.
+Goose has no function pointers and its exported functions run on the program's
+main thread only, so: override handlers are one exported function
+(`goose_qt_override`) that runs for calls on the GUI thread (methods Qt calls on
+other threads, such as `QThread::run`, run Qt's own implementation); qtc's
+thread-pool tasks (`qtc_task_*`, which take C functions) are not bound, and Goose
+worker threads (`thread_fn`) fill promises instead.
 Its enum constants are those of Qt 6.12; on an older Qt (an untested opt-in build),
 values the release does not have are refused at the call.

@@ -15,7 +15,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtWebChannel/qwebchannel.h>)
-template <class S> static int t13401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13559(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -31,7 +31,7 @@ template <class S> static int t13401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13560(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -46,7 +46,7 @@ template <class S> static int t13402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13561(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -58,7 +58,7 @@ template <class S> static int t13403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13562(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -72,7 +72,7 @@ template <class S> static int t13404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13563(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -84,7 +84,7 @@ template <class S> static int t13405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13564(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -98,7 +98,7 @@ template <class S> static int t13406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13565(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -112,7 +112,7 @@ template <class S> static int t13407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13566(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QWebChannelAbstractTransport *> p0;
     QTC_CV(0, p0);
@@ -127,7 +127,7 @@ template <class S> static int t13408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13567(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QWebChannelAbstractTransport *> p0;
     QTC_CV(0, p0);
@@ -142,7 +142,7 @@ template <class S> static int t13409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13568(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -160,7 +160,7 @@ template <class S> static int t13410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtWebChannel/qwebchannelabstracttransport.h>)
-template <class S> static int t13411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13569(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QJsonObject> p0;
     QTC_CV(0, p0);
@@ -174,7 +174,7 @@ template <class S> static int t13411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13570(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QJsonObject> p0;
     qtc::H<QWebChannelAbstractTransport *> p1;
@@ -191,36 +191,36 @@ template <class S> static int t13412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P13401[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13402[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13404[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13406[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13407[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13408[] = {{qtc::PK_OBJ, -1, "QWebChannelAbstractTransport*", &QWebChannelAbstractTransport::staticMetaObject}};
-static const qtc::ParamDesc P13409[] = {{qtc::PK_OBJ, -1, "QWebChannelAbstractTransport*", &QWebChannelAbstractTransport::staticMetaObject}};
-static const qtc::ParamDesc P13410[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13559[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13560[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13562[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13564[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13565[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13566[] = {{qtc::PK_OBJ, -1, "QWebChannelAbstractTransport*", &QWebChannelAbstractTransport::staticMetaObject}};
+static const qtc::ParamDesc P13567[] = {{qtc::PK_OBJ, -1, "QWebChannelAbstractTransport*", &QWebChannelAbstractTransport::staticMetaObject}};
+static const qtc::ParamDesc P13568[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtWebChannel/qwebchannel.h>)
 static const qtc::MethodDef M_QWebChannel[] = {
-    {"registerObject", "registerObject(QString,QObject*)", t13401<QWebChannel>, P13401, 2, 2, 0, QTC_T_NONE, "void"},
-    {"deregisterObject", "deregisterObject(QObject*)", t13402<QWebChannel>, P13402, 1, 1, 0, QTC_T_NONE, "void"},
-    {"blockUpdates", "blockUpdates()", t13403<QWebChannel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setBlockUpdates", "setBlockUpdates(bool)", t13404<QWebChannel>, P13404, 1, 1, 0, QTC_T_NONE, "void"},
-    {"propertyUpdateInterval", "propertyUpdateInterval()", t13405<QWebChannel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setPropertyUpdateInterval", "setPropertyUpdateInterval(int)", t13406<QWebChannel>, P13406, 1, 1, 0, QTC_T_NONE, "void"},
-    {"blockUpdatesChanged", "blockUpdatesChanged(bool)", t13407<QWebChannel>, P13407, 1, 1, 0, QTC_T_NONE, "void"},
-    {"connectTo", "connectTo(QWebChannelAbstractTransport*)", t13408<QWebChannel>, P13408, 1, 1, 0, QTC_T_NONE, "void"},
-    {"disconnectFrom", "disconnectFrom(QWebChannelAbstractTransport*)", t13409<QWebChannel>, P13409, 1, 1, 0, QTC_T_NONE, "void"},
+    {"registerObject", "registerObject(QString,QObject*)", t13559<QWebChannel>, P13559, 2, 2, 0, QTC_T_NONE, "void"},
+    {"deregisterObject", "deregisterObject(QObject*)", t13560<QWebChannel>, P13560, 1, 1, 0, QTC_T_NONE, "void"},
+    {"blockUpdates", "blockUpdates()", t13561<QWebChannel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setBlockUpdates", "setBlockUpdates(bool)", t13562<QWebChannel>, P13562, 1, 1, 0, QTC_T_NONE, "void"},
+    {"propertyUpdateInterval", "propertyUpdateInterval()", t13563<QWebChannel>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setPropertyUpdateInterval", "setPropertyUpdateInterval(int)", t13564<QWebChannel>, P13564, 1, 1, 0, QTC_T_NONE, "void"},
+    {"blockUpdatesChanged", "blockUpdatesChanged(bool)", t13565<QWebChannel>, P13565, 1, 1, 0, QTC_T_NONE, "void"},
+    {"connectTo", "connectTo(QWebChannelAbstractTransport*)", t13566<QWebChannel>, P13566, 1, 1, 0, QTC_T_NONE, "void"},
+    {"disconnectFrom", "disconnectFrom(QWebChannelAbstractTransport*)", t13567<QWebChannel>, P13567, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QWebChannel[] = {
-    {"QWebChannel", "QWebChannel(QObject*)", t13410<QWebChannel>, P13410, 1, 0, 0, QTC_T_OBJ, "QWebChannel"},
+    {"QWebChannel", "QWebChannel(QObject*)", t13568<QWebChannel>, P13568, 1, 0, 0, QTC_T_OBJ, "QWebChannel"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13411[] = {{qtc::PK_VALUE, -1, "QJsonObject", nullptr}};
-static const qtc::ParamDesc P13412[] = {{qtc::PK_VALUE, -1, "QJsonObject", nullptr}, {qtc::PK_OBJ, -1, "QWebChannelAbstractTransport*", &QWebChannelAbstractTransport::staticMetaObject}};
+static const qtc::ParamDesc P13569[] = {{qtc::PK_VALUE, -1, "QJsonObject", nullptr}};
+static const qtc::ParamDesc P13570[] = {{qtc::PK_VALUE, -1, "QJsonObject", nullptr}, {qtc::PK_OBJ, -1, "QWebChannelAbstractTransport*", &QWebChannelAbstractTransport::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtWebChannel/qwebchannelabstracttransport.h>)
 static const qtc::MethodDef M_QWebChannelAbstractTransport[] = {
-    {"sendMessage", "sendMessage(QJsonObject)", t13411<QWebChannelAbstractTransport>, P13411, 1, 1, 0, QTC_T_NONE, "void"},
-    {"messageReceived", "messageReceived(QJsonObject,QWebChannelAbstractTransport*)", t13412<QWebChannelAbstractTransport>, P13412, 2, 2, 0, QTC_T_NONE, "void"},
+    {"sendMessage", "sendMessage(QJsonObject)", t13569<QWebChannelAbstractTransport>, P13569, 1, 1, 0, QTC_T_NONE, "void"},
+    {"messageReceived", "messageReceived(QJsonObject,QWebChannelAbstractTransport*)", t13570<QWebChannelAbstractTransport>, P13570, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QWebChannelAbstractTransport[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};

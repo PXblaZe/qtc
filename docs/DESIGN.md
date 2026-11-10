@@ -190,6 +190,66 @@ QML are reached with the same calls. `QtcBridge` sends structured values both
 ways: QML calls `bridge.send(name, payload)` and C receives a `sent` signal event;
 C calls `post(name, payload)` and QML receives `message`.
 
+### Overridable objects
+
+`gen/overrides.py` generates a subclass `QtcOv_<Class>` for each overridable
+class: every virtual method qtc exposes gets a trampoline that, when the object
+has an override for it (a per-object table of tags, checked with one load),
+packs its arguments into a frame and calls the program's handler; otherwise, or
+when the handler answers `QTC_OV_BASE`, it calls the class's own implementation.
+Protected methods a handler needs (`beginInsertRows`, `createIndex`) are reached
+through static members of the subclass. The frame keeps the program's pending
+arguments, return register and open drawing aside while the handler runs, so a
+handler may call qtc freely; what it may not do is run the event loop or shut
+qtc down, and calls nest at most 64 deep. Handlers run on the GUI thread, except
+for methods Qt calls elsewhere (`QThread::run`), which are marked as such.
+Results are checked before Qt sees them: negative counts, model indexes another
+model made, begin/end calls of models out of order.
+
+### Runtime classes
+
+`qtc_class_*` builds a meta-object with Qt's `QMetaObjectBuilder` and makes its
+objects as `QtcOv_` objects of the base class whose `metaObject`, `qt_metacast`
+and `qt_metacall` answer for the runtime class: signals are activated through
+the meta-object, slots and invokables call the override handler with their tag
+(on the object's thread), and properties keep their values in the object and
+emit their notify signals on change.
+
+### Concurrency
+
+A future (`qtc_concurrent.cpp`) is a job with a result list and a mirrored
+`QPromise<QVariant>`, so Qt's watchers and `QtFuture::whenAll/whenAny` work on it.
+Every path that runs work (a task, a map chunk, a queued call) finishes its
+future when it ends, also when it throws, is dropped by the pool or never runs,
+so no future can hang. Worker objects move to a `QThread` only when nothing on
+the GUI thread can reach them; calls to them are queued, and their signals
+reach the program as events.
+
+### Graphics
+
+`qtc_rhi.cpp` keeps its own handle table (handles tagged so that they never
+match an object handle). Each resource records what it uses and is used by:
+bindings hold their buffers, textures and samplers, a render target its
+texture, a pipeline the bindings it was made with, so nothing a QRhi object
+points at is deleted first; destroying an RHI destroys its resources in
+dependency order. Pipelines keep their own render-pass descriptor, so they
+outlive the target they were made for and draw into any compatible one.
+Validation happens before every command reaches Qt (which checks little in
+release builds and nothing about memory): pipeline creation compares vertex
+attributes, the vertex-to-fragment interface and bindings with the shaders'
+reflection data; draws compute the bytes every vertex binding will read from
+the counts and offsets; indexed draws find the largest index in a CPU copy of
+the index buffer as the GPU will see it at that point of the frame (uploads are
+queued, and reach the GPU when the next pass begins). Readback results live in
+the RHI's context until the GPU has written them, so a readback handle can be
+destroyed at any time; likewise a buffer or texture destroyed while uploads or
+readbacks queued for it wait for a frame stays alive until they are recorded,
+and anything destroyed during a frame goes once the frame is submitted. A swapchain listens for its window's surface going away
+and lets go of it first. A QRhiWidget's RHI is wrapped once per QRhi, and the
+frame Qt is recording is lent to the program for the length of the override call
+(`qtc_rhi_widget`); the wrapper and what was made with it go when Qt destroys
+that QRhi.
+
 ### Errors
 
 Every function records its outcome in a thread-local status and message
@@ -201,7 +261,9 @@ exceptions never cross into C: they are caught and reported as
 
 ### Shutdown
 
-`qtc_shutdown` destroys what qtc owns newest first, in up to four rounds: an
+`qtc_shutdown` first ends tasks and futures and stops worker threads, then
+destroys RHIs and their resources (while the windows and widgets they draw into
+exist), then destroys what qtc owns newest first, in up to four rounds: an
 object something still uses (an engine a context was made for) waits for a later
 round, and a thread that still runs is asked to quit first. Then the application
 object goes, and `qtc_init` may be called again.

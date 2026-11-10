@@ -208,6 +208,122 @@ emits `message(name, payload)` in QML. QML objects' properties, functions and
 signals are reached with the ordinary calls (`qtc_get_int(window, "clicks")`,
 `qtc_call(window, "press")`, `qtc_connect(item, "clicked", ...)`).
 
+## Subclassing Qt classes (overridable objects)
+
+```c
+enum { ROWS = 1, DATA };
+static int32_t handler(const qtc_override_call *c, void *user) {
+    if (c->tag == ROWS) { qtc_ov_ret_int(100); return QTC_OV_DONE; }
+    if (c->tag == DATA) {
+        int32_t row, col; uint64_t id;
+        if (qtc_ov_arg_index(0, &row, &col, &id) && qtc_ov_arg_int(1) == 0 /* DisplayRole */) {
+            char buf[32]; int n = snprintf(buf, sizeof buf, "row %d", row);
+            qtc_ov_ret_str(qtc_sn(buf, n));
+            return QTC_OV_DONE;
+        }
+    }
+    return QTC_OV_BASE;   /* the class's own implementation */
+}
+
+qtc_set_override_handler(handler, NULL);
+qtc_obj model = qtc_new_overridable(QTC_S("QAbstractListModel"));
+qtc_override(model, QTC_S("rowCount"), ROWS);
+qtc_override(model, QTC_S("data"), DATA);
+```
+
+`qtc_overridable_classes()` lists the classes (widgets, windows, item models and
+proxies, validators, highlighters, devices, threads, servers, animations, scenes,
+delegates, `QOpenGLWidget`, `QRhiWidget`) and `qtc_overridable_methods(class)`
+their methods. A handler reads the call with `qtc_ov_arg_*` (events, model
+indexes and device buffers included), sets the result with `qtc_ov_ret_*`, may
+run the base first with `qtc_ov_call_base`, and draws in a `paintEvent` or
+`paint()` with `qtc_draw_begin(self)` or `qtc_draw_begin_painter(arg)`. Protected
+methods a subclass uses (`beginInsertRows`, `createIndex`, ...) are callable on
+overridable objects. Languages without function pointers export the handler and
+name it with `qtc_set_override_handler_symbol`.
+
+## Classes defined at run time
+
+```c
+qtc_class_begin(QTC_S("Counter"), QTC_S("QObject"));
+qtc_class_property(QTC_S("count"), QTC_S("int"), QTC_PROP_WRITE | QTC_PROP_NOTIFY);
+qtc_class_signal(QTC_S("overflow(int)"));
+qtc_class_invokable(QTC_S("add(int)"), QTC_S("int"), TAG_ADD);   /* runs the handler */
+qtc_class_end();
+qtc_obj c = qtc_class_new(QTC_S("Counter"));
+qtc_set_int(c, QTC_S("count"), 3);              /* emits countChanged(int) */
+qtc_arg_int(7); qtc_emit(c, QTC_S("overflow"));
+```
+
+Such objects are ordinary objects to Qt and QML: a `Counter` set as a context
+property is used from QML like a C++ class.
+
+## Futures, promises and worker threads
+
+```c
+static void work(qtc_future f, void *user) {      /* on a pool thread */
+    qtc_promise_progress_range(f, 0, 100);
+    for (int i = 0; i < 100 && !qtc_promise_canceled(f); i++) {
+        qtc_promise_add_int(f, i * i);
+        qtc_promise_progress(f, i + 1, qtc_sn(NULL, 0));
+    }
+}
+qtc_future f = qtc_task_start(work, NULL, NULL);
+qtc_future_watch(f, TAG_WORK);                     /* QTC_EV_FUTURE_* events */
+if (qtc_future_wait(f, 5000) == QTC_WAIT_FINISHED) {
+    qtc_future_result(f, 99);
+    int64_t last = qtc_ret_int();
+}
+qtc_future_release(f);
+```
+
+Any thread can fill a promise (`qtc_promise_new`); `qtc_task_map` runs a
+function over a range in parallel; `qtc_move_to_thread` moves a worker object to
+a `QThread`, where `qtc_invoke_queued` and `qtc_invoke_future` call it.
+
+## Graphics
+
+```c
+qtc_rhi r = qtc_rhi_create(QTC_RHI_BACKEND_VULKAN, 0);      /* or _OPENGL, _D3D11, _METAL, _NULL */
+qtc_rhi tex = qtc_rhi_texture(r, QTC_RHI_RGBA8, 256, 256, QTC_RHI_RENDER_TARGET | QTC_RHI_READABLE);
+qtc_rhi rt = qtc_rhi_render_target(tex, true);
+qtc_rhi vbuf = qtc_rhi_buffer(r, QTC_RHI_IMMUTABLE, QTC_RHI_VERTEX_BUFFER, sizeof verts);
+qtc_rhi_upload(vbuf, 0, qtc_sn((const char *)verts, sizeof verts));
+qtc_rhi vs = qtc_rhi_shader_bake(QTC_RHI_VERTEX, QTC_S(vertex_glsl));   /* Vulkan-style GLSL 440 */
+qtc_rhi fs = qtc_rhi_shader_bake(QTC_RHI_FRAGMENT, QTC_S(fragment_glsl));
+qtc_rhi srb = qtc_rhi_bindings(r);
+qtc_rhi_bindings_create(srb);
+qtc_rhi p = qtc_rhi_pipeline(r);
+qtc_rhi_pipeline_shaders(p, vs, fs);
+qtc_rhi_pipeline_vertex_binding(p, 5 * sizeof(float), false);
+qtc_rhi_pipeline_vertex_attribute(p, 0, 0, QTC_RHI_FLOAT2, 0);
+qtc_rhi_pipeline_vertex_attribute(p, 0, 1, QTC_RHI_FLOAT3, 2 * sizeof(float));
+qtc_rhi_pipeline_create(p, srb, rt);
+
+qtc_rhi_begin_frame(r, 0);                                   /* 0: offscreen; or a swapchain */
+qtc_rhi_begin_pass(r, rt, 0xff000000, 1.0, 0);
+qtc_rhi_set_pipeline(r, p);
+qtc_rhi_set_bindings(r, srb);
+qtc_rhi_set_vertex_buffer(r, 0, vbuf, 0);
+qtc_rhi_draw(r, 3, 1, 0, 0);
+qtc_rhi_end_pass(r);
+qtc_rhi rb = qtc_rhi_read_texture(tex);
+qtc_rhi_end_frame(r);
+qtc_val image = qtc_rhi_readback_image(rb);                  /* a QImage */
+```
+
+A window draws through a swapchain (`qtc_rhi_swapchain(r, window, flags)`, then
+`qtc_rhi_begin_frame(r, swapchain)` each frame; `QTC_RHI_SKIPPED` while it is not
+shown); a `QRhiWidget` draws in its `render` override with `qtc_rhi_widget(self)`
+and `qtc_rhi_widget_target(self)`. Compute pipelines, storage buffers and images,
+instancing and indexed draws are there too. Every command is checked before the
+GPU sees it; see `qtc.h` and [LIMITS.md](LIMITS.md#graphics) for what is left out.
+Code that calls Vulkan, OpenGL, Direct3D or Metal itself gets the native objects
+(`qtc_rhi_native`, `qtc_rhi_native_object`), records native commands inside a
+pass (`qtc_rhi_begin_external`), looks up OpenGL functions (`qtc_gl_proc_address`)
+or makes its own Vulkan instance and window surfaces (`qtc_vk_*`).
+`qtc_quick_set_graphics_api` picks the API Qt Quick renders with.
+
 ## Limits on what arguments may make Qt do
 
 Arguments that would make Qt allocate more than a limit (256 MiB by default) in

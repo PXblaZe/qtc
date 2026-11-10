@@ -13,6 +13,230 @@
 QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
+#if __has_include(<QtCore/qcollator.h>)
+template <class S> static int t585(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QCollatorSortKey> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCollatorSortKey> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->compare(p0.get())); }) { qtc::rt(*r, s->compare(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if QT_CONFIG(commandlineparser) && __has_include(<QtCore/qcommandlineoption.h>)
+template <class S> static int t586(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->names()); }) { qtc::rt(*r, s->names()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t587(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QString> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->setValueName(p0.get()); }) { s->setValueName(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t588(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->valueName()); }) { qtc::rt(*r, s->valueName()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t589(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QString> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->setDescription(p0.get()); }) { s->setDescription(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t590(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->description()); }) { qtc::rt(*r, s->description()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t591(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QString> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->setDefaultValue(p0.get()); }) { s->setDefaultValue(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t592(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QList<QString>> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0) { qtc::cv(aa[0], p0, 0); s->setDefaultValues(p0.get()); }) { s->setDefaultValues(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t593(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->defaultValues()); }) { qtc::rt(*r, s->defaultValues()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t594(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->flags()); }) { qtc::rt(*r, s->flags()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t595(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QFlags<QCommandLineOption::Flag>> p0;
+    QTC_CVF(0, p0, 117);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QCommandLineOption::Flag>> &p0) { qtc::cvf(aa[0], p0, 0, 117); s->setFlags(p0.get()); }) { s->setFlags(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t596(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QString> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t597(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QList<QString>> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t598(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QString> p0;
+    qtc::H<QString> p1;
+    qtc::H<QString> p2;
+    qtc::H<QString> p3;
+    QTC_CV(0, p0);
+    QTC_CV(1, p1);
+    if (n > 2) QTC_CV(2, p2);
+    if (n > 3) QTC_CV(3, p3);
+    switch (n) {
+        case 2:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        case 3:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        case 4:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QString> &p2, qtc::H<QString> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t599(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QList<QString>> p0;
+    qtc::H<QString> p1;
+    qtc::H<QString> p2;
+    qtc::H<QString> p3;
+    QTC_CV(0, p0);
+    QTC_CV(1, p1);
+    if (n > 2) QTC_CV(2, p2);
+    if (n > 3) QTC_CV(3, p3);
+    switch (n) {
+        case 2:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QString> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        case 3:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QString> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        case 4:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QString> &p1, qtc::H<QString> &p2, qtc::H<QString> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
 #if QT_CONFIG(commandlineparser) && __has_include(<QtCore/qcommandlineparser.h>)
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
 template <class S> static int t600(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
@@ -20,15 +244,15 @@ template <class S> static int t600(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QCommandLineParser::MessageType> p0;
     qtc::H<QString> p1;
     qtc::H<int> p2;
-    QTC_CVE(0, p0, 111);
+    QTC_CVE(0, p0, 118);
     QTC_CV(1, p1);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCommandLineParser::MessageType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 111); qtc::cv(aa[1], p1, 1); S::showMessageAndExit(p0.get(), p1.get()); }) { S::showMessageAndExit(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCommandLineParser::MessageType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 118); qtc::cv(aa[1], p1, 1); S::showMessageAndExit(p0.get(), p1.get()); }) { S::showMessageAndExit(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCommandLineParser::MessageType> &p0, qtc::H<QString> &p1, qtc::H<int> &p2) { qtc::cve(aa[0], p0, 0, 111); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); S::showMessageAndExit(p0.get(), p1.get(), p2.get()); }) { S::showMessageAndExit(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCommandLineParser::MessageType> &p0, qtc::H<QString> &p1, qtc::H<int> &p2) { qtc::cve(aa[0], p0, 0, 118); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); S::showMessageAndExit(p0.get(), p1.get(), p2.get()); }) { S::showMessageAndExit(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -268,14 +492,14 @@ template <class S> static int t614(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<Qt::Orientation> p1;
     qtc::H<int> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 892);
+    QTC_CVE(1, p1, 916);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -335,7 +559,7 @@ template <class S> static int t618(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p3;
     qtc::H<QModelIndex> p4;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 858);
+    QTC_CVE(1, p1, 882);
     QTC_CV(2, p2);
     QTC_CV(3, p3);
     QTC_CV(4, p4);
@@ -343,7 +567,7 @@ template <class S> static int t618(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QConcatenateTablesProxyModel::canDropMimeData(const QMimeData*,Qt::DropAction,int,int,QModelIndex): data must not be null");
     switch (n) {
         case 5:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<const QMimeData *> &p0, qtc::H<Qt::DropAction> &p1, qtc::H<int> &p2, qtc::H<int> &p3, qtc::H<QModelIndex> &p4) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 858); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, s->canDropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->canDropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<const QMimeData *> &p0, qtc::H<Qt::DropAction> &p1, qtc::H<int> &p2, qtc::H<int> &p3, qtc::H<QModelIndex> &p4) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 882); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, s->canDropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->canDropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -359,7 +583,7 @@ template <class S> static int t619(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p3;
     qtc::H<QModelIndex> p4;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 858);
+    QTC_CVE(1, p1, 882);
     QTC_CV(2, p2);
     QTC_CV(3, p3);
     QTC_CV(4, p4);
@@ -367,7 +591,7 @@ template <class S> static int t619(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QConcatenateTablesProxyModel::dropMimeData(const QMimeData*,Qt::DropAction,int,int,QModelIndex): data must not be null");
     switch (n) {
         case 5:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<const QMimeData *> &p0, qtc::H<Qt::DropAction> &p1, qtc::H<int> &p2, qtc::H<int> &p3, qtc::H<QModelIndex> &p4) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 858); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<const QMimeData *> &p0, qtc::H<Qt::DropAction> &p1, qtc::H<int> &p2, qtc::H<int> &p3, qtc::H<QModelIndex> &p4) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 882); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -425,10 +649,10 @@ template <class S> static int t622(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t623(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QContactsPermission::AccessMode> p0;
-    QTC_CVE(0, p0, 116);
+    QTC_CVE(0, p0, 123);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QContactsPermission::AccessMode> &p0) { qtc::cve(aa[0], p0, 0, 116); s->setAccessMode(p0.get()); }) { s->setAccessMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QContactsPermission::AccessMode> &p0) { qtc::cve(aa[0], p0, 0, 123); s->setAccessMode(p0.get()); }) { s->setAccessMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -476,14 +700,14 @@ template <class S> static int t627(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<Qt::ApplicationAttribute> p0;
     qtc::H<bool> p1;
-    QTC_CVE(0, p0, 834);
+    QTC_CVE(0, p0, 858);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::ApplicationAttribute> &p0) { qtc::cve(aa[0], p0, 0, 834); S::setAttribute(p0.get()); }) { S::setAttribute(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::ApplicationAttribute> &p0) { qtc::cve(aa[0], p0, 0, 858); S::setAttribute(p0.get()); }) { S::setAttribute(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::ApplicationAttribute> &p0, qtc::H<bool> &p1) { qtc::cve(aa[0], p0, 0, 834); qtc::cv(aa[1], p1, 1); S::setAttribute(p0.get(), p1.get()); }) { S::setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::ApplicationAttribute> &p0, qtc::H<bool> &p1) { qtc::cve(aa[0], p0, 0, 858); qtc::cv(aa[1], p1, 1); S::setAttribute(p0.get(), p1.get()); }) { S::setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -493,10 +717,10 @@ template <class S> static int t627(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t628(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<Qt::ApplicationAttribute> p0;
-    QTC_CVE(0, p0, 834);
+    QTC_CVE(0, p0, 858);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::ApplicationAttribute> &p0) { qtc::cve(aa[0], p0, 0, 834); qtc::rt(*rr, S::testAttribute(p0.get())); }) { qtc::rt(*r, S::testAttribute(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::ApplicationAttribute> &p0) { qtc::cve(aa[0], p0, 0, 858); qtc::rt(*rr, S::testAttribute(p0.get())); }) { qtc::rt(*r, S::testAttribute(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -650,13 +874,13 @@ template <class S> static int t640(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t641(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> p0;
-    if (n > 0) QTC_CVF(0, p0, 167);
+    if (n > 0) QTC_CVF(0, p0, 174);
     switch (n) {
         case 0:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { S::processEvents(); }) { S::processEvents(); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 167); S::processEvents(p0.get()); }) { S::processEvents(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 174); S::processEvents(p0.get()); }) { S::processEvents(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -667,11 +891,11 @@ template <class S> static int t642(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> p0;
     qtc::H<int> p1;
-    QTC_CVF(0, p0, 167);
+    QTC_CVF(0, p0, 174);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<int> &p1) { qtc::cvf(aa[0], p0, 0, 167); qtc::cv(aa[1], p1, 1); S::processEvents(p0.get(), p1.get()); }) { S::processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<int> &p1) { qtc::cvf(aa[0], p0, 0, 174); qtc::cv(aa[1], p1, 1); S::processEvents(p0.get(), p1.get()); }) { S::processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -683,11 +907,11 @@ template <class S> static int t643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> p0;
     qtc::H<QDeadlineTimer> p1;
-    QTC_CVF(0, p0, 167);
+    QTC_CVF(0, p0, 174);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<QDeadlineTimer> &p1) { qtc::cvf(aa[0], p0, 0, 167); qtc::cv(aa[1], p1, 1); S::processEvents(p0.get(), p1.get()); }) { S::processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<QDeadlineTimer> &p1) { qtc::cvf(aa[0], p0, 0, 174); qtc::cv(aa[1], p1, 1); S::processEvents(p0.get(), p1.get()); }) { S::processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -970,10 +1194,10 @@ template <class S> static int t664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QByteArrayView> p0;
     qtc::H<QCryptographicHash::Algorithm> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 118);
+    QTC_CVE(1, p1, 125);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QByteArrayView> &p0, qtc::H<QCryptographicHash::Algorithm> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 118); qtc::rt(*rr, S::hash(p0.get(), p1.get())); }) { qtc::rt(*r, S::hash(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QByteArrayView> &p0, qtc::H<QCryptographicHash::Algorithm> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 125); qtc::rt(*rr, S::hash(p0.get(), p1.get())); }) { qtc::rt(*r, S::hash(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -983,10 +1207,10 @@ template <class S> static int t664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QCryptographicHash::Algorithm> p0;
-    QTC_CVE(0, p0, 118);
+    QTC_CVE(0, p0, 125);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCryptographicHash::Algorithm> &p0) { qtc::cve(aa[0], p0, 0, 118); qtc::rt(*rr, S::hashLength(p0.get())); }) { qtc::rt(*r, S::hashLength(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCryptographicHash::Algorithm> &p0) { qtc::cve(aa[0], p0, 0, 125); qtc::rt(*rr, S::hashLength(p0.get())); }) { qtc::rt(*r, S::hashLength(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -997,10 +1221,10 @@ template <class S> static int t665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QCryptographicHash::Algorithm> p0;
-    QTC_CVE(0, p0, 118);
+    QTC_CVE(0, p0, 125);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCryptographicHash::Algorithm> &p0) { qtc::cve(aa[0], p0, 0, 118); qtc::rt(*rr, S::supportsAlgorithm(p0.get())); }) { qtc::rt(*r, S::supportsAlgorithm(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCryptographicHash::Algorithm> &p0) { qtc::cve(aa[0], p0, 0, 125); qtc::rt(*rr, S::supportsAlgorithm(p0.get())); }) { qtc::rt(*r, S::supportsAlgorithm(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1237,14 +1461,14 @@ template <class S> static int t684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<Qt::TimeSpec> p0;
     qtc::H<int> p1;
-    QTC_CVE(0, p0, 912);
+    QTC_CVE(0, p0, 936);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 912); qtc::rt(*rr, s->startOfDay(p0.get())); }) { qtc::rt(*r, s->startOfDay(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 936); qtc::rt(*rr, s->startOfDay(p0.get())); }) { qtc::rt(*r, s->startOfDay(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0, qtc::H<int> &p1) { qtc::cve(aa[0], p0, 0, 912); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->startOfDay(p0.get(), p1.get())); }) { qtc::rt(*r, s->startOfDay(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0, qtc::H<int> &p1) { qtc::cve(aa[0], p0, 0, 936); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->startOfDay(p0.get(), p1.get())); }) { qtc::rt(*r, s->startOfDay(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1256,14 +1480,14 @@ template <class S> static int t685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<Qt::TimeSpec> p0;
     qtc::H<int> p1;
-    QTC_CVE(0, p0, 912);
+    QTC_CVE(0, p0, 936);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 912); qtc::rt(*rr, s->endOfDay(p0.get())); }) { qtc::rt(*r, s->endOfDay(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 936); qtc::rt(*rr, s->endOfDay(p0.get())); }) { qtc::rt(*r, s->endOfDay(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0, qtc::H<int> &p1) { qtc::cve(aa[0], p0, 0, 912); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->endOfDay(p0.get(), p1.get())); }) { qtc::rt(*r, s->endOfDay(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0, qtc::H<int> &p1) { qtc::cve(aa[0], p0, 0, 936); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->endOfDay(p0.get(), p1.get())); }) { qtc::rt(*r, s->endOfDay(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1330,13 +1554,13 @@ template <class S> static int t689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<Qt::DateFormat> p0;
-    if (n > 0) QTC_CVE(0, p0, 854);
+    if (n > 0) QTC_CVE(0, p0, 878);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toString()); }) { qtc::rt(*r, s->toString()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::DateFormat> &p0) { qtc::cve(aa[0], p0, 0, 854); qtc::rt(*rr, s->toString(p0.get())); }) { qtc::rt(*r, s->toString(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::DateFormat> &p0) { qtc::cve(aa[0], p0, 0, 878); qtc::rt(*rr, s->toString(p0.get())); }) { qtc::rt(*r, s->toString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1568,13 +1792,13 @@ template <class S> static int t705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QStringView> p0;
     qtc::H<Qt::DateFormat> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 854);
+    if (n > 1) QTC_CVE(1, p1, 878);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::fromString(p0.get())); }) { qtc::rt(*r, S::fromString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 854); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 878); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1586,13 +1810,13 @@ template <class S> static int t706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QString> p0;
     qtc::H<Qt::DateFormat> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 854);
+    if (n > 1) QTC_CVE(1, p1, 878);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::fromString(p0.get())); }) { qtc::rt(*r, S::fromString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 854); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 878); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2035,13 +2259,13 @@ template <class S> static int t735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QDate> p0;
     qtc::H<QDateTime::TransitionResolution> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 137);
+    if (n > 1) QTC_CVE(1, p1, 144);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0) { qtc::cv(aa[0], p0, 0); s->setDate(p0.get()); }) { s->setDate(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QDateTime::TransitionResolution> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 137); s->setDate(p0.get(), p1.get()); }) { s->setDate(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QDateTime::TransitionResolution> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 144); s->setDate(p0.get(), p1.get()); }) { s->setDate(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2056,13 +2280,13 @@ template <class S> static int t736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QTime> p0;
     qtc::H<QDateTime::TransitionResolution> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 137);
+    if (n > 1) QTC_CVE(1, p1, 144);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QTime> &p0) { qtc::cv(aa[0], p0, 0); s->setTime(p0.get()); }) { s->setTime(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QTime> &p0, qtc::H<QDateTime::TransitionResolution> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 137); s->setTime(p0.get(), p1.get()); }) { s->setTime(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QTime> &p0, qtc::H<QDateTime::TransitionResolution> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 144); s->setTime(p0.get(), p1.get()); }) { s->setTime(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2074,10 +2298,10 @@ template <class S> static int t736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<Qt::TimeSpec> p0;
-    QTC_CVE(0, p0, 912);
+    QTC_CVE(0, p0, 936);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 912); s->setTimeSpec(p0.get()); }) { s->setTimeSpec(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 936); s->setTimeSpec(p0.get()); }) { s->setTimeSpec(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2105,13 +2329,13 @@ template <class S> static int t739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QTimeZone> p0;
     qtc::H<QDateTime::TransitionResolution> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 137);
+    if (n > 1) QTC_CVE(1, p1, 144);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QTimeZone> &p0) { qtc::cv(aa[0], p0, 0); s->setTimeZone(p0.get()); }) { s->setTimeZone(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QTimeZone> &p0, qtc::H<QDateTime::TransitionResolution> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 137); s->setTimeZone(p0.get(), p1.get()); }) { s->setTimeZone(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QTimeZone> &p0, qtc::H<QDateTime::TransitionResolution> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 144); s->setTimeZone(p0.get(), p1.get()); }) { s->setTimeZone(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2151,13 +2375,13 @@ template <class S> static int t741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<Qt::DateFormat> p0;
-    if (n > 0) QTC_CVE(0, p0, 854);
+    if (n > 0) QTC_CVE(0, p0, 878);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toString()); }) { qtc::rt(*r, s->toString()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::DateFormat> &p0) { qtc::cve(aa[0], p0, 0, 854); qtc::rt(*rr, s->toString(p0.get())); }) { qtc::rt(*r, s->toString(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::DateFormat> &p0) { qtc::cve(aa[0], p0, 0, 878); qtc::rt(*rr, s->toString(p0.get())); }) { qtc::rt(*r, s->toString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2302,10 +2526,10 @@ template <class S> static int t751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<Qt::TimeSpec> p0;
-    QTC_CVE(0, p0, 912);
+    QTC_CVE(0, p0, 936);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 912); qtc::rt(*rr, s->toTimeSpec(p0.get())); }) { qtc::rt(*r, s->toTimeSpec(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimeSpec> &p0) { qtc::cve(aa[0], p0, 0, 936); qtc::rt(*rr, s->toTimeSpec(p0.get())); }) { qtc::rt(*r, s->toTimeSpec(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2449,13 +2673,13 @@ template <class S> static int t763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QStringView> p0;
     qtc::H<Qt::DateFormat> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 854);
+    if (n > 1) QTC_CVE(1, p1, 878);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::fromString(p0.get())); }) { qtc::rt(*r, S::fromString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 854); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 878); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2467,13 +2691,13 @@ template <class S> static int t764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QString> p0;
     qtc::H<Qt::DateFormat> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 854);
+    if (n > 1) QTC_CVE(1, p1, 878);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::fromString(p0.get())); }) { qtc::rt(*r, S::fromString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 854); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<Qt::DateFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 878); qtc::rt(*rr, S::fromString(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromString(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2666,14 +2890,14 @@ template <class S> static int t774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<Qt::TimeSpec> p1;
     qtc::H<int> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 912);
+    QTC_CVE(1, p1, 936);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 912); qtc::rt(*rr, S::fromMSecsSinceEpoch(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromMSecsSinceEpoch(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 936); qtc::rt(*rr, S::fromMSecsSinceEpoch(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromMSecsSinceEpoch(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 912); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S::fromMSecsSinceEpoch(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::fromMSecsSinceEpoch(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 936); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S::fromMSecsSinceEpoch(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::fromMSecsSinceEpoch(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2686,14 +2910,14 @@ template <class S> static int t775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<Qt::TimeSpec> p1;
     qtc::H<int> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 912);
+    QTC_CVE(1, p1, 936);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 912); qtc::rt(*rr, S::fromSecsSinceEpoch(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromSecsSinceEpoch(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 936); qtc::rt(*rr, S::fromSecsSinceEpoch(p0.get(), p1.get())); }) { qtc::rt(*r, S::fromSecsSinceEpoch(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 912); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S::fromSecsSinceEpoch(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::fromSecsSinceEpoch(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimeSpec> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 936); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S::fromSecsSinceEpoch(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S::fromSecsSinceEpoch(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2801,14 +3025,14 @@ template <class S> static int t783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p3;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    QTC_CVE(2, p2, 912);
+    QTC_CVE(2, p2, 936);
     if (n > 3) QTC_CV(3, p3);
     switch (n) {
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<Qt::TimeSpec> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 912); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<Qt::TimeSpec> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 936); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<Qt::TimeSpec> &p2, qtc::H<int> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 912); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<Qt::TimeSpec> &p2, qtc::H<int> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 936); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2825,13 +3049,13 @@ template <class S> static int t784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     QTC_CV(1, p1);
     QTC_CV(2, p2);
-    if (n > 3) QTC_CVE(3, p3, 137);
+    if (n > 3) QTC_CVE(3, p3, 144);
     switch (n) {
         case 3:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<QTimeZone> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<QTimeZone> &p2, qtc::H<QDateTime::TransitionResolution> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 137); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<QTimeZone> &p2, qtc::H<QDateTime::TransitionResolution> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cve(aa[3], p3, 3, 144); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2847,13 +3071,13 @@ template <class S> static int t785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QDateTime::TransitionResolution> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 137);
+    if (n > 2) QTC_CVE(2, p2, 144);
     switch (n) {
         case 2:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<QDateTime::TransitionResolution> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 137); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDate> &p0, qtc::H<QTime> &p1, qtc::H<QDateTime::TransitionResolution> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 144); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2902,10 +3126,10 @@ template <class S> static int t788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<Qt::TimerType> p0;
-    QTC_CVE(0, p0, 914);
+    QTC_CVE(0, p0, 938);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimerType> &p0) { qtc::cve(aa[0], p0, 0, 914); s->setTimerType(p0.get()); }) { s->setTimerType(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimerType> &p0) { qtc::cve(aa[0], p0, 0, 938); s->setTimerType(p0.get()); }) { s->setTimerType(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2942,13 +3166,13 @@ template <class S> static int t792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<long long> p0;
     qtc::H<Qt::TimerType> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 914);
+    if (n > 1) QTC_CVE(1, p1, 938);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setRemainingTime(p0.get()); }) { s->setRemainingTime(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 914); s->setRemainingTime(p0.get(), p1.get()); }) { s->setRemainingTime(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 938); s->setRemainingTime(p0.get(), p1.get()); }) { s->setRemainingTime(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2963,7 +3187,7 @@ template <class S> static int t793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<Qt::TimerType> p2;
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 914);
+    if (n > 2) QTC_CVE(2, p2, 938);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setPreciseRemainingTime(p0.get()); }) { s->setPreciseRemainingTime(p0.get()); r->set_none(); return 0; }
@@ -2972,7 +3196,7 @@ template <class S> static int t793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->setPreciseRemainingTime(p0.get(), p1.get()); }) { s->setPreciseRemainingTime(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1, qtc::H<Qt::TimerType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 914); s->setPreciseRemainingTime(p0.get(), p1.get(), p2.get()); }) { s->setPreciseRemainingTime(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1, qtc::H<Qt::TimerType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 938); s->setPreciseRemainingTime(p0.get(), p1.get(), p2.get()); }) { s->setPreciseRemainingTime(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3009,13 +3233,13 @@ template <class S> static int t796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<long long> p0;
     qtc::H<Qt::TimerType> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 914);
+    if (n > 1) QTC_CVE(1, p1, 938);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setDeadline(p0.get()); }) { s->setDeadline(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 914); s->setDeadline(p0.get(), p1.get()); }) { s->setDeadline(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 938); s->setDeadline(p0.get(), p1.get()); }) { s->setDeadline(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3030,7 +3254,7 @@ template <class S> static int t797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<Qt::TimerType> p2;
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 914);
+    if (n > 2) QTC_CVE(2, p2, 938);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setPreciseDeadline(p0.get()); }) { s->setPreciseDeadline(p0.get()); r->set_none(); return 0; }
@@ -3039,7 +3263,7 @@ template <class S> static int t797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->setPreciseDeadline(p0.get(), p1.get()); }) { s->setPreciseDeadline(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1, qtc::H<Qt::TimerType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 914); s->setPreciseDeadline(p0.get(), p1.get(), p2.get()); }) { s->setPreciseDeadline(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1, qtc::H<Qt::TimerType> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 938); s->setPreciseDeadline(p0.get(), p1.get(), p2.get()); }) { s->setPreciseDeadline(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3065,13 +3289,13 @@ template <class S> static int t798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<Qt::TimerType> p0;
-    if (n > 0) QTC_CVE(0, p0, 914);
+    if (n > 0) QTC_CVE(0, p0, 938);
     switch (n) {
         case 0:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S::current()); }) { qtc::rt(*r, S::current()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimerType> &p0) { qtc::cve(aa[0], p0, 0, 914); qtc::rt(*rr, S::current(p0.get())); }) { qtc::rt(*r, S::current(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimerType> &p0) { qtc::cve(aa[0], p0, 0, 938); qtc::rt(*rr, S::current(p0.get())); }) { qtc::rt(*r, S::current(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3094,10 +3318,10 @@ template <class S> static int t800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<Qt::TimerType> p0;
-    QTC_CVE(0, p0, 914);
+    QTC_CVE(0, p0, 938);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimerType> &p0) { qtc::cve(aa[0], p0, 0, 914); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::TimerType> &p0) { qtc::cve(aa[0], p0, 0, 938); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3108,14 +3332,14 @@ template <class S> static int t802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDeadlineTimer::ForeverConstant> p0;
     qtc::H<Qt::TimerType> p1;
-    QTC_CVE(0, p0, 140);
-    if (n > 1) QTC_CVE(1, p1, 914);
+    QTC_CVE(0, p0, 147);
+    if (n > 1) QTC_CVE(1, p1, 938);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDeadlineTimer::ForeverConstant> &p0) { qtc::cve(aa[0], p0, 0, 140); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDeadlineTimer::ForeverConstant> &p0) { qtc::cve(aa[0], p0, 0, 147); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDeadlineTimer::ForeverConstant> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cve(aa[0], p0, 0, 140); qtc::cve(aa[1], p1, 1, 914); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDeadlineTimer::ForeverConstant> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cve(aa[0], p0, 0, 147); qtc::cve(aa[1], p1, 1, 938); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3127,13 +3351,13 @@ template <class S> static int t803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<long long> p0;
     qtc::H<Qt::TimerType> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 914);
+    if (n > 1) QTC_CVE(1, p1, 938);
     switch (n) {
         case 1:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 914); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<Qt::TimerType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 938); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3382,10 +3606,10 @@ template <class S> static int t821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QDir::Filter>> p0;
-    QTC_CVF(0, p0, 146);
+    QTC_CVF(0, p0, 153);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 146); s->setFilter(p0.get()); }) { s->setFilter(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 153); s->setFilter(p0.get()); }) { s->setFilter(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3408,10 +3632,10 @@ template <class S> static int t823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QDir::SortFlag>> p0;
-    QTC_CVF(0, p0, 147);
+    QTC_CVF(0, p0, 154);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::SortFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 147); s->setSorting(p0.get()); }) { s->setSorting(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::SortFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 154); s->setSorting(p0.get()); }) { s->setSorting(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3436,13 +3660,13 @@ template <class S> static int t825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QDir::Filter>> p0;
-    if (n > 0) QTC_CVF(0, p0, 146);
+    if (n > 0) QTC_CVF(0, p0, 153);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isEmpty()); }) { qtc::rt(*r, s->isEmpty()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 146); qtc::rt(*rr, s->isEmpty(p0.get())); }) { qtc::rt(*r, s->isEmpty(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 153); qtc::rt(*rr, s->isEmpty(p0.get())); }) { qtc::rt(*r, s->isEmpty(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3467,17 +3691,17 @@ template <class S> static int t828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QDir::Filter>> p0;
     qtc::H<QFlags<QDir::SortFlag>> p1;
-    if (n > 0) QTC_CVF(0, p0, 146);
-    if (n > 1) QTC_CVF(1, p1, 147);
+    if (n > 0) QTC_CVF(0, p0, 153);
+    if (n > 1) QTC_CVF(1, p1, 154);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->entryList()); }) { qtc::rt(*r, s->entryList()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 146); qtc::rt(*rr, s->entryList(p0.get())); }) { qtc::rt(*r, s->entryList(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 153); qtc::rt(*rr, s->entryList(p0.get())); }) { qtc::rt(*r, s->entryList(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0, qtc::H<QFlags<QDir::SortFlag>> &p1) { qtc::cvf(aa[0], p0, 0, 146); qtc::cvf(aa[1], p1, 1, 147); qtc::rt(*rr, s->entryList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryList(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0, qtc::H<QFlags<QDir::SortFlag>> &p1) { qtc::cvf(aa[0], p0, 0, 153); qtc::cvf(aa[1], p1, 1, 154); qtc::rt(*rr, s->entryList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryList(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3491,17 +3715,17 @@ template <class S> static int t829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QFlags<QDir::Filter>> p1;
     qtc::H<QFlags<QDir::SortFlag>> p2;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 146);
-    if (n > 2) QTC_CVF(2, p2, 147);
+    if (n > 1) QTC_CVF(1, p1, 153);
+    if (n > 2) QTC_CVF(2, p2, 154);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->entryList(p0.get())); }) { qtc::rt(*r, s->entryList(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 146); qtc::rt(*rr, s->entryList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryList(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 153); qtc::rt(*rr, s->entryList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryList(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 146); qtc::cvf(aa[2], p2, 2, 147); qtc::rt(*rr, s->entryList(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->entryList(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 153); qtc::cvf(aa[2], p2, 2, 154); qtc::rt(*rr, s->entryList(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->entryList(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3513,17 +3737,17 @@ template <class S> static int t830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QDir::Filter>> p0;
     qtc::H<QFlags<QDir::SortFlag>> p1;
-    if (n > 0) QTC_CVF(0, p0, 146);
-    if (n > 1) QTC_CVF(1, p1, 147);
+    if (n > 0) QTC_CVF(0, p0, 153);
+    if (n > 1) QTC_CVF(1, p1, 154);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->entryInfoList()); }) { qtc::rt(*r, s->entryInfoList()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 146); qtc::rt(*rr, s->entryInfoList(p0.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0) { qtc::cvf(aa[0], p0, 0, 153); qtc::rt(*rr, s->entryInfoList(p0.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0, qtc::H<QFlags<QDir::SortFlag>> &p1) { qtc::cvf(aa[0], p0, 0, 146); qtc::cvf(aa[1], p1, 1, 147); qtc::rt(*rr, s->entryInfoList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDir::Filter>> &p0, qtc::H<QFlags<QDir::SortFlag>> &p1) { qtc::cvf(aa[0], p0, 0, 153); qtc::cvf(aa[1], p1, 1, 154); qtc::rt(*rr, s->entryInfoList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3537,17 +3761,17 @@ template <class S> static int t831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QFlags<QDir::Filter>> p1;
     qtc::H<QFlags<QDir::SortFlag>> p2;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVF(1, p1, 146);
-    if (n > 2) QTC_CVF(2, p2, 147);
+    if (n > 1) QTC_CVF(1, p1, 153);
+    if (n > 2) QTC_CVF(2, p2, 154);
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->entryInfoList(p0.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 146); qtc::rt(*rr, s->entryInfoList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 153); qtc::rt(*rr, s->entryInfoList(p0.get(), p1.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 146); qtc::cvf(aa[2], p2, 2, 147); qtc::rt(*rr, s->entryInfoList(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QList<QString>> &p0, qtc::H<QFlags<QDir::Filter>> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 153); qtc::cvf(aa[2], p2, 2, 154); qtc::rt(*rr, s->entryInfoList(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->entryInfoList(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3982,17 +4206,17 @@ template <class S> static int t865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QFlags<QDir::Filter>> p3;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 147);
-    if (n > 3) QTC_CVF(3, p3, 146);
+    if (n > 2) QTC_CVF(2, p2, 154);
+    if (n > 3) QTC_CVF(3, p3, 153);
     switch (n) {
         case 2:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 147); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 154); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2, qtc::H<QFlags<QDir::Filter>> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 147); qtc::cvf(aa[3], p3, 3, 146); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QFlags<QDir::SortFlag>> &p2, qtc::H<QFlags<QDir::Filter>> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 154); qtc::cvf(aa[3], p3, 3, 153); qtc::rt(*rr, S(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4144,10 +4368,10 @@ template <class S> static int t875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QEasingCurve::Type> p0;
-    QTC_CVE(0, p0, 164);
+    QTC_CVE(0, p0, 171);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QEasingCurve::Type> &p0) { qtc::cve(aa[0], p0, 0, 164); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QEasingCurve::Type> &p0) { qtc::cve(aa[0], p0, 0, 171); s->setType(p0.get()); }) { s->setType(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4189,13 +4413,13 @@ template <class S> static int t878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QEasingCurve::Type> p0;
-    if (n > 0) QTC_CVE(0, p0, 164);
+    if (n > 0) QTC_CVE(0, p0, 171);
     switch (n) {
         case 0:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QEasingCurve::Type> &p0) { qtc::cve(aa[0], p0, 0, 164); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QEasingCurve::Type> &p0) { qtc::cve(aa[0], p0, 0, 171); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4368,13 +4592,13 @@ template <class S> static int t892(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t893(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> p0;
-    if (n > 0) QTC_CVF(0, p0, 167);
+    if (n > 0) QTC_CVF(0, p0, 174);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->processEvents()); }) { qtc::rt(*r, s->processEvents()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 167); qtc::rt(*rr, s->processEvents(p0.get())); }) { qtc::rt(*r, s->processEvents(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 174); qtc::rt(*rr, s->processEvents(p0.get())); }) { qtc::rt(*r, s->processEvents(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4386,11 +4610,11 @@ template <class S> static int t894(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> p0;
     qtc::H<int> p1;
-    QTC_CVF(0, p0, 167);
+    QTC_CVF(0, p0, 174);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<int> &p1) { qtc::cvf(aa[0], p0, 0, 167); qtc::cv(aa[1], p1, 1); s->processEvents(p0.get(), p1.get()); }) { s->processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<int> &p1) { qtc::cvf(aa[0], p0, 0, 174); qtc::cv(aa[1], p1, 1); s->processEvents(p0.get(), p1.get()); }) { s->processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4403,11 +4627,11 @@ template <class S> static int t895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> p0;
     qtc::H<QDeadlineTimer> p1;
-    QTC_CVF(0, p0, 167);
+    QTC_CVF(0, p0, 174);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<QDeadlineTimer> &p1) { qtc::cvf(aa[0], p0, 0, 167); qtc::cv(aa[1], p1, 1); s->processEvents(p0.get(), p1.get()); }) { s->processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0, qtc::H<QDeadlineTimer> &p1) { qtc::cvf(aa[0], p0, 0, 174); qtc::cv(aa[1], p1, 1); s->processEvents(p0.get(), p1.get()); }) { s->processEvents(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4419,13 +4643,13 @@ template <class S> static int t895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t896(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> p0;
-    if (n > 0) QTC_CVF(0, p0, 167);
+    if (n > 0) QTC_CVF(0, p0, 174);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->exec()); }) { qtc::rt(*r, s->exec()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 167); qtc::rt(*rr, s->exec(p0.get())); }) { qtc::rt(*r, s->exec(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QEventLoop::ProcessEventsFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 174); qtc::rt(*rr, s->exec(p0.get())); }) { qtc::rt(*r, s->exec(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4776,11 +5000,11 @@ template <class S> static int t921(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t922(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p0;
-    QTC_CVF(0, p0, 244);
+    QTC_CVF(0, p0, 254);
     if (!(qtc::nmea_open_ok(s, int((p0.get()))))) return qtc::pre_fail(QTC_ERR_STATE, "QFile::open(OpenMode): an NMEA source reads this device: open it for reading");
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 244); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 254); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4792,11 +5016,11 @@ template <class S> static int t923(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p0;
     qtc::H<QFlags<QFileDevice::Permission>> p1;
-    QTC_CVF(0, p0, 244);
-    QTC_CVF(1, p1, 173);
+    QTC_CVF(0, p0, 254);
+    QTC_CVF(1, p1, 180);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0, qtc::H<QFlags<QFileDevice::Permission>> &p1) { qtc::cvf(aa[0], p0, 0, 244); qtc::cvf(aa[1], p1, 1, 173); qtc::rt(*rr, s->open(p0.get(), p1.get())); }) { qtc::rt(*r, s->open(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0, qtc::H<QFlags<QFileDevice::Permission>> &p1) { qtc::cvf(aa[0], p0, 0, 254); qtc::cvf(aa[1], p1, 1, 180); qtc::rt(*rr, s->open(p0.get(), p1.get())); }) { qtc::rt(*r, s->open(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4810,15 +5034,15 @@ template <class S> static int t924(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p1;
     qtc::H<QFlags<QFileDevice::FileHandleFlag>> p2;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 244);
-    if (n > 2) QTC_CVF(2, p2, 170);
+    QTC_CVF(1, p1, 254);
+    if (n > 2) QTC_CVF(2, p2, 177);
     if (!(qtc::fd_open((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QFile::open(int,OpenMode,FileHandleFlags): the descriptor is not open");
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 244); qtc::rt(*rr, s->open(p0.get(), p1.get())); }) { qtc::rt(*r, s->open(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 254); qtc::rt(*rr, s->open(p0.get(), p1.get())); }) { qtc::rt(*r, s->open(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p1, qtc::H<QFlags<QFileDevice::FileHandleFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 244); qtc::cvf(aa[2], p2, 2, 170); qtc::rt(*rr, s->open(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->open(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p1, qtc::H<QFlags<QFileDevice::FileHandleFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 254); qtc::cvf(aa[2], p2, 2, 177); qtc::rt(*rr, s->open(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->open(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4895,10 +5119,10 @@ template <class S> static int t929(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t930(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QFileDevice::Permission>> p0;
-    QTC_CVF(0, p0, 173);
+    QTC_CVF(0, p0, 180);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QFileDevice::Permission>> &p0) { qtc::cvf(aa[0], p0, 0, 173); qtc::rt(*rr, s->setPermissions(p0.get())); }) { qtc::rt(*r, s->setPermissions(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QFileDevice::Permission>> &p0) { qtc::cvf(aa[0], p0, 0, 180); qtc::rt(*rr, s->setPermissions(p0.get())); }) { qtc::rt(*r, s->setPermissions(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4911,10 +5135,10 @@ template <class S> static int t931(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QString> p0;
     qtc::H<QFlags<QFileDevice::Permission>> p1;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 173);
+    QTC_CVF(1, p1, 180);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QFlags<QFileDevice::Permission>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 173); qtc::rt(*rr, S::setPermissions(p0.get(), p1.get())); }) { qtc::rt(*r, S::setPermissions(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QFlags<QFileDevice::Permission>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 180); qtc::rt(*rr, S::setPermissions(p0.get(), p1.get())); }) { qtc::rt(*r, S::setPermissions(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5138,10 +5362,10 @@ template <class S> static int t948(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t949(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QFileDevice::Permission>> p0;
-    QTC_CVF(0, p0, 173);
+    QTC_CVF(0, p0, 180);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QFileDevice::Permission>> &p0) { qtc::cvf(aa[0], p0, 0, 173); qtc::rt(*rr, s->setPermissions(p0.get())); }) { qtc::rt(*r, s->setPermissions(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QFileDevice::Permission>> &p0) { qtc::cvf(aa[0], p0, 0, 180); qtc::rt(*rr, s->setPermissions(p0.get())); }) { qtc::rt(*r, s->setPermissions(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5152,10 +5376,10 @@ template <class S> static int t949(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t950(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFileDevice::FileTime> p0;
-    QTC_CVE(0, p0, 171);
+    QTC_CVE(0, p0, 178);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFileDevice::FileTime> &p0) { qtc::cve(aa[0], p0, 0, 171); qtc::rt(*rr, s->fileTime(p0.get())); }) { qtc::rt(*r, s->fileTime(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFileDevice::FileTime> &p0) { qtc::cve(aa[0], p0, 0, 178); qtc::rt(*rr, s->fileTime(p0.get())); }) { qtc::rt(*r, s->fileTime(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5168,10 +5392,10 @@ template <class S> static int t951(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QDateTime> p0;
     qtc::H<QFileDevice::FileTime> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 171);
+    QTC_CVE(1, p1, 178);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDateTime> &p0, qtc::H<QFileDevice::FileTime> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 171); qtc::rt(*rr, s->setFileTime(p0.get(), p1.get())); }) { qtc::rt(*r, s->setFileTime(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDateTime> &p0, qtc::H<QFileDevice::FileTime> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 178); qtc::rt(*rr, s->setFileTime(p0.get(), p1.get())); }) { qtc::rt(*r, s->setFileTime(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5723,10 +5947,10 @@ template <class S> static int t995(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t996(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFlags<QFileDevice::Permission>> p0;
-    QTC_CVF(0, p0, 173);
+    QTC_CVF(0, p0, 180);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QFileDevice::Permission>> &p0) { qtc::cvf(aa[0], p0, 0, 173); qtc::rt(*rr, s->permission(p0.get())); }) { qtc::rt(*r, s->permission(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QFileDevice::Permission>> &p0) { qtc::cvf(aa[0], p0, 0, 180); qtc::rt(*rr, s->permission(p0.get())); }) { qtc::rt(*r, s->permission(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5809,10 +6033,10 @@ template <class S> static int t1002(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t1003(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFileDevice::FileTime> p0;
-    QTC_CVE(0, p0, 171);
+    QTC_CVE(0, p0, 178);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFileDevice::FileTime> &p0) { qtc::cve(aa[0], p0, 0, 171); qtc::rt(*rr, s->fileTime(p0.get())); }) { qtc::rt(*r, s->fileTime(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFileDevice::FileTime> &p0) { qtc::cve(aa[0], p0, 0, 178); qtc::rt(*rr, s->fileTime(p0.get())); }) { qtc::rt(*r, s->fileTime(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5889,11 +6113,11 @@ template <class S> static int t1008(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QFileDevice::FileTime> p0;
     qtc::H<QTimeZone> p1;
-    QTC_CVE(0, p0, 171);
+    QTC_CVE(0, p0, 178);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFileDevice::FileTime> &p0, qtc::H<QTimeZone> &p1) { qtc::cve(aa[0], p0, 0, 171); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->fileTime(p0.get(), p1.get())); }) { qtc::rt(*r, s->fileTime(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFileDevice::FileTime> &p0, qtc::H<QTimeZone> &p1) { qtc::cve(aa[0], p0, 0, 178); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->fileTime(p0.get(), p1.get())); }) { qtc::rt(*r, s->fileTime(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -6468,11 +6692,11 @@ template <class S> static int t1050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t1051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p0;
-    QTC_CVF(0, p0, 244);
+    QTC_CVF(0, p0, 254);
     if (!(qtc::nmea_open_ok(s, int((p0.get()))))) return qtc::pre_fail(QTC_ERR_STATE, "QIODevice::open(QIODeviceBase::OpenMode): an NMEA source reads this device: open it for reading");
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 244); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 254); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7016,14 +7240,14 @@ template <class S> static int t1090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<Qt::Orientation> p1;
     qtc::H<int> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 892);
+    QTC_CVE(1, p1, 916);
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::rt(*rr, s->headerData(p0.get(), p1.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 892); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<Qt::Orientation> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 916); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->headerData(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->headerData(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7039,7 +7263,7 @@ template <class S> static int t1091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p3;
     qtc::H<QModelIndex> p4;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 858);
+    QTC_CVE(1, p1, 882);
     QTC_CV(2, p2);
     QTC_CV(3, p3);
     QTC_CV(4, p4);
@@ -7047,7 +7271,7 @@ template <class S> static int t1091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QIdentityProxyModel::dropMimeData(const QMimeData*,Qt::DropAction,int,int,QModelIndex): data must not be null");
     switch (n) {
         case 5:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<const QMimeData *> &p0, qtc::H<Qt::DropAction> &p1, qtc::H<int> &p2, qtc::H<int> &p3, qtc::H<QModelIndex> &p4) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 858); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<const QMimeData *> &p0, qtc::H<Qt::DropAction> &p1, qtc::H<int> &p2, qtc::H<int> &p3, qtc::H<QModelIndex> &p4) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 882); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cv(aa[4], p4, 4); qtc::rt(*rr, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->dropMimeData(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7113,7 +7337,7 @@ template <class S> static int t1095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(1, p1);
     QTC_CV(2, p2);
     if (n > 3) QTC_CV(3, p3);
-    if (n > 4) QTC_CVF(4, p4, 884);
+    if (n > 4) QTC_CVF(4, p4, 908);
     if (!(qtc::index_of(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QIdentityProxyModel::match(QModelIndex,int,QVariant,int,Qt::MatchFlags): the index belongs to another model");
     switch (n) {
         case 3:
@@ -7123,7 +7347,7 @@ template <class S> static int t1095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QModelIndex> &p0, qtc::H<int> &p1, qtc::H<QVariant> &p2, qtc::H<int> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::rt(*rr, s->match(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, s->match(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 5:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QModelIndex> &p0, qtc::H<int> &p1, qtc::H<QVariant> &p2, qtc::H<int> &p3, qtc::H<QFlags<Qt::MatchFlag>> &p4) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cvf(aa[4], p4, 4, 884); qtc::rt(*rr, s->match(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->match(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QModelIndex> &p0, qtc::H<int> &p1, qtc::H<QVariant> &p2, qtc::H<int> &p3, qtc::H<QFlags<Qt::MatchFlag>> &p4) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cv(aa[3], p3, 3); qtc::cvf(aa[4], p4, 4, 908); qtc::rt(*rr, s->match(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); }) { qtc::rt(*r, s->match(p0.get(), p1.get(), p2.get(), p3.get(), p4.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7401,10 +7625,10 @@ template <class S> static int t1110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QItemSelection> p0;
     qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> p1;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 271);
+    QTC_CVF(1, p1, 281);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QItemSelection> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 271); s->merge(p0.get(), p1.get()); }) { s->merge(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QItemSelection> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 281); s->merge(p0.get(), p1.get()); }) { s->merge(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7650,11 +7874,11 @@ template <class S> static int t1126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QModelIndex> p0;
     qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> p1;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 271);
+    QTC_CVF(1, p1, 281);
     if (!(qtc::index_of(s->model(), (p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QItemSelectionModel::setCurrentIndex(QModelIndex,QItemSelectionModel::SelectionFlags): the index belongs to another model");
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QModelIndex> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 271); s->setCurrentIndex(p0.get(), p1.get()); }) { s->setCurrentIndex(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QModelIndex> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 281); s->setCurrentIndex(p0.get(), p1.get()); }) { s->setCurrentIndex(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7667,11 +7891,11 @@ template <class S> static int t1127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QModelIndex> p0;
     qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> p1;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 271);
+    QTC_CVF(1, p1, 281);
     if (!(qtc::index_of(s->model(), (p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QItemSelectionModel::select(QModelIndex,QItemSelectionModel::SelectionFlags): the index belongs to another model");
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QModelIndex> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 271); s->select(p0.get(), p1.get()); }) { s->select(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QModelIndex> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 281); s->select(p0.get(), p1.get()); }) { s->select(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7684,10 +7908,10 @@ template <class S> static int t1128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QItemSelection> p0;
     qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> p1;
     QTC_CV(0, p0);
-    QTC_CVF(1, p1, 271);
+    QTC_CVF(1, p1, 281);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QItemSelection> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 271); s->select(p0.get(), p1.get()); }) { s->select(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QItemSelection> &p0, qtc::H<QFlags<QItemSelectionModel::SelectionFlag>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 281); s->select(p0.get(), p1.get()); }) { s->select(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8477,13 +8701,13 @@ template <class S> static int t1186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 template <class S> static int t1187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QJsonDocument::JsonFormat> p0;
-    if (n > 0) QTC_CVE(0, p0, 279);
+    if (n > 0) QTC_CVE(0, p0, 289);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toJson()); }) { qtc::rt(*r, s->toJson()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJsonDocument::JsonFormat> &p0) { qtc::cve(aa[0], p0, 0, 279); qtc::rt(*rr, s->toJson(p0.get())); }) { qtc::rt(*r, s->toJson(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QJsonDocument::JsonFormat> &p0) { qtc::cve(aa[0], p0, 0, 289); qtc::rt(*rr, s->toJson(p0.get())); }) { qtc::rt(*r, s->toJson(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8629,325 +8853,45 @@ template <class S> static int t1198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-#if __has_include(<QtCore/qjsonobject.h>)
-template <class S> static int t1199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<QMap<QString, QVariant>> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMap<QString, QVariant>> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::fromVariantMap(p0.get())); }) { qtc::rt(*r, S::fromVariantMap(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toVariantMap()); }) { qtc::rt(*r, s->toVariantMap()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<QHash<QString, QVariant>> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QHash<QString, QVariant>> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S::fromVariantHash(p0.get())); }) { qtc::rt(*r, S::fromVariantHash(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toVariantHash()); }) { qtc::rt(*r, s->toVariantHash()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->keys()); }) { qtc::rt(*r, s->keys()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->size()); }) { qtc::rt(*r, s->size()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->count()); }) { qtc::rt(*r, s->count()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->length()); }) { qtc::rt(*r, s->length()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isEmpty()); }) { qtc::rt(*r, s->isEmpty()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->value(p0.get())); }) { qtc::rt(*r, s->value(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QStringView> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->value(p0.get())); }) { qtc::rt(*r, s->value(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QLatin1String> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLatin1String> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->value(p0.get())); }) { qtc::rt(*r, s->value(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->remove(p0.get()); }) { s->remove(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->take(p0.get())); }) { qtc::rt(*r, s->take(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QString> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QStringView> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0) { qtc::cv(aa[0], p0, 0); s->remove(p0.get()); }) { s->remove(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QLatin1String> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLatin1String> &p0) { qtc::cv(aa[0], p0, 0); s->remove(p0.get()); }) { s->remove(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QStringView> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->take(p0.get())); }) { qtc::rt(*r, s->take(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QLatin1String> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLatin1String> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->take(p0.get())); }) { qtc::rt(*r, s->take(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QStringView> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStringView> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QLatin1String> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QLatin1String> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->empty()); }) { qtc::rt(*r, s->empty()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t1221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
+static const qtc::ParamDesc P585[] = {{qtc::PK_VALUE, -1, "QCollatorSortKey", nullptr}};
+#if __has_include(<QtCore/qcollator.h>)
+static const qtc::MethodDef M_QCollatorSortKey[] = {
+    {"compare", "compare(QCollatorSortKey)", t585<QCollatorSortKey>, P585, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
+static const qtc::MethodDef C_QCollatorSortKey[] = {
+    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-#if __has_include(<QtCore/qjsonparseerror.h>)
-template <class S> static int t1222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->errorString()); }) { qtc::rt(*r, s->errorString()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
+static const qtc::ParamDesc P587[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P589[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P591[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P592[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
+static const qtc::ParamDesc P595[] = {{qtc::PK_FLAGS, 117, "QFlags<QCommandLineOption::Flag>", nullptr}};
+static const qtc::ParamDesc P596[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P597[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
+static const qtc::ParamDesc P598[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P599[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+#if QT_CONFIG(commandlineparser) && __has_include(<QtCore/qcommandlineoption.h>)
+static const qtc::MethodDef M_QCommandLineOption[] = {
+    {"names", "names()", t586<QCommandLineOption>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"setValueName", "setValueName(QString)", t587<QCommandLineOption>, P587, 1, 1, 0, QTC_T_NONE, "void"},
+    {"valueName", "valueName()", t588<QCommandLineOption>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setDescription", "setDescription(QString)", t589<QCommandLineOption>, P589, 1, 1, 0, QTC_T_NONE, "void"},
+    {"description", "description()", t590<QCommandLineOption>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setDefaultValue", "setDefaultValue(QString)", t591<QCommandLineOption>, P591, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setDefaultValues", "setDefaultValues(QStringList)", t592<QCommandLineOption>, P592, 1, 1, 0, QTC_T_NONE, "void"},
+    {"defaultValues", "defaultValues()", t593<QCommandLineOption>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"flags", "flags()", t594<QCommandLineOption>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QCommandLineOption::Flag>"},
+    {"setFlags", "setFlags(QCommandLineOption::Flags)", t595<QCommandLineOption>, P595, 1, 1, 0, QTC_T_NONE, "void"},
+    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
+static const qtc::MethodDef C_QCommandLineOption[] = {
+    {"QCommandLineOption", "QCommandLineOption(QString)", t596<QCommandLineOption>, P596, 1, 1, 0, QTC_T_VALUE, "QCommandLineOption"},
+    {"QCommandLineOption", "QCommandLineOption(QStringList)", t597<QCommandLineOption>, P597, 1, 1, 0, QTC_T_VALUE, "QCommandLineOption"},
+    {"QCommandLineOption", "QCommandLineOption(QString,QString,QString,QString)", t598<QCommandLineOption>, P598, 4, 2, 0, QTC_T_VALUE, "QCommandLineOption"},
+    {"QCommandLineOption", "QCommandLineOption(QStringList,QString,QString,QString)", t599<QCommandLineOption>, P599, 4, 2, 0, QTC_T_VALUE, "QCommandLineOption"},
+    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-static const qtc::ParamDesc P600[] = {{qtc::PK_ENUM, 111, "QCommandLineParser::MessageType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P600[] = {{qtc::PK_ENUM, 118, "QCommandLineParser::MessageType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
 #endif
 #if QT_CONFIG(commandlineparser) && __has_include(<QtCore/qcommandlineparser.h>)
 static const qtc::MethodDef M_QCommandLineParser[] = {
@@ -8970,11 +8914,11 @@ static const qtc::ParamDesc P610[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr
 static const qtc::ParamDesc P611[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P612[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P613[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P614[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 892, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P614[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 916, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P615[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P617[] = {{qtc::PK_LIST, -1, "QList<QModelIndex>", nullptr}};
-static const qtc::ParamDesc P618[] = {{qtc::PK_OBJ, -1, "QMimeData*", &QMimeData::staticMetaObject}, {qtc::PK_ENUM, 858, "Qt::DropAction", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P619[] = {{qtc::PK_OBJ, -1, "QMimeData*", &QMimeData::staticMetaObject}, {qtc::PK_ENUM, 858, "Qt::DropAction", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P618[] = {{qtc::PK_OBJ, -1, "QMimeData*", &QMimeData::staticMetaObject}, {qtc::PK_ENUM, 882, "Qt::DropAction", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P619[] = {{qtc::PK_OBJ, -1, "QMimeData*", &QMimeData::staticMetaObject}, {qtc::PK_ENUM, 882, "Qt::DropAction", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P620[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P622[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_CONFIG(concatenatetablesproxymodel) && __has_include(<QtCore/qconcatenatetablesproxymodel.h>)
@@ -9007,7 +8951,7 @@ static const qtc::MethodDef C_QConcatenateTablesProxyModel[] = {
     {"QConcatenateTablesProxyModel", "QConcatenateTablesProxyModel(QObject*)", t622<QConcatenateTablesProxyModel>, P622, 1, 0, 0, QTC_T_OBJ, "QConcatenateTablesProxyModel"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P623[] = {{qtc::PK_ENUM, 116, "QContactsPermission::AccessMode", nullptr}};
+static const qtc::ParamDesc P623[] = {{qtc::PK_ENUM, 123, "QContactsPermission::AccessMode", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && QT_CONFIG(permissions) && __has_include(<QtCore/qpermissions.h>)
 static const qtc::MethodDef M_QContactsPermission[] = {
     {"setAccessMode", "setAccessMode(QContactsPermission::AccessMode)", t623<QContactsPermission>, P623, 1, 1, 0, QTC_T_NONE, "void"},
@@ -9017,17 +8961,17 @@ static const qtc::MethodDef C_QContactsPermission[] = {
     {"QContactsPermission", "QContactsPermission()", t625<QContactsPermission>, nullptr, 0, 0, 0, QTC_T_VALUE, "QContactsPermission"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P627[] = {{qtc::PK_ENUM, 834, "Qt::ApplicationAttribute", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P628[] = {{qtc::PK_ENUM, 834, "Qt::ApplicationAttribute", nullptr}};
+static const qtc::ParamDesc P627[] = {{qtc::PK_ENUM, 858, "Qt::ApplicationAttribute", nullptr}, {qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P628[] = {{qtc::PK_ENUM, 858, "Qt::ApplicationAttribute", nullptr}};
 static const qtc::ParamDesc P629[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P631[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P633[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P635[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P637[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P641[] = {{qtc::PK_FLAGS, 167, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}};
-static const qtc::ParamDesc P642[] = {{qtc::PK_FLAGS, 167, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P641[] = {{qtc::PK_FLAGS, 174, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}};
+static const qtc::ParamDesc P642[] = {{qtc::PK_FLAGS, 174, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P643[] = {{qtc::PK_FLAGS, 167, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}};
+static const qtc::ParamDesc P643[] = {{qtc::PK_FLAGS, 174, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}};
 #endif
 static const qtc::ParamDesc P644[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P645[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_INT, -1, "int", nullptr}};
@@ -9086,10 +9030,10 @@ static const qtc::MethodDef M_QCoreApplication[] = {
 static const qtc::MethodDef C_QCoreApplication[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P664[] = {{qtc::PK_BYTES, -1, "QByteArrayView", nullptr}, {qtc::PK_ENUM, 118, "QCryptographicHash::Algorithm", nullptr}};
-static const qtc::ParamDesc P665[] = {{qtc::PK_ENUM, 118, "QCryptographicHash::Algorithm", nullptr}};
+static const qtc::ParamDesc P664[] = {{qtc::PK_BYTES, -1, "QByteArrayView", nullptr}, {qtc::PK_ENUM, 125, "QCryptographicHash::Algorithm", nullptr}};
+static const qtc::ParamDesc P665[] = {{qtc::PK_ENUM, 125, "QCryptographicHash::Algorithm", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P666[] = {{qtc::PK_ENUM, 118, "QCryptographicHash::Algorithm", nullptr}};
+static const qtc::ParamDesc P666[] = {{qtc::PK_ENUM, 125, "QCryptographicHash::Algorithm", nullptr}};
 #endif
 #if __has_include(<QtCore/qcryptographichash.h>)
 static const qtc::MethodDef M_QCryptographicHash[] = {
@@ -9110,11 +9054,11 @@ static const qtc::ParamDesc P680[] = {{qtc::PK_VALUE, -1, "QCalendar", nullptr}}
 static const qtc::ParamDesc P681[] = {{qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P682[] = {{qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P683[] = {{qtc::PK_VALUE, -1, "QCalendar", nullptr}};
-static const qtc::ParamDesc P684[] = {{qtc::PK_ENUM, 912, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P685[] = {{qtc::PK_ENUM, 912, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P684[] = {{qtc::PK_ENUM, 936, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P685[] = {{qtc::PK_ENUM, 936, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P686[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 static const qtc::ParamDesc P687[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
-static const qtc::ParamDesc P690[] = {{qtc::PK_ENUM, 854, "Qt::DateFormat", nullptr}};
+static const qtc::ParamDesc P690[] = {{qtc::PK_ENUM, 878, "Qt::DateFormat", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
 static const qtc::ParamDesc P691[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #endif
@@ -9132,8 +9076,8 @@ static const qtc::ParamDesc P700[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P701[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P702[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P703[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}};
-static const qtc::ParamDesc P705[] = {{qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_ENUM, 854, "Qt::DateFormat", nullptr}};
-static const qtc::ParamDesc P706[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 854, "Qt::DateFormat", nullptr}};
+static const qtc::ParamDesc P705[] = {{qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_ENUM, 878, "Qt::DateFormat", nullptr}};
+static const qtc::ParamDesc P706[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 878, "Qt::DateFormat", nullptr}};
 static const qtc::ParamDesc P707[] = {{qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P708[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P709[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
@@ -9243,19 +9187,19 @@ static const qtc::MethodDef C_QDate[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P735[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_ENUM, 137, "QDateTime::TransitionResolution", nullptr}};
+static const qtc::ParamDesc P735[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_ENUM, 144, "QDateTime::TransitionResolution", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P736[] = {{qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_ENUM, 137, "QDateTime::TransitionResolution", nullptr}};
+static const qtc::ParamDesc P736[] = {{qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_ENUM, 144, "QDateTime::TransitionResolution", nullptr}};
 #endif
-static const qtc::ParamDesc P737[] = {{qtc::PK_ENUM, 912, "Qt::TimeSpec", nullptr}};
+static const qtc::ParamDesc P737[] = {{qtc::PK_ENUM, 936, "Qt::TimeSpec", nullptr}};
 static const qtc::ParamDesc P738[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P739[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}, {qtc::PK_ENUM, 137, "QDateTime::TransitionResolution", nullptr}};
+static const qtc::ParamDesc P739[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}, {qtc::PK_ENUM, 144, "QDateTime::TransitionResolution", nullptr}};
 #endif
 static const qtc::ParamDesc P740[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 static const qtc::ParamDesc P741[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P742[] = {{qtc::PK_ENUM, 854, "Qt::DateFormat", nullptr}};
+static const qtc::ParamDesc P742[] = {{qtc::PK_ENUM, 878, "Qt::DateFormat", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
 static const qtc::ParamDesc P743[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #endif
@@ -9269,7 +9213,7 @@ static const qtc::ParamDesc P748[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P749[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P750[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 static const qtc::ParamDesc P751[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P752[] = {{qtc::PK_ENUM, 912, "Qt::TimeSpec", nullptr}};
+static const qtc::ParamDesc P752[] = {{qtc::PK_ENUM, 936, "Qt::TimeSpec", nullptr}};
 static const qtc::ParamDesc P755[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P756[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 static const qtc::ParamDesc P757[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
@@ -9278,8 +9222,8 @@ static const qtc::ParamDesc P759[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}}
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
 static const qtc::ParamDesc P760[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 #endif
-static const qtc::ParamDesc P763[] = {{qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_ENUM, 854, "Qt::DateFormat", nullptr}};
-static const qtc::ParamDesc P764[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 854, "Qt::DateFormat", nullptr}};
+static const qtc::ParamDesc P763[] = {{qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_ENUM, 878, "Qt::DateFormat", nullptr}};
+static const qtc::ParamDesc P764[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 878, "Qt::DateFormat", nullptr}};
 static const qtc::ParamDesc P765[] = {{qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P766[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QStringView", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 static const qtc::ParamDesc P767[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
@@ -9301,8 +9245,8 @@ static const qtc::ParamDesc P772[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qt
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
 static const qtc::ParamDesc P773[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QCalendar", nullptr}};
 #endif
-static const qtc::ParamDesc P774[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 912, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P775[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 912, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P774[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 936, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P775[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 936, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P776[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 static const qtc::ParamDesc P777[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
@@ -9311,12 +9255,12 @@ static const qtc::ParamDesc P778[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
 static const qtc::ParamDesc P779[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #endif
-static const qtc::ParamDesc P783[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_ENUM, 912, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P783[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_ENUM, 936, "Qt::TimeSpec", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P784[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_VALUE, -1, "QTimeZone", nullptr}, {qtc::PK_ENUM, 137, "QDateTime::TransitionResolution", nullptr}};
+static const qtc::ParamDesc P784[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_VALUE, -1, "QTimeZone", nullptr}, {qtc::PK_ENUM, 144, "QDateTime::TransitionResolution", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P785[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_ENUM, 137, "QDateTime::TransitionResolution", nullptr}};
+static const qtc::ParamDesc P785[] = {{qtc::PK_VALUE, -1, "QDate", nullptr}, {qtc::PK_VALUE, -1, "QTime", nullptr}, {qtc::PK_ENUM, 144, "QDateTime::TransitionResolution", nullptr}};
 #endif
 #if __has_include(<QtCore/qdatetime.h>)
 static const qtc::MethodDef M_QDateTime[] = {
@@ -9421,16 +9365,16 @@ static const qtc::MethodDef C_QDateTime[] = {
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P789[] = {{qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
-static const qtc::ParamDesc P792[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
-static const qtc::ParamDesc P793[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
-static const qtc::ParamDesc P796[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
-static const qtc::ParamDesc P797[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P789[] = {{qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P792[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P793[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P796[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P797[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
 static const qtc::ParamDesc P798[] = {{qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P799[] = {{qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
-static const qtc::ParamDesc P801[] = {{qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
-static const qtc::ParamDesc P802[] = {{qtc::PK_ENUM, 140, "QDeadlineTimer::ForeverConstant", nullptr}, {qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
-static const qtc::ParamDesc P803[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 914, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P799[] = {{qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P801[] = {{qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P802[] = {{qtc::PK_ENUM, 147, "QDeadlineTimer::ForeverConstant", nullptr}, {qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
+static const qtc::ParamDesc P803[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_ENUM, 938, "Qt::TimerType", nullptr}};
 #if __has_include(<QtCore/qdeadlinetimer.h>)
 static const qtc::MethodDef M_QDeadlineTimer[] = {
     {"isForever", "isForever()", t786<QDeadlineTimer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
@@ -9468,14 +9412,14 @@ static const qtc::ParamDesc P815[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P816[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P817[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P820[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
-static const qtc::ParamDesc P822[] = {{qtc::PK_FLAGS, 146, "QFlags<QDir::Filter>", nullptr}};
-static const qtc::ParamDesc P824[] = {{qtc::PK_FLAGS, 147, "QFlags<QDir::SortFlag>", nullptr}};
-static const qtc::ParamDesc P826[] = {{qtc::PK_FLAGS, 146, "QFlags<QDir::Filter>", nullptr}};
+static const qtc::ParamDesc P822[] = {{qtc::PK_FLAGS, 153, "QFlags<QDir::Filter>", nullptr}};
+static const qtc::ParamDesc P824[] = {{qtc::PK_FLAGS, 154, "QFlags<QDir::SortFlag>", nullptr}};
+static const qtc::ParamDesc P826[] = {{qtc::PK_FLAGS, 153, "QFlags<QDir::Filter>", nullptr}};
 static const qtc::ParamDesc P827[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P828[] = {{qtc::PK_FLAGS, 146, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 147, "QFlags<QDir::SortFlag>", nullptr}};
-static const qtc::ParamDesc P829[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}, {qtc::PK_FLAGS, 146, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 147, "QFlags<QDir::SortFlag>", nullptr}};
-static const qtc::ParamDesc P830[] = {{qtc::PK_FLAGS, 146, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 147, "QFlags<QDir::SortFlag>", nullptr}};
-static const qtc::ParamDesc P831[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}, {qtc::PK_FLAGS, 146, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 147, "QFlags<QDir::SortFlag>", nullptr}};
+static const qtc::ParamDesc P828[] = {{qtc::PK_FLAGS, 153, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 154, "QFlags<QDir::SortFlag>", nullptr}};
+static const qtc::ParamDesc P829[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}, {qtc::PK_FLAGS, 153, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 154, "QFlags<QDir::SortFlag>", nullptr}};
+static const qtc::ParamDesc P830[] = {{qtc::PK_FLAGS, 153, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 154, "QFlags<QDir::SortFlag>", nullptr}};
+static const qtc::ParamDesc P831[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}, {qtc::PK_FLAGS, 153, "QFlags<QDir::Filter>", nullptr}, {qtc::PK_FLAGS, 154, "QFlags<QDir::SortFlag>", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
 static const qtc::ParamDesc P832[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #endif
@@ -9494,7 +9438,7 @@ static const qtc::ParamDesc P860[] = {{qtc::PK_LIST, -1, "QList<QString>", nullp
 static const qtc::ParamDesc P861[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P862[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P864[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P865[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 147, "QFlags<QDir::SortFlag>", nullptr}, {qtc::PK_FLAGS, 146, "QFlags<QDir::Filter>", nullptr}};
+static const qtc::ParamDesc P865[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 154, "QFlags<QDir::SortFlag>", nullptr}, {qtc::PK_FLAGS, 153, "QFlags<QDir::Filter>", nullptr}};
 #if __has_include(<QtCore/qdir.h>)
 static const qtc::MethodDef M_QDir[] = {
     {"setPath", "setPath(QString)", t804<QDir>, P804, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
@@ -9574,12 +9518,12 @@ static const qtc::ParamDesc P869[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 static const qtc::ParamDesc P871[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 static const qtc::ParamDesc P872[] = {{qtc::PK_VALUE, -1, "QPointF", nullptr}, {qtc::PK_VALUE, -1, "QPointF", nullptr}, {qtc::PK_VALUE, -1, "QPointF", nullptr}};
 static const qtc::ParamDesc P873[] = {{qtc::PK_VALUE, -1, "QPointF", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P876[] = {{qtc::PK_ENUM, 164, "QEasingCurve::Type", nullptr}};
+static const qtc::ParamDesc P876[] = {{qtc::PK_ENUM, 171, "QEasingCurve::Type", nullptr}};
 static const qtc::ParamDesc P877[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
 static const qtc::ParamDesc P878[] = {{qtc::PK_VALUE, -1, "QPointF", nullptr}, {qtc::PK_VALUE, -1, "QPointF", nullptr}};
 #endif
-static const qtc::ParamDesc P879[] = {{qtc::PK_ENUM, 164, "QEasingCurve::Type", nullptr}};
+static const qtc::ParamDesc P879[] = {{qtc::PK_ENUM, 171, "QEasingCurve::Type", nullptr}};
 #if QT_CONFIG(easingcurve) && __has_include(<QtCore/qeasingcurve.h>)
 static const qtc::MethodDef M_QEasingCurve[] = {
     {"amplitude", "amplitude()", t866<QEasingCurve>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
@@ -9624,12 +9568,12 @@ static const qtc::MethodDef C_QElapsedTimer[] = {
     {"QElapsedTimer", "QElapsedTimer()", t892<QElapsedTimer>, nullptr, 0, 0, 0, QTC_T_VALUE, "QElapsedTimer"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P893[] = {{qtc::PK_FLAGS, 167, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}};
-static const qtc::ParamDesc P894[] = {{qtc::PK_FLAGS, 167, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P893[] = {{qtc::PK_FLAGS, 174, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}};
+static const qtc::ParamDesc P894[] = {{qtc::PK_FLAGS, 174, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P895[] = {{qtc::PK_FLAGS, 167, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}};
+static const qtc::ParamDesc P895[] = {{qtc::PK_FLAGS, 174, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}, {qtc::PK_VALUE, -1, "QDeadlineTimer", nullptr}};
 #endif
-static const qtc::ParamDesc P896[] = {{qtc::PK_FLAGS, 167, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}};
+static const qtc::ParamDesc P896[] = {{qtc::PK_FLAGS, 174, "QFlags<QEventLoop::ProcessEventsFlag>", nullptr}};
 static const qtc::ParamDesc P899[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P901[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtCore/qeventloop.h>)
@@ -9667,14 +9611,14 @@ static const qtc::ParamDesc P920[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
 static const qtc::ParamDesc P921[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #endif
-static const qtc::ParamDesc P922[] = {{qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P923[] = {{qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}, {qtc::PK_FLAGS, 173, "QFlags<QFileDevice::Permission>", nullptr}};
-static const qtc::ParamDesc P924[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}, {qtc::PK_FLAGS, 170, "QFlags<QFileDevice::FileHandleFlag>", nullptr}};
+static const qtc::ParamDesc P922[] = {{qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P923[] = {{qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}, {qtc::PK_FLAGS, 180, "QFlags<QFileDevice::Permission>", nullptr}};
+static const qtc::ParamDesc P924[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}, {qtc::PK_FLAGS, 177, "QFlags<QFileDevice::FileHandleFlag>", nullptr}};
 static const qtc::ParamDesc P926[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 static const qtc::ParamDesc P927[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
 static const qtc::ParamDesc P929[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P930[] = {{qtc::PK_FLAGS, 173, "QFlags<QFileDevice::Permission>", nullptr}};
-static const qtc::ParamDesc P931[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 173, "QFlags<QFileDevice::Permission>", nullptr}};
+static const qtc::ParamDesc P930[] = {{qtc::PK_FLAGS, 180, "QFlags<QFileDevice::Permission>", nullptr}};
+static const qtc::ParamDesc P931[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 180, "QFlags<QFileDevice::Permission>", nullptr}};
 static const qtc::ParamDesc P933[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P934[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 static const qtc::ParamDesc P935[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
@@ -9726,9 +9670,9 @@ static const qtc::MethodDef C_QFile[] = {
 #endif
 static const qtc::ParamDesc P943[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 static const qtc::ParamDesc P947[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P949[] = {{qtc::PK_FLAGS, 173, "QFlags<QFileDevice::Permission>", nullptr}};
-static const qtc::ParamDesc P950[] = {{qtc::PK_ENUM, 171, "QFileDevice::FileTime", nullptr}};
-static const qtc::ParamDesc P951[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}, {qtc::PK_ENUM, 171, "QFileDevice::FileTime", nullptr}};
+static const qtc::ParamDesc P949[] = {{qtc::PK_FLAGS, 180, "QFlags<QFileDevice::Permission>", nullptr}};
+static const qtc::ParamDesc P950[] = {{qtc::PK_ENUM, 178, "QFileDevice::FileTime", nullptr}};
+static const qtc::ParamDesc P951[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}, {qtc::PK_ENUM, 178, "QFileDevice::FileTime", nullptr}};
 #if __has_include(<QtCore/qfiledevice.h>)
 static const qtc::MethodDef M_QFileDevice[] = {
     {"error", "error()", t936<QFileDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFileDevice::FileError"},
@@ -9754,8 +9698,8 @@ static const qtc::MethodDef C_QFileDevice[] = {
 static const qtc::ParamDesc P952[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P953[] = {{qtc::PK_VALUE, -1, "QDir", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P955[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P996[] = {{qtc::PK_FLAGS, 173, "QFlags<QFileDevice::Permission>", nullptr}};
-static const qtc::ParamDesc P1003[] = {{qtc::PK_ENUM, 171, "QFileDevice::FileTime", nullptr}};
+static const qtc::ParamDesc P996[] = {{qtc::PK_FLAGS, 180, "QFlags<QFileDevice::Permission>", nullptr}};
+static const qtc::ParamDesc P1003[] = {{qtc::PK_ENUM, 178, "QFileDevice::FileTime", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
 static const qtc::ParamDesc P1004[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 #endif
@@ -9769,7 +9713,7 @@ static const qtc::ParamDesc P1006[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}
 static const qtc::ParamDesc P1007[] = {{qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P1008[] = {{qtc::PK_ENUM, 171, "QFileDevice::FileTime", nullptr}, {qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
+static const qtc::ParamDesc P1008[] = {{qtc::PK_ENUM, 178, "QFileDevice::FileTime", nullptr}, {qtc::PK_VALUE, -1, "QTimeZone", nullptr}};
 #endif
 static const qtc::ParamDesc P1010[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 static const qtc::ParamDesc P1013[] = {{qtc::PK_STR, -1, "QString", nullptr}};
@@ -9930,7 +9874,7 @@ static const qtc::MethodDef C_QHashSeed[] = {
 static const qtc::ParamDesc P1039[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 static const qtc::ParamDesc P1048[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P1050[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P1051[] = {{qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P1051[] = {{qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
 static const qtc::ParamDesc P1055[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 static const qtc::ParamDesc P1060[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 static const qtc::ParamDesc P1062[] = {{qtc::PK_INT, -1, "long long", nullptr}};
@@ -10004,12 +9948,12 @@ static const qtc::ParamDesc P1086[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullpt
 static const qtc::ParamDesc P1087[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P1088[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P1089[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P1090[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 892, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P1091[] = {{qtc::PK_OBJ, -1, "QMimeData*", &QMimeData::staticMetaObject}, {qtc::PK_ENUM, 858, "Qt::DropAction", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
+static const qtc::ParamDesc P1090[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 916, "Qt::Orientation", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P1091[] = {{qtc::PK_OBJ, -1, "QMimeData*", &QMimeData::staticMetaObject}, {qtc::PK_ENUM, 882, "Qt::DropAction", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P1092[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P1093[] = {{qtc::PK_VALUE, -1, "QItemSelection", nullptr}};
 static const qtc::ParamDesc P1094[] = {{qtc::PK_VALUE, -1, "QItemSelection", nullptr}};
-static const qtc::ParamDesc P1095[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 884, "QFlags<Qt::MatchFlag>", nullptr}};
+static const qtc::ParamDesc P1095[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_FLAGS, 908, "QFlags<Qt::MatchFlag>", nullptr}};
 static const qtc::ParamDesc P1096[] = {{qtc::PK_OBJ, -1, "QAbstractItemModel*", &QAbstractItemModel::staticMetaObject}};
 static const qtc::ParamDesc P1097[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P1098[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
@@ -10060,7 +10004,7 @@ static const qtc::MethodDef C_QIncompatibleFlag[] = {
 #endif
 static const qtc::ParamDesc P1107[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P1108[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
-static const qtc::ParamDesc P1110[] = {{qtc::PK_VALUE, -1, "QItemSelection", nullptr}, {qtc::PK_FLAGS, 271, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
+static const qtc::ParamDesc P1110[] = {{qtc::PK_VALUE, -1, "QItemSelection", nullptr}, {qtc::PK_FLAGS, 281, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
 static const qtc::ParamDesc P1111[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 #if QT_CONFIG(itemmodel) && __has_include(<QtCore/qitemselectionmodel.h>)
 static const qtc::MethodDef M_QItemSelection[] = {
@@ -10088,9 +10032,9 @@ static const qtc::ParamDesc P1117[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::
 static const qtc::ParamDesc P1120[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P1121[] = {{qtc::PK_INT, -1, "int", nullptr}};
 static const qtc::ParamDesc P1125[] = {{qtc::PK_OBJ, -1, "QAbstractItemModel*", &QAbstractItemModel::staticMetaObject}};
-static const qtc::ParamDesc P1126[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_FLAGS, 271, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
-static const qtc::ParamDesc P1127[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_FLAGS, 271, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
-static const qtc::ParamDesc P1128[] = {{qtc::PK_VALUE, -1, "QItemSelection", nullptr}, {qtc::PK_FLAGS, 271, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
+static const qtc::ParamDesc P1126[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_FLAGS, 281, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
+static const qtc::ParamDesc P1127[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_FLAGS, 281, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
+static const qtc::ParamDesc P1128[] = {{qtc::PK_VALUE, -1, "QItemSelection", nullptr}, {qtc::PK_FLAGS, 281, "QFlags<QItemSelectionModel::SelectionFlag>", nullptr}};
 static const qtc::ParamDesc P1133[] = {{qtc::PK_VALUE, -1, "QItemSelection", nullptr}, {qtc::PK_VALUE, -1, "QItemSelection", nullptr}};
 static const qtc::ParamDesc P1134[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
 static const qtc::ParamDesc P1135[] = {{qtc::PK_INDEX, -1, "QModelIndex", nullptr}, {qtc::PK_INDEX, -1, "QModelIndex", nullptr}};
@@ -10208,7 +10152,7 @@ static const qtc::MethodDef C_QJsonArray[] = {
 #endif
 static const qtc::ParamDesc P1184[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
 static const qtc::ParamDesc P1186[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P1187[] = {{qtc::PK_ENUM, 279, "QJsonDocument::JsonFormat", nullptr}};
+static const qtc::ParamDesc P1187[] = {{qtc::PK_ENUM, 289, "QJsonDocument::JsonFormat", nullptr}};
 static const qtc::ParamDesc P1193[] = {{qtc::PK_VALUE, -1, "QJsonObject", nullptr}};
 static const qtc::ParamDesc P1194[] = {{qtc::PK_VALUE, -1, "QJsonArray", nullptr}};
 static const qtc::ParamDesc P1197[] = {{qtc::PK_VALUE, -1, "QJsonObject", nullptr}};
@@ -10234,57 +10178,13 @@ static const qtc::MethodDef C_QJsonDocument[] = {
     {"QJsonDocument", "QJsonDocument(QJsonArray)", t1198<QJsonDocument>, P1198, 1, 1, 0, QTC_T_VALUE, "QJsonDocument"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P1199[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
-static const qtc::ParamDesc P1201[] = {{qtc::PK_MAP, -1, "QHash<QString, QVariant>", nullptr}};
-static const qtc::ParamDesc P1208[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P1209[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
-static const qtc::ParamDesc P1210[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
-static const qtc::ParamDesc P1211[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P1212[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P1213[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P1214[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
-static const qtc::ParamDesc P1215[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
-static const qtc::ParamDesc P1216[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
-static const qtc::ParamDesc P1217[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
-static const qtc::ParamDesc P1218[] = {{qtc::PK_STR, -1, "QStringView", nullptr}};
-static const qtc::ParamDesc P1219[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
-#if __has_include(<QtCore/qjsonobject.h>)
-static const qtc::MethodDef M_QJsonObject[] = {
-    {"fromVariantMap", "fromVariantMap(QVariantMap)", t1199<QJsonObject>, P1199, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QJsonObject"},
-    {"toVariantMap", "toVariantMap()", t1200<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QMap<QString, QVariant>"},
-    {"fromVariantHash", "fromVariantHash(QVariantHash)", t1201<QJsonObject>, P1201, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QJsonObject"},
-    {"toVariantHash", "toVariantHash()", t1202<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QHash<QString, QVariant>"},
-    {"keys", "keys()", t1203<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"size", "size()", t1204<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"count", "count()", t1205<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"length", "length()", t1206<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"isEmpty", "isEmpty()", t1207<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"value", "value(QString)", t1208<QJsonObject>, P1208, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QJsonValue"},
-    {"value", "value(QStringView)", t1209<QJsonObject>, P1209, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QJsonValue"},
-    {"value", "value(QLatin1StringView)", t1210<QJsonObject>, P1210, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QJsonValue"},
-    {"remove", "remove(QString)", t1211<QJsonObject>, P1211, 1, 1, 0, QTC_T_NONE, "void"},
-    {"take", "take(QString)", t1212<QJsonObject>, P1212, 1, 1, 0, QTC_T_VALUE, "QJsonValue"},
-    {"contains", "contains(QString)", t1213<QJsonObject>, P1213, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"remove", "remove(QStringView)", t1214<QJsonObject>, P1214, 1, 1, 0, QTC_T_NONE, "void"},
-    {"remove", "remove(QLatin1StringView)", t1215<QJsonObject>, P1215, 1, 1, 0, QTC_T_NONE, "void"},
-    {"take", "take(QStringView)", t1216<QJsonObject>, P1216, 1, 1, 0, QTC_T_VALUE, "QJsonValue"},
-    {"take", "take(QLatin1StringView)", t1217<QJsonObject>, P1217, 1, 1, 0, QTC_T_VALUE, "QJsonValue"},
-    {"contains", "contains(QStringView)", t1218<QJsonObject>, P1218, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"contains", "contains(QLatin1StringView)", t1219<QJsonObject>, P1219, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"empty", "empty()", t1220<QJsonObject>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-static const qtc::MethodDef C_QJsonObject[] = {
-    {"QJsonObject", "QJsonObject()", t1221<QJsonObject>, nullptr, 0, 0, 0, QTC_T_VALUE, "QJsonObject"},
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-#endif
-#if __has_include(<QtCore/qjsonparseerror.h>)
-static const qtc::MethodDef M_QJsonParseError[] = {
-    {"errorString", "errorString()", t1222<QJsonParseError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-static const qtc::MethodDef C_QJsonParseError[] = {
-    {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
-#endif
 static const qtc::ClassDef CLASSES[] = {
+#if __has_include(<QtCore/qcollator.h>)
+    {"QCollatorSortKey", "Core", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QCollatorSortKey>, nullptr, nullptr, M_QCollatorSortKey, sizeof(M_QCollatorSortKey) / sizeof(M_QCollatorSortKey[0]) - 1, C_QCollatorSortKey, sizeof(C_QCollatorSortKey) / sizeof(C_QCollatorSortKey[0]) - 1},
+#endif
+#if QT_CONFIG(commandlineparser) && __has_include(<QtCore/qcommandlineoption.h>)
+    {"QCommandLineOption", "Core", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QCommandLineOption>, nullptr, nullptr, M_QCommandLineOption, sizeof(M_QCommandLineOption) / sizeof(M_QCommandLineOption[0]) - 1, C_QCommandLineOption, sizeof(C_QCommandLineOption) / sizeof(C_QCommandLineOption[0]) - 1},
+#endif
 #if QT_CONFIG(commandlineparser) && __has_include(<QtCore/qcommandlineparser.h>)
     {"QCommandLineParser", "Core", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, nullptr, nullptr, nullptr, M_QCommandLineParser, sizeof(M_QCommandLineParser) / sizeof(M_QCommandLineParser[0]) - 1, C_QCommandLineParser, sizeof(C_QCommandLineParser) / sizeof(C_QCommandLineParser[0]) - 1},
 #endif
@@ -10368,12 +10268,6 @@ static const qtc::ClassDef CLASSES[] = {
 #endif
 #if __has_include(<QtCore/qjsondocument.h>)
     {"QJsonDocument", "Core", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QJsonDocument>, nullptr, nullptr, M_QJsonDocument, sizeof(M_QJsonDocument) / sizeof(M_QJsonDocument[0]) - 1, C_QJsonDocument, sizeof(C_QJsonDocument) / sizeof(C_QJsonDocument[0]) - 1},
-#endif
-#if __has_include(<QtCore/qjsonobject.h>)
-    {"QJsonObject", "Core", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QJsonObject>, nullptr, nullptr, M_QJsonObject, sizeof(M_QJsonObject) / sizeof(M_QJsonObject[0]) - 1, C_QJsonObject, sizeof(C_QJsonObject) / sizeof(C_QJsonObject[0]) - 1},
-#endif
-#if __has_include(<QtCore/qjsonparseerror.h>)
-    {"QJsonParseError", "Core", qtc::CK_VALUE, qtc::NEED_CORE, 0, nullptr, &qtc::metatype_of<QJsonParseError>, nullptr, nullptr, M_QJsonParseError, sizeof(M_QJsonParseError) / sizeof(M_QJsonParseError[0]) - 1, C_QJsonParseError, sizeof(C_QJsonParseError) / sizeof(C_QJsonParseError[0]) - 1},
 #endif
     {nullptr, nullptr, 0, 0, 0, nullptr, nullptr, nullptr, nullptr, nullptr, 0, nullptr, 0}};
 }  // namespace

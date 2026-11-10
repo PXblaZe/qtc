@@ -15,7 +15,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtPositioning/qgeoaddress.h>)
-template <class S> static int t13021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -27,7 +27,7 @@ template <class S> static int t13021(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -41,7 +41,7 @@ template <class S> static int t13022(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -53,7 +53,7 @@ template <class S> static int t13023(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -67,7 +67,7 @@ template <class S> static int t13024(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -79,7 +79,7 @@ template <class S> static int t13025(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -93,7 +93,7 @@ template <class S> static int t13026(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -105,7 +105,7 @@ template <class S> static int t13027(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -119,7 +119,7 @@ template <class S> static int t13028(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -131,7 +131,7 @@ template <class S> static int t13029(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -145,7 +145,7 @@ template <class S> static int t13030(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -157,7 +157,7 @@ template <class S> static int t13031(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -171,7 +171,7 @@ template <class S> static int t13032(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -183,7 +183,7 @@ template <class S> static int t13033(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -197,7 +197,7 @@ template <class S> static int t13034(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -209,7 +209,7 @@ template <class S> static int t13035(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -223,7 +223,7 @@ template <class S> static int t13036(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -235,7 +235,7 @@ template <class S> static int t13037(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -249,7 +249,7 @@ template <class S> static int t13038(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -261,7 +261,7 @@ template <class S> static int t13039(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -275,7 +275,7 @@ template <class S> static int t13040(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -287,7 +287,7 @@ template <class S> static int t13041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -299,7 +299,7 @@ template <class S> static int t13042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13043(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -311,7 +311,7 @@ template <class S> static int t13043(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13044(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -324,7 +324,7 @@ template <class S> static int t13044(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeoareamonitorinfo.h>)
-template <class S> static int t13045(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -336,7 +336,7 @@ template <class S> static int t13045(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13046(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -350,7 +350,7 @@ template <class S> static int t13046(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13047(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -362,7 +362,7 @@ template <class S> static int t13047(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13048(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -374,7 +374,7 @@ template <class S> static int t13048(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13049(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -386,7 +386,7 @@ template <class S> static int t13049(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoShape> p0;
     QTC_CV(0, p0);
@@ -400,7 +400,7 @@ template <class S> static int t13050(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -412,7 +412,7 @@ template <class S> static int t13051(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDateTime> p0;
     QTC_CV(0, p0);
@@ -426,7 +426,7 @@ template <class S> static int t13052(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -438,7 +438,7 @@ template <class S> static int t13053(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -452,7 +452,7 @@ template <class S> static int t13054(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -464,7 +464,7 @@ template <class S> static int t13055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMap<QString, QVariant>> p0;
     QTC_CV(0, p0);
@@ -478,7 +478,7 @@ template <class S> static int t13056(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -490,7 +490,7 @@ template <class S> static int t13057(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -508,7 +508,7 @@ template <class S> static int t13058(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeoareamonitorsource.h>)
-template <class S> static int t13059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -521,7 +521,7 @@ template <class S> static int t13059(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -536,7 +536,7 @@ template <class S> static int t13060(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -547,7 +547,7 @@ template <class S> static int t13061(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoPositionInfoSource *> p0;
     QTC_CV(0, p0);
@@ -563,7 +563,7 @@ template <class S> static int t13062(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -575,7 +575,7 @@ template <class S> static int t13063(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -587,7 +587,7 @@ template <class S> static int t13064(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -599,7 +599,7 @@ template <class S> static int t13065(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -611,7 +611,7 @@ template <class S> static int t13066(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoAreaMonitorInfo> p0;
     QTC_CV(0, p0);
@@ -625,7 +625,7 @@ template <class S> static int t13067(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoAreaMonitorInfo> p0;
     QTC_CV(0, p0);
@@ -639,7 +639,7 @@ template <class S> static int t13068(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -651,7 +651,7 @@ template <class S> static int t13069(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoShape> p0;
     QTC_CV(0, p0);
@@ -665,7 +665,7 @@ template <class S> static int t13070(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -681,7 +681,7 @@ template <class S> static int t13071(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -695,7 +695,7 @@ template <class S> static int t13072(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoAreaMonitorInfo> p0;
     qtc::H<QGeoPositionInfo> p1;
@@ -711,7 +711,7 @@ template <class S> static int t13073(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoAreaMonitorInfo> p0;
     qtc::H<QGeoPositionInfo> p1;
@@ -727,7 +727,7 @@ template <class S> static int t13074(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoAreaMonitorInfo> p0;
     QTC_CV(0, p0);
@@ -741,13 +741,13 @@ template <class S> static int t13075(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoAreaMonitorSource::Error> p0;
-    QTC_CVE(0, p0, 203);
+    QTC_CVE(0, p0, 210);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoAreaMonitorSource::Error> &p0) { qtc::cve(aa[0], p0, 0, 203); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoAreaMonitorSource::Error> &p0) { qtc::cve(aa[0], p0, 0, 210); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -757,7 +757,7 @@ template <class S> static int t13076(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeocircle.h>)
-template <class S> static int t13077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -771,7 +771,7 @@ template <class S> static int t13077(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -783,7 +783,7 @@ template <class S> static int t13078(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -797,7 +797,7 @@ template <class S> static int t13079(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -809,7 +809,7 @@ template <class S> static int t13080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -825,7 +825,7 @@ template <class S> static int t13081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -841,7 +841,7 @@ template <class S> static int t13082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -855,7 +855,7 @@ template <class S> static int t13083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -867,7 +867,7 @@ template <class S> static int t13084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -878,7 +878,7 @@ template <class S> static int t13085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoCoordinate> p0;
     qtc::H<double> p1;
@@ -896,7 +896,7 @@ template <class S> static int t13086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoShape> p0;
     QTC_CV(0, p0);
@@ -911,7 +911,7 @@ template <class S> static int t13087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeocoordinate.h>)
-template <class S> static int t13088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -923,7 +923,7 @@ template <class S> static int t13088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -935,7 +935,7 @@ template <class S> static int t13089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -949,7 +949,7 @@ template <class S> static int t13090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -961,7 +961,7 @@ template <class S> static int t13091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -975,7 +975,7 @@ template <class S> static int t13092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -987,7 +987,7 @@ template <class S> static int t13093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -1001,7 +1001,7 @@ template <class S> static int t13094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1013,7 +1013,7 @@ template <class S> static int t13095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1027,7 +1027,7 @@ template <class S> static int t13096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1041,7 +1041,7 @@ template <class S> static int t13097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -1062,16 +1062,16 @@ template <class S> static int t13098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate::CoordinateFormat> p0;
-    if (n > 0) QTC_CVE(0, p0, 204);
+    if (n > 0) QTC_CVE(0, p0, 211);
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toString()); }) { qtc::rt(*r, s->toString()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoCoordinate::CoordinateFormat> &p0) { qtc::cve(aa[0], p0, 0, 204); qtc::rt(*rr, s->toString(p0.get())); }) { qtc::rt(*r, s->toString(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoCoordinate::CoordinateFormat> &p0) { qtc::cve(aa[0], p0, 0, 211); qtc::rt(*rr, s->toString(p0.get())); }) { qtc::rt(*r, s->toString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1079,7 +1079,7 @@ template <class S> static int t13099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1090,7 +1090,7 @@ template <class S> static int t13100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -1105,7 +1105,7 @@ template <class S> static int t13101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -1124,7 +1124,7 @@ template <class S> static int t13102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeolocation.h>)
-template <class S> static int t13103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1136,7 +1136,7 @@ template <class S> static int t13103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoAddress> p0;
     QTC_CV(0, p0);
@@ -1150,7 +1150,7 @@ template <class S> static int t13104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1162,7 +1162,7 @@ template <class S> static int t13105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1176,7 +1176,7 @@ template <class S> static int t13106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1188,7 +1188,7 @@ template <class S> static int t13107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoShape> p0;
     QTC_CV(0, p0);
@@ -1202,7 +1202,7 @@ template <class S> static int t13108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1214,7 +1214,7 @@ template <class S> static int t13109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMap<QString, QVariant>> p0;
     QTC_CV(0, p0);
@@ -1228,7 +1228,7 @@ template <class S> static int t13110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1240,7 +1240,7 @@ template <class S> static int t13111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1253,7 +1253,7 @@ template <class S> static int t13112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeopath.h>)
-template <class S> static int t13113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QGeoCoordinate>> p0;
     QTC_CV(0, p0);
@@ -1267,7 +1267,7 @@ template <class S> static int t13113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1279,7 +1279,7 @@ template <class S> static int t13114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1291,7 +1291,7 @@ template <class S> static int t13115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QVariant>> p0;
     QTC_CV(0, p0);
@@ -1305,7 +1305,7 @@ template <class S> static int t13116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1317,7 +1317,7 @@ template <class S> static int t13117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -1331,7 +1331,7 @@ template <class S> static int t13118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1343,7 +1343,7 @@ template <class S> static int t13119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -1359,7 +1359,7 @@ template <class S> static int t13120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -1375,7 +1375,7 @@ template <class S> static int t13121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<long long> p1;
@@ -1398,7 +1398,7 @@ template <class S> static int t13122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1410,7 +1410,7 @@ template <class S> static int t13123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1424,7 +1424,7 @@ template <class S> static int t13124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QGeoCoordinate> p1;
@@ -1440,7 +1440,7 @@ template <class S> static int t13125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QGeoCoordinate> p1;
@@ -1456,7 +1456,7 @@ template <class S> static int t13126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1470,7 +1470,7 @@ template <class S> static int t13127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1484,7 +1484,7 @@ template <class S> static int t13128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1498,7 +1498,7 @@ template <class S> static int t13129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1512,7 +1512,7 @@ template <class S> static int t13130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1524,7 +1524,7 @@ template <class S> static int t13131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1535,7 +1535,7 @@ template <class S> static int t13132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QList<QGeoCoordinate>> p0;
     qtc::H<double> p1;
@@ -1553,7 +1553,7 @@ template <class S> static int t13133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoShape> p0;
     QTC_CV(0, p0);
@@ -1568,7 +1568,7 @@ template <class S> static int t13134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeopolygon.h>)
-template <class S> static int t13135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QGeoCoordinate>> p0;
     QTC_CV(0, p0);
@@ -1582,7 +1582,7 @@ template <class S> static int t13135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1594,7 +1594,7 @@ template <class S> static int t13136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -1608,7 +1608,7 @@ template <class S> static int t13137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QGeoCoordinate>> p0;
     QTC_CV(0, p0);
@@ -1622,7 +1622,7 @@ template <class S> static int t13138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1637,7 +1637,7 @@ template <class S> static int t13139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1652,7 +1652,7 @@ template <class S> static int t13140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1667,7 +1667,7 @@ template <class S> static int t13141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1679,7 +1679,7 @@ template <class S> static int t13142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -1695,7 +1695,7 @@ template <class S> static int t13143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -1711,7 +1711,7 @@ template <class S> static int t13144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<long long> p1;
@@ -1734,7 +1734,7 @@ template <class S> static int t13145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1746,7 +1746,7 @@ template <class S> static int t13146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1760,7 +1760,7 @@ template <class S> static int t13147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QGeoCoordinate> p1;
@@ -1776,7 +1776,7 @@ template <class S> static int t13148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     qtc::H<QGeoCoordinate> p1;
@@ -1792,7 +1792,7 @@ template <class S> static int t13149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1806,7 +1806,7 @@ template <class S> static int t13150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1820,7 +1820,7 @@ template <class S> static int t13151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1834,7 +1834,7 @@ template <class S> static int t13152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1848,7 +1848,7 @@ template <class S> static int t13153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1860,7 +1860,7 @@ template <class S> static int t13154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1871,7 +1871,7 @@ template <class S> static int t13155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QList<QGeoCoordinate>> p0;
     QTC_CV(0, p0);
@@ -1884,7 +1884,7 @@ template <class S> static int t13156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoShape> p0;
     QTC_CV(0, p0);
@@ -1899,7 +1899,7 @@ template <class S> static int t13157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeopositioninfo.h>)
-template <class S> static int t13158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1911,7 +1911,7 @@ template <class S> static int t13158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDateTime> p0;
     QTC_CV(0, p0);
@@ -1925,7 +1925,7 @@ template <class S> static int t13159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1937,7 +1937,7 @@ template <class S> static int t13160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -1951,7 +1951,7 @@ template <class S> static int t13161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1963,15 +1963,15 @@ template <class S> static int t13162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoPositionInfo::Attribute> p0;
     qtc::H<double> p1;
-    QTC_CVE(0, p0, 206);
+    QTC_CVE(0, p0, 213);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0, qtc::H<double> &p1) { qtc::cve(aa[0], p0, 0, 206); qtc::cv(aa[1], p1, 1); s->setAttribute(p0.get(), p1.get()); }) { s->setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0, qtc::H<double> &p1) { qtc::cve(aa[0], p0, 0, 213); qtc::cv(aa[1], p1, 1); s->setAttribute(p0.get(), p1.get()); }) { s->setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1979,13 +1979,13 @@ template <class S> static int t13163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoPositionInfo::Attribute> p0;
-    QTC_CVE(0, p0, 206);
+    QTC_CVE(0, p0, 213);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 206); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 213); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1993,13 +1993,13 @@ template <class S> static int t13164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoPositionInfo::Attribute> p0;
-    QTC_CVE(0, p0, 206);
+    QTC_CVE(0, p0, 213);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 206); s->removeAttribute(p0.get()); }) { s->removeAttribute(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 213); s->removeAttribute(p0.get()); }) { s->removeAttribute(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2007,13 +2007,13 @@ template <class S> static int t13165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoPositionInfo::Attribute> p0;
-    QTC_CVE(0, p0, 206);
+    QTC_CVE(0, p0, 213);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 206); qtc::rt(*rr, s->hasAttribute(p0.get())); }) { qtc::rt(*r, s->hasAttribute(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 213); qtc::rt(*rr, s->hasAttribute(p0.get())); }) { qtc::rt(*r, s->hasAttribute(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2021,7 +2021,7 @@ template <class S> static int t13166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2033,7 +2033,7 @@ template <class S> static int t13167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2044,7 +2044,7 @@ template <class S> static int t13168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoCoordinate> p0;
     qtc::H<QDateTime> p1;
@@ -2061,7 +2061,7 @@ template <class S> static int t13169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeopositioninfosource.h>)
-template <class S> static int t13170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2075,7 +2075,7 @@ template <class S> static int t13170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2087,13 +2087,13 @@ template <class S> static int t13171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QGeoPositionInfoSource::PositioningMethod>> p0;
-    QTC_CVF(0, p0, 208);
+    QTC_CVF(0, p0, 215);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QGeoPositionInfoSource::PositioningMethod>> &p0) { qtc::cvf(aa[0], p0, 0, 208); s->setPreferredPositioningMethods(p0.get()); }) { s->setPreferredPositioningMethods(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QGeoPositionInfoSource::PositioningMethod>> &p0) { qtc::cvf(aa[0], p0, 0, 215); s->setPreferredPositioningMethods(p0.get()); }) { s->setPreferredPositioningMethods(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2101,7 +2101,7 @@ template <class S> static int t13172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2113,7 +2113,7 @@ template <class S> static int t13173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2130,7 +2130,7 @@ template <class S> static int t13174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2142,7 +2142,7 @@ template <class S> static int t13175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2154,7 +2154,7 @@ template <class S> static int t13176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2166,7 +2166,7 @@ template <class S> static int t13177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -2182,7 +2182,7 @@ template <class S> static int t13178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2196,7 +2196,7 @@ template <class S> static int t13179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -2209,7 +2209,7 @@ template <class S> static int t13180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMap<QString, QVariant>> p0;
     qtc::H<QObject *> p1;
@@ -2224,7 +2224,7 @@ template <class S> static int t13181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -2239,7 +2239,7 @@ template <class S> static int t13182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QMap<QString, QVariant>> p1;
@@ -2256,7 +2256,7 @@ template <class S> static int t13183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2267,7 +2267,7 @@ template <class S> static int t13184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2279,7 +2279,7 @@ template <class S> static int t13185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2291,7 +2291,7 @@ template <class S> static int t13186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2303,7 +2303,7 @@ template <class S> static int t13187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2320,7 +2320,7 @@ template <class S> static int t13188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoPositionInfo> p0;
     QTC_CV(0, p0);
@@ -2334,13 +2334,13 @@ template <class S> static int t13189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoPositionInfoSource::Error> p0;
-    QTC_CVE(0, p0, 207);
+    QTC_CVE(0, p0, 214);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfoSource::Error> &p0) { qtc::cve(aa[0], p0, 0, 207); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoPositionInfoSource::Error> &p0) { qtc::cve(aa[0], p0, 0, 214); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2348,7 +2348,7 @@ template <class S> static int t13190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2362,7 +2362,7 @@ template <class S> static int t13191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeorectangle.h>)
-template <class S> static int t13192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -2376,7 +2376,7 @@ template <class S> static int t13192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2388,7 +2388,7 @@ template <class S> static int t13193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -2402,7 +2402,7 @@ template <class S> static int t13194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2414,7 +2414,7 @@ template <class S> static int t13195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -2428,7 +2428,7 @@ template <class S> static int t13196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2440,7 +2440,7 @@ template <class S> static int t13197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -2454,7 +2454,7 @@ template <class S> static int t13198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2466,7 +2466,7 @@ template <class S> static int t13199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -2480,7 +2480,7 @@ template <class S> static int t13200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2492,7 +2492,7 @@ template <class S> static int t13201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -2506,7 +2506,7 @@ template <class S> static int t13202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2518,7 +2518,7 @@ template <class S> static int t13203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -2532,7 +2532,7 @@ template <class S> static int t13204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2544,7 +2544,7 @@ template <class S> static int t13205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoRectangle> p0;
     QTC_CV(0, p0);
@@ -2558,7 +2558,7 @@ template <class S> static int t13206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoRectangle> p0;
     QTC_CV(0, p0);
@@ -2572,7 +2572,7 @@ template <class S> static int t13207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -2588,7 +2588,7 @@ template <class S> static int t13208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     qtc::H<double> p1;
@@ -2604,7 +2604,7 @@ template <class S> static int t13209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -2618,7 +2618,7 @@ template <class S> static int t13210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoRectangle> p0;
     QTC_CV(0, p0);
@@ -2632,7 +2632,7 @@ template <class S> static int t13211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2644,7 +2644,7 @@ template <class S> static int t13212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2655,7 +2655,7 @@ template <class S> static int t13213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoCoordinate> p0;
     qtc::H<double> p1;
@@ -2672,7 +2672,7 @@ template <class S> static int t13214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoCoordinate> p0;
     qtc::H<QGeoCoordinate> p1;
@@ -2687,7 +2687,7 @@ template <class S> static int t13215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QList<QGeoCoordinate>> p0;
     QTC_CV(0, p0);
@@ -2700,7 +2700,7 @@ template <class S> static int t13216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QGeoShape> p0;
     QTC_CV(0, p0);
@@ -2715,13 +2715,13 @@ template <class S> static int t13217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeosatelliteinfo.h>)
-template <class S> static int t13218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoSatelliteInfo::SatelliteSystem> p0;
-    QTC_CVE(0, p0, 210);
+    QTC_CVE(0, p0, 217);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::SatelliteSystem> &p0) { qtc::cve(aa[0], p0, 0, 210); s->setSatelliteSystem(p0.get()); }) { s->setSatelliteSystem(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::SatelliteSystem> &p0) { qtc::cve(aa[0], p0, 0, 217); s->setSatelliteSystem(p0.get()); }) { s->setSatelliteSystem(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2729,7 +2729,7 @@ template <class S> static int t13218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2741,7 +2741,7 @@ template <class S> static int t13219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2755,7 +2755,7 @@ template <class S> static int t13220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2767,7 +2767,7 @@ template <class S> static int t13221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2781,7 +2781,7 @@ template <class S> static int t13222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2793,15 +2793,15 @@ template <class S> static int t13223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13382(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoSatelliteInfo::Attribute> p0;
     qtc::H<double> p1;
-    QTC_CVE(0, p0, 209);
+    QTC_CVE(0, p0, 216);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0, qtc::H<double> &p1) { qtc::cve(aa[0], p0, 0, 209); qtc::cv(aa[1], p1, 1); s->setAttribute(p0.get(), p1.get()); }) { s->setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0, qtc::H<double> &p1) { qtc::cve(aa[0], p0, 0, 216); qtc::cv(aa[1], p1, 1); s->setAttribute(p0.get(), p1.get()); }) { s->setAttribute(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2809,13 +2809,13 @@ template <class S> static int t13224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoSatelliteInfo::Attribute> p0;
-    QTC_CVE(0, p0, 209);
+    QTC_CVE(0, p0, 216);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 209); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 216); qtc::rt(*rr, s->attribute(p0.get())); }) { qtc::rt(*r, s->attribute(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2823,13 +2823,13 @@ template <class S> static int t13225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoSatelliteInfo::Attribute> p0;
-    QTC_CVE(0, p0, 209);
+    QTC_CVE(0, p0, 216);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 209); s->removeAttribute(p0.get()); }) { s->removeAttribute(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 216); s->removeAttribute(p0.get()); }) { s->removeAttribute(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2837,13 +2837,13 @@ template <class S> static int t13226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoSatelliteInfo::Attribute> p0;
-    QTC_CVE(0, p0, 209);
+    QTC_CVE(0, p0, 216);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 209); qtc::rt(*rr, s->hasAttribute(p0.get())); }) { qtc::rt(*r, s->hasAttribute(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfo::Attribute> &p0) { qtc::cve(aa[0], p0, 0, 216); qtc::rt(*rr, s->hasAttribute(p0.get())); }) { qtc::rt(*r, s->hasAttribute(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2851,7 +2851,7 @@ template <class S> static int t13227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2863,7 +2863,7 @@ template <class S> static int t13228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2876,7 +2876,7 @@ template <class S> static int t13229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeosatelliteinfosource.h>)
-template <class S> static int t13230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -2889,7 +2889,7 @@ template <class S> static int t13230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -2904,7 +2904,7 @@ template <class S> static int t13231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMap<QString, QVariant>> p0;
     qtc::H<QObject *> p1;
@@ -2919,7 +2919,7 @@ template <class S> static int t13232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QMap<QString, QVariant>> p1;
@@ -2936,7 +2936,7 @@ template <class S> static int t13233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2947,7 +2947,7 @@ template <class S> static int t13234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2959,7 +2959,7 @@ template <class S> static int t13235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2973,7 +2973,7 @@ template <class S> static int t13236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2985,7 +2985,7 @@ template <class S> static int t13237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2997,7 +2997,7 @@ template <class S> static int t13238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3009,7 +3009,7 @@ template <class S> static int t13239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -3025,7 +3025,7 @@ template <class S> static int t13240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3039,7 +3039,7 @@ template <class S> static int t13241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3051,7 +3051,7 @@ template <class S> static int t13242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3063,7 +3063,7 @@ template <class S> static int t13243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3080,7 +3080,7 @@ template <class S> static int t13244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QGeoSatelliteInfo>> p0;
     QTC_CV(0, p0);
@@ -3094,7 +3094,7 @@ template <class S> static int t13245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QGeoSatelliteInfo>> p0;
     QTC_CV(0, p0);
@@ -3108,13 +3108,13 @@ template <class S> static int t13246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QGeoSatelliteInfoSource::Error> p0;
-    QTC_CVE(0, p0, 211);
+    QTC_CVE(0, p0, 218);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfoSource::Error> &p0) { qtc::cve(aa[0], p0, 0, 211); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGeoSatelliteInfoSource::Error> &p0) { qtc::cve(aa[0], p0, 0, 218); s->errorOccurred(p0.get()); }) { s->errorOccurred(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3124,7 +3124,7 @@ template <class S> static int t13247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qgeoshape.h>)
-template <class S> static int t13248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3136,7 +3136,7 @@ template <class S> static int t13248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3148,7 +3148,7 @@ template <class S> static int t13249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3160,7 +3160,7 @@ template <class S> static int t13250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QGeoCoordinate> p0;
     QTC_CV(0, p0);
@@ -3174,7 +3174,7 @@ template <class S> static int t13251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3186,7 +3186,7 @@ template <class S> static int t13252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3198,7 +3198,7 @@ template <class S> static int t13253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3210,7 +3210,7 @@ template <class S> static int t13254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3223,7 +3223,7 @@ template <class S> static int t13255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qnmeapositioninfosource.h>)
-template <class S> static int t13256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -3237,7 +3237,7 @@ template <class S> static int t13256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3249,7 +3249,7 @@ template <class S> static int t13257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3261,7 +3261,7 @@ template <class S> static int t13258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QIODevice *> p0;
     QTC_CV(0, p0);
@@ -3277,7 +3277,7 @@ template <class S> static int t13259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3289,7 +3289,7 @@ template <class S> static int t13260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3303,7 +3303,7 @@ template <class S> static int t13261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3320,7 +3320,7 @@ template <class S> static int t13262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3332,7 +3332,7 @@ template <class S> static int t13263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3344,7 +3344,7 @@ template <class S> static int t13264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3356,7 +3356,7 @@ template <class S> static int t13265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(!s->device() || !s->device()->isOpen() || s->device()->isReadable())) return qtc::pre_fail(QTC_ERR_STATE, "QNmeaPositionInfoSource::startUpdates(): the device is open but not for reading");
     switch (n) {
@@ -3369,7 +3369,7 @@ template <class S> static int t13266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3381,7 +3381,7 @@ template <class S> static int t13267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13426(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3399,18 +3399,18 @@ template <class S> static int t13268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QNmeaPositionInfoSource::UpdateMode> p0;
     qtc::H<QObject *> p1;
-    QTC_CVE(0, p0, 375);
+    QTC_CVE(0, p0, 396);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 375); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 396); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 375); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 396); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3419,7 +3419,7 @@ template <class S> static int t13269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtPositioning/qnmeasatelliteinfosource.h>)
-template <class S> static int t13270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13428(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3431,7 +3431,7 @@ template <class S> static int t13270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13429(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QIODevice *> p0;
     QTC_CV(0, p0);
@@ -3447,7 +3447,7 @@ template <class S> static int t13271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13430(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3459,7 +3459,7 @@ template <class S> static int t13272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13431(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3473,7 +3473,7 @@ template <class S> static int t13273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13432(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3485,7 +3485,7 @@ template <class S> static int t13274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13433(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3497,7 +3497,7 @@ template <class S> static int t13275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13434(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QVariant> p1;
@@ -3513,7 +3513,7 @@ template <class S> static int t13276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13435(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -3527,7 +3527,7 @@ template <class S> static int t13277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13436(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     if (!(!s->device() || !s->device()->isOpen() || s->device()->isReadable())) return qtc::pre_fail(QTC_ERR_STATE, "QNmeaSatelliteInfoSource::startUpdates(): the device is open but not for reading");
     switch (n) {
@@ -3540,7 +3540,7 @@ template <class S> static int t13278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13437(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3552,7 +3552,7 @@ template <class S> static int t13279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13438(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3570,18 +3570,18 @@ template <class S> static int t13280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t13281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t13439(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QNmeaSatelliteInfoSource::UpdateMode> p0;
     qtc::H<QObject *> p1;
-    QTC_CVE(0, p0, 376);
+    QTC_CVE(0, p0, 397);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 376); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 397); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 376); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 397); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3589,517 +3589,517 @@ template <class S> static int t13281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P13022[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13024[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13026[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13028[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13030[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13032[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13034[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13036[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13038[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13040[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13180[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13182[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13184[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13186[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13188[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13190[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13192[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13194[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13196[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13198[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtPositioning/qgeoaddress.h>)
 static const qtc::MethodDef M_QGeoAddress[] = {
-    {"text", "text()", t13021<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setText", "setText(QString)", t13022<QGeoAddress>, P13022, 1, 1, 0, QTC_T_NONE, "void"},
-    {"country", "country()", t13023<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setCountry", "setCountry(QString)", t13024<QGeoAddress>, P13024, 1, 1, 0, QTC_T_NONE, "void"},
-    {"countryCode", "countryCode()", t13025<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setCountryCode", "setCountryCode(QString)", t13026<QGeoAddress>, P13026, 1, 1, 0, QTC_T_NONE, "void"},
-    {"state", "state()", t13027<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setState", "setState(QString)", t13028<QGeoAddress>, P13028, 1, 1, 0, QTC_T_NONE, "void"},
-    {"county", "county()", t13029<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setCounty", "setCounty(QString)", t13030<QGeoAddress>, P13030, 1, 1, 0, QTC_T_NONE, "void"},
-    {"city", "city()", t13031<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setCity", "setCity(QString)", t13032<QGeoAddress>, P13032, 1, 1, 0, QTC_T_NONE, "void"},
-    {"district", "district()", t13033<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setDistrict", "setDistrict(QString)", t13034<QGeoAddress>, P13034, 1, 1, 0, QTC_T_NONE, "void"},
-    {"postalCode", "postalCode()", t13035<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setPostalCode", "setPostalCode(QString)", t13036<QGeoAddress>, P13036, 1, 1, 0, QTC_T_NONE, "void"},
-    {"street", "street()", t13037<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setStreet", "setStreet(QString)", t13038<QGeoAddress>, P13038, 1, 1, 0, QTC_T_NONE, "void"},
-    {"streetNumber", "streetNumber()", t13039<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setStreetNumber", "setStreetNumber(QString)", t13040<QGeoAddress>, P13040, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isEmpty", "isEmpty()", t13041<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"clear", "clear()", t13042<QGeoAddress>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isTextGenerated", "isTextGenerated()", t13043<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"text", "text()", t13179<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setText", "setText(QString)", t13180<QGeoAddress>, P13180, 1, 1, 0, QTC_T_NONE, "void"},
+    {"country", "country()", t13181<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setCountry", "setCountry(QString)", t13182<QGeoAddress>, P13182, 1, 1, 0, QTC_T_NONE, "void"},
+    {"countryCode", "countryCode()", t13183<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setCountryCode", "setCountryCode(QString)", t13184<QGeoAddress>, P13184, 1, 1, 0, QTC_T_NONE, "void"},
+    {"state", "state()", t13185<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setState", "setState(QString)", t13186<QGeoAddress>, P13186, 1, 1, 0, QTC_T_NONE, "void"},
+    {"county", "county()", t13187<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setCounty", "setCounty(QString)", t13188<QGeoAddress>, P13188, 1, 1, 0, QTC_T_NONE, "void"},
+    {"city", "city()", t13189<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setCity", "setCity(QString)", t13190<QGeoAddress>, P13190, 1, 1, 0, QTC_T_NONE, "void"},
+    {"district", "district()", t13191<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setDistrict", "setDistrict(QString)", t13192<QGeoAddress>, P13192, 1, 1, 0, QTC_T_NONE, "void"},
+    {"postalCode", "postalCode()", t13193<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPostalCode", "setPostalCode(QString)", t13194<QGeoAddress>, P13194, 1, 1, 0, QTC_T_NONE, "void"},
+    {"street", "street()", t13195<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setStreet", "setStreet(QString)", t13196<QGeoAddress>, P13196, 1, 1, 0, QTC_T_NONE, "void"},
+    {"streetNumber", "streetNumber()", t13197<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setStreetNumber", "setStreetNumber(QString)", t13198<QGeoAddress>, P13198, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isEmpty", "isEmpty()", t13199<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"clear", "clear()", t13200<QGeoAddress>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isTextGenerated", "isTextGenerated()", t13201<QGeoAddress>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoAddress[] = {
-    {"QGeoAddress", "QGeoAddress()", t13044<QGeoAddress>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoAddress"},
+    {"QGeoAddress", "QGeoAddress()", t13202<QGeoAddress>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoAddress"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13046[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13050[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
-static const qtc::ParamDesc P13052[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
-static const qtc::ParamDesc P13054[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13056[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
-static const qtc::ParamDesc P13058[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13204[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13208[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
+static const qtc::ParamDesc P13210[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P13212[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13214[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
+static const qtc::ParamDesc P13216[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtPositioning/qgeoareamonitorinfo.h>)
 static const qtc::MethodDef M_QGeoAreaMonitorInfo[] = {
-    {"name", "name()", t13045<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setName", "setName(QString)", t13046<QGeoAreaMonitorInfo>, P13046, 1, 1, 0, QTC_T_NONE, "void"},
-    {"identifier", "identifier()", t13047<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isValid", "isValid()", t13048<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"area", "area()", t13049<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoShape"},
-    {"setArea", "setArea(QGeoShape)", t13050<QGeoAreaMonitorInfo>, P13050, 1, 1, 0, QTC_T_NONE, "void"},
-    {"expiration", "expiration()", t13051<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
-    {"setExpiration", "setExpiration(QDateTime)", t13052<QGeoAreaMonitorInfo>, P13052, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isPersistent", "isPersistent()", t13053<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setPersistent", "setPersistent(bool)", t13054<QGeoAreaMonitorInfo>, P13054, 1, 1, 0, QTC_T_NONE, "void"},
-    {"notificationParameters", "notificationParameters()", t13055<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QMap<QString, QVariant>"},
-    {"setNotificationParameters", "setNotificationParameters(QVariantMap)", t13056<QGeoAreaMonitorInfo>, P13056, 1, 1, 0, QTC_T_NONE, "void"},
-    {"detach", "detach()", t13057<QGeoAreaMonitorInfo>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"name", "name()", t13203<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setName", "setName(QString)", t13204<QGeoAreaMonitorInfo>, P13204, 1, 1, 0, QTC_T_NONE, "void"},
+    {"identifier", "identifier()", t13205<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isValid", "isValid()", t13206<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"area", "area()", t13207<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoShape"},
+    {"setArea", "setArea(QGeoShape)", t13208<QGeoAreaMonitorInfo>, P13208, 1, 1, 0, QTC_T_NONE, "void"},
+    {"expiration", "expiration()", t13209<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
+    {"setExpiration", "setExpiration(QDateTime)", t13210<QGeoAreaMonitorInfo>, P13210, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isPersistent", "isPersistent()", t13211<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setPersistent", "setPersistent(bool)", t13212<QGeoAreaMonitorInfo>, P13212, 1, 1, 0, QTC_T_NONE, "void"},
+    {"notificationParameters", "notificationParameters()", t13213<QGeoAreaMonitorInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QMap<QString, QVariant>"},
+    {"setNotificationParameters", "setNotificationParameters(QVariantMap)", t13214<QGeoAreaMonitorInfo>, P13214, 1, 1, 0, QTC_T_NONE, "void"},
+    {"detach", "detach()", t13215<QGeoAreaMonitorInfo>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoAreaMonitorInfo[] = {
-    {"QGeoAreaMonitorInfo", "QGeoAreaMonitorInfo(QString)", t13058<QGeoAreaMonitorInfo>, P13058, 1, 0, 0, QTC_T_VALUE, "QGeoAreaMonitorInfo"},
+    {"QGeoAreaMonitorInfo", "QGeoAreaMonitorInfo(QString)", t13216<QGeoAreaMonitorInfo>, P13216, 1, 0, 0, QTC_T_VALUE, "QGeoAreaMonitorInfo"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13059[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13060[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13062[] = {{qtc::PK_OBJ, -1, "QGeoPositionInfoSource*", &QGeoPositionInfoSource::staticMetaObject}};
-static const qtc::ParamDesc P13067[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}};
-static const qtc::ParamDesc P13068[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}};
-static const qtc::ParamDesc P13070[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
-static const qtc::ParamDesc P13071[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P13072[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13073[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}, {qtc::PK_VALUE, -1, "QGeoPositionInfo", nullptr}};
-static const qtc::ParamDesc P13074[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}, {qtc::PK_VALUE, -1, "QGeoPositionInfo", nullptr}};
-static const qtc::ParamDesc P13075[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}};
-static const qtc::ParamDesc P13076[] = {{qtc::PK_ENUM, 203, "QGeoAreaMonitorSource::Error", nullptr}};
+static const qtc::ParamDesc P13217[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13218[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13220[] = {{qtc::PK_OBJ, -1, "QGeoPositionInfoSource*", &QGeoPositionInfoSource::staticMetaObject}};
+static const qtc::ParamDesc P13225[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}};
+static const qtc::ParamDesc P13226[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}};
+static const qtc::ParamDesc P13228[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
+static const qtc::ParamDesc P13229[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P13230[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13231[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}, {qtc::PK_VALUE, -1, "QGeoPositionInfo", nullptr}};
+static const qtc::ParamDesc P13232[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}, {qtc::PK_VALUE, -1, "QGeoPositionInfo", nullptr}};
+static const qtc::ParamDesc P13233[] = {{qtc::PK_VALUE, -1, "QGeoAreaMonitorInfo", nullptr}};
+static const qtc::ParamDesc P13234[] = {{qtc::PK_ENUM, 210, "QGeoAreaMonitorSource::Error", nullptr}};
 #if __has_include(<QtPositioning/qgeoareamonitorsource.h>)
 static const qtc::MethodDef M_QGeoAreaMonitorSource[] = {
-    {"createDefaultSource", "createDefaultSource(QObject*)", t13059<QGeoAreaMonitorSource>, P13059, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QGeoAreaMonitorSource*"},
-    {"createSource", "createSource(QString,QObject*)", t13060<QGeoAreaMonitorSource>, P13060, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoAreaMonitorSource*"},
-    {"availableSources", "availableSources()", t13061<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
-    {"setPositionInfoSource", "setPositionInfoSource(QGeoPositionInfoSource*)", t13062<QGeoAreaMonitorSource>, P13062, 1, 1, 0, QTC_T_NONE, "void"},
-    {"positionInfoSource", "positionInfoSource()", t13063<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QGeoPositionInfoSource*"},
-    {"sourceName", "sourceName()", t13064<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"error", "error()", t13065<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoAreaMonitorSource::Error"},
-    {"supportedAreaMonitorFeatures", "supportedAreaMonitorFeatures()", t13066<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoAreaMonitorSource::AreaMonitorFeature>"},
-    {"startMonitoring", "startMonitoring(QGeoAreaMonitorInfo)", t13067<QGeoAreaMonitorSource>, P13067, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"stopMonitoring", "stopMonitoring(QGeoAreaMonitorInfo)", t13068<QGeoAreaMonitorSource>, P13068, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"activeMonitors", "activeMonitors()", t13069<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoAreaMonitorInfo>"},
-    {"activeMonitors", "activeMonitors(QGeoShape)", t13070<QGeoAreaMonitorSource>, P13070, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoAreaMonitorInfo>"},
-    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13071<QGeoAreaMonitorSource>, P13071, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"backendProperty", "backendProperty(QString)", t13072<QGeoAreaMonitorSource>, P13072, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"areaEntered", "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)", t13073<QGeoAreaMonitorSource>, P13073, 2, 2, 0, QTC_T_NONE, "void"},
-    {"areaExited", "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)", t13074<QGeoAreaMonitorSource>, P13074, 2, 2, 0, QTC_T_NONE, "void"},
-    {"monitorExpired", "monitorExpired(QGeoAreaMonitorInfo)", t13075<QGeoAreaMonitorSource>, P13075, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QGeoAreaMonitorSource::Error)", t13076<QGeoAreaMonitorSource>, P13076, 1, 1, 0, QTC_T_NONE, "void"},
+    {"createDefaultSource", "createDefaultSource(QObject*)", t13217<QGeoAreaMonitorSource>, P13217, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QGeoAreaMonitorSource*"},
+    {"createSource", "createSource(QString,QObject*)", t13218<QGeoAreaMonitorSource>, P13218, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoAreaMonitorSource*"},
+    {"availableSources", "availableSources()", t13219<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
+    {"setPositionInfoSource", "setPositionInfoSource(QGeoPositionInfoSource*)", t13220<QGeoAreaMonitorSource>, P13220, 1, 1, 0, QTC_T_NONE, "void"},
+    {"positionInfoSource", "positionInfoSource()", t13221<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QGeoPositionInfoSource*"},
+    {"sourceName", "sourceName()", t13222<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"error", "error()", t13223<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoAreaMonitorSource::Error"},
+    {"supportedAreaMonitorFeatures", "supportedAreaMonitorFeatures()", t13224<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoAreaMonitorSource::AreaMonitorFeature>"},
+    {"startMonitoring", "startMonitoring(QGeoAreaMonitorInfo)", t13225<QGeoAreaMonitorSource>, P13225, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"stopMonitoring", "stopMonitoring(QGeoAreaMonitorInfo)", t13226<QGeoAreaMonitorSource>, P13226, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"activeMonitors", "activeMonitors()", t13227<QGeoAreaMonitorSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoAreaMonitorInfo>"},
+    {"activeMonitors", "activeMonitors(QGeoShape)", t13228<QGeoAreaMonitorSource>, P13228, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoAreaMonitorInfo>"},
+    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13229<QGeoAreaMonitorSource>, P13229, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"backendProperty", "backendProperty(QString)", t13230<QGeoAreaMonitorSource>, P13230, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"areaEntered", "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)", t13231<QGeoAreaMonitorSource>, P13231, 2, 2, 0, QTC_T_NONE, "void"},
+    {"areaExited", "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)", t13232<QGeoAreaMonitorSource>, P13232, 2, 2, 0, QTC_T_NONE, "void"},
+    {"monitorExpired", "monitorExpired(QGeoAreaMonitorInfo)", t13233<QGeoAreaMonitorSource>, P13233, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QGeoAreaMonitorSource::Error)", t13234<QGeoAreaMonitorSource>, P13234, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoAreaMonitorSource[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13077[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13079[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13081[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13082[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13083[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13086[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13087[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
+static const qtc::ParamDesc P13235[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13237[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13239[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13240[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13241[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13244[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13245[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
 #if __has_include(<QtPositioning/qgeocircle.h>)
 static const qtc::MethodDef M_QGeoCircle[] = {
-    {"setCenter", "setCenter(QGeoCoordinate)", t13077<QGeoCircle>, P13077, 1, 1, 0, QTC_T_NONE, "void"},
-    {"center", "center()", t13078<QGeoCircle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setRadius", "setRadius(qreal)", t13079<QGeoCircle>, P13079, 1, 1, 0, QTC_T_NONE, "void"},
-    {"radius", "radius()", t13080<QGeoCircle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"translate", "translate(double,double)", t13081<QGeoCircle>, P13081, 2, 2, 0, QTC_T_NONE, "void"},
-    {"translated", "translated(double,double)", t13082<QGeoCircle>, P13082, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoCircle"},
-    {"extendCircle", "extendCircle(QGeoCoordinate)", t13083<QGeoCircle>, P13083, 1, 1, 0, QTC_T_NONE, "void"},
-    {"toString", "toString()", t13084<QGeoCircle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setCenter", "setCenter(QGeoCoordinate)", t13235<QGeoCircle>, P13235, 1, 1, 0, QTC_T_NONE, "void"},
+    {"center", "center()", t13236<QGeoCircle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setRadius", "setRadius(qreal)", t13237<QGeoCircle>, P13237, 1, 1, 0, QTC_T_NONE, "void"},
+    {"radius", "radius()", t13238<QGeoCircle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"translate", "translate(double,double)", t13239<QGeoCircle>, P13239, 2, 2, 0, QTC_T_NONE, "void"},
+    {"translated", "translated(double,double)", t13240<QGeoCircle>, P13240, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoCircle"},
+    {"extendCircle", "extendCircle(QGeoCoordinate)", t13241<QGeoCircle>, P13241, 1, 1, 0, QTC_T_NONE, "void"},
+    {"toString", "toString()", t13242<QGeoCircle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoCircle[] = {
-    {"QGeoCircle", "QGeoCircle()", t13085<QGeoCircle>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoCircle"},
-    {"QGeoCircle", "QGeoCircle(QGeoCoordinate,qreal)", t13086<QGeoCircle>, P13086, 2, 1, 0, QTC_T_VALUE, "QGeoCircle"},
-    {"QGeoCircle", "QGeoCircle(QGeoShape)", t13087<QGeoCircle>, P13087, 1, 1, 0, QTC_T_VALUE, "QGeoCircle"},
+    {"QGeoCircle", "QGeoCircle()", t13243<QGeoCircle>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoCircle"},
+    {"QGeoCircle", "QGeoCircle(QGeoCoordinate,qreal)", t13244<QGeoCircle>, P13244, 2, 1, 0, QTC_T_VALUE, "QGeoCircle"},
+    {"QGeoCircle", "QGeoCircle(QGeoShape)", t13245<QGeoCircle>, P13245, 1, 1, 0, QTC_T_VALUE, "QGeoCircle"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QGeoCircle[] = {"QGeoShape", nullptr};
 static void *U_QGeoCircle(void *p, int b) { switch (b) { case 0: return static_cast<QGeoShape *>(static_cast<QGeoCircle *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P13090[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13092[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13094[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13096[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13097[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13098[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13099[] = {{qtc::PK_ENUM, 204, "QGeoCoordinate::CoordinateFormat", nullptr}};
-static const qtc::ParamDesc P13101[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13102[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13248[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13250[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13252[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13254[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13255[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13256[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13257[] = {{qtc::PK_ENUM, 211, "QGeoCoordinate::CoordinateFormat", nullptr}};
+static const qtc::ParamDesc P13259[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13260[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
 #if __has_include(<QtPositioning/qgeocoordinate.h>)
 static const qtc::MethodDef M_QGeoCoordinate[] = {
-    {"isValid", "isValid()", t13088<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"type", "type()", t13089<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoCoordinate::CoordinateType"},
-    {"setLatitude", "setLatitude(double)", t13090<QGeoCoordinate>, P13090, 1, 1, 0, QTC_T_NONE, "void"},
-    {"latitude", "latitude()", t13091<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"setLongitude", "setLongitude(double)", t13092<QGeoCoordinate>, P13092, 1, 1, 0, QTC_T_NONE, "void"},
-    {"longitude", "longitude()", t13093<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"setAltitude", "setAltitude(double)", t13094<QGeoCoordinate>, P13094, 1, 1, 0, QTC_T_NONE, "void"},
-    {"altitude", "altitude()", t13095<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"distanceTo", "distanceTo(QGeoCoordinate)", t13096<QGeoCoordinate>, P13096, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"azimuthTo", "azimuthTo(QGeoCoordinate)", t13097<QGeoCoordinate>, P13097, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"atDistanceAndAzimuth", "atDistanceAndAzimuth(qreal,qreal,qreal)", t13098<QGeoCoordinate>, P13098, 3, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"toString", "toString(QGeoCoordinate::CoordinateFormat)", t13099<QGeoCoordinate>, P13099, 1, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isValid", "isValid()", t13246<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"type", "type()", t13247<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoCoordinate::CoordinateType"},
+    {"setLatitude", "setLatitude(double)", t13248<QGeoCoordinate>, P13248, 1, 1, 0, QTC_T_NONE, "void"},
+    {"latitude", "latitude()", t13249<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"setLongitude", "setLongitude(double)", t13250<QGeoCoordinate>, P13250, 1, 1, 0, QTC_T_NONE, "void"},
+    {"longitude", "longitude()", t13251<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"setAltitude", "setAltitude(double)", t13252<QGeoCoordinate>, P13252, 1, 1, 0, QTC_T_NONE, "void"},
+    {"altitude", "altitude()", t13253<QGeoCoordinate>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"distanceTo", "distanceTo(QGeoCoordinate)", t13254<QGeoCoordinate>, P13254, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"azimuthTo", "azimuthTo(QGeoCoordinate)", t13255<QGeoCoordinate>, P13255, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"atDistanceAndAzimuth", "atDistanceAndAzimuth(qreal,qreal,qreal)", t13256<QGeoCoordinate>, P13256, 3, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"toString", "toString(QGeoCoordinate::CoordinateFormat)", t13257<QGeoCoordinate>, P13257, 1, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoCoordinate[] = {
-    {"QGeoCoordinate", "QGeoCoordinate()", t13100<QGeoCoordinate>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoCoordinate"},
-    {"QGeoCoordinate", "QGeoCoordinate(double,double)", t13101<QGeoCoordinate>, P13101, 2, 2, 0, QTC_T_VALUE, "QGeoCoordinate"},
-    {"QGeoCoordinate", "QGeoCoordinate(double,double,double)", t13102<QGeoCoordinate>, P13102, 3, 3, 0, QTC_T_VALUE, "QGeoCoordinate"},
+    {"QGeoCoordinate", "QGeoCoordinate()", t13258<QGeoCoordinate>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoCoordinate"},
+    {"QGeoCoordinate", "QGeoCoordinate(double,double)", t13259<QGeoCoordinate>, P13259, 2, 2, 0, QTC_T_VALUE, "QGeoCoordinate"},
+    {"QGeoCoordinate", "QGeoCoordinate(double,double,double)", t13260<QGeoCoordinate>, P13260, 3, 3, 0, QTC_T_VALUE, "QGeoCoordinate"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13104[] = {{qtc::PK_VALUE, -1, "QGeoAddress", nullptr}};
-static const qtc::ParamDesc P13106[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13108[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
-static const qtc::ParamDesc P13110[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
+static const qtc::ParamDesc P13262[] = {{qtc::PK_VALUE, -1, "QGeoAddress", nullptr}};
+static const qtc::ParamDesc P13264[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13266[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
+static const qtc::ParamDesc P13268[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}};
 #if __has_include(<QtPositioning/qgeolocation.h>)
 static const qtc::MethodDef M_QGeoLocation[] = {
-    {"address", "address()", t13103<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoAddress"},
-    {"setAddress", "setAddress(QGeoAddress)", t13104<QGeoLocation>, P13104, 1, 1, 0, QTC_T_NONE, "void"},
-    {"coordinate", "coordinate()", t13105<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setCoordinate", "setCoordinate(QGeoCoordinate)", t13106<QGeoLocation>, P13106, 1, 1, 0, QTC_T_NONE, "void"},
-    {"boundingShape", "boundingShape()", t13107<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoShape"},
-    {"setBoundingShape", "setBoundingShape(QGeoShape)", t13108<QGeoLocation>, P13108, 1, 1, 0, QTC_T_NONE, "void"},
-    {"extendedAttributes", "extendedAttributes()", t13109<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QMap<QString, QVariant>"},
-    {"setExtendedAttributes", "setExtendedAttributes(QVariantMap)", t13110<QGeoLocation>, P13110, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isEmpty", "isEmpty()", t13111<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"address", "address()", t13261<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoAddress"},
+    {"setAddress", "setAddress(QGeoAddress)", t13262<QGeoLocation>, P13262, 1, 1, 0, QTC_T_NONE, "void"},
+    {"coordinate", "coordinate()", t13263<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setCoordinate", "setCoordinate(QGeoCoordinate)", t13264<QGeoLocation>, P13264, 1, 1, 0, QTC_T_NONE, "void"},
+    {"boundingShape", "boundingShape()", t13265<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoShape"},
+    {"setBoundingShape", "setBoundingShape(QGeoShape)", t13266<QGeoLocation>, P13266, 1, 1, 0, QTC_T_NONE, "void"},
+    {"extendedAttributes", "extendedAttributes()", t13267<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_MAP, "QMap<QString, QVariant>"},
+    {"setExtendedAttributes", "setExtendedAttributes(QVariantMap)", t13268<QGeoLocation>, P13268, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isEmpty", "isEmpty()", t13269<QGeoLocation>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoLocation[] = {
-    {"QGeoLocation", "QGeoLocation()", t13112<QGeoLocation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoLocation"},
+    {"QGeoLocation", "QGeoLocation()", t13270<QGeoLocation>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoLocation"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13113[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
-static const qtc::ParamDesc P13116[] = {{qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
-static const qtc::ParamDesc P13118[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13120[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13121[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13122[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13124[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13125[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13126[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13127[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13128[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13129[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13130[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13133[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13134[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
+static const qtc::ParamDesc P13271[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
+static const qtc::ParamDesc P13274[] = {{qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
+static const qtc::ParamDesc P13276[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13278[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13279[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13280[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13282[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13283[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13284[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13285[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13286[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13287[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13288[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13291[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13292[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
 #if __has_include(<QtPositioning/qgeopath.h>)
 static const qtc::MethodDef M_QGeoPath[] = {
-    {"setPath", "setPath(QList<QGeoCoordinate>)", t13113<QGeoPath>, P13113, 1, 1, 0, QTC_T_NONE, "void"},
-    {"path", "path()", t13114<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoCoordinate>"},
-    {"clearPath", "clearPath()", t13115<QGeoPath>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setVariantPath", "setVariantPath(QVariantList)", t13116<QGeoPath>, P13116, 1, 1, 0, QTC_T_NONE, "void"},
-    {"variantPath", "variantPath()", t13117<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
-    {"setWidth", "setWidth(qreal)", t13118<QGeoPath>, P13118, 1, 1, 0, QTC_T_NONE, "void"},
-    {"width", "width()", t13119<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"translate", "translate(double,double)", t13120<QGeoPath>, P13120, 2, 2, 0, QTC_T_NONE, "void"},
-    {"translated", "translated(double,double)", t13121<QGeoPath>, P13121, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoPath"},
-    {"length", "length(qsizetype,qsizetype)", t13122<QGeoPath>, P13122, 2, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"size", "size()", t13123<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"addCoordinate", "addCoordinate(QGeoCoordinate)", t13124<QGeoPath>, P13124, 1, 1, 0, QTC_T_NONE, "void"},
-    {"insertCoordinate", "insertCoordinate(qsizetype,QGeoCoordinate)", t13125<QGeoPath>, P13125, 2, 2, 0, QTC_T_NONE, "void"},
-    {"replaceCoordinate", "replaceCoordinate(qsizetype,QGeoCoordinate)", t13126<QGeoPath>, P13126, 2, 2, 0, QTC_T_NONE, "void"},
-    {"coordinateAt", "coordinateAt(qsizetype)", t13127<QGeoPath>, P13127, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"containsCoordinate", "containsCoordinate(QGeoCoordinate)", t13128<QGeoPath>, P13128, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"removeCoordinate", "removeCoordinate(QGeoCoordinate)", t13129<QGeoPath>, P13129, 1, 1, 0, QTC_T_NONE, "void"},
-    {"removeCoordinate", "removeCoordinate(qsizetype)", t13130<QGeoPath>, P13130, 1, 1, 0, QTC_T_NONE, "void"},
-    {"toString", "toString()", t13131<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPath", "setPath(QList<QGeoCoordinate>)", t13271<QGeoPath>, P13271, 1, 1, 0, QTC_T_NONE, "void"},
+    {"path", "path()", t13272<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoCoordinate>"},
+    {"clearPath", "clearPath()", t13273<QGeoPath>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setVariantPath", "setVariantPath(QVariantList)", t13274<QGeoPath>, P13274, 1, 1, 0, QTC_T_NONE, "void"},
+    {"variantPath", "variantPath()", t13275<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
+    {"setWidth", "setWidth(qreal)", t13276<QGeoPath>, P13276, 1, 1, 0, QTC_T_NONE, "void"},
+    {"width", "width()", t13277<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"translate", "translate(double,double)", t13278<QGeoPath>, P13278, 2, 2, 0, QTC_T_NONE, "void"},
+    {"translated", "translated(double,double)", t13279<QGeoPath>, P13279, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoPath"},
+    {"length", "length(qsizetype,qsizetype)", t13280<QGeoPath>, P13280, 2, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"size", "size()", t13281<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"addCoordinate", "addCoordinate(QGeoCoordinate)", t13282<QGeoPath>, P13282, 1, 1, 0, QTC_T_NONE, "void"},
+    {"insertCoordinate", "insertCoordinate(qsizetype,QGeoCoordinate)", t13283<QGeoPath>, P13283, 2, 2, 0, QTC_T_NONE, "void"},
+    {"replaceCoordinate", "replaceCoordinate(qsizetype,QGeoCoordinate)", t13284<QGeoPath>, P13284, 2, 2, 0, QTC_T_NONE, "void"},
+    {"coordinateAt", "coordinateAt(qsizetype)", t13285<QGeoPath>, P13285, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"containsCoordinate", "containsCoordinate(QGeoCoordinate)", t13286<QGeoPath>, P13286, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"removeCoordinate", "removeCoordinate(QGeoCoordinate)", t13287<QGeoPath>, P13287, 1, 1, 0, QTC_T_NONE, "void"},
+    {"removeCoordinate", "removeCoordinate(qsizetype)", t13288<QGeoPath>, P13288, 1, 1, 0, QTC_T_NONE, "void"},
+    {"toString", "toString()", t13289<QGeoPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoPath[] = {
-    {"QGeoPath", "QGeoPath()", t13132<QGeoPath>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoPath"},
-    {"QGeoPath", "QGeoPath(QList<QGeoCoordinate>,qreal)", t13133<QGeoPath>, P13133, 2, 1, 0, QTC_T_VALUE, "QGeoPath"},
-    {"QGeoPath", "QGeoPath(QGeoShape)", t13134<QGeoPath>, P13134, 1, 1, 0, QTC_T_VALUE, "QGeoPath"},
+    {"QGeoPath", "QGeoPath()", t13290<QGeoPath>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoPath"},
+    {"QGeoPath", "QGeoPath(QList<QGeoCoordinate>,qreal)", t13291<QGeoPath>, P13291, 2, 1, 0, QTC_T_VALUE, "QGeoPath"},
+    {"QGeoPath", "QGeoPath(QGeoShape)", t13292<QGeoPath>, P13292, 1, 1, 0, QTC_T_VALUE, "QGeoPath"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QGeoPath[] = {"QGeoShape", nullptr};
 static void *U_QGeoPath(void *p, int b) { switch (b) { case 0: return static_cast<QGeoShape *>(static_cast<QGeoPath *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P13135[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
-static const qtc::ParamDesc P13137[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P13138[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
-static const qtc::ParamDesc P13139[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13140[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13141[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13143[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13144[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13145[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13147[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13148[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13149[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13150[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13151[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13152[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13153[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P13156[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
-static const qtc::ParamDesc P13157[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
+static const qtc::ParamDesc P13293[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
+static const qtc::ParamDesc P13295[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P13296[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
+static const qtc::ParamDesc P13297[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13298[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13299[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13301[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13302[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13303[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13305[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13306[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13307[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13308[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13309[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13310[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13311[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P13314[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
+static const qtc::ParamDesc P13315[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
 #if __has_include(<QtPositioning/qgeopolygon.h>)
 static const qtc::MethodDef M_QGeoPolygon[] = {
-    {"setPerimeter", "setPerimeter(QList<QGeoCoordinate>)", t13135<QGeoPolygon>, P13135, 1, 1, 0, QTC_T_NONE, "void"},
-    {"perimeter", "perimeter()", t13136<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoCoordinate>"},
-    {"addHole", "addHole(QVariant)", t13137<QGeoPolygon>, P13137, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addHole", "addHole(QList<QGeoCoordinate>)", t13138<QGeoPolygon>, P13138, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hole", "hole(qsizetype)", t13139<QGeoPolygon>, P13139, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
-    {"holePath", "holePath(qsizetype)", t13140<QGeoPolygon>, P13140, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoCoordinate>"},
-    {"removeHole", "removeHole(qsizetype)", t13141<QGeoPolygon>, P13141, 1, 1, 0, QTC_T_NONE, "void"},
-    {"holesCount", "holesCount()", t13142<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"translate", "translate(double,double)", t13143<QGeoPolygon>, P13143, 2, 2, 0, QTC_T_NONE, "void"},
-    {"translated", "translated(double,double)", t13144<QGeoPolygon>, P13144, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoPolygon"},
-    {"length", "length(qsizetype,qsizetype)", t13145<QGeoPolygon>, P13145, 2, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"size", "size()", t13146<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"addCoordinate", "addCoordinate(QGeoCoordinate)", t13147<QGeoPolygon>, P13147, 1, 1, 0, QTC_T_NONE, "void"},
-    {"insertCoordinate", "insertCoordinate(qsizetype,QGeoCoordinate)", t13148<QGeoPolygon>, P13148, 2, 2, 0, QTC_T_NONE, "void"},
-    {"replaceCoordinate", "replaceCoordinate(qsizetype,QGeoCoordinate)", t13149<QGeoPolygon>, P13149, 2, 2, 0, QTC_T_NONE, "void"},
-    {"coordinateAt", "coordinateAt(qsizetype)", t13150<QGeoPolygon>, P13150, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"containsCoordinate", "containsCoordinate(QGeoCoordinate)", t13151<QGeoPolygon>, P13151, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"removeCoordinate", "removeCoordinate(QGeoCoordinate)", t13152<QGeoPolygon>, P13152, 1, 1, 0, QTC_T_NONE, "void"},
-    {"removeCoordinate", "removeCoordinate(qsizetype)", t13153<QGeoPolygon>, P13153, 1, 1, 0, QTC_T_NONE, "void"},
-    {"toString", "toString()", t13154<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPerimeter", "setPerimeter(QList<QGeoCoordinate>)", t13293<QGeoPolygon>, P13293, 1, 1, 0, QTC_T_NONE, "void"},
+    {"perimeter", "perimeter()", t13294<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoCoordinate>"},
+    {"addHole", "addHole(QVariant)", t13295<QGeoPolygon>, P13295, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addHole", "addHole(QList<QGeoCoordinate>)", t13296<QGeoPolygon>, P13296, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hole", "hole(qsizetype)", t13297<QGeoPolygon>, P13297, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
+    {"holePath", "holePath(qsizetype)", t13298<QGeoPolygon>, P13298, 1, 1, qtc::MF_CONST, QTC_T_LIST, "QList<QGeoCoordinate>"},
+    {"removeHole", "removeHole(qsizetype)", t13299<QGeoPolygon>, P13299, 1, 1, 0, QTC_T_NONE, "void"},
+    {"holesCount", "holesCount()", t13300<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"translate", "translate(double,double)", t13301<QGeoPolygon>, P13301, 2, 2, 0, QTC_T_NONE, "void"},
+    {"translated", "translated(double,double)", t13302<QGeoPolygon>, P13302, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoPolygon"},
+    {"length", "length(qsizetype,qsizetype)", t13303<QGeoPolygon>, P13303, 2, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"size", "size()", t13304<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"addCoordinate", "addCoordinate(QGeoCoordinate)", t13305<QGeoPolygon>, P13305, 1, 1, 0, QTC_T_NONE, "void"},
+    {"insertCoordinate", "insertCoordinate(qsizetype,QGeoCoordinate)", t13306<QGeoPolygon>, P13306, 2, 2, 0, QTC_T_NONE, "void"},
+    {"replaceCoordinate", "replaceCoordinate(qsizetype,QGeoCoordinate)", t13307<QGeoPolygon>, P13307, 2, 2, 0, QTC_T_NONE, "void"},
+    {"coordinateAt", "coordinateAt(qsizetype)", t13308<QGeoPolygon>, P13308, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"containsCoordinate", "containsCoordinate(QGeoCoordinate)", t13309<QGeoPolygon>, P13309, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"removeCoordinate", "removeCoordinate(QGeoCoordinate)", t13310<QGeoPolygon>, P13310, 1, 1, 0, QTC_T_NONE, "void"},
+    {"removeCoordinate", "removeCoordinate(qsizetype)", t13311<QGeoPolygon>, P13311, 1, 1, 0, QTC_T_NONE, "void"},
+    {"toString", "toString()", t13312<QGeoPolygon>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoPolygon[] = {
-    {"QGeoPolygon", "QGeoPolygon()", t13155<QGeoPolygon>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoPolygon"},
-    {"QGeoPolygon", "QGeoPolygon(QList<QGeoCoordinate>)", t13156<QGeoPolygon>, P13156, 1, 1, 0, QTC_T_VALUE, "QGeoPolygon"},
-    {"QGeoPolygon", "QGeoPolygon(QGeoShape)", t13157<QGeoPolygon>, P13157, 1, 1, 0, QTC_T_VALUE, "QGeoPolygon"},
+    {"QGeoPolygon", "QGeoPolygon()", t13313<QGeoPolygon>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoPolygon"},
+    {"QGeoPolygon", "QGeoPolygon(QList<QGeoCoordinate>)", t13314<QGeoPolygon>, P13314, 1, 1, 0, QTC_T_VALUE, "QGeoPolygon"},
+    {"QGeoPolygon", "QGeoPolygon(QGeoShape)", t13315<QGeoPolygon>, P13315, 1, 1, 0, QTC_T_VALUE, "QGeoPolygon"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QGeoPolygon[] = {"QGeoShape", nullptr};
 static void *U_QGeoPolygon(void *p, int b) { switch (b) { case 0: return static_cast<QGeoShape *>(static_cast<QGeoPolygon *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P13159[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
-static const qtc::ParamDesc P13161[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13163[] = {{qtc::PK_ENUM, 206, "QGeoPositionInfo::Attribute", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13164[] = {{qtc::PK_ENUM, 206, "QGeoPositionInfo::Attribute", nullptr}};
-static const qtc::ParamDesc P13165[] = {{qtc::PK_ENUM, 206, "QGeoPositionInfo::Attribute", nullptr}};
-static const qtc::ParamDesc P13166[] = {{qtc::PK_ENUM, 206, "QGeoPositionInfo::Attribute", nullptr}};
-static const qtc::ParamDesc P13169[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P13317[] = {{qtc::PK_VALUE, -1, "QDateTime", nullptr}};
+static const qtc::ParamDesc P13319[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13321[] = {{qtc::PK_ENUM, 213, "QGeoPositionInfo::Attribute", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13322[] = {{qtc::PK_ENUM, 213, "QGeoPositionInfo::Attribute", nullptr}};
+static const qtc::ParamDesc P13323[] = {{qtc::PK_ENUM, 213, "QGeoPositionInfo::Attribute", nullptr}};
+static const qtc::ParamDesc P13324[] = {{qtc::PK_ENUM, 213, "QGeoPositionInfo::Attribute", nullptr}};
+static const qtc::ParamDesc P13327[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_VALUE, -1, "QDateTime", nullptr}};
 #if __has_include(<QtPositioning/qgeopositioninfo.h>)
 static const qtc::MethodDef M_QGeoPositionInfo[] = {
-    {"isValid", "isValid()", t13158<QGeoPositionInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setTimestamp", "setTimestamp(QDateTime)", t13159<QGeoPositionInfo>, P13159, 1, 1, 0, QTC_T_NONE, "void"},
-    {"timestamp", "timestamp()", t13160<QGeoPositionInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
-    {"setCoordinate", "setCoordinate(QGeoCoordinate)", t13161<QGeoPositionInfo>, P13161, 1, 1, 0, QTC_T_NONE, "void"},
-    {"coordinate", "coordinate()", t13162<QGeoPositionInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setAttribute", "setAttribute(QGeoPositionInfo::Attribute,qreal)", t13163<QGeoPositionInfo>, P13163, 2, 2, 0, QTC_T_NONE, "void"},
-    {"attribute", "attribute(QGeoPositionInfo::Attribute)", t13164<QGeoPositionInfo>, P13164, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"removeAttribute", "removeAttribute(QGeoPositionInfo::Attribute)", t13165<QGeoPositionInfo>, P13165, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hasAttribute", "hasAttribute(QGeoPositionInfo::Attribute)", t13166<QGeoPositionInfo>, P13166, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"detach", "detach()", t13167<QGeoPositionInfo>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isValid", "isValid()", t13316<QGeoPositionInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setTimestamp", "setTimestamp(QDateTime)", t13317<QGeoPositionInfo>, P13317, 1, 1, 0, QTC_T_NONE, "void"},
+    {"timestamp", "timestamp()", t13318<QGeoPositionInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDateTime"},
+    {"setCoordinate", "setCoordinate(QGeoCoordinate)", t13319<QGeoPositionInfo>, P13319, 1, 1, 0, QTC_T_NONE, "void"},
+    {"coordinate", "coordinate()", t13320<QGeoPositionInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setAttribute", "setAttribute(QGeoPositionInfo::Attribute,qreal)", t13321<QGeoPositionInfo>, P13321, 2, 2, 0, QTC_T_NONE, "void"},
+    {"attribute", "attribute(QGeoPositionInfo::Attribute)", t13322<QGeoPositionInfo>, P13322, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"removeAttribute", "removeAttribute(QGeoPositionInfo::Attribute)", t13323<QGeoPositionInfo>, P13323, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hasAttribute", "hasAttribute(QGeoPositionInfo::Attribute)", t13324<QGeoPositionInfo>, P13324, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"detach", "detach()", t13325<QGeoPositionInfo>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoPositionInfo[] = {
-    {"QGeoPositionInfo", "QGeoPositionInfo()", t13168<QGeoPositionInfo>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoPositionInfo"},
-    {"QGeoPositionInfo", "QGeoPositionInfo(QGeoCoordinate,QDateTime)", t13169<QGeoPositionInfo>, P13169, 2, 2, 0, QTC_T_VALUE, "QGeoPositionInfo"},
+    {"QGeoPositionInfo", "QGeoPositionInfo()", t13326<QGeoPositionInfo>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoPositionInfo"},
+    {"QGeoPositionInfo", "QGeoPositionInfo(QGeoCoordinate,QDateTime)", t13327<QGeoPositionInfo>, P13327, 2, 2, 0, QTC_T_VALUE, "QGeoPositionInfo"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13170[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13172[] = {{qtc::PK_FLAGS, 208, "QFlags<QGeoPositionInfoSource::PositioningMethod>", nullptr}};
-static const qtc::ParamDesc P13174[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13178[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P13179[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13180[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13181[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13182[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13183[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13188[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13189[] = {{qtc::PK_VALUE, -1, "QGeoPositionInfo", nullptr}};
-static const qtc::ParamDesc P13190[] = {{qtc::PK_ENUM, 207, "QGeoPositionInfoSource::Error", nullptr}};
+static const qtc::ParamDesc P13328[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13330[] = {{qtc::PK_FLAGS, 215, "QFlags<QGeoPositionInfoSource::PositioningMethod>", nullptr}};
+static const qtc::ParamDesc P13332[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13336[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P13337[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13338[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13339[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13340[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13341[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13346[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13347[] = {{qtc::PK_VALUE, -1, "QGeoPositionInfo", nullptr}};
+static const qtc::ParamDesc P13348[] = {{qtc::PK_ENUM, 214, "QGeoPositionInfoSource::Error", nullptr}};
 #if __has_include(<QtPositioning/qgeopositioninfosource.h>)
 static const qtc::MethodDef M_QGeoPositionInfoSource[] = {
-    {"setUpdateInterval", "setUpdateInterval(int)", t13170<QGeoPositionInfoSource>, P13170, 1, 1, 0, QTC_T_NONE, "void"},
-    {"updateInterval", "updateInterval()", t13171<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setPreferredPositioningMethods", "setPreferredPositioningMethods(QGeoPositionInfoSource::PositioningMethods)", t13172<QGeoPositionInfoSource>, P13172, 1, 1, 0, QTC_T_NONE, "void"},
-    {"preferredPositioningMethods", "preferredPositioningMethods()", t13173<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoPositionInfoSource::PositioningMethod>"},
-    {"lastKnownPosition", "lastKnownPosition(bool)", t13174<QGeoPositionInfoSource>, P13174, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoPositionInfo"},
-    {"supportedPositioningMethods", "supportedPositioningMethods()", t13175<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoPositionInfoSource::PositioningMethod>"},
-    {"minimumUpdateInterval", "minimumUpdateInterval()", t13176<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"sourceName", "sourceName()", t13177<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13178<QGeoPositionInfoSource>, P13178, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"backendProperty", "backendProperty(QString)", t13179<QGeoPositionInfoSource>, P13179, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"createDefaultSource", "createDefaultSource(QObject*)", t13180<QGeoPositionInfoSource>, P13180, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
-    {"createDefaultSource", "createDefaultSource(QVariantMap,QObject*)", t13181<QGeoPositionInfoSource>, P13181, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
-    {"createSource", "createSource(QString,QObject*)", t13182<QGeoPositionInfoSource>, P13182, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
-    {"createSource", "createSource(QString,QVariantMap,QObject*)", t13183<QGeoPositionInfoSource>, P13183, 3, 3, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
-    {"availableSources", "availableSources()", t13184<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
-    {"error", "error()", t13185<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoPositionInfoSource::Error"},
-    {"startUpdates", "startUpdates()", t13186<QGeoPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stopUpdates", "stopUpdates()", t13187<QGeoPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"requestUpdate", "requestUpdate(int)", t13188<QGeoPositionInfoSource>, P13188, 1, 0, 0, QTC_T_NONE, "void"},
-    {"positionUpdated", "positionUpdated(QGeoPositionInfo)", t13189<QGeoPositionInfoSource>, P13189, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QGeoPositionInfoSource::Error)", t13190<QGeoPositionInfoSource>, P13190, 1, 1, 0, QTC_T_NONE, "void"},
-    {"supportedPositioningMethodsChanged", "supportedPositioningMethodsChanged()", t13191<QGeoPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setUpdateInterval", "setUpdateInterval(int)", t13328<QGeoPositionInfoSource>, P13328, 1, 1, 0, QTC_T_NONE, "void"},
+    {"updateInterval", "updateInterval()", t13329<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setPreferredPositioningMethods", "setPreferredPositioningMethods(QGeoPositionInfoSource::PositioningMethods)", t13330<QGeoPositionInfoSource>, P13330, 1, 1, 0, QTC_T_NONE, "void"},
+    {"preferredPositioningMethods", "preferredPositioningMethods()", t13331<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoPositionInfoSource::PositioningMethod>"},
+    {"lastKnownPosition", "lastKnownPosition(bool)", t13332<QGeoPositionInfoSource>, P13332, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoPositionInfo"},
+    {"supportedPositioningMethods", "supportedPositioningMethods()", t13333<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoPositionInfoSource::PositioningMethod>"},
+    {"minimumUpdateInterval", "minimumUpdateInterval()", t13334<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"sourceName", "sourceName()", t13335<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13336<QGeoPositionInfoSource>, P13336, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"backendProperty", "backendProperty(QString)", t13337<QGeoPositionInfoSource>, P13337, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"createDefaultSource", "createDefaultSource(QObject*)", t13338<QGeoPositionInfoSource>, P13338, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
+    {"createDefaultSource", "createDefaultSource(QVariantMap,QObject*)", t13339<QGeoPositionInfoSource>, P13339, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
+    {"createSource", "createSource(QString,QObject*)", t13340<QGeoPositionInfoSource>, P13340, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
+    {"createSource", "createSource(QString,QVariantMap,QObject*)", t13341<QGeoPositionInfoSource>, P13341, 3, 3, qtc::MF_STATIC, QTC_T_OBJ, "QGeoPositionInfoSource*"},
+    {"availableSources", "availableSources()", t13342<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
+    {"error", "error()", t13343<QGeoPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoPositionInfoSource::Error"},
+    {"startUpdates", "startUpdates()", t13344<QGeoPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stopUpdates", "stopUpdates()", t13345<QGeoPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"requestUpdate", "requestUpdate(int)", t13346<QGeoPositionInfoSource>, P13346, 1, 0, 0, QTC_T_NONE, "void"},
+    {"positionUpdated", "positionUpdated(QGeoPositionInfo)", t13347<QGeoPositionInfoSource>, P13347, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QGeoPositionInfoSource::Error)", t13348<QGeoPositionInfoSource>, P13348, 1, 1, 0, QTC_T_NONE, "void"},
+    {"supportedPositioningMethodsChanged", "supportedPositioningMethodsChanged()", t13349<QGeoPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoPositionInfoSource[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13192[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13194[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13196[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13198[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13200[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13202[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13204[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13206[] = {{qtc::PK_VALUE, -1, "QGeoRectangle", nullptr}};
-static const qtc::ParamDesc P13207[] = {{qtc::PK_VALUE, -1, "QGeoRectangle", nullptr}};
-static const qtc::ParamDesc P13208[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13209[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13210[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13211[] = {{qtc::PK_VALUE, -1, "QGeoRectangle", nullptr}};
-static const qtc::ParamDesc P13214[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13215[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
-static const qtc::ParamDesc P13216[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
-static const qtc::ParamDesc P13217[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
+static const qtc::ParamDesc P13350[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13352[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13354[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13356[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13358[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13360[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13362[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13364[] = {{qtc::PK_VALUE, -1, "QGeoRectangle", nullptr}};
+static const qtc::ParamDesc P13365[] = {{qtc::PK_VALUE, -1, "QGeoRectangle", nullptr}};
+static const qtc::ParamDesc P13366[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13367[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13368[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13369[] = {{qtc::PK_VALUE, -1, "QGeoRectangle", nullptr}};
+static const qtc::ParamDesc P13372[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13373[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}, {qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13374[] = {{qtc::PK_LIST, -1, "QList<QGeoCoordinate>", nullptr}};
+static const qtc::ParamDesc P13375[] = {{qtc::PK_VALUE, -1, "QGeoShape", nullptr}};
 #if __has_include(<QtPositioning/qgeorectangle.h>)
 static const qtc::MethodDef M_QGeoRectangle[] = {
-    {"setTopLeft", "setTopLeft(QGeoCoordinate)", t13192<QGeoRectangle>, P13192, 1, 1, 0, QTC_T_NONE, "void"},
-    {"topLeft", "topLeft()", t13193<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setTopRight", "setTopRight(QGeoCoordinate)", t13194<QGeoRectangle>, P13194, 1, 1, 0, QTC_T_NONE, "void"},
-    {"topRight", "topRight()", t13195<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setBottomLeft", "setBottomLeft(QGeoCoordinate)", t13196<QGeoRectangle>, P13196, 1, 1, 0, QTC_T_NONE, "void"},
-    {"bottomLeft", "bottomLeft()", t13197<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setBottomRight", "setBottomRight(QGeoCoordinate)", t13198<QGeoRectangle>, P13198, 1, 1, 0, QTC_T_NONE, "void"},
-    {"bottomRight", "bottomRight()", t13199<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setCenter", "setCenter(QGeoCoordinate)", t13200<QGeoRectangle>, P13200, 1, 1, 0, QTC_T_NONE, "void"},
-    {"center", "center()", t13201<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"setWidth", "setWidth(double)", t13202<QGeoRectangle>, P13202, 1, 1, 0, QTC_T_NONE, "void"},
-    {"width", "width()", t13203<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"setHeight", "setHeight(double)", t13204<QGeoRectangle>, P13204, 1, 1, 0, QTC_T_NONE, "void"},
-    {"height", "height()", t13205<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"contains", "contains(QGeoRectangle)", t13206<QGeoRectangle>, P13206, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"intersects", "intersects(QGeoRectangle)", t13207<QGeoRectangle>, P13207, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"translate", "translate(double,double)", t13208<QGeoRectangle>, P13208, 2, 2, 0, QTC_T_NONE, "void"},
-    {"translated", "translated(double,double)", t13209<QGeoRectangle>, P13209, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoRectangle"},
-    {"extendRectangle", "extendRectangle(QGeoCoordinate)", t13210<QGeoRectangle>, P13210, 1, 1, 0, QTC_T_NONE, "void"},
-    {"united", "united(QGeoRectangle)", t13211<QGeoRectangle>, P13211, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QGeoRectangle"},
-    {"toString", "toString()", t13212<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setTopLeft", "setTopLeft(QGeoCoordinate)", t13350<QGeoRectangle>, P13350, 1, 1, 0, QTC_T_NONE, "void"},
+    {"topLeft", "topLeft()", t13351<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setTopRight", "setTopRight(QGeoCoordinate)", t13352<QGeoRectangle>, P13352, 1, 1, 0, QTC_T_NONE, "void"},
+    {"topRight", "topRight()", t13353<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setBottomLeft", "setBottomLeft(QGeoCoordinate)", t13354<QGeoRectangle>, P13354, 1, 1, 0, QTC_T_NONE, "void"},
+    {"bottomLeft", "bottomLeft()", t13355<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setBottomRight", "setBottomRight(QGeoCoordinate)", t13356<QGeoRectangle>, P13356, 1, 1, 0, QTC_T_NONE, "void"},
+    {"bottomRight", "bottomRight()", t13357<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setCenter", "setCenter(QGeoCoordinate)", t13358<QGeoRectangle>, P13358, 1, 1, 0, QTC_T_NONE, "void"},
+    {"center", "center()", t13359<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"setWidth", "setWidth(double)", t13360<QGeoRectangle>, P13360, 1, 1, 0, QTC_T_NONE, "void"},
+    {"width", "width()", t13361<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"setHeight", "setHeight(double)", t13362<QGeoRectangle>, P13362, 1, 1, 0, QTC_T_NONE, "void"},
+    {"height", "height()", t13363<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"contains", "contains(QGeoRectangle)", t13364<QGeoRectangle>, P13364, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"intersects", "intersects(QGeoRectangle)", t13365<QGeoRectangle>, P13365, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"translate", "translate(double,double)", t13366<QGeoRectangle>, P13366, 2, 2, 0, QTC_T_NONE, "void"},
+    {"translated", "translated(double,double)", t13367<QGeoRectangle>, P13367, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QGeoRectangle"},
+    {"extendRectangle", "extendRectangle(QGeoCoordinate)", t13368<QGeoRectangle>, P13368, 1, 1, 0, QTC_T_NONE, "void"},
+    {"united", "united(QGeoRectangle)", t13369<QGeoRectangle>, P13369, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QGeoRectangle"},
+    {"toString", "toString()", t13370<QGeoRectangle>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoRectangle[] = {
-    {"QGeoRectangle", "QGeoRectangle()", t13213<QGeoRectangle>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoRectangle"},
-    {"QGeoRectangle", "QGeoRectangle(QGeoCoordinate,double,double)", t13214<QGeoRectangle>, P13214, 3, 3, 0, QTC_T_VALUE, "QGeoRectangle"},
-    {"QGeoRectangle", "QGeoRectangle(QGeoCoordinate,QGeoCoordinate)", t13215<QGeoRectangle>, P13215, 2, 2, 0, QTC_T_VALUE, "QGeoRectangle"},
-    {"QGeoRectangle", "QGeoRectangle(QList<QGeoCoordinate>)", t13216<QGeoRectangle>, P13216, 1, 1, 0, QTC_T_VALUE, "QGeoRectangle"},
-    {"QGeoRectangle", "QGeoRectangle(QGeoShape)", t13217<QGeoRectangle>, P13217, 1, 1, 0, QTC_T_VALUE, "QGeoRectangle"},
+    {"QGeoRectangle", "QGeoRectangle()", t13371<QGeoRectangle>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoRectangle"},
+    {"QGeoRectangle", "QGeoRectangle(QGeoCoordinate,double,double)", t13372<QGeoRectangle>, P13372, 3, 3, 0, QTC_T_VALUE, "QGeoRectangle"},
+    {"QGeoRectangle", "QGeoRectangle(QGeoCoordinate,QGeoCoordinate)", t13373<QGeoRectangle>, P13373, 2, 2, 0, QTC_T_VALUE, "QGeoRectangle"},
+    {"QGeoRectangle", "QGeoRectangle(QList<QGeoCoordinate>)", t13374<QGeoRectangle>, P13374, 1, 1, 0, QTC_T_VALUE, "QGeoRectangle"},
+    {"QGeoRectangle", "QGeoRectangle(QGeoShape)", t13375<QGeoRectangle>, P13375, 1, 1, 0, QTC_T_VALUE, "QGeoRectangle"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const char *const B_QGeoRectangle[] = {"QGeoShape", nullptr};
 static void *U_QGeoRectangle(void *p, int b) { switch (b) { case 0: return static_cast<QGeoShape *>(static_cast<QGeoRectangle *>(p)); default: return p; } }
 #endif
-static const qtc::ParamDesc P13218[] = {{qtc::PK_ENUM, 210, "QGeoSatelliteInfo::SatelliteSystem", nullptr}};
-static const qtc::ParamDesc P13220[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13222[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13224[] = {{qtc::PK_ENUM, 209, "QGeoSatelliteInfo::Attribute", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13225[] = {{qtc::PK_ENUM, 209, "QGeoSatelliteInfo::Attribute", nullptr}};
-static const qtc::ParamDesc P13226[] = {{qtc::PK_ENUM, 209, "QGeoSatelliteInfo::Attribute", nullptr}};
-static const qtc::ParamDesc P13227[] = {{qtc::PK_ENUM, 209, "QGeoSatelliteInfo::Attribute", nullptr}};
+static const qtc::ParamDesc P13376[] = {{qtc::PK_ENUM, 217, "QGeoSatelliteInfo::SatelliteSystem", nullptr}};
+static const qtc::ParamDesc P13378[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13380[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13382[] = {{qtc::PK_ENUM, 216, "QGeoSatelliteInfo::Attribute", nullptr}, {qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13383[] = {{qtc::PK_ENUM, 216, "QGeoSatelliteInfo::Attribute", nullptr}};
+static const qtc::ParamDesc P13384[] = {{qtc::PK_ENUM, 216, "QGeoSatelliteInfo::Attribute", nullptr}};
+static const qtc::ParamDesc P13385[] = {{qtc::PK_ENUM, 216, "QGeoSatelliteInfo::Attribute", nullptr}};
 #if __has_include(<QtPositioning/qgeosatelliteinfo.h>)
 static const qtc::MethodDef M_QGeoSatelliteInfo[] = {
-    {"setSatelliteSystem", "setSatelliteSystem(QGeoSatelliteInfo::SatelliteSystem)", t13218<QGeoSatelliteInfo>, P13218, 1, 1, 0, QTC_T_NONE, "void"},
-    {"satelliteSystem", "satelliteSystem()", t13219<QGeoSatelliteInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoSatelliteInfo::SatelliteSystem"},
-    {"setSatelliteIdentifier", "setSatelliteIdentifier(int)", t13220<QGeoSatelliteInfo>, P13220, 1, 1, 0, QTC_T_NONE, "void"},
-    {"satelliteIdentifier", "satelliteIdentifier()", t13221<QGeoSatelliteInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSignalStrength", "setSignalStrength(int)", t13222<QGeoSatelliteInfo>, P13222, 1, 1, 0, QTC_T_NONE, "void"},
-    {"signalStrength", "signalStrength()", t13223<QGeoSatelliteInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setAttribute", "setAttribute(QGeoSatelliteInfo::Attribute,qreal)", t13224<QGeoSatelliteInfo>, P13224, 2, 2, 0, QTC_T_NONE, "void"},
-    {"attribute", "attribute(QGeoSatelliteInfo::Attribute)", t13225<QGeoSatelliteInfo>, P13225, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"removeAttribute", "removeAttribute(QGeoSatelliteInfo::Attribute)", t13226<QGeoSatelliteInfo>, P13226, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hasAttribute", "hasAttribute(QGeoSatelliteInfo::Attribute)", t13227<QGeoSatelliteInfo>, P13227, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"detach", "detach()", t13228<QGeoSatelliteInfo>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setSatelliteSystem", "setSatelliteSystem(QGeoSatelliteInfo::SatelliteSystem)", t13376<QGeoSatelliteInfo>, P13376, 1, 1, 0, QTC_T_NONE, "void"},
+    {"satelliteSystem", "satelliteSystem()", t13377<QGeoSatelliteInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoSatelliteInfo::SatelliteSystem"},
+    {"setSatelliteIdentifier", "setSatelliteIdentifier(int)", t13378<QGeoSatelliteInfo>, P13378, 1, 1, 0, QTC_T_NONE, "void"},
+    {"satelliteIdentifier", "satelliteIdentifier()", t13379<QGeoSatelliteInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSignalStrength", "setSignalStrength(int)", t13380<QGeoSatelliteInfo>, P13380, 1, 1, 0, QTC_T_NONE, "void"},
+    {"signalStrength", "signalStrength()", t13381<QGeoSatelliteInfo>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setAttribute", "setAttribute(QGeoSatelliteInfo::Attribute,qreal)", t13382<QGeoSatelliteInfo>, P13382, 2, 2, 0, QTC_T_NONE, "void"},
+    {"attribute", "attribute(QGeoSatelliteInfo::Attribute)", t13383<QGeoSatelliteInfo>, P13383, 1, 1, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"removeAttribute", "removeAttribute(QGeoSatelliteInfo::Attribute)", t13384<QGeoSatelliteInfo>, P13384, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hasAttribute", "hasAttribute(QGeoSatelliteInfo::Attribute)", t13385<QGeoSatelliteInfo>, P13385, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"detach", "detach()", t13386<QGeoSatelliteInfo>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoSatelliteInfo[] = {
-    {"QGeoSatelliteInfo", "QGeoSatelliteInfo()", t13229<QGeoSatelliteInfo>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoSatelliteInfo"},
+    {"QGeoSatelliteInfo", "QGeoSatelliteInfo()", t13387<QGeoSatelliteInfo>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoSatelliteInfo"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13230[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13231[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13232[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13233[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P13236[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13240[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P13241[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13244[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13245[] = {{qtc::PK_LIST, -1, "QList<QGeoSatelliteInfo>", nullptr}};
-static const qtc::ParamDesc P13246[] = {{qtc::PK_LIST, -1, "QList<QGeoSatelliteInfo>", nullptr}};
-static const qtc::ParamDesc P13247[] = {{qtc::PK_ENUM, 211, "QGeoSatelliteInfoSource::Error", nullptr}};
+static const qtc::ParamDesc P13388[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13389[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13390[] = {{qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13391[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_MAP, -1, "QMap<QString, QVariant>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13394[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13398[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P13399[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13402[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13403[] = {{qtc::PK_LIST, -1, "QList<QGeoSatelliteInfo>", nullptr}};
+static const qtc::ParamDesc P13404[] = {{qtc::PK_LIST, -1, "QList<QGeoSatelliteInfo>", nullptr}};
+static const qtc::ParamDesc P13405[] = {{qtc::PK_ENUM, 218, "QGeoSatelliteInfoSource::Error", nullptr}};
 #if __has_include(<QtPositioning/qgeosatelliteinfosource.h>)
 static const qtc::MethodDef M_QGeoSatelliteInfoSource[] = {
-    {"createDefaultSource", "createDefaultSource(QObject*)", t13230<QGeoSatelliteInfoSource>, P13230, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
-    {"createSource", "createSource(QString,QObject*)", t13231<QGeoSatelliteInfoSource>, P13231, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
-    {"createDefaultSource", "createDefaultSource(QVariantMap,QObject*)", t13232<QGeoSatelliteInfoSource>, P13232, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
-    {"createSource", "createSource(QString,QVariantMap,QObject*)", t13233<QGeoSatelliteInfoSource>, P13233, 3, 3, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
-    {"availableSources", "availableSources()", t13234<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
-    {"sourceName", "sourceName()", t13235<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setUpdateInterval", "setUpdateInterval(int)", t13236<QGeoSatelliteInfoSource>, P13236, 1, 1, 0, QTC_T_NONE, "void"},
-    {"updateInterval", "updateInterval()", t13237<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"minimumUpdateInterval", "minimumUpdateInterval()", t13238<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"error", "error()", t13239<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoSatelliteInfoSource::Error"},
-    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13240<QGeoSatelliteInfoSource>, P13240, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"backendProperty", "backendProperty(QString)", t13241<QGeoSatelliteInfoSource>, P13241, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"startUpdates", "startUpdates()", t13242<QGeoSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stopUpdates", "stopUpdates()", t13243<QGeoSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"requestUpdate", "requestUpdate(int)", t13244<QGeoSatelliteInfoSource>, P13244, 1, 0, 0, QTC_T_NONE, "void"},
-    {"satellitesInViewUpdated", "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)", t13245<QGeoSatelliteInfoSource>, P13245, 1, 1, 0, QTC_T_NONE, "void"},
-    {"satellitesInUseUpdated", "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)", t13246<QGeoSatelliteInfoSource>, P13246, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QGeoSatelliteInfoSource::Error)", t13247<QGeoSatelliteInfoSource>, P13247, 1, 1, 0, QTC_T_NONE, "void"},
+    {"createDefaultSource", "createDefaultSource(QObject*)", t13388<QGeoSatelliteInfoSource>, P13388, 1, 1, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
+    {"createSource", "createSource(QString,QObject*)", t13389<QGeoSatelliteInfoSource>, P13389, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
+    {"createDefaultSource", "createDefaultSource(QVariantMap,QObject*)", t13390<QGeoSatelliteInfoSource>, P13390, 2, 2, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
+    {"createSource", "createSource(QString,QVariantMap,QObject*)", t13391<QGeoSatelliteInfoSource>, P13391, 3, 3, qtc::MF_STATIC, QTC_T_OBJ, "QGeoSatelliteInfoSource*"},
+    {"availableSources", "availableSources()", t13392<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
+    {"sourceName", "sourceName()", t13393<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setUpdateInterval", "setUpdateInterval(int)", t13394<QGeoSatelliteInfoSource>, P13394, 1, 1, 0, QTC_T_NONE, "void"},
+    {"updateInterval", "updateInterval()", t13395<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"minimumUpdateInterval", "minimumUpdateInterval()", t13396<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"error", "error()", t13397<QGeoSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoSatelliteInfoSource::Error"},
+    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13398<QGeoSatelliteInfoSource>, P13398, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"backendProperty", "backendProperty(QString)", t13399<QGeoSatelliteInfoSource>, P13399, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"startUpdates", "startUpdates()", t13400<QGeoSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stopUpdates", "stopUpdates()", t13401<QGeoSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"requestUpdate", "requestUpdate(int)", t13402<QGeoSatelliteInfoSource>, P13402, 1, 0, 0, QTC_T_NONE, "void"},
+    {"satellitesInViewUpdated", "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)", t13403<QGeoSatelliteInfoSource>, P13403, 1, 1, 0, QTC_T_NONE, "void"},
+    {"satellitesInUseUpdated", "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)", t13404<QGeoSatelliteInfoSource>, P13404, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QGeoSatelliteInfoSource::Error)", t13405<QGeoSatelliteInfoSource>, P13405, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoSatelliteInfoSource[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13251[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
+static const qtc::ParamDesc P13409[] = {{qtc::PK_VALUE, -1, "QGeoCoordinate", nullptr}};
 #if __has_include(<QtPositioning/qgeoshape.h>)
 static const qtc::MethodDef M_QGeoShape[] = {
-    {"type", "type()", t13248<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoShape::ShapeType"},
-    {"isValid", "isValid()", t13249<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isEmpty", "isEmpty()", t13250<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"contains", "contains(QGeoCoordinate)", t13251<QGeoShape>, P13251, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"boundingGeoRectangle", "boundingGeoRectangle()", t13252<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoRectangle"},
-    {"center", "center()", t13253<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
-    {"toString", "toString()", t13254<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"type", "type()", t13406<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoShape::ShapeType"},
+    {"isValid", "isValid()", t13407<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isEmpty", "isEmpty()", t13408<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"contains", "contains(QGeoCoordinate)", t13409<QGeoShape>, P13409, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"boundingGeoRectangle", "boundingGeoRectangle()", t13410<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoRectangle"},
+    {"center", "center()", t13411<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoCoordinate"},
+    {"toString", "toString()", t13412<QGeoShape>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QGeoShape[] = {
-    {"QGeoShape", "QGeoShape()", t13255<QGeoShape>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoShape"},
+    {"QGeoShape", "QGeoShape()", t13413<QGeoShape>, nullptr, 0, 0, 0, QTC_T_VALUE, "QGeoShape"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13256[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P13259[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P13261[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13262[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P13268[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13269[] = {{qtc::PK_ENUM, 375, "QNmeaPositionInfoSource::UpdateMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13414[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P13417[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P13419[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13420[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P13426[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13427[] = {{qtc::PK_ENUM, 396, "QNmeaPositionInfoSource::UpdateMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtPositioning/qnmeapositioninfosource.h>)
 static const qtc::MethodDef M_QNmeaPositionInfoSource[] = {
-    {"setUserEquivalentRangeError", "setUserEquivalentRangeError(double)", t13256<QNmeaPositionInfoSource>, P13256, 1, 1, 0, QTC_T_NONE, "void"},
-    {"userEquivalentRangeError", "userEquivalentRangeError()", t13257<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"updateMode", "updateMode()", t13258<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNmeaPositionInfoSource::UpdateMode"},
-    {"setDevice", "setDevice(QIODevice*)", t13259<QNmeaPositionInfoSource>, P13259, 1, 1, 0, QTC_T_NONE, "void"},
-    {"device", "device()", t13260<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
-    {"setUpdateInterval", "setUpdateInterval(int)", t13261<QNmeaPositionInfoSource>, P13261, 1, 1, 0, QTC_T_NONE, "void"},
-    {"lastKnownPosition", "lastKnownPosition(bool)", t13262<QNmeaPositionInfoSource>, P13262, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoPositionInfo"},
-    {"supportedPositioningMethods", "supportedPositioningMethods()", t13263<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoPositionInfoSource::PositioningMethod>"},
-    {"minimumUpdateInterval", "minimumUpdateInterval()", t13264<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"error", "error()", t13265<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoPositionInfoSource::Error"},
-    {"startUpdates", "startUpdates()", t13266<QNmeaPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stopUpdates", "stopUpdates()", t13267<QNmeaPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"requestUpdate", "requestUpdate(int)", t13268<QNmeaPositionInfoSource>, P13268, 1, 0, 0, QTC_T_NONE, "void"},
+    {"setUserEquivalentRangeError", "setUserEquivalentRangeError(double)", t13414<QNmeaPositionInfoSource>, P13414, 1, 1, 0, QTC_T_NONE, "void"},
+    {"userEquivalentRangeError", "userEquivalentRangeError()", t13415<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"updateMode", "updateMode()", t13416<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNmeaPositionInfoSource::UpdateMode"},
+    {"setDevice", "setDevice(QIODevice*)", t13417<QNmeaPositionInfoSource>, P13417, 1, 1, 0, QTC_T_NONE, "void"},
+    {"device", "device()", t13418<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
+    {"setUpdateInterval", "setUpdateInterval(int)", t13419<QNmeaPositionInfoSource>, P13419, 1, 1, 0, QTC_T_NONE, "void"},
+    {"lastKnownPosition", "lastKnownPosition(bool)", t13420<QNmeaPositionInfoSource>, P13420, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QGeoPositionInfo"},
+    {"supportedPositioningMethods", "supportedPositioningMethods()", t13421<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QGeoPositionInfoSource::PositioningMethod>"},
+    {"minimumUpdateInterval", "minimumUpdateInterval()", t13422<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"error", "error()", t13423<QNmeaPositionInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoPositionInfoSource::Error"},
+    {"startUpdates", "startUpdates()", t13424<QNmeaPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stopUpdates", "stopUpdates()", t13425<QNmeaPositionInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"requestUpdate", "requestUpdate(int)", t13426<QNmeaPositionInfoSource>, P13426, 1, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNmeaPositionInfoSource[] = {
-    {"QNmeaPositionInfoSource", "QNmeaPositionInfoSource(QNmeaPositionInfoSource::UpdateMode,QObject*)", t13269<QNmeaPositionInfoSource>, P13269, 2, 1, 0, QTC_T_OBJ, "QNmeaPositionInfoSource"},
+    {"QNmeaPositionInfoSource", "QNmeaPositionInfoSource(QNmeaPositionInfoSource::UpdateMode,QObject*)", t13427<QNmeaPositionInfoSource>, P13427, 2, 1, 0, QTC_T_OBJ, "QNmeaPositionInfoSource"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P13271[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P13273[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13276[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P13277[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P13280[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P13281[] = {{qtc::PK_ENUM, 376, "QNmeaSatelliteInfoSource::UpdateMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P13429[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P13431[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13434[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P13435[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P13438[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P13439[] = {{qtc::PK_ENUM, 397, "QNmeaSatelliteInfoSource::UpdateMode", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtPositioning/qnmeasatelliteinfosource.h>)
 static const qtc::MethodDef M_QNmeaSatelliteInfoSource[] = {
-    {"updateMode", "updateMode()", t13270<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNmeaSatelliteInfoSource::UpdateMode"},
-    {"setDevice", "setDevice(QIODevice*)", t13271<QNmeaSatelliteInfoSource>, P13271, 1, 1, 0, QTC_T_NONE, "void"},
-    {"device", "device()", t13272<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
-    {"setUpdateInterval", "setUpdateInterval(int)", t13273<QNmeaSatelliteInfoSource>, P13273, 1, 1, 0, QTC_T_NONE, "void"},
-    {"minimumUpdateInterval", "minimumUpdateInterval()", t13274<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"error", "error()", t13275<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoSatelliteInfoSource::Error"},
-    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13276<QNmeaSatelliteInfoSource>, P13276, 2, 2, 0, QTC_T_BOOL, "bool"},
-    {"backendProperty", "backendProperty(QString)", t13277<QNmeaSatelliteInfoSource>, P13277, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"startUpdates", "startUpdates()", t13278<QNmeaSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stopUpdates", "stopUpdates()", t13279<QNmeaSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"requestUpdate", "requestUpdate(int)", t13280<QNmeaSatelliteInfoSource>, P13280, 1, 0, 0, QTC_T_NONE, "void"},
+    {"updateMode", "updateMode()", t13428<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QNmeaSatelliteInfoSource::UpdateMode"},
+    {"setDevice", "setDevice(QIODevice*)", t13429<QNmeaSatelliteInfoSource>, P13429, 1, 1, 0, QTC_T_NONE, "void"},
+    {"device", "device()", t13430<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
+    {"setUpdateInterval", "setUpdateInterval(int)", t13431<QNmeaSatelliteInfoSource>, P13431, 1, 1, 0, QTC_T_NONE, "void"},
+    {"minimumUpdateInterval", "minimumUpdateInterval()", t13432<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"error", "error()", t13433<QNmeaSatelliteInfoSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QGeoSatelliteInfoSource::Error"},
+    {"setBackendProperty", "setBackendProperty(QString,QVariant)", t13434<QNmeaSatelliteInfoSource>, P13434, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"backendProperty", "backendProperty(QString)", t13435<QNmeaSatelliteInfoSource>, P13435, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"startUpdates", "startUpdates()", t13436<QNmeaSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stopUpdates", "stopUpdates()", t13437<QNmeaSatelliteInfoSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"requestUpdate", "requestUpdate(int)", t13438<QNmeaSatelliteInfoSource>, P13438, 1, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QNmeaSatelliteInfoSource[] = {
-    {"QNmeaSatelliteInfoSource", "QNmeaSatelliteInfoSource(QNmeaSatelliteInfoSource::UpdateMode,QObject*)", t13281<QNmeaSatelliteInfoSource>, P13281, 2, 1, 0, QTC_T_OBJ, "QNmeaSatelliteInfoSource"},
+    {"QNmeaSatelliteInfoSource", "QNmeaSatelliteInfoSource(QNmeaSatelliteInfoSource::UpdateMode,QObject*)", t13439<QNmeaSatelliteInfoSource>, P13439, 2, 1, 0, QTC_T_OBJ, "QNmeaSatelliteInfoSource"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {

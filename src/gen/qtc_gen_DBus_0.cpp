@@ -17,7 +17,7 @@ namespace {
 #if __has_include(<QtDBus/qdbusabstractadaptor.h>)
 #endif
 #if __has_include(<QtDBus/qdbusabstractinterface.h>)
-template <class S> static int t10158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -29,7 +29,7 @@ template <class S> static int t10158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -41,7 +41,7 @@ template <class S> static int t10159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -53,7 +53,7 @@ template <class S> static int t10160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -65,7 +65,7 @@ template <class S> static int t10161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -77,7 +77,7 @@ template <class S> static int t10162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -89,7 +89,7 @@ template <class S> static int t10163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -103,7 +103,7 @@ template <class S> static int t10164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -116,7 +116,7 @@ template <class S> static int t10165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t10166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -132,7 +132,7 @@ template <class S> static int t10166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t10167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -145,7 +145,7 @@ template <class S> static int t10167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t10168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -159,15 +159,15 @@ template <class S> static int t10168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDBus::CallMode> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 119);
+    QTC_CVE(0, p0, 126);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBus::CallMode> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 119); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->call(p0.get(), p1.get())); }) { qtc::rt(*r, s->call(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBus::CallMode> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 126); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->call(p0.get(), p1.get())); }) { qtc::rt(*r, s->call(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -175,17 +175,17 @@ template <class S> static int t10169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDBus::CallMode> p0;
     qtc::H<QString> p1;
     qtc::H<QList<QVariant>> p2;
-    QTC_CVE(0, p0, 119);
+    QTC_CVE(0, p0, 126);
     QTC_CV(1, p1);
     QTC_CV(2, p2);
     switch (n) {
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBus::CallMode> &p0, qtc::H<QString> &p1, qtc::H<QList<QVariant>> &p2) { qtc::cve(aa[0], p0, 0, 119); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->callWithArgumentList(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->callWithArgumentList(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBus::CallMode> &p0, qtc::H<QString> &p1, qtc::H<QList<QVariant>> &p2) { qtc::cve(aa[0], p0, 0, 126); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->callWithArgumentList(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->callWithArgumentList(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -193,7 +193,7 @@ template <class S> static int t10170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -207,7 +207,7 @@ template <class S> static int t10171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QList<QVariant>> p1;
@@ -225,7 +225,7 @@ template <class S> static int t10172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusargument.h>)
-template <class S> static int t10173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -237,7 +237,7 @@ template <class S> static int t10173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -249,7 +249,7 @@ template <class S> static int t10174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -263,7 +263,7 @@ template <class S> static int t10175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMetaType> p0;
     QTC_CV(0, p0);
@@ -277,7 +277,7 @@ template <class S> static int t10176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -289,7 +289,7 @@ template <class S> static int t10177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -305,7 +305,7 @@ template <class S> static int t10178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMetaType> p0;
     qtc::H<QMetaType> p1;
@@ -321,7 +321,7 @@ template <class S> static int t10179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -333,7 +333,7 @@ template <class S> static int t10180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -345,7 +345,7 @@ template <class S> static int t10181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -357,7 +357,7 @@ template <class S> static int t10182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -371,7 +371,7 @@ template <class S> static int t10183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -383,7 +383,7 @@ template <class S> static int t10184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -395,7 +395,7 @@ template <class S> static int t10185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -407,7 +407,7 @@ template <class S> static int t10186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -419,7 +419,7 @@ template <class S> static int t10187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -431,7 +431,7 @@ template <class S> static int t10188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -443,7 +443,7 @@ template <class S> static int t10189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -455,7 +455,7 @@ template <class S> static int t10190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -467,7 +467,7 @@ template <class S> static int t10191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -479,7 +479,7 @@ template <class S> static int t10192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -491,7 +491,7 @@ template <class S> static int t10193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -503,7 +503,7 @@ template <class S> static int t10194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -515,7 +515,7 @@ template <class S> static int t10195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -528,7 +528,7 @@ template <class S> static int t10196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusconnection.h>)
-template <class S> static int t10197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -540,7 +540,7 @@ template <class S> static int t10197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -552,7 +552,7 @@ template <class S> static int t10198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -564,7 +564,7 @@ template <class S> static int t10199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -576,7 +576,7 @@ template <class S> static int t10200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -588,7 +588,7 @@ template <class S> static int t10201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDBusMessage> p0;
     QTC_CV(0, p0);
@@ -603,13 +603,13 @@ template <class S> static int t10202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDBusMessage> p0;
     qtc::H<QDBus::CallMode> p1;
     qtc::H<int> p2;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 119);
+    if (n > 1) QTC_CVE(1, p1, 126);
     if (n > 2) QTC_CV(2, p2);
     if (!(s->isConnected())) return qtc::pre_fail(QTC_ERR_STATE, "QDBusConnection::call(QDBusMessage,QDBus::CallMode,int): the connection is not connected");
     switch (n) {
@@ -617,10 +617,10 @@ template <class S> static int t10203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusMessage> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->call(p0.get())); }) { qtc::rt(*r, s->call(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusMessage> &p0, qtc::H<QDBus::CallMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 119); qtc::rt(*rr, s->call(p0.get(), p1.get())); }) { qtc::rt(*r, s->call(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusMessage> &p0, qtc::H<QDBus::CallMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 126); qtc::rt(*rr, s->call(p0.get(), p1.get())); }) { qtc::rt(*r, s->call(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusMessage> &p0, qtc::H<QDBus::CallMode> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 119); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->call(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->call(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusMessage> &p0, qtc::H<QDBus::CallMode> &p1, qtc::H<int> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 126); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->call(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->call(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -628,7 +628,7 @@ template <class S> static int t10203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDBusMessage> p0;
     qtc::H<int> p1;
@@ -648,21 +648,21 @@ template <class S> static int t10204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
     qtc::H<QFlags<QDBusConnection::RegisterOption>> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 123);
+    if (n > 2) QTC_CVF(2, p2, 130);
     if (!(s->isConnected())) return qtc::pre_fail(QTC_ERR_STATE, "QDBusConnection::registerObject(QString,QObject*,QDBusConnection::RegisterOptions): the connection is not connected");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QObject *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->registerObject(p0.get(), p1.get())); }) { qtc::rt(*r, s->registerObject(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QObject *> &p1, qtc::H<QFlags<QDBusConnection::RegisterOption>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 123); qtc::rt(*rr, s->registerObject(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->registerObject(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QObject *> &p1, qtc::H<QFlags<QDBusConnection::RegisterOption>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 130); qtc::rt(*rr, s->registerObject(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->registerObject(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -670,7 +670,7 @@ template <class S> static int t10205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -679,14 +679,14 @@ template <class S> static int t10206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     QTC_CV(1, p1);
     QTC_CV(2, p2);
-    if (n > 3) QTC_CVF(3, p3, 123);
+    if (n > 3) QTC_CVF(3, p3, 130);
     if (!(s->isConnected())) return qtc::pre_fail(QTC_ERR_STATE, "QDBusConnection::registerObject(QString,QString,QObject*,QDBusConnection::RegisterOptions): the connection is not connected");
     switch (n) {
         case 3:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QObject *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::rt(*rr, s->registerObject(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->registerObject(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QObject *> &p2, qtc::H<QFlags<QDBusConnection::RegisterOption>> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cvf(aa[3], p3, 3, 123); qtc::rt(*rr, s->registerObject(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, s->registerObject(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QString> &p1, qtc::H<QObject *> &p2, qtc::H<QFlags<QDBusConnection::RegisterOption>> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); qtc::cvf(aa[3], p3, 3, 130); qtc::rt(*rr, s->registerObject(p0.get(), p1.get(), p2.get(), p3.get())); }) { qtc::rt(*r, s->registerObject(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -694,19 +694,19 @@ template <class S> static int t10206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QDBusConnection::UnregisterMode> p1;
     QTC_CV(0, p0);
-    if (n > 1) QTC_CVE(1, p1, 124);
+    if (n > 1) QTC_CVE(1, p1, 131);
     if (!(s->isConnected())) return qtc::pre_fail(QTC_ERR_STATE, "QDBusConnection::unregisterObject(QString,QDBusConnection::UnregisterMode): the connection is not connected");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->unregisterObject(p0.get()); }) { s->unregisterObject(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusConnection::UnregisterMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 124); s->unregisterObject(p0.get(), p1.get()); }) { s->unregisterObject(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusConnection::UnregisterMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 131); s->unregisterObject(p0.get(), p1.get()); }) { s->unregisterObject(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -714,7 +714,7 @@ template <class S> static int t10207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -729,21 +729,21 @@ template <class S> static int t10208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QDBusVirtualObject *> p1;
     qtc::H<QDBusConnection::VirtualObjectRegisterOption> p2;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVE(2, p2, 125);
+    if (n > 2) QTC_CVE(2, p2, 132);
     if (!(s->isConnected())) return qtc::pre_fail(QTC_ERR_STATE, "QDBusConnection::registerVirtualObject(QString,QDBusVirtualObject*,QDBusConnection::VirtualObjectRegisterOption): the connection is not connected");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusVirtualObject *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->registerVirtualObject(p0.get(), p1.get())); }) { qtc::rt(*r, s->registerVirtualObject(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusVirtualObject *> &p1, qtc::H<QDBusConnection::VirtualObjectRegisterOption> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 125); qtc::rt(*rr, s->registerVirtualObject(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->registerVirtualObject(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusVirtualObject *> &p1, qtc::H<QDBusConnection::VirtualObjectRegisterOption> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 132); qtc::rt(*rr, s->registerVirtualObject(p0.get(), p1.get(), p2.get())); }) { qtc::rt(*r, s->registerVirtualObject(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -751,7 +751,7 @@ template <class S> static int t10209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -766,7 +766,7 @@ template <class S> static int t10210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -781,7 +781,7 @@ template <class S> static int t10211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     if (!(s->isConnected())) return qtc::pre_fail(QTC_ERR_STATE, "QDBusConnection::interface(): the connection is not connected");
     switch (n) {
@@ -794,22 +794,22 @@ template <class S> static int t10212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusConnection::BusType> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 121);
+    QTC_CVE(0, p0, 128);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusConnection::BusType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 121); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S::connectToBus(p0.get(), p1.get())); }) { qtc::rt(*r, S::connectToBus(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusConnection::BusType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 128); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S::connectToBus(p0.get(), p1.get())); }) { qtc::rt(*r, S::connectToBus(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -824,7 +824,7 @@ template <class S> static int t10214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -839,7 +839,7 @@ template <class S> static int t10215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -852,7 +852,7 @@ template <class S> static int t10216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -865,7 +865,7 @@ template <class S> static int t10217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -876,7 +876,7 @@ template <class S> static int t10218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -887,7 +887,7 @@ template <class S> static int t10219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -898,7 +898,7 @@ template <class S> static int t10220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -913,7 +913,7 @@ template <class S> static int t10221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusconnectioninterface.h>)
-template <class S> static int t10222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -927,7 +927,7 @@ template <class S> static int t10222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -941,7 +941,7 @@ template <class S> static int t10223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -959,7 +959,7 @@ template <class S> static int t10224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDBusError> p0;
     qtc::H<QDBusMessage> p1;
@@ -975,7 +975,7 @@ template <class S> static int t10225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -989,7 +989,7 @@ template <class S> static int t10226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1003,7 +1003,7 @@ template <class S> static int t10227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1023,7 +1023,7 @@ template <class S> static int t10228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbuserror.h>)
-template <class S> static int t10229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1035,7 +1035,7 @@ template <class S> static int t10229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10382(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1047,7 +1047,7 @@ template <class S> static int t10230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1059,7 +1059,7 @@ template <class S> static int t10231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1071,20 +1071,20 @@ template <class S> static int t10232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusError::ErrorType> p0;
-    QTC_CVE(0, p0, 129);
+    QTC_CVE(0, p0, 136);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0) { qtc::cve(aa[0], p0, 0, 129); qtc::rt(*rr, S::errorString(p0.get())); }) { qtc::rt(*r, S::errorString(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0) { qtc::cve(aa[0], p0, 0, 136); qtc::rt(*rr, S::errorString(p0.get())); }) { qtc::rt(*r, S::errorString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1095,7 +1095,7 @@ template <class S> static int t10234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusMessage> p0;
     QTC_CV(0, p0);
@@ -1108,15 +1108,15 @@ template <class S> static int t10235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusError::ErrorType> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 129);
+    QTC_CVE(0, p0, 136);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 129); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 136); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1125,7 +1125,7 @@ template <class S> static int t10236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusmessage.h>)
-template <class S> static int t10237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1142,7 +1142,7 @@ template <class S> static int t10237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1161,7 +1161,7 @@ template <class S> static int t10238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1180,7 +1180,7 @@ template <class S> static int t10239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1195,7 +1195,7 @@ template <class S> static int t10240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusError> p0;
     QTC_CV(0, p0);
@@ -1208,22 +1208,22 @@ template <class S> static int t10241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusError::ErrorType> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 129);
+    QTC_CVE(0, p0, 136);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 129); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S::createError(p0.get(), p1.get())); }) { qtc::rt(*r, S::createError(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 136); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S::createError(p0.get(), p1.get())); }) { qtc::rt(*r, S::createError(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QVariant>> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1240,7 +1240,7 @@ template <class S> static int t10243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -1254,7 +1254,7 @@ template <class S> static int t10244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -1270,7 +1270,7 @@ template <class S> static int t10245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDBusError> p0;
     QTC_CV(0, p0);
@@ -1284,15 +1284,15 @@ template <class S> static int t10246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QDBusError::ErrorType> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 129);
+    QTC_CVE(0, p0, 136);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 129); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->createErrorReply(p0.get(), p1.get())); }) { qtc::rt(*r, s->createErrorReply(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QDBusError::ErrorType> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 136); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->createErrorReply(p0.get(), p1.get())); }) { qtc::rt(*r, s->createErrorReply(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1300,7 +1300,7 @@ template <class S> static int t10247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1312,7 +1312,7 @@ template <class S> static int t10248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1324,7 +1324,7 @@ template <class S> static int t10249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1336,7 +1336,7 @@ template <class S> static int t10250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1348,7 +1348,7 @@ template <class S> static int t10251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1360,7 +1360,7 @@ template <class S> static int t10252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1372,7 +1372,7 @@ template <class S> static int t10253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1384,7 +1384,7 @@ template <class S> static int t10254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1396,7 +1396,7 @@ template <class S> static int t10255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1408,7 +1408,7 @@ template <class S> static int t10256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1422,7 +1422,7 @@ template <class S> static int t10257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1434,7 +1434,7 @@ template <class S> static int t10258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1448,7 +1448,7 @@ template <class S> static int t10259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1460,7 +1460,7 @@ template <class S> static int t10260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1474,7 +1474,7 @@ template <class S> static int t10261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1486,7 +1486,7 @@ template <class S> static int t10262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QList<QVariant>> p0;
     QTC_CV(0, p0);
@@ -1500,7 +1500,7 @@ template <class S> static int t10263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1512,7 +1512,7 @@ template <class S> static int t10264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1525,7 +1525,7 @@ template <class S> static int t10265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusmetatype.h>)
-template <class S> static int t10266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMetaType> p0;
     qtc::H<QByteArray> p1;
@@ -1540,7 +1540,7 @@ template <class S> static int t10266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const char *> p0;
     QTC_CV(0, p0);
@@ -1553,7 +1553,7 @@ template <class S> static int t10267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMetaType> p0;
     QTC_CV(0, p0);
@@ -1568,7 +1568,7 @@ template <class S> static int t10268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusextratypes.h>)
-template <class S> static int t10269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1582,7 +1582,7 @@ template <class S> static int t10269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1594,7 +1594,7 @@ template <class S> static int t10270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -1605,7 +1605,7 @@ template <class S> static int t10271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const char *> p0;
     QTC_CV(0, p0);
@@ -1618,7 +1618,7 @@ template <class S> static int t10272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QLatin1String> p0;
     QTC_CV(0, p0);
@@ -1631,7 +1631,7 @@ template <class S> static int t10273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10426(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1646,7 +1646,7 @@ template <class S> static int t10274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbuspendingcall.h>)
-template <class S> static int t10275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1658,7 +1658,7 @@ template <class S> static int t10275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10428(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1670,7 +1670,7 @@ template <class S> static int t10276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10429(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1682,7 +1682,7 @@ template <class S> static int t10277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10430(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1694,7 +1694,7 @@ template <class S> static int t10278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10431(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1706,7 +1706,7 @@ template <class S> static int t10279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10432(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1718,7 +1718,7 @@ template <class S> static int t10280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10433(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusError> p0;
     QTC_CV(0, p0);
@@ -1731,7 +1731,7 @@ template <class S> static int t10281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10434(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusMessage> p0;
     QTC_CV(0, p0);
@@ -1746,7 +1746,7 @@ template <class S> static int t10282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbuspendingcall.h>)
-template <class S> static int t10283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10435(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1758,7 +1758,7 @@ template <class S> static int t10283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10436(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDBusPendingCallWatcher *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1775,7 +1775,7 @@ template <class S> static int t10284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10437(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QDBusPendingCall> p0;
     qtc::H<QObject *> p1;
@@ -1795,7 +1795,7 @@ template <class S> static int t10285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusserver.h>)
-template <class S> static int t10286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10438(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1807,7 +1807,7 @@ template <class S> static int t10286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10439(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1819,7 +1819,7 @@ template <class S> static int t10287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10440(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1831,7 +1831,7 @@ template <class S> static int t10288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10441(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1845,7 +1845,7 @@ template <class S> static int t10289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10442(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1857,7 +1857,7 @@ template <class S> static int t10290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10443(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDBusConnection> p0;
     QTC_CV(0, p0);
@@ -1871,7 +1871,7 @@ template <class S> static int t10291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10444(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QObject *> p1;
@@ -1889,7 +1889,7 @@ template <class S> static int t10292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10445(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1907,7 +1907,7 @@ template <class S> static int t10293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusservicewatcher.h>)
-template <class S> static int t10294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10446(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1919,7 +1919,7 @@ template <class S> static int t10294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10447(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QList<QString>> p0;
     QTC_CV(0, p0);
@@ -1933,7 +1933,7 @@ template <class S> static int t10295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10448(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1947,7 +1947,7 @@ template <class S> static int t10296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10449(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -1961,7 +1961,7 @@ template <class S> static int t10297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10450(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1973,13 +1973,13 @@ template <class S> static int t10298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10451(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QDBusServiceWatcher::WatchModeFlag>> p0;
-    QTC_CVF(0, p0, 131);
+    QTC_CVF(0, p0, 138);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDBusServiceWatcher::WatchModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 131); s->setWatchMode(p0.get()); }) { s->setWatchMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QDBusServiceWatcher::WatchModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 138); s->setWatchMode(p0.get()); }) { s->setWatchMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1987,7 +1987,7 @@ template <class S> static int t10299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10452(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1999,7 +1999,7 @@ template <class S> static int t10300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10453(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDBusConnection> p0;
     QTC_CV(0, p0);
@@ -2013,7 +2013,7 @@ template <class S> static int t10301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10454(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2027,7 +2027,7 @@ template <class S> static int t10302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10455(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2041,7 +2041,7 @@ template <class S> static int t10303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10456(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     qtc::H<QString> p1;
@@ -2059,7 +2059,7 @@ template <class S> static int t10304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10457(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -2075,7 +2075,7 @@ template <class S> static int t10305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10458(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     qtc::H<QDBusConnection> p1;
@@ -2083,17 +2083,17 @@ template <class S> static int t10306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QObject *> p3;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (n > 2) QTC_CVF(2, p2, 131);
+    if (n > 2) QTC_CVF(2, p2, 138);
     if (n > 3) QTC_CV(3, p3);
     switch (n) {
         case 2:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusConnection> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusConnection> &p1, qtc::H<QFlags<QDBusServiceWatcher::WatchModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 131); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusConnection> &p1, qtc::H<QFlags<QDBusServiceWatcher::WatchModeFlag>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 138); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 4:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusConnection> &p1, qtc::H<QFlags<QDBusServiceWatcher::WatchModeFlag>> &p2, qtc::H<QObject *> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 131); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QDBusConnection> &p1, qtc::H<QFlags<QDBusServiceWatcher::WatchModeFlag>> &p2, qtc::H<QObject *> &p3) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 138); qtc::cv(aa[3], p3, 3); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2102,7 +2102,7 @@ template <class S> static int t10306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusextratypes.h>)
-template <class S> static int t10307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10459(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2116,7 +2116,7 @@ template <class S> static int t10307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10460(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2128,7 +2128,7 @@ template <class S> static int t10308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10461(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2139,7 +2139,7 @@ template <class S> static int t10309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10462(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<const char *> p0;
     QTC_CV(0, p0);
@@ -2152,7 +2152,7 @@ template <class S> static int t10310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10463(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QLatin1String> p0;
     QTC_CV(0, p0);
@@ -2165,7 +2165,7 @@ template <class S> static int t10311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10464(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2180,7 +2180,7 @@ template <class S> static int t10312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusunixfiledescriptor.h>)
-template <class S> static int t10313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10465(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2192,7 +2192,7 @@ template <class S> static int t10313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10466(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2204,7 +2204,7 @@ template <class S> static int t10314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10467(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2219,7 +2219,7 @@ template <class S> static int t10315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10468(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2234,7 +2234,7 @@ template <class S> static int t10316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10469(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2246,7 +2246,7 @@ template <class S> static int t10317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10470(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2257,7 +2257,7 @@ template <class S> static int t10318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10471(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2268,7 +2268,7 @@ template <class S> static int t10319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10472(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2283,7 +2283,7 @@ template <class S> static int t10320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusextratypes.h>)
-template <class S> static int t10321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10473(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -2297,7 +2297,7 @@ template <class S> static int t10321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10474(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -2309,7 +2309,7 @@ template <class S> static int t10322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10475(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -2320,7 +2320,7 @@ template <class S> static int t10323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10476(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QVariant> p0;
     QTC_CV(0, p0);
@@ -2335,7 +2335,7 @@ template <class S> static int t10324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtDBus/qdbusvirtualobject.h>)
-template <class S> static int t10325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10477(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -2349,7 +2349,7 @@ template <class S> static int t10325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t10326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t10478(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QDBusMessage> p0;
     qtc::H<QDBusConnection> p1;
@@ -2372,362 +2372,362 @@ static const qtc::MethodDef M_QDBusAbstractAdaptor[] = {
 static const qtc::MethodDef C_QDBusAbstractAdaptor[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10164[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10316[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P10166[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10318[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
-static const qtc::ParamDesc P10168[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10169[] = {{qtc::PK_ENUM, 119, "QDBus::CallMode", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10170[] = {{qtc::PK_ENUM, 119, "QDBus::CallMode", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
-static const qtc::ParamDesc P10171[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10172[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
+static const qtc::ParamDesc P10320[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10321[] = {{qtc::PK_ENUM, 126, "QDBus::CallMode", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10322[] = {{qtc::PK_ENUM, 126, "QDBus::CallMode", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
+static const qtc::ParamDesc P10323[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10324[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
 #if __has_include(<QtDBus/qdbusabstractinterface.h>)
 static const qtc::MethodDef M_QDBusAbstractInterface[] = {
-    {"isValid", "isValid()", t10158<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"connection", "connection()", t10159<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusConnection"},
-    {"service", "service()", t10160<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"path", "path()", t10161<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"interface", "interface()", t10162<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"lastError", "lastError()", t10163<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
-    {"setTimeout", "setTimeout(int)", t10164<QDBusAbstractInterface>, P10164, 1, 1, 0, QTC_T_NONE, "void"},
-    {"timeout", "timeout()", t10165<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"isValid", "isValid()", t10310<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"connection", "connection()", t10311<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusConnection"},
+    {"service", "service()", t10312<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"path", "path()", t10313<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"interface", "interface()", t10314<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"lastError", "lastError()", t10315<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
+    {"setTimeout", "setTimeout(int)", t10316<QDBusAbstractInterface>, P10316, 1, 1, 0, QTC_T_NONE, "void"},
+    {"timeout", "timeout()", t10317<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"setInteractiveAuthorizationAllowed", "setInteractiveAuthorizationAllowed(bool)", t10166<QDBusAbstractInterface>, P10166, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setInteractiveAuthorizationAllowed", "setInteractiveAuthorizationAllowed(bool)", t10318<QDBusAbstractInterface>, P10318, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"isInteractiveAuthorizationAllowed", "isInteractiveAuthorizationAllowed()", t10167<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isInteractiveAuthorizationAllowed", "isInteractiveAuthorizationAllowed()", t10319<QDBusAbstractInterface>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
-    {"call", "call(QString)", t10168<QDBusAbstractInterface>, P10168, 1, 1, 0, QTC_T_VALUE, "QDBusMessage"},
-    {"call", "call(QDBus::CallMode,QString)", t10169<QDBusAbstractInterface>, P10169, 2, 2, 0, QTC_T_VALUE, "QDBusMessage"},
-    {"callWithArgumentList", "callWithArgumentList(QDBus::CallMode,QString,QList<QVariant>)", t10170<QDBusAbstractInterface>, P10170, 3, 3, 0, QTC_T_VALUE, "QDBusMessage"},
-    {"asyncCall", "asyncCall(QString)", t10171<QDBusAbstractInterface>, P10171, 1, 1, 0, QTC_T_VALUE, "QDBusPendingCall"},
-    {"asyncCallWithArgumentList", "asyncCallWithArgumentList(QString,QList<QVariant>)", t10172<QDBusAbstractInterface>, P10172, 2, 2, 0, QTC_T_VALUE, "QDBusPendingCall"},
+    {"call", "call(QString)", t10320<QDBusAbstractInterface>, P10320, 1, 1, 0, QTC_T_VALUE, "QDBusMessage"},
+    {"call", "call(QDBus::CallMode,QString)", t10321<QDBusAbstractInterface>, P10321, 2, 2, 0, QTC_T_VALUE, "QDBusMessage"},
+    {"callWithArgumentList", "callWithArgumentList(QDBus::CallMode,QString,QList<QVariant>)", t10322<QDBusAbstractInterface>, P10322, 3, 3, 0, QTC_T_VALUE, "QDBusMessage"},
+    {"asyncCall", "asyncCall(QString)", t10323<QDBusAbstractInterface>, P10323, 1, 1, 0, QTC_T_VALUE, "QDBusPendingCall"},
+    {"asyncCallWithArgumentList", "asyncCallWithArgumentList(QString,QList<QVariant>)", t10324<QDBusAbstractInterface>, P10324, 2, 2, 0, QTC_T_VALUE, "QDBusPendingCall"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusAbstractInterface[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10175[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10176[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}};
-static const qtc::ParamDesc P10178[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10179[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}, {qtc::PK_VALUE, -1, "QMetaType", nullptr}};
-static const qtc::ParamDesc P10183[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10327[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10328[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}};
+static const qtc::ParamDesc P10330[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10331[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}, {qtc::PK_VALUE, -1, "QMetaType", nullptr}};
+static const qtc::ParamDesc P10335[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
 #if __has_include(<QtDBus/qdbusargument.h>)
 static const qtc::MethodDef M_QDBusArgument[] = {
-    {"beginStructure", "beginStructure()", t10173<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"endStructure", "endStructure()", t10174<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"beginArray", "beginArray(int)", t10175<QDBusArgument>, P10175, 1, 1, 0, QTC_T_NONE, "void"},
-    {"beginArray", "beginArray(QMetaType)", t10176<QDBusArgument>, P10176, 1, 1, 0, QTC_T_NONE, "void"},
-    {"endArray", "endArray()", t10177<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"beginMap", "beginMap(int,int)", t10178<QDBusArgument>, P10178, 2, 2, 0, QTC_T_NONE, "void"},
-    {"beginMap", "beginMap(QMetaType,QMetaType)", t10179<QDBusArgument>, P10179, 2, 2, 0, QTC_T_NONE, "void"},
-    {"endMap", "endMap()", t10180<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"beginMapEntry", "beginMapEntry()", t10181<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"endMapEntry", "endMapEntry()", t10182<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"appendVariant", "appendVariant(QVariant)", t10183<QDBusArgument>, P10183, 1, 1, 0, QTC_T_NONE, "void"},
-    {"currentSignature", "currentSignature()", t10184<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"currentType", "currentType()", t10185<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDBusArgument::ElementType"},
-    {"beginStructure", "beginStructure()", t10186<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"endStructure", "endStructure()", t10187<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"beginArray", "beginArray()", t10188<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"endArray", "endArray()", t10189<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"beginMap", "beginMap()", t10190<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"endMap", "endMap()", t10191<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"beginMapEntry", "beginMapEntry()", t10192<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"endMapEntry", "endMapEntry()", t10193<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"atEnd", "atEnd()", t10194<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"asVariant", "asVariant()", t10195<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"beginStructure", "beginStructure()", t10325<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"endStructure", "endStructure()", t10326<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"beginArray", "beginArray(int)", t10327<QDBusArgument>, P10327, 1, 1, 0, QTC_T_NONE, "void"},
+    {"beginArray", "beginArray(QMetaType)", t10328<QDBusArgument>, P10328, 1, 1, 0, QTC_T_NONE, "void"},
+    {"endArray", "endArray()", t10329<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"beginMap", "beginMap(int,int)", t10330<QDBusArgument>, P10330, 2, 2, 0, QTC_T_NONE, "void"},
+    {"beginMap", "beginMap(QMetaType,QMetaType)", t10331<QDBusArgument>, P10331, 2, 2, 0, QTC_T_NONE, "void"},
+    {"endMap", "endMap()", t10332<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"beginMapEntry", "beginMapEntry()", t10333<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"endMapEntry", "endMapEntry()", t10334<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"appendVariant", "appendVariant(QVariant)", t10335<QDBusArgument>, P10335, 1, 1, 0, QTC_T_NONE, "void"},
+    {"currentSignature", "currentSignature()", t10336<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"currentType", "currentType()", t10337<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDBusArgument::ElementType"},
+    {"beginStructure", "beginStructure()", t10338<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"endStructure", "endStructure()", t10339<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"beginArray", "beginArray()", t10340<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"endArray", "endArray()", t10341<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"beginMap", "beginMap()", t10342<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"endMap", "endMap()", t10343<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"beginMapEntry", "beginMapEntry()", t10344<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"endMapEntry", "endMapEntry()", t10345<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"atEnd", "atEnd()", t10346<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"asVariant", "asVariant()", t10347<QDBusArgument>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusArgument[] = {
-    {"QDBusArgument", "QDBusArgument()", t10196<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusArgument"},
+    {"QDBusArgument", "QDBusArgument()", t10348<QDBusArgument>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusArgument"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10202[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
-static const qtc::ParamDesc P10203[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}, {qtc::PK_ENUM, 119, "QDBus::CallMode", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10204[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10205[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_FLAGS, 123, "QFlags<QDBusConnection::RegisterOption>", nullptr}};
-static const qtc::ParamDesc P10206[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_FLAGS, 123, "QFlags<QDBusConnection::RegisterOption>", nullptr}};
-static const qtc::ParamDesc P10207[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 124, "QDBusConnection::UnregisterMode", nullptr}};
-static const qtc::ParamDesc P10208[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10209[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QDBusVirtualObject*", &QDBusVirtualObject::staticMetaObject}, {qtc::PK_ENUM, 125, "QDBusConnection::VirtualObjectRegisterOption", nullptr}};
-static const qtc::ParamDesc P10210[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10211[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10213[] = {{qtc::PK_ENUM, 121, "QDBusConnection::BusType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10214[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10215[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10216[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10217[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10221[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10354[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
+static const qtc::ParamDesc P10355[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}, {qtc::PK_ENUM, 126, "QDBus::CallMode", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10356[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10357[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_FLAGS, 130, "QFlags<QDBusConnection::RegisterOption>", nullptr}};
+static const qtc::ParamDesc P10358[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}, {qtc::PK_FLAGS, 130, "QFlags<QDBusConnection::RegisterOption>", nullptr}};
+static const qtc::ParamDesc P10359[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_ENUM, 131, "QDBusConnection::UnregisterMode", nullptr}};
+static const qtc::ParamDesc P10360[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10361[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QDBusVirtualObject*", &QDBusVirtualObject::staticMetaObject}, {qtc::PK_ENUM, 132, "QDBusConnection::VirtualObjectRegisterOption", nullptr}};
+static const qtc::ParamDesc P10362[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10363[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10365[] = {{qtc::PK_ENUM, 128, "QDBusConnection::BusType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10366[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10367[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10368[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10369[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10373[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtDBus/qdbusconnection.h>)
 static const qtc::MethodDef M_QDBusConnection[] = {
-    {"isConnected", "isConnected()", t10197<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"baseService", "baseService()", t10198<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"lastError", "lastError()", t10199<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
-    {"name", "name()", t10200<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"connectionCapabilities", "connectionCapabilities()", t10201<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QDBusConnection::ConnectionCapability>"},
-    {"send", "send(QDBusMessage)", t10202<QDBusConnection>, P10202, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"call", "call(QDBusMessage,QDBus::CallMode,int)", t10203<QDBusConnection>, P10203, 3, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
-    {"asyncCall", "asyncCall(QDBusMessage,int)", t10204<QDBusConnection>, P10204, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusPendingCall"},
-    {"registerObject", "registerObject(QString,QObject*,QDBusConnection::RegisterOptions)", t10205<QDBusConnection>, P10205, 3, 2, 0, QTC_T_BOOL, "bool"},
-    {"registerObject", "registerObject(QString,QString,QObject*,QDBusConnection::RegisterOptions)", t10206<QDBusConnection>, P10206, 4, 3, 0, QTC_T_BOOL, "bool"},
-    {"unregisterObject", "unregisterObject(QString,QDBusConnection::UnregisterMode)", t10207<QDBusConnection>, P10207, 2, 1, 0, QTC_T_NONE, "void"},
-    {"objectRegisteredAt", "objectRegisteredAt(QString)", t10208<QDBusConnection>, P10208, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"registerVirtualObject", "registerVirtualObject(QString,QDBusVirtualObject*,QDBusConnection::VirtualObjectRegisterOption)", t10209<QDBusConnection>, P10209, 3, 2, 0, QTC_T_BOOL, "bool"},
-    {"registerService", "registerService(QString)", t10210<QDBusConnection>, P10210, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"unregisterService", "unregisterService(QString)", t10211<QDBusConnection>, P10211, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"interface", "interface()", t10212<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QDBusConnectionInterface*"},
-    {"connectToBus", "connectToBus(QDBusConnection::BusType,QString)", t10213<QDBusConnection>, P10213, 2, 2, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
-    {"connectToBus", "connectToBus(QString,QString)", t10214<QDBusConnection>, P10214, 2, 2, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
-    {"connectToPeer", "connectToPeer(QString,QString)", t10215<QDBusConnection>, P10215, 2, 2, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
-    {"disconnectFromBus", "disconnectFromBus(QString)", t10216<QDBusConnection>, P10216, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
-    {"disconnectFromPeer", "disconnectFromPeer(QString)", t10217<QDBusConnection>, P10217, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
-    {"localMachineId", "localMachineId()", t10218<QDBusConnection>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_BYTES, "QByteArray"},
-    {"sessionBus", "sessionBus()", t10219<QDBusConnection>, nullptr, 0, 0, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
-    {"systemBus", "systemBus()", t10220<QDBusConnection>, nullptr, 0, 0, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
+    {"isConnected", "isConnected()", t10349<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"baseService", "baseService()", t10350<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"lastError", "lastError()", t10351<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
+    {"name", "name()", t10352<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"connectionCapabilities", "connectionCapabilities()", t10353<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QDBusConnection::ConnectionCapability>"},
+    {"send", "send(QDBusMessage)", t10354<QDBusConnection>, P10354, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"call", "call(QDBusMessage,QDBus::CallMode,int)", t10355<QDBusConnection>, P10355, 3, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
+    {"asyncCall", "asyncCall(QDBusMessage,int)", t10356<QDBusConnection>, P10356, 2, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusPendingCall"},
+    {"registerObject", "registerObject(QString,QObject*,QDBusConnection::RegisterOptions)", t10357<QDBusConnection>, P10357, 3, 2, 0, QTC_T_BOOL, "bool"},
+    {"registerObject", "registerObject(QString,QString,QObject*,QDBusConnection::RegisterOptions)", t10358<QDBusConnection>, P10358, 4, 3, 0, QTC_T_BOOL, "bool"},
+    {"unregisterObject", "unregisterObject(QString,QDBusConnection::UnregisterMode)", t10359<QDBusConnection>, P10359, 2, 1, 0, QTC_T_NONE, "void"},
+    {"objectRegisteredAt", "objectRegisteredAt(QString)", t10360<QDBusConnection>, P10360, 1, 1, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"registerVirtualObject", "registerVirtualObject(QString,QDBusVirtualObject*,QDBusConnection::VirtualObjectRegisterOption)", t10361<QDBusConnection>, P10361, 3, 2, 0, QTC_T_BOOL, "bool"},
+    {"registerService", "registerService(QString)", t10362<QDBusConnection>, P10362, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"unregisterService", "unregisterService(QString)", t10363<QDBusConnection>, P10363, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"interface", "interface()", t10364<QDBusConnection>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QDBusConnectionInterface*"},
+    {"connectToBus", "connectToBus(QDBusConnection::BusType,QString)", t10365<QDBusConnection>, P10365, 2, 2, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
+    {"connectToBus", "connectToBus(QString,QString)", t10366<QDBusConnection>, P10366, 2, 2, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
+    {"connectToPeer", "connectToPeer(QString,QString)", t10367<QDBusConnection>, P10367, 2, 2, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
+    {"disconnectFromBus", "disconnectFromBus(QString)", t10368<QDBusConnection>, P10368, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"disconnectFromPeer", "disconnectFromPeer(QString)", t10369<QDBusConnection>, P10369, 1, 1, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"localMachineId", "localMachineId()", t10370<QDBusConnection>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_BYTES, "QByteArray"},
+    {"sessionBus", "sessionBus()", t10371<QDBusConnection>, nullptr, 0, 0, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
+    {"systemBus", "systemBus()", t10372<QDBusConnection>, nullptr, 0, 0, qtc::MF_STATIC|qtc::MF_BLOCKING, QTC_T_VALUE, "QDBusConnection"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusConnection[] = {
-    {"QDBusConnection", "QDBusConnection(QString)", t10221<QDBusConnection>, P10221, 1, 1, 0, QTC_T_VALUE, "QDBusConnection"},
+    {"QDBusConnection", "QDBusConnection(QString)", t10373<QDBusConnection>, P10373, 1, 1, 0, QTC_T_VALUE, "QDBusConnection"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10222[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10223[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10224[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10225[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}, {qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
-static const qtc::ParamDesc P10226[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10227[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10228[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10374[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10375[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10376[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10377[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}, {qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
+static const qtc::ParamDesc P10378[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10379[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10380[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtDBus/qdbusconnectioninterface.h>)
 static const qtc::MethodDef M_QDBusConnectionInterface[] = {
-    {"serviceRegistered", "serviceRegistered(QString)", t10222<QDBusConnectionInterface>, P10222, 1, 1, 0, QTC_T_NONE, "void"},
-    {"serviceUnregistered", "serviceUnregistered(QString)", t10223<QDBusConnectionInterface>, P10223, 1, 1, 0, QTC_T_NONE, "void"},
-    {"serviceOwnerChanged", "serviceOwnerChanged(QString,QString,QString)", t10224<QDBusConnectionInterface>, P10224, 3, 3, 0, QTC_T_NONE, "void"},
-    {"callWithCallbackFailed", "callWithCallbackFailed(QDBusError,QDBusMessage)", t10225<QDBusConnectionInterface>, P10225, 2, 2, 0, QTC_T_NONE, "void"},
-    {"NameAcquired", "NameAcquired(QString)", t10226<QDBusConnectionInterface>, P10226, 1, 1, 0, QTC_T_NONE, "void"},
-    {"NameLost", "NameLost(QString)", t10227<QDBusConnectionInterface>, P10227, 1, 1, 0, QTC_T_NONE, "void"},
-    {"NameOwnerChanged", "NameOwnerChanged(QString,QString,QString)", t10228<QDBusConnectionInterface>, P10228, 3, 3, 0, QTC_T_NONE, "void"},
+    {"serviceRegistered", "serviceRegistered(QString)", t10374<QDBusConnectionInterface>, P10374, 1, 1, 0, QTC_T_NONE, "void"},
+    {"serviceUnregistered", "serviceUnregistered(QString)", t10375<QDBusConnectionInterface>, P10375, 1, 1, 0, QTC_T_NONE, "void"},
+    {"serviceOwnerChanged", "serviceOwnerChanged(QString,QString,QString)", t10376<QDBusConnectionInterface>, P10376, 3, 3, 0, QTC_T_NONE, "void"},
+    {"callWithCallbackFailed", "callWithCallbackFailed(QDBusError,QDBusMessage)", t10377<QDBusConnectionInterface>, P10377, 2, 2, 0, QTC_T_NONE, "void"},
+    {"NameAcquired", "NameAcquired(QString)", t10378<QDBusConnectionInterface>, P10378, 1, 1, 0, QTC_T_NONE, "void"},
+    {"NameLost", "NameLost(QString)", t10379<QDBusConnectionInterface>, P10379, 1, 1, 0, QTC_T_NONE, "void"},
+    {"NameOwnerChanged", "NameOwnerChanged(QString,QString,QString)", t10380<QDBusConnectionInterface>, P10380, 3, 3, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusConnectionInterface[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10233[] = {{qtc::PK_ENUM, 129, "QDBusError::ErrorType", nullptr}};
-static const qtc::ParamDesc P10235[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
-static const qtc::ParamDesc P10236[] = {{qtc::PK_ENUM, 129, "QDBusError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10385[] = {{qtc::PK_ENUM, 136, "QDBusError::ErrorType", nullptr}};
+static const qtc::ParamDesc P10387[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
+static const qtc::ParamDesc P10388[] = {{qtc::PK_ENUM, 136, "QDBusError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtDBus/qdbuserror.h>)
 static const qtc::MethodDef M_QDBusError[] = {
-    {"type", "type()", t10229<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDBusError::ErrorType"},
-    {"name", "name()", t10230<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"message", "message()", t10231<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isValid", "isValid()", t10232<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"errorString", "errorString(QDBusError::ErrorType)", t10233<QDBusError>, P10233, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"type", "type()", t10381<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDBusError::ErrorType"},
+    {"name", "name()", t10382<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"message", "message()", t10383<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isValid", "isValid()", t10384<QDBusError>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"errorString", "errorString(QDBusError::ErrorType)", t10385<QDBusError>, P10385, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusError[] = {
-    {"QDBusError", "QDBusError()", t10234<QDBusError>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusError"},
-    {"QDBusError", "QDBusError(QDBusMessage)", t10235<QDBusError>, P10235, 1, 1, 0, QTC_T_VALUE, "QDBusError"},
-    {"QDBusError", "QDBusError(QDBusError::ErrorType,QString)", t10236<QDBusError>, P10236, 2, 2, 0, QTC_T_VALUE, "QDBusError"},
+    {"QDBusError", "QDBusError()", t10386<QDBusError>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusError"},
+    {"QDBusError", "QDBusError(QDBusMessage)", t10387<QDBusError>, P10387, 1, 1, 0, QTC_T_VALUE, "QDBusError"},
+    {"QDBusError", "QDBusError(QDBusError::ErrorType,QString)", t10388<QDBusError>, P10388, 2, 2, 0, QTC_T_VALUE, "QDBusError"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10237[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10238[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10239[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10240[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10241[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}};
-static const qtc::ParamDesc P10242[] = {{qtc::PK_ENUM, 129, "QDBusError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10243[] = {{qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
-static const qtc::ParamDesc P10244[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P10245[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10246[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}};
-static const qtc::ParamDesc P10247[] = {{qtc::PK_ENUM, 129, "QDBusError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10257[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10259[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10261[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10263[] = {{qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
+static const qtc::ParamDesc P10389[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10390[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10391[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10392[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10393[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}};
+static const qtc::ParamDesc P10394[] = {{qtc::PK_ENUM, 136, "QDBusError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10395[] = {{qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
+static const qtc::ParamDesc P10396[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10397[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10398[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}};
+static const qtc::ParamDesc P10399[] = {{qtc::PK_ENUM, 136, "QDBusError::ErrorType", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10409[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10411[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10413[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10415[] = {{qtc::PK_LIST, -1, "QList<QVariant>", nullptr}};
 #if __has_include(<QtDBus/qdbusmessage.h>)
 static const qtc::MethodDef M_QDBusMessage[] = {
-    {"createSignal", "createSignal(QString,QString,QString)", t10237<QDBusMessage>, P10237, 3, 3, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
-    {"createTargetedSignal", "createTargetedSignal(QString,QString,QString,QString)", t10238<QDBusMessage>, P10238, 4, 4, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
-    {"createMethodCall", "createMethodCall(QString,QString,QString,QString)", t10239<QDBusMessage>, P10239, 4, 4, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
-    {"createError", "createError(QString,QString)", t10240<QDBusMessage>, P10240, 2, 2, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
-    {"createError", "createError(QDBusError)", t10241<QDBusMessage>, P10241, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
-    {"createError", "createError(QDBusError::ErrorType,QString)", t10242<QDBusMessage>, P10242, 2, 2, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
-    {"createReply", "createReply(QList<QVariant>)", t10243<QDBusMessage>, P10243, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
-    {"createReply", "createReply(QVariant)", t10244<QDBusMessage>, P10244, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
-    {"createErrorReply", "createErrorReply(QString,QString)", t10245<QDBusMessage>, P10245, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
-    {"createErrorReply", "createErrorReply(QDBusError)", t10246<QDBusMessage>, P10246, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
-    {"createErrorReply", "createErrorReply(QDBusError::ErrorType,QString)", t10247<QDBusMessage>, P10247, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
-    {"service", "service()", t10248<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"path", "path()", t10249<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"interface", "interface()", t10250<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"member", "member()", t10251<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"errorName", "errorName()", t10252<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"errorMessage", "errorMessage()", t10253<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"type", "type()", t10254<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDBusMessage::MessageType"},
-    {"signature", "signature()", t10255<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isReplyRequired", "isReplyRequired()", t10256<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setDelayedReply", "setDelayedReply(bool)", t10257<QDBusMessage>, P10257, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"isDelayedReply", "isDelayedReply()", t10258<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setAutoStartService", "setAutoStartService(bool)", t10259<QDBusMessage>, P10259, 1, 1, 0, QTC_T_NONE, "void"},
-    {"autoStartService", "autoStartService()", t10260<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setInteractiveAuthorizationAllowed", "setInteractiveAuthorizationAllowed(bool)", t10261<QDBusMessage>, P10261, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isInteractiveAuthorizationAllowed", "isInteractiveAuthorizationAllowed()", t10262<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setArguments", "setArguments(QList<QVariant>)", t10263<QDBusMessage>, P10263, 1, 1, 0, QTC_T_NONE, "void"},
-    {"arguments", "arguments()", t10264<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
+    {"createSignal", "createSignal(QString,QString,QString)", t10389<QDBusMessage>, P10389, 3, 3, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
+    {"createTargetedSignal", "createTargetedSignal(QString,QString,QString,QString)", t10390<QDBusMessage>, P10390, 4, 4, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
+    {"createMethodCall", "createMethodCall(QString,QString,QString,QString)", t10391<QDBusMessage>, P10391, 4, 4, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
+    {"createError", "createError(QString,QString)", t10392<QDBusMessage>, P10392, 2, 2, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
+    {"createError", "createError(QDBusError)", t10393<QDBusMessage>, P10393, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
+    {"createError", "createError(QDBusError::ErrorType,QString)", t10394<QDBusMessage>, P10394, 2, 2, qtc::MF_STATIC, QTC_T_VALUE, "QDBusMessage"},
+    {"createReply", "createReply(QList<QVariant>)", t10395<QDBusMessage>, P10395, 1, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
+    {"createReply", "createReply(QVariant)", t10396<QDBusMessage>, P10396, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
+    {"createErrorReply", "createErrorReply(QString,QString)", t10397<QDBusMessage>, P10397, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
+    {"createErrorReply", "createErrorReply(QDBusError)", t10398<QDBusMessage>, P10398, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
+    {"createErrorReply", "createErrorReply(QDBusError::ErrorType,QString)", t10399<QDBusMessage>, P10399, 2, 2, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
+    {"service", "service()", t10400<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"path", "path()", t10401<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"interface", "interface()", t10402<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"member", "member()", t10403<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"errorName", "errorName()", t10404<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"errorMessage", "errorMessage()", t10405<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"type", "type()", t10406<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QDBusMessage::MessageType"},
+    {"signature", "signature()", t10407<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isReplyRequired", "isReplyRequired()", t10408<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setDelayedReply", "setDelayedReply(bool)", t10409<QDBusMessage>, P10409, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"isDelayedReply", "isDelayedReply()", t10410<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setAutoStartService", "setAutoStartService(bool)", t10411<QDBusMessage>, P10411, 1, 1, 0, QTC_T_NONE, "void"},
+    {"autoStartService", "autoStartService()", t10412<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setInteractiveAuthorizationAllowed", "setInteractiveAuthorizationAllowed(bool)", t10413<QDBusMessage>, P10413, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isInteractiveAuthorizationAllowed", "isInteractiveAuthorizationAllowed()", t10414<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setArguments", "setArguments(QList<QVariant>)", t10415<QDBusMessage>, P10415, 1, 1, 0, QTC_T_NONE, "void"},
+    {"arguments", "arguments()", t10416<QDBusMessage>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QVariant>"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusMessage[] = {
-    {"QDBusMessage", "QDBusMessage()", t10265<QDBusMessage>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusMessage"},
+    {"QDBusMessage", "QDBusMessage()", t10417<QDBusMessage>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusMessage"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10266[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
-static const qtc::ParamDesc P10267[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
-static const qtc::ParamDesc P10268[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}};
+static const qtc::ParamDesc P10418[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}, {qtc::PK_BYTES, -1, "QByteArray", nullptr}};
+static const qtc::ParamDesc P10419[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
+static const qtc::ParamDesc P10420[] = {{qtc::PK_VALUE, -1, "QMetaType", nullptr}};
 #if __has_include(<QtDBus/qdbusmetatype.h>)
 static const qtc::MethodDef M_QDBusMetaType[] = {
-    {"registerCustomType", "registerCustomType(QMetaType,QByteArray)", t10266<QDBusMetaType>, P10266, 2, 2, qtc::MF_STATIC, QTC_T_NONE, "void"},
-    {"signatureToMetaType", "signatureToMetaType(const char*)", t10267<QDBusMetaType>, P10267, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QMetaType"},
-    {"typeToSignature", "typeToSignature(QMetaType)", t10268<QDBusMetaType>, P10268, 1, 1, qtc::MF_STATIC, QTC_T_STR, "const char*"},
+    {"registerCustomType", "registerCustomType(QMetaType,QByteArray)", t10418<QDBusMetaType>, P10418, 2, 2, qtc::MF_STATIC, QTC_T_NONE, "void"},
+    {"signatureToMetaType", "signatureToMetaType(const char*)", t10419<QDBusMetaType>, P10419, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QMetaType"},
+    {"typeToSignature", "typeToSignature(QMetaType)", t10420<QDBusMetaType>, P10420, 1, 1, qtc::MF_STATIC, QTC_T_STR, "const char*"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusMetaType[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10269[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10272[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
-static const qtc::ParamDesc P10273[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
-static const qtc::ParamDesc P10274[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10421[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10424[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
+static const qtc::ParamDesc P10425[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
+static const qtc::ParamDesc P10426[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtDBus/qdbusextratypes.h>)
 static const qtc::MethodDef M_QDBusObjectPath[] = {
-    {"setPath", "setPath(QString)", t10269<QDBusObjectPath>, P10269, 1, 1, 0, QTC_T_NONE, "void"},
-    {"path", "path()", t10270<QDBusObjectPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setPath", "setPath(QString)", t10421<QDBusObjectPath>, P10421, 1, 1, 0, QTC_T_NONE, "void"},
+    {"path", "path()", t10422<QDBusObjectPath>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusObjectPath[] = {
-    {"QDBusObjectPath", "QDBusObjectPath()", t10271<QDBusObjectPath>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusObjectPath"},
-    {"QDBusObjectPath", "QDBusObjectPath(const char*)", t10272<QDBusObjectPath>, P10272, 1, 1, 0, QTC_T_VALUE, "QDBusObjectPath"},
-    {"QDBusObjectPath", "QDBusObjectPath(QLatin1StringView)", t10273<QDBusObjectPath>, P10273, 1, 1, 0, QTC_T_VALUE, "QDBusObjectPath"},
-    {"QDBusObjectPath", "QDBusObjectPath(QString)", t10274<QDBusObjectPath>, P10274, 1, 1, 0, QTC_T_VALUE, "QDBusObjectPath"},
+    {"QDBusObjectPath", "QDBusObjectPath()", t10423<QDBusObjectPath>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusObjectPath"},
+    {"QDBusObjectPath", "QDBusObjectPath(const char*)", t10424<QDBusObjectPath>, P10424, 1, 1, 0, QTC_T_VALUE, "QDBusObjectPath"},
+    {"QDBusObjectPath", "QDBusObjectPath(QLatin1StringView)", t10425<QDBusObjectPath>, P10425, 1, 1, 0, QTC_T_VALUE, "QDBusObjectPath"},
+    {"QDBusObjectPath", "QDBusObjectPath(QString)", t10426<QDBusObjectPath>, P10426, 1, 1, 0, QTC_T_VALUE, "QDBusObjectPath"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10281[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}};
-static const qtc::ParamDesc P10282[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
+static const qtc::ParamDesc P10433[] = {{qtc::PK_VALUE, -1, "QDBusError", nullptr}};
+static const qtc::ParamDesc P10434[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}};
 #if __has_include(<QtDBus/qdbuspendingcall.h>)
 static const qtc::MethodDef M_QDBusPendingCall[] = {
-    {"isFinished", "isFinished()", t10275<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"waitForFinished", "waitForFinished()", t10276<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_BLOCKING, QTC_T_NONE, "void"},
-    {"isError", "isError()", t10277<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isValid", "isValid()", t10278<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"error", "error()", t10279<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
-    {"reply", "reply()", t10280<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
-    {"fromError", "fromError(QDBusError)", t10281<QDBusPendingCall>, P10281, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QDBusPendingCall"},
-    {"fromCompletedCall", "fromCompletedCall(QDBusMessage)", t10282<QDBusPendingCall>, P10282, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QDBusPendingCall"},
+    {"isFinished", "isFinished()", t10427<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"waitForFinished", "waitForFinished()", t10428<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_BLOCKING, QTC_T_NONE, "void"},
+    {"isError", "isError()", t10429<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isValid", "isValid()", t10430<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"error", "error()", t10431<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
+    {"reply", "reply()", t10432<QDBusPendingCall>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusMessage"},
+    {"fromError", "fromError(QDBusError)", t10433<QDBusPendingCall>, P10433, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QDBusPendingCall"},
+    {"fromCompletedCall", "fromCompletedCall(QDBusMessage)", t10434<QDBusPendingCall>, P10434, 1, 1, qtc::MF_STATIC, QTC_T_VALUE, "QDBusPendingCall"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusPendingCall[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10284[] = {{qtc::PK_OBJ, -1, "QDBusPendingCallWatcher*", &QDBusPendingCallWatcher::staticMetaObject}};
-static const qtc::ParamDesc P10285[] = {{qtc::PK_VALUE, -1, "QDBusPendingCall", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10436[] = {{qtc::PK_OBJ, -1, "QDBusPendingCallWatcher*", &QDBusPendingCallWatcher::staticMetaObject}};
+static const qtc::ParamDesc P10437[] = {{qtc::PK_VALUE, -1, "QDBusPendingCall", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtDBus/qdbuspendingcall.h>)
 static const qtc::MethodDef M_QDBusPendingCallWatcher[] = {
-    {"waitForFinished", "waitForFinished()", t10283<QDBusPendingCallWatcher>, nullptr, 0, 0, qtc::MF_BLOCKING, QTC_T_NONE, "void"},
-    {"finished", "finished(QDBusPendingCallWatcher*)", t10284<QDBusPendingCallWatcher>, P10284, 1, 0, 0, QTC_T_NONE, "void"},
+    {"waitForFinished", "waitForFinished()", t10435<QDBusPendingCallWatcher>, nullptr, 0, 0, qtc::MF_BLOCKING, QTC_T_NONE, "void"},
+    {"finished", "finished(QDBusPendingCallWatcher*)", t10436<QDBusPendingCallWatcher>, P10436, 1, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusPendingCallWatcher[] = {
-    {"QDBusPendingCallWatcher", "QDBusPendingCallWatcher(QDBusPendingCall,QObject*)", t10285<QDBusPendingCallWatcher>, P10285, 2, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QDBusPendingCallWatcher"},
+    {"QDBusPendingCallWatcher", "QDBusPendingCallWatcher(QDBusPendingCall,QObject*)", t10437<QDBusPendingCallWatcher>, P10437, 2, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QDBusPendingCallWatcher"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10289[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P10291[] = {{qtc::PK_VALUE, -1, "QDBusConnection", nullptr}};
-static const qtc::ParamDesc P10292[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10293[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10441[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P10443[] = {{qtc::PK_VALUE, -1, "QDBusConnection", nullptr}};
+static const qtc::ParamDesc P10444[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10445[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtDBus/qdbusserver.h>)
 static const qtc::MethodDef M_QDBusServer[] = {
-    {"isConnected", "isConnected()", t10286<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"lastError", "lastError()", t10287<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
-    {"address", "address()", t10288<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setAnonymousAuthenticationAllowed", "setAnonymousAuthenticationAllowed(bool)", t10289<QDBusServer>, P10289, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isAnonymousAuthenticationAllowed", "isAnonymousAuthenticationAllowed()", t10290<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"newConnection", "newConnection(QDBusConnection)", t10291<QDBusServer>, P10291, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isConnected", "isConnected()", t10438<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"lastError", "lastError()", t10439<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusError"},
+    {"address", "address()", t10440<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setAnonymousAuthenticationAllowed", "setAnonymousAuthenticationAllowed(bool)", t10441<QDBusServer>, P10441, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isAnonymousAuthenticationAllowed", "isAnonymousAuthenticationAllowed()", t10442<QDBusServer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"newConnection", "newConnection(QDBusConnection)", t10443<QDBusServer>, P10443, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusServer[] = {
-    {"QDBusServer", "QDBusServer(QString,QObject*)", t10292<QDBusServer>, P10292, 2, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QDBusServer"},
-    {"QDBusServer", "QDBusServer(QObject*)", t10293<QDBusServer>, P10293, 1, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QDBusServer"},
+    {"QDBusServer", "QDBusServer(QString,QObject*)", t10444<QDBusServer>, P10444, 2, 1, qtc::MF_NOFUZZ, QTC_T_OBJ, "QDBusServer"},
+    {"QDBusServer", "QDBusServer(QObject*)", t10445<QDBusServer>, P10445, 1, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QDBusServer"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10295[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
-static const qtc::ParamDesc P10296[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10297[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10299[] = {{qtc::PK_FLAGS, 131, "QFlags<QDBusServiceWatcher::WatchModeFlag>", nullptr}};
-static const qtc::ParamDesc P10301[] = {{qtc::PK_VALUE, -1, "QDBusConnection", nullptr}};
-static const qtc::ParamDesc P10302[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10303[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10304[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10305[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P10306[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QDBusConnection", nullptr}, {qtc::PK_FLAGS, 131, "QFlags<QDBusServiceWatcher::WatchModeFlag>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10447[] = {{qtc::PK_LIST, -1, "QList<QString>", nullptr}};
+static const qtc::ParamDesc P10448[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10449[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10451[] = {{qtc::PK_FLAGS, 138, "QFlags<QDBusServiceWatcher::WatchModeFlag>", nullptr}};
+static const qtc::ParamDesc P10453[] = {{qtc::PK_VALUE, -1, "QDBusConnection", nullptr}};
+static const qtc::ParamDesc P10454[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10455[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10456[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10457[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P10458[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_VALUE, -1, "QDBusConnection", nullptr}, {qtc::PK_FLAGS, 138, "QFlags<QDBusServiceWatcher::WatchModeFlag>", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtDBus/qdbusservicewatcher.h>)
 static const qtc::MethodDef M_QDBusServiceWatcher[] = {
-    {"watchedServices", "watchedServices()", t10294<QDBusServiceWatcher>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
-    {"setWatchedServices", "setWatchedServices(QStringList)", t10295<QDBusServiceWatcher>, P10295, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addWatchedService", "addWatchedService(QString)", t10296<QDBusServiceWatcher>, P10296, 1, 1, 0, QTC_T_NONE, "void"},
-    {"removeWatchedService", "removeWatchedService(QString)", t10297<QDBusServiceWatcher>, P10297, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
-    {"watchMode", "watchMode()", t10298<QDBusServiceWatcher>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QDBusServiceWatcher::WatchModeFlag>"},
-    {"setWatchMode", "setWatchMode(QDBusServiceWatcher::WatchMode)", t10299<QDBusServiceWatcher>, P10299, 1, 1, 0, QTC_T_NONE, "void"},
-    {"connection", "connection()", t10300<QDBusServiceWatcher>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusConnection"},
-    {"setConnection", "setConnection(QDBusConnection)", t10301<QDBusServiceWatcher>, P10301, 1, 1, 0, QTC_T_NONE, "void"},
-    {"serviceRegistered", "serviceRegistered(QString)", t10302<QDBusServiceWatcher>, P10302, 1, 1, 0, QTC_T_NONE, "void"},
-    {"serviceUnregistered", "serviceUnregistered(QString)", t10303<QDBusServiceWatcher>, P10303, 1, 1, 0, QTC_T_NONE, "void"},
-    {"serviceOwnerChanged", "serviceOwnerChanged(QString,QString,QString)", t10304<QDBusServiceWatcher>, P10304, 3, 3, 0, QTC_T_NONE, "void"},
+    {"watchedServices", "watchedServices()", t10446<QDBusServiceWatcher>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QString>"},
+    {"setWatchedServices", "setWatchedServices(QStringList)", t10447<QDBusServiceWatcher>, P10447, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addWatchedService", "addWatchedService(QString)", t10448<QDBusServiceWatcher>, P10448, 1, 1, 0, QTC_T_NONE, "void"},
+    {"removeWatchedService", "removeWatchedService(QString)", t10449<QDBusServiceWatcher>, P10449, 1, 1, qtc::MF_NOFUZZ, QTC_T_BOOL, "bool"},
+    {"watchMode", "watchMode()", t10450<QDBusServiceWatcher>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QDBusServiceWatcher::WatchModeFlag>"},
+    {"setWatchMode", "setWatchMode(QDBusServiceWatcher::WatchMode)", t10451<QDBusServiceWatcher>, P10451, 1, 1, 0, QTC_T_NONE, "void"},
+    {"connection", "connection()", t10452<QDBusServiceWatcher>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QDBusConnection"},
+    {"setConnection", "setConnection(QDBusConnection)", t10453<QDBusServiceWatcher>, P10453, 1, 1, 0, QTC_T_NONE, "void"},
+    {"serviceRegistered", "serviceRegistered(QString)", t10454<QDBusServiceWatcher>, P10454, 1, 1, 0, QTC_T_NONE, "void"},
+    {"serviceUnregistered", "serviceUnregistered(QString)", t10455<QDBusServiceWatcher>, P10455, 1, 1, 0, QTC_T_NONE, "void"},
+    {"serviceOwnerChanged", "serviceOwnerChanged(QString,QString,QString)", t10456<QDBusServiceWatcher>, P10456, 3, 3, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusServiceWatcher[] = {
-    {"QDBusServiceWatcher", "QDBusServiceWatcher(QObject*)", t10305<QDBusServiceWatcher>, P10305, 1, 0, 0, QTC_T_OBJ, "QDBusServiceWatcher"},
-    {"QDBusServiceWatcher", "QDBusServiceWatcher(QString,QDBusConnection,QDBusServiceWatcher::WatchMode,QObject*)", t10306<QDBusServiceWatcher>, P10306, 4, 2, 0, QTC_T_OBJ, "QDBusServiceWatcher"},
+    {"QDBusServiceWatcher", "QDBusServiceWatcher(QObject*)", t10457<QDBusServiceWatcher>, P10457, 1, 0, 0, QTC_T_OBJ, "QDBusServiceWatcher"},
+    {"QDBusServiceWatcher", "QDBusServiceWatcher(QString,QDBusConnection,QDBusServiceWatcher::WatchMode,QObject*)", t10458<QDBusServiceWatcher>, P10458, 4, 2, 0, QTC_T_OBJ, "QDBusServiceWatcher"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10307[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10310[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
-static const qtc::ParamDesc P10311[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
-static const qtc::ParamDesc P10312[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10459[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10462[] = {{qtc::PK_BYTES, -1, "const char*", nullptr}};
+static const qtc::ParamDesc P10463[] = {{qtc::PK_STR, -1, "QLatin1String", nullptr}};
+static const qtc::ParamDesc P10464[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 #if __has_include(<QtDBus/qdbusextratypes.h>)
 static const qtc::MethodDef M_QDBusSignature[] = {
-    {"setSignature", "setSignature(QString)", t10307<QDBusSignature>, P10307, 1, 1, 0, QTC_T_NONE, "void"},
-    {"signature", "signature()", t10308<QDBusSignature>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setSignature", "setSignature(QString)", t10459<QDBusSignature>, P10459, 1, 1, 0, QTC_T_NONE, "void"},
+    {"signature", "signature()", t10460<QDBusSignature>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusSignature[] = {
-    {"QDBusSignature", "QDBusSignature()", t10309<QDBusSignature>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusSignature"},
-    {"QDBusSignature", "QDBusSignature(const char*)", t10310<QDBusSignature>, P10310, 1, 1, 0, QTC_T_VALUE, "QDBusSignature"},
-    {"QDBusSignature", "QDBusSignature(QLatin1StringView)", t10311<QDBusSignature>, P10311, 1, 1, 0, QTC_T_VALUE, "QDBusSignature"},
-    {"QDBusSignature", "QDBusSignature(QString)", t10312<QDBusSignature>, P10312, 1, 1, 0, QTC_T_VALUE, "QDBusSignature"},
+    {"QDBusSignature", "QDBusSignature()", t10461<QDBusSignature>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusSignature"},
+    {"QDBusSignature", "QDBusSignature(const char*)", t10462<QDBusSignature>, P10462, 1, 1, 0, QTC_T_VALUE, "QDBusSignature"},
+    {"QDBusSignature", "QDBusSignature(QLatin1StringView)", t10463<QDBusSignature>, P10463, 1, 1, 0, QTC_T_VALUE, "QDBusSignature"},
+    {"QDBusSignature", "QDBusSignature(QString)", t10464<QDBusSignature>, P10464, 1, 1, 0, QTC_T_VALUE, "QDBusSignature"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10315[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10316[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P10320[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10467[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10468[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P10472[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if __has_include(<QtDBus/qdbusunixfiledescriptor.h>)
 static const qtc::MethodDef M_QDBusUnixFileDescriptor[] = {
-    {"isValid", "isValid()", t10313<QDBusUnixFileDescriptor>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"fileDescriptor", "fileDescriptor()", t10314<QDBusUnixFileDescriptor>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setFileDescriptor", "setFileDescriptor(int)", t10315<QDBusUnixFileDescriptor>, P10315, 1, 1, 0, QTC_T_NONE, "void"},
-    {"giveFileDescriptor", "giveFileDescriptor(int)", t10316<QDBusUnixFileDescriptor>, P10316, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"takeFileDescriptor", "takeFileDescriptor()", t10317<QDBusUnixFileDescriptor>, nullptr, 0, 0, 0, QTC_T_INT, "int"},
-    {"isSupported", "isSupported()", t10318<QDBusUnixFileDescriptor>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
+    {"isValid", "isValid()", t10465<QDBusUnixFileDescriptor>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"fileDescriptor", "fileDescriptor()", t10466<QDBusUnixFileDescriptor>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setFileDescriptor", "setFileDescriptor(int)", t10467<QDBusUnixFileDescriptor>, P10467, 1, 1, 0, QTC_T_NONE, "void"},
+    {"giveFileDescriptor", "giveFileDescriptor(int)", t10468<QDBusUnixFileDescriptor>, P10468, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"takeFileDescriptor", "takeFileDescriptor()", t10469<QDBusUnixFileDescriptor>, nullptr, 0, 0, 0, QTC_T_INT, "int"},
+    {"isSupported", "isSupported()", t10470<QDBusUnixFileDescriptor>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusUnixFileDescriptor[] = {
-    {"QDBusUnixFileDescriptor", "QDBusUnixFileDescriptor()", t10319<QDBusUnixFileDescriptor>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusUnixFileDescriptor"},
-    {"QDBusUnixFileDescriptor", "QDBusUnixFileDescriptor(int)", t10320<QDBusUnixFileDescriptor>, P10320, 1, 1, 0, QTC_T_VALUE, "QDBusUnixFileDescriptor"},
+    {"QDBusUnixFileDescriptor", "QDBusUnixFileDescriptor()", t10471<QDBusUnixFileDescriptor>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusUnixFileDescriptor"},
+    {"QDBusUnixFileDescriptor", "QDBusUnixFileDescriptor(int)", t10472<QDBusUnixFileDescriptor>, P10472, 1, 1, 0, QTC_T_VALUE, "QDBusUnixFileDescriptor"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10321[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P10324[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10473[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P10476[] = {{qtc::PK_VARIANT, -1, "QVariant", nullptr}};
 #if __has_include(<QtDBus/qdbusextratypes.h>)
 static const qtc::MethodDef M_QDBusVariant[] = {
-    {"setVariant", "setVariant(QVariant)", t10321<QDBusVariant>, P10321, 1, 1, 0, QTC_T_NONE, "void"},
-    {"variant", "variant()", t10322<QDBusVariant>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"setVariant", "setVariant(QVariant)", t10473<QDBusVariant>, P10473, 1, 1, 0, QTC_T_NONE, "void"},
+    {"variant", "variant()", t10474<QDBusVariant>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusVariant[] = {
-    {"QDBusVariant", "QDBusVariant()", t10323<QDBusVariant>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusVariant"},
-    {"QDBusVariant", "QDBusVariant(QVariant)", t10324<QDBusVariant>, P10324, 1, 1, 0, QTC_T_VALUE, "QDBusVariant"},
+    {"QDBusVariant", "QDBusVariant()", t10475<QDBusVariant>, nullptr, 0, 0, 0, QTC_T_VALUE, "QDBusVariant"},
+    {"QDBusVariant", "QDBusVariant(QVariant)", t10476<QDBusVariant>, P10476, 1, 1, 0, QTC_T_VALUE, "QDBusVariant"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P10325[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P10326[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}, {qtc::PK_VALUE, -1, "QDBusConnection", nullptr}};
+static const qtc::ParamDesc P10477[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P10478[] = {{qtc::PK_VALUE, -1, "QDBusMessage", nullptr}, {qtc::PK_VALUE, -1, "QDBusConnection", nullptr}};
 #if __has_include(<QtDBus/qdbusvirtualobject.h>)
 static const qtc::MethodDef M_QDBusVirtualObject[] = {
-    {"introspect", "introspect(QString)", t10325<QDBusVirtualObject>, P10325, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"handleMessage", "handleMessage(QDBusMessage,QDBusConnection)", t10326<QDBusVirtualObject>, P10326, 2, 2, 0, QTC_T_BOOL, "bool"},
+    {"introspect", "introspect(QString)", t10477<QDBusVirtualObject>, P10477, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"handleMessage", "handleMessage(QDBusMessage,QDBusConnection)", t10478<QDBusVirtualObject>, P10478, 2, 2, 0, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QDBusVirtualObject[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};

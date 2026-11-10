@@ -17,7 +17,7 @@ QT_WARNING_DISABLE_DEPRECATED
 
 namespace {
 #if __has_include(<QtMultimedia/qaudiobuffer.h>)
-template <class S> static int t11080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -29,7 +29,7 @@ template <class S> static int t11080(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -41,7 +41,7 @@ template <class S> static int t11081(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -53,7 +53,7 @@ template <class S> static int t11082(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -65,7 +65,7 @@ template <class S> static int t11083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -77,7 +77,7 @@ template <class S> static int t11084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -89,7 +89,7 @@ template <class S> static int t11085(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -101,7 +101,7 @@ template <class S> static int t11086(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -113,7 +113,7 @@ template <class S> static int t11087(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -124,7 +124,7 @@ template <class S> static int t11088(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QByteArray> p0;
     qtc::H<QAudioFormat> p1;
@@ -144,7 +144,7 @@ template <class S> static int t11089(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     qtc::H<QAudioFormat> p1;
@@ -166,7 +166,7 @@ template <class S> static int t11090(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && __has_include(<QtMultimedia/qaudiobufferinput.h>)
-template <class S> static int t11091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioBuffer> p0;
     QTC_CV(0, p0);
@@ -180,7 +180,7 @@ template <class S> static int t11091(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -192,7 +192,7 @@ template <class S> static int t11092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -204,7 +204,7 @@ template <class S> static int t11093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -216,7 +216,7 @@ template <class S> static int t11094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -232,7 +232,7 @@ template <class S> static int t11095(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioFormat> p0;
     qtc::H<QObject *> p1;
@@ -252,7 +252,7 @@ template <class S> static int t11096(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && __has_include(<QtMultimedia/qaudiobufferoutput.h>)
-template <class S> static int t11097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -264,7 +264,7 @@ template <class S> static int t11097(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioBuffer> p0;
     QTC_CV(0, p0);
@@ -278,7 +278,7 @@ template <class S> static int t11098(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -294,7 +294,7 @@ template <class S> static int t11099(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioFormat> p0;
     qtc::H<QObject *> p1;
@@ -314,7 +314,7 @@ template <class S> static int t11100(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qaudiodecoder.h>)
-template <class S> static int t11101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -326,7 +326,7 @@ template <class S> static int t11101(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -338,7 +338,7 @@ template <class S> static int t11102(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -350,7 +350,7 @@ template <class S> static int t11103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QUrl> p0;
     QTC_CV(0, p0);
@@ -364,7 +364,7 @@ template <class S> static int t11104(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -376,7 +376,7 @@ template <class S> static int t11105(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -388,7 +388,7 @@ template <class S> static int t11106(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioFormat> p0;
     QTC_CV(0, p0);
@@ -402,7 +402,7 @@ template <class S> static int t11107(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -414,7 +414,7 @@ template <class S> static int t11108(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -426,7 +426,7 @@ template <class S> static int t11109(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -438,7 +438,7 @@ template <class S> static int t11110(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -450,7 +450,7 @@ template <class S> static int t11111(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -462,7 +462,7 @@ template <class S> static int t11112(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -474,7 +474,7 @@ template <class S> static int t11113(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -486,7 +486,7 @@ template <class S> static int t11114(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -498,7 +498,7 @@ template <class S> static int t11115(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -512,7 +512,7 @@ template <class S> static int t11116(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -524,7 +524,7 @@ template <class S> static int t11117(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -536,7 +536,7 @@ template <class S> static int t11118(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -550,7 +550,7 @@ template <class S> static int t11119(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioFormat> p0;
     QTC_CV(0, p0);
@@ -564,13 +564,13 @@ template <class S> static int t11120(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioDecoder::Error> p0;
-    QTC_CVE(0, p0, 52);
+    QTC_CVE(0, p0, 57);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioDecoder::Error> &p0) { qtc::cve(aa[0], p0, 0, 52); s->error(p0.get()); }) { s->error(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioDecoder::Error> &p0) { qtc::cve(aa[0], p0, 0, 57); s->error(p0.get()); }) { s->error(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -578,7 +578,7 @@ template <class S> static int t11121(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -590,7 +590,7 @@ template <class S> static int t11122(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -604,7 +604,7 @@ template <class S> static int t11123(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -618,7 +618,7 @@ template <class S> static int t11124(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -636,7 +636,7 @@ template <class S> static int t11125(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qaudiodevice.h>)
-template <class S> static int t11126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -648,7 +648,7 @@ template <class S> static int t11126(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -660,7 +660,7 @@ template <class S> static int t11127(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -672,7 +672,7 @@ template <class S> static int t11128(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -684,7 +684,7 @@ template <class S> static int t11129(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -696,7 +696,7 @@ template <class S> static int t11130(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAudioFormat> p0;
     QTC_CV(0, p0);
@@ -710,7 +710,7 @@ template <class S> static int t11131(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -722,7 +722,7 @@ template <class S> static int t11132(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -734,7 +734,7 @@ template <class S> static int t11133(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -746,7 +746,7 @@ template <class S> static int t11134(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -758,7 +758,7 @@ template <class S> static int t11135(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -770,7 +770,7 @@ template <class S> static int t11136(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -782,7 +782,7 @@ template <class S> static int t11137(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -794,7 +794,7 @@ template <class S> static int t11138(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -807,7 +807,7 @@ template <class S> static int t11139(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qaudioformat.h>)
-template <class S> static int t11140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -819,7 +819,7 @@ template <class S> static int t11140(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -833,7 +833,7 @@ template <class S> static int t11141(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -845,13 +845,13 @@ template <class S> static int t11142(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAudioFormat::ChannelConfig> p0;
-    QTC_CVE(0, p0, 56);
+    QTC_CVE(0, p0, 61);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioFormat::ChannelConfig> &p0) { qtc::cve(aa[0], p0, 0, 56); s->setChannelConfig(p0.get()); }) { s->setChannelConfig(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioFormat::ChannelConfig> &p0) { qtc::cve(aa[0], p0, 0, 61); s->setChannelConfig(p0.get()); }) { s->setChannelConfig(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -859,7 +859,7 @@ template <class S> static int t11143(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -871,7 +871,7 @@ template <class S> static int t11144(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -885,7 +885,7 @@ template <class S> static int t11145(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -897,13 +897,13 @@ template <class S> static int t11146(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAudioFormat::AudioChannelPosition> p0;
-    QTC_CVE(0, p0, 55);
+    QTC_CVE(0, p0, 60);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioFormat::AudioChannelPosition> &p0) { qtc::cve(aa[0], p0, 0, 55); qtc::rt(*rr, s->channelOffset(p0.get())); }) { qtc::rt(*r, s->channelOffset(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioFormat::AudioChannelPosition> &p0) { qtc::cve(aa[0], p0, 0, 60); qtc::rt(*rr, s->channelOffset(p0.get())); }) { qtc::rt(*r, s->channelOffset(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -911,13 +911,13 @@ template <class S> static int t11147(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QAudioFormat::SampleFormat> p0;
-    QTC_CVE(0, p0, 57);
+    QTC_CVE(0, p0, 62);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioFormat::SampleFormat> &p0) { qtc::cve(aa[0], p0, 0, 57); s->setSampleFormat(p0.get()); }) { s->setSampleFormat(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioFormat::SampleFormat> &p0) { qtc::cve(aa[0], p0, 0, 62); s->setSampleFormat(p0.get()); }) { s->setSampleFormat(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -925,7 +925,7 @@ template <class S> static int t11148(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -937,7 +937,7 @@ template <class S> static int t11149(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -951,7 +951,7 @@ template <class S> static int t11150(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -965,7 +965,7 @@ template <class S> static int t11151(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -979,7 +979,7 @@ template <class S> static int t11152(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -993,7 +993,7 @@ template <class S> static int t11153(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1007,7 +1007,7 @@ template <class S> static int t11154(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1021,7 +1021,7 @@ template <class S> static int t11155(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1033,7 +1033,7 @@ template <class S> static int t11156(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -1045,7 +1045,7 @@ template <class S> static int t11157(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -1060,7 +1060,7 @@ template <class S> static int t11158(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qaudioinput.h>)
-template <class S> static int t11159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1072,7 +1072,7 @@ template <class S> static int t11159(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1084,7 +1084,7 @@ template <class S> static int t11160(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1096,7 +1096,7 @@ template <class S> static int t11161(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioDevice> p0;
     QTC_CV(0, p0);
@@ -1110,7 +1110,7 @@ template <class S> static int t11162(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1124,7 +1124,7 @@ template <class S> static int t11163(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1138,7 +1138,7 @@ template <class S> static int t11164(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1150,7 +1150,7 @@ template <class S> static int t11165(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1164,7 +1164,7 @@ template <class S> static int t11166(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1178,7 +1178,7 @@ template <class S> static int t11167(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1194,7 +1194,7 @@ template <class S> static int t11168(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioDevice> p0;
     qtc::H<QObject *> p1;
@@ -1214,7 +1214,7 @@ template <class S> static int t11169(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qaudiooutput.h>)
-template <class S> static int t11170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1226,7 +1226,7 @@ template <class S> static int t11170(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1238,7 +1238,7 @@ template <class S> static int t11171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1250,7 +1250,7 @@ template <class S> static int t11172(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioDevice> p0;
     QTC_CV(0, p0);
@@ -1264,7 +1264,7 @@ template <class S> static int t11173(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1278,7 +1278,7 @@ template <class S> static int t11174(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1292,7 +1292,7 @@ template <class S> static int t11175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1304,7 +1304,7 @@ template <class S> static int t11176(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -1318,7 +1318,7 @@ template <class S> static int t11177(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -1332,7 +1332,7 @@ template <class S> static int t11178(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -1348,7 +1348,7 @@ template <class S> static int t11179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioDevice> p0;
     qtc::H<QObject *> p1;
@@ -1368,7 +1368,7 @@ template <class S> static int t11180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qaudiosink.h>)
-template <class S> static int t11181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1380,7 +1380,7 @@ template <class S> static int t11181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1392,7 +1392,7 @@ template <class S> static int t11182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QIODevice *> p0;
     QTC_CV(0, p0);
@@ -1406,7 +1406,7 @@ template <class S> static int t11183(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1418,7 +1418,7 @@ template <class S> static int t11184(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1430,7 +1430,7 @@ template <class S> static int t11185(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1442,7 +1442,7 @@ template <class S> static int t11186(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1454,7 +1454,7 @@ template <class S> static int t11187(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1466,7 +1466,7 @@ template <class S> static int t11188(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1480,7 +1480,7 @@ template <class S> static int t11189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1493,7 +1493,7 @@ template <class S> static int t11190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1509,7 +1509,7 @@ template <class S> static int t11191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1523,7 +1523,7 @@ template <class S> static int t11192(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1539,7 +1539,7 @@ template <class S> static int t11193(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1552,7 +1552,7 @@ template <class S> static int t11194(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1565,7 +1565,7 @@ template <class S> static int t11195(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1578,7 +1578,7 @@ template <class S> static int t11196(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1590,7 +1590,7 @@ template <class S> static int t11197(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1602,7 +1602,7 @@ template <class S> static int t11198(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1614,7 +1614,7 @@ template <class S> static int t11199(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1626,7 +1626,7 @@ template <class S> static int t11200(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -1640,7 +1640,7 @@ template <class S> static int t11201(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1652,13 +1652,13 @@ template <class S> static int t11202(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudio::State> p0;
-    QTC_CVE(0, p0, 50);
+    QTC_CVE(0, p0, 55);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudio::State> &p0) { qtc::cve(aa[0], p0, 0, 50); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudio::State> &p0) { qtc::cve(aa[0], p0, 0, 55); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1666,7 +1666,7 @@ template <class S> static int t11203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioFormat> p0;
     qtc::H<QObject *> p1;
@@ -1687,7 +1687,7 @@ template <class S> static int t11204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioDevice> p0;
     qtc::H<QAudioFormat> p1;
@@ -1712,7 +1712,7 @@ template <class S> static int t11205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qaudiosource.h>)
-template <class S> static int t11206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1724,7 +1724,7 @@ template <class S> static int t11206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1736,7 +1736,7 @@ template <class S> static int t11207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QIODevice *> p0;
     QTC_CV(0, p0);
@@ -1750,7 +1750,7 @@ template <class S> static int t11208(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1762,7 +1762,7 @@ template <class S> static int t11209(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1774,7 +1774,7 @@ template <class S> static int t11210(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1786,7 +1786,7 @@ template <class S> static int t11211(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1798,7 +1798,7 @@ template <class S> static int t11212(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1810,7 +1810,7 @@ template <class S> static int t11213(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1824,7 +1824,7 @@ template <class S> static int t11214(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1837,7 +1837,7 @@ template <class S> static int t11215(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1853,7 +1853,7 @@ template <class S> static int t11216(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1867,7 +1867,7 @@ template <class S> static int t11217(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -1883,7 +1883,7 @@ template <class S> static int t11218(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1896,7 +1896,7 @@ template <class S> static int t11219(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1909,7 +1909,7 @@ template <class S> static int t11220(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1922,7 +1922,7 @@ template <class S> static int t11221(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -1936,7 +1936,7 @@ template <class S> static int t11222(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1948,7 +1948,7 @@ template <class S> static int t11223(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11382(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1960,7 +1960,7 @@ template <class S> static int t11224(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1972,7 +1972,7 @@ template <class S> static int t11225(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1984,7 +1984,7 @@ template <class S> static int t11226(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -1996,13 +1996,13 @@ template <class S> static int t11227(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudio::State> p0;
-    QTC_CVE(0, p0, 50);
+    QTC_CVE(0, p0, 55);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudio::State> &p0) { qtc::cve(aa[0], p0, 0, 50); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudio::State> &p0) { qtc::cve(aa[0], p0, 0, 55); s->stateChanged(p0.get()); }) { s->stateChanged(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2010,7 +2010,7 @@ template <class S> static int t11228(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioFormat> p0;
     qtc::H<QObject *> p1;
@@ -2031,7 +2031,7 @@ template <class S> static int t11229(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioDevice> p0;
     qtc::H<QAudioFormat> p1;
@@ -2056,7 +2056,7 @@ template <class S> static int t11230(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qcamera.h>)
-template <class S> static int t11231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2068,7 +2068,7 @@ template <class S> static int t11231(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2080,7 +2080,7 @@ template <class S> static int t11232(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2092,7 +2092,7 @@ template <class S> static int t11233(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2104,7 +2104,7 @@ template <class S> static int t11234(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCameraDevice> p0;
     QTC_CV(0, p0);
@@ -2118,7 +2118,7 @@ template <class S> static int t11235(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2130,7 +2130,7 @@ template <class S> static int t11236(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCameraFormat> p0;
     QTC_CV(0, p0);
@@ -2144,7 +2144,7 @@ template <class S> static int t11237(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2156,7 +2156,7 @@ template <class S> static int t11238(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2168,7 +2168,7 @@ template <class S> static int t11239(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2180,7 +2180,7 @@ template <class S> static int t11240(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2192,13 +2192,13 @@ template <class S> static int t11241(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::FocusMode> p0;
-    QTC_CVE(0, p0, 74);
+    QTC_CVE(0, p0, 79);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FocusMode> &p0) { qtc::cve(aa[0], p0, 0, 74); s->setFocusMode(p0.get()); }) { s->setFocusMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FocusMode> &p0) { qtc::cve(aa[0], p0, 0, 79); s->setFocusMode(p0.get()); }) { s->setFocusMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2206,13 +2206,13 @@ template <class S> static int t11242(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::FocusMode> p0;
-    QTC_CVE(0, p0, 74);
+    QTC_CVE(0, p0, 79);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FocusMode> &p0) { qtc::cve(aa[0], p0, 0, 74); qtc::rt(*rr, s->isFocusModeSupported(p0.get())); }) { qtc::rt(*r, s->isFocusModeSupported(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FocusMode> &p0) { qtc::cve(aa[0], p0, 0, 79); qtc::rt(*rr, s->isFocusModeSupported(p0.get())); }) { qtc::rt(*r, s->isFocusModeSupported(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2220,7 +2220,7 @@ template <class S> static int t11243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2232,7 +2232,7 @@ template <class S> static int t11244(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2244,7 +2244,7 @@ template <class S> static int t11245(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QPointF> p0;
     QTC_CV(0, p0);
@@ -2258,7 +2258,7 @@ template <class S> static int t11246(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2272,7 +2272,7 @@ template <class S> static int t11247(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2284,7 +2284,7 @@ template <class S> static int t11248(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2296,7 +2296,7 @@ template <class S> static int t11249(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2308,7 +2308,7 @@ template <class S> static int t11250(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2320,7 +2320,7 @@ template <class S> static int t11251(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2334,7 +2334,7 @@ template <class S> static int t11252(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2346,13 +2346,13 @@ template <class S> static int t11253(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::FlashMode> p0;
-    QTC_CVE(0, p0, 73);
+    QTC_CVE(0, p0, 78);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FlashMode> &p0) { qtc::cve(aa[0], p0, 0, 73); qtc::rt(*rr, s->isFlashModeSupported(p0.get())); }) { qtc::rt(*r, s->isFlashModeSupported(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FlashMode> &p0) { qtc::cve(aa[0], p0, 0, 78); qtc::rt(*rr, s->isFlashModeSupported(p0.get())); }) { qtc::rt(*r, s->isFlashModeSupported(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2360,7 +2360,7 @@ template <class S> static int t11254(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2372,7 +2372,7 @@ template <class S> static int t11255(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2384,13 +2384,13 @@ template <class S> static int t11256(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::TorchMode> p0;
-    QTC_CVE(0, p0, 75);
+    QTC_CVE(0, p0, 80);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::TorchMode> &p0) { qtc::cve(aa[0], p0, 0, 75); qtc::rt(*rr, s->isTorchModeSupported(p0.get())); }) { qtc::rt(*r, s->isTorchModeSupported(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::TorchMode> &p0) { qtc::cve(aa[0], p0, 0, 80); qtc::rt(*rr, s->isTorchModeSupported(p0.get())); }) { qtc::rt(*r, s->isTorchModeSupported(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2398,7 +2398,7 @@ template <class S> static int t11257(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2410,13 +2410,13 @@ template <class S> static int t11258(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::ExposureMode> p0;
-    QTC_CVE(0, p0, 71);
+    QTC_CVE(0, p0, 76);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::ExposureMode> &p0) { qtc::cve(aa[0], p0, 0, 71); qtc::rt(*rr, s->isExposureModeSupported(p0.get())); }) { qtc::rt(*r, s->isExposureModeSupported(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::ExposureMode> &p0) { qtc::cve(aa[0], p0, 0, 76); qtc::rt(*rr, s->isExposureModeSupported(p0.get())); }) { qtc::rt(*r, s->isExposureModeSupported(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2424,7 +2424,7 @@ template <class S> static int t11259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2436,7 +2436,7 @@ template <class S> static int t11260(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2448,7 +2448,7 @@ template <class S> static int t11261(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2460,7 +2460,7 @@ template <class S> static int t11262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2472,7 +2472,7 @@ template <class S> static int t11263(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2484,7 +2484,7 @@ template <class S> static int t11264(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2496,7 +2496,7 @@ template <class S> static int t11265(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2508,7 +2508,7 @@ template <class S> static int t11266(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2520,7 +2520,7 @@ template <class S> static int t11267(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11426(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2532,7 +2532,7 @@ template <class S> static int t11268(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2544,13 +2544,13 @@ template <class S> static int t11269(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11428(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::WhiteBalanceMode> p0;
-    QTC_CVE(0, p0, 76);
+    QTC_CVE(0, p0, 81);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::WhiteBalanceMode> &p0) { qtc::cve(aa[0], p0, 0, 76); qtc::rt(*rr, s->isWhiteBalanceModeSupported(p0.get())); }) { qtc::rt(*r, s->isWhiteBalanceModeSupported(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::WhiteBalanceMode> &p0) { qtc::cve(aa[0], p0, 0, 81); qtc::rt(*rr, s->isWhiteBalanceModeSupported(p0.get())); }) { qtc::rt(*r, s->isWhiteBalanceModeSupported(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2558,7 +2558,7 @@ template <class S> static int t11270(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11429(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2570,7 +2570,7 @@ template <class S> static int t11271(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11430(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -2584,7 +2584,7 @@ template <class S> static int t11272(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11431(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2596,7 +2596,7 @@ template <class S> static int t11273(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11432(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2608,7 +2608,7 @@ template <class S> static int t11274(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11433(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     qtc::H<float> p1;
@@ -2624,13 +2624,13 @@ template <class S> static int t11275(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11434(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::FlashMode> p0;
-    QTC_CVE(0, p0, 73);
+    QTC_CVE(0, p0, 78);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FlashMode> &p0) { qtc::cve(aa[0], p0, 0, 73); s->setFlashMode(p0.get()); }) { s->setFlashMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::FlashMode> &p0) { qtc::cve(aa[0], p0, 0, 78); s->setFlashMode(p0.get()); }) { s->setFlashMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2638,13 +2638,13 @@ template <class S> static int t11276(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11435(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::TorchMode> p0;
-    QTC_CVE(0, p0, 75);
+    QTC_CVE(0, p0, 80);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::TorchMode> &p0) { qtc::cve(aa[0], p0, 0, 75); s->setTorchMode(p0.get()); }) { s->setTorchMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::TorchMode> &p0) { qtc::cve(aa[0], p0, 0, 80); s->setTorchMode(p0.get()); }) { s->setTorchMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2652,13 +2652,13 @@ template <class S> static int t11277(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11436(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::ExposureMode> p0;
-    QTC_CVE(0, p0, 71);
+    QTC_CVE(0, p0, 76);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::ExposureMode> &p0) { qtc::cve(aa[0], p0, 0, 71); s->setExposureMode(p0.get()); }) { s->setExposureMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::ExposureMode> &p0) { qtc::cve(aa[0], p0, 0, 76); s->setExposureMode(p0.get()); }) { s->setExposureMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2666,7 +2666,7 @@ template <class S> static int t11278(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11437(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2680,7 +2680,7 @@ template <class S> static int t11279(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11438(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2694,7 +2694,7 @@ template <class S> static int t11280(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11439(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2706,7 +2706,7 @@ template <class S> static int t11281(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11440(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2720,7 +2720,7 @@ template <class S> static int t11282(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11441(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2732,13 +2732,13 @@ template <class S> static int t11283(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11442(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::WhiteBalanceMode> p0;
-    QTC_CVE(0, p0, 76);
+    QTC_CVE(0, p0, 81);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::WhiteBalanceMode> &p0) { qtc::cve(aa[0], p0, 0, 76); s->setWhiteBalanceMode(p0.get()); }) { s->setWhiteBalanceMode(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::WhiteBalanceMode> &p0) { qtc::cve(aa[0], p0, 0, 81); s->setWhiteBalanceMode(p0.get()); }) { s->setWhiteBalanceMode(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2746,7 +2746,7 @@ template <class S> static int t11284(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11443(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -2760,7 +2760,7 @@ template <class S> static int t11285(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11444(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -2774,7 +2774,7 @@ template <class S> static int t11286(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11445(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2786,15 +2786,15 @@ template <class S> static int t11287(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11446(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera::Error> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 70);
+    QTC_CVE(0, p0, 75);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 70); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCamera::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 75); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2802,7 +2802,7 @@ template <class S> static int t11288(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11447(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2814,7 +2814,7 @@ template <class S> static int t11289(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11448(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2826,7 +2826,7 @@ template <class S> static int t11290(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11449(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2838,7 +2838,7 @@ template <class S> static int t11291(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11450(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2850,7 +2850,7 @@ template <class S> static int t11292(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11451(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2864,7 +2864,7 @@ template <class S> static int t11293(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11452(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2878,7 +2878,7 @@ template <class S> static int t11294(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11453(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2892,7 +2892,7 @@ template <class S> static int t11295(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11454(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2906,7 +2906,7 @@ template <class S> static int t11296(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11455(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2918,7 +2918,7 @@ template <class S> static int t11297(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11456(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2930,7 +2930,7 @@ template <class S> static int t11298(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11457(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -2944,7 +2944,7 @@ template <class S> static int t11299(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11458(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2956,7 +2956,7 @@ template <class S> static int t11300(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11459(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -2968,7 +2968,7 @@ template <class S> static int t11301(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11460(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2982,7 +2982,7 @@ template <class S> static int t11302(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11461(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -2996,7 +2996,7 @@ template <class S> static int t11303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11462(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3010,7 +3010,7 @@ template <class S> static int t11304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11463(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3024,7 +3024,7 @@ template <class S> static int t11305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11464(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -3038,7 +3038,7 @@ template <class S> static int t11306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11465(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3050,7 +3050,7 @@ template <class S> static int t11307(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11466(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3062,7 +3062,7 @@ template <class S> static int t11308(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11467(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3074,7 +3074,7 @@ template <class S> static int t11309(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11468(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3086,7 +3086,7 @@ template <class S> static int t11310(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11469(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3098,7 +3098,7 @@ template <class S> static int t11311(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11470(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3110,7 +3110,7 @@ template <class S> static int t11312(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11471(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3122,7 +3122,7 @@ template <class S> static int t11313(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11472(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3138,7 +3138,7 @@ template <class S> static int t11314(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11473(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QCameraDevice> p0;
     qtc::H<QObject *> p1;
@@ -3156,18 +3156,18 @@ template <class S> static int t11315(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11474(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QCameraDevice::Position> p0;
     qtc::H<QObject *> p1;
-    QTC_CVE(0, p0, 77);
+    QTC_CVE(0, p0, 82);
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCameraDevice::Position> &p0) { qtc::cve(aa[0], p0, 0, 77); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCameraDevice::Position> &p0) { qtc::cve(aa[0], p0, 0, 82); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCameraDevice::Position> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 77); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QCameraDevice::Position> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 82); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3176,7 +3176,7 @@ template <class S> static int t11316(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qcameradevice.h>)
-template <class S> static int t11317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11475(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3188,7 +3188,7 @@ template <class S> static int t11317(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11476(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3200,7 +3200,7 @@ template <class S> static int t11318(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11477(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3212,7 +3212,7 @@ template <class S> static int t11319(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11478(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3224,7 +3224,7 @@ template <class S> static int t11320(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11479(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3236,7 +3236,7 @@ template <class S> static int t11321(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11480(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3248,7 +3248,7 @@ template <class S> static int t11322(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11481(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3261,7 +3261,7 @@ template <class S> static int t11323(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t11324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11482(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3274,7 +3274,7 @@ template <class S> static int t11324(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11483(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3287,7 +3287,7 @@ template <class S> static int t11325(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qcameradevice.h>)
-template <class S> static int t11326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11484(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3299,7 +3299,7 @@ template <class S> static int t11326(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11485(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3311,7 +3311,7 @@ template <class S> static int t11327(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11486(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3323,7 +3323,7 @@ template <class S> static int t11328(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11487(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3335,7 +3335,7 @@ template <class S> static int t11329(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11488(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3347,7 +3347,7 @@ template <class S> static int t11330(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11489(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3360,7 +3360,7 @@ template <class S> static int t11331(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && __has_include(<QtMultimedia/qcapturablewindow.h>)
-template <class S> static int t11332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11490(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3372,7 +3372,7 @@ template <class S> static int t11332(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11491(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -3384,7 +3384,7 @@ template <class S> static int t11333(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11492(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3396,7 +3396,7 @@ template <class S> static int t11334(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11493(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QWindow *> p0;
     QTC_CV(0, p0);
@@ -3412,7 +3412,7 @@ template <class S> static int t11335(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #endif
 #if __has_include(<QtMultimedia/qimagecapture.h>)
-template <class S> static int t11336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11494(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3424,7 +3424,7 @@ template <class S> static int t11336(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11495(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3436,7 +3436,7 @@ template <class S> static int t11337(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11496(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3448,7 +3448,7 @@ template <class S> static int t11338(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11497(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3460,7 +3460,7 @@ template <class S> static int t11339(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11498(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3472,7 +3472,7 @@ template <class S> static int t11340(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11499(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3484,13 +3484,13 @@ template <class S> static int t11341(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11500(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QImageCapture::FileFormat> p0;
-    QTC_CVE(0, p0, 252);
+    QTC_CVE(0, p0, 262);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 252); s->setFileFormat(p0.get()); }) { s->setFileFormat(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 262); s->setFileFormat(p0.get()); }) { s->setFileFormat(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3498,7 +3498,7 @@ template <class S> static int t11342(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11501(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -3509,33 +3509,33 @@ template <class S> static int t11343(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11344(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11502(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QImageCapture::FileFormat> p0;
-    QTC_CVE(0, p0, 252);
+    QTC_CVE(0, p0, 262);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 252); qtc::rt(*rr, S::fileFormatName(p0.get())); }) { qtc::rt(*r, S::fileFormatName(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 262); qtc::rt(*rr, S::fileFormatName(p0.get())); }) { qtc::rt(*r, S::fileFormatName(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11345(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11503(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QImageCapture::FileFormat> p0;
-    QTC_CVE(0, p0, 252);
+    QTC_CVE(0, p0, 262);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 252); qtc::rt(*rr, S::fileFormatDescription(p0.get())); }) { qtc::rt(*r, S::fileFormatDescription(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 262); qtc::rt(*rr, S::fileFormatDescription(p0.get())); }) { qtc::rt(*r, S::fileFormatDescription(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11504(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3547,7 +3547,7 @@ template <class S> static int t11346(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11505(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QSize> p0;
     QTC_CV(0, p0);
@@ -3561,7 +3561,7 @@ template <class S> static int t11347(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11506(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -3577,7 +3577,7 @@ template <class S> static int t11348(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11507(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3589,13 +3589,13 @@ template <class S> static int t11349(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11508(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QImageCapture::Quality> p0;
-    QTC_CVE(0, p0, 253);
+    QTC_CVE(0, p0, 263);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::Quality> &p0) { qtc::cve(aa[0], p0, 0, 253); s->setQuality(p0.get()); }) { s->setQuality(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImageCapture::Quality> &p0) { qtc::cve(aa[0], p0, 0, 263); s->setQuality(p0.get()); }) { s->setQuality(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3603,7 +3603,7 @@ template <class S> static int t11350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11509(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3615,7 +3615,7 @@ template <class S> static int t11351(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11510(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QMediaMetaData> p0;
     QTC_CV(0, p0);
@@ -3629,7 +3629,7 @@ template <class S> static int t11352(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11511(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QMediaMetaData> p0;
     QTC_CV(0, p0);
@@ -3643,7 +3643,7 @@ template <class S> static int t11353(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11512(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3660,7 +3660,7 @@ template <class S> static int t11354(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11513(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3672,7 +3672,7 @@ template <class S> static int t11355(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11514(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3684,17 +3684,17 @@ template <class S> static int t11356(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11515(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QImageCapture::Error> p1;
     qtc::H<QString> p2;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 251);
+    QTC_CVE(1, p1, 261);
     QTC_CV(2, p2);
     switch (n) {
         case 3:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QImageCapture::Error> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 251); qtc::cv(aa[2], p2, 2); s->errorOccurred(p0.get(), p1.get(), p2.get()); }) { s->errorOccurred(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QImageCapture::Error> &p1, qtc::H<QString> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 261); qtc::cv(aa[2], p2, 2); s->errorOccurred(p0.get(), p1.get(), p2.get()); }) { s->errorOccurred(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3702,7 +3702,7 @@ template <class S> static int t11357(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11516(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -3716,7 +3716,7 @@ template <class S> static int t11358(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11517(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3728,7 +3728,7 @@ template <class S> static int t11359(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11518(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3740,7 +3740,7 @@ template <class S> static int t11360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11519(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3752,7 +3752,7 @@ template <class S> static int t11361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11520(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3764,7 +3764,7 @@ template <class S> static int t11362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11521(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -3778,7 +3778,7 @@ template <class S> static int t11363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11522(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QImage> p1;
@@ -3794,7 +3794,7 @@ template <class S> static int t11364(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11523(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QMediaMetaData> p1;
@@ -3810,7 +3810,7 @@ template <class S> static int t11365(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11524(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QVideoFrame> p1;
@@ -3826,7 +3826,7 @@ template <class S> static int t11366(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11525(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     qtc::H<QString> p1;
@@ -3842,7 +3842,7 @@ template <class S> static int t11367(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11526(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -3860,7 +3860,7 @@ template <class S> static int t11368(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qmediacapturesession.h>)
-template <class S> static int t11369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11527(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3872,7 +3872,7 @@ template <class S> static int t11369(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11528(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioInput *> p0;
     QTC_CV(0, p0);
@@ -3888,7 +3888,7 @@ template <class S> static int t11370(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11529(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3902,7 +3902,7 @@ template <class S> static int t11371(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11530(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioBufferInput *> p0;
     QTC_CV(0, p0);
@@ -3918,7 +3918,7 @@ template <class S> static int t11372(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11531(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3930,7 +3930,7 @@ template <class S> static int t11373(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11532(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCamera *> p0;
     QTC_CV(0, p0);
@@ -3946,7 +3946,7 @@ template <class S> static int t11374(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11533(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3960,7 +3960,7 @@ template <class S> static int t11375(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11534(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -3976,7 +3976,7 @@ template <class S> static int t11376(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11535(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -3988,7 +3988,7 @@ template <class S> static int t11377(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11536(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QImageCapture *> p0;
     QTC_CV(0, p0);
@@ -4004,7 +4004,7 @@ template <class S> static int t11378(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t11379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11537(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4018,7 +4018,7 @@ template <class S> static int t11379(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t11380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11538(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QScreenCapture *> p0;
     QTC_CV(0, p0);
@@ -4035,7 +4035,7 @@ template <class S> static int t11380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t11381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11539(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4049,7 +4049,7 @@ template <class S> static int t11381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t11382(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11540(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QWindowCapture *> p0;
     QTC_CV(0, p0);
@@ -4066,7 +4066,7 @@ template <class S> static int t11382(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11541(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4080,7 +4080,7 @@ template <class S> static int t11383(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11542(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVideoFrameInput *> p0;
     QTC_CV(0, p0);
@@ -4096,7 +4096,7 @@ template <class S> static int t11384(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11543(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4108,7 +4108,7 @@ template <class S> static int t11385(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11544(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QMediaRecorder *> p0;
     QTC_CV(0, p0);
@@ -4123,7 +4123,7 @@ template <class S> static int t11386(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11545(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -4138,7 +4138,7 @@ template <class S> static int t11387(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11546(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4150,7 +4150,7 @@ template <class S> static int t11388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11547(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVideoSink *> p0;
     QTC_CV(0, p0);
@@ -4165,7 +4165,7 @@ template <class S> static int t11389(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11548(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4177,7 +4177,7 @@ template <class S> static int t11390(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11549(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioOutput *> p0;
     QTC_CV(0, p0);
@@ -4192,7 +4192,7 @@ template <class S> static int t11391(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11550(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4204,7 +4204,7 @@ template <class S> static int t11392(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11551(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4217,7 +4217,7 @@ template <class S> static int t11393(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11552(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4230,7 +4230,7 @@ template <class S> static int t11394(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11553(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4243,7 +4243,7 @@ template <class S> static int t11395(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11554(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4257,7 +4257,7 @@ template <class S> static int t11396(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t11397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11555(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4271,7 +4271,7 @@ template <class S> static int t11397(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-template <class S> static int t11398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11556(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4285,7 +4285,7 @@ template <class S> static int t11398(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11557(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4298,7 +4298,7 @@ template <class S> static int t11399(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11558(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4310,7 +4310,7 @@ template <class S> static int t11400(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11559(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4322,7 +4322,7 @@ template <class S> static int t11401(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11560(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4334,7 +4334,7 @@ template <class S> static int t11402(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11561(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4346,7 +4346,7 @@ template <class S> static int t11403(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11562(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4364,7 +4364,7 @@ template <class S> static int t11404(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qmediadevices.h>)
-template <class S> static int t11405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11563(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -4375,7 +4375,7 @@ template <class S> static int t11405(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11564(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -4386,7 +4386,7 @@ template <class S> static int t11406(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11565(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -4397,7 +4397,7 @@ template <class S> static int t11407(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11566(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -4408,7 +4408,7 @@ template <class S> static int t11408(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11567(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -4419,7 +4419,7 @@ template <class S> static int t11409(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11568(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -4430,7 +4430,7 @@ template <class S> static int t11410(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11569(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4442,7 +4442,7 @@ template <class S> static int t11411(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11570(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4454,7 +4454,7 @@ template <class S> static int t11412(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11571(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4466,7 +4466,7 @@ template <class S> static int t11413(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11572(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -4484,7 +4484,7 @@ template <class S> static int t11414(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qmediaformat.h>)
-template <class S> static int t11415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11573(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -4496,13 +4496,13 @@ template <class S> static int t11415(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11574(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::FileFormat> p0;
-    QTC_CVE(0, p0, 328);
+    QTC_CVE(0, p0, 338);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 328); s->setFileFormat(p0.get()); }) { s->setFileFormat(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 338); s->setFileFormat(p0.get()); }) { s->setFileFormat(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4510,13 +4510,13 @@ template <class S> static int t11416(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11575(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::VideoCodec> p0;
-    QTC_CVE(0, p0, 330);
+    QTC_CVE(0, p0, 340);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::VideoCodec> &p0) { qtc::cve(aa[0], p0, 0, 330); s->setVideoCodec(p0.get()); }) { s->setVideoCodec(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::VideoCodec> &p0) { qtc::cve(aa[0], p0, 0, 340); s->setVideoCodec(p0.get()); }) { s->setVideoCodec(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4524,7 +4524,7 @@ template <class S> static int t11417(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11576(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -4536,13 +4536,13 @@ template <class S> static int t11418(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11577(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::AudioCodec> p0;
-    QTC_CVE(0, p0, 326);
+    QTC_CVE(0, p0, 336);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::AudioCodec> &p0) { qtc::cve(aa[0], p0, 0, 326); s->setAudioCodec(p0.get()); }) { s->setAudioCodec(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::AudioCodec> &p0) { qtc::cve(aa[0], p0, 0, 336); s->setAudioCodec(p0.get()); }) { s->setAudioCodec(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4550,7 +4550,7 @@ template <class S> static int t11419(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11578(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -4562,13 +4562,13 @@ template <class S> static int t11420(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11579(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::ConversionMode> p0;
-    QTC_CVE(0, p0, 327);
+    QTC_CVE(0, p0, 337);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 327); qtc::rt(*rr, s->isSupported(p0.get())); }) { qtc::rt(*r, s->isSupported(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 337); qtc::rt(*rr, s->isSupported(p0.get())); }) { qtc::rt(*r, s->isSupported(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4576,7 +4576,7 @@ template <class S> static int t11421(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11580(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -4588,13 +4588,13 @@ template <class S> static int t11422(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11581(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::ConversionMode> p0;
-    QTC_CVE(0, p0, 327);
+    QTC_CVE(0, p0, 337);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 327); qtc::rt(*rr, s->supportedFileFormats(p0.get())); }) { qtc::rt(*r, s->supportedFileFormats(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 337); qtc::rt(*rr, s->supportedFileFormats(p0.get())); }) { qtc::rt(*r, s->supportedFileFormats(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4602,13 +4602,13 @@ template <class S> static int t11423(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11582(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::ConversionMode> p0;
-    QTC_CVE(0, p0, 327);
+    QTC_CVE(0, p0, 337);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 327); qtc::rt(*rr, s->supportedVideoCodecs(p0.get())); }) { qtc::rt(*r, s->supportedVideoCodecs(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 337); qtc::rt(*rr, s->supportedVideoCodecs(p0.get())); }) { qtc::rt(*r, s->supportedVideoCodecs(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4616,13 +4616,13 @@ template <class S> static int t11424(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11583(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::ConversionMode> p0;
-    QTC_CVE(0, p0, 327);
+    QTC_CVE(0, p0, 337);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 327); qtc::rt(*rr, s->supportedAudioCodecs(p0.get())); }) { qtc::rt(*r, s->supportedAudioCodecs(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ConversionMode> &p0) { qtc::cve(aa[0], p0, 0, 337); qtc::rt(*rr, s->supportedAudioCodecs(p0.get())); }) { qtc::rt(*r, s->supportedAudioCodecs(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4630,91 +4630,91 @@ template <class S> static int t11425(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11426(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11584(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaFormat::FileFormat> p0;
-    QTC_CVE(0, p0, 328);
+    QTC_CVE(0, p0, 338);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 328); qtc::rt(*rr, S::fileFormatName(p0.get())); }) { qtc::rt(*r, S::fileFormatName(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 338); qtc::rt(*rr, S::fileFormatName(p0.get())); }) { qtc::rt(*r, S::fileFormatName(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11585(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaFormat::AudioCodec> p0;
-    QTC_CVE(0, p0, 326);
+    QTC_CVE(0, p0, 336);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::AudioCodec> &p0) { qtc::cve(aa[0], p0, 0, 326); qtc::rt(*rr, S::audioCodecName(p0.get())); }) { qtc::rt(*r, S::audioCodecName(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::AudioCodec> &p0) { qtc::cve(aa[0], p0, 0, 336); qtc::rt(*rr, S::audioCodecName(p0.get())); }) { qtc::rt(*r, S::audioCodecName(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11428(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11586(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaFormat::VideoCodec> p0;
-    QTC_CVE(0, p0, 330);
+    QTC_CVE(0, p0, 340);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::VideoCodec> &p0) { qtc::cve(aa[0], p0, 0, 330); qtc::rt(*rr, S::videoCodecName(p0.get())); }) { qtc::rt(*r, S::videoCodecName(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::VideoCodec> &p0) { qtc::cve(aa[0], p0, 0, 340); qtc::rt(*rr, S::videoCodecName(p0.get())); }) { qtc::rt(*r, S::videoCodecName(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11429(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11587(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaFormat::FileFormat> p0;
-    QTC_CVE(0, p0, 328);
+    QTC_CVE(0, p0, 338);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 328); qtc::rt(*rr, S::fileFormatDescription(p0.get())); }) { qtc::rt(*r, S::fileFormatDescription(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 338); qtc::rt(*rr, S::fileFormatDescription(p0.get())); }) { qtc::rt(*r, S::fileFormatDescription(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11430(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11588(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaFormat::AudioCodec> p0;
-    QTC_CVE(0, p0, 326);
+    QTC_CVE(0, p0, 336);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::AudioCodec> &p0) { qtc::cve(aa[0], p0, 0, 326); qtc::rt(*rr, S::audioCodecDescription(p0.get())); }) { qtc::rt(*r, S::audioCodecDescription(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::AudioCodec> &p0) { qtc::cve(aa[0], p0, 0, 336); qtc::rt(*rr, S::audioCodecDescription(p0.get())); }) { qtc::rt(*r, S::audioCodecDescription(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11431(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11589(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaFormat::VideoCodec> p0;
-    QTC_CVE(0, p0, 330);
+    QTC_CVE(0, p0, 340);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::VideoCodec> &p0) { qtc::cve(aa[0], p0, 0, 330); qtc::rt(*rr, S::videoCodecDescription(p0.get())); }) { qtc::rt(*r, S::videoCodecDescription(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::VideoCodec> &p0) { qtc::cve(aa[0], p0, 0, 340); qtc::rt(*rr, S::videoCodecDescription(p0.get())); }) { qtc::rt(*r, S::videoCodecDescription(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11432(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11590(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaFormat::ResolveFlags> p0;
-    QTC_CVE(0, p0, 329);
+    QTC_CVE(0, p0, 339);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ResolveFlags> &p0) { qtc::cve(aa[0], p0, 0, 329); s->resolveForEncoding(p0.get()); }) { s->resolveForEncoding(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::ResolveFlags> &p0) { qtc::cve(aa[0], p0, 0, 339); s->resolveForEncoding(p0.get()); }) { s->resolveForEncoding(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4722,16 +4722,16 @@ template <class S> static int t11432(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11433(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11591(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaFormat::FileFormat> p0;
-    if (n > 0) QTC_CVE(0, p0, 328);
+    if (n > 0) QTC_CVE(0, p0, 338);
     switch (n) {
         case 0:
             if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 328); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat::FileFormat> &p0) { qtc::cve(aa[0], p0, 0, 338); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4740,13 +4740,13 @@ template <class S> static int t11433(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qmediametadata.h>)
-template <class S> static int t11434(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11592(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaMetaData::Key> p0;
-    QTC_CVE(0, p0, 331);
+    QTC_CVE(0, p0, 341);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 331); qtc::rt(*rr, s->value(p0.get())); }) { qtc::rt(*r, s->value(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 341); qtc::rt(*rr, s->value(p0.get())); }) { qtc::rt(*r, s->value(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4754,15 +4754,15 @@ template <class S> static int t11434(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11435(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11593(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaMetaData::Key> p0;
     qtc::H<QVariant> p1;
-    QTC_CVE(0, p0, 331);
+    QTC_CVE(0, p0, 341);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 331); qtc::cv(aa[1], p1, 1); s->insert(p0.get(), p1.get()); }) { s->insert(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0, qtc::H<QVariant> &p1) { qtc::cve(aa[0], p0, 0, 341); qtc::cv(aa[1], p1, 1); s->insert(p0.get(), p1.get()); }) { s->insert(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4770,13 +4770,13 @@ template <class S> static int t11435(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11436(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11594(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaMetaData::Key> p0;
-    QTC_CVE(0, p0, 331);
+    QTC_CVE(0, p0, 341);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 331); s->remove(p0.get()); }) { s->remove(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 341); s->remove(p0.get()); }) { s->remove(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4784,7 +4784,7 @@ template <class S> static int t11436(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11437(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11595(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -4796,7 +4796,7 @@ template <class S> static int t11437(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11438(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11596(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -4808,7 +4808,7 @@ template <class S> static int t11438(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11439(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11597(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -4820,13 +4820,13 @@ template <class S> static int t11439(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11440(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11598(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QMediaMetaData::Key> p0;
-    QTC_CVE(0, p0, 331);
+    QTC_CVE(0, p0, 341);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 331); qtc::rt(*rr, s->stringValue(p0.get())); }) { qtc::rt(*r, s->stringValue(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 341); qtc::rt(*rr, s->stringValue(p0.get())); }) { qtc::rt(*r, s->stringValue(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4834,13 +4834,13 @@ template <class S> static int t11440(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11441(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11599(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QMediaMetaData::Key> p0;
-    QTC_CVE(0, p0, 331);
+    QTC_CVE(0, p0, 341);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 331); qtc::rt(*rr, S::metaDataKeyToString(p0.get())); }) { qtc::rt(*r, S::metaDataKeyToString(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData::Key> &p0) { qtc::cve(aa[0], p0, 0, 341); qtc::rt(*rr, S::metaDataKeyToString(p0.get())); }) { qtc::rt(*r, S::metaDataKeyToString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4849,7 +4849,7 @@ template <class S> static int t11441(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qmediaplayer.h>)
-template <class S> static int t11442(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11600(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4861,7 +4861,7 @@ template <class S> static int t11442(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11443(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11601(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4873,7 +4873,7 @@ template <class S> static int t11443(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11444(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11602(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4885,7 +4885,7 @@ template <class S> static int t11444(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11445(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11603(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4897,7 +4897,7 @@ template <class S> static int t11445(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11446(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11604(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4909,7 +4909,7 @@ template <class S> static int t11446(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11447(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11605(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4921,7 +4921,7 @@ template <class S> static int t11447(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11448(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11606(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -4935,7 +4935,7 @@ template <class S> static int t11448(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11449(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11607(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -4949,7 +4949,7 @@ template <class S> static int t11449(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11450(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11608(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -4964,7 +4964,7 @@ template <class S> static int t11450(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11451(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11609(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioBufferOutput *> p0;
     QTC_CV(0, p0);
@@ -4982,7 +4982,7 @@ template <class S> static int t11451(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11452(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11610(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -4995,7 +4995,7 @@ template <class S> static int t11452(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11453(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11611(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QAudioOutput *> p0;
     QTC_CV(0, p0);
@@ -5010,7 +5010,7 @@ template <class S> static int t11453(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11454(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11612(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -5022,7 +5022,7 @@ template <class S> static int t11454(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11455(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11613(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QObject *> p0;
     QTC_CV(0, p0);
@@ -5037,7 +5037,7 @@ template <class S> static int t11455(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11456(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11614(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -5049,7 +5049,7 @@ template <class S> static int t11456(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11457(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11615(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVideoSink *> p0;
     QTC_CV(0, p0);
@@ -5064,7 +5064,7 @@ template <class S> static int t11457(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11458(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11616(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -5073,2079 +5073,6 @@ template <class S> static int t11458(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
         default: break;
     }
     (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11459(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->source()); }) { qtc::rt(*r, s->source()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11460(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->sourceDevice()); }) { qtc::rt(*r, s->sourceDevice()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11461(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackState()); }) { qtc::rt(*r, s->playbackState()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11462(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->mediaStatus()); }) { qtc::rt(*r, s->mediaStatus()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11463(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->duration()); }) { qtc::rt(*r, s->duration()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11464(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->position()); }) { qtc::rt(*r, s->position()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11465(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->hasAudio()); }) { qtc::rt(*r, s->hasAudio()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11466(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->hasVideo()); }) { qtc::rt(*r, s->hasVideo()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11467(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->bufferProgress()); }) { qtc::rt(*r, s->bufferProgress()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11468(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->bufferedTimeRange()); }) { qtc::rt(*r, s->bufferedTimeRange()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11469(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isSeekable()); }) { qtc::rt(*r, s->isSeekable()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11470(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackRate()); }) { qtc::rt(*r, s->playbackRate()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t11471(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isPlaying()); }) { qtc::rt(*r, s->isPlaying()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11472(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->loops()); }) { qtc::rt(*r, s->loops()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11473(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<int> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setLoops(p0.get()); }) { s->setLoops(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11474(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->error()); }) { qtc::rt(*r, s->error()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11475(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->errorString()); }) { qtc::rt(*r, s->errorString()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11476(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isAvailable()); }) { qtc::rt(*r, s->isAvailable()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11477(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->metaData()); }) { qtc::rt(*r, s->metaData()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11478(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->pitchCompensationAvailability()); }) { qtc::rt(*r, s->pitchCompensationAvailability()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11479(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->pitchCompensation()); }) { qtc::rt(*r, s->pitchCompensation()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11480(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackOptions()); }) { qtc::rt(*r, s->playbackOptions()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11481(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->play(); }) { s->play(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11482(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->pause(); }) { s->pause(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11483(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->stop(); }) { s->stop(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11484(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setPosition(p0.get()); }) { s->setPosition(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11485(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<double> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0) { qtc::cv(aa[0], p0, 0); s->setPlaybackRate(p0.get()); }) { s->setPlaybackRate(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11486(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QUrl> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->setSource(p0.get()); }) { s->setSource(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11487(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setPitchCompensation(p0.get()); }) { s->setPitchCompensation(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11488(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QPlaybackOptions> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPlaybackOptions> &p0) { qtc::cv(aa[0], p0, 0); s->setPlaybackOptions(p0.get()); }) { s->setPlaybackOptions(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11489(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetPlaybackOptions(); }) { s->resetPlaybackOptions(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11490(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QUrl> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->sourceChanged(p0.get()); }) { s->sourceChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11491(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaPlayer::PlaybackState> p0;
-    QTC_CVE(0, p0, 336);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaPlayer::PlaybackState> &p0) { qtc::cve(aa[0], p0, 0, 336); s->playbackStateChanged(p0.get()); }) { s->playbackStateChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11492(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaPlayer::MediaStatus> p0;
-    QTC_CVE(0, p0, 334);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaPlayer::MediaStatus> &p0) { qtc::cve(aa[0], p0, 0, 334); s->mediaStatusChanged(p0.get()); }) { s->mediaStatusChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11493(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->durationChanged(p0.get()); }) { s->durationChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11494(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->positionChanged(p0.get()); }) { s->positionChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11495(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->hasAudioChanged(p0.get()); }) { s->hasAudioChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11496(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->hasVideoChanged(p0.get()); }) { s->hasVideoChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11497(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<float> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<float> &p0) { qtc::cv(aa[0], p0, 0); s->bufferProgressChanged(p0.get()); }) { s->bufferProgressChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11498(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->seekableChanged(p0.get()); }) { s->seekableChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-template <class S> static int t11499(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->playingChanged(p0.get()); }) { s->playingChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11500(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<double> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0) { qtc::cv(aa[0], p0, 0); s->playbackRateChanged(p0.get()); }) { s->playbackRateChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11501(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loopsChanged(); }) { s->loopsChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11502(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->metaDataChanged(); }) { s->metaDataChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11503(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoOutputChanged(); }) { s->videoOutputChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11504(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioOutputChanged(); }) { s->audioOutputChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11505(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioBufferOutputChanged(); }) { s->audioBufferOutputChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11506(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->tracksChanged(); }) { s->tracksChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11507(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->activeTracksChanged(); }) { s->activeTracksChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11508(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->errorChanged(); }) { s->errorChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11509(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaPlayer::Error> p0;
-    qtc::H<QString> p1;
-    QTC_CVE(0, p0, 332);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaPlayer::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 332); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11510(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->pitchCompensationChanged(p0.get()); }) { s->pitchCompensationChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-template <class S> static int t11511(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->playbackOptionsChanged(); }) { s->playbackOptionsChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11512(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<QObject *> p0;
-    if (n > 0) QTC_CV(0, p0);
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if __has_include(<QtMultimedia/qmediarecorder.h>)
-template <class S> static int t11513(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isAvailable()); }) { qtc::rt(*r, s->isAvailable()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11514(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->outputLocation()); }) { qtc::rt(*r, s->outputLocation()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11515(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QUrl> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->setOutputLocation(p0.get()); }) { s->setOutputLocation(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11516(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->outputDevice()); }) { qtc::rt(*r, s->outputDevice()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11517(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->actualLocation()); }) { qtc::rt(*r, s->actualLocation()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11518(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->recorderState()); }) { qtc::rt(*r, s->recorderState()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11519(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->error()); }) { qtc::rt(*r, s->error()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11520(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->errorString()); }) { qtc::rt(*r, s->errorString()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11521(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->duration()); }) { qtc::rt(*r, s->duration()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11522(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->mediaFormat()); }) { qtc::rt(*r, s->mediaFormat()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11523(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaFormat> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat> &p0) { qtc::cv(aa[0], p0, 0); s->setMediaFormat(p0.get()); }) { s->setMediaFormat(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11524(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->encodingMode()); }) { qtc::rt(*r, s->encodingMode()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11525(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaRecorder::EncodingMode> p0;
-    QTC_CVE(0, p0, 337);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::EncodingMode> &p0) { qtc::cve(aa[0], p0, 0, 337); s->setEncodingMode(p0.get()); }) { s->setEncodingMode(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11526(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->quality()); }) { qtc::rt(*r, s->quality()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11527(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaRecorder::Quality> p0;
-    QTC_CVE(0, p0, 339);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::Quality> &p0) { qtc::cve(aa[0], p0, 0, 339); s->setQuality(p0.get()); }) { s->setQuality(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11528(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->videoResolution()); }) { qtc::rt(*r, s->videoResolution()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11529(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QSize> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSize> &p0) { qtc::cv(aa[0], p0, 0); s->setVideoResolution(p0.get()); }) { s->setVideoResolution(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11530(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<int> p0;
-    qtc::H<int> p1;
-    QTC_CV(0, p0);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->setVideoResolution(p0.get(), p1.get()); }) { s->setVideoResolution(p0.get(), p1.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11531(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->videoFrameRate()); }) { qtc::rt(*r, s->videoFrameRate()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11532(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<double> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0) { qtc::cv(aa[0], p0, 0); s->setVideoFrameRate(p0.get()); }) { s->setVideoFrameRate(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11533(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->videoBitRate()); }) { qtc::rt(*r, s->videoBitRate()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11534(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<int> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setVideoBitRate(p0.get()); }) { s->setVideoBitRate(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11535(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioBitRate()); }) { qtc::rt(*r, s->audioBitRate()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11536(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<int> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioBitRate(p0.get()); }) { s->setAudioBitRate(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11537(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioChannelCount()); }) { qtc::rt(*r, s->audioChannelCount()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11538(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<int> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioChannelCount(p0.get()); }) { s->setAudioChannelCount(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11539(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioSampleRate()); }) { qtc::rt(*r, s->audioSampleRate()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11540(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<int> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioSampleRate(p0.get()); }) { s->setAudioSampleRate(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11541(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->metaData()); }) { qtc::rt(*r, s->metaData()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11542(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaMetaData> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData> &p0) { qtc::cv(aa[0], p0, 0); s->setMetaData(p0.get()); }) { s->setMetaData(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11543(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaMetaData> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData> &p0) { qtc::cv(aa[0], p0, 0); s->addMetaData(p0.get()); }) { s->addMetaData(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11544(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->autoStop()); }) { qtc::rt(*r, s->autoStop()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11545(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setAutoStop(p0.get()); }) { s->setAutoStop(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11546(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->captureSession()); }) { qtc::rt(*r, s->captureSession()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11547(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->record(); }) { s->record(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11548(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->pause(); }) { s->pause(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11549(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->stop(); }) { s->stop(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11550(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaRecorder::RecorderState> p0;
-    QTC_CVE(0, p0, 340);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::RecorderState> &p0) { qtc::cve(aa[0], p0, 0, 340); s->recorderStateChanged(p0.get()); }) { s->recorderStateChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11551(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->durationChanged(p0.get()); }) { s->durationChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11552(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QUrl> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->actualLocationChanged(p0.get()); }) { s->actualLocationChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11553(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->encoderSettingsChanged(); }) { s->encoderSettingsChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11554(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QMediaRecorder::Error> p0;
-    qtc::H<QString> p1;
-    QTC_CVE(0, p0, 338);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 338); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11555(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->errorChanged(); }) { s->errorChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11556(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->metaDataChanged(); }) { s->metaDataChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11557(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->mediaFormatChanged(); }) { s->mediaFormatChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11558(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->encodingModeChanged(); }) { s->encodingModeChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11559(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->qualityChanged(); }) { s->qualityChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11560(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoResolutionChanged(); }) { s->videoResolutionChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11561(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoFrameRateChanged(); }) { s->videoFrameRateChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11562(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoBitRateChanged(); }) { s->videoBitRateChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11563(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioBitRateChanged(); }) { s->audioBitRateChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11564(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioChannelCountChanged(); }) { s->audioChannelCountChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11565(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioSampleRateChanged(); }) { s->audioSampleRateChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11566(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->autoStopChanged(); }) { s->autoStopChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11567(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<QObject *> p0;
-    if (n > 0) QTC_CV(0, p0);
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if __has_include(<QtMultimedia/qmediatimerange.h>)
-template <class S> static int t11568(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->detach(); }) { s->detach(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11569(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->earliestTime()); }) { qtc::rt(*r, s->earliestTime()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11570(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->latestTime()); }) { qtc::rt(*r, s->latestTime()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11571(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->intervals()); }) { qtc::rt(*r, s->intervals()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11572(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isEmpty()); }) { qtc::rt(*r, s->isEmpty()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11573(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isContinuous()); }) { qtc::rt(*r, s->isContinuous()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11574(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11575(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<long long> p0;
-    qtc::H<long long> p1;
-    QTC_CV(0, p0);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->addInterval(p0.get(), p1.get()); }) { s->addInterval(p0.get(), p1.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11576(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QMediaTimeRange::Interval> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange::Interval> &p0) { qtc::cv(aa[0], p0, 0); s->addInterval(p0.get()); }) { s->addInterval(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11577(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QMediaTimeRange> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange> &p0) { qtc::cv(aa[0], p0, 0); s->addTimeRange(p0.get()); }) { s->addTimeRange(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11578(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<long long> p0;
-    qtc::H<long long> p1;
-    QTC_CV(0, p0);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->removeInterval(p0.get(), p1.get()); }) { s->removeInterval(p0.get(), p1.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11579(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QMediaTimeRange::Interval> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange::Interval> &p0) { qtc::cv(aa[0], p0, 0); s->removeInterval(p0.get()); }) { s->removeInterval(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11580(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QMediaTimeRange> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange> &p0) { qtc::cv(aa[0], p0, 0); s->removeTimeRange(p0.get()); }) { s->removeTimeRange(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11581(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clear(); }) { s->clear(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11582(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11583(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<long long> p0;
-    qtc::H<long long> p1;
-    QTC_CV(0, p0);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11584(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<QMediaTimeRange::Interval> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange::Interval> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if __has_include(<QtMultimedia/qmediatimerange.h>)
-template <class S> static int t11585(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->start()); }) { qtc::rt(*r, s->start()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11586(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->end()); }) { qtc::rt(*r, s->end()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11587(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11588(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isNormal()); }) { qtc::rt(*r, s->isNormal()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11589(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->normalized()); }) { qtc::rt(*r, s->normalized()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11590(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->translated(p0.get())); }) { qtc::rt(*r, s->translated(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11591(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11592(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<long long> p0;
-    qtc::H<long long> p1;
-    QTC_CV(0, p0);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0) && __has_include(<QtMultimedia/qplaybackoptions.h>)
-template <class S> static int t11593(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetNetworkTimeout(); }) { s->resetNetworkTimeout(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11594(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackIntent()); }) { qtc::rt(*r, s->playbackIntent()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11595(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<QPlaybackOptions::PlaybackIntent> p0;
-    QTC_CVE(0, p0, 448);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPlaybackOptions::PlaybackIntent> &p0) { qtc::cve(aa[0], p0, 0, 448); s->setPlaybackIntent(p0.get()); }) { s->setPlaybackIntent(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11596(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetPlaybackIntent(); }) { s->resetPlaybackIntent(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11597(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->probeSize()); }) { qtc::rt(*r, s->probeSize()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11598(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    qtc::H<long long> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setProbeSize(p0.get()); }) { s->setProbeSize(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11599(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_val<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetProbeSize(); }) { s->resetProbeSize(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11600(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtMultimedia/qscreencapture.h>)
-template <class S> static int t11601(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->captureSession()); }) { qtc::rt(*r, s->captureSession()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11602(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QScreen *> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QScreen *> &p0) { qtc::cv(aa[0], p0, 0); s->setScreen(p0.get()); }) { s->setScreen(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11603(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->screen()); }) { qtc::rt(*r, s->screen()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11604(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isActive()); }) { qtc::rt(*r, s->isActive()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11605(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->error()); }) { qtc::rt(*r, s->error()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11606(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->errorString()); }) { qtc::rt(*r, s->errorString()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11607(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setActive(p0.get()); }) { s->setActive(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11608(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->start(); }) { s->start(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11609(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->stop(); }) { s->stop(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11610(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->activeChanged(p0.get()); }) { s->activeChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11611(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->errorChanged(); }) { s->errorChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11612(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QScreen *> p0;
-    QTC_CV(0, p0);
-    switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QScreen *> &p0) { qtc::cv(aa[0], p0, 0); s->screenChanged(p0.get()); }) { s->screenChanged(p0.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-template <class S> static int t11613(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    qtc::H<QScreenCapture::Error> p0;
-    qtc::H<QString> p1;
-    QTC_CVE(0, p0, 558);
-    QTC_CV(1, p1);
-    switch (n) {
-        case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QScreenCapture::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 558); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11614(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    S *s = qtc::self_obj<S>(q);
-    switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->maximumFrameRateChanged(); }) { s->maximumFrameRateChanged(); r->set_none(); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)s;
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-template <class S> static int t11615(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    qtc::H<QObject *> p0;
-    if (n > 0) QTC_CV(0, p0);
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
-    (void)a; (void)r;
-    return QTC_ERR_BAD_ARGS;
-}
-#endif
-#if __has_include(<QtMultimedia/qsoundeffect.h>)
-template <class S> static int t11616(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
-    (void)q;
-    switch (n) {
-        case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S::supportedMimeTypes()); }) { qtc::rt(*r, S::supportedMimeTypes()); return 0; }
-            else return QTC_ERR_UNSUPPORTED;
-        default: break;
-    }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
@@ -7163,11 +5090,9 @@ template <class S> static int t11617(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 template <class S> static int t11618(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
-    qtc::H<QUrl> p0;
-    QTC_CV(0, p0);
     switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->setSource(p0.get()); }) { s->setSource(p0.get()); r->set_none(); return 0; }
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->sourceDevice()); }) { qtc::rt(*r, s->sourceDevice()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7179,7 +5104,7 @@ template <class S> static int t11619(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->loopCount()); }) { qtc::rt(*r, s->loopCount()); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackState()); }) { qtc::rt(*r, s->playbackState()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7191,7 +5116,7 @@ template <class S> static int t11620(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->loopsRemaining()); }) { qtc::rt(*r, s->loopsRemaining()); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->mediaStatus()); }) { qtc::rt(*r, s->mediaStatus()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7201,11 +5126,9 @@ template <class S> static int t11620(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 template <class S> static int t11621(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
-    qtc::H<int> p0;
-    QTC_CV(0, p0);
     switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setLoopCount(p0.get()); }) { s->setLoopCount(p0.get()); r->set_none(); return 0; }
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->duration()); }) { qtc::rt(*r, s->duration()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7217,7 +5140,7 @@ template <class S> static int t11622(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioDevice()); }) { qtc::rt(*r, s->audioDevice()); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->position()); }) { qtc::rt(*r, s->position()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7227,11 +5150,9 @@ template <class S> static int t11622(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 template <class S> static int t11623(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
-    qtc::H<QAudioDevice> p0;
-    QTC_CV(0, p0);
     switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioDevice> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioDevice(p0.get()); }) { s->setAudioDevice(p0.get()); r->set_none(); return 0; }
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->hasAudio()); }) { qtc::rt(*r, s->hasAudio()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7243,7 +5164,7 @@ template <class S> static int t11624(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->volume()); }) { qtc::rt(*r, s->volume()); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->hasVideo()); }) { qtc::rt(*r, s->hasVideo()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7253,11 +5174,9 @@ template <class S> static int t11624(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 template <class S> static int t11625(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
-    qtc::H<float> p0;
-    QTC_CV(0, p0);
     switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<float> &p0) { qtc::cv(aa[0], p0, 0); s->setVolume(p0.get()); }) { s->setVolume(p0.get()); r->set_none(); return 0; }
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->bufferProgress()); }) { qtc::rt(*r, s->bufferProgress()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7269,7 +5188,7 @@ template <class S> static int t11626(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isMuted()); }) { qtc::rt(*r, s->isMuted()); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->bufferedTimeRange()); }) { qtc::rt(*r, s->bufferedTimeRange()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7279,11 +5198,9 @@ template <class S> static int t11626(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 template <class S> static int t11627(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
-    qtc::H<bool> p0;
-    QTC_CV(0, p0);
     switch (n) {
-        case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setMuted(p0.get()); }) { s->setMuted(p0.get()); r->set_none(); return 0; }
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isSeekable()); }) { qtc::rt(*r, s->isSeekable()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7295,7 +5212,7 @@ template <class S> static int t11628(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isLoaded()); }) { qtc::rt(*r, s->isLoaded()); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackRate()); }) { qtc::rt(*r, s->playbackRate()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7303,6 +5220,7 @@ template <class S> static int t11628(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
 template <class S> static int t11629(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
@@ -7315,11 +5233,12 @@ template <class S> static int t11629(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
+#endif
 template <class S> static int t11630(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->status()); }) { qtc::rt(*r, s->status()); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->loops()); }) { qtc::rt(*r, s->loops()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7329,9 +5248,11 @@ template <class S> static int t11630(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 template <class S> static int t11631(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
+    qtc::H<int> p0;
+    QTC_CV(0, p0);
     switch (n) {
-        case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->sourceChanged(); }) { s->sourceChanged(); r->set_none(); return 0; }
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setLoops(p0.get()); }) { s->setLoops(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7343,7 +5264,7 @@ template <class S> static int t11632(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loopCountChanged(); }) { s->loopCountChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->error()); }) { qtc::rt(*r, s->error()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7355,7 +5276,7 @@ template <class S> static int t11633(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loopsRemainingChanged(); }) { s->loopsRemainingChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->errorString()); }) { qtc::rt(*r, s->errorString()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7367,7 +5288,7 @@ template <class S> static int t11634(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->volumeChanged(); }) { s->volumeChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isAvailable()); }) { qtc::rt(*r, s->isAvailable()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7379,7 +5300,7 @@ template <class S> static int t11635(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->mutedChanged(); }) { s->mutedChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->metaData()); }) { qtc::rt(*r, s->metaData()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7387,11 +5308,12 @@ template <class S> static int t11635(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
 template <class S> static int t11636(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loadedChanged(); }) { s->loadedChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->pitchCompensationAvailability()); }) { qtc::rt(*r, s->pitchCompensationAvailability()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7399,11 +5321,13 @@ template <class S> static int t11636(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
 template <class S> static int t11637(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->playingChanged(); }) { s->playingChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->pitchCompensation()); }) { qtc::rt(*r, s->pitchCompensation()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7411,11 +5335,13 @@ template <class S> static int t11637(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
 template <class S> static int t11638(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->statusChanged(); }) { s->statusChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackOptions()); }) { qtc::rt(*r, s->playbackOptions()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7423,11 +5349,12 @@ template <class S> static int t11638(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
+#endif
 template <class S> static int t11639(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioDeviceChanged(); }) { s->audioDeviceChanged(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->play(); }) { s->play(); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7439,7 +5366,7 @@ template <class S> static int t11640(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->play(); }) { s->play(); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->pause(); }) { s->pause(); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7460,6 +5387,394 @@ template <class S> static int t11641(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 template <class S> static int t11642(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setPosition(p0.get()); }) { s->setPosition(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<double> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0) { qtc::cv(aa[0], p0, 0); s->setPlaybackRate(p0.get()); }) { s->setPlaybackRate(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11644(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QUrl> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->setSource(p0.get()); }) { s->setSource(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+template <class S> static int t11645(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setPitchCompensation(p0.get()); }) { s->setPitchCompensation(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+template <class S> static int t11646(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QPlaybackOptions> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPlaybackOptions> &p0) { qtc::cv(aa[0], p0, 0); s->setPlaybackOptions(p0.get()); }) { s->setPlaybackOptions(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+template <class S> static int t11647(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetPlaybackOptions(); }) { s->resetPlaybackOptions(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11648(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QUrl> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->sourceChanged(p0.get()); }) { s->sourceChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11649(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaPlayer::PlaybackState> p0;
+    QTC_CVE(0, p0, 346);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaPlayer::PlaybackState> &p0) { qtc::cve(aa[0], p0, 0, 346); s->playbackStateChanged(p0.get()); }) { s->playbackStateChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaPlayer::MediaStatus> p0;
+    QTC_CVE(0, p0, 344);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaPlayer::MediaStatus> &p0) { qtc::cve(aa[0], p0, 0, 344); s->mediaStatusChanged(p0.get()); }) { s->mediaStatusChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->durationChanged(p0.get()); }) { s->durationChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->positionChanged(p0.get()); }) { s->positionChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->hasAudioChanged(p0.get()); }) { s->hasAudioChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->hasVideoChanged(p0.get()); }) { s->hasVideoChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<float> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<float> &p0) { qtc::cv(aa[0], p0, 0); s->bufferProgressChanged(p0.get()); }) { s->bufferProgressChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->seekableChanged(p0.get()); }) { s->seekableChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+template <class S> static int t11657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->playingChanged(p0.get()); }) { s->playingChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<double> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0) { qtc::cv(aa[0], p0, 0); s->playbackRateChanged(p0.get()); }) { s->playbackRateChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loopsChanged(); }) { s->loopsChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->metaDataChanged(); }) { s->metaDataChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoOutputChanged(); }) { s->videoOutputChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioOutputChanged(); }) { s->audioOutputChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+template <class S> static int t11663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioBufferOutputChanged(); }) { s->audioBufferOutputChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->tracksChanged(); }) { s->tracksChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->activeTracksChanged(); }) { s->activeTracksChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->errorChanged(); }) { s->errorChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaPlayer::Error> p0;
+    qtc::H<QString> p1;
+    QTC_CVE(0, p0, 342);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaPlayer::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 342); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+template <class S> static int t11668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->pitchCompensationChanged(p0.get()); }) { s->pitchCompensationChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+template <class S> static int t11669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->playbackOptionsChanged(); }) { s->playbackOptionsChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -7475,7 +5790,1692 @@ template <class S> static int t11642(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+#endif
+#if __has_include(<QtMultimedia/qmediarecorder.h>)
+template <class S> static int t11671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isAvailable()); }) { qtc::rt(*r, s->isAvailable()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->outputLocation()); }) { qtc::rt(*r, s->outputLocation()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QUrl> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->setOutputLocation(p0.get()); }) { s->setOutputLocation(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+template <class S> static int t11674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->outputDevice()); }) { qtc::rt(*r, s->outputDevice()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->actualLocation()); }) { qtc::rt(*r, s->actualLocation()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->recorderState()); }) { qtc::rt(*r, s->recorderState()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->error()); }) { qtc::rt(*r, s->error()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->errorString()); }) { qtc::rt(*r, s->errorString()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->duration()); }) { qtc::rt(*r, s->duration()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->mediaFormat()); }) { qtc::rt(*r, s->mediaFormat()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaFormat> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaFormat> &p0) { qtc::cv(aa[0], p0, 0); s->setMediaFormat(p0.get()); }) { s->setMediaFormat(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->encodingMode()); }) { qtc::rt(*r, s->encodingMode()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaRecorder::EncodingMode> p0;
+    QTC_CVE(0, p0, 347);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::EncodingMode> &p0) { qtc::cve(aa[0], p0, 0, 347); s->setEncodingMode(p0.get()); }) { s->setEncodingMode(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->quality()); }) { qtc::rt(*r, s->quality()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaRecorder::Quality> p0;
+    QTC_CVE(0, p0, 349);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::Quality> &p0) { qtc::cve(aa[0], p0, 0, 349); s->setQuality(p0.get()); }) { s->setQuality(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->videoResolution()); }) { qtc::rt(*r, s->videoResolution()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QSize> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSize> &p0) { qtc::cv(aa[0], p0, 0); s->setVideoResolution(p0.get()); }) { s->setVideoResolution(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<int> p0;
+    qtc::H<int> p1;
+    QTC_CV(0, p0);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->setVideoResolution(p0.get(), p1.get()); }) { s->setVideoResolution(p0.get(), p1.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->videoFrameRate()); }) { qtc::rt(*r, s->videoFrameRate()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<double> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0) { qtc::cv(aa[0], p0, 0); s->setVideoFrameRate(p0.get()); }) { s->setVideoFrameRate(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->videoBitRate()); }) { qtc::rt(*r, s->videoBitRate()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<int> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setVideoBitRate(p0.get()); }) { s->setVideoBitRate(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioBitRate()); }) { qtc::rt(*r, s->audioBitRate()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<int> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioBitRate(p0.get()); }) { s->setAudioBitRate(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioChannelCount()); }) { qtc::rt(*r, s->audioChannelCount()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<int> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioChannelCount(p0.get()); }) { s->setAudioChannelCount(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioSampleRate()); }) { qtc::rt(*r, s->audioSampleRate()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<int> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioSampleRate(p0.get()); }) { s->setAudioSampleRate(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->metaData()); }) { qtc::rt(*r, s->metaData()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaMetaData> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData> &p0) { qtc::cv(aa[0], p0, 0); s->setMetaData(p0.get()); }) { s->setMetaData(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaMetaData> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaMetaData> &p0) { qtc::cv(aa[0], p0, 0); s->addMetaData(p0.get()); }) { s->addMetaData(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+template <class S> static int t11702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->autoStop()); }) { qtc::rt(*r, s->autoStop()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+template <class S> static int t11703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setAutoStop(p0.get()); }) { s->setAutoStop(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->captureSession()); }) { qtc::rt(*r, s->captureSession()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->record(); }) { s->record(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->pause(); }) { s->pause(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->stop(); }) { s->stop(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaRecorder::RecorderState> p0;
+    QTC_CVE(0, p0, 350);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::RecorderState> &p0) { qtc::cve(aa[0], p0, 0, 350); s->recorderStateChanged(p0.get()); }) { s->recorderStateChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->durationChanged(p0.get()); }) { s->durationChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QUrl> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->actualLocationChanged(p0.get()); }) { s->actualLocationChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11711(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->encoderSettingsChanged(); }) { s->encoderSettingsChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QMediaRecorder::Error> p0;
+    qtc::H<QString> p1;
+    QTC_CVE(0, p0, 348);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaRecorder::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 348); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->errorChanged(); }) { s->errorChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->metaDataChanged(); }) { s->metaDataChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->mediaFormatChanged(); }) { s->mediaFormatChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->encodingModeChanged(); }) { s->encodingModeChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->qualityChanged(); }) { s->qualityChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoResolutionChanged(); }) { s->videoResolutionChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoFrameRateChanged(); }) { s->videoFrameRateChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->videoBitRateChanged(); }) { s->videoBitRateChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioBitRateChanged(); }) { s->audioBitRateChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioChannelCountChanged(); }) { s->audioChannelCountChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioSampleRateChanged(); }) { s->audioSampleRateChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+template <class S> static int t11724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->autoStopChanged(); }) { s->autoStopChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QObject *> p0;
+    if (n > 0) QTC_CV(0, p0);
+    switch (n) {
+        case 0:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        case 1:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if __has_include(<QtMultimedia/qmediatimerange.h>)
+template <class S> static int t11726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->detach(); }) { s->detach(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->earliestTime()); }) { qtc::rt(*r, s->earliestTime()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->latestTime()); }) { qtc::rt(*r, s->latestTime()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->intervals()); }) { qtc::rt(*r, s->intervals()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isEmpty()); }) { qtc::rt(*r, s->isEmpty()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isContinuous()); }) { qtc::rt(*r, s->isContinuous()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<long long> p0;
+    qtc::H<long long> p1;
+    QTC_CV(0, p0);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->addInterval(p0.get(), p1.get()); }) { s->addInterval(p0.get(), p1.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QMediaTimeRange::Interval> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange::Interval> &p0) { qtc::cv(aa[0], p0, 0); s->addInterval(p0.get()); }) { s->addInterval(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QMediaTimeRange> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange> &p0) { qtc::cv(aa[0], p0, 0); s->addTimeRange(p0.get()); }) { s->addTimeRange(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<long long> p0;
+    qtc::H<long long> p1;
+    QTC_CV(0, p0);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->removeInterval(p0.get(), p1.get()); }) { s->removeInterval(p0.get(), p1.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QMediaTimeRange::Interval> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange::Interval> &p0) { qtc::cv(aa[0], p0, 0); s->removeInterval(p0.get()); }) { s->removeInterval(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QMediaTimeRange> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange> &p0) { qtc::cv(aa[0], p0, 0); s->removeTimeRange(p0.get()); }) { s->removeTimeRange(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->clear(); }) { s->clear(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    switch (n) {
+        case 0:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<long long> p0;
+    qtc::H<long long> p1;
+    QTC_CV(0, p0);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QMediaTimeRange::Interval> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMediaTimeRange::Interval> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, S(p0.get())); }) { qtc::rt(*r, S(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if __has_include(<QtMultimedia/qmediatimerange.h>)
+template <class S> static int t11743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->start()); }) { qtc::rt(*r, s->start()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->end()); }) { qtc::rt(*r, s->end()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->contains(p0.get())); }) { qtc::rt(*r, s->contains(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isNormal()); }) { qtc::rt(*r, s->isNormal()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->normalized()); }) { qtc::rt(*r, s->normalized()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->translated(p0.get())); }) { qtc::rt(*r, s->translated(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    switch (n) {
+        case 0:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<long long> p0;
+    qtc::H<long long> p1;
+    QTC_CV(0, p0);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0, qtc::H<long long> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0) && __has_include(<QtMultimedia/qplaybackoptions.h>)
+template <class S> static int t11751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetNetworkTimeout(); }) { s->resetNetworkTimeout(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->playbackIntent()); }) { qtc::rt(*r, s->playbackIntent()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<QPlaybackOptions::PlaybackIntent> p0;
+    QTC_CVE(0, p0, 472);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPlaybackOptions::PlaybackIntent> &p0) { qtc::cve(aa[0], p0, 0, 472); s->setPlaybackIntent(p0.get()); }) { s->setPlaybackIntent(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetPlaybackIntent(); }) { s->resetPlaybackIntent(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->probeSize()); }) { qtc::rt(*r, s->probeSize()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    qtc::H<long long> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); s->setProbeSize(p0.get()); }) { s->setProbeSize(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_val<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->resetProbeSize(); }) { s->resetProbeSize(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    switch (n) {
+        case 0:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S()); }) { qtc::rt(*r, S()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtMultimedia/qscreencapture.h>)
+template <class S> static int t11759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->captureSession()); }) { qtc::rt(*r, s->captureSession()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QScreen *> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QScreen *> &p0) { qtc::cv(aa[0], p0, 0); s->setScreen(p0.get()); }) { s->setScreen(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->screen()); }) { qtc::rt(*r, s->screen()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11762(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isActive()); }) { qtc::rt(*r, s->isActive()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11763(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->error()); }) { qtc::rt(*r, s->error()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11764(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->errorString()); }) { qtc::rt(*r, s->errorString()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11765(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setActive(p0.get()); }) { s->setActive(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11766(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->start(); }) { s->start(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11767(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->stop(); }) { s->stop(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11768(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->activeChanged(p0.get()); }) { s->activeChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11769(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->errorChanged(); }) { s->errorChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11770(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QScreen *> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QScreen *> &p0) { qtc::cv(aa[0], p0, 0); s->screenChanged(p0.get()); }) { s->screenChanged(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11771(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QScreenCapture::Error> p0;
+    qtc::H<QString> p1;
+    QTC_CVE(0, p0, 582);
+    QTC_CV(1, p1);
+    switch (n) {
+        case 2:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QScreenCapture::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 582); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
+template <class S> static int t11772(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->maximumFrameRateChanged(); }) { s->maximumFrameRateChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+template <class S> static int t11773(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QObject *> p0;
+    if (n > 0) QTC_CV(0, p0);
+    switch (n) {
+        case 0:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        case 1:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+#endif
+#if __has_include(<QtMultimedia/qsoundeffect.h>)
+template <class S> static int t11774(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    switch (n) {
+        case 0:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, S::supportedMimeTypes()); }) { qtc::rt(*r, S::supportedMimeTypes()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11775(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->source()); }) { qtc::rt(*r, s->source()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11776(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QUrl> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QUrl> &p0) { qtc::cv(aa[0], p0, 0); s->setSource(p0.get()); }) { s->setSource(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11777(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->loopCount()); }) { qtc::rt(*r, s->loopCount()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->loopsRemaining()); }) { qtc::rt(*r, s->loopsRemaining()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11779(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<int> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setLoopCount(p0.get()); }) { s->setLoopCount(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11780(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->audioDevice()); }) { qtc::rt(*r, s->audioDevice()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11781(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<QAudioDevice> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioDevice> &p0) { qtc::cv(aa[0], p0, 0); s->setAudioDevice(p0.get()); }) { s->setAudioDevice(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11782(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->volume()); }) { qtc::rt(*r, s->volume()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11783(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<float> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<float> &p0) { qtc::cv(aa[0], p0, 0); s->setVolume(p0.get()); }) { s->setVolume(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11784(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isMuted()); }) { qtc::rt(*r, s->isMuted()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11785(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    qtc::H<bool> p0;
+    QTC_CV(0, p0);
+    switch (n) {
+        case 1:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<bool> &p0) { qtc::cv(aa[0], p0, 0); s->setMuted(p0.get()); }) { s->setMuted(p0.get()); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11786(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isLoaded()); }) { qtc::rt(*r, s->isLoaded()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11787(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->isPlaying()); }) { qtc::rt(*r, s->isPlaying()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11788(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->status()); }) { qtc::rt(*r, s->status()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11789(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->sourceChanged(); }) { s->sourceChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11790(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loopCountChanged(); }) { s->loopCountChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11791(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loopsRemainingChanged(); }) { s->loopsRemainingChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11792(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->volumeChanged(); }) { s->volumeChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11793(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->mutedChanged(); }) { s->mutedChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11794(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->loadedChanged(); }) { s->loadedChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11795(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->playingChanged(); }) { s->playingChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11796(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->statusChanged(); }) { s->statusChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11797(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->audioDeviceChanged(); }) { s->audioDeviceChanged(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11798(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->play(); }) { s->play(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11799(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    S *s = qtc::self_obj<S>(q);
+    switch (n) {
+        case 0:
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->stop(); }) { s->stop(); r->set_none(); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)s;
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11800(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+    (void)q;
+    qtc::H<QObject *> p0;
+    if (n > 0) QTC_CV(0, p0);
+    switch (n) {
+        case 0:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        case 1:
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            else return QTC_ERR_UNSUPPORTED;
+        default: break;
+    }
+    (void)a; (void)r;
+    return QTC_ERR_BAD_ARGS;
+}
+template <class S> static int t11801(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QAudioDevice> p0;
     qtc::H<QObject *> p1;
@@ -7495,7 +7495,7 @@ template <class S> static int t11643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qvideoframe.h>)
-template <class S> static int t11644(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11802(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7507,7 +7507,7 @@ template <class S> static int t11644(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11645(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11803(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7519,7 +7519,7 @@ template <class S> static int t11645(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11646(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11804(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7531,7 +7531,7 @@ template <class S> static int t11646(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11647(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11805(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7543,7 +7543,7 @@ template <class S> static int t11647(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11648(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11806(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7555,7 +7555,7 @@ template <class S> static int t11648(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11649(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11807(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7567,7 +7567,7 @@ template <class S> static int t11649(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11808(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7579,7 +7579,7 @@ template <class S> static int t11650(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7591,7 +7591,7 @@ template <class S> static int t11651(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11810(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7603,7 +7603,7 @@ template <class S> static int t11652(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11811(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7615,7 +7615,7 @@ template <class S> static int t11653(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11812(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7627,13 +7627,13 @@ template <class S> static int t11654(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11813(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVideoFrame::MapMode> p0;
-    QTC_CVE(0, p0, 804);
+    QTC_CVE(0, p0, 828);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrame::MapMode> &p0) { qtc::cve(aa[0], p0, 0, 804); qtc::rt(*rr, s->map(p0.get())); }) { qtc::rt(*r, s->map(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrame::MapMode> &p0) { qtc::cve(aa[0], p0, 0, 828); qtc::rt(*rr, s->map(p0.get())); }) { qtc::rt(*r, s->map(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7641,7 +7641,7 @@ template <class S> static int t11655(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11814(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7653,7 +7653,7 @@ template <class S> static int t11656(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11815(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -7667,7 +7667,7 @@ template <class S> static int t11657(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11816(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
@@ -7681,7 +7681,7 @@ template <class S> static int t11658(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11817(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7693,7 +7693,7 @@ template <class S> static int t11659(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11818(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7705,7 +7705,7 @@ template <class S> static int t11660(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11819(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -7719,7 +7719,7 @@ template <class S> static int t11661(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11820(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7731,7 +7731,7 @@ template <class S> static int t11662(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11821(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -7745,13 +7745,13 @@ template <class S> static int t11663(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11822(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVideoFrame::RotationAngle> p0;
-    QTC_CVE(0, p0, 806);
+    QTC_CVE(0, p0, 830);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrame::RotationAngle> &p0) { qtc::cve(aa[0], p0, 0, 806); s->setRotationAngle(p0.get()); }) { s->setRotationAngle(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrame::RotationAngle> &p0) { qtc::cve(aa[0], p0, 0, 830); s->setRotationAngle(p0.get()); }) { s->setRotationAngle(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7759,7 +7759,7 @@ template <class S> static int t11664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7772,13 +7772,13 @@ template <class S> static int t11665(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t11666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QtVideo::Rotation> p0;
-    QTC_CVE(0, p0, 942);
+    QTC_CVE(0, p0, 972);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QtVideo::Rotation> &p0) { qtc::cve(aa[0], p0, 0, 942); s->setRotation(p0.get()); }) { s->setRotation(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QtVideo::Rotation> &p0) { qtc::cve(aa[0], p0, 0, 972); s->setRotation(p0.get()); }) { s->setRotation(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7788,7 +7788,7 @@ template <class S> static int t11666(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-template <class S> static int t11667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11825(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7801,7 +7801,7 @@ template <class S> static int t11667(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11826(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -7815,7 +7815,7 @@ template <class S> static int t11668(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11827(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7828,7 +7828,7 @@ template <class S> static int t11669(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11828(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -7844,7 +7844,7 @@ template <class S> static int t11670(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11829(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7857,7 +7857,7 @@ template <class S> static int t11671(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11830(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7869,7 +7869,7 @@ template <class S> static int t11672(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11831(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7881,7 +7881,7 @@ template <class S> static int t11673(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11832(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -7895,7 +7895,7 @@ template <class S> static int t11674(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11833(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -7906,7 +7906,7 @@ template <class S> static int t11675(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11834(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QVideoFrameFormat> p0;
     QTC_CV(0, p0);
@@ -7920,7 +7920,7 @@ template <class S> static int t11676(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11835(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QImage> p0;
     QTC_CV(0, p0);
@@ -7936,7 +7936,7 @@ template <class S> static int t11677(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 #endif
 #endif
 #if __has_include(<QtMultimedia/qvideoframeformat.h>)
-template <class S> static int t11678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11836(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7948,7 +7948,7 @@ template <class S> static int t11678(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11837(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7960,7 +7960,7 @@ template <class S> static int t11679(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11838(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7972,7 +7972,7 @@ template <class S> static int t11680(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11839(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -7984,7 +7984,7 @@ template <class S> static int t11681(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11840(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QSize> p0;
     QTC_CV(0, p0);
@@ -7998,7 +7998,7 @@ template <class S> static int t11682(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11841(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     qtc::H<int> p1;
@@ -8014,7 +8014,7 @@ template <class S> static int t11683(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11842(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8026,7 +8026,7 @@ template <class S> static int t11684(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11843(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8038,7 +8038,7 @@ template <class S> static int t11685(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11844(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8050,7 +8050,7 @@ template <class S> static int t11686(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11845(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8062,7 +8062,7 @@ template <class S> static int t11687(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QRect> p0;
     QTC_CV(0, p0);
@@ -8076,7 +8076,7 @@ template <class S> static int t11688(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11847(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8088,13 +8088,13 @@ template <class S> static int t11689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11848(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVideoFrameFormat::Direction> p0;
-    QTC_CVE(0, p0, 810);
+    QTC_CVE(0, p0, 834);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::Direction> &p0) { qtc::cve(aa[0], p0, 0, 810); s->setScanLineDirection(p0.get()); }) { s->setScanLineDirection(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::Direction> &p0) { qtc::cve(aa[0], p0, 0, 834); s->setScanLineDirection(p0.get()); }) { s->setScanLineDirection(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8102,7 +8102,7 @@ template <class S> static int t11690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8114,7 +8114,7 @@ template <class S> static int t11691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11850(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -8129,7 +8129,7 @@ template <class S> static int t11692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11851(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8143,7 +8143,7 @@ template <class S> static int t11693(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11852(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<double> p0;
     QTC_CV(0, p0);
@@ -8158,7 +8158,7 @@ template <class S> static int t11694(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11853(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8170,13 +8170,13 @@ template <class S> static int t11695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11854(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVideoFrameFormat::YCbCrColorSpace> p0;
-    QTC_CVE(0, p0, 812);
+    QTC_CVE(0, p0, 836);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::YCbCrColorSpace> &p0) { qtc::cve(aa[0], p0, 0, 812); s->setYCbCrColorSpace(p0.get()); }) { s->setYCbCrColorSpace(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::YCbCrColorSpace> &p0) { qtc::cve(aa[0], p0, 0, 836); s->setYCbCrColorSpace(p0.get()); }) { s->setYCbCrColorSpace(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8184,7 +8184,7 @@ template <class S> static int t11696(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11855(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8196,13 +8196,13 @@ template <class S> static int t11697(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11856(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVideoFrameFormat::ColorSpace> p0;
-    QTC_CVE(0, p0, 808);
+    QTC_CVE(0, p0, 832);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::ColorSpace> &p0) { qtc::cve(aa[0], p0, 0, 808); s->setColorSpace(p0.get()); }) { s->setColorSpace(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::ColorSpace> &p0) { qtc::cve(aa[0], p0, 0, 832); s->setColorSpace(p0.get()); }) { s->setColorSpace(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8210,7 +8210,7 @@ template <class S> static int t11698(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11857(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8222,13 +8222,13 @@ template <class S> static int t11699(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11858(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVideoFrameFormat::ColorTransfer> p0;
-    QTC_CVE(0, p0, 809);
+    QTC_CVE(0, p0, 833);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::ColorTransfer> &p0) { qtc::cve(aa[0], p0, 0, 809); s->setColorTransfer(p0.get()); }) { s->setColorTransfer(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::ColorTransfer> &p0) { qtc::cve(aa[0], p0, 0, 833); s->setColorTransfer(p0.get()); }) { s->setColorTransfer(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8236,7 +8236,7 @@ template <class S> static int t11700(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11859(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8248,13 +8248,13 @@ template <class S> static int t11701(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QVideoFrameFormat::ColorRange> p0;
-    QTC_CVE(0, p0, 807);
+    QTC_CVE(0, p0, 831);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::ColorRange> &p0) { qtc::cve(aa[0], p0, 0, 807); s->setColorRange(p0.get()); }) { s->setColorRange(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::ColorRange> &p0) { qtc::cve(aa[0], p0, 0, 831); s->setColorRange(p0.get()); }) { s->setColorRange(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8262,7 +8262,7 @@ template <class S> static int t11702(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8274,7 +8274,7 @@ template <class S> static int t11703(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -8289,7 +8289,7 @@ template <class S> static int t11704(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8303,13 +8303,13 @@ template <class S> static int t11705(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-template <class S> static int t11706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11864(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QtVideo::Rotation> p0;
-    QTC_CVE(0, p0, 942);
+    QTC_CVE(0, p0, 972);
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QtVideo::Rotation> &p0) { qtc::cve(aa[0], p0, 0, 942); s->setRotation(p0.get()); }) { s->setRotation(p0.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QtVideo::Rotation> &p0) { qtc::cve(aa[0], p0, 0, 972); s->setRotation(p0.get()); }) { s->setRotation(p0.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8318,7 +8318,7 @@ template <class S> static int t11706(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8330,7 +8330,7 @@ template <class S> static int t11707(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8342,7 +8342,7 @@ template <class S> static int t11708(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11867(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     switch (n) {
         case 0:
@@ -8354,7 +8354,7 @@ template <class S> static int t11709(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11868(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<float> p0;
     QTC_CV(0, p0);
@@ -8368,46 +8368,46 @@ template <class S> static int t11710(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11711(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11869(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QImage::Format> p0;
-    QTC_CVE(0, p0, 249);
+    QTC_CVE(0, p0, 259);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImage::Format> &p0) { qtc::cve(aa[0], p0, 0, 249); qtc::rt(*rr, S::pixelFormatFromImageFormat(p0.get())); }) { qtc::rt(*r, S::pixelFormatFromImageFormat(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QImage::Format> &p0) { qtc::cve(aa[0], p0, 0, 259); qtc::rt(*rr, S::pixelFormatFromImageFormat(p0.get())); }) { qtc::rt(*r, S::pixelFormatFromImageFormat(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11712(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11870(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QVideoFrameFormat::PixelFormat> p0;
-    QTC_CVE(0, p0, 811);
+    QTC_CVE(0, p0, 835);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::PixelFormat> &p0) { qtc::cve(aa[0], p0, 0, 811); qtc::rt(*rr, S::imageFormatFromPixelFormat(p0.get())); }) { qtc::rt(*r, S::imageFormatFromPixelFormat(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::PixelFormat> &p0) { qtc::cve(aa[0], p0, 0, 835); qtc::rt(*rr, S::imageFormatFromPixelFormat(p0.get())); }) { qtc::rt(*r, S::imageFormatFromPixelFormat(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11713(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11871(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QVideoFrameFormat::PixelFormat> p0;
-    QTC_CVE(0, p0, 811);
+    QTC_CVE(0, p0, 835);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::PixelFormat> &p0) { qtc::cve(aa[0], p0, 0, 811); qtc::rt(*rr, S::pixelFormatToString(p0.get())); }) { qtc::rt(*r, S::pixelFormatToString(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QVideoFrameFormat::PixelFormat> &p0) { qtc::cve(aa[0], p0, 0, 835); qtc::rt(*rr, S::pixelFormatToString(p0.get())); }) { qtc::rt(*r, S::pixelFormatToString(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11872(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -8418,15 +8418,15 @@ template <class S> static int t11714(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11873(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QSize> p0;
     qtc::H<QVideoFrameFormat::PixelFormat> p1;
     QTC_CV(0, p0);
-    QTC_CVE(1, p1, 811);
+    QTC_CVE(1, p1, 835);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSize> &p0, qtc::H<QVideoFrameFormat::PixelFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 811); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QSize> &p0, qtc::H<QVideoFrameFormat::PixelFormat> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 835); qtc::rt(*rr, S(p0.get(), p1.get())); }) { qtc::rt(*r, S(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8435,7 +8435,7 @@ template <class S> static int t11715(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && __has_include(<QtMultimedia/qvideoframeinput.h>)
-template <class S> static int t11716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11874(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVideoFrame> p0;
     QTC_CV(0, p0);
@@ -8449,7 +8449,7 @@ template <class S> static int t11716(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11875(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8461,7 +8461,7 @@ template <class S> static int t11717(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11876(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8473,7 +8473,7 @@ template <class S> static int t11718(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11877(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8485,7 +8485,7 @@ template <class S> static int t11719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11878(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -8501,7 +8501,7 @@ template <class S> static int t11720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11879(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QVideoFrameFormat> p0;
     qtc::H<QObject *> p1;
@@ -8521,7 +8521,7 @@ template <class S> static int t11721(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qvideosink.h>)
-template <class S> static int t11722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11880(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8533,7 +8533,7 @@ template <class S> static int t11722(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11881(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8545,7 +8545,7 @@ template <class S> static int t11723(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11882(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -8559,7 +8559,7 @@ template <class S> static int t11724(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11883(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVideoFrame> p0;
     QTC_CV(0, p0);
@@ -8573,7 +8573,7 @@ template <class S> static int t11725(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11884(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8585,7 +8585,7 @@ template <class S> static int t11726(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11885(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QVideoFrame> p0;
     QTC_CV(0, p0);
@@ -8599,7 +8599,7 @@ template <class S> static int t11727(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11886(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
@@ -8613,7 +8613,7 @@ template <class S> static int t11728(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11887(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8625,7 +8625,7 @@ template <class S> static int t11729(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11888(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -8643,7 +8643,7 @@ template <class S> static int t11730(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if __has_include(<QtMultimedia/qwavedecoder.h>)
-template <class S> static int t11731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11889(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8655,7 +8655,7 @@ template <class S> static int t11731(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11890(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8667,7 +8667,7 @@ template <class S> static int t11732(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11891(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8679,7 +8679,7 @@ template <class S> static int t11733(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11892(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -8690,14 +8690,14 @@ template <class S> static int t11734(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11893(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> p0;
-    QTC_CVF(0, p0, 244);
+    QTC_CVF(0, p0, 254);
     if (!(qtc::nmea_open_ok(s, int((p0.get()))))) return qtc::pre_fail(QTC_ERR_STATE, "QWaveDecoder::open(QIODevice::OpenMode): an NMEA source reads this device: open it for reading");
     switch (n) {
         case 1:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 244); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QFlags<QIODeviceBase::OpenModeFlag>> &p0) { qtc::cvf(aa[0], p0, 0, 254); qtc::rt(*rr, s->open(p0.get())); }) { qtc::rt(*r, s->open(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8705,7 +8705,7 @@ template <class S> static int t11735(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11894(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8717,7 +8717,7 @@ template <class S> static int t11736(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
@@ -8731,7 +8731,7 @@ template <class S> static int t11737(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11896(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8743,7 +8743,7 @@ template <class S> static int t11738(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11897(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8755,7 +8755,7 @@ template <class S> static int t11739(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11898(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8767,7 +8767,7 @@ template <class S> static int t11740(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11899(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8779,7 +8779,7 @@ template <class S> static int t11741(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11900(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8791,7 +8791,7 @@ template <class S> static int t11742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11901(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8803,7 +8803,7 @@ template <class S> static int t11743(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11902(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QIODevice *> p0;
     qtc::H<QObject *> p1;
@@ -8821,7 +8821,7 @@ template <class S> static int t11744(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11903(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QIODevice *> p0;
     qtc::H<QAudioFormat> p1;
@@ -8843,7 +8843,7 @@ template <class S> static int t11745(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && __has_include(<QtMultimedia/qwindowcapture.h>)
-template <class S> static int t11746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11904(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
@@ -8854,7 +8854,7 @@ template <class S> static int t11746(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11905(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8866,7 +8866,7 @@ template <class S> static int t11747(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11906(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCapturableWindow> p0;
     QTC_CV(0, p0);
@@ -8880,7 +8880,7 @@ template <class S> static int t11748(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11907(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8892,7 +8892,7 @@ template <class S> static int t11749(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11908(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8904,7 +8904,7 @@ template <class S> static int t11750(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11909(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8916,7 +8916,7 @@ template <class S> static int t11751(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11910(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8928,7 +8928,7 @@ template <class S> static int t11752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11911(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -8942,7 +8942,7 @@ template <class S> static int t11753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11912(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8954,7 +8954,7 @@ template <class S> static int t11754(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11913(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -8966,7 +8966,7 @@ template <class S> static int t11755(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11914(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<bool> p0;
     QTC_CV(0, p0);
@@ -8980,7 +8980,7 @@ template <class S> static int t11756(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11915(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QCapturableWindow> p0;
     QTC_CV(0, p0);
@@ -8994,7 +8994,7 @@ template <class S> static int t11757(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11916(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -9006,15 +9006,15 @@ template <class S> static int t11758(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-template <class S> static int t11759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11917(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QWindowCapture::Error> p0;
     qtc::H<QString> p1;
-    QTC_CVE(0, p0, 822);
+    QTC_CVE(0, p0, 846);
     QTC_CV(1, p1);
     switch (n) {
         case 2:
-            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWindowCapture::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 822); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
+            if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWindowCapture::Error> &p0, qtc::H<QString> &p1) { qtc::cve(aa[0], p0, 0, 846); qtc::cv(aa[1], p1, 1); s->errorOccurred(p0.get(), p1.get()); }) { s->errorOccurred(p0.get(), p1.get()); r->set_none(); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -9023,7 +9023,7 @@ template <class S> static int t11759(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-template <class S> static int t11760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11918(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
         case 0:
@@ -9036,7 +9036,7 @@ template <class S> static int t11760(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-template <class S> static int t11761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
+template <class S> static int t11919(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     qtc::H<QObject *> p0;
     if (n > 0) QTC_CV(0, p0);
@@ -9053,1298 +9053,1298 @@ template <class S> static int t11761(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-static const qtc::ParamDesc P11089[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11090[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11247[] = {{qtc::PK_BYTES, -1, "QByteArray", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11248[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
 #if __has_include(<QtMultimedia/qaudiobuffer.h>)
 static const qtc::MethodDef M_QAudioBuffer[] = {
-    {"isValid", "isValid()", t11080<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"detach", "detach()", t11081<QAudioBuffer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"format", "format()", t11082<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"frameCount", "frameCount()", t11083<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"sampleCount", "sampleCount()", t11084<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"byteCount", "byteCount()", t11085<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"duration", "duration()", t11086<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"startTime", "startTime()", t11087<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"isValid", "isValid()", t11238<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"detach", "detach()", t11239<QAudioBuffer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"format", "format()", t11240<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"frameCount", "frameCount()", t11241<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"sampleCount", "sampleCount()", t11242<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"byteCount", "byteCount()", t11243<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"duration", "duration()", t11244<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"startTime", "startTime()", t11245<QAudioBuffer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioBuffer[] = {
-    {"QAudioBuffer", "QAudioBuffer()", t11088<QAudioBuffer>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAudioBuffer"},
-    {"QAudioBuffer", "QAudioBuffer(QByteArray,QAudioFormat,qint64)", t11089<QAudioBuffer>, P11089, 3, 2, 0, QTC_T_VALUE, "QAudioBuffer"},
-    {"QAudioBuffer", "QAudioBuffer(int,QAudioFormat,qint64)", t11090<QAudioBuffer>, P11090, 3, 2, 0, QTC_T_VALUE, "QAudioBuffer"},
+    {"QAudioBuffer", "QAudioBuffer()", t11246<QAudioBuffer>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAudioBuffer"},
+    {"QAudioBuffer", "QAudioBuffer(QByteArray,QAudioFormat,qint64)", t11247<QAudioBuffer>, P11247, 3, 2, 0, QTC_T_VALUE, "QAudioBuffer"},
+    {"QAudioBuffer", "QAudioBuffer(int,QAudioFormat,qint64)", t11248<QAudioBuffer>, P11248, 3, 2, 0, QTC_T_VALUE, "QAudioBuffer"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11091[] = {{qtc::PK_VALUE, -1, "QAudioBuffer", nullptr}};
-static const qtc::ParamDesc P11095[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11096[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11249[] = {{qtc::PK_VALUE, -1, "QAudioBuffer", nullptr}};
+static const qtc::ParamDesc P11253[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11254[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && __has_include(<QtMultimedia/qaudiobufferinput.h>)
 static const qtc::MethodDef M_QAudioBufferInput[] = {
-    {"sendAudioBuffer", "sendAudioBuffer(QAudioBuffer)", t11091<QAudioBufferInput>, P11091, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"format", "format()", t11092<QAudioBufferInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"captureSession", "captureSession()", t11093<QAudioBufferInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
-    {"readyToSendAudioBuffer", "readyToSendAudioBuffer()", t11094<QAudioBufferInput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"sendAudioBuffer", "sendAudioBuffer(QAudioBuffer)", t11249<QAudioBufferInput>, P11249, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"format", "format()", t11250<QAudioBufferInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"captureSession", "captureSession()", t11251<QAudioBufferInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
+    {"readyToSendAudioBuffer", "readyToSendAudioBuffer()", t11252<QAudioBufferInput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioBufferInput[] = {
-    {"QAudioBufferInput", "QAudioBufferInput(QObject*)", t11095<QAudioBufferInput>, P11095, 1, 0, 0, QTC_T_OBJ, "QAudioBufferInput"},
-    {"QAudioBufferInput", "QAudioBufferInput(QAudioFormat,QObject*)", t11096<QAudioBufferInput>, P11096, 2, 1, 0, QTC_T_OBJ, "QAudioBufferInput"},
+    {"QAudioBufferInput", "QAudioBufferInput(QObject*)", t11253<QAudioBufferInput>, P11253, 1, 0, 0, QTC_T_OBJ, "QAudioBufferInput"},
+    {"QAudioBufferInput", "QAudioBufferInput(QAudioFormat,QObject*)", t11254<QAudioBufferInput>, P11254, 2, 1, 0, QTC_T_OBJ, "QAudioBufferInput"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11098[] = {{qtc::PK_VALUE, -1, "QAudioBuffer", nullptr}};
-static const qtc::ParamDesc P11099[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11100[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11256[] = {{qtc::PK_VALUE, -1, "QAudioBuffer", nullptr}};
+static const qtc::ParamDesc P11257[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11258[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && __has_include(<QtMultimedia/qaudiobufferoutput.h>)
 static const qtc::MethodDef M_QAudioBufferOutput[] = {
-    {"format", "format()", t11097<QAudioBufferOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"audioBufferReceived", "audioBufferReceived(QAudioBuffer)", t11098<QAudioBufferOutput>, P11098, 1, 1, 0, QTC_T_NONE, "void"},
+    {"format", "format()", t11255<QAudioBufferOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"audioBufferReceived", "audioBufferReceived(QAudioBuffer)", t11256<QAudioBufferOutput>, P11256, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioBufferOutput[] = {
-    {"QAudioBufferOutput", "QAudioBufferOutput(QObject*)", t11099<QAudioBufferOutput>, P11099, 1, 0, 0, QTC_T_OBJ, "QAudioBufferOutput"},
-    {"QAudioBufferOutput", "QAudioBufferOutput(QAudioFormat,QObject*)", t11100<QAudioBufferOutput>, P11100, 2, 1, 0, QTC_T_OBJ, "QAudioBufferOutput"},
+    {"QAudioBufferOutput", "QAudioBufferOutput(QObject*)", t11257<QAudioBufferOutput>, P11257, 1, 0, 0, QTC_T_OBJ, "QAudioBufferOutput"},
+    {"QAudioBufferOutput", "QAudioBufferOutput(QAudioFormat,QObject*)", t11258<QAudioBufferOutput>, P11258, 2, 1, 0, QTC_T_OBJ, "QAudioBufferOutput"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11104[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P11107[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}};
-static const qtc::ParamDesc P11116[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11119[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11120[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}};
-static const qtc::ParamDesc P11121[] = {{qtc::PK_ENUM, 52, "QAudioDecoder::Error", nullptr}};
-static const qtc::ParamDesc P11123[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11124[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11125[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11262[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11265[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}};
+static const qtc::ParamDesc P11274[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11277[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11278[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}};
+static const qtc::ParamDesc P11279[] = {{qtc::PK_ENUM, 57, "QAudioDecoder::Error", nullptr}};
+static const qtc::ParamDesc P11281[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11282[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11283[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qaudiodecoder.h>)
 static const qtc::MethodDef M_QAudioDecoder[] = {
-    {"isSupported", "isSupported()", t11101<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isDecoding", "isDecoding()", t11102<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"source", "source()", t11103<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setSource", "setSource(QUrl)", t11104<QAudioDecoder>, P11104, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sourceDevice", "sourceDevice()", t11105<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
-    {"audioFormat", "audioFormat()", t11106<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"setAudioFormat", "setAudioFormat(QAudioFormat)", t11107<QAudioDecoder>, P11107, 1, 1, 0, QTC_T_NONE, "void"},
-    {"error", "error()", t11108<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioDecoder::Error"},
-    {"errorString", "errorString()", t11109<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"read", "read()", t11110<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioBuffer"},
-    {"bufferAvailable", "bufferAvailable()", t11111<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"position", "position()", t11112<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"duration", "duration()", t11113<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"start", "start()", t11114<QAudioDecoder>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11115<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"bufferAvailableChanged", "bufferAvailableChanged(bool)", t11116<QAudioDecoder>, P11116, 1, 1, 0, QTC_T_NONE, "void"},
-    {"bufferReady", "bufferReady()", t11117<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"finished", "finished()", t11118<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isDecodingChanged", "isDecodingChanged(bool)", t11119<QAudioDecoder>, P11119, 1, 1, 0, QTC_T_NONE, "void"},
-    {"formatChanged", "formatChanged(QAudioFormat)", t11120<QAudioDecoder>, P11120, 1, 1, 0, QTC_T_NONE, "void"},
-    {"error", "error(QAudioDecoder::Error)", t11121<QAudioDecoder>, P11121, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sourceChanged", "sourceChanged()", t11122<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"positionChanged", "positionChanged(qint64)", t11123<QAudioDecoder>, P11123, 1, 1, 0, QTC_T_NONE, "void"},
-    {"durationChanged", "durationChanged(qint64)", t11124<QAudioDecoder>, P11124, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isSupported", "isSupported()", t11259<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isDecoding", "isDecoding()", t11260<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"source", "source()", t11261<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setSource", "setSource(QUrl)", t11262<QAudioDecoder>, P11262, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sourceDevice", "sourceDevice()", t11263<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
+    {"audioFormat", "audioFormat()", t11264<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"setAudioFormat", "setAudioFormat(QAudioFormat)", t11265<QAudioDecoder>, P11265, 1, 1, 0, QTC_T_NONE, "void"},
+    {"error", "error()", t11266<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioDecoder::Error"},
+    {"errorString", "errorString()", t11267<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"read", "read()", t11268<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioBuffer"},
+    {"bufferAvailable", "bufferAvailable()", t11269<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"position", "position()", t11270<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"duration", "duration()", t11271<QAudioDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"start", "start()", t11272<QAudioDecoder>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11273<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"bufferAvailableChanged", "bufferAvailableChanged(bool)", t11274<QAudioDecoder>, P11274, 1, 1, 0, QTC_T_NONE, "void"},
+    {"bufferReady", "bufferReady()", t11275<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"finished", "finished()", t11276<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isDecodingChanged", "isDecodingChanged(bool)", t11277<QAudioDecoder>, P11277, 1, 1, 0, QTC_T_NONE, "void"},
+    {"formatChanged", "formatChanged(QAudioFormat)", t11278<QAudioDecoder>, P11278, 1, 1, 0, QTC_T_NONE, "void"},
+    {"error", "error(QAudioDecoder::Error)", t11279<QAudioDecoder>, P11279, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sourceChanged", "sourceChanged()", t11280<QAudioDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"positionChanged", "positionChanged(qint64)", t11281<QAudioDecoder>, P11281, 1, 1, 0, QTC_T_NONE, "void"},
+    {"durationChanged", "durationChanged(qint64)", t11282<QAudioDecoder>, P11282, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioDecoder[] = {
-    {"QAudioDecoder", "QAudioDecoder(QObject*)", t11125<QAudioDecoder>, P11125, 1, 0, 0, QTC_T_OBJ, "QAudioDecoder"},
+    {"QAudioDecoder", "QAudioDecoder(QObject*)", t11283<QAudioDecoder>, P11283, 1, 0, 0, QTC_T_OBJ, "QAudioDecoder"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11131[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}};
+static const qtc::ParamDesc P11289[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}};
 #if __has_include(<QtMultimedia/qaudiodevice.h>)
 static const qtc::MethodDef M_QAudioDevice[] = {
-    {"isNull", "isNull()", t11126<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"id", "id()", t11127<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"description", "description()", t11128<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isDefault", "isDefault()", t11129<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"mode", "mode()", t11130<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioDevice::Mode"},
-    {"isFormatSupported", "isFormatSupported(QAudioFormat)", t11131<QAudioDevice>, P11131, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"preferredFormat", "preferredFormat()", t11132<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"minimumSampleRate", "minimumSampleRate()", t11133<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"maximumSampleRate", "maximumSampleRate()", t11134<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"minimumChannelCount", "minimumChannelCount()", t11135<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"maximumChannelCount", "maximumChannelCount()", t11136<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"supportedSampleFormats", "supportedSampleFormats()", t11137<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QAudioFormat::SampleFormat>"},
-    {"channelConfiguration", "channelConfiguration()", t11138<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioFormat::ChannelConfig"},
+    {"isNull", "isNull()", t11284<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"id", "id()", t11285<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"description", "description()", t11286<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isDefault", "isDefault()", t11287<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"mode", "mode()", t11288<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioDevice::Mode"},
+    {"isFormatSupported", "isFormatSupported(QAudioFormat)", t11289<QAudioDevice>, P11289, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"preferredFormat", "preferredFormat()", t11290<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"minimumSampleRate", "minimumSampleRate()", t11291<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"maximumSampleRate", "maximumSampleRate()", t11292<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"minimumChannelCount", "minimumChannelCount()", t11293<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"maximumChannelCount", "maximumChannelCount()", t11294<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"supportedSampleFormats", "supportedSampleFormats()", t11295<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QAudioFormat::SampleFormat>"},
+    {"channelConfiguration", "channelConfiguration()", t11296<QAudioDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioFormat::ChannelConfig"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioDevice[] = {
-    {"QAudioDevice", "QAudioDevice()", t11139<QAudioDevice>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAudioDevice"},
+    {"QAudioDevice", "QAudioDevice()", t11297<QAudioDevice>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAudioDevice"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11141[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11143[] = {{qtc::PK_ENUM, 56, "QAudioFormat::ChannelConfig", nullptr}};
-static const qtc::ParamDesc P11145[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11147[] = {{qtc::PK_ENUM, 55, "QAudioFormat::AudioChannelPosition", nullptr}};
-static const qtc::ParamDesc P11148[] = {{qtc::PK_ENUM, 57, "QAudioFormat::SampleFormat", nullptr}};
-static const qtc::ParamDesc P11150[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11151[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11152[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11153[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11154[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11155[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11158[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11299[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11301[] = {{qtc::PK_ENUM, 61, "QAudioFormat::ChannelConfig", nullptr}};
+static const qtc::ParamDesc P11303[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11305[] = {{qtc::PK_ENUM, 60, "QAudioFormat::AudioChannelPosition", nullptr}};
+static const qtc::ParamDesc P11306[] = {{qtc::PK_ENUM, 62, "QAudioFormat::SampleFormat", nullptr}};
+static const qtc::ParamDesc P11308[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11309[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11310[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11311[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11312[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11313[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11316[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if __has_include(<QtMultimedia/qaudioformat.h>)
 static const qtc::MethodDef M_QAudioFormat[] = {
-    {"isValid", "isValid()", t11140<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setSampleRate", "setSampleRate(int)", t11141<QAudioFormat>, P11141, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sampleRate", "sampleRate()", t11142<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setChannelConfig", "setChannelConfig(QAudioFormat::ChannelConfig)", t11143<QAudioFormat>, P11143, 1, 1, 0, QTC_T_NONE, "void"},
-    {"channelConfig", "channelConfig()", t11144<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioFormat::ChannelConfig"},
-    {"setChannelCount", "setChannelCount(int)", t11145<QAudioFormat>, P11145, 1, 1, 0, QTC_T_NONE, "void"},
-    {"channelCount", "channelCount()", t11146<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"channelOffset", "channelOffset(QAudioFormat::AudioChannelPosition)", t11147<QAudioFormat>, P11147, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setSampleFormat", "setSampleFormat(QAudioFormat::SampleFormat)", t11148<QAudioFormat>, P11148, 1, 1, 0, QTC_T_NONE, "void"},
-    {"sampleFormat", "sampleFormat()", t11149<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioFormat::SampleFormat"},
-    {"bytesForDuration", "bytesForDuration(qint64)", t11150<QAudioFormat>, P11150, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"durationForBytes", "durationForBytes(qint32)", t11151<QAudioFormat>, P11151, 1, 1, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"bytesForFrames", "bytesForFrames(qint32)", t11152<QAudioFormat>, P11152, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"framesForBytes", "framesForBytes(qint32)", t11153<QAudioFormat>, P11153, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"framesForDuration", "framesForDuration(qint64)", t11154<QAudioFormat>, P11154, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"durationForFrames", "durationForFrames(qint32)", t11155<QAudioFormat>, P11155, 1, 1, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"bytesPerFrame", "bytesPerFrame()", t11156<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"bytesPerSample", "bytesPerSample()", t11157<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"defaultChannelConfigForChannelCount", "defaultChannelConfigForChannelCount(int)", t11158<QAudioFormat>, P11158, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QAudioFormat::ChannelConfig"},
+    {"isValid", "isValid()", t11298<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setSampleRate", "setSampleRate(int)", t11299<QAudioFormat>, P11299, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sampleRate", "sampleRate()", t11300<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setChannelConfig", "setChannelConfig(QAudioFormat::ChannelConfig)", t11301<QAudioFormat>, P11301, 1, 1, 0, QTC_T_NONE, "void"},
+    {"channelConfig", "channelConfig()", t11302<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioFormat::ChannelConfig"},
+    {"setChannelCount", "setChannelCount(int)", t11303<QAudioFormat>, P11303, 1, 1, 0, QTC_T_NONE, "void"},
+    {"channelCount", "channelCount()", t11304<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"channelOffset", "channelOffset(QAudioFormat::AudioChannelPosition)", t11305<QAudioFormat>, P11305, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setSampleFormat", "setSampleFormat(QAudioFormat::SampleFormat)", t11306<QAudioFormat>, P11306, 1, 1, 0, QTC_T_NONE, "void"},
+    {"sampleFormat", "sampleFormat()", t11307<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudioFormat::SampleFormat"},
+    {"bytesForDuration", "bytesForDuration(qint64)", t11308<QAudioFormat>, P11308, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"durationForBytes", "durationForBytes(qint32)", t11309<QAudioFormat>, P11309, 1, 1, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bytesForFrames", "bytesForFrames(qint32)", t11310<QAudioFormat>, P11310, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"framesForBytes", "framesForBytes(qint32)", t11311<QAudioFormat>, P11311, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"framesForDuration", "framesForDuration(qint64)", t11312<QAudioFormat>, P11312, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"durationForFrames", "durationForFrames(qint32)", t11313<QAudioFormat>, P11313, 1, 1, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bytesPerFrame", "bytesPerFrame()", t11314<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"bytesPerSample", "bytesPerSample()", t11315<QAudioFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"defaultChannelConfigForChannelCount", "defaultChannelConfigForChannelCount(int)", t11316<QAudioFormat>, P11316, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QAudioFormat::ChannelConfig"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioFormat[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11162[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
-static const qtc::ParamDesc P11163[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11164[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11166[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11167[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11168[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11169[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11320[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
+static const qtc::ParamDesc P11321[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11322[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11324[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11325[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11326[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11327[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qaudioinput.h>)
 static const qtc::MethodDef M_QAudioInput[] = {
-    {"device", "device()", t11159<QAudioInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioDevice"},
-    {"volume", "volume()", t11160<QAudioInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"isMuted", "isMuted()", t11161<QAudioInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setDevice", "setDevice(QAudioDevice)", t11162<QAudioInput>, P11162, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setVolume", "setVolume(float)", t11163<QAudioInput>, P11163, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setMuted", "setMuted(bool)", t11164<QAudioInput>, P11164, 1, 1, 0, QTC_T_NONE, "void"},
-    {"deviceChanged", "deviceChanged()", t11165<QAudioInput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"volumeChanged", "volumeChanged(float)", t11166<QAudioInput>, P11166, 1, 1, 0, QTC_T_NONE, "void"},
-    {"mutedChanged", "mutedChanged(bool)", t11167<QAudioInput>, P11167, 1, 1, 0, QTC_T_NONE, "void"},
+    {"device", "device()", t11317<QAudioInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioDevice"},
+    {"volume", "volume()", t11318<QAudioInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"isMuted", "isMuted()", t11319<QAudioInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setDevice", "setDevice(QAudioDevice)", t11320<QAudioInput>, P11320, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVolume", "setVolume(float)", t11321<QAudioInput>, P11321, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setMuted", "setMuted(bool)", t11322<QAudioInput>, P11322, 1, 1, 0, QTC_T_NONE, "void"},
+    {"deviceChanged", "deviceChanged()", t11323<QAudioInput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"volumeChanged", "volumeChanged(float)", t11324<QAudioInput>, P11324, 1, 1, 0, QTC_T_NONE, "void"},
+    {"mutedChanged", "mutedChanged(bool)", t11325<QAudioInput>, P11325, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioInput[] = {
-    {"QAudioInput", "QAudioInput(QObject*)", t11168<QAudioInput>, P11168, 1, 0, 0, QTC_T_OBJ, "QAudioInput"},
-    {"QAudioInput", "QAudioInput(QAudioDevice,QObject*)", t11169<QAudioInput>, P11169, 2, 1, 0, QTC_T_OBJ, "QAudioInput"},
+    {"QAudioInput", "QAudioInput(QObject*)", t11326<QAudioInput>, P11326, 1, 0, 0, QTC_T_OBJ, "QAudioInput"},
+    {"QAudioInput", "QAudioInput(QAudioDevice,QObject*)", t11327<QAudioInput>, P11327, 2, 1, 0, QTC_T_OBJ, "QAudioInput"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11173[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
-static const qtc::ParamDesc P11174[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11175[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11177[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11178[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11179[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11180[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11331[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
+static const qtc::ParamDesc P11332[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11333[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11335[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11336[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11337[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11338[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qaudiooutput.h>)
 static const qtc::MethodDef M_QAudioOutput[] = {
-    {"device", "device()", t11170<QAudioOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioDevice"},
-    {"volume", "volume()", t11171<QAudioOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"isMuted", "isMuted()", t11172<QAudioOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setDevice", "setDevice(QAudioDevice)", t11173<QAudioOutput>, P11173, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setVolume", "setVolume(float)", t11174<QAudioOutput>, P11174, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setMuted", "setMuted(bool)", t11175<QAudioOutput>, P11175, 1, 1, 0, QTC_T_NONE, "void"},
-    {"deviceChanged", "deviceChanged()", t11176<QAudioOutput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"volumeChanged", "volumeChanged(float)", t11177<QAudioOutput>, P11177, 1, 1, 0, QTC_T_NONE, "void"},
-    {"mutedChanged", "mutedChanged(bool)", t11178<QAudioOutput>, P11178, 1, 1, 0, QTC_T_NONE, "void"},
+    {"device", "device()", t11328<QAudioOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioDevice"},
+    {"volume", "volume()", t11329<QAudioOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"isMuted", "isMuted()", t11330<QAudioOutput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setDevice", "setDevice(QAudioDevice)", t11331<QAudioOutput>, P11331, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVolume", "setVolume(float)", t11332<QAudioOutput>, P11332, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setMuted", "setMuted(bool)", t11333<QAudioOutput>, P11333, 1, 1, 0, QTC_T_NONE, "void"},
+    {"deviceChanged", "deviceChanged()", t11334<QAudioOutput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"volumeChanged", "volumeChanged(float)", t11335<QAudioOutput>, P11335, 1, 1, 0, QTC_T_NONE, "void"},
+    {"mutedChanged", "mutedChanged(bool)", t11336<QAudioOutput>, P11336, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioOutput[] = {
-    {"QAudioOutput", "QAudioOutput(QObject*)", t11179<QAudioOutput>, P11179, 1, 0, 0, QTC_T_OBJ, "QAudioOutput"},
-    {"QAudioOutput", "QAudioOutput(QAudioDevice,QObject*)", t11180<QAudioOutput>, P11180, 2, 1, 0, QTC_T_OBJ, "QAudioOutput"},
+    {"QAudioOutput", "QAudioOutput(QObject*)", t11337<QAudioOutput>, P11337, 1, 0, 0, QTC_T_OBJ, "QAudioOutput"},
+    {"QAudioOutput", "QAudioOutput(QAudioDevice,QObject*)", t11338<QAudioOutput>, P11338, 2, 1, 0, QTC_T_OBJ, "QAudioOutput"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11183[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P11189[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11341[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P11347[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P11191[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11349[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-static const qtc::ParamDesc P11193[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11351[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #endif
-static const qtc::ParamDesc P11201[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P11203[] = {{qtc::PK_ENUM, 50, "QAudio::State", nullptr}};
-static const qtc::ParamDesc P11204[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11205[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11359[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11361[] = {{qtc::PK_ENUM, 55, "QAudio::State", nullptr}};
+static const qtc::ParamDesc P11362[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11363[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qaudiosink.h>)
 static const qtc::MethodDef M_QAudioSink[] = {
-    {"isNull", "isNull()", t11181<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"format", "format()", t11182<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"start", "start(QIODevice*)", t11183<QAudioSink>, P11183, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"start", "start()", t11184<QAudioSink>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
-    {"stop", "stop()", t11185<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"reset", "reset()", t11186<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"suspend", "suspend()", t11187<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"resume", "resume()", t11188<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setBufferSize", "setBufferSize(qsizetype)", t11189<QAudioSink>, P11189, 1, 1, 0, QTC_T_NONE, "void"},
-    {"bufferSize", "bufferSize()", t11190<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"isNull", "isNull()", t11339<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"format", "format()", t11340<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"start", "start(QIODevice*)", t11341<QAudioSink>, P11341, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"start", "start()", t11342<QAudioSink>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
+    {"stop", "stop()", t11343<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"reset", "reset()", t11344<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"suspend", "suspend()", t11345<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"resume", "resume()", t11346<QAudioSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setBufferSize", "setBufferSize(qsizetype)", t11347<QAudioSink>, P11347, 1, 1, 0, QTC_T_NONE, "void"},
+    {"bufferSize", "bufferSize()", t11348<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setBufferFrameCount", "setBufferFrameCount(qsizetype)", t11191<QAudioSink>, P11191, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setBufferFrameCount", "setBufferFrameCount(qsizetype)", t11349<QAudioSink>, P11349, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"bufferFrameCount", "bufferFrameCount()", t11192<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bufferFrameCount", "bufferFrameCount()", t11350<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"setNativePeriodFrameCount", "setNativePeriodFrameCount(qsizetype)", t11193<QAudioSink>, P11193, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setNativePeriodFrameCount", "setNativePeriodFrameCount(qsizetype)", t11351<QAudioSink>, P11351, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"nativePeriodFrameCount", "nativePeriodFrameCount()", t11194<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"nativePeriodFrameCount", "nativePeriodFrameCount()", t11352<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #endif
-    {"bytesFree", "bytesFree()", t11195<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bytesFree", "bytesFree()", t11353<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"framesFree", "framesFree()", t11196<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"framesFree", "framesFree()", t11354<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #endif
-    {"processedUSecs", "processedUSecs()", t11197<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"elapsedUSecs", "elapsedUSecs()", t11198<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"error", "error()", t11199<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::Error"},
-    {"state", "state()", t11200<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::State"},
-    {"setVolume", "setVolume(qreal)", t11201<QAudioSink>, P11201, 1, 1, 0, QTC_T_NONE, "void"},
-    {"volume", "volume()", t11202<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"stateChanged", "stateChanged(QAudio::State)", t11203<QAudioSink>, P11203, 1, 1, 0, QTC_T_NONE, "void"},
+    {"processedUSecs", "processedUSecs()", t11355<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"elapsedUSecs", "elapsedUSecs()", t11356<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"error", "error()", t11357<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::Error"},
+    {"state", "state()", t11358<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::State"},
+    {"setVolume", "setVolume(qreal)", t11359<QAudioSink>, P11359, 1, 1, 0, QTC_T_NONE, "void"},
+    {"volume", "volume()", t11360<QAudioSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"stateChanged", "stateChanged(QAudio::State)", t11361<QAudioSink>, P11361, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioSink[] = {
-    {"QAudioSink", "QAudioSink(QAudioFormat,QObject*)", t11204<QAudioSink>, P11204, 2, 0, 0, QTC_T_OBJ, "QAudioSink"},
-    {"QAudioSink", "QAudioSink(QAudioDevice,QAudioFormat,QObject*)", t11205<QAudioSink>, P11205, 3, 1, 0, QTC_T_OBJ, "QAudioSink"},
+    {"QAudioSink", "QAudioSink(QAudioFormat,QObject*)", t11362<QAudioSink>, P11362, 2, 0, 0, QTC_T_OBJ, "QAudioSink"},
+    {"QAudioSink", "QAudioSink(QAudioDevice,QAudioFormat,QObject*)", t11363<QAudioSink>, P11363, 3, 1, 0, QTC_T_OBJ, "QAudioSink"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11208[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
-static const qtc::ParamDesc P11214[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11366[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}};
+static const qtc::ParamDesc P11372[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P11216[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11374[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-static const qtc::ParamDesc P11218[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11376[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #endif
-static const qtc::ParamDesc P11222[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P11228[] = {{qtc::PK_ENUM, 50, "QAudio::State", nullptr}};
-static const qtc::ParamDesc P11229[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11230[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11380[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11386[] = {{qtc::PK_ENUM, 55, "QAudio::State", nullptr}};
+static const qtc::ParamDesc P11387[] = {{qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11388[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qaudiosource.h>)
 static const qtc::MethodDef M_QAudioSource[] = {
-    {"isNull", "isNull()", t11206<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"format", "format()", t11207<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"start", "start(QIODevice*)", t11208<QAudioSource>, P11208, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"start", "start()", t11209<QAudioSource>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
-    {"stop", "stop()", t11210<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"reset", "reset()", t11211<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"suspend", "suspend()", t11212<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"resume", "resume()", t11213<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setBufferSize", "setBufferSize(qsizetype)", t11214<QAudioSource>, P11214, 1, 1, 0, QTC_T_NONE, "void"},
-    {"bufferSize", "bufferSize()", t11215<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"isNull", "isNull()", t11364<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"format", "format()", t11365<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"start", "start(QIODevice*)", t11366<QAudioSource>, P11366, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"start", "start()", t11367<QAudioSource>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_OBJ, "QIODevice*"},
+    {"stop", "stop()", t11368<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"reset", "reset()", t11369<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"suspend", "suspend()", t11370<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"resume", "resume()", t11371<QAudioSource>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setBufferSize", "setBufferSize(qsizetype)", t11372<QAudioSource>, P11372, 1, 1, 0, QTC_T_NONE, "void"},
+    {"bufferSize", "bufferSize()", t11373<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setBufferFrameCount", "setBufferFrameCount(qsizetype)", t11216<QAudioSource>, P11216, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setBufferFrameCount", "setBufferFrameCount(qsizetype)", t11374<QAudioSource>, P11374, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"bufferFrameCount", "bufferFrameCount()", t11217<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bufferFrameCount", "bufferFrameCount()", t11375<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"setNativePeriodFrameCount", "setNativePeriodFrameCount(qsizetype)", t11218<QAudioSource>, P11218, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setNativePeriodFrameCount", "setNativePeriodFrameCount(qsizetype)", t11376<QAudioSource>, P11376, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"nativePeriodFrameCount", "nativePeriodFrameCount()", t11219<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"nativePeriodFrameCount", "nativePeriodFrameCount()", t11377<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #endif
-    {"bytesAvailable", "bytesAvailable()", t11220<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"bytesAvailable", "bytesAvailable()", t11378<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"framesAvailable", "framesAvailable()", t11221<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"framesAvailable", "framesAvailable()", t11379<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
 #endif
-    {"setVolume", "setVolume(qreal)", t11222<QAudioSource>, P11222, 1, 1, 0, QTC_T_NONE, "void"},
-    {"volume", "volume()", t11223<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"processedUSecs", "processedUSecs()", t11224<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"elapsedUSecs", "elapsedUSecs()", t11225<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"error", "error()", t11226<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::Error"},
-    {"state", "state()", t11227<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::State"},
-    {"stateChanged", "stateChanged(QAudio::State)", t11228<QAudioSource>, P11228, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVolume", "setVolume(qreal)", t11380<QAudioSource>, P11380, 1, 1, 0, QTC_T_NONE, "void"},
+    {"volume", "volume()", t11381<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"processedUSecs", "processedUSecs()", t11382<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"elapsedUSecs", "elapsedUSecs()", t11383<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"error", "error()", t11384<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::Error"},
+    {"state", "state()", t11385<QAudioSource>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QAudio::State"},
+    {"stateChanged", "stateChanged(QAudio::State)", t11386<QAudioSource>, P11386, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QAudioSource[] = {
-    {"QAudioSource", "QAudioSource(QAudioFormat,QObject*)", t11229<QAudioSource>, P11229, 2, 0, 0, QTC_T_OBJ, "QAudioSource"},
-    {"QAudioSource", "QAudioSource(QAudioDevice,QAudioFormat,QObject*)", t11230<QAudioSource>, P11230, 3, 1, 0, QTC_T_OBJ, "QAudioSource"},
+    {"QAudioSource", "QAudioSource(QAudioFormat,QObject*)", t11387<QAudioSource>, P11387, 2, 0, 0, QTC_T_OBJ, "QAudioSource"},
+    {"QAudioSource", "QAudioSource(QAudioDevice,QAudioFormat,QObject*)", t11388<QAudioSource>, P11388, 3, 1, 0, QTC_T_OBJ, "QAudioSource"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11235[] = {{qtc::PK_VALUE, -1, "QCameraDevice", nullptr}};
-static const qtc::ParamDesc P11237[] = {{qtc::PK_VALUE, -1, "QCameraFormat", nullptr}};
-static const qtc::ParamDesc P11242[] = {{qtc::PK_ENUM, 74, "QCamera::FocusMode", nullptr}};
-static const qtc::ParamDesc P11243[] = {{qtc::PK_ENUM, 74, "QCamera::FocusMode", nullptr}};
-static const qtc::ParamDesc P11246[] = {{qtc::PK_VALUE, -1, "QPointF", nullptr}};
-static const qtc::ParamDesc P11247[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11252[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11254[] = {{qtc::PK_ENUM, 73, "QCamera::FlashMode", nullptr}};
-static const qtc::ParamDesc P11257[] = {{qtc::PK_ENUM, 75, "QCamera::TorchMode", nullptr}};
-static const qtc::ParamDesc P11259[] = {{qtc::PK_ENUM, 71, "QCamera::ExposureMode", nullptr}};
-static const qtc::ParamDesc P11270[] = {{qtc::PK_ENUM, 76, "QCamera::WhiteBalanceMode", nullptr}};
-static const qtc::ParamDesc P11272[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11275[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}, {qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11276[] = {{qtc::PK_ENUM, 73, "QCamera::FlashMode", nullptr}};
-static const qtc::ParamDesc P11277[] = {{qtc::PK_ENUM, 75, "QCamera::TorchMode", nullptr}};
-static const qtc::ParamDesc P11278[] = {{qtc::PK_ENUM, 71, "QCamera::ExposureMode", nullptr}};
-static const qtc::ParamDesc P11279[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11280[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11282[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11284[] = {{qtc::PK_ENUM, 76, "QCamera::WhiteBalanceMode", nullptr}};
-static const qtc::ParamDesc P11285[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11286[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11288[] = {{qtc::PK_ENUM, 70, "QCamera::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11293[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11294[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11295[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11296[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11299[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11302[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11303[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11304[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11305[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11306[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11314[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11315[] = {{qtc::PK_VALUE, -1, "QCameraDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11316[] = {{qtc::PK_ENUM, 77, "QCameraDevice::Position", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11393[] = {{qtc::PK_VALUE, -1, "QCameraDevice", nullptr}};
+static const qtc::ParamDesc P11395[] = {{qtc::PK_VALUE, -1, "QCameraFormat", nullptr}};
+static const qtc::ParamDesc P11400[] = {{qtc::PK_ENUM, 79, "QCamera::FocusMode", nullptr}};
+static const qtc::ParamDesc P11401[] = {{qtc::PK_ENUM, 79, "QCamera::FocusMode", nullptr}};
+static const qtc::ParamDesc P11404[] = {{qtc::PK_VALUE, -1, "QPointF", nullptr}};
+static const qtc::ParamDesc P11405[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11410[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11412[] = {{qtc::PK_ENUM, 78, "QCamera::FlashMode", nullptr}};
+static const qtc::ParamDesc P11415[] = {{qtc::PK_ENUM, 80, "QCamera::TorchMode", nullptr}};
+static const qtc::ParamDesc P11417[] = {{qtc::PK_ENUM, 76, "QCamera::ExposureMode", nullptr}};
+static const qtc::ParamDesc P11428[] = {{qtc::PK_ENUM, 81, "QCamera::WhiteBalanceMode", nullptr}};
+static const qtc::ParamDesc P11430[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11433[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}, {qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11434[] = {{qtc::PK_ENUM, 78, "QCamera::FlashMode", nullptr}};
+static const qtc::ParamDesc P11435[] = {{qtc::PK_ENUM, 80, "QCamera::TorchMode", nullptr}};
+static const qtc::ParamDesc P11436[] = {{qtc::PK_ENUM, 76, "QCamera::ExposureMode", nullptr}};
+static const qtc::ParamDesc P11437[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11438[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11440[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11442[] = {{qtc::PK_ENUM, 81, "QCamera::WhiteBalanceMode", nullptr}};
+static const qtc::ParamDesc P11443[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11444[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11446[] = {{qtc::PK_ENUM, 75, "QCamera::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11451[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11452[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11453[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11454[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11457[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11460[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11461[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11462[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11463[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11464[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11472[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11473[] = {{qtc::PK_VALUE, -1, "QCameraDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11474[] = {{qtc::PK_ENUM, 82, "QCameraDevice::Position", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qcamera.h>)
 static const qtc::MethodDef M_QCamera[] = {
-    {"isAvailable", "isAvailable()", t11231<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isActive", "isActive()", t11232<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"captureSession", "captureSession()", t11233<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
-    {"cameraDevice", "cameraDevice()", t11234<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QCameraDevice"},
-    {"setCameraDevice", "setCameraDevice(QCameraDevice)", t11235<QCamera>, P11235, 1, 1, 0, QTC_T_NONE, "void"},
-    {"cameraFormat", "cameraFormat()", t11236<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QCameraFormat"},
-    {"setCameraFormat", "setCameraFormat(QCameraFormat)", t11237<QCamera>, P11237, 1, 1, 0, QTC_T_NONE, "void"},
-    {"error", "error()", t11238<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::Error"},
-    {"errorString", "errorString()", t11239<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"supportedFeatures", "supportedFeatures()", t11240<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QCamera::Feature>"},
-    {"focusMode", "focusMode()", t11241<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::FocusMode"},
-    {"setFocusMode", "setFocusMode(QCamera::FocusMode)", t11242<QCamera>, P11242, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isFocusModeSupported", "isFocusModeSupported(QCamera::FocusMode)", t11243<QCamera>, P11243, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"focusPoint", "focusPoint()", t11244<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QPointF"},
-    {"customFocusPoint", "customFocusPoint()", t11245<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QPointF"},
-    {"setCustomFocusPoint", "setCustomFocusPoint(QPointF)", t11246<QCamera>, P11246, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setFocusDistance", "setFocusDistance(float)", t11247<QCamera>, P11247, 1, 1, 0, QTC_T_NONE, "void"},
-    {"focusDistance", "focusDistance()", t11248<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"minimumZoomFactor", "minimumZoomFactor()", t11249<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"maximumZoomFactor", "maximumZoomFactor()", t11250<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"zoomFactor", "zoomFactor()", t11251<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setZoomFactor", "setZoomFactor(float)", t11252<QCamera>, P11252, 1, 1, 0, QTC_T_NONE, "void"},
-    {"flashMode", "flashMode()", t11253<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::FlashMode"},
-    {"isFlashModeSupported", "isFlashModeSupported(QCamera::FlashMode)", t11254<QCamera>, P11254, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isFlashReady", "isFlashReady()", t11255<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"torchMode", "torchMode()", t11256<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::TorchMode"},
-    {"isTorchModeSupported", "isTorchModeSupported(QCamera::TorchMode)", t11257<QCamera>, P11257, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"exposureMode", "exposureMode()", t11258<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::ExposureMode"},
-    {"isExposureModeSupported", "isExposureModeSupported(QCamera::ExposureMode)", t11259<QCamera>, P11259, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"exposureCompensation", "exposureCompensation()", t11260<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"isoSensitivity", "isoSensitivity()", t11261<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"manualIsoSensitivity", "manualIsoSensitivity()", t11262<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"exposureTime", "exposureTime()", t11263<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"manualExposureTime", "manualExposureTime()", t11264<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"minimumIsoSensitivity", "minimumIsoSensitivity()", t11265<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"maximumIsoSensitivity", "maximumIsoSensitivity()", t11266<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"minimumExposureTime", "minimumExposureTime()", t11267<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"maximumExposureTime", "maximumExposureTime()", t11268<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"whiteBalanceMode", "whiteBalanceMode()", t11269<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::WhiteBalanceMode"},
-    {"isWhiteBalanceModeSupported", "isWhiteBalanceModeSupported(QCamera::WhiteBalanceMode)", t11270<QCamera>, P11270, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"colorTemperature", "colorTemperature()", t11271<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setActive", "setActive(bool)", t11272<QCamera>, P11272, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"start", "start()", t11273<QCamera>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11274<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"zoomTo", "zoomTo(float,float)", t11275<QCamera>, P11275, 2, 2, 0, QTC_T_NONE, "void"},
-    {"setFlashMode", "setFlashMode(QCamera::FlashMode)", t11276<QCamera>, P11276, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setTorchMode", "setTorchMode(QCamera::TorchMode)", t11277<QCamera>, P11277, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setExposureMode", "setExposureMode(QCamera::ExposureMode)", t11278<QCamera>, P11278, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setExposureCompensation", "setExposureCompensation(float)", t11279<QCamera>, P11279, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setManualIsoSensitivity", "setManualIsoSensitivity(int)", t11280<QCamera>, P11280, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setAutoIsoSensitivity", "setAutoIsoSensitivity()", t11281<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setManualExposureTime", "setManualExposureTime(float)", t11282<QCamera>, P11282, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setAutoExposureTime", "setAutoExposureTime()", t11283<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setWhiteBalanceMode", "setWhiteBalanceMode(QCamera::WhiteBalanceMode)", t11284<QCamera>, P11284, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setColorTemperature", "setColorTemperature(int)", t11285<QCamera>, P11285, 1, 1, 0, QTC_T_NONE, "void"},
-    {"activeChanged", "activeChanged(bool)", t11286<QCamera>, P11286, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorChanged", "errorChanged()", t11287<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QCamera::Error,QString)", t11288<QCamera>, P11288, 2, 2, 0, QTC_T_NONE, "void"},
-    {"cameraDeviceChanged", "cameraDeviceChanged()", t11289<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"cameraFormatChanged", "cameraFormatChanged()", t11290<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"supportedFeaturesChanged", "supportedFeaturesChanged()", t11291<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"focusModeChanged", "focusModeChanged()", t11292<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"zoomFactorChanged", "zoomFactorChanged(float)", t11293<QCamera>, P11293, 1, 1, 0, QTC_T_NONE, "void"},
-    {"minimumZoomFactorChanged", "minimumZoomFactorChanged(float)", t11294<QCamera>, P11294, 1, 1, 0, QTC_T_NONE, "void"},
-    {"maximumZoomFactorChanged", "maximumZoomFactorChanged(float)", t11295<QCamera>, P11295, 1, 1, 0, QTC_T_NONE, "void"},
-    {"focusDistanceChanged", "focusDistanceChanged(float)", t11296<QCamera>, P11296, 1, 1, 0, QTC_T_NONE, "void"},
-    {"focusPointChanged", "focusPointChanged()", t11297<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"customFocusPointChanged", "customFocusPointChanged()", t11298<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"flashReady", "flashReady(bool)", t11299<QCamera>, P11299, 1, 1, 0, QTC_T_NONE, "void"},
-    {"flashModeChanged", "flashModeChanged()", t11300<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"torchModeChanged", "torchModeChanged()", t11301<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"exposureTimeChanged", "exposureTimeChanged(float)", t11302<QCamera>, P11302, 1, 1, 0, QTC_T_NONE, "void"},
-    {"manualExposureTimeChanged", "manualExposureTimeChanged(float)", t11303<QCamera>, P11303, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isoSensitivityChanged", "isoSensitivityChanged(int)", t11304<QCamera>, P11304, 1, 1, 0, QTC_T_NONE, "void"},
-    {"manualIsoSensitivityChanged", "manualIsoSensitivityChanged(int)", t11305<QCamera>, P11305, 1, 1, 0, QTC_T_NONE, "void"},
-    {"exposureCompensationChanged", "exposureCompensationChanged(float)", t11306<QCamera>, P11306, 1, 1, 0, QTC_T_NONE, "void"},
-    {"exposureModeChanged", "exposureModeChanged()", t11307<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"whiteBalanceModeChanged", "whiteBalanceModeChanged()", t11308<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"colorTemperatureChanged", "colorTemperatureChanged()", t11309<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"brightnessChanged", "brightnessChanged()", t11310<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"contrastChanged", "contrastChanged()", t11311<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"saturationChanged", "saturationChanged()", t11312<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"hueChanged", "hueChanged()", t11313<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isAvailable", "isAvailable()", t11389<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isActive", "isActive()", t11390<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"captureSession", "captureSession()", t11391<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
+    {"cameraDevice", "cameraDevice()", t11392<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QCameraDevice"},
+    {"setCameraDevice", "setCameraDevice(QCameraDevice)", t11393<QCamera>, P11393, 1, 1, 0, QTC_T_NONE, "void"},
+    {"cameraFormat", "cameraFormat()", t11394<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QCameraFormat"},
+    {"setCameraFormat", "setCameraFormat(QCameraFormat)", t11395<QCamera>, P11395, 1, 1, 0, QTC_T_NONE, "void"},
+    {"error", "error()", t11396<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::Error"},
+    {"errorString", "errorString()", t11397<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"supportedFeatures", "supportedFeatures()", t11398<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QFlags<QCamera::Feature>"},
+    {"focusMode", "focusMode()", t11399<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::FocusMode"},
+    {"setFocusMode", "setFocusMode(QCamera::FocusMode)", t11400<QCamera>, P11400, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isFocusModeSupported", "isFocusModeSupported(QCamera::FocusMode)", t11401<QCamera>, P11401, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"focusPoint", "focusPoint()", t11402<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QPointF"},
+    {"customFocusPoint", "customFocusPoint()", t11403<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QPointF"},
+    {"setCustomFocusPoint", "setCustomFocusPoint(QPointF)", t11404<QCamera>, P11404, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setFocusDistance", "setFocusDistance(float)", t11405<QCamera>, P11405, 1, 1, 0, QTC_T_NONE, "void"},
+    {"focusDistance", "focusDistance()", t11406<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"minimumZoomFactor", "minimumZoomFactor()", t11407<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"maximumZoomFactor", "maximumZoomFactor()", t11408<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"zoomFactor", "zoomFactor()", t11409<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setZoomFactor", "setZoomFactor(float)", t11410<QCamera>, P11410, 1, 1, 0, QTC_T_NONE, "void"},
+    {"flashMode", "flashMode()", t11411<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::FlashMode"},
+    {"isFlashModeSupported", "isFlashModeSupported(QCamera::FlashMode)", t11412<QCamera>, P11412, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isFlashReady", "isFlashReady()", t11413<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"torchMode", "torchMode()", t11414<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::TorchMode"},
+    {"isTorchModeSupported", "isTorchModeSupported(QCamera::TorchMode)", t11415<QCamera>, P11415, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"exposureMode", "exposureMode()", t11416<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::ExposureMode"},
+    {"isExposureModeSupported", "isExposureModeSupported(QCamera::ExposureMode)", t11417<QCamera>, P11417, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"exposureCompensation", "exposureCompensation()", t11418<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"isoSensitivity", "isoSensitivity()", t11419<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"manualIsoSensitivity", "manualIsoSensitivity()", t11420<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"exposureTime", "exposureTime()", t11421<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"manualExposureTime", "manualExposureTime()", t11422<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"minimumIsoSensitivity", "minimumIsoSensitivity()", t11423<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"maximumIsoSensitivity", "maximumIsoSensitivity()", t11424<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"minimumExposureTime", "minimumExposureTime()", t11425<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"maximumExposureTime", "maximumExposureTime()", t11426<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"whiteBalanceMode", "whiteBalanceMode()", t11427<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCamera::WhiteBalanceMode"},
+    {"isWhiteBalanceModeSupported", "isWhiteBalanceModeSupported(QCamera::WhiteBalanceMode)", t11428<QCamera>, P11428, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"colorTemperature", "colorTemperature()", t11429<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setActive", "setActive(bool)", t11430<QCamera>, P11430, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"start", "start()", t11431<QCamera>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11432<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"zoomTo", "zoomTo(float,float)", t11433<QCamera>, P11433, 2, 2, 0, QTC_T_NONE, "void"},
+    {"setFlashMode", "setFlashMode(QCamera::FlashMode)", t11434<QCamera>, P11434, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setTorchMode", "setTorchMode(QCamera::TorchMode)", t11435<QCamera>, P11435, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setExposureMode", "setExposureMode(QCamera::ExposureMode)", t11436<QCamera>, P11436, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setExposureCompensation", "setExposureCompensation(float)", t11437<QCamera>, P11437, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setManualIsoSensitivity", "setManualIsoSensitivity(int)", t11438<QCamera>, P11438, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAutoIsoSensitivity", "setAutoIsoSensitivity()", t11439<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setManualExposureTime", "setManualExposureTime(float)", t11440<QCamera>, P11440, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAutoExposureTime", "setAutoExposureTime()", t11441<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setWhiteBalanceMode", "setWhiteBalanceMode(QCamera::WhiteBalanceMode)", t11442<QCamera>, P11442, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setColorTemperature", "setColorTemperature(int)", t11443<QCamera>, P11443, 1, 1, 0, QTC_T_NONE, "void"},
+    {"activeChanged", "activeChanged(bool)", t11444<QCamera>, P11444, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorChanged", "errorChanged()", t11445<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QCamera::Error,QString)", t11446<QCamera>, P11446, 2, 2, 0, QTC_T_NONE, "void"},
+    {"cameraDeviceChanged", "cameraDeviceChanged()", t11447<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"cameraFormatChanged", "cameraFormatChanged()", t11448<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"supportedFeaturesChanged", "supportedFeaturesChanged()", t11449<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"focusModeChanged", "focusModeChanged()", t11450<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"zoomFactorChanged", "zoomFactorChanged(float)", t11451<QCamera>, P11451, 1, 1, 0, QTC_T_NONE, "void"},
+    {"minimumZoomFactorChanged", "minimumZoomFactorChanged(float)", t11452<QCamera>, P11452, 1, 1, 0, QTC_T_NONE, "void"},
+    {"maximumZoomFactorChanged", "maximumZoomFactorChanged(float)", t11453<QCamera>, P11453, 1, 1, 0, QTC_T_NONE, "void"},
+    {"focusDistanceChanged", "focusDistanceChanged(float)", t11454<QCamera>, P11454, 1, 1, 0, QTC_T_NONE, "void"},
+    {"focusPointChanged", "focusPointChanged()", t11455<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"customFocusPointChanged", "customFocusPointChanged()", t11456<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"flashReady", "flashReady(bool)", t11457<QCamera>, P11457, 1, 1, 0, QTC_T_NONE, "void"},
+    {"flashModeChanged", "flashModeChanged()", t11458<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"torchModeChanged", "torchModeChanged()", t11459<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"exposureTimeChanged", "exposureTimeChanged(float)", t11460<QCamera>, P11460, 1, 1, 0, QTC_T_NONE, "void"},
+    {"manualExposureTimeChanged", "manualExposureTimeChanged(float)", t11461<QCamera>, P11461, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isoSensitivityChanged", "isoSensitivityChanged(int)", t11462<QCamera>, P11462, 1, 1, 0, QTC_T_NONE, "void"},
+    {"manualIsoSensitivityChanged", "manualIsoSensitivityChanged(int)", t11463<QCamera>, P11463, 1, 1, 0, QTC_T_NONE, "void"},
+    {"exposureCompensationChanged", "exposureCompensationChanged(float)", t11464<QCamera>, P11464, 1, 1, 0, QTC_T_NONE, "void"},
+    {"exposureModeChanged", "exposureModeChanged()", t11465<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"whiteBalanceModeChanged", "whiteBalanceModeChanged()", t11466<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"colorTemperatureChanged", "colorTemperatureChanged()", t11467<QCamera>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"brightnessChanged", "brightnessChanged()", t11468<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"contrastChanged", "contrastChanged()", t11469<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"saturationChanged", "saturationChanged()", t11470<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"hueChanged", "hueChanged()", t11471<QCamera>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QCamera[] = {
-    {"QCamera", "QCamera(QObject*)", t11314<QCamera>, P11314, 1, 0, 0, QTC_T_OBJ, "QCamera"},
-    {"QCamera", "QCamera(QCameraDevice,QObject*)", t11315<QCamera>, P11315, 2, 1, 0, QTC_T_OBJ, "QCamera"},
-    {"QCamera", "QCamera(QCameraDevice::Position,QObject*)", t11316<QCamera>, P11316, 2, 1, 0, QTC_T_OBJ, "QCamera"},
+    {"QCamera", "QCamera(QObject*)", t11472<QCamera>, P11472, 1, 0, 0, QTC_T_OBJ, "QCamera"},
+    {"QCamera", "QCamera(QCameraDevice,QObject*)", t11473<QCamera>, P11473, 2, 1, 0, QTC_T_OBJ, "QCamera"},
+    {"QCamera", "QCamera(QCameraDevice::Position,QObject*)", t11474<QCamera>, P11474, 2, 1, 0, QTC_T_OBJ, "QCamera"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if __has_include(<QtMultimedia/qcameradevice.h>)
 static const qtc::MethodDef M_QCameraDevice[] = {
-    {"isNull", "isNull()", t11317<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"id", "id()", t11318<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
-    {"description", "description()", t11319<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isDefault", "isDefault()", t11320<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"position", "position()", t11321<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCameraDevice::Position"},
-    {"photoResolutions", "photoResolutions()", t11322<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QSize>"},
-    {"videoFormats", "videoFormats()", t11323<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QCameraFormat>"},
+    {"isNull", "isNull()", t11475<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"id", "id()", t11476<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BYTES, "QByteArray"},
+    {"description", "description()", t11477<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isDefault", "isDefault()", t11478<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"position", "position()", t11479<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QCameraDevice::Position"},
+    {"photoResolutions", "photoResolutions()", t11480<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QSize>"},
+    {"videoFormats", "videoFormats()", t11481<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QCameraFormat>"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"correctionAngle", "correctionAngle()", t11324<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtVideo::Rotation"},
+    {"correctionAngle", "correctionAngle()", t11482<QCameraDevice>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtVideo::Rotation"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QCameraDevice[] = {
-    {"QCameraDevice", "QCameraDevice()", t11325<QCameraDevice>, nullptr, 0, 0, 0, QTC_T_VALUE, "QCameraDevice"},
+    {"QCameraDevice", "QCameraDevice()", t11483<QCameraDevice>, nullptr, 0, 0, 0, QTC_T_VALUE, "QCameraDevice"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if __has_include(<QtMultimedia/qcameradevice.h>)
 static const qtc::MethodDef M_QCameraFormat[] = {
-    {"pixelFormat", "pixelFormat()", t11326<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
-    {"resolution", "resolution()", t11327<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"minFrameRate", "minFrameRate()", t11328<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"maxFrameRate", "maxFrameRate()", t11329<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"isNull", "isNull()", t11330<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"pixelFormat", "pixelFormat()", t11484<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
+    {"resolution", "resolution()", t11485<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"minFrameRate", "minFrameRate()", t11486<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"maxFrameRate", "maxFrameRate()", t11487<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"isNull", "isNull()", t11488<QCameraFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QCameraFormat[] = {
-    {"QCameraFormat", "QCameraFormat()", t11331<QCameraFormat>, nullptr, 0, 0, 0, QTC_T_VALUE, "QCameraFormat"},
+    {"QCameraFormat", "QCameraFormat()", t11489<QCameraFormat>, nullptr, 0, 0, 0, QTC_T_VALUE, "QCameraFormat"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P11335[] = {{qtc::PK_OBJ, -1, "QWindow*", &QWindow::staticMetaObject}};
+static const qtc::ParamDesc P11493[] = {{qtc::PK_OBJ, -1, "QWindow*", &QWindow::staticMetaObject}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && __has_include(<QtMultimedia/qcapturablewindow.h>)
 static const qtc::MethodDef M_QCapturableWindow[] = {
-    {"isValid", "isValid()", t11332<QCapturableWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"description", "description()", t11333<QCapturableWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isValid", "isValid()", t11490<QCapturableWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"description", "description()", t11491<QCapturableWindow>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QCapturableWindow[] = {
-    {"QCapturableWindow", "QCapturableWindow()", t11334<QCapturableWindow>, nullptr, 0, 0, 0, QTC_T_VALUE, "QCapturableWindow"},
+    {"QCapturableWindow", "QCapturableWindow()", t11492<QCapturableWindow>, nullptr, 0, 0, 0, QTC_T_VALUE, "QCapturableWindow"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"QCapturableWindow", "QCapturableWindow(QWindow*)", t11335<QCapturableWindow>, P11335, 1, 1, 0, QTC_T_VALUE, "QCapturableWindow"},
+    {"QCapturableWindow", "QCapturableWindow(QWindow*)", t11493<QCapturableWindow>, P11493, 1, 1, 0, QTC_T_VALUE, "QCapturableWindow"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11342[] = {{qtc::PK_ENUM, 252, "QImageCapture::FileFormat", nullptr}};
-static const qtc::ParamDesc P11344[] = {{qtc::PK_ENUM, 252, "QImageCapture::FileFormat", nullptr}};
-static const qtc::ParamDesc P11345[] = {{qtc::PK_ENUM, 252, "QImageCapture::FileFormat", nullptr}};
-static const qtc::ParamDesc P11347[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}};
-static const qtc::ParamDesc P11348[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11350[] = {{qtc::PK_ENUM, 253, "QImageCapture::Quality", nullptr}};
-static const qtc::ParamDesc P11352[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
-static const qtc::ParamDesc P11353[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
-static const qtc::ParamDesc P11354[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11357[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 251, "QImageCapture::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11358[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11363[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11364[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QImage", nullptr}};
-static const qtc::ParamDesc P11365[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
-static const qtc::ParamDesc P11366[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
-static const qtc::ParamDesc P11367[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11368[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11500[] = {{qtc::PK_ENUM, 262, "QImageCapture::FileFormat", nullptr}};
+static const qtc::ParamDesc P11502[] = {{qtc::PK_ENUM, 262, "QImageCapture::FileFormat", nullptr}};
+static const qtc::ParamDesc P11503[] = {{qtc::PK_ENUM, 262, "QImageCapture::FileFormat", nullptr}};
+static const qtc::ParamDesc P11505[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}};
+static const qtc::ParamDesc P11506[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11508[] = {{qtc::PK_ENUM, 263, "QImageCapture::Quality", nullptr}};
+static const qtc::ParamDesc P11510[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
+static const qtc::ParamDesc P11511[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
+static const qtc::ParamDesc P11512[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11515[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_ENUM, 261, "QImageCapture::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11516[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11521[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11522[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QImage", nullptr}};
+static const qtc::ParamDesc P11523[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
+static const qtc::ParamDesc P11524[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
+static const qtc::ParamDesc P11525[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11526[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qimagecapture.h>)
 static const qtc::MethodDef M_QImageCapture[] = {
-    {"isAvailable", "isAvailable()", t11336<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"captureSession", "captureSession()", t11337<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
-    {"error", "error()", t11338<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QImageCapture::Error"},
-    {"errorString", "errorString()", t11339<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isReadyForCapture", "isReadyForCapture()", t11340<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"fileFormat", "fileFormat()", t11341<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QImageCapture::FileFormat"},
-    {"setFileFormat", "setFileFormat(QImageCapture::FileFormat)", t11342<QImageCapture>, P11342, 1, 1, 0, QTC_T_NONE, "void"},
-    {"supportedFormats", "supportedFormats()", t11343<QImageCapture>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QImageCapture::FileFormat>"},
-    {"fileFormatName", "fileFormatName(QImageCapture::FileFormat)", t11344<QImageCapture>, P11344, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"fileFormatDescription", "fileFormatDescription(QImageCapture::FileFormat)", t11345<QImageCapture>, P11345, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"resolution", "resolution()", t11346<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"setResolution", "setResolution(QSize)", t11347<QImageCapture>, P11347, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setResolution", "setResolution(int,int)", t11348<QImageCapture>, P11348, 2, 2, 0, QTC_T_NONE, "void"},
-    {"quality", "quality()", t11349<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QImageCapture::Quality"},
-    {"setQuality", "setQuality(QImageCapture::Quality)", t11350<QImageCapture>, P11350, 1, 1, 0, QTC_T_NONE, "void"},
-    {"metaData", "metaData()", t11351<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaMetaData"},
-    {"setMetaData", "setMetaData(QMediaMetaData)", t11352<QImageCapture>, P11352, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addMetaData", "addMetaData(QMediaMetaData)", t11353<QImageCapture>, P11353, 1, 1, 0, QTC_T_NONE, "void"},
-    {"captureToFile", "captureToFile(QString)", t11354<QImageCapture>, P11354, 1, 0, 0, QTC_T_INT, "int"},
-    {"capture", "capture()", t11355<QImageCapture>, nullptr, 0, 0, 0, QTC_T_INT, "int"},
-    {"errorChanged", "errorChanged()", t11356<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(int,QImageCapture::Error,QString)", t11357<QImageCapture>, P11357, 3, 3, 0, QTC_T_NONE, "void"},
-    {"readyForCaptureChanged", "readyForCaptureChanged(bool)", t11358<QImageCapture>, P11358, 1, 1, 0, QTC_T_NONE, "void"},
-    {"metaDataChanged", "metaDataChanged()", t11359<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"fileFormatChanged", "fileFormatChanged()", t11360<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"qualityChanged", "qualityChanged()", t11361<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"resolutionChanged", "resolutionChanged()", t11362<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"imageExposed", "imageExposed(int)", t11363<QImageCapture>, P11363, 1, 1, 0, QTC_T_NONE, "void"},
-    {"imageCaptured", "imageCaptured(int,QImage)", t11364<QImageCapture>, P11364, 2, 2, 0, QTC_T_NONE, "void"},
-    {"imageMetadataAvailable", "imageMetadataAvailable(int,QMediaMetaData)", t11365<QImageCapture>, P11365, 2, 2, 0, QTC_T_NONE, "void"},
-    {"imageAvailable", "imageAvailable(int,QVideoFrame)", t11366<QImageCapture>, P11366, 2, 2, 0, QTC_T_NONE, "void"},
-    {"imageSaved", "imageSaved(int,QString)", t11367<QImageCapture>, P11367, 2, 2, 0, QTC_T_NONE, "void"},
+    {"isAvailable", "isAvailable()", t11494<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"captureSession", "captureSession()", t11495<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
+    {"error", "error()", t11496<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QImageCapture::Error"},
+    {"errorString", "errorString()", t11497<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isReadyForCapture", "isReadyForCapture()", t11498<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"fileFormat", "fileFormat()", t11499<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QImageCapture::FileFormat"},
+    {"setFileFormat", "setFileFormat(QImageCapture::FileFormat)", t11500<QImageCapture>, P11500, 1, 1, 0, QTC_T_NONE, "void"},
+    {"supportedFormats", "supportedFormats()", t11501<QImageCapture>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QImageCapture::FileFormat>"},
+    {"fileFormatName", "fileFormatName(QImageCapture::FileFormat)", t11502<QImageCapture>, P11502, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"fileFormatDescription", "fileFormatDescription(QImageCapture::FileFormat)", t11503<QImageCapture>, P11503, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"resolution", "resolution()", t11504<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"setResolution", "setResolution(QSize)", t11505<QImageCapture>, P11505, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setResolution", "setResolution(int,int)", t11506<QImageCapture>, P11506, 2, 2, 0, QTC_T_NONE, "void"},
+    {"quality", "quality()", t11507<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QImageCapture::Quality"},
+    {"setQuality", "setQuality(QImageCapture::Quality)", t11508<QImageCapture>, P11508, 1, 1, 0, QTC_T_NONE, "void"},
+    {"metaData", "metaData()", t11509<QImageCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaMetaData"},
+    {"setMetaData", "setMetaData(QMediaMetaData)", t11510<QImageCapture>, P11510, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addMetaData", "addMetaData(QMediaMetaData)", t11511<QImageCapture>, P11511, 1, 1, 0, QTC_T_NONE, "void"},
+    {"captureToFile", "captureToFile(QString)", t11512<QImageCapture>, P11512, 1, 0, 0, QTC_T_INT, "int"},
+    {"capture", "capture()", t11513<QImageCapture>, nullptr, 0, 0, 0, QTC_T_INT, "int"},
+    {"errorChanged", "errorChanged()", t11514<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(int,QImageCapture::Error,QString)", t11515<QImageCapture>, P11515, 3, 3, 0, QTC_T_NONE, "void"},
+    {"readyForCaptureChanged", "readyForCaptureChanged(bool)", t11516<QImageCapture>, P11516, 1, 1, 0, QTC_T_NONE, "void"},
+    {"metaDataChanged", "metaDataChanged()", t11517<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"fileFormatChanged", "fileFormatChanged()", t11518<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"qualityChanged", "qualityChanged()", t11519<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"resolutionChanged", "resolutionChanged()", t11520<QImageCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"imageExposed", "imageExposed(int)", t11521<QImageCapture>, P11521, 1, 1, 0, QTC_T_NONE, "void"},
+    {"imageCaptured", "imageCaptured(int,QImage)", t11522<QImageCapture>, P11522, 2, 2, 0, QTC_T_NONE, "void"},
+    {"imageMetadataAvailable", "imageMetadataAvailable(int,QMediaMetaData)", t11523<QImageCapture>, P11523, 2, 2, 0, QTC_T_NONE, "void"},
+    {"imageAvailable", "imageAvailable(int,QVideoFrame)", t11524<QImageCapture>, P11524, 2, 2, 0, QTC_T_NONE, "void"},
+    {"imageSaved", "imageSaved(int,QString)", t11525<QImageCapture>, P11525, 2, 2, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QImageCapture[] = {
-    {"QImageCapture", "QImageCapture(QObject*)", t11368<QImageCapture>, P11368, 1, 0, 0, QTC_T_OBJ, "QImageCapture"},
+    {"QImageCapture", "QImageCapture(QObject*)", t11526<QImageCapture>, P11526, 1, 0, 0, QTC_T_OBJ, "QImageCapture"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11370[] = {{qtc::PK_OBJ, -1, "QAudioInput*", &QAudioInput::staticMetaObject}};
+static const qtc::ParamDesc P11528[] = {{qtc::PK_OBJ, -1, "QAudioInput*", &QAudioInput::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11372[] = {{qtc::PK_OBJ, -1, "QAudioBufferInput*", &QAudioBufferInput::staticMetaObject}};
+static const qtc::ParamDesc P11530[] = {{qtc::PK_OBJ, -1, "QAudioBufferInput*", &QAudioBufferInput::staticMetaObject}};
 #endif
-static const qtc::ParamDesc P11374[] = {{qtc::PK_OBJ, -1, "QCamera*", &QCamera::staticMetaObject}};
+static const qtc::ParamDesc P11532[] = {{qtc::PK_OBJ, -1, "QCamera*", &QCamera::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-static const qtc::ParamDesc P11376[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11534[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #endif
-static const qtc::ParamDesc P11378[] = {{qtc::PK_OBJ, -1, "QImageCapture*", &QImageCapture::staticMetaObject}};
+static const qtc::ParamDesc P11536[] = {{qtc::PK_OBJ, -1, "QImageCapture*", &QImageCapture::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P11380[] = {{qtc::PK_OBJ, -1, "QScreenCapture*", &QScreenCapture::staticMetaObject}};
+static const qtc::ParamDesc P11538[] = {{qtc::PK_OBJ, -1, "QScreenCapture*", &QScreenCapture::staticMetaObject}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-static const qtc::ParamDesc P11382[] = {{qtc::PK_OBJ, -1, "QWindowCapture*", &QWindowCapture::staticMetaObject}};
+static const qtc::ParamDesc P11540[] = {{qtc::PK_OBJ, -1, "QWindowCapture*", &QWindowCapture::staticMetaObject}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11384[] = {{qtc::PK_OBJ, -1, "QVideoFrameInput*", &QVideoFrameInput::staticMetaObject}};
+static const qtc::ParamDesc P11542[] = {{qtc::PK_OBJ, -1, "QVideoFrameInput*", &QVideoFrameInput::staticMetaObject}};
 #endif
-static const qtc::ParamDesc P11386[] = {{qtc::PK_OBJ, -1, "QMediaRecorder*", &QMediaRecorder::staticMetaObject}};
-static const qtc::ParamDesc P11387[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11389[] = {{qtc::PK_OBJ, -1, "QVideoSink*", &QVideoSink::staticMetaObject}};
-static const qtc::ParamDesc P11391[] = {{qtc::PK_OBJ, -1, "QAudioOutput*", &QAudioOutput::staticMetaObject}};
-static const qtc::ParamDesc P11404[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11544[] = {{qtc::PK_OBJ, -1, "QMediaRecorder*", &QMediaRecorder::staticMetaObject}};
+static const qtc::ParamDesc P11545[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11547[] = {{qtc::PK_OBJ, -1, "QVideoSink*", &QVideoSink::staticMetaObject}};
+static const qtc::ParamDesc P11549[] = {{qtc::PK_OBJ, -1, "QAudioOutput*", &QAudioOutput::staticMetaObject}};
+static const qtc::ParamDesc P11562[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qmediacapturesession.h>)
 static const qtc::MethodDef M_QMediaCaptureSession[] = {
-    {"audioInput", "audioInput()", t11369<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioInput*"},
-    {"setAudioInput", "setAudioInput(QAudioInput*)", t11370<QMediaCaptureSession>, P11370, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioInput", "audioInput()", t11527<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioInput*"},
+    {"setAudioInput", "setAudioInput(QAudioInput*)", t11528<QMediaCaptureSession>, P11528, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"audioBufferInput", "audioBufferInput()", t11371<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioBufferInput*"},
+    {"audioBufferInput", "audioBufferInput()", t11529<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioBufferInput*"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setAudioBufferInput", "setAudioBufferInput(QAudioBufferInput*)", t11372<QMediaCaptureSession>, P11372, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAudioBufferInput", "setAudioBufferInput(QAudioBufferInput*)", t11530<QMediaCaptureSession>, P11530, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"camera", "camera()", t11373<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QCamera*"},
-    {"setCamera", "setCamera(QCamera*)", t11374<QMediaCaptureSession>, P11374, 1, 1, 0, QTC_T_NONE, "void"},
+    {"camera", "camera()", t11531<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QCamera*"},
+    {"setCamera", "setCamera(QCamera*)", t11532<QMediaCaptureSession>, P11532, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"nativeVideoSource", "nativeVideoSource()", t11375<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"nativeVideoSource", "nativeVideoSource()", t11533<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"setNativeVideoSource", "setNativeVideoSource(QObject*)", t11376<QMediaCaptureSession>, P11376, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setNativeVideoSource", "setNativeVideoSource(QObject*)", t11534<QMediaCaptureSession>, P11534, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"imageCapture", "imageCapture()", t11377<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QImageCapture*"},
-    {"setImageCapture", "setImageCapture(QImageCapture*)", t11378<QMediaCaptureSession>, P11378, 1, 1, 0, QTC_T_NONE, "void"},
+    {"imageCapture", "imageCapture()", t11535<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QImageCapture*"},
+    {"setImageCapture", "setImageCapture(QImageCapture*)", t11536<QMediaCaptureSession>, P11536, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"screenCapture", "screenCapture()", t11379<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QScreenCapture*"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"setScreenCapture", "setScreenCapture(QScreenCapture*)", t11380<QMediaCaptureSession>, P11380, 1, 1, 0, QTC_T_NONE, "void"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"windowCapture", "windowCapture()", t11381<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QWindowCapture*"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"setWindowCapture", "setWindowCapture(QWindowCapture*)", t11382<QMediaCaptureSession>, P11382, 1, 1, 0, QTC_T_NONE, "void"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"videoFrameInput", "videoFrameInput()", t11383<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoFrameInput*"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setVideoFrameInput", "setVideoFrameInput(QVideoFrameInput*)", t11384<QMediaCaptureSession>, P11384, 1, 1, 0, QTC_T_NONE, "void"},
-#endif
-    {"recorder", "recorder()", t11385<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QMediaRecorder*"},
-    {"setRecorder", "setRecorder(QMediaRecorder*)", t11386<QMediaCaptureSession>, P11386, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setVideoOutput", "setVideoOutput(QObject*)", t11387<QMediaCaptureSession>, P11387, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoOutput", "videoOutput()", t11388<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"setVideoSink", "setVideoSink(QVideoSink*)", t11389<QMediaCaptureSession>, P11389, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoSink", "videoSink()", t11390<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoSink*"},
-    {"setAudioOutput", "setAudioOutput(QAudioOutput*)", t11391<QMediaCaptureSession>, P11391, 1, 1, 0, QTC_T_NONE, "void"},
-    {"audioOutput", "audioOutput()", t11392<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioOutput*"},
-    {"audioInputChanged", "audioInputChanged()", t11393<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"audioBufferInputChanged", "audioBufferInputChanged()", t11394<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-#endif
-    {"cameraChanged", "cameraChanged()", t11395<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"nativeVideoSourceChanged", "nativeVideoSourceChanged()", t11396<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"screenCapture", "screenCapture()", t11537<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QScreenCapture*"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"screenCaptureChanged", "screenCaptureChanged()", t11397<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setScreenCapture", "setScreenCapture(QScreenCapture*)", t11538<QMediaCaptureSession>, P11538, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    {"windowCaptureChanged", "windowCaptureChanged()", t11398<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"windowCapture", "windowCapture()", t11539<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QWindowCapture*"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    {"setWindowCapture", "setWindowCapture(QWindowCapture*)", t11540<QMediaCaptureSession>, P11540, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"videoFrameInputChanged", "videoFrameInputChanged()", t11399<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoFrameInput", "videoFrameInput()", t11541<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoFrameInput*"},
 #endif
-    {"imageCaptureChanged", "imageCaptureChanged()", t11400<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"recorderChanged", "recorderChanged()", t11401<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"videoOutputChanged", "videoOutputChanged()", t11402<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"audioOutputChanged", "audioOutputChanged()", t11403<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"setVideoFrameInput", "setVideoFrameInput(QVideoFrameInput*)", t11542<QMediaCaptureSession>, P11542, 1, 1, 0, QTC_T_NONE, "void"},
+#endif
+    {"recorder", "recorder()", t11543<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_OBJ, "QMediaRecorder*"},
+    {"setRecorder", "setRecorder(QMediaRecorder*)", t11544<QMediaCaptureSession>, P11544, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVideoOutput", "setVideoOutput(QObject*)", t11545<QMediaCaptureSession>, P11545, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoOutput", "videoOutput()", t11546<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"setVideoSink", "setVideoSink(QVideoSink*)", t11547<QMediaCaptureSession>, P11547, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoSink", "videoSink()", t11548<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoSink*"},
+    {"setAudioOutput", "setAudioOutput(QAudioOutput*)", t11549<QMediaCaptureSession>, P11549, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioOutput", "audioOutput()", t11550<QMediaCaptureSession>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioOutput*"},
+    {"audioInputChanged", "audioInputChanged()", t11551<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"audioBufferInputChanged", "audioBufferInputChanged()", t11552<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#endif
+    {"cameraChanged", "cameraChanged()", t11553<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
+    {"nativeVideoSourceChanged", "nativeVideoSourceChanged()", t11554<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    {"screenCaptureChanged", "screenCaptureChanged()", t11555<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    {"windowCaptureChanged", "windowCaptureChanged()", t11556<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {"videoFrameInputChanged", "videoFrameInputChanged()", t11557<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#endif
+    {"imageCaptureChanged", "imageCaptureChanged()", t11558<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"recorderChanged", "recorderChanged()", t11559<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoOutputChanged", "videoOutputChanged()", t11560<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioOutputChanged", "audioOutputChanged()", t11561<QMediaCaptureSession>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaCaptureSession[] = {
-    {"QMediaCaptureSession", "QMediaCaptureSession(QObject*)", t11404<QMediaCaptureSession>, P11404, 1, 0, 0, QTC_T_OBJ, "QMediaCaptureSession"},
+    {"QMediaCaptureSession", "QMediaCaptureSession(QObject*)", t11562<QMediaCaptureSession>, P11562, 1, 0, 0, QTC_T_OBJ, "QMediaCaptureSession"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11414[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11572[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qmediadevices.h>)
 static const qtc::MethodDef M_QMediaDevices[] = {
-    {"audioInputs", "audioInputs()", t11405<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QAudioDevice>"},
-    {"audioOutputs", "audioOutputs()", t11406<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QAudioDevice>"},
-    {"videoInputs", "videoInputs()", t11407<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QCameraDevice>"},
-    {"defaultAudioInput", "defaultAudioInput()", t11408<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QAudioDevice"},
-    {"defaultAudioOutput", "defaultAudioOutput()", t11409<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QAudioDevice"},
-    {"defaultVideoInput", "defaultVideoInput()", t11410<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QCameraDevice"},
-    {"audioInputsChanged", "audioInputsChanged()", t11411<QMediaDevices>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"audioOutputsChanged", "audioOutputsChanged()", t11412<QMediaDevices>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"videoInputsChanged", "videoInputsChanged()", t11413<QMediaDevices>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioInputs", "audioInputs()", t11563<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QAudioDevice>"},
+    {"audioOutputs", "audioOutputs()", t11564<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QAudioDevice>"},
+    {"videoInputs", "videoInputs()", t11565<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QCameraDevice>"},
+    {"defaultAudioInput", "defaultAudioInput()", t11566<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QAudioDevice"},
+    {"defaultAudioOutput", "defaultAudioOutput()", t11567<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QAudioDevice"},
+    {"defaultVideoInput", "defaultVideoInput()", t11568<QMediaDevices>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_VALUE, "QCameraDevice"},
+    {"audioInputsChanged", "audioInputsChanged()", t11569<QMediaDevices>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioOutputsChanged", "audioOutputsChanged()", t11570<QMediaDevices>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoInputsChanged", "videoInputsChanged()", t11571<QMediaDevices>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaDevices[] = {
-    {"QMediaDevices", "QMediaDevices(QObject*)", t11414<QMediaDevices>, P11414, 1, 0, 0, QTC_T_OBJ, "QMediaDevices"},
+    {"QMediaDevices", "QMediaDevices(QObject*)", t11572<QMediaDevices>, P11572, 1, 0, 0, QTC_T_OBJ, "QMediaDevices"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11416[] = {{qtc::PK_ENUM, 328, "QMediaFormat::FileFormat", nullptr}};
-static const qtc::ParamDesc P11417[] = {{qtc::PK_ENUM, 330, "QMediaFormat::VideoCodec", nullptr}};
-static const qtc::ParamDesc P11419[] = {{qtc::PK_ENUM, 326, "QMediaFormat::AudioCodec", nullptr}};
-static const qtc::ParamDesc P11421[] = {{qtc::PK_ENUM, 327, "QMediaFormat::ConversionMode", nullptr}};
-static const qtc::ParamDesc P11423[] = {{qtc::PK_ENUM, 327, "QMediaFormat::ConversionMode", nullptr}};
-static const qtc::ParamDesc P11424[] = {{qtc::PK_ENUM, 327, "QMediaFormat::ConversionMode", nullptr}};
-static const qtc::ParamDesc P11425[] = {{qtc::PK_ENUM, 327, "QMediaFormat::ConversionMode", nullptr}};
-static const qtc::ParamDesc P11426[] = {{qtc::PK_ENUM, 328, "QMediaFormat::FileFormat", nullptr}};
-static const qtc::ParamDesc P11427[] = {{qtc::PK_ENUM, 326, "QMediaFormat::AudioCodec", nullptr}};
-static const qtc::ParamDesc P11428[] = {{qtc::PK_ENUM, 330, "QMediaFormat::VideoCodec", nullptr}};
-static const qtc::ParamDesc P11429[] = {{qtc::PK_ENUM, 328, "QMediaFormat::FileFormat", nullptr}};
-static const qtc::ParamDesc P11430[] = {{qtc::PK_ENUM, 326, "QMediaFormat::AudioCodec", nullptr}};
-static const qtc::ParamDesc P11431[] = {{qtc::PK_ENUM, 330, "QMediaFormat::VideoCodec", nullptr}};
-static const qtc::ParamDesc P11432[] = {{qtc::PK_ENUM, 329, "QMediaFormat::ResolveFlags", nullptr}};
-static const qtc::ParamDesc P11433[] = {{qtc::PK_ENUM, 328, "QMediaFormat::FileFormat", nullptr}};
+static const qtc::ParamDesc P11574[] = {{qtc::PK_ENUM, 338, "QMediaFormat::FileFormat", nullptr}};
+static const qtc::ParamDesc P11575[] = {{qtc::PK_ENUM, 340, "QMediaFormat::VideoCodec", nullptr}};
+static const qtc::ParamDesc P11577[] = {{qtc::PK_ENUM, 336, "QMediaFormat::AudioCodec", nullptr}};
+static const qtc::ParamDesc P11579[] = {{qtc::PK_ENUM, 337, "QMediaFormat::ConversionMode", nullptr}};
+static const qtc::ParamDesc P11581[] = {{qtc::PK_ENUM, 337, "QMediaFormat::ConversionMode", nullptr}};
+static const qtc::ParamDesc P11582[] = {{qtc::PK_ENUM, 337, "QMediaFormat::ConversionMode", nullptr}};
+static const qtc::ParamDesc P11583[] = {{qtc::PK_ENUM, 337, "QMediaFormat::ConversionMode", nullptr}};
+static const qtc::ParamDesc P11584[] = {{qtc::PK_ENUM, 338, "QMediaFormat::FileFormat", nullptr}};
+static const qtc::ParamDesc P11585[] = {{qtc::PK_ENUM, 336, "QMediaFormat::AudioCodec", nullptr}};
+static const qtc::ParamDesc P11586[] = {{qtc::PK_ENUM, 340, "QMediaFormat::VideoCodec", nullptr}};
+static const qtc::ParamDesc P11587[] = {{qtc::PK_ENUM, 338, "QMediaFormat::FileFormat", nullptr}};
+static const qtc::ParamDesc P11588[] = {{qtc::PK_ENUM, 336, "QMediaFormat::AudioCodec", nullptr}};
+static const qtc::ParamDesc P11589[] = {{qtc::PK_ENUM, 340, "QMediaFormat::VideoCodec", nullptr}};
+static const qtc::ParamDesc P11590[] = {{qtc::PK_ENUM, 339, "QMediaFormat::ResolveFlags", nullptr}};
+static const qtc::ParamDesc P11591[] = {{qtc::PK_ENUM, 338, "QMediaFormat::FileFormat", nullptr}};
 #if __has_include(<QtMultimedia/qmediaformat.h>)
 static const qtc::MethodDef M_QMediaFormat[] = {
-    {"fileFormat", "fileFormat()", t11415<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaFormat::FileFormat"},
-    {"setFileFormat", "setFileFormat(QMediaFormat::FileFormat)", t11416<QMediaFormat>, P11416, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setVideoCodec", "setVideoCodec(QMediaFormat::VideoCodec)", t11417<QMediaFormat>, P11417, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoCodec", "videoCodec()", t11418<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaFormat::VideoCodec"},
-    {"setAudioCodec", "setAudioCodec(QMediaFormat::AudioCodec)", t11419<QMediaFormat>, P11419, 1, 1, 0, QTC_T_NONE, "void"},
-    {"audioCodec", "audioCodec()", t11420<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaFormat::AudioCodec"},
-    {"isSupported", "isSupported(QMediaFormat::ConversionMode)", t11421<QMediaFormat>, P11421, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"mimeType", "mimeType()", t11422<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMimeType"},
-    {"supportedFileFormats", "supportedFileFormats(QMediaFormat::ConversionMode)", t11423<QMediaFormat>, P11423, 1, 1, 0, QTC_T_LIST, "QList<QMediaFormat::FileFormat>"},
-    {"supportedVideoCodecs", "supportedVideoCodecs(QMediaFormat::ConversionMode)", t11424<QMediaFormat>, P11424, 1, 1, 0, QTC_T_LIST, "QList<QMediaFormat::VideoCodec>"},
-    {"supportedAudioCodecs", "supportedAudioCodecs(QMediaFormat::ConversionMode)", t11425<QMediaFormat>, P11425, 1, 1, 0, QTC_T_LIST, "QList<QMediaFormat::AudioCodec>"},
-    {"fileFormatName", "fileFormatName(QMediaFormat::FileFormat)", t11426<QMediaFormat>, P11426, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"audioCodecName", "audioCodecName(QMediaFormat::AudioCodec)", t11427<QMediaFormat>, P11427, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"videoCodecName", "videoCodecName(QMediaFormat::VideoCodec)", t11428<QMediaFormat>, P11428, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"fileFormatDescription", "fileFormatDescription(QMediaFormat::FileFormat)", t11429<QMediaFormat>, P11429, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"audioCodecDescription", "audioCodecDescription(QMediaFormat::AudioCodec)", t11430<QMediaFormat>, P11430, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"videoCodecDescription", "videoCodecDescription(QMediaFormat::VideoCodec)", t11431<QMediaFormat>, P11431, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
-    {"resolveForEncoding", "resolveForEncoding(QMediaFormat::ResolveFlags)", t11432<QMediaFormat>, P11432, 1, 1, 0, QTC_T_NONE, "void"},
+    {"fileFormat", "fileFormat()", t11573<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaFormat::FileFormat"},
+    {"setFileFormat", "setFileFormat(QMediaFormat::FileFormat)", t11574<QMediaFormat>, P11574, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVideoCodec", "setVideoCodec(QMediaFormat::VideoCodec)", t11575<QMediaFormat>, P11575, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoCodec", "videoCodec()", t11576<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaFormat::VideoCodec"},
+    {"setAudioCodec", "setAudioCodec(QMediaFormat::AudioCodec)", t11577<QMediaFormat>, P11577, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioCodec", "audioCodec()", t11578<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaFormat::AudioCodec"},
+    {"isSupported", "isSupported(QMediaFormat::ConversionMode)", t11579<QMediaFormat>, P11579, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"mimeType", "mimeType()", t11580<QMediaFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMimeType"},
+    {"supportedFileFormats", "supportedFileFormats(QMediaFormat::ConversionMode)", t11581<QMediaFormat>, P11581, 1, 1, 0, QTC_T_LIST, "QList<QMediaFormat::FileFormat>"},
+    {"supportedVideoCodecs", "supportedVideoCodecs(QMediaFormat::ConversionMode)", t11582<QMediaFormat>, P11582, 1, 1, 0, QTC_T_LIST, "QList<QMediaFormat::VideoCodec>"},
+    {"supportedAudioCodecs", "supportedAudioCodecs(QMediaFormat::ConversionMode)", t11583<QMediaFormat>, P11583, 1, 1, 0, QTC_T_LIST, "QList<QMediaFormat::AudioCodec>"},
+    {"fileFormatName", "fileFormatName(QMediaFormat::FileFormat)", t11584<QMediaFormat>, P11584, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"audioCodecName", "audioCodecName(QMediaFormat::AudioCodec)", t11585<QMediaFormat>, P11585, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"videoCodecName", "videoCodecName(QMediaFormat::VideoCodec)", t11586<QMediaFormat>, P11586, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"fileFormatDescription", "fileFormatDescription(QMediaFormat::FileFormat)", t11587<QMediaFormat>, P11587, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"audioCodecDescription", "audioCodecDescription(QMediaFormat::AudioCodec)", t11588<QMediaFormat>, P11588, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"videoCodecDescription", "videoCodecDescription(QMediaFormat::VideoCodec)", t11589<QMediaFormat>, P11589, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"resolveForEncoding", "resolveForEncoding(QMediaFormat::ResolveFlags)", t11590<QMediaFormat>, P11590, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaFormat[] = {
-    {"QMediaFormat", "QMediaFormat(QMediaFormat::FileFormat)", t11433<QMediaFormat>, P11433, 1, 0, 0, QTC_T_VALUE, "QMediaFormat"},
+    {"QMediaFormat", "QMediaFormat(QMediaFormat::FileFormat)", t11591<QMediaFormat>, P11591, 1, 0, 0, QTC_T_VALUE, "QMediaFormat"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11434[] = {{qtc::PK_ENUM, 331, "QMediaMetaData::Key", nullptr}};
-static const qtc::ParamDesc P11435[] = {{qtc::PK_ENUM, 331, "QMediaMetaData::Key", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
-static const qtc::ParamDesc P11436[] = {{qtc::PK_ENUM, 331, "QMediaMetaData::Key", nullptr}};
-static const qtc::ParamDesc P11440[] = {{qtc::PK_ENUM, 331, "QMediaMetaData::Key", nullptr}};
-static const qtc::ParamDesc P11441[] = {{qtc::PK_ENUM, 331, "QMediaMetaData::Key", nullptr}};
+static const qtc::ParamDesc P11592[] = {{qtc::PK_ENUM, 341, "QMediaMetaData::Key", nullptr}};
+static const qtc::ParamDesc P11593[] = {{qtc::PK_ENUM, 341, "QMediaMetaData::Key", nullptr}, {qtc::PK_VARIANT, -1, "QVariant", nullptr}};
+static const qtc::ParamDesc P11594[] = {{qtc::PK_ENUM, 341, "QMediaMetaData::Key", nullptr}};
+static const qtc::ParamDesc P11598[] = {{qtc::PK_ENUM, 341, "QMediaMetaData::Key", nullptr}};
+static const qtc::ParamDesc P11599[] = {{qtc::PK_ENUM, 341, "QMediaMetaData::Key", nullptr}};
 #if __has_include(<QtMultimedia/qmediametadata.h>)
 static const qtc::MethodDef M_QMediaMetaData[] = {
-    {"value", "value(QMediaMetaData::Key)", t11434<QMediaMetaData>, P11434, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
-    {"insert", "insert(QMediaMetaData::Key,QVariant)", t11435<QMediaMetaData>, P11435, 2, 2, 0, QTC_T_NONE, "void"},
-    {"remove", "remove(QMediaMetaData::Key)", t11436<QMediaMetaData>, P11436, 1, 1, 0, QTC_T_NONE, "void"},
-    {"keys", "keys()", t11437<QMediaMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData::Key>"},
-    {"clear", "clear()", t11438<QMediaMetaData>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isEmpty", "isEmpty()", t11439<QMediaMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"stringValue", "stringValue(QMediaMetaData::Key)", t11440<QMediaMetaData>, P11440, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"metaDataKeyToString", "metaDataKeyToString(QMediaMetaData::Key)", t11441<QMediaMetaData>, P11441, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"value", "value(QMediaMetaData::Key)", t11592<QMediaMetaData>, P11592, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QVariant"},
+    {"insert", "insert(QMediaMetaData::Key,QVariant)", t11593<QMediaMetaData>, P11593, 2, 2, 0, QTC_T_NONE, "void"},
+    {"remove", "remove(QMediaMetaData::Key)", t11594<QMediaMetaData>, P11594, 1, 1, 0, QTC_T_NONE, "void"},
+    {"keys", "keys()", t11595<QMediaMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData::Key>"},
+    {"clear", "clear()", t11596<QMediaMetaData>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isEmpty", "isEmpty()", t11597<QMediaMetaData>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"stringValue", "stringValue(QMediaMetaData::Key)", t11598<QMediaMetaData>, P11598, 1, 1, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"metaDataKeyToString", "metaDataKeyToString(QMediaMetaData::Key)", t11599<QMediaMetaData>, P11599, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaMetaData[] = {
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11448[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11449[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11450[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11606[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11607[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11608[] = {{qtc::PK_INT, -1, "int", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11451[] = {{qtc::PK_OBJ, -1, "QAudioBufferOutput*", &QAudioBufferOutput::staticMetaObject}};
+static const qtc::ParamDesc P11609[] = {{qtc::PK_OBJ, -1, "QAudioBufferOutput*", &QAudioBufferOutput::staticMetaObject}};
 #endif
-static const qtc::ParamDesc P11453[] = {{qtc::PK_OBJ, -1, "QAudioOutput*", &QAudioOutput::staticMetaObject}};
-static const qtc::ParamDesc P11455[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11457[] = {{qtc::PK_OBJ, -1, "QVideoSink*", &QVideoSink::staticMetaObject}};
-static const qtc::ParamDesc P11473[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11484[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11485[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P11486[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11611[] = {{qtc::PK_OBJ, -1, "QAudioOutput*", &QAudioOutput::staticMetaObject}};
+static const qtc::ParamDesc P11613[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11615[] = {{qtc::PK_OBJ, -1, "QVideoSink*", &QVideoSink::staticMetaObject}};
+static const qtc::ParamDesc P11631[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11642[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11643[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11644[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P11487[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11645[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P11488[] = {{qtc::PK_VALUE, -1, "QPlaybackOptions", nullptr}};
+static const qtc::ParamDesc P11646[] = {{qtc::PK_VALUE, -1, "QPlaybackOptions", nullptr}};
 #endif
-static const qtc::ParamDesc P11490[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P11491[] = {{qtc::PK_ENUM, 336, "QMediaPlayer::PlaybackState", nullptr}};
-static const qtc::ParamDesc P11492[] = {{qtc::PK_ENUM, 334, "QMediaPlayer::MediaStatus", nullptr}};
-static const qtc::ParamDesc P11493[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11494[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11495[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11496[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11497[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11498[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11648[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11649[] = {{qtc::PK_ENUM, 346, "QMediaPlayer::PlaybackState", nullptr}};
+static const qtc::ParamDesc P11650[] = {{qtc::PK_ENUM, 344, "QMediaPlayer::MediaStatus", nullptr}};
+static const qtc::ParamDesc P11651[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11652[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11653[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11654[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11655[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11656[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-static const qtc::ParamDesc P11499[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11657[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
-static const qtc::ParamDesc P11500[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P11509[] = {{qtc::PK_ENUM, 332, "QMediaPlayer::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11658[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11667[] = {{qtc::PK_ENUM, 342, "QMediaPlayer::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-static const qtc::ParamDesc P11510[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11668[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
-static const qtc::ParamDesc P11512[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11670[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qmediaplayer.h>)
 static const qtc::MethodDef M_QMediaPlayer[] = {
-    {"audioTracks", "audioTracks()", t11442<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData>"},
-    {"videoTracks", "videoTracks()", t11443<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData>"},
-    {"subtitleTracks", "subtitleTracks()", t11444<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData>"},
-    {"activeAudioTrack", "activeAudioTrack()", t11445<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"activeVideoTrack", "activeVideoTrack()", t11446<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"activeSubtitleTrack", "activeSubtitleTrack()", t11447<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setActiveAudioTrack", "setActiveAudioTrack(int)", t11448<QMediaPlayer>, P11448, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setActiveVideoTrack", "setActiveVideoTrack(int)", t11449<QMediaPlayer>, P11449, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setActiveSubtitleTrack", "setActiveSubtitleTrack(int)", t11450<QMediaPlayer>, P11450, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioTracks", "audioTracks()", t11600<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData>"},
+    {"videoTracks", "videoTracks()", t11601<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData>"},
+    {"subtitleTracks", "subtitleTracks()", t11602<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaMetaData>"},
+    {"activeAudioTrack", "activeAudioTrack()", t11603<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"activeVideoTrack", "activeVideoTrack()", t11604<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"activeSubtitleTrack", "activeSubtitleTrack()", t11605<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setActiveAudioTrack", "setActiveAudioTrack(int)", t11606<QMediaPlayer>, P11606, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setActiveVideoTrack", "setActiveVideoTrack(int)", t11607<QMediaPlayer>, P11607, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setActiveSubtitleTrack", "setActiveSubtitleTrack(int)", t11608<QMediaPlayer>, P11608, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setAudioBufferOutput", "setAudioBufferOutput(QAudioBufferOutput*)", t11451<QMediaPlayer>, P11451, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAudioBufferOutput", "setAudioBufferOutput(QAudioBufferOutput*)", t11609<QMediaPlayer>, P11609, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"audioBufferOutput", "audioBufferOutput()", t11452<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioBufferOutput*"},
+    {"audioBufferOutput", "audioBufferOutput()", t11610<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioBufferOutput*"},
 #endif
-    {"setAudioOutput", "setAudioOutput(QAudioOutput*)", t11453<QMediaPlayer>, P11453, 1, 1, 0, QTC_T_NONE, "void"},
-    {"audioOutput", "audioOutput()", t11454<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioOutput*"},
-    {"setVideoOutput", "setVideoOutput(QObject*)", t11455<QMediaPlayer>, P11455, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoOutput", "videoOutput()", t11456<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
-    {"setVideoSink", "setVideoSink(QVideoSink*)", t11457<QMediaPlayer>, P11457, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoSink", "videoSink()", t11458<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoSink*"},
-    {"source", "source()", t11459<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"sourceDevice", "sourceDevice()", t11460<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
-    {"playbackState", "playbackState()", t11461<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::PlaybackState"},
-    {"mediaStatus", "mediaStatus()", t11462<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::MediaStatus"},
-    {"duration", "duration()", t11463<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"position", "position()", t11464<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"hasAudio", "hasAudio()", t11465<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"hasVideo", "hasVideo()", t11466<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"bufferProgress", "bufferProgress()", t11467<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"bufferedTimeRange", "bufferedTimeRange()", t11468<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaTimeRange"},
-    {"isSeekable", "isSeekable()", t11469<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"playbackRate", "playbackRate()", t11470<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"setAudioOutput", "setAudioOutput(QAudioOutput*)", t11611<QMediaPlayer>, P11611, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioOutput", "audioOutput()", t11612<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QAudioOutput*"},
+    {"setVideoOutput", "setVideoOutput(QObject*)", t11613<QMediaPlayer>, P11613, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoOutput", "videoOutput()", t11614<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QObject*"},
+    {"setVideoSink", "setVideoSink(QVideoSink*)", t11615<QMediaPlayer>, P11615, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoSink", "videoSink()", t11616<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QVideoSink*"},
+    {"source", "source()", t11617<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"sourceDevice", "sourceDevice()", t11618<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
+    {"playbackState", "playbackState()", t11619<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::PlaybackState"},
+    {"mediaStatus", "mediaStatus()", t11620<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::MediaStatus"},
+    {"duration", "duration()", t11621<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"position", "position()", t11622<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"hasAudio", "hasAudio()", t11623<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"hasVideo", "hasVideo()", t11624<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"bufferProgress", "bufferProgress()", t11625<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"bufferedTimeRange", "bufferedTimeRange()", t11626<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaTimeRange"},
+    {"isSeekable", "isSeekable()", t11627<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"playbackRate", "playbackRate()", t11628<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"isPlaying", "isPlaying()", t11471<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isPlaying", "isPlaying()", t11629<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
-    {"loops", "loops()", t11472<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setLoops", "setLoops(int)", t11473<QMediaPlayer>, P11473, 1, 1, 0, QTC_T_NONE, "void"},
-    {"error", "error()", t11474<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::Error"},
-    {"errorString", "errorString()", t11475<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"isAvailable", "isAvailable()", t11476<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"metaData", "metaData()", t11477<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaMetaData"},
+    {"loops", "loops()", t11630<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setLoops", "setLoops(int)", t11631<QMediaPlayer>, P11631, 1, 1, 0, QTC_T_NONE, "void"},
+    {"error", "error()", t11632<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::Error"},
+    {"errorString", "errorString()", t11633<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"isAvailable", "isAvailable()", t11634<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"metaData", "metaData()", t11635<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaMetaData"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"pitchCompensationAvailability", "pitchCompensationAvailability()", t11478<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::PitchCompensationAvailability"},
-#endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"pitchCompensation", "pitchCompensation()", t11479<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"pitchCompensationAvailability", "pitchCompensationAvailability()", t11636<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaPlayer::PitchCompensationAvailability"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"playbackOptions", "playbackOptions()", t11480<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QPlaybackOptions"},
-#endif
-    {"play", "play()", t11481<QMediaPlayer>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"pause", "pause()", t11482<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11483<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"setPosition", "setPosition(qint64)", t11484<QMediaPlayer>, P11484, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setPlaybackRate", "setPlaybackRate(qreal)", t11485<QMediaPlayer>, P11485, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setSource", "setSource(QUrl)", t11486<QMediaPlayer>, P11486, 1, 1, 0, QTC_T_NONE, "void"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setPitchCompensation", "setPitchCompensation(bool)", t11487<QMediaPlayer>, P11487, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"pitchCompensation", "pitchCompensation()", t11637<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"setPlaybackOptions", "setPlaybackOptions(QPlaybackOptions)", t11488<QMediaPlayer>, P11488, 1, 1, 0, QTC_T_NONE, "void"},
+    {"playbackOptions", "playbackOptions()", t11638<QMediaPlayer>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QPlaybackOptions"},
+#endif
+    {"play", "play()", t11639<QMediaPlayer>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"pause", "pause()", t11640<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11641<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setPosition", "setPosition(qint64)", t11642<QMediaPlayer>, P11642, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setPlaybackRate", "setPlaybackRate(qreal)", t11643<QMediaPlayer>, P11643, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setSource", "setSource(QUrl)", t11644<QMediaPlayer>, P11644, 1, 1, 0, QTC_T_NONE, "void"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    {"setPitchCompensation", "setPitchCompensation(bool)", t11645<QMediaPlayer>, P11645, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"resetPlaybackOptions", "resetPlaybackOptions()", t11489<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"setPlaybackOptions", "setPlaybackOptions(QPlaybackOptions)", t11646<QMediaPlayer>, P11646, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"sourceChanged", "sourceChanged(QUrl)", t11490<QMediaPlayer>, P11490, 1, 1, 0, QTC_T_NONE, "void"},
-    {"playbackStateChanged", "playbackStateChanged(QMediaPlayer::PlaybackState)", t11491<QMediaPlayer>, P11491, 1, 1, 0, QTC_T_NONE, "void"},
-    {"mediaStatusChanged", "mediaStatusChanged(QMediaPlayer::MediaStatus)", t11492<QMediaPlayer>, P11492, 1, 1, 0, QTC_T_NONE, "void"},
-    {"durationChanged", "durationChanged(qint64)", t11493<QMediaPlayer>, P11493, 1, 1, 0, QTC_T_NONE, "void"},
-    {"positionChanged", "positionChanged(qint64)", t11494<QMediaPlayer>, P11494, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hasAudioChanged", "hasAudioChanged(bool)", t11495<QMediaPlayer>, P11495, 1, 1, 0, QTC_T_NONE, "void"},
-    {"hasVideoChanged", "hasVideoChanged(bool)", t11496<QMediaPlayer>, P11496, 1, 1, 0, QTC_T_NONE, "void"},
-    {"bufferProgressChanged", "bufferProgressChanged(float)", t11497<QMediaPlayer>, P11497, 1, 1, 0, QTC_T_NONE, "void"},
-    {"seekableChanged", "seekableChanged(bool)", t11498<QMediaPlayer>, P11498, 1, 1, 0, QTC_T_NONE, "void"},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    {"resetPlaybackOptions", "resetPlaybackOptions()", t11647<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+#endif
+    {"sourceChanged", "sourceChanged(QUrl)", t11648<QMediaPlayer>, P11648, 1, 1, 0, QTC_T_NONE, "void"},
+    {"playbackStateChanged", "playbackStateChanged(QMediaPlayer::PlaybackState)", t11649<QMediaPlayer>, P11649, 1, 1, 0, QTC_T_NONE, "void"},
+    {"mediaStatusChanged", "mediaStatusChanged(QMediaPlayer::MediaStatus)", t11650<QMediaPlayer>, P11650, 1, 1, 0, QTC_T_NONE, "void"},
+    {"durationChanged", "durationChanged(qint64)", t11651<QMediaPlayer>, P11651, 1, 1, 0, QTC_T_NONE, "void"},
+    {"positionChanged", "positionChanged(qint64)", t11652<QMediaPlayer>, P11652, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hasAudioChanged", "hasAudioChanged(bool)", t11653<QMediaPlayer>, P11653, 1, 1, 0, QTC_T_NONE, "void"},
+    {"hasVideoChanged", "hasVideoChanged(bool)", t11654<QMediaPlayer>, P11654, 1, 1, 0, QTC_T_NONE, "void"},
+    {"bufferProgressChanged", "bufferProgressChanged(float)", t11655<QMediaPlayer>, P11655, 1, 1, 0, QTC_T_NONE, "void"},
+    {"seekableChanged", "seekableChanged(bool)", t11656<QMediaPlayer>, P11656, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-    {"playingChanged", "playingChanged(bool)", t11499<QMediaPlayer>, P11499, 1, 1, 0, QTC_T_NONE, "void"},
+    {"playingChanged", "playingChanged(bool)", t11657<QMediaPlayer>, P11657, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"playbackRateChanged", "playbackRateChanged(qreal)", t11500<QMediaPlayer>, P11500, 1, 1, 0, QTC_T_NONE, "void"},
-    {"loopsChanged", "loopsChanged()", t11501<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"metaDataChanged", "metaDataChanged()", t11502<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"videoOutputChanged", "videoOutputChanged()", t11503<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"audioOutputChanged", "audioOutputChanged()", t11504<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"playbackRateChanged", "playbackRateChanged(qreal)", t11658<QMediaPlayer>, P11658, 1, 1, 0, QTC_T_NONE, "void"},
+    {"loopsChanged", "loopsChanged()", t11659<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"metaDataChanged", "metaDataChanged()", t11660<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoOutputChanged", "videoOutputChanged()", t11661<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioOutputChanged", "audioOutputChanged()", t11662<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"audioBufferOutputChanged", "audioBufferOutputChanged()", t11505<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioBufferOutputChanged", "audioBufferOutputChanged()", t11663<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
-    {"tracksChanged", "tracksChanged()", t11506<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"activeTracksChanged", "activeTracksChanged()", t11507<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"errorChanged", "errorChanged()", t11508<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QMediaPlayer::Error,QString)", t11509<QMediaPlayer>, P11509, 2, 2, 0, QTC_T_NONE, "void"},
+    {"tracksChanged", "tracksChanged()", t11664<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"activeTracksChanged", "activeTracksChanged()", t11665<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"errorChanged", "errorChanged()", t11666<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QMediaPlayer::Error,QString)", t11667<QMediaPlayer>, P11667, 2, 2, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"pitchCompensationChanged", "pitchCompensationChanged(bool)", t11510<QMediaPlayer>, P11510, 1, 1, 0, QTC_T_NONE, "void"},
+    {"pitchCompensationChanged", "pitchCompensationChanged(bool)", t11668<QMediaPlayer>, P11668, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-    {"playbackOptionsChanged", "playbackOptionsChanged()", t11511<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"playbackOptionsChanged", "playbackOptionsChanged()", t11669<QMediaPlayer>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaPlayer[] = {
-    {"QMediaPlayer", "QMediaPlayer(QObject*)", t11512<QMediaPlayer>, P11512, 1, 0, 0, QTC_T_OBJ, "QMediaPlayer"},
+    {"QMediaPlayer", "QMediaPlayer(QObject*)", t11670<QMediaPlayer>, P11670, 1, 0, 0, QTC_T_OBJ, "QMediaPlayer"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11515[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P11523[] = {{qtc::PK_VALUE, -1, "QMediaFormat", nullptr}};
-static const qtc::ParamDesc P11525[] = {{qtc::PK_ENUM, 337, "QMediaRecorder::EncodingMode", nullptr}};
-static const qtc::ParamDesc P11527[] = {{qtc::PK_ENUM, 339, "QMediaRecorder::Quality", nullptr}};
-static const qtc::ParamDesc P11529[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}};
-static const qtc::ParamDesc P11530[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11532[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
-static const qtc::ParamDesc P11534[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11536[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11538[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11540[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11542[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
-static const qtc::ParamDesc P11543[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
+static const qtc::ParamDesc P11673[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11681[] = {{qtc::PK_VALUE, -1, "QMediaFormat", nullptr}};
+static const qtc::ParamDesc P11683[] = {{qtc::PK_ENUM, 347, "QMediaRecorder::EncodingMode", nullptr}};
+static const qtc::ParamDesc P11685[] = {{qtc::PK_ENUM, 349, "QMediaRecorder::Quality", nullptr}};
+static const qtc::ParamDesc P11687[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}};
+static const qtc::ParamDesc P11688[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11690[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11692[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11694[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11696[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11698[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11700[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
+static const qtc::ParamDesc P11701[] = {{qtc::PK_VALUE, -1, "QMediaMetaData", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11545[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11703[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #endif
-static const qtc::ParamDesc P11550[] = {{qtc::PK_ENUM, 340, "QMediaRecorder::RecorderState", nullptr}};
-static const qtc::ParamDesc P11551[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11552[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P11554[] = {{qtc::PK_ENUM, 338, "QMediaRecorder::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11567[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11708[] = {{qtc::PK_ENUM, 350, "QMediaRecorder::RecorderState", nullptr}};
+static const qtc::ParamDesc P11709[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11710[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11712[] = {{qtc::PK_ENUM, 348, "QMediaRecorder::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11725[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qmediarecorder.h>)
 static const qtc::MethodDef M_QMediaRecorder[] = {
-    {"isAvailable", "isAvailable()", t11513<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"outputLocation", "outputLocation()", t11514<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setOutputLocation", "setOutputLocation(QUrl)", t11515<QMediaRecorder>, P11515, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isAvailable", "isAvailable()", t11671<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"outputLocation", "outputLocation()", t11672<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setOutputLocation", "setOutputLocation(QUrl)", t11673<QMediaRecorder>, P11673, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"outputDevice", "outputDevice()", t11516<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
+    {"outputDevice", "outputDevice()", t11674<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QIODevice*"},
 #endif
-    {"actualLocation", "actualLocation()", t11517<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"recorderState", "recorderState()", t11518<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::RecorderState"},
-    {"error", "error()", t11519<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::Error"},
-    {"errorString", "errorString()", t11520<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"duration", "duration()", t11521<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"mediaFormat", "mediaFormat()", t11522<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaFormat"},
-    {"setMediaFormat", "setMediaFormat(QMediaFormat)", t11523<QMediaRecorder>, P11523, 1, 1, 0, QTC_T_NONE, "void"},
-    {"encodingMode", "encodingMode()", t11524<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::EncodingMode"},
-    {"setEncodingMode", "setEncodingMode(QMediaRecorder::EncodingMode)", t11525<QMediaRecorder>, P11525, 1, 1, 0, QTC_T_NONE, "void"},
-    {"quality", "quality()", t11526<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::Quality"},
-    {"setQuality", "setQuality(QMediaRecorder::Quality)", t11527<QMediaRecorder>, P11527, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoResolution", "videoResolution()", t11528<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"setVideoResolution", "setVideoResolution(QSize)", t11529<QMediaRecorder>, P11529, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setVideoResolution", "setVideoResolution(int,int)", t11530<QMediaRecorder>, P11530, 2, 2, 0, QTC_T_NONE, "void"},
-    {"videoFrameRate", "videoFrameRate()", t11531<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
-    {"setVideoFrameRate", "setVideoFrameRate(qreal)", t11532<QMediaRecorder>, P11532, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoBitRate", "videoBitRate()", t11533<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setVideoBitRate", "setVideoBitRate(int)", t11534<QMediaRecorder>, P11534, 1, 1, 0, QTC_T_NONE, "void"},
-    {"audioBitRate", "audioBitRate()", t11535<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setAudioBitRate", "setAudioBitRate(int)", t11536<QMediaRecorder>, P11536, 1, 1, 0, QTC_T_NONE, "void"},
-    {"audioChannelCount", "audioChannelCount()", t11537<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setAudioChannelCount", "setAudioChannelCount(int)", t11538<QMediaRecorder>, P11538, 1, 1, 0, QTC_T_NONE, "void"},
-    {"audioSampleRate", "audioSampleRate()", t11539<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setAudioSampleRate", "setAudioSampleRate(int)", t11540<QMediaRecorder>, P11540, 1, 1, 0, QTC_T_NONE, "void"},
-    {"metaData", "metaData()", t11541<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaMetaData"},
-    {"setMetaData", "setMetaData(QMediaMetaData)", t11542<QMediaRecorder>, P11542, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addMetaData", "addMetaData(QMediaMetaData)", t11543<QMediaRecorder>, P11543, 1, 1, 0, QTC_T_NONE, "void"},
+    {"actualLocation", "actualLocation()", t11675<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"recorderState", "recorderState()", t11676<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::RecorderState"},
+    {"error", "error()", t11677<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::Error"},
+    {"errorString", "errorString()", t11678<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"duration", "duration()", t11679<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"mediaFormat", "mediaFormat()", t11680<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaFormat"},
+    {"setMediaFormat", "setMediaFormat(QMediaFormat)", t11681<QMediaRecorder>, P11681, 1, 1, 0, QTC_T_NONE, "void"},
+    {"encodingMode", "encodingMode()", t11682<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::EncodingMode"},
+    {"setEncodingMode", "setEncodingMode(QMediaRecorder::EncodingMode)", t11683<QMediaRecorder>, P11683, 1, 1, 0, QTC_T_NONE, "void"},
+    {"quality", "quality()", t11684<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QMediaRecorder::Quality"},
+    {"setQuality", "setQuality(QMediaRecorder::Quality)", t11685<QMediaRecorder>, P11685, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoResolution", "videoResolution()", t11686<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"setVideoResolution", "setVideoResolution(QSize)", t11687<QMediaRecorder>, P11687, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVideoResolution", "setVideoResolution(int,int)", t11688<QMediaRecorder>, P11688, 2, 2, 0, QTC_T_NONE, "void"},
+    {"videoFrameRate", "videoFrameRate()", t11689<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"setVideoFrameRate", "setVideoFrameRate(qreal)", t11690<QMediaRecorder>, P11690, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoBitRate", "videoBitRate()", t11691<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setVideoBitRate", "setVideoBitRate(int)", t11692<QMediaRecorder>, P11692, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioBitRate", "audioBitRate()", t11693<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setAudioBitRate", "setAudioBitRate(int)", t11694<QMediaRecorder>, P11694, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioChannelCount", "audioChannelCount()", t11695<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setAudioChannelCount", "setAudioChannelCount(int)", t11696<QMediaRecorder>, P11696, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioSampleRate", "audioSampleRate()", t11697<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setAudioSampleRate", "setAudioSampleRate(int)", t11698<QMediaRecorder>, P11698, 1, 1, 0, QTC_T_NONE, "void"},
+    {"metaData", "metaData()", t11699<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaMetaData"},
+    {"setMetaData", "setMetaData(QMediaMetaData)", t11700<QMediaRecorder>, P11700, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addMetaData", "addMetaData(QMediaMetaData)", t11701<QMediaRecorder>, P11701, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"autoStop", "autoStop()", t11544<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"autoStop", "autoStop()", t11702<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setAutoStop", "setAutoStop(bool)", t11545<QMediaRecorder>, P11545, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setAutoStop", "setAutoStop(bool)", t11703<QMediaRecorder>, P11703, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"captureSession", "captureSession()", t11546<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
-    {"record", "record()", t11547<QMediaRecorder>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"pause", "pause()", t11548<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11549<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"recorderStateChanged", "recorderStateChanged(QMediaRecorder::RecorderState)", t11550<QMediaRecorder>, P11550, 1, 1, 0, QTC_T_NONE, "void"},
-    {"durationChanged", "durationChanged(qint64)", t11551<QMediaRecorder>, P11551, 1, 1, 0, QTC_T_NONE, "void"},
-    {"actualLocationChanged", "actualLocationChanged(QUrl)", t11552<QMediaRecorder>, P11552, 1, 1, 0, QTC_T_NONE, "void"},
-    {"encoderSettingsChanged", "encoderSettingsChanged()", t11553<QMediaRecorder>, nullptr, 0, 0, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QMediaRecorder::Error,QString)", t11554<QMediaRecorder>, P11554, 2, 2, 0, QTC_T_NONE, "void"},
-    {"errorChanged", "errorChanged()", t11555<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"metaDataChanged", "metaDataChanged()", t11556<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"mediaFormatChanged", "mediaFormatChanged()", t11557<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"encodingModeChanged", "encodingModeChanged()", t11558<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"qualityChanged", "qualityChanged()", t11559<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"videoResolutionChanged", "videoResolutionChanged()", t11560<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"videoFrameRateChanged", "videoFrameRateChanged()", t11561<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"videoBitRateChanged", "videoBitRateChanged()", t11562<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"audioBitRateChanged", "audioBitRateChanged()", t11563<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"audioChannelCountChanged", "audioChannelCountChanged()", t11564<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"audioSampleRateChanged", "audioSampleRateChanged()", t11565<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"captureSession", "captureSession()", t11704<QMediaRecorder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
+    {"record", "record()", t11705<QMediaRecorder>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"pause", "pause()", t11706<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11707<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"recorderStateChanged", "recorderStateChanged(QMediaRecorder::RecorderState)", t11708<QMediaRecorder>, P11708, 1, 1, 0, QTC_T_NONE, "void"},
+    {"durationChanged", "durationChanged(qint64)", t11709<QMediaRecorder>, P11709, 1, 1, 0, QTC_T_NONE, "void"},
+    {"actualLocationChanged", "actualLocationChanged(QUrl)", t11710<QMediaRecorder>, P11710, 1, 1, 0, QTC_T_NONE, "void"},
+    {"encoderSettingsChanged", "encoderSettingsChanged()", t11711<QMediaRecorder>, nullptr, 0, 0, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QMediaRecorder::Error,QString)", t11712<QMediaRecorder>, P11712, 2, 2, 0, QTC_T_NONE, "void"},
+    {"errorChanged", "errorChanged()", t11713<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"metaDataChanged", "metaDataChanged()", t11714<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"mediaFormatChanged", "mediaFormatChanged()", t11715<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"encodingModeChanged", "encodingModeChanged()", t11716<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"qualityChanged", "qualityChanged()", t11717<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoResolutionChanged", "videoResolutionChanged()", t11718<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoFrameRateChanged", "videoFrameRateChanged()", t11719<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoBitRateChanged", "videoBitRateChanged()", t11720<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioBitRateChanged", "audioBitRateChanged()", t11721<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioChannelCountChanged", "audioChannelCountChanged()", t11722<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioSampleRateChanged", "audioSampleRateChanged()", t11723<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"autoStopChanged", "autoStopChanged()", t11566<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"autoStopChanged", "autoStopChanged()", t11724<QMediaRecorder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaRecorder[] = {
-    {"QMediaRecorder", "QMediaRecorder(QObject*)", t11567<QMediaRecorder>, P11567, 1, 0, 0, QTC_T_OBJ, "QMediaRecorder"},
+    {"QMediaRecorder", "QMediaRecorder(QObject*)", t11725<QMediaRecorder>, P11725, 1, 0, 0, QTC_T_OBJ, "QMediaRecorder"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11574[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11575[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11576[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange::Interval", nullptr}};
-static const qtc::ParamDesc P11577[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange", nullptr}};
-static const qtc::ParamDesc P11578[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11579[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange::Interval", nullptr}};
-static const qtc::ParamDesc P11580[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange", nullptr}};
-static const qtc::ParamDesc P11583[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11584[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange::Interval", nullptr}};
+static const qtc::ParamDesc P11732[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11733[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11734[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange::Interval", nullptr}};
+static const qtc::ParamDesc P11735[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange", nullptr}};
+static const qtc::ParamDesc P11736[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11737[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange::Interval", nullptr}};
+static const qtc::ParamDesc P11738[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange", nullptr}};
+static const qtc::ParamDesc P11741[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11742[] = {{qtc::PK_VALUE, -1, "QMediaTimeRange::Interval", nullptr}};
 #if __has_include(<QtMultimedia/qmediatimerange.h>)
 static const qtc::MethodDef M_QMediaTimeRange[] = {
-    {"detach", "detach()", t11568<QMediaTimeRange>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"earliestTime", "earliestTime()", t11569<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"latestTime", "latestTime()", t11570<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"intervals", "intervals()", t11571<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaTimeRange::Interval>"},
-    {"isEmpty", "isEmpty()", t11572<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isContinuous", "isContinuous()", t11573<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"contains", "contains(qint64)", t11574<QMediaTimeRange>, P11574, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"addInterval", "addInterval(qint64,qint64)", t11575<QMediaTimeRange>, P11575, 2, 2, 0, QTC_T_NONE, "void"},
-    {"addInterval", "addInterval(QMediaTimeRange::Interval)", t11576<QMediaTimeRange>, P11576, 1, 1, 0, QTC_T_NONE, "void"},
-    {"addTimeRange", "addTimeRange(QMediaTimeRange)", t11577<QMediaTimeRange>, P11577, 1, 1, 0, QTC_T_NONE, "void"},
-    {"removeInterval", "removeInterval(qint64,qint64)", t11578<QMediaTimeRange>, P11578, 2, 2, 0, QTC_T_NONE, "void"},
-    {"removeInterval", "removeInterval(QMediaTimeRange::Interval)", t11579<QMediaTimeRange>, P11579, 1, 1, 0, QTC_T_NONE, "void"},
-    {"removeTimeRange", "removeTimeRange(QMediaTimeRange)", t11580<QMediaTimeRange>, P11580, 1, 1, 0, QTC_T_NONE, "void"},
-    {"clear", "clear()", t11581<QMediaTimeRange>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"detach", "detach()", t11726<QMediaTimeRange>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"earliestTime", "earliestTime()", t11727<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"latestTime", "latestTime()", t11728<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"intervals", "intervals()", t11729<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_LIST, "QList<QMediaTimeRange::Interval>"},
+    {"isEmpty", "isEmpty()", t11730<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isContinuous", "isContinuous()", t11731<QMediaTimeRange>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"contains", "contains(qint64)", t11732<QMediaTimeRange>, P11732, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"addInterval", "addInterval(qint64,qint64)", t11733<QMediaTimeRange>, P11733, 2, 2, 0, QTC_T_NONE, "void"},
+    {"addInterval", "addInterval(QMediaTimeRange::Interval)", t11734<QMediaTimeRange>, P11734, 1, 1, 0, QTC_T_NONE, "void"},
+    {"addTimeRange", "addTimeRange(QMediaTimeRange)", t11735<QMediaTimeRange>, P11735, 1, 1, 0, QTC_T_NONE, "void"},
+    {"removeInterval", "removeInterval(qint64,qint64)", t11736<QMediaTimeRange>, P11736, 2, 2, 0, QTC_T_NONE, "void"},
+    {"removeInterval", "removeInterval(QMediaTimeRange::Interval)", t11737<QMediaTimeRange>, P11737, 1, 1, 0, QTC_T_NONE, "void"},
+    {"removeTimeRange", "removeTimeRange(QMediaTimeRange)", t11738<QMediaTimeRange>, P11738, 1, 1, 0, QTC_T_NONE, "void"},
+    {"clear", "clear()", t11739<QMediaTimeRange>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaTimeRange[] = {
-    {"QMediaTimeRange", "QMediaTimeRange()", t11582<QMediaTimeRange>, nullptr, 0, 0, 0, QTC_T_VALUE, "QMediaTimeRange"},
-    {"QMediaTimeRange", "QMediaTimeRange(qint64,qint64)", t11583<QMediaTimeRange>, P11583, 2, 2, 0, QTC_T_VALUE, "QMediaTimeRange"},
-    {"QMediaTimeRange", "QMediaTimeRange(QMediaTimeRange::Interval)", t11584<QMediaTimeRange>, P11584, 1, 1, 0, QTC_T_VALUE, "QMediaTimeRange"},
+    {"QMediaTimeRange", "QMediaTimeRange()", t11740<QMediaTimeRange>, nullptr, 0, 0, 0, QTC_T_VALUE, "QMediaTimeRange"},
+    {"QMediaTimeRange", "QMediaTimeRange(qint64,qint64)", t11741<QMediaTimeRange>, P11741, 2, 2, 0, QTC_T_VALUE, "QMediaTimeRange"},
+    {"QMediaTimeRange", "QMediaTimeRange(QMediaTimeRange::Interval)", t11742<QMediaTimeRange>, P11742, 1, 1, 0, QTC_T_VALUE, "QMediaTimeRange"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11587[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11590[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11592[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11745[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11748[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11750[] = {{qtc::PK_INT, -1, "long long", nullptr}, {qtc::PK_INT, -1, "long long", nullptr}};
 #if __has_include(<QtMultimedia/qmediatimerange.h>)
 static const qtc::MethodDef M_QMediaTimeRange__Interval[] = {
-    {"start", "start()", t11585<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_INT, "long long"},
-    {"end", "end()", t11586<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"contains", "contains(qint64)", t11587<QMediaTimeRange::Interval>, P11587, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isNormal", "isNormal()", t11588<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"normalized", "normalized()", t11589<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaTimeRange::Interval"},
-    {"translated", "translated(qint64)", t11590<QMediaTimeRange::Interval>, P11590, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QMediaTimeRange::Interval"},
+    {"start", "start()", t11743<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_NOFUZZ, QTC_T_INT, "long long"},
+    {"end", "end()", t11744<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"contains", "contains(qint64)", t11745<QMediaTimeRange::Interval>, P11745, 1, 1, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isNormal", "isNormal()", t11746<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"normalized", "normalized()", t11747<QMediaTimeRange::Interval>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QMediaTimeRange::Interval"},
+    {"translated", "translated(qint64)", t11748<QMediaTimeRange::Interval>, P11748, 1, 1, qtc::MF_CONST, QTC_T_VALUE, "QMediaTimeRange::Interval"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QMediaTimeRange__Interval[] = {
-    {"QMediaTimeRange::Interval", "Interval()", t11591<QMediaTimeRange::Interval>, nullptr, 0, 0, 0, QTC_T_VALUE, "QMediaTimeRange::Interval"},
-    {"QMediaTimeRange::Interval", "Interval(qint64,qint64)", t11592<QMediaTimeRange::Interval>, P11592, 2, 2, 0, QTC_T_VALUE, "QMediaTimeRange::Interval"},
+    {"QMediaTimeRange::Interval", "Interval()", t11749<QMediaTimeRange::Interval>, nullptr, 0, 0, 0, QTC_T_VALUE, "QMediaTimeRange::Interval"},
+    {"QMediaTimeRange::Interval", "Interval(qint64,qint64)", t11750<QMediaTimeRange::Interval>, P11750, 2, 2, 0, QTC_T_VALUE, "QMediaTimeRange::Interval"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11595[] = {{qtc::PK_ENUM, 448, "QPlaybackOptions::PlaybackIntent", nullptr}};
-static const qtc::ParamDesc P11598[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11753[] = {{qtc::PK_ENUM, 472, "QPlaybackOptions::PlaybackIntent", nullptr}};
+static const qtc::ParamDesc P11756[] = {{qtc::PK_INT, -1, "long long", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0) && __has_include(<QtMultimedia/qplaybackoptions.h>)
 static const qtc::MethodDef M_QPlaybackOptions[] = {
-    {"resetNetworkTimeout", "resetNetworkTimeout()", t11593<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"playbackIntent", "playbackIntent()", t11594<QPlaybackOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QPlaybackOptions::PlaybackIntent"},
-    {"setPlaybackIntent", "setPlaybackIntent(QPlaybackOptions::PlaybackIntent)", t11595<QPlaybackOptions>, P11595, 1, 1, 0, QTC_T_NONE, "void"},
-    {"resetPlaybackIntent", "resetPlaybackIntent()", t11596<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"probeSize", "probeSize()", t11597<QPlaybackOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setProbeSize", "setProbeSize(qsizetype)", t11598<QPlaybackOptions>, P11598, 1, 1, 0, QTC_T_NONE, "void"},
-    {"resetProbeSize", "resetProbeSize()", t11599<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"resetNetworkTimeout", "resetNetworkTimeout()", t11751<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"playbackIntent", "playbackIntent()", t11752<QPlaybackOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QPlaybackOptions::PlaybackIntent"},
+    {"setPlaybackIntent", "setPlaybackIntent(QPlaybackOptions::PlaybackIntent)", t11753<QPlaybackOptions>, P11753, 1, 1, 0, QTC_T_NONE, "void"},
+    {"resetPlaybackIntent", "resetPlaybackIntent()", t11754<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"probeSize", "probeSize()", t11755<QPlaybackOptions>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setProbeSize", "setProbeSize(qsizetype)", t11756<QPlaybackOptions>, P11756, 1, 1, 0, QTC_T_NONE, "void"},
+    {"resetProbeSize", "resetProbeSize()", t11757<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QPlaybackOptions[] = {
-    {"QPlaybackOptions", "QPlaybackOptions()", t11600<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_VALUE, "QPlaybackOptions"},
+    {"QPlaybackOptions", "QPlaybackOptions()", t11758<QPlaybackOptions>, nullptr, 0, 0, 0, QTC_T_VALUE, "QPlaybackOptions"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11602[] = {{qtc::PK_OBJ, -1, "QScreen*", &QScreen::staticMetaObject}};
-static const qtc::ParamDesc P11607[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11610[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11612[] = {{qtc::PK_OBJ, -1, "QScreen*", &QScreen::staticMetaObject}};
-static const qtc::ParamDesc P11613[] = {{qtc::PK_ENUM, 558, "QScreenCapture::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11615[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11760[] = {{qtc::PK_OBJ, -1, "QScreen*", &QScreen::staticMetaObject}};
+static const qtc::ParamDesc P11765[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11768[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11770[] = {{qtc::PK_OBJ, -1, "QScreen*", &QScreen::staticMetaObject}};
+static const qtc::ParamDesc P11771[] = {{qtc::PK_ENUM, 582, "QScreenCapture::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11773[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0) && __has_include(<QtMultimedia/qscreencapture.h>)
 static const qtc::MethodDef M_QScreenCapture[] = {
-    {"captureSession", "captureSession()", t11601<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
-    {"setScreen", "setScreen(QScreen*)", t11602<QScreenCapture>, P11602, 1, 1, 0, QTC_T_NONE, "void"},
-    {"screen", "screen()", t11603<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QScreen*"},
-    {"isActive", "isActive()", t11604<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"error", "error()", t11605<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QScreenCapture::Error"},
-    {"errorString", "errorString()", t11606<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setActive", "setActive(bool)", t11607<QScreenCapture>, P11607, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"start", "start()", t11608<QScreenCapture>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11609<QScreenCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"activeChanged", "activeChanged(bool)", t11610<QScreenCapture>, P11610, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorChanged", "errorChanged()", t11611<QScreenCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"screenChanged", "screenChanged(QScreen*)", t11612<QScreenCapture>, P11612, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QScreenCapture::Error,QString)", t11613<QScreenCapture>, P11613, 2, 2, 0, QTC_T_NONE, "void"},
+    {"captureSession", "captureSession()", t11759<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
+    {"setScreen", "setScreen(QScreen*)", t11760<QScreenCapture>, P11760, 1, 1, 0, QTC_T_NONE, "void"},
+    {"screen", "screen()", t11761<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QScreen*"},
+    {"isActive", "isActive()", t11762<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"error", "error()", t11763<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QScreenCapture::Error"},
+    {"errorString", "errorString()", t11764<QScreenCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setActive", "setActive(bool)", t11765<QScreenCapture>, P11765, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"start", "start()", t11766<QScreenCapture>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11767<QScreenCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"activeChanged", "activeChanged(bool)", t11768<QScreenCapture>, P11768, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorChanged", "errorChanged()", t11769<QScreenCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"screenChanged", "screenChanged(QScreen*)", t11770<QScreenCapture>, P11770, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QScreenCapture::Error,QString)", t11771<QScreenCapture>, P11771, 2, 2, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"maximumFrameRateChanged", "maximumFrameRateChanged()", t11614<QScreenCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"maximumFrameRateChanged", "maximumFrameRateChanged()", t11772<QScreenCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QScreenCapture[] = {
-    {"QScreenCapture", "QScreenCapture(QObject*)", t11615<QScreenCapture>, P11615, 1, 0, 0, QTC_T_OBJ, "QScreenCapture"},
+    {"QScreenCapture", "QScreenCapture(QObject*)", t11773<QScreenCapture>, P11773, 1, 0, 0, QTC_T_OBJ, "QScreenCapture"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11618[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
-static const qtc::ParamDesc P11621[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11623[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
-static const qtc::ParamDesc P11625[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11627[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11642[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11643[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11776[] = {{qtc::PK_VALUE, -1, "QUrl", nullptr}};
+static const qtc::ParamDesc P11779[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11781[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}};
+static const qtc::ParamDesc P11783[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11785[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11800[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11801[] = {{qtc::PK_VALUE, -1, "QAudioDevice", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qsoundeffect.h>)
 static const qtc::MethodDef M_QSoundEffect[] = {
-    {"supportedMimeTypes", "supportedMimeTypes()", t11616<QSoundEffect>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
-    {"source", "source()", t11617<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
-    {"setSource", "setSource(QUrl)", t11618<QSoundEffect>, P11618, 1, 1, 0, QTC_T_NONE, "void"},
-    {"loopCount", "loopCount()", t11619<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"loopsRemaining", "loopsRemaining()", t11620<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"setLoopCount", "setLoopCount(int)", t11621<QSoundEffect>, P11621, 1, 1, 0, QTC_T_NONE, "void"},
-    {"audioDevice", "audioDevice()", t11622<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAudioDevice"},
-    {"setAudioDevice", "setAudioDevice(QAudioDevice)", t11623<QSoundEffect>, P11623, 1, 1, 0, QTC_T_NONE, "void"},
-    {"volume", "volume()", t11624<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setVolume", "setVolume(float)", t11625<QSoundEffect>, P11625, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isMuted", "isMuted()", t11626<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setMuted", "setMuted(bool)", t11627<QSoundEffect>, P11627, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isLoaded", "isLoaded()", t11628<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isPlaying", "isPlaying()", t11629<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"status", "status()", t11630<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSoundEffect::Status"},
-    {"sourceChanged", "sourceChanged()", t11631<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"loopCountChanged", "loopCountChanged()", t11632<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"loopsRemainingChanged", "loopsRemainingChanged()", t11633<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"volumeChanged", "volumeChanged()", t11634<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"mutedChanged", "mutedChanged()", t11635<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"loadedChanged", "loadedChanged()", t11636<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"playingChanged", "playingChanged()", t11637<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"statusChanged", "statusChanged()", t11638<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"audioDeviceChanged", "audioDeviceChanged()", t11639<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"play", "play()", t11640<QSoundEffect>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11641<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"supportedMimeTypes", "supportedMimeTypes()", t11774<QSoundEffect>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QString>"},
+    {"source", "source()", t11775<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QUrl"},
+    {"setSource", "setSource(QUrl)", t11776<QSoundEffect>, P11776, 1, 1, 0, QTC_T_NONE, "void"},
+    {"loopCount", "loopCount()", t11777<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"loopsRemaining", "loopsRemaining()", t11778<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"setLoopCount", "setLoopCount(int)", t11779<QSoundEffect>, P11779, 1, 1, 0, QTC_T_NONE, "void"},
+    {"audioDevice", "audioDevice()", t11780<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_VALUE, "QAudioDevice"},
+    {"setAudioDevice", "setAudioDevice(QAudioDevice)", t11781<QSoundEffect>, P11781, 1, 1, 0, QTC_T_NONE, "void"},
+    {"volume", "volume()", t11782<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setVolume", "setVolume(float)", t11783<QSoundEffect>, P11783, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isMuted", "isMuted()", t11784<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setMuted", "setMuted(bool)", t11785<QSoundEffect>, P11785, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isLoaded", "isLoaded()", t11786<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isPlaying", "isPlaying()", t11787<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"status", "status()", t11788<QSoundEffect>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QSoundEffect::Status"},
+    {"sourceChanged", "sourceChanged()", t11789<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"loopCountChanged", "loopCountChanged()", t11790<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"loopsRemainingChanged", "loopsRemainingChanged()", t11791<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"volumeChanged", "volumeChanged()", t11792<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"mutedChanged", "mutedChanged()", t11793<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"loadedChanged", "loadedChanged()", t11794<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"playingChanged", "playingChanged()", t11795<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"statusChanged", "statusChanged()", t11796<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioDeviceChanged", "audioDeviceChanged()", t11797<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"play", "play()", t11798<QSoundEffect>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11799<QSoundEffect>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QSoundEffect[] = {
-    {"QSoundEffect", "QSoundEffect(QObject*)", t11642<QSoundEffect>, P11642, 1, 0, 0, QTC_T_OBJ, "QSoundEffect"},
-    {"QSoundEffect", "QSoundEffect(QAudioDevice,QObject*)", t11643<QSoundEffect>, P11643, 2, 1, 0, QTC_T_OBJ, "QSoundEffect"},
+    {"QSoundEffect", "QSoundEffect(QObject*)", t11800<QSoundEffect>, P11800, 1, 0, 0, QTC_T_OBJ, "QSoundEffect"},
+    {"QSoundEffect", "QSoundEffect(QAudioDevice,QObject*)", t11801<QSoundEffect>, P11801, 2, 1, 0, QTC_T_OBJ, "QSoundEffect"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11655[] = {{qtc::PK_ENUM, 804, "QVideoFrame::MapMode", nullptr}};
-static const qtc::ParamDesc P11657[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11658[] = {{qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11661[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11663[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11664[] = {{qtc::PK_ENUM, 806, "QVideoFrame::RotationAngle", nullptr}};
+static const qtc::ParamDesc P11813[] = {{qtc::PK_ENUM, 828, "QVideoFrame::MapMode", nullptr}};
+static const qtc::ParamDesc P11815[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11816[] = {{qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11819[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11821[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11822[] = {{qtc::PK_ENUM, 830, "QVideoFrame::RotationAngle", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-static const qtc::ParamDesc P11666[] = {{qtc::PK_ENUM, 942, "QtVideo::Rotation", nullptr}};
+static const qtc::ParamDesc P11824[] = {{qtc::PK_ENUM, 972, "QtVideo::Rotation", nullptr}};
 #endif
-static const qtc::ParamDesc P11668[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11826[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11670[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11828[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 #endif
-static const qtc::ParamDesc P11674[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11676[] = {{qtc::PK_VALUE, -1, "QVideoFrameFormat", nullptr}};
+static const qtc::ParamDesc P11832[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11834[] = {{qtc::PK_VALUE, -1, "QVideoFrameFormat", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11677[] = {{qtc::PK_VALUE, -1, "QImage", nullptr}};
+static const qtc::ParamDesc P11835[] = {{qtc::PK_VALUE, -1, "QImage", nullptr}};
 #endif
 #if __has_include(<QtMultimedia/qvideoframe.h>)
 static const qtc::MethodDef M_QVideoFrame[] = {
-    {"isValid", "isValid()", t11644<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"pixelFormat", "pixelFormat()", t11645<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
-    {"surfaceFormat", "surfaceFormat()", t11646<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVideoFrameFormat"},
-    {"handleType", "handleType()", t11647<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrame::HandleType"},
-    {"size", "size()", t11648<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"width", "width()", t11649<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"height", "height()", t11650<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"isMapped", "isMapped()", t11651<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isReadable", "isReadable()", t11652<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"isWritable", "isWritable()", t11653<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"mapMode", "mapMode()", t11654<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrame::MapMode"},
-    {"map", "map(QVideoFrame::MapMode)", t11655<QVideoFrame>, P11655, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"unmap", "unmap()", t11656<QVideoFrame>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"bytesPerLine", "bytesPerLine(int)", t11657<QVideoFrame>, P11657, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"mappedBytes", "mappedBytes(int)", t11658<QVideoFrame>, P11658, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"planeCount", "planeCount()", t11659<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"startTime", "startTime()", t11660<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setStartTime", "setStartTime(qint64)", t11661<QVideoFrame>, P11661, 1, 1, 0, QTC_T_NONE, "void"},
-    {"endTime", "endTime()", t11662<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"setEndTime", "setEndTime(qint64)", t11663<QVideoFrame>, P11663, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setRotationAngle", "setRotationAngle(QVideoFrame::RotationAngle)", t11664<QVideoFrame>, P11664, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
-    {"rotationAngle", "rotationAngle()", t11665<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "QVideoFrame::RotationAngle"},
+    {"isValid", "isValid()", t11802<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"pixelFormat", "pixelFormat()", t11803<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
+    {"surfaceFormat", "surfaceFormat()", t11804<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVideoFrameFormat"},
+    {"handleType", "handleType()", t11805<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrame::HandleType"},
+    {"size", "size()", t11806<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"width", "width()", t11807<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"height", "height()", t11808<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"isMapped", "isMapped()", t11809<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isReadable", "isReadable()", t11810<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"isWritable", "isWritable()", t11811<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"mapMode", "mapMode()", t11812<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrame::MapMode"},
+    {"map", "map(QVideoFrame::MapMode)", t11813<QVideoFrame>, P11813, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"unmap", "unmap()", t11814<QVideoFrame>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"bytesPerLine", "bytesPerLine(int)", t11815<QVideoFrame>, P11815, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"mappedBytes", "mappedBytes(int)", t11816<QVideoFrame>, P11816, 1, 1, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"planeCount", "planeCount()", t11817<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"startTime", "startTime()", t11818<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setStartTime", "setStartTime(qint64)", t11819<QVideoFrame>, P11819, 1, 1, 0, QTC_T_NONE, "void"},
+    {"endTime", "endTime()", t11820<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"setEndTime", "setEndTime(qint64)", t11821<QVideoFrame>, P11821, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setRotationAngle", "setRotationAngle(QVideoFrame::RotationAngle)", t11822<QVideoFrame>, P11822, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
+    {"rotationAngle", "rotationAngle()", t11823<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "QVideoFrame::RotationAngle"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"setRotation", "setRotation(QtVideo::Rotation)", t11666<QVideoFrame>, P11666, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setRotation", "setRotation(QtVideo::Rotation)", t11824<QVideoFrame>, P11824, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    {"rotation", "rotation()", t11667<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtVideo::Rotation"},
+    {"rotation", "rotation()", t11825<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtVideo::Rotation"},
 #endif
-    {"setMirrored", "setMirrored(bool)", t11668<QVideoFrame>, P11668, 1, 1, 0, QTC_T_NONE, "void"},
-    {"mirrored", "mirrored()", t11669<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setMirrored", "setMirrored(bool)", t11826<QVideoFrame>, P11826, 1, 1, 0, QTC_T_NONE, "void"},
+    {"mirrored", "mirrored()", t11827<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setStreamFrameRate", "setStreamFrameRate(qreal)", t11670<QVideoFrame>, P11670, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setStreamFrameRate", "setStreamFrameRate(qreal)", t11828<QVideoFrame>, P11828, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"streamFrameRate", "streamFrameRate()", t11671<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"streamFrameRate", "streamFrameRate()", t11829<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
 #endif
-    {"toImage", "toImage()", t11672<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QImage"},
-    {"subtitleText", "subtitleText()", t11673<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setSubtitleText", "setSubtitleText(QString)", t11674<QVideoFrame>, P11674, 1, 1, 0, QTC_T_NONE, "void"},
+    {"toImage", "toImage()", t11830<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QImage"},
+    {"subtitleText", "subtitleText()", t11831<QVideoFrame>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setSubtitleText", "setSubtitleText(QString)", t11832<QVideoFrame>, P11832, 1, 1, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QVideoFrame[] = {
-    {"QVideoFrame", "QVideoFrame()", t11675<QVideoFrame>, nullptr, 0, 0, 0, QTC_T_VALUE, "QVideoFrame"},
-    {"QVideoFrame", "QVideoFrame(QVideoFrameFormat)", t11676<QVideoFrame>, P11676, 1, 1, 0, QTC_T_VALUE, "QVideoFrame"},
+    {"QVideoFrame", "QVideoFrame()", t11833<QVideoFrame>, nullptr, 0, 0, 0, QTC_T_VALUE, "QVideoFrame"},
+    {"QVideoFrame", "QVideoFrame(QVideoFrameFormat)", t11834<QVideoFrame>, P11834, 1, 1, 0, QTC_T_VALUE, "QVideoFrame"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"QVideoFrame", "QVideoFrame(QImage)", t11677<QVideoFrame>, P11677, 1, 1, 0, QTC_T_VALUE, "QVideoFrame"},
+    {"QVideoFrame", "QVideoFrame(QImage)", t11835<QVideoFrame>, P11835, 1, 1, 0, QTC_T_VALUE, "QVideoFrame"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11682[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}};
-static const qtc::ParamDesc P11683[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
-static const qtc::ParamDesc P11688[] = {{qtc::PK_VALUE, -1, "QRect", nullptr}};
-static const qtc::ParamDesc P11690[] = {{qtc::PK_ENUM, 810, "QVideoFrameFormat::Direction", nullptr}};
-static const qtc::ParamDesc P11692[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11840[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}};
+static const qtc::ParamDesc P11841[] = {{qtc::PK_INT, -1, "int", nullptr}, {qtc::PK_INT, -1, "int", nullptr}};
+static const qtc::ParamDesc P11846[] = {{qtc::PK_VALUE, -1, "QRect", nullptr}};
+static const qtc::ParamDesc P11848[] = {{qtc::PK_ENUM, 834, "QVideoFrameFormat::Direction", nullptr}};
+static const qtc::ParamDesc P11850[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11694[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
+static const qtc::ParamDesc P11852[] = {{qtc::PK_DOUBLE, -1, "double", nullptr}};
 #endif
-static const qtc::ParamDesc P11696[] = {{qtc::PK_ENUM, 812, "QVideoFrameFormat::YCbCrColorSpace", nullptr}};
-static const qtc::ParamDesc P11698[] = {{qtc::PK_ENUM, 808, "QVideoFrameFormat::ColorSpace", nullptr}};
-static const qtc::ParamDesc P11700[] = {{qtc::PK_ENUM, 809, "QVideoFrameFormat::ColorTransfer", nullptr}};
-static const qtc::ParamDesc P11702[] = {{qtc::PK_ENUM, 807, "QVideoFrameFormat::ColorRange", nullptr}};
-static const qtc::ParamDesc P11704[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11854[] = {{qtc::PK_ENUM, 836, "QVideoFrameFormat::YCbCrColorSpace", nullptr}};
+static const qtc::ParamDesc P11856[] = {{qtc::PK_ENUM, 832, "QVideoFrameFormat::ColorSpace", nullptr}};
+static const qtc::ParamDesc P11858[] = {{qtc::PK_ENUM, 833, "QVideoFrameFormat::ColorTransfer", nullptr}};
+static const qtc::ParamDesc P11860[] = {{qtc::PK_ENUM, 831, "QVideoFrameFormat::ColorRange", nullptr}};
+static const qtc::ParamDesc P11862[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-static const qtc::ParamDesc P11706[] = {{qtc::PK_ENUM, 942, "QtVideo::Rotation", nullptr}};
+static const qtc::ParamDesc P11864[] = {{qtc::PK_ENUM, 972, "QtVideo::Rotation", nullptr}};
 #endif
-static const qtc::ParamDesc P11710[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
-static const qtc::ParamDesc P11711[] = {{qtc::PK_ENUM, 249, "QImage::Format", nullptr}};
-static const qtc::ParamDesc P11712[] = {{qtc::PK_ENUM, 811, "QVideoFrameFormat::PixelFormat", nullptr}};
-static const qtc::ParamDesc P11713[] = {{qtc::PK_ENUM, 811, "QVideoFrameFormat::PixelFormat", nullptr}};
-static const qtc::ParamDesc P11715[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}, {qtc::PK_ENUM, 811, "QVideoFrameFormat::PixelFormat", nullptr}};
+static const qtc::ParamDesc P11868[] = {{qtc::PK_DOUBLE, -1, "float", nullptr}};
+static const qtc::ParamDesc P11869[] = {{qtc::PK_ENUM, 259, "QImage::Format", nullptr}};
+static const qtc::ParamDesc P11870[] = {{qtc::PK_ENUM, 835, "QVideoFrameFormat::PixelFormat", nullptr}};
+static const qtc::ParamDesc P11871[] = {{qtc::PK_ENUM, 835, "QVideoFrameFormat::PixelFormat", nullptr}};
+static const qtc::ParamDesc P11873[] = {{qtc::PK_VALUE, -1, "QSize", nullptr}, {qtc::PK_ENUM, 835, "QVideoFrameFormat::PixelFormat", nullptr}};
 #if __has_include(<QtMultimedia/qvideoframeformat.h>)
 static const qtc::MethodDef M_QVideoFrameFormat[] = {
-    {"detach", "detach()", t11678<QVideoFrameFormat>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"isValid", "isValid()", t11679<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"pixelFormat", "pixelFormat()", t11680<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
-    {"frameSize", "frameSize()", t11681<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"setFrameSize", "setFrameSize(QSize)", t11682<QVideoFrameFormat>, P11682, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setFrameSize", "setFrameSize(int,int)", t11683<QVideoFrameFormat>, P11683, 2, 2, 0, QTC_T_NONE, "void"},
-    {"frameWidth", "frameWidth()", t11684<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"frameHeight", "frameHeight()", t11685<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"planeCount", "planeCount()", t11686<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"viewport", "viewport()", t11687<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QRect"},
-    {"setViewport", "setViewport(QRect)", t11688<QVideoFrameFormat>, P11688, 1, 1, 0, QTC_T_NONE, "void"},
-    {"scanLineDirection", "scanLineDirection()", t11689<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::Direction"},
-    {"setScanLineDirection", "setScanLineDirection(QVideoFrameFormat::Direction)", t11690<QVideoFrameFormat>, P11690, 1, 1, 0, QTC_T_NONE, "void"},
-    {"frameRate", "frameRate()", t11691<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_DOUBLE, "double"},
-    {"setFrameRate", "setFrameRate(qreal)", t11692<QVideoFrameFormat>, P11692, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
+    {"detach", "detach()", t11836<QVideoFrameFormat>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"isValid", "isValid()", t11837<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"pixelFormat", "pixelFormat()", t11838<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
+    {"frameSize", "frameSize()", t11839<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"setFrameSize", "setFrameSize(QSize)", t11840<QVideoFrameFormat>, P11840, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setFrameSize", "setFrameSize(int,int)", t11841<QVideoFrameFormat>, P11841, 2, 2, 0, QTC_T_NONE, "void"},
+    {"frameWidth", "frameWidth()", t11842<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"frameHeight", "frameHeight()", t11843<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"planeCount", "planeCount()", t11844<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"viewport", "viewport()", t11845<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QRect"},
+    {"setViewport", "setViewport(QRect)", t11846<QVideoFrameFormat>, P11846, 1, 1, 0, QTC_T_NONE, "void"},
+    {"scanLineDirection", "scanLineDirection()", t11847<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::Direction"},
+    {"setScanLineDirection", "setScanLineDirection(QVideoFrameFormat::Direction)", t11848<QVideoFrameFormat>, P11848, 1, 1, 0, QTC_T_NONE, "void"},
+    {"frameRate", "frameRate()", t11849<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_DOUBLE, "double"},
+    {"setFrameRate", "setFrameRate(qreal)", t11850<QVideoFrameFormat>, P11850, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"streamFrameRate", "streamFrameRate()", t11693<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
+    {"streamFrameRate", "streamFrameRate()", t11851<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "double"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setStreamFrameRate", "setStreamFrameRate(qreal)", t11694<QVideoFrameFormat>, P11694, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setStreamFrameRate", "setStreamFrameRate(qreal)", t11852<QVideoFrameFormat>, P11852, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"yCbCrColorSpace", "yCbCrColorSpace()", t11695<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "QVideoFrameFormat::YCbCrColorSpace"},
-    {"setYCbCrColorSpace", "setYCbCrColorSpace(QVideoFrameFormat::YCbCrColorSpace)", t11696<QVideoFrameFormat>, P11696, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
-    {"colorSpace", "colorSpace()", t11697<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::ColorSpace"},
-    {"setColorSpace", "setColorSpace(QVideoFrameFormat::ColorSpace)", t11698<QVideoFrameFormat>, P11698, 1, 1, 0, QTC_T_NONE, "void"},
-    {"colorTransfer", "colorTransfer()", t11699<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::ColorTransfer"},
-    {"setColorTransfer", "setColorTransfer(QVideoFrameFormat::ColorTransfer)", t11700<QVideoFrameFormat>, P11700, 1, 1, 0, QTC_T_NONE, "void"},
-    {"colorRange", "colorRange()", t11701<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::ColorRange"},
-    {"setColorRange", "setColorRange(QVideoFrameFormat::ColorRange)", t11702<QVideoFrameFormat>, P11702, 1, 1, 0, QTC_T_NONE, "void"},
-    {"isMirrored", "isMirrored()", t11703<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"setMirrored", "setMirrored(bool)", t11704<QVideoFrameFormat>, P11704, 1, 1, 0, QTC_T_NONE, "void"},
+    {"yCbCrColorSpace", "yCbCrColorSpace()", t11853<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST|qtc::MF_DEPRECATED, QTC_T_INT, "QVideoFrameFormat::YCbCrColorSpace"},
+    {"setYCbCrColorSpace", "setYCbCrColorSpace(QVideoFrameFormat::YCbCrColorSpace)", t11854<QVideoFrameFormat>, P11854, 1, 1, qtc::MF_DEPRECATED, QTC_T_NONE, "void"},
+    {"colorSpace", "colorSpace()", t11855<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::ColorSpace"},
+    {"setColorSpace", "setColorSpace(QVideoFrameFormat::ColorSpace)", t11856<QVideoFrameFormat>, P11856, 1, 1, 0, QTC_T_NONE, "void"},
+    {"colorTransfer", "colorTransfer()", t11857<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::ColorTransfer"},
+    {"setColorTransfer", "setColorTransfer(QVideoFrameFormat::ColorTransfer)", t11858<QVideoFrameFormat>, P11858, 1, 1, 0, QTC_T_NONE, "void"},
+    {"colorRange", "colorRange()", t11859<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QVideoFrameFormat::ColorRange"},
+    {"setColorRange", "setColorRange(QVideoFrameFormat::ColorRange)", t11860<QVideoFrameFormat>, P11860, 1, 1, 0, QTC_T_NONE, "void"},
+    {"isMirrored", "isMirrored()", t11861<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"setMirrored", "setMirrored(bool)", t11862<QVideoFrameFormat>, P11862, 1, 1, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"rotation", "rotation()", t11705<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtVideo::Rotation"},
+    {"rotation", "rotation()", t11863<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QtVideo::Rotation"},
 #endif
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    {"setRotation", "setRotation(QtVideo::Rotation)", t11706<QVideoFrameFormat>, P11706, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setRotation", "setRotation(QtVideo::Rotation)", t11864<QVideoFrameFormat>, P11864, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-    {"vertexShaderFileName", "vertexShaderFileName()", t11707<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"fragmentShaderFileName", "fragmentShaderFileName()", t11708<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"maxLuminance", "maxLuminance()", t11709<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
-    {"setMaxLuminance", "setMaxLuminance(float)", t11710<QVideoFrameFormat>, P11710, 1, 1, 0, QTC_T_NONE, "void"},
-    {"pixelFormatFromImageFormat", "pixelFormatFromImageFormat(QImage::Format)", t11711<QVideoFrameFormat>, P11711, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
-    {"imageFormatFromPixelFormat", "imageFormatFromPixelFormat(QVideoFrameFormat::PixelFormat)", t11712<QVideoFrameFormat>, P11712, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QImage::Format"},
-    {"pixelFormatToString", "pixelFormatToString(QVideoFrameFormat::PixelFormat)", t11713<QVideoFrameFormat>, P11713, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
+    {"vertexShaderFileName", "vertexShaderFileName()", t11865<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"fragmentShaderFileName", "fragmentShaderFileName()", t11866<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"maxLuminance", "maxLuminance()", t11867<QVideoFrameFormat>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_DOUBLE, "float"},
+    {"setMaxLuminance", "setMaxLuminance(float)", t11868<QVideoFrameFormat>, P11868, 1, 1, 0, QTC_T_NONE, "void"},
+    {"pixelFormatFromImageFormat", "pixelFormatFromImageFormat(QImage::Format)", t11869<QVideoFrameFormat>, P11869, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QVideoFrameFormat::PixelFormat"},
+    {"imageFormatFromPixelFormat", "imageFormatFromPixelFormat(QVideoFrameFormat::PixelFormat)", t11870<QVideoFrameFormat>, P11870, 1, 1, qtc::MF_STATIC, QTC_T_INT, "QImage::Format"},
+    {"pixelFormatToString", "pixelFormatToString(QVideoFrameFormat::PixelFormat)", t11871<QVideoFrameFormat>, P11871, 1, 1, qtc::MF_STATIC, QTC_T_STR, "QString"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QVideoFrameFormat[] = {
-    {"QVideoFrameFormat", "QVideoFrameFormat()", t11714<QVideoFrameFormat>, nullptr, 0, 0, 0, QTC_T_VALUE, "QVideoFrameFormat"},
-    {"QVideoFrameFormat", "QVideoFrameFormat(QSize,QVideoFrameFormat::PixelFormat)", t11715<QVideoFrameFormat>, P11715, 2, 2, 0, QTC_T_VALUE, "QVideoFrameFormat"},
+    {"QVideoFrameFormat", "QVideoFrameFormat()", t11872<QVideoFrameFormat>, nullptr, 0, 0, 0, QTC_T_VALUE, "QVideoFrameFormat"},
+    {"QVideoFrameFormat", "QVideoFrameFormat(QSize,QVideoFrameFormat::PixelFormat)", t11873<QVideoFrameFormat>, P11873, 2, 2, 0, QTC_T_VALUE, "QVideoFrameFormat"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11716[] = {{qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
-static const qtc::ParamDesc P11720[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11721[] = {{qtc::PK_VALUE, -1, "QVideoFrameFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11874[] = {{qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
+static const qtc::ParamDesc P11878[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11879[] = {{qtc::PK_VALUE, -1, "QVideoFrameFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0) && __has_include(<QtMultimedia/qvideoframeinput.h>)
 static const qtc::MethodDef M_QVideoFrameInput[] = {
-    {"sendVideoFrame", "sendVideoFrame(QVideoFrame)", t11716<QVideoFrameInput>, P11716, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"format", "format()", t11717<QVideoFrameInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVideoFrameFormat"},
-    {"captureSession", "captureSession()", t11718<QVideoFrameInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
-    {"readyToSendVideoFrame", "readyToSendVideoFrame()", t11719<QVideoFrameInput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"sendVideoFrame", "sendVideoFrame(QVideoFrame)", t11874<QVideoFrameInput>, P11874, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"format", "format()", t11875<QVideoFrameInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVideoFrameFormat"},
+    {"captureSession", "captureSession()", t11876<QVideoFrameInput>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
+    {"readyToSendVideoFrame", "readyToSendVideoFrame()", t11877<QVideoFrameInput>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QVideoFrameInput[] = {
-    {"QVideoFrameInput", "QVideoFrameInput(QObject*)", t11720<QVideoFrameInput>, P11720, 1, 0, 0, QTC_T_OBJ, "QVideoFrameInput"},
-    {"QVideoFrameInput", "QVideoFrameInput(QVideoFrameFormat,QObject*)", t11721<QVideoFrameInput>, P11721, 2, 1, 0, QTC_T_OBJ, "QVideoFrameInput"},
+    {"QVideoFrameInput", "QVideoFrameInput(QObject*)", t11878<QVideoFrameInput>, P11878, 1, 0, 0, QTC_T_OBJ, "QVideoFrameInput"},
+    {"QVideoFrameInput", "QVideoFrameInput(QVideoFrameFormat,QObject*)", t11879<QVideoFrameInput>, P11879, 2, 1, 0, QTC_T_OBJ, "QVideoFrameInput"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11724[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11725[] = {{qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
-static const qtc::ParamDesc P11727[] = {{qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
-static const qtc::ParamDesc P11728[] = {{qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11730[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11882[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11883[] = {{qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
+static const qtc::ParamDesc P11885[] = {{qtc::PK_VALUE, -1, "QVideoFrame", nullptr}};
+static const qtc::ParamDesc P11886[] = {{qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11888[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qvideosink.h>)
 static const qtc::MethodDef M_QVideoSink[] = {
-    {"videoSize", "videoSize()", t11722<QVideoSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
-    {"subtitleText", "subtitleText()", t11723<QVideoSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setSubtitleText", "setSubtitleText(QString)", t11724<QVideoSink>, P11724, 1, 1, 0, QTC_T_NONE, "void"},
-    {"setVideoFrame", "setVideoFrame(QVideoFrame)", t11725<QVideoSink>, P11725, 1, 1, 0, QTC_T_NONE, "void"},
-    {"videoFrame", "videoFrame()", t11726<QVideoSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVideoFrame"},
-    {"videoFrameChanged", "videoFrameChanged(QVideoFrame)", t11727<QVideoSink>, P11727, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"subtitleTextChanged", "subtitleTextChanged(QString)", t11728<QVideoSink>, P11728, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
-    {"videoSizeChanged", "videoSizeChanged()", t11729<QVideoSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"videoSize", "videoSize()", t11880<QVideoSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QSize"},
+    {"subtitleText", "subtitleText()", t11881<QVideoSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setSubtitleText", "setSubtitleText(QString)", t11882<QVideoSink>, P11882, 1, 1, 0, QTC_T_NONE, "void"},
+    {"setVideoFrame", "setVideoFrame(QVideoFrame)", t11883<QVideoSink>, P11883, 1, 1, 0, QTC_T_NONE, "void"},
+    {"videoFrame", "videoFrame()", t11884<QVideoSink>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QVideoFrame"},
+    {"videoFrameChanged", "videoFrameChanged(QVideoFrame)", t11885<QVideoSink>, P11885, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"subtitleTextChanged", "subtitleTextChanged(QString)", t11886<QVideoSink>, P11886, 1, 1, qtc::MF_CONST, QTC_T_NONE, "void"},
+    {"videoSizeChanged", "videoSizeChanged()", t11887<QVideoSink>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QVideoSink[] = {
-    {"QVideoSink", "QVideoSink(QObject*)", t11730<QVideoSink>, P11730, 1, 0, 0, QTC_T_OBJ, "QVideoSink"},
+    {"QVideoSink", "QVideoSink(QObject*)", t11888<QVideoSink>, P11888, 1, 0, 0, QTC_T_OBJ, "QVideoSink"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11735[] = {{qtc::PK_FLAGS, 244, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
-static const qtc::ParamDesc P11737[] = {{qtc::PK_INT, -1, "long long", nullptr}};
-static const qtc::ParamDesc P11744[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
-static const qtc::ParamDesc P11745[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11893[] = {{qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
+static const qtc::ParamDesc P11895[] = {{qtc::PK_INT, -1, "long long", nullptr}};
+static const qtc::ParamDesc P11902[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11903[] = {{qtc::PK_OBJ, -1, "QIODevice*", &QIODevice::staticMetaObject}, {qtc::PK_VALUE, -1, "QAudioFormat", nullptr}, {qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if __has_include(<QtMultimedia/qwavedecoder.h>)
 static const qtc::MethodDef M_QWaveDecoder[] = {
-    {"audioFormat", "audioFormat()", t11731<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
-    {"getDevice", "getDevice()", t11732<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_OBJ, "QIODevice*"},
-    {"duration", "duration()", t11733<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
-    {"headerLength", "headerLength()", t11734<QWaveDecoder>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_INT, "long long"},
-    {"open", "open(QIODevice::OpenMode)", t11735<QWaveDecoder>, P11735, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"close", "close()", t11736<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"seek", "seek(qint64)", t11737<QWaveDecoder>, P11737, 1, 1, 0, QTC_T_BOOL, "bool"},
-    {"pos", "pos()", t11738<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"size", "size()", t11739<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"isSequential", "isSequential()", t11740<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"bytesAvailable", "bytesAvailable()", t11741<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
-    {"formatKnown", "formatKnown()", t11742<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"parsingError", "parsingError()", t11743<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"audioFormat", "audioFormat()", t11889<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QAudioFormat"},
+    {"getDevice", "getDevice()", t11890<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_OBJ, "QIODevice*"},
+    {"duration", "duration()", t11891<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "int"},
+    {"headerLength", "headerLength()", t11892<QWaveDecoder>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_INT, "long long"},
+    {"open", "open(QIODevice::OpenMode)", t11893<QWaveDecoder>, P11893, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"close", "close()", t11894<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"seek", "seek(qint64)", t11895<QWaveDecoder>, P11895, 1, 1, 0, QTC_T_BOOL, "bool"},
+    {"pos", "pos()", t11896<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"size", "size()", t11897<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"isSequential", "isSequential()", t11898<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"bytesAvailable", "bytesAvailable()", t11899<QWaveDecoder>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "long long"},
+    {"formatKnown", "formatKnown()", t11900<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"parsingError", "parsingError()", t11901<QWaveDecoder>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QWaveDecoder[] = {
-    {"QWaveDecoder", "QWaveDecoder(QIODevice*,QObject*)", t11744<QWaveDecoder>, P11744, 2, 1, 0, QTC_T_OBJ, "QWaveDecoder"},
-    {"QWaveDecoder", "QWaveDecoder(QIODevice*,QAudioFormat,QObject*)", t11745<QWaveDecoder>, P11745, 3, 2, 0, QTC_T_OBJ, "QWaveDecoder"},
+    {"QWaveDecoder", "QWaveDecoder(QIODevice*,QObject*)", t11902<QWaveDecoder>, P11902, 2, 1, 0, QTC_T_OBJ, "QWaveDecoder"},
+    {"QWaveDecoder", "QWaveDecoder(QIODevice*,QAudioFormat,QObject*)", t11903<QWaveDecoder>, P11903, 3, 2, 0, QTC_T_OBJ, "QWaveDecoder"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
-static const qtc::ParamDesc P11748[] = {{qtc::PK_VALUE, -1, "QCapturableWindow", nullptr}};
-static const qtc::ParamDesc P11753[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11756[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
-static const qtc::ParamDesc P11757[] = {{qtc::PK_VALUE, -1, "QCapturableWindow", nullptr}};
-static const qtc::ParamDesc P11759[] = {{qtc::PK_ENUM, 822, "QWindowCapture::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
-static const qtc::ParamDesc P11761[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
+static const qtc::ParamDesc P11906[] = {{qtc::PK_VALUE, -1, "QCapturableWindow", nullptr}};
+static const qtc::ParamDesc P11911[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11914[] = {{qtc::PK_BOOL, -1, "bool", nullptr}};
+static const qtc::ParamDesc P11915[] = {{qtc::PK_VALUE, -1, "QCapturableWindow", nullptr}};
+static const qtc::ParamDesc P11917[] = {{qtc::PK_ENUM, 846, "QWindowCapture::Error", nullptr}, {qtc::PK_STR, -1, "QString", nullptr}};
+static const qtc::ParamDesc P11919[] = {{qtc::PK_OBJ, -1, "QObject*", &QObject::staticMetaObject}};
 #if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && __has_include(<QtMultimedia/qwindowcapture.h>)
 static const qtc::MethodDef M_QWindowCapture[] = {
-    {"capturableWindows", "capturableWindows()", t11746<QWindowCapture>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QCapturableWindow>"},
-    {"captureSession", "captureSession()", t11747<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
-    {"setWindow", "setWindow(QCapturableWindow)", t11748<QWindowCapture>, P11748, 1, 1, 0, QTC_T_NONE, "void"},
-    {"window", "window()", t11749<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QCapturableWindow"},
-    {"isActive", "isActive()", t11750<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
-    {"error", "error()", t11751<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QWindowCapture::Error"},
-    {"errorString", "errorString()", t11752<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
-    {"setActive", "setActive(bool)", t11753<QWindowCapture>, P11753, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"start", "start()", t11754<QWindowCapture>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
-    {"stop", "stop()", t11755<QWindowCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"activeChanged", "activeChanged(bool)", t11756<QWindowCapture>, P11756, 1, 1, 0, QTC_T_NONE, "void"},
-    {"windowChanged", "windowChanged(QCapturableWindow)", t11757<QWindowCapture>, P11757, 1, 1, 0, QTC_T_NONE, "void"},
-    {"errorChanged", "errorChanged()", t11758<QWindowCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
-    {"errorOccurred", "errorOccurred(QWindowCapture::Error,QString)", t11759<QWindowCapture>, P11759, 2, 2, 0, QTC_T_NONE, "void"},
+    {"capturableWindows", "capturableWindows()", t11904<QWindowCapture>, nullptr, 0, 0, qtc::MF_STATIC, QTC_T_LIST, "QList<QCapturableWindow>"},
+    {"captureSession", "captureSession()", t11905<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_OBJ, "QMediaCaptureSession*"},
+    {"setWindow", "setWindow(QCapturableWindow)", t11906<QWindowCapture>, P11906, 1, 1, 0, QTC_T_NONE, "void"},
+    {"window", "window()", t11907<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QCapturableWindow"},
+    {"isActive", "isActive()", t11908<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_BOOL, "bool"},
+    {"error", "error()", t11909<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_INT, "QWindowCapture::Error"},
+    {"errorString", "errorString()", t11910<QWindowCapture>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},
+    {"setActive", "setActive(bool)", t11911<QWindowCapture>, P11911, 1, 1, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"start", "start()", t11912<QWindowCapture>, nullptr, 0, 0, qtc::MF_NOFUZZ, QTC_T_NONE, "void"},
+    {"stop", "stop()", t11913<QWindowCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"activeChanged", "activeChanged(bool)", t11914<QWindowCapture>, P11914, 1, 1, 0, QTC_T_NONE, "void"},
+    {"windowChanged", "windowChanged(QCapturableWindow)", t11915<QWindowCapture>, P11915, 1, 1, 0, QTC_T_NONE, "void"},
+    {"errorChanged", "errorChanged()", t11916<QWindowCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"errorOccurred", "errorOccurred(QWindowCapture::Error,QString)", t11917<QWindowCapture>, P11917, 2, 2, 0, QTC_T_NONE, "void"},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 12, 0)
-    {"maximumFrameRateChanged", "maximumFrameRateChanged()", t11760<QWindowCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
+    {"maximumFrameRateChanged", "maximumFrameRateChanged()", t11918<QWindowCapture>, nullptr, 0, 0, 0, QTC_T_NONE, "void"},
 #endif
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 static const qtc::MethodDef C_QWindowCapture[] = {
-    {"QWindowCapture", "QWindowCapture(QObject*)", t11761<QWindowCapture>, P11761, 1, 0, 0, QTC_T_OBJ, "QWindowCapture"},
+    {"QWindowCapture", "QWindowCapture(QObject*)", t11919<QWindowCapture>, P11919, 1, 0, 0, QTC_T_OBJ, "QWindowCapture"},
     {nullptr, nullptr, nullptr, nullptr, 0, 0, 0, 0, nullptr}};
 #endif
 static const qtc::ClassDef CLASSES[] = {
