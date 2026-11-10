@@ -875,6 +875,7 @@ template <class S> static int t11303(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
+    if (!((p0.get()) >= 0 && (p0.get()) <= 1024)) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QAudioFormat::setChannelCount(int): channel count must lie in [0, 1024]");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setChannelCount(p0.get()); }) { s->setChannelCount(p0.get()); r->set_none(); return 0; }
@@ -8721,6 +8722,8 @@ template <class S> static int t11895(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
+    if (!(qtc::buffer_seek_ok(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_LIMIT, "QWaveDecoder::seek(qint64): seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)");
+    if (!(qtc::buffer_seek_ok(s->getDevice(), (p0.get())))) return qtc::pre_fail(QTC_ERR_LIMIT, "QWaveDecoder::seek(qint64): seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->seek(p0.get())); }) { qtc::rt(*r, s->seek(p0.get())); return 0; }

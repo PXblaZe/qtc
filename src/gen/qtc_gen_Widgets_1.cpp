@@ -6636,6 +6636,7 @@ template <class S> static int t6664(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QStyle *> p0;
     QTC_CV(0, p0);
     if (!(qtc::free_for(s, (p0.get())) && ((p0.get()) == nullptr || ((p0.get())->parent() == nullptr && qtc::style_unshared((p0.get())))))) return qtc::pre_fail(QTC_ERR_STATE, "QGraphicsScene::setStyle(QStyle*): the style belongs to something else, or widgets use it");
+    if (!(qtc::scene_style_swappable(s))) return qtc::pre_fail(QTC_ERR_STATE, "QGraphicsScene::setStyle(QStyle*): the scene's own style is in use by the widgets in its proxy widgets, and Qt deletes it before they let go of it: set the scene's style before adding proxy widgets, or remove them first");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QStyle *> &p0) { qtc::cv(aa[0], p0, 0); s->setStyle(p0.get()); }) { s->setStyle(p0.get()); r->set_none(); return 0; }

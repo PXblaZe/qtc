@@ -1524,6 +1524,7 @@ template <class S> static int t13695(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QOAuth1::SignatureMethod> p0;
     QTC_CVE(0, p0, 398);
+    if (!((p0.get()) == QOAuth1::SignatureMethod::Hmac_Sha1 || (p0.get()) == QOAuth1::SignatureMethod::PlainText)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QOAuth1::setSignatureMethod(QOAuth1::SignatureMethod): only HMAC-SHA1 and PLAINTEXT are supported (Qt aborts on RSA-SHA1)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QOAuth1::SignatureMethod> &p0) { qtc::cve(aa[0], p0, 0, 398); s->setSignatureMethod(p0.get()); }) { s->setSignatureMethod(p0.get()); r->set_none(); return 0; }

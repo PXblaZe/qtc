@@ -16,6 +16,20 @@
   `QCoapMessage::optionAt` past the options, `QAbstractOAuth2::post`/`put` with a
   null multipart and `QAbstractOAuthReplyHandler::networkReplyFinished` with a
   null reply are refused now.
+- More crashes the method fuzzer found: `QOAuth1::setSignatureMethod` with
+  RSA-SHA1 (Qt aborts on the next request); `QMqttClient::setTransport` with a
+  null device or one that does not suit the transport type, `setState` (the
+  state follows the connection), and `connectToHostWebSocket*` with a websocket
+  qtc could not keep alive; destroying an MQTT client's transport or an OAuth
+  object's built-in reply handler while their owner lives (now refused);
+  `QWidget::scroll` with offsets past QWIDGETSIZE_MAX; `QWidget::grab` with one
+  negative size and a top left far outside (Qt grabs to the widget's bottom right
+  and paints into a pixmap it could not allocate) or with an empty rectangle
+  that is not a null one on a widget with a graphics effect (the crash 1.0.0
+  listed as unexplained); a `QBuffer` grown past the allocation limit by seeking
+  through `QIODevice::seek` or `QWaveDecoder::seek`; `QAudioFormat` channel
+  counts past what it stores; `QGraphicsScene::setStyle` while proxy widgets use
+  the scene's own style (Qt deletes it under them).
 - Calls to meta-object methods with `QVariant` parameters (every untyped QML
   function parameter) passed a value stored outside its variant (types over 24
   bytes, such as `QRectF` or `QTransform`) as the address of the value, which the

@@ -575,6 +575,9 @@ int64_t alloc_limit();   // bytes, see qtc_set_alloc_limit
 inline bool in(int64_t v, int64_t lo, int64_t hi) { return v >= lo && v <= hi; }
 // count elements of elem bytes fit in the allocation limit
 inline bool alloc_ok(int64_t count, int64_t elem) { return count <= 0 || (elem > 0 && count <= alloc_limit() / elem); }
+// a QBuffer seeked past its end grows to the position (Qt fills the gap with zeros): such a seek
+// stays within the allocation limit; other devices are left to Qt
+bool buffer_seek_ok(const QObject *device, int64_t pos);
 
 // The number of elements: the first of size(), count(), elementCount() and length() that counts
 // (QPainterPath::length() is the path's length in pixels, QRect::size() is a QSize).
@@ -623,6 +626,9 @@ inline bool std_columns_ok(int64_t rows, int64_t cols_after) {
 bool fd_open(int64_t fd);
 // no widget uses the style through QWidget::setStyle
 bool style_unshared(const QObject *style);
+// QGraphicsScene::setStyle deletes the scene's own style before the widgets of its proxy widgets
+// let go of it: false while it has a style of its own and proxy widgets
+bool scene_style_swappable(const QObject *scene);
 // play() and stop() of a spatial-audio sound note whether it plays; pause() needs it to
 bool note_sound(QObject *sound, bool playing);   // always true
 bool sound_playing(const QObject *sound);

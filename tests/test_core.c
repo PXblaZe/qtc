@@ -2105,6 +2105,122 @@ static void test_fuzz_findings(void) {
         qtc_destroy(area);
         qtc_destroy(upper);
     }
+    /* scrolling by offsets past any widget size overflowed the backing store's arithmetic */
+    {
+        qtc_obj sw = make("QWidget");
+        qtc_arg_int(INT32_MIN);
+        qtc_arg_int(INT32_MIN);
+        CHECK_EQ(qtc_call(sw, S("scroll")), QTC_ERR_OUT_OF_RANGE);
+        qtc_arg_int(5);
+        qtc_arg_int(-5);
+        CHECK_EQ(qtc_call(sw, S("scroll")), QTC_OK);
+        /* grab() with one negative size grabs from the given top left to the widget's bottom
+           right in both directions: here 10^8 pixels wide, which Qt cannot allocate (and then
+           paints into the null pixmap) */
+        qtc_arg_int(-100000000);
+        qtc_arg_int(0);
+        qtc_arg_int(10);
+        qtc_arg_int(-1);
+        qtc_val gr = qtc_val_new(S("QRect"));
+        qtc_arg_val(gr);
+        CHECK_EQ(qtc_call(sw, S("grab")), QTC_ERR_LIMIT);
+        qtc_val_free(gr);
+        /* an empty rectangle that is not a null one still "intersects" the widget, and a graphics
+           effect then draws into the null pixmap */
+        qtc_obj eff = make("QGraphicsOpacityEffect");
+        qtc_arg_obj(eff);
+        CHECK_EQ(qtc_call(sw, S("setGraphicsEffect")), QTC_OK);
+        qtc_arg_int(0);
+        qtc_arg_int(1);
+        qtc_arg_int(2);
+        qtc_arg_int(0);
+        gr = qtc_val_new(S("QRect"));
+        qtc_arg_val(gr);
+        CHECK_EQ(qtc_call(sw, S("grab")), QTC_ERR_BAD_ARGS);
+        qtc_val_free(gr);
+        qtc_arg_int(0);
+        qtc_arg_int(0);
+        qtc_arg_int(8);
+        qtc_arg_int(8);
+        gr = qtc_val_new(S("QRect"));
+        qtc_arg_val(gr);
+        CHECK_EQ(qtc_call(sw, S("grab")), QTC_OK);
+        qtc_val_free(gr);
+        qtc_destroy(sw);
+    }
+    /* a scene's own style is deleted before the widgets in its proxy widgets let go of it */
+    {
+        qtc_obj scene = make("QGraphicsScene");
+        qtc_obj cst = make("QCommonStyle");
+        qtc_arg_obj(cst);
+        CHECK_EQ(qtc_call(scene, S("setStyle")), QTC_OK);
+        qtc_arg_null();
+        CHECK_EQ(qtc_call(scene, S("setStyle")), QTC_OK);   /* no proxy widgets: fine */
+        CHECK(!qtc_alive(cst));   /* the scene deleted its old style */
+        cst = make("QCommonStyle");
+        qtc_arg_obj(cst);
+        CHECK_EQ(qtc_call(scene, S("setStyle")), QTC_OK);
+        qtc_obj pb = make("QPushButton");
+        qtc_arg_obj(pb);
+        CHECK_EQ(qtc_call(scene, S("addWidget")), QTC_OK);
+        qtc_arg_null();
+        CHECK_EQ(qtc_call(scene, S("setStyle")), QTC_ERR_STATE);
+        CHECK(qtc_alive(cst));
+        qtc_destroy(scene);
+        qtc_process_events();
+    }
+    /* the channel count is a short inside QAudioFormat (negative frame sizes then divide) */
+    {
+        qtc_val af = qtc_val_new(S("QAudioFormat"));
+        if (af) {
+            qtc_arg_int(40000);
+            CHECK_EQ(qtc_call(af, S("setChannelCount")), QTC_ERR_OUT_OF_RANGE);
+            qtc_arg_int(2);
+            CHECK_EQ(qtc_call(af, S("setChannelCount")), QTC_OK);
+            qtc_val_free(af);
+        }
+        qtc_clear_error();
+    }
+    /* GPL-3.0-only add-ons, when built: an MQTT client's transport and an OAuth object's built-in
+       reply handler stay as long as their owner; transports must suit their type */
+    {
+        qtc_obj mq = make("QMqttClient");
+        if (mq) {
+            qtc_obj buf = make("QBuffer");
+            qtc_arg_obj(buf);
+            qtc_arg_int(1);   /* AbstractSocket */
+            CHECK_EQ(qtc_call(mq, S("setTransport")), QTC_ERR_BAD_ARGS);
+            qtc_arg_null();
+            qtc_arg_int(0);
+            CHECK_EQ(qtc_call(mq, S("setTransport")), QTC_ERR_BAD_ARGS);
+            qtc_arg_obj(buf);
+            qtc_arg_int(0);   /* IODevice */
+            CHECK_EQ(qtc_call(mq, S("setTransport")), QTC_OK);
+            CHECK_EQ(qtc_destroy(buf), QTC_ERR_STATE);
+            CHECK_EQ(qtc_set_int(mq, S("state"), 2), QTC_ERR_STATE);   /* Connected */
+            qtc_obj ws = make("QWebSocket");
+            if (ws) {
+                qtc_arg_obj(ws);
+                CHECK_EQ(qtc_call(mq, S("connectToHostWebSocket")), QTC_ERR_BAD_ARGS);
+                qtc_destroy(ws);
+            }
+            qtc_destroy(mq);
+            qtc_process_events();
+            CHECK_EQ(qtc_destroy(buf), QTC_OK);
+        }
+        qtc_obj oa = make("QOAuth1");
+        if (oa) {
+            CHECK_EQ(qtc_call(oa, S("replyHandler")), QTC_OK);
+            qtc_obj rh = qtc_ret_obj();
+            CHECK(rh != 0);
+            CHECK_EQ(qtc_destroy(rh), QTC_ERR_STATE);
+            qtc_arg_int(1);   /* Rsa_Sha1: Qt aborts on it */
+            CHECK_EQ(qtc_call(oa, S("setSignatureMethod")), QTC_ERR_BAD_ARGS);
+            qtc_destroy(oa);
+        }
+        qtc_process_events();
+        qtc_clear_error();
+    }
     qtc_destroy(sub);
     qtc_destroy(loose);
     qtc_destroy(mb);

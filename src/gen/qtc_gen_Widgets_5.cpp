@@ -2633,6 +2633,7 @@ template <class S> static int t8596(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QRect> p0;
     if (n > 0) QTC_CV(0, p0);
     if (!(qtc::grab_ok(s, (n > 0 ? static_cast<decltype(QRect(QPoint(0, 0), QSize(-1, -1)))>(p0.get()) : (QRect(QPoint(0, 0), QSize(-1, -1))))))) return qtc::pre_fail(QTC_ERR_LIMIT, "QWidget::grab(QRect): the image would exceed the allocation limit (qtc_set_alloc_limit)");
+    if (n > 0 && !((p0.get()).isNull() || (p0.get()).width() < 0 || (p0.get()).height() < 0 || !(p0.get()).isEmpty())) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QWidget::grab(QRect): the rectangle is empty (zero width or height): pass a null rectangle or one with an area");
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->grab()); }) { qtc::rt(*r, s->grab()); return 0; }
@@ -4309,6 +4310,7 @@ template <class S> static int t8719(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p1;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
+    if (!((p0.get()) >= -QWIDGETSIZE_MAX && (p0.get()) <= QWIDGETSIZE_MAX && (p1.get()) >= -QWIDGETSIZE_MAX && (p1.get()) <= QWIDGETSIZE_MAX)) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QWidget::scroll(int,int): dx and dy must lie in [-16777215, 16777215] (QWIDGETSIZE_MAX)");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->scroll(p0.get(), p1.get()); }) { s->scroll(p0.get(), p1.get()); r->set_none(); return 0; }
@@ -4327,6 +4329,7 @@ template <class S> static int t8720(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     QTC_CV(1, p1);
     QTC_CV(2, p2);
+    if (!((p0.get()) >= -QWIDGETSIZE_MAX && (p0.get()) <= QWIDGETSIZE_MAX && (p1.get()) >= -QWIDGETSIZE_MAX && (p1.get()) <= QWIDGETSIZE_MAX)) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QWidget::scroll(int,int,QRect): dx and dy must lie in [-16777215, 16777215] (QWIDGETSIZE_MAX)");
     switch (n) {
         case 3:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1, qtc::H<QRect> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); s->scroll(p0.get(), p1.get(), p2.get()); }) { s->scroll(p0.get(), p1.get(), p2.get()); r->set_none(); return 0; }

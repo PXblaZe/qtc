@@ -261,25 +261,37 @@ ones:
   the arguments to `qtc_init_argv` instead.
 - `QObjectCleanupHandler` is not bound: it deletes what it holds whoever else owns
   it, and crashes when what it holds comes to contain it.
+- `QWidget::grab` with an empty rectangle that is not a null one (zero width or
+  height, as `QRect(0, 1, 2, 0)`): Qt paints into a null pixmap.
+- `QGraphicsScene::setStyle` while the scene has a style of its own and proxy
+  widgets: Qt deletes the old style before the embedded widgets let go of it. Set
+  the scene's style before adding proxy widgets.
+- GPL-3.0-only add-ons: `QOAuth1::setSignatureMethod(Rsa_Sha1)` (Qt aborts on
+  the next request); `QMqttClient::setState` (the state follows the connection);
+  `QMqttClient::setTransport` with a device that does not suit the transport type
+  (any QIODevice for `IODevice`, a QTcpSocket for `AbstractSocket`, a QSslSocket
+  for `SecureSocket`; the websocket types only through `connectToHostWebSocket`);
+  `connectToHostWebSocket*` with a websocket of the program's (the client keeps
+  it by a pointer qtc cannot see: pass none and the client makes its own). An MQTT
+  client's transport and an OAuth object's built-in reply handler cannot be
+  destroyed before their owner.
 - Some refusals depend on the Qt version: crashes fixed in later releases are
   refused only on the releases that have them.
 
 ## Known open failures
 
 Every failure the last fuzz rounds found is fixed in this release (see
-[TESTING.md](TESTING.md#results)). Two failures from earlier rounds are not
-explained:
+[TESTING.md](TESTING.md#results)). The crash while painting through a graphics
+effect that 1.0.0 listed here as unexplained is explained and fixed:
+`QWidget::grab` with an empty rectangle that is not a null one (`QRect(0, 1, 2,
+0)`) paints into a null pixmap, which crashes where a graphics effect draws.
+One failure from earlier rounds is still not explained:
 
-- **A crash while painting, seen once.** In one random order of an earlier round,
-  painting a window while queued events were delivered crashed in Qt's
-  graphics-effect path, with no paint engine. Replaying the same calls did not
-  crash again, and no round since has met it. It may depend on timing, or on
-  memory corruption elsewhere that a later fix removed; it is not known which.
 - **A hang after `QIODevice::readChannelFinished` was emitted by hand on a
   `QBuffer`, seen once.** That buffer was the device of a `QNmeaSatelliteInfoSource`,
   so it was most likely the NMEA reader looping on a buffer opened without
-  reading, which this release refuses (see above); it was not reduced to its
-  calls to make sure, and no round since has met it.
+  reading, which qtc refuses since 1.0.0; it was not reduced to its calls to make
+  sure, and no round since has met it.
 
 ## Graphics
 

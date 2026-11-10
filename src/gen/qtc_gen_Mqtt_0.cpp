@@ -140,6 +140,7 @@ template <class S> static int t13849(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     QTC_CVE(1, p1, 370);
     if (!(qtc::not_held(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QMqttClient::setTransport(QIODevice*,QMqttClient::TransportType): the argument is held by another object (a check box, header, viewport, ...); take it from there first");
+    if (!((p0.get()) != nullptr && ((p1.get()) == QMqttClient::IODevice || ((p1.get()) == QMqttClient::AbstractSocket && (p0.get())->inherits("QTcpSocket")) || ((p1.get()) == QMqttClient::SecureSocket && (p0.get())->inherits("QSslSocket"))))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QMqttClient::setTransport(QIODevice*,QMqttClient::TransportType): the device must not be null and must suit the transport type: any QIODevice for IODevice, a QTcpSocket for AbstractSocket, a QSslSocket for SecureSocket (websockets: connectToHostWebSocket)");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QIODevice *> &p0, qtc::H<QMqttClient::TransportType> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 370); s->setTransport(p0.get(), p1.get()); }) { s->setTransport(p0.get(), p1.get()); r->set_none(); return 0; }
@@ -394,6 +395,7 @@ template <class S> static int t13865(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QWebSocket *> p0;
     if (n > 0) QTC_CV(0, p0);
+    if (n > 0 && !((p0.get()) == nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QMqttClient::connectToHostWebSocket(QWebSocket*): pass no websocket: the client then makes its own (one passed in could be destroyed under it)");
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->connectToHostWebSocket(); }) { s->connectToHostWebSocket(); r->set_none(); return 0; }
@@ -411,6 +413,7 @@ template <class S> static int t13866(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QWebSocket *> p0;
     if (n > 0) QTC_CV(0, p0);
+    if (n > 0 && !((p0.get()) == nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QMqttClient::connectToHostWebSocketEncrypted(QWebSocket*): pass no websocket: the client then makes its own (one passed in could be destroyed under it)");
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->connectToHostWebSocketEncrypted(); }) { s->connectToHostWebSocketEncrypted(); r->set_none(); return 0; }
@@ -1045,6 +1048,7 @@ template <class S> static int t13913(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QMqttClient::ClientState> p0;
     QTC_CVE(0, p0, 368);
+    if (!((p0.get()) == s->state())) return qtc::pre_fail(QTC_ERR_STATE, "QMqttClient::setState(QMqttClient::ClientState): the state follows the connection: use connectToHost and disconnectFromHost");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QMqttClient::ClientState> &p0) { qtc::cve(aa[0], p0, 0, 368); s->setState(p0.get()); }) { s->setState(p0.get()); r->set_none(); return 0; }

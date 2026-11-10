@@ -427,6 +427,11 @@ TABLE = [
     ("QGraphicsScene", r"setStyle", None,
      "qtc::free_for({s}, {0}) && ({0} == nullptr || ({0}->parent() == nullptr && qtc::style_unshared({0})))", STATE,
      "the style belongs to something else, or widgets use it"),
+    # Qt deletes the scene's own style first and then tells its proxy widgets, whose widgets still
+    # use it (QGraphicsScene::setStyle): a use after free
+    ("QGraphicsScene", r"setStyle", None, "qtc::scene_style_swappable({s})", STATE,
+     "the scene's own style is in use by the widgets in its proxy widgets, and Qt deletes it before they "
+     "let go of it: set the scene's style before adding proxy widgets, or remove them first"),
     ("QApplication", r"setStyle", r"QStyle\s*\*",
      "qtc::free_for(nullptr, {0}) && ({0} == nullptr || ({0}->parent() == nullptr && qtc::style_unshared({0})))",
      STATE, "the style belongs to something else, or widgets use it"),
@@ -438,7 +443,12 @@ TABLE = [
      STATE, "the style belongs to something else (this proxy's base already, another proxy), or widgets use it"),
     # writing past the end fills the gap with zeros: the buffer grows to the position, so the
     # position is what is limited (seeking a little further each time grew it without bound)
-    ("QBuffer", r"seek", None, "{0} <= {s}->size() || qtc::alloc_ok({0}, 1)", LIMIT,
+    # (QIODevice::seek called on a buffer, and the classes that seek a device they are given)
+    ("QIODevice+", r"seek", None, "qtc::buffer_seek_ok({s}, {0})", LIMIT,
+     "seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)"),
+    ("QWaveDecoder", r"seek", None, "qtc::buffer_seek_ok({s}->getDevice(), {0})", LIMIT,
+     "seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)"),
+    ("QTextStream", r"seek", None, "qtc::buffer_seek_ok({s}->device(), {0})", LIMIT,
      "seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)"),
     ("QString", r"split", r"(QString|QChar)(,.*)?", "qtc::split_ok(*{s}, QString({0}), {2|Qt::CaseSensitive})", LIMIT,
      "the result would have too many parts"),
@@ -657,6 +667,10 @@ TABLE = [
     ("QIcon", r"pixmap", r"QWindow\*,QSize(,.*)?",
      "qtc::pixels_ok({1}.width() * qtc::app_dpr(), {1}.height() * qtc::app_dpr(), 4)", LIMIT, "the image would exceed the allocation limit (qtc_set_alloc_limit)"),
     ("QWidget", r"grab", None, "qtc::grab_ok({s}, {0|QRect(QPoint(0, 0), QSize(-1, -1))})", LIMIT, "the image would exceed the allocation limit (qtc_set_alloc_limit)"),
+    # an empty rectangle that is not a null one (QRect(0, 1, 2, 0)) still "intersects" the widget:
+    # Qt paints into the null pixmap, which crashes where a graphics effect draws its source
+    ("QWidget", r"grab", None, "{0}.isNull() || {0}.width() < 0 || {0}.height() < 0 || !{0}.isEmpty()", BAD,
+     "the rectangle is empty (zero width or height): pass a null rectangle or one with an area"),
     ("QQuickWindow", r"grabWindow", None,
      "qtc::pixels_ok(double({s}->width()) * {s}->devicePixelRatio(), double({s}->height()) * {s}->devicePixelRatio(), 4)",
      LIMIT, "the image would exceed the allocation limit (qtc_set_alloc_limit)"),
@@ -830,6 +844,15 @@ TABLE = [
     ("QAmbientSound|QSpatialSound", r"stop", None, "qtc::note_sound({s}, false)", STATE, "-"),
     ("QAmbientSound|QSpatialSound", r"pause", None, "qtc::sound_playing({s})", STATE,
      "the sound is not playing: call play() first (Qt aborts on pause() before play() or after stop())"),
+    # the channel count is kept in a short: past 32767 it turns negative, and framesForBytes then
+    # divides by a negative frame size (INT_MIN / -1 traps)
+    ("QAudioFormat", r"setChannelCount", None, "{0} >= 0 && {0} <= 1024", OOR,
+     "channel count must lie in [0, 1024]"),
+    # the backing store moves its pixels by the offset without checking it: offsets past any
+    # widget size overflow the rectangle arithmetic and copy out of the image
+    ("QWidget", r"scroll", None,
+     "{0} >= -QWIDGETSIZE_MAX && {0} <= QWIDGETSIZE_MAX && {1} >= -QWIDGETSIZE_MAX && {1} <= QWIDGETSIZE_MAX", OOR,
+     "dx and dy must lie in [-16777215, 16777215] (QWIDGETSIZE_MAX)"),
     # ---------------------------------------------------------------- network add-ons (GPL-3.0-only)
     ("QAbstractOAuth2", r"post|put", r"QUrl,QHttpMultiPart\*", "{1} != nullptr", BAD, "the multipart is null"),
     ("QAbstractOAuthReplyHandler", r"networkReplyFinished", None, "{0} != nullptr", BAD, "the reply is null"),
@@ -842,6 +865,24 @@ TABLE = [
      "the request has no data (a default-constructed request): requests come from QHttpServer"),
     ("QCoapMessage", r"optionAt", None, "{0} >= 0 && {0} < {s}->optionCount()", OOR,
      "index must lie in [0, optionCount())"),
+    # RSA-SHA1 and values outside the enum abort (qFatal) on the first signed request
+    ("QOAuth1", r"setSignatureMethod", None,
+     "{0} == QOAuth1::SignatureMethod::Hmac_Sha1 || {0} == QOAuth1::SignatureMethod::PlainText", BAD,
+     "only HMAC-SHA1 and PLAINTEXT are supported (Qt aborts on RSA-SHA1)"),
+    # the client casts its transport to the type named without checking: a device of another
+    # type, or the websocket types (whose device class is private), crash on connectToHost
+    ("QMqttClient", r"setTransport", None,
+     "{0} != nullptr && ({1} == QMqttClient::IODevice || ({1} == QMqttClient::AbstractSocket && "
+     "{0}->inherits(\"QTcpSocket\")) || ({1} == QMqttClient::SecureSocket && {0}->inherits(\"QSslSocket\")))", BAD,
+     "the device must not be null and must suit the transport type: any QIODevice for IODevice, a QTcpSocket "
+     "for AbstractSocket, a QSslSocket for SecureSocket (websockets: connectToHostWebSocket)"),
+    # the state follows the connection; a client set to Connected writes to a transport it has not
+    # made yet
+    ("QMqttClient", r"setState", None, "{0} == {s}->state()", STATE,
+     "the state follows the connection: use connectToHost and disconnectFromHost"),
+    # the client keeps a websocket handed to it by a plain pointer qtc cannot see: it makes its own
+    ("QMqttClient", r"connectToHostWebSocket(Encrypted)?", None, "{0} == nullptr", BAD,
+     "pass no websocket: the client then makes its own (one passed in could be destroyed under it)"),
 ]
 
 # Pointer parameters that must not be null: "Class::method" -> parameter indexes (None: every object parameter

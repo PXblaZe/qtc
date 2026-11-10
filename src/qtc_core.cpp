@@ -3,6 +3,7 @@
 #include "qtc_events.h"
 #include "qtc_override.h"
 
+#include <QtCore/QBuffer>
 #include <QtCore/QAbstractProxyModel>
 #include <cmath>
 #include <QtCore/QConcatenateTablesProxyModel>
@@ -2653,6 +2654,11 @@ bool grid_cells_ok(const QObject *layout, int64_t rows, int64_t cols) {
 // Images. Qt checks an image's size only for overflow: a large one is allocated, then touched
 // (filled, painted, converted) and the system kills the process. These keep each image a call
 // makes within the allocation limit.
+bool buffer_seek_ok(const QObject *device, int64_t pos) {
+    auto *b = qobject_cast<const QBuffer *>(device);
+    return !b || pos <= b->size() || alloc_ok(pos, 1);
+}
+
 bool pixels_ok(double w, double h, double bytes_per_pixel) {
     if (std::isnan(w) || std::isnan(h) || std::isinf(w) || std::isinf(h)) return false;
     if (!(w > 0 && h > 0)) return true;   // Qt makes a null image
@@ -2697,8 +2703,20 @@ bool qwindow_show_ok(const QWindow *w) {
 
 #ifdef QTC_HAS_WIDGETS
 bool grab_ok(const QWidget *w, const QRect &r) {
-    const double gw = r.width() < 0 ? double(w->width()) - r.x() : r.width();
-    const double gh = r.height() < 0 ? double(w->height()) - r.y() : r.height();
+    double gw = r.width(), gh = r.height();
+    if (r.width() < 0 || r.height() < 0) {
+        // Qt lays the widget out first (an unshown window takes its size hint) and then grabs
+        // from the given top left to the widget's bottom right, in both directions: estimate
+        // the widget's size from above
+        const QWidget *top = w->window();
+        const double ew = std::max({w->width(), w->minimumWidth(), w->sizeHint().width(), top->width(),
+                                    top->minimumWidth(), top->sizeHint().width()});
+        const double eh = std::max({w->height(), w->minimumHeight(), w->sizeHint().height(), top->height(),
+                                    top->minimumHeight(), top->sizeHint().height()});
+        gw = ew - r.x();
+        gh = eh - r.y();
+        if (gw <= 0 || gh <= 0) return true;   // nothing to grab
+    }
     const double dpr = std::max(1.0, w->devicePixelRatioF());
     return pixels_ok(gw * dpr, gh * dpr, 4);
 }

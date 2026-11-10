@@ -15,7 +15,8 @@
 //    asked first: a QRestAccessManager's network manager, the engine of spatial sounds
 //    and listeners, the device of a QWaveDecoder or an NMEA source, the window of a
 //    QQuickRenderControl, the network manager of a QQmlEngine, the video sink of a
-//    video widget. The object cannot be destroyed before its user.
+//    video widget, the transport of an MQTT client, the built-in reply handler of an
+//    OAuth object. The object cannot be destroyed before its user.
 //
 // 3. Owners that can let go do so through their own API, then the object is deleted:
 //    a scroll area's viewport, corner widget and scroll bars, table and tree headers, a
@@ -186,6 +187,13 @@
 #include <QtCharts/QPieSeries>
 #include <QtCharts/QPieSlice>
 #endif
+#ifdef QTC_HAS_MODULE_Mqtt
+#include <QtMqtt/QMqttClient>
+#endif
+#ifdef QTC_HAS_MODULE_NetworkAuth
+#include <QtNetworkAuth/QAbstractOAuth>
+#include <QtNetworkAuth/QAbstractOAuthReplyHandler>
+#endif
 #ifdef QTC_HAS_MODULE_WebSockets
 #include <QtWebSockets/QMaskGenerator>
 #include <QtWebSockets/QWebSocket>
@@ -206,6 +214,7 @@ enum OwnerKind : uint64_t {
     OK_SPATIAL = 1ull << 24, OK_CHARTSERIES = 1ull << 25, OK_AREA = 1ull << 26, OK_GEO = 1ull << 27,
     OK_NMEA = 1ull << 28, OK_WEBSOCKET = 1ull << 29, OK_QMLCOMPONENT = 1ull << 30, OK_CHARTMAPPER = 1ull << 31,
     OK_FOCUSFRAME = 1ull << 32, OK_WINDOWCONTAINER = 1ull << 33, OK_BUTTONBOX = 1ull << 34,
+    OK_MQTT = 1ull << 35, OK_OAUTH = 1ull << 36,
 };
 
 struct Owner {
@@ -339,6 +348,12 @@ uint64_t kinds_of(QObject *o) {
 #endif
 #ifdef QTC_HAS_MODULE_WebSockets
     if (qobject_cast<QWebSocket *>(o)) k |= OK_WEBSOCKET;
+#endif
+#ifdef QTC_HAS_MODULE_Mqtt
+    if (qobject_cast<QMqttClient *>(o)) k |= OK_MQTT;
+#endif
+#ifdef QTC_HAS_MODULE_NetworkAuth
+    if (qobject_cast<QAbstractOAuth *>(o)) k |= OK_OAUTH;
 #endif
     return k;
 }
@@ -644,6 +659,26 @@ int visit(QObject *owner, uint64_t kinds, QObject *victim, bool release, QList<Q
         auto *w = static_cast<QWebSocket *>(owner);
         const QObject *g = w->maskGenerator();
         if (hit(g) && held()) w->setMaskGenerator(nullptr);
+    }
+#endif
+#ifdef QTC_HAS_MODULE_Mqtt
+    if (kinds & OK_MQTT) {
+        // the client keeps its transport by a plain pointer (setTransport, or a socket of its own
+        // that it deletes itself), and letting go of it (setTransport(nullptr)) crashes: the
+        // transport goes with the client
+        if (hit(static_cast<QMqttClient *>(owner)->transport())) pin();
+    }
+#endif
+#ifdef QTC_HAS_MODULE_NetworkAuth
+    if (kinds & OK_OAUTH) {
+        // the built-in reply handler (what replyHandler() returns when none was set) belongs to
+        // the OAuth object, which deletes it; one set with setReplyHandler is watched and may go
+        auto *a = static_cast<QAbstractOAuth *>(owner);
+        QAbstractOAuthReplyHandler *cur = a->replyHandler();
+        a->setReplyHandler(nullptr);
+        QAbstractOAuthReplyHandler *def = a->replyHandler();
+        if (cur != def) a->setReplyHandler(cur);
+        if (hit(def)) pin();
     }
 #endif
     return st;
@@ -1042,6 +1077,21 @@ bool style_unshared(const QObject *style) {
         if (w) return false;
 #else
     (void)style;
+#endif
+    return true;
+}
+
+bool scene_style_swappable(const QObject *scene) {
+#ifdef QTC_HAS_WIDGETS
+    auto *s = qobject_cast<const QGraphicsScene *>(scene);
+    if (!s) return true;
+    const QStyle *own = s->style();
+    if (!own || own->parent() != s) return true;   // nothing of its own to delete
+    const QList<QGraphicsItem *> items = s->items();
+    for (const QGraphicsItem *i : items)
+        if (i->isWidget() && static_cast<const QGraphicsWidget *>(i)->inherits("QGraphicsProxyWidget")) return false;
+#else
+    (void)scene;
 #endif
     return true;
 }

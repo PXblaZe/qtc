@@ -5287,6 +5287,7 @@ template <class S> static int t943(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
+    if (!(qtc::buffer_seek_ok(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_LIMIT, "QFileDevice::seek(qint64): seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->seek(p0.get())); }) { qtc::rt(*r, s->seek(p0.get())); return 0; }
@@ -6744,6 +6745,7 @@ template <class S> static int t1055(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<long long> p0;
     QTC_CV(0, p0);
+    if (!(qtc::buffer_seek_ok(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_LIMIT, "QIODevice::seek(qint64): seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<long long> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->seek(p0.get())); }) { qtc::rt(*r, s->seek(p0.get())); return 0; }
