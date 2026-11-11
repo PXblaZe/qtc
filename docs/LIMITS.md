@@ -301,7 +301,8 @@ ones:
   `connectToHostWebSocket*` with a websocket of the program's (the client keeps
   it by a pointer qtc cannot see: pass none and the client makes its own). An MQTT
   client's transport and an OAuth object's built-in reply handler cannot be
-  destroyed before their owner.
+  destroyed before their owner, nor a CoAP reply before it has finished (abort
+  it first).
 - Some refusals depend on the Qt version: crashes fixed in later releases are
   refused only on the releases that have them.
 

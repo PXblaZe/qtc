@@ -191,6 +191,9 @@
 #ifdef QTC_HAS_MODULE_Mqtt
 #include <QtMqtt/QMqttClient>
 #endif
+#ifdef QTC_HAS_MODULE_Coap
+#include <QtCoap/QCoapReply>
+#endif
 #ifdef QTC_HAS_MODULE_NetworkAuth
 #include <QtNetworkAuth/QAbstractOAuth>
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
@@ -802,6 +805,12 @@ QString qt_owned(QObject *x) {
     }
     if (qobject_cast<QAbstractEventDispatcher *>(x)) return QStringLiteral("the event dispatcher of a thread");
     if (qobject_cast<QThreadPool *>(x) && x == QThreadPool::globalInstance()) return QStringLiteral("Qt's global thread pool");
+#ifdef QTC_HAS_MODULE_Coap
+    // the client's protocol object, on a thread of its own, keeps a running reply by a plain pointer
+    if (auto *r = qobject_cast<QCoapReply *>(x); r && !r->isFinished())
+        return QStringLiteral("a CoAP reply still running (the client's protocol thread uses it); abort() it, "
+                              "and destroy it once it has finished");
+#endif
 #ifdef QTC_HAS_GUI
     if (qobject_cast<QScreen *>(x)) return QStringLiteral("a screen (screens belong to the windowing system)");
     if (qobject_cast<QStyleHints *>(x)) return QStringLiteral("the application's style hints");

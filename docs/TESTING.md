@@ -86,77 +86,85 @@ For the sanitizers, configure with `-DQTC_SANITIZE=address,undefined`.
 
 ## Results
 
-The last runs, on Qt 6.12.0 (Linux x86-64, GCC 13, two cores). The test suites ran on the release as shipped; the final fuzz rounds ran on it before its last fix (the `QMenu::actionAt` one below).
+The last runs, on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
+modules built in so that they are tested too. The graphics suites ran with Mesa's llvmpipe
+(OpenGL) and lavapipe (Vulkan, with the Khronos validation layers under the sanitizers).
 
 | suite | release build | ASan + UBSan build |
 |---|---|---|
-| `test_core` | 861 checks pass | 861 checks pass |
-| `ctest -LE slow` (core, app, sweep, stress, five examples) | 9 of 9 pass | 9 of 9 pass |
-| goose-qt tests (`test/run.sh`, JIT and native) | 13 of 13 pass (examples: 9 of 9) | not run |
+| `test_core` | 1,010 checks pass | 1,010 checks pass |
+| `test_app` | 32 pass | 32 pass |
+| `test_concurrent` | 1,696 pass | 1,696 pass |
+| `test_override` | 221 pass | 221 pass |
+| `test_class` | 160 pass | 160 pass |
+| `test_rhi` offscreen / under Xvfb | 459 / 1,175 pass | 459 / 1,175 pass, no validation errors |
+| `fuzz_rhi` (OpenGL offscreen, Vulkan under Xvfb) | clean | clean |
+| `test_stress` | all pass | all pass |
+| `ctest` (all 18 tests, examples included) | 18 of 18 pass | not run as a whole |
+| goose-qt tests (`test/run.sh`, JIT and native) | 18 of 18 pass (examples: 11 of 11) | not run |
 
 The method fuzzer, release build:
 
 | run | items | calls | failures |
 |---|---:|---:|---:|
-| fixed order | 13,002 | 85,548 | 0 |
-| by name | 13,002 | 14,254 | 0 |
-| lifetime | 1,298 | 99,133 | 0 |
-| random orders, seeds 1–64 | 13,002 each | 10,355,880 | 1 (63 of 64 orders clean) |
+| fixed order | 13,617 | 89,514 | 0 |
+| by name | 13,617 | 14,915 | 0 |
+| lifetime | 1,348 | 100,439 | 0 |
+| random orders, seeds 1–128 | 13,617 each | 21,668,064 | 1 (127 of 128 orders clean) |
 
-Seeds 1–48 are orders earlier rounds ran (the failures they found are fixed since); 49–64 had
-never run. The one failure, in order 50, was `QMenu::actionAt` handing out an
-action `clear()` had just deleted (a hidden menu's cached rectangles outlive its actions). It is
-fixed in this release, with a test, and order 50 runs clean on it.
+The one failure is Qt's: order 3 calls `QCryptographicHash::supportsAlgorithm` several times,
+and the process then crashes at exit in OpenSSL's cleanup (see
+[LIMITS.md](LIMITS.md#known-open-failures); a four-line Qt program does the same). Every
+failure in qtc these rounds found is fixed, with a test, and the orders that found them run
+clean; the lifetime run found the last one (a CoAP reply destroyed while the client's
+protocol thread still used it), and it runs clean on the fix.
 
 Under AddressSanitizer and UndefinedBehaviorSanitizer:
 
 | run | items | calls | failures |
 |---|---:|---:|---:|
-| fixed order | 13,002 | 85,548 | 0 |
-| by name | 13,002 | 14,254 | 0 |
-| lifetime | 1,298 | 99,133 | 0 |
-| random orders, seeds 1–12 | 13,002 each | 1,941,894 | 1 (11 of 12 orders clean) |
-
-The one failure is the time limit, not a fault: order 12 splits a large string with a regular
-expression eight times, half a second each in the release build and ten times that under the
-sanitizers, past the 60-second limit. With a longer limit the order runs clean.
+| fixed order | 13,617 | 89,514 | 0 |
+| by name | 13,617 | 14,915 | 0 |
+| lifetime | 1,348 | 100,439 | 0 |
+| random orders, seeds 1, 2 and 4–13 | 13,617 each | 2,031,408 | 0 |
 
 `test_stress`, release build (the budget is what the test allows):
 
 | case | time | budget |
 |---|---:|---:|
 | 1,000,000 value handles created and freed | 58 ms | 4,000 ms |
-| 200,000 live values at once, then freed | 54 ms | 3,000 ms |
-| 100,000 QObjects created and destroyed | 200 ms | 8,000 ms |
-| widget tree 1,000 deep, destroyed from the root | 91 ms | 5,000 ms |
-| 1,000,000 emissions through a coalesced connection | 1,023 ms | 6,000 ms |
-| 200,000 queued signal events captured and polled | 139 ms | 6,000 ms |
-| 20,000 connections on one object, then disconnected | 130 ms | 4,000 ms |
-| 8 threads x 100,000 posts, consumed concurrently | 199 ms | 15,000 ms |
-| queue flood with a 1,000 event limit: drops counted, memory bounded | 117 ms | 3,000 ms |
-| 64 MB string through a property and back | 230 ms | 4,000 ms |
-| list value with 1,000,000 elements | 81 ms | 5,000 ms |
-| 100,000 items into a QListWidget through qtc_call | 119 ms | 8,000 ms |
-| drawing 200,000 commands onto a 1024x1024 image | 3,758 ms | 6,000 ms |
-| handles stay valid across 50 shutdown/init cycles | 343 ms | 30,000 ms |
+| 200,000 live values at once, then freed | 47 ms | 3,000 ms |
+| 100,000 QObjects created and destroyed | 174 ms | 8,000 ms |
+| widget tree 1,000 deep, destroyed from the root | 90 ms | 5,000 ms |
+| 1,000,000 emissions through a coalesced connection | 1,106 ms | 6,000 ms |
+| 200,000 queued signal events captured and polled | 111 ms | 6,000 ms |
+| 20,000 connections on one object, then disconnected | 113 ms | 4,000 ms |
+| 8 threads x 100,000 posts, consumed concurrently | 195 ms | 15,000 ms |
+| queue flood with a 1,000 event limit: drops counted, memory bounded | 112 ms | 3,000 ms |
+| 64 MB string through a property and back | 219 ms | 4,000 ms |
+| list value with 1,000,000 elements | 67 ms | 5,000 ms |
+| 100,000 items into a QListWidget through qtc_call | 108 ms | 8,000 ms |
+| drawing 200,000 commands onto a 1024x1024 image | 3,361 ms | 6,000 ms |
+| handles stay valid across 50 shutdown/init cycles | 277 ms | 30,000 ms |
 
-What a call costs (`tests/bench.cpp`, release build; "direct" is the same call in C++):
+What a call costs (`tests/bench.cpp`, release build, ns per operation; "direct" is the same call
+in C++):
 
 | operation                                      |       qtc |    direct |   ratio |
 |------------------------------------------------|-----------|-----------|---------|
-| QLabel::setText through a method call          |       337 |         7 |   48.6x |
-| QLabel::setText with a full signature          |       547 |         - |       - |
-| QLabel text through the property system        |       766 |        56 |   13.7x |
-| QSlider::setValue (int)                        |       343 |        30 |   11.4x |
-| QSlider::value() and read the result           |       215 |         2 |   89.3x |
-| QSlider value property get                     |       181 |        80 |    2.3x |
-| QLabel::text() returning a string              |       263 |        25 |   10.6x |
-| QComboBox::addItem, resolved among 3 overloads |       944 |       544 |    1.7x |
-| signal to C: emit, capture, poll (with args)   |       274 |       282 |    1.0x |
-| signal to C without argument capture           |       201 |         - |       - |
-| value handle create + free                     |        57 |         - |       - |
-| qtc_alive on a live handle                     |        12 |         - |       - |
-| call on a stale handle (rejected)              |       276 |         - |       - |
+| QLabel::setText through a method call          |       239 |         5 |   46.6x |
+| QLabel::setText with a full signature          |       408 |         - |       - |
+| QLabel text through the property system        |       563 |        43 |   13.2x |
+| QSlider::setValue (int)                        |       262 |        23 |   11.2x |
+| QSlider::value() and read the result           |       166 |         2 |   98.8x |
+| QSlider value property get                     |       138 |        60 |    2.3x |
+| QLabel::text() returning a string              |       202 |        20 |   10.3x |
+| QComboBox::addItem, resolved among 3 overloads |       739 |       421 |    1.8x |
+| signal to C: emit, capture, poll (with args)   |       201 |       221 |    0.9x |
+| signal to C without argument capture           |       158 |         - |       - |
+| value handle create + free                     |        44 |         - |       - |
+| qtc_alive on a live handle                     |         9 |         - |       - |
+| call on a stale handle (rejected)              |       212 |         - |       - |
 
 ## What the fuzzers found
 
@@ -253,6 +261,7 @@ Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
 | `QXYSeries::pointAdded(-1)` emitted by hand on a line series in a chart | the chart item inserts the series' point -1 into its own copy |
 | `QString::normalized` on a string of a million characters, a quarter past ASCII, called a dozen times | Qt rewrites the string in place: about length x characters past ASCII, seconds per call (and a run of combining marks costs its square) |
 | `QStandardItemModel` with 32 columns and a million rows, then `removeColumns(0, 1)` | removes the column row by row, moving the rest of the model each time |
+| the reply of `QCoapClient::discover` destroyed at once | the client's protocol thread still holds it and reads it on its next event |
 
 They found bugs in qtc too: `QByteArray::erase` was bound with its iterators taken
 for byte buffers (it then freed memory it did not own); deletions Qt makes itself
@@ -279,7 +288,8 @@ before `QWidget::grab` did not follow Qt's rule for a rectangle with one negativ
 - Fuzzing finds what its values and orders reach, and it has not run out. The
   rate falls as rounds go (for 1.0.0: 4 failures in 16 orders, then 2 in 16
   new ones, then 5 in 48, then 1 in 64; for 1.1.0, with new modules and
-  classes: 3 in 16, then 1 in 16, then 2 in 16, then 1 in 16), but each new
+  classes, rounds of 12 to 16 new orders found 1 to 3 each, then 64 orders 4,
+  then 96 orders 3, then 128 orders 4, and the last 128 none in qtc), but each new
   order can still reach a rarely combined corner; the open ones are in
   [LIMITS.md](LIMITS.md#known-open-failures). A change to the bound methods
   reshuffles every seed, and so does a new refusal, so an order that ran clean

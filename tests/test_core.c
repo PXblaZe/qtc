@@ -2395,6 +2395,17 @@ static void test_fuzz_findings(void) {
             qtc_process_events();
             CHECK_EQ(qtc_destroy(buf), QTC_OK);
         }
+        /* a running CoAP reply is used by the client's protocol thread */
+        qtc_obj coap = make("QCoapClient");
+        if (coap) {
+            qtc_arg_str(S("coap://127.0.0.1:5683/x"));
+            CHECK_EQ(qtc_call(coap, S("get(QUrl)")), QTC_OK);
+            qtc_obj rep = qtc_ret_obj();
+            CHECK(rep != 0);
+            CHECK_EQ(qtc_destroy(rep), QTC_ERR_STATE);
+            qtc_destroy(coap);
+            qtc_process_events();
+        }
         qtc_obj oa = make("QOAuth1");
         if (oa) {
             CHECK_EQ(qtc_call(oa, S("replyHandler")), QTC_OK);

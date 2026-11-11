@@ -21,7 +21,8 @@
   null device or one that does not suit the transport type, `setState` (the
   state follows the connection), and `connectToHostWebSocket*` with a websocket
   qtc could not keep alive; destroying an MQTT client's transport or an OAuth
-  object's built-in reply handler while their owner lives (now refused);
+  object's built-in reply handler while their owner lives, or a CoAP reply
+  still running (the client's protocol thread uses it) (now refused);
   `QWidget::scroll` with offsets past QWIDGETSIZE_MAX; `QWidget::grab` with one
   negative size and a top left far outside (Qt grabs to the widget's bottom right
   and paints into a pixmap it could not allocate) or with an empty rectangle
