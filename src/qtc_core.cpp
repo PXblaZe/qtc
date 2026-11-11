@@ -2,6 +2,7 @@
 #include "qtc_internal.h"
 #include "qtc_events.h"
 #include "qtc_override.h"
+#include "qtc_module.h"
 
 #include <QtCore/QBuffer>
 #include <QtCore/QAbstractProxyModel>
@@ -25,10 +26,6 @@
 #include <QtCore/QTimer>
 #include <QtCore/QUrl>
 #include <QtCore/QDateTime>
-#ifdef QTC_HAS_MODULE_Qml
-#include <QtQml/QJSValue>
-#include <QtQml/qqml.h>   // qmlContext
-#endif
 #ifdef QTC_HAS_GUI
 #include <QtGui/QGuiApplication>
 #if QT_CONFIG(opengl)
@@ -40,9 +37,6 @@
 #include <QtGui/QStandardItemModel>
 #include <QtGui/QTransform>
 #include <QtGui/QWindow>
-#endif
-#ifdef QTC_HAS_MODULE_Sql
-#include <QtSql/QSqlQueryModel>
 #endif
 #ifdef QTC_HAS_WIDGETS
 #include <QtWidgets/QApplication>
@@ -648,14 +642,10 @@ static QVariant sanitize_impl(const QVariant &v, bool known) {
         QObject *o = v.value<QObject *>();
         return known ? QVariant::fromValue(ObjRef{reg().known_handle(o)}) : out_variant_obj(o);
     }
-#ifdef QTC_HAS_MODULE_Qml
     // a JavaScript value (a QML var, an object QML passes as a QVariant: older Qt keeps these as
     // QJSValue) becomes the maps, lists and scalars it holds
-    if (mt == QMetaType::fromType<QJSValue>()) {
-        const QVariant plain = v.value<QJSValue>().toVariant();
+    if (QVariant plain; g_module_hooks.plain_variant && g_module_hooks.plain_variant(v, &plain))
         return plain.metaType() == mt ? QVariant() : sanitize_impl(plain, known);
-    }
-#endif
     return v;
 }
 
@@ -1315,7 +1305,12 @@ void register_classes(const ClassDef *defs, int count) {
         if (defs[i].kind == CK_VALUE && defs[i].metatype) (void)defs[i].metatype().id();
     }
 }
-const ClassDef *find_class(const QByteArray &name) { return classes().value(name, nullptr); }
+const ClassDef *find_class(const QByteArray &name) {
+    if (const ClassDef *c = classes().value(name, nullptr)) return c;
+    // a class of a module library not loaded yet (qtc_module.cpp)
+    if (load_module_of_class(name)) return classes().value(name, nullptr);
+    return nullptr;
+}
 
 // A bound class by the name string a program passes to qtc_new or qtc_val_new, remembered by the
 // string's address (its bytes are compared too): programs pass the same few literals over and
@@ -1778,14 +1773,7 @@ static bool meta_callable(const QMetaObject *decl, bool qml_made) {
     if (const ClassDef *c = find_class(QByteArray(decl->className()))) return std::strcmp(c->module, "qtc") == 0;
     return qml_made || !qt_style_name(decl->className());
 }
-static bool qml_object(const QObject *o) {
-#ifdef QTC_HAS_MODULE_Qml
-    return qmlContext(o) != nullptr;
-#else
-    Q_UNUSED(o);
-    return false;
-#endif
-}
+static bool qml_object(const QObject *o) { return g_module_hooks.qml_object && g_module_hooks.qml_object(o); }
 
 static void collect_object(QObject *o, const QByteArray &name, const QByteArray &sig, bool want_static, std::vector<Cand> &out) {
     int depth = 0;
@@ -3246,9 +3234,7 @@ bool insert_cheap(const QAbstractItemModel *m, Qt::Orientation o, int64_t pos, i
                 return std_columns_ok(rows_of(m, parent), cols_of(m, parent) + count) &&
                        alloc_ok(std::max<int64_t>(1, rows_of(m, parent)) * (cols_of(m, parent) + count), 8);
 #endif
-#ifdef QTC_HAS_MODULE_Sql
-            if (qobject_cast<const QSqlQueryModel *>(m)) return count <= 4096;
-#endif
+            if (m->inherits("QSqlQueryModel")) return count <= 4096;
         }
         if (qobject_cast<const QTransposeProxyModel *>(m)) o = o == Qt::Vertical ? Qt::Horizontal : Qt::Vertical;
         else if (qobject_cast<const QSortFilterProxyModel *>(m)) exact = false;
@@ -3996,9 +3982,15 @@ QTC_API bool qtc_class_exists(qtc_str class_name) {
         return find_class(cn.trimmed()) != nullptr;
     });
 }
-QTC_API int64_t qtc_class_count(void) { return guarded<int64_t>(0, [] { return int64_t(class_names().size()); }); }
+QTC_API int64_t qtc_class_count(void) {
+    return guarded<int64_t>(0, [] {
+        load_all_modules();   // every class there is
+        return int64_t(class_names().size());
+    });
+}
 QTC_API qtc_view qtc_class_at(int64_t index) {
     return guarded<qtc_view>(qtc_view{"", 0}, [&]() -> qtc_view {
+        load_all_modules();
         if (index < 0 || index >= class_names().size()) { fail(QTC_ERR_OUT_OF_RANGE, "class index"); return view_of(QByteArray()); }
         return view_of(class_names().at(qsizetype(index)));
     });
@@ -4182,6 +4174,7 @@ QTC_API qtc_view qtc_stats(void) {
     return guarded<qtc_view>(qtc_view{"", 0}, []() -> qtc_view {
         int64_t nm = 0, nc = 0, objs = 0, vals = 0;
         QJsonObject mods;
+        load_all_modules();
         for (const QByteArray &n : class_names()) {
             const ClassDef *c = find_class(n);
             nm += c->nmethods;

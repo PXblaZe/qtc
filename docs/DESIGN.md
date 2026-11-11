@@ -38,6 +38,27 @@ class and guarded with `if constexpr (requires …)`, so a signature that change
 between releases fails to compile into an `UNSUPPORTED` error instead of a build
 break.
 
+### Module libraries
+
+Generated code is most of qtc: a thunk and its tables for every bound method of
+every module. `libqtc` holds the runtime and the code of Qt Core, Gui and Widgets;
+the code of each other module is a library of its own, `libqtc_<Module>`, linked
+to that Qt module alone. `src/gen/qtc_gen_register.cpp` carries an index of which
+module binds which class and which modules each module needs. `find_class` (and
+the lookup of overridable classes) loads a module the first time one of its
+classes is asked for and not found: its library is opened from the directory
+`libqtc` was loaded from, the modules it needs first, and its
+`qtc_module_init_<Module>` registers its classes, its overridable classes and its
+part of the runtime (`src/mod/qtc_mod_<Module>.cpp`: the ownership roles of its
+classes, and hooks such as QML's `qmlContext` check). Objects Qt makes of a class
+whose module is not loaded yet (a `QQuickItem` a QML engine made) load it when
+the ownership rules first look at them. Loading happens on the GUI thread only,
+where every table it changes is read.
+
+A widgets program therefore maps 4 Qt libraries instead of 30-odd, which is most
+of what starting it cost. With `-DQTC_SPLIT_MODULES=OFF` (always on Windows) the
+module code is part of `libqtc` and loading only registers it.
+
 ### Preconditions
 
 `gen/preconditions.py` is a table of rules: a class pattern, a method pattern,

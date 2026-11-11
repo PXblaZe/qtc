@@ -20,6 +20,9 @@ class QRhiCommandBuffer;
 class QEvent;
 QT_END_NAMESPACE
 
+// Shared with the module libraries (qtc_module.h): the runtime's internal API is exported
+#pragma GCC visibility push(default)
+
 namespace qtc {
 
 enum OvKind : uint8_t {
@@ -200,3 +203,4 @@ public:
 };
 
 }  // namespace qtc
+#pragma GCC visibility pop

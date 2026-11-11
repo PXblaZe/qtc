@@ -46,6 +46,9 @@ QT_END_NAMESPACE
 #include <type_traits>
 #include <vector>
 
+// Shared with the module libraries (qtc_module.h): the runtime's internal API is exported
+#pragma GCC visibility push(default)
+
 namespace qtc {
 
 // ------------------------------------------------------------------ errors
@@ -209,8 +212,10 @@ ArgStack &args();
 void tracked_dying(QObject *o);
 extern std::atomic<QObject *> g_tracked_new;   // the object make_obj just made, until it is registered
 
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_DEPRECATED   // a deprecated constructor is inherited (and checked for) as it is
 template <class S>
-struct Tracked : S {
+struct __attribute__((visibility("hidden"))) Tracked : S {   // each library its own
     using S::S;
     ~Tracked() override { tracked_dying(this); }
 };
@@ -222,8 +227,6 @@ constexpr bool trackable() {
     else return requires(A &&...b) { new Tracked<S>(std::forward<A>(b)...); };
 }
 
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
 template <class S, class... A>
     requires requires(A &&...a) { new S(std::forward<A>(a)...); }
 S *make_obj(A &&...a) {
@@ -899,6 +902,7 @@ template <class S> inline S *self_obj(void *q) { return static_cast<S *>(static_
 template <class S> inline S *self_val(void *q) { return static_cast<S *>(q); }
 
 }  // namespace qtc
+#pragma GCC visibility pop
 
 Q_DECLARE_METATYPE(qtc::ObjRef)
 

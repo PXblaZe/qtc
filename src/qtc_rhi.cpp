@@ -16,6 +16,7 @@
 // will see in the index buffer at that point of the frame.
 #include "qtc_override.h"
 #include "qtc_events.h"
+#include "qtc_module.h"
 
 #include <QtCore/QCoreApplication>
 #include <QtCore/QHash>
@@ -45,15 +46,7 @@
 #define QTC_VULKAN 1
 #include <QtGui/QVulkanInstance>
 #endif
-#if defined(QTC_HAS_SHADERTOOLS) && __has_include(<rhi/qshaderbaker.h>)
-#define QTC_BAKER 1
-#include <rhi/qshaderbaker.h>
 #endif
-#endif
-#endif
-#ifdef QTC_HAS_MODULE_Quick
-#include <QtQuick/QQuickWindow>
-#include <QtQuick/QSGRendererInterface>
 #endif
 #if defined(QTC_RHI) && defined(QTC_HAS_WIDGETS)
 #include <QtWidgets/QRhiWidget>
@@ -781,9 +774,7 @@ public:
 };
 
 bool draws_itself(QWindow *w) {
-#ifdef QTC_HAS_MODULE_Quick
-    if (qobject_cast<QQuickWindow *>(w)) return true;
-#endif
+    if (w->inherits("QQuickWindow")) return true;
     return w->inherits("QWidgetWindow") || w->inherits("QPaintDeviceWindow");
 }
 
@@ -796,68 +787,20 @@ using namespace qtc;
 
 // ================================================================= Qt Quick
 
+// what Qt Quick does lives in its module library (src/mod/qtc_mod_Quick.cpp)
 QTC_API qtc_status qtc_quick_set_graphics_api(int32_t api) {
     return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
-#ifdef QTC_HAS_MODULE_Quick
-        QSGRendererInterface::GraphicsApi g;
-        switch (api) {
-        case QTC_GAPI_SOFTWARE: g = QSGRendererInterface::Software; break;
-        case QTC_GAPI_OPENGL: g = QSGRendererInterface::OpenGL; break;
-        case QTC_GAPI_VULKAN: g = QSGRendererInterface::Vulkan; break;
-        case QTC_GAPI_D3D11: g = QSGRendererInterface::Direct3D11; break;
-        case QTC_GAPI_D3D12: g = QSGRendererInterface::Direct3D12; break;
-        case QTC_GAPI_METAL: g = QSGRendererInterface::Metal; break;
-        case QTC_GAPI_NULL: g = QSGRendererInterface::Null; break;
-        default: return fail(QTC_ERR_OUT_OF_RANGE, "qtc_quick_set_graphics_api: not a QTC_GAPI_ value");
-        }
-        if (app_kind() == QTC_APP_CORE) return fail(QTC_ERR_STATE, "qtc_quick_set_graphics_api needs a GUI application");
-        // Qt reads it as windows are made: a later change would leave windows on different APIs
-        for (QWindow *w : QGuiApplication::allWindows())
-            if (qobject_cast<QQuickWindow *>(w))
-                return fail(QTC_ERR_STATE, "qtc_quick_set_graphics_api: a Qt Quick window exists already (set it before making any)");
-        QQuickWindow::setGraphicsApi(g);
-        return QTC_OK;
-#else
-        (void)api;
-        return fail(QTC_ERR_UNSUPPORTED, "Qt Quick is not bound in this build");
-#endif
+        if (!load_module("Quick") || !g_module_hooks.quick_set_graphics_api)
+            return fail(QTC_ERR_UNSUPPORTED, "Qt Quick is not bound in this build");
+        return g_module_hooks.quick_set_graphics_api(api);
     });
 }
 
-#ifdef QTC_HAS_MODULE_Quick
-static int32_t gapi_of(QSGRendererInterface::GraphicsApi g) {
-    switch (g) {
-    case QSGRendererInterface::Software: return QTC_GAPI_SOFTWARE;
-    case QSGRendererInterface::OpenGL: return QTC_GAPI_OPENGL;
-    case QSGRendererInterface::Vulkan: return QTC_GAPI_VULKAN;
-    case QSGRendererInterface::Direct3D11: return QTC_GAPI_D3D11;
-    case QSGRendererInterface::Direct3D12: return QTC_GAPI_D3D12;
-    case QSGRendererInterface::Metal: return QTC_GAPI_METAL;
-    case QSGRendererInterface::Null: return QTC_GAPI_NULL;
-    default: return QTC_GAPI_UNKNOWN;
-    }
-}
-#endif
-
 QTC_API int32_t qtc_quick_graphics_api(qtc_obj window) {
     return guarded<int32_t>(QTC_ERR_STATE, [&]() -> int32_t {
-#ifdef QTC_HAS_MODULE_Quick
-        if (!window) {
-            // Qt reports the RHI's API even when the software adaptation is asked for
-            if (QQuickWindow::sceneGraphBackend() == QLatin1StringView("software")) return QTC_GAPI_SOFTWARE;
-            return gapi_of(QQuickWindow::graphicsApi());
-        }
-        qtc_status err = 0;
-        QObject *o = reg().object(window, &err);
-        if (!o) return fail(err, "qtc_quick_graphics_api");
-        auto *w = qobject_cast<QQuickWindow *>(o);
-        if (!w) return fail(QTC_ERR_WRONG_TYPE, "qtc_quick_graphics_api: not a QQuickWindow");
-        QSGRendererInterface *ri = w->rendererInterface();
-        return ri ? gapi_of(ri->graphicsApi()) : QTC_GAPI_UNKNOWN;
-#else
-        (void)window;
-        return fail(QTC_ERR_UNSUPPORTED, "Qt Quick is not bound in this build");
-#endif
+        if (!load_module("Quick") || !g_module_hooks.quick_graphics_api)
+            return fail(QTC_ERR_UNSUPPORTED, "Qt Quick is not bound in this build");
+        return g_module_hooks.quick_graphics_api(window);
     });
 }
 
@@ -1112,13 +1055,9 @@ static qtc_rhi shader_handle(const QShader &s) {
 
 QTC_API qtc_rhi qtc_rhi_shader_bake(uint32_t stage, qtc_str glsl) {
     return guarded<qtc_rhi>(0, [&]() -> qtc_rhi {
-#ifdef QTC_BAKER
-        QShader::Stage st;
-        switch (stage) {
-        case QTC_RHI_VERTEX: st = QShader::VertexStage; break;
-        case QTC_RHI_FRAGMENT: st = QShader::FragmentStage; break;
-        case QTC_RHI_COMPUTE: st = QShader::ComputeStage; break;
-        default: fail(QTC_ERR_OUT_OF_RANGE, "qtc_rhi_shader_bake: stage is QTC_RHI_VERTEX, _FRAGMENT or _COMPUTE"); return 0;
+        if (stage != QTC_RHI_VERTEX && stage != QTC_RHI_FRAGMENT && stage != QTC_RHI_COMPUTE) {
+            fail(QTC_ERR_OUT_OF_RANGE, "qtc_rhi_shader_bake: stage is QTC_RHI_VERTEX, _FRAGMENT or _COMPUTE");
+            return 0;
         }
         QByteArray src;
         if (!read_bytes(glsl, src, "glsl")) return 0;
@@ -1126,45 +1065,20 @@ QTC_API qtc_rhi qtc_rhi_shader_bake(uint32_t stage, qtc_str glsl) {
             fail(QTC_ERR_OUT_OF_RANGE, "qtc_rhi_shader_bake: the source is empty or over 4 MiB");
             return 0;
         }
-        // every backend of this platform: SPIR-V for Vulkan, GLSL for OpenGL (ES), and HLSL or MSL
-        // where Direct3D or Metal exist; the legacy GLSL versions go when the shader needs more
-        QList<QShaderBaker::GeneratedShader> extra;
-#ifdef Q_OS_WIN
-        extra.append({QShader::HlslShader, QShaderVersion(50)});
-#endif
-#if defined(Q_OS_MACOS) || defined(Q_OS_IOS)
-        extra.append({QShader::MslShader, QShaderVersion(12)});
-#endif
-        QList<QList<QShaderBaker::GeneratedShader>> attempts;
-        if (st == QShader::ComputeStage) {
-            attempts.append({{QShader::SpirvShader, QShaderVersion(100)}, {QShader::GlslShader, QShaderVersion(310, QShaderVersion::GlslEs)},
-                             {QShader::GlslShader, QShaderVersion(430)}});
-            attempts.append({{QShader::SpirvShader, QShaderVersion(100)}, {QShader::GlslShader, QShaderVersion(430)}});
-        } else {
-            attempts.append({{QShader::SpirvShader, QShaderVersion(100)}, {QShader::GlslShader, QShaderVersion(100, QShaderVersion::GlslEs)},
-                             {QShader::GlslShader, QShaderVersion(120)}, {QShader::GlslShader, QShaderVersion(150)},
-                             {QShader::GlslShader, QShaderVersion(330)}});
-            attempts.append({{QShader::SpirvShader, QShaderVersion(100)}, {QShader::GlslShader, QShaderVersion(300, QShaderVersion::GlslEs)},
-                             {QShader::GlslShader, QShaderVersion(330)}});
+        // Qt Shader Tools (glslang and SPIRV-Cross) is a library of its own, loaded the first time
+        // a shader is baked (src/mod/qtc_mod_ShaderTools.cpp)
+        if (!load_module("ShaderTools") || !g_module_hooks.bake_shader) {
+            fail(QTC_ERR_UNSUPPORTED, "qtc_rhi_shader_bake needs Qt Shader Tools (load packages made by Qt's qsb tool with qtc_rhi_shader_load)");
+            return 0;
         }
-        QString first_error;
-        for (QList<QShaderBaker::GeneratedShader> targets : attempts) {
-            targets += extra;
-            QShaderBaker b;
-            b.setSourceString(src, st);
-            b.setGeneratedShaders(targets);
-            b.setGeneratedShaderVariants({QShader::StandardShader});
-            const QShader s = b.bake();
-            if (s.isValid()) return shader_handle(s);
-            if (first_error.isEmpty()) first_error = b.errorMessage();
+        QString error;
+        const QByteArray baked = g_module_hooks.bake_shader(int(stage), src, &error);
+        const QShader s = baked.isEmpty() ? QShader() : QShader::fromSerialized(baked);
+        if (!s.isValid()) {
+            fail(QTC_ERR_INVALID_ARG, "qtc_rhi_shader_bake: " + error.left(4000));
+            return 0;
         }
-        fail(QTC_ERR_INVALID_ARG, "qtc_rhi_shader_bake: " + first_error.left(4000));
-        return 0;
-#else
-        (void)stage, (void)glsl;
-        fail(QTC_ERR_UNSUPPORTED, "qtc_rhi_shader_bake needs Qt Shader Tools (load packages made by Qt's qsb tool with qtc_rhi_shader_load)");
-        return 0;
-#endif
+        return shader_handle(s);
     });
 }
 

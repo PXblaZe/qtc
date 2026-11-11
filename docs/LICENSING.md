@@ -86,6 +86,16 @@ Two more safeguards apply:
   `qtc_stats()` under `"gpl_only_modules"`. That list is empty for the default
   build, so a program can check which kind of `libqtc` it is running on.
 
+From 1.2.0 on, every module beyond Qt Core, Gui and Widgets is bound by a
+library of its own (`libqtc_Charts.so`, `libqtc_Mqtt.so` and so on, next to
+`libqtc`), loaded the first time a program uses one of its classes. `libqtc`
+itself then never links a GPL-3.0-only module: those modules are linked only by
+their own `libqtc_<Module>` libraries, which a program that does not use them
+never loads, and which a distribution can simply leave out (whether a program
+that does load one is a combined work under the GPL is the same question as for
+any plugin; the opt-in above still applies). `"gpl_only_modules"` in
+`qtc_stats()` lists those of them whose library is present.
+
 qtc 1.0.0 bound Qt Charts whenever it was installed. A default 1.0.0 build
 therefore linked a GPL-3.0-only module. From 1.1.0 on, the default build does
 not.

@@ -1,6 +1,7 @@
 // Overridable objects: registration, dispatch to the program's handler, and the frame API the
 // handler uses (qtc_ov_*). See qtc_override.h.
 #include "qtc_override.h"
+#include "qtc_module.h"
 #include "qtc_builtin.h"
 #include "qtc_events.h"
 
@@ -252,7 +253,11 @@ void register_overridables(const OvClassDef *defs, int count) {
     for (int i = 0; i < count; i++) S().classes.insert(QByteArray(defs[i].name), &defs[i]);
 }
 
-const OvClassDef *find_overridable(const QByteArray &name) { return S().classes.value(name); }
+const OvClassDef *find_overridable(const QByteArray &name) {
+    if (const OvClassDef *c = S().classes.value(name)) return c;
+    if (load_module_of_class(name)) return S().classes.value(name);   // a module library not loaded yet
+    return nullptr;
+}
 
 void ov_link(const QObject *o, OvHost *h) {
     OvState &s = S();

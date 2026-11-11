@@ -42,6 +42,7 @@
 // and owners that keep a widget by a plain pointer (a tab widget's corner, a scroll
 // area's viewport ...) refuse a widget that is still in one.
 #include "qtc_internal.h"
+#include "qtc_module.h"
 
 #include <functional>
 
@@ -119,107 +120,11 @@
 #include <QtWidgets/QTreeView>
 #include <QtWidgets/QWizard>
 #endif
-#ifdef QTC_HAS_MODULE_Network
-#include <QtNetwork/QAbstractNetworkCache>
-#include <QtNetwork/QNetworkAccessManager>
-#include <QtNetwork/QNetworkCookieJar>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-#include <QtNetwork/QRestAccessManager>
-#endif
-#endif
-#ifdef QTC_HAS_MODULE_Sql
-#include <QtSql/QSqlDatabase>
-#include <QtSql/QSqlDriver>
-#endif
-#ifdef QTC_HAS_MODULE_Qml
-#include <QtQml/QQmlComponent>
-#include <QtQml/QQmlContext>
-#include <QtQml/QQmlEngine>
-#include <QtQml/QQmlFileSelector>
-#endif
-#ifdef QTC_HAS_MODULE_Quick
-#include <QtQuick/QQuickItem>
-#include <QtQuick/QQuickRenderControl>
-#include <QtQuick/QQuickWindow>
-#endif
-#ifdef QTC_HAS_MODULE_Multimedia
-#include <QtMultimedia/QVideoSink>
-#include <QtMultimedia/QWaveDecoder>
-#endif
-#ifdef QTC_HAS_MODULE_MultimediaWidgets
-#include <QtMultimediaWidgets/QGraphicsVideoItem>
-#include <QtMultimediaWidgets/QVideoWidget>
-#endif
-#ifdef QTC_HAS_MODULE_SpatialAudio
-#include <QtSpatialAudio/QAmbientSound>
-#include <QtSpatialAudio/QAudioEngine>
-#include <QtSpatialAudio/QAudioListener>
-#include <QtSpatialAudio/QAudioRoom>
-#include <QtSpatialAudio/QSpatialSound>
-#endif
-#ifdef QTC_HAS_MODULE_Positioning
-#include <QtPositioning/QGeoAreaMonitorSource>
-#include <QtPositioning/QGeoPositionInfoSource>
-#include <QtPositioning/QNmeaPositionInfoSource>
-#include <QtPositioning/QNmeaSatelliteInfoSource>
-#endif
-#ifdef QTC_HAS_MODULE_Charts
-#include <QtCharts/QAbstractBarSeries>
-#include <QtCharts/QAreaSeries>
-#include <QtCharts/QBarSet>
-#include <QtCharts/QBoxPlotSeries>
-#include <QtCharts/QBoxSet>
-#include <QtCharts/QCandlestickSeries>
-#include <QtCharts/QCandlestickSet>
-#include <QtCharts/QChart>
-#include <QtCharts/QChartView>
-#include <QtCharts/QCandlestickModelMapper>
-#include <QtCharts/QHBarModelMapper>
-#include <QtCharts/QHBoxPlotModelMapper>
-#include <QtCharts/QHPieModelMapper>
-#include <QtCharts/QHXYModelMapper>
-#include <QtCharts/QVBarModelMapper>
-#include <QtCharts/QVBoxPlotModelMapper>
-#include <QtCharts/QVPieModelMapper>
-#include <QtCharts/QVXYModelMapper>
-#include <QtCharts/QLegend>
-#include <QtCharts/QLegendMarker>
-#include <QtCharts/QLineSeries>
-#include <QtCharts/QPieSeries>
-#include <QtCharts/QPieSlice>
-#endif
-#ifdef QTC_HAS_MODULE_Mqtt
-#include <QtMqtt/QMqttClient>
-#endif
-#ifdef QTC_HAS_MODULE_Coap
-#include <QtCoap/QCoapReply>
-#endif
-#ifdef QTC_HAS_MODULE_NetworkAuth
-#include <QtNetworkAuth/QAbstractOAuth>
-#include <QtNetworkAuth/QAbstractOAuthReplyHandler>
-#endif
-#ifdef QTC_HAS_MODULE_WebSockets
-#include <QtWebSockets/QMaskGenerator>
-#include <QtWebSockets/QWebSocket>
-#endif
 
 namespace qtc {
 
 namespace {
 
-// What an owner may hold, worked out once when it gets a handle.
-enum OwnerKind : uint64_t {
-    OK_SCROLLAREA = 1ull << 0, OK_MESSAGEBOX = 1ull << 1, OK_PROGRESS = 1ull << 2, OK_WIZARD = 1ull << 3,
-    OK_COMBO = 1ull << 4, OK_COMPLETER = 1ull << 5, OK_TABBAR = 1ull << 6, OK_TABWIDGET = 1ull << 7,
-    OK_LAYOUT = 1ull << 8, OK_FILEDIALOG = 1ull << 9, OK_MAPPER = 1ull << 10, OK_SCENE = 1ull << 11,
-    OK_GWIDGET = 1ull << 12, OK_DRAG = 1ull << 13, OK_MOVIE = 1ull << 14, OK_GLCONTEXT = 1ull << 15,
-    OK_CONCAT = 1ull << 16, OK_NAM = 1ull << 17, OK_REST = 1ull << 18, OK_QMLCONTEXT = 1ull << 19,
-    OK_FILESELECTOR = 1ull << 20, OK_QMLENGINE = 1ull << 21, OK_WAVE = 1ull << 22, OK_VIDEO = 1ull << 23,
-    OK_SPATIAL = 1ull << 24, OK_CHARTSERIES = 1ull << 25, OK_AREA = 1ull << 26, OK_GEO = 1ull << 27,
-    OK_NMEA = 1ull << 28, OK_WEBSOCKET = 1ull << 29, OK_QMLCOMPONENT = 1ull << 30, OK_CHARTMAPPER = 1ull << 31,
-    OK_FOCUSFRAME = 1ull << 32, OK_WINDOWCONTAINER = 1ull << 33, OK_BUTTONBOX = 1ull << 34,
-    OK_MQTT = 1ull << 35, OK_OAUTH = 1ull << 36,
-};
 
 struct Owner {
     QPointer<QObject> p;
@@ -241,17 +146,17 @@ Owners &owners_map() {
 
 // Keyed by address, checked through a QPointer before use: an object deleted while its
 // signals were blocked leaves its entry behind until the registry notices.
-using Tracked = QHash<QObject *, QPointer<QObject>>;
-Tracked &layouts_map() {
-    static Tracked *s = new Tracked;
+using PtrMap = QHash<QObject *, QPointer<QObject>>;
+PtrMap &layouts_map() {
+    static PtrMap *s = new PtrMap;
     return *s;
 }
 // focus frames with a handle (see widget_parent_changed)
-Tracked &frames_map() {
-    static Tracked *s = new Tracked;
+PtrMap &frames_map() {
+    static PtrMap *s = new PtrMap;
     return *s;
 }
-QList<QObject *> live(Tracked &t) {
+QList<QObject *> live(PtrMap &t) {
     QList<QObject *> out;
     for (auto it = t.begin(); it != t.end();) {
         if (it.value()) { out.append(it.value().data()); ++it; }
@@ -300,16 +205,25 @@ struct KindsPeek : QObject {   // QObject's protected d_ptr, as qtc_core.cpp's D
 
 // The roles an object can play. All but one depend on its class alone, so they are worked out
 // once per class (a few dozen casts each time cost more than the rest of making an object).
+QHash<const QMetaObject *, uint64_t> &kinds_memo() { static auto *m = new QHash<const QMetaObject *, uint64_t>; return *m; }
+QHash<const QMetaObject *, uint64_t> &typed_memo() { static auto *m = new QHash<const QMetaObject *, uint64_t>; return *m; }
+QHash<const QMetaObject *, bool> &owned_memo() { static auto *m = new QHash<const QMetaObject *, bool>; return *m; }
+
 uint64_t kinds_of(QObject *o) {
     uint64_t k = 0;
     const QObjectData *d = KindsPeek::of(o);
     if (d && d->metaObject) {
+        load_modules_of(o);
         k = class_kinds(o);   // a dynamic meta-object: it can change, and its address can be reused
     } else {
-        static auto *memo = new QHash<const QMetaObject *, uint64_t>;
+        QHash<const QMetaObject *, uint64_t> *memo = &kinds_memo();
         const QMetaObject *mo = o->metaObject();
         auto it = memo->constFind(mo);
-        if (it == memo->constEnd()) it = memo->insert(mo, class_kinds(o));
+        if (it == memo->constEnd()) {
+            load_modules_of(o);   // the module of its class knows its roles
+            memo = &kinds_memo();
+            it = memo->insert(mo, class_kinds(o));
+        }
         k = *it;
     }
 #ifdef QTC_HAS_WIDGETS
@@ -345,53 +259,11 @@ static uint64_t class_kinds(QObject *o) {
 #endif
 #endif
     if (qobject_cast<QConcatenateTablesProxyModel *>(o)) k |= OK_CONCAT;
-#ifdef QTC_HAS_MODULE_Network
-    if (qobject_cast<QNetworkAccessManager *>(o)) k |= OK_NAM;
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    if (qobject_cast<QRestAccessManager *>(o)) k |= OK_REST;
-#endif
-#endif
-#ifdef QTC_HAS_MODULE_Qml
-    if (qobject_cast<QQmlContext *>(o)) k |= OK_QMLCONTEXT;
-    if (qobject_cast<QQmlFileSelector *>(o)) k |= OK_FILESELECTOR;
-    if (qobject_cast<QQmlEngine *>(o)) k |= OK_QMLENGINE;
-    if (qobject_cast<QQmlComponent *>(o)) k |= OK_QMLCOMPONENT;
-#endif
-#ifdef QTC_HAS_MODULE_Multimedia
-    if (qobject_cast<QWaveDecoder *>(o)) k |= OK_WAVE;
-#endif
-#ifdef QTC_HAS_MODULE_MultimediaWidgets
-    if (qobject_cast<QVideoWidget *>(o) || qobject_cast<QGraphicsVideoItem *>(o)) k |= OK_VIDEO;
-#endif
-#ifdef QTC_HAS_MODULE_SpatialAudio
-    if (qobject_cast<QSpatialSound *>(o) || qobject_cast<QAmbientSound *>(o) || dynamic_cast<QAudioListener *>(o)) k |= OK_SPATIAL;
-#endif
-#ifdef QTC_HAS_MODULE_Charts
-    if (qobject_cast<QAbstractBarSeries *>(o) || qobject_cast<QPieSeries *>(o) || qobject_cast<QBoxPlotSeries *>(o) ||
-        qobject_cast<QCandlestickSeries *>(o))
-        k |= OK_CHARTSERIES;
-    if (qobject_cast<QAreaSeries *>(o)) k |= OK_AREA;
-    if (qobject_cast<QXYModelMapper *>(o) || qobject_cast<QBarModelMapper *>(o) || qobject_cast<QPieModelMapper *>(o) ||
-        qobject_cast<QBoxPlotModelMapper *>(o) || qobject_cast<QCandlestickModelMapper *>(o))
-        k |= OK_CHARTMAPPER;
-#endif
-#ifdef QTC_HAS_MODULE_Positioning
-    if (qobject_cast<QGeoAreaMonitorSource *>(o)) k |= OK_GEO;
-    if (qobject_cast<QNmeaPositionInfoSource *>(o) || qobject_cast<QNmeaSatelliteInfoSource *>(o)) k |= OK_NMEA;
-#endif
-#ifdef QTC_HAS_MODULE_WebSockets
-    if (qobject_cast<QWebSocket *>(o)) k |= OK_WEBSOCKET;
-#endif
-#ifdef QTC_HAS_MODULE_Mqtt
-    if (qobject_cast<QMqttClient *>(o)) k |= OK_MQTT;
-#endif
-#ifdef QTC_HAS_MODULE_NetworkAuth
-    if (qobject_cast<QAbstractOAuth *>(o)) k |= OK_OAUTH;
-#endif
+    for (const ModuleExt *e : module_exts())
+        if (e->class_kinds) k |= e->class_kinds(o);
     return k;
 }
 
-enum Hold { NOT_HELD = 0, RELEASABLE = 1, PINNED = 2 };
 
 // Does owner hold victim, or something inside it? With release set, let go of what it can.
 // the victim, or something that dies with it (a child), could be a T
@@ -404,18 +276,16 @@ bool made_by_qtc(const QObject *o);
 // With collect set (and no victim), lists what owner holds instead: the held-object index.
 // Roles looked up by the victim's type (vcast) are not listed; see candidates().
 int visit(QObject *owner, uint64_t kinds, QObject *victim, bool release, QList<QObject *> *collect = nullptr) {
-    int st = NOT_HELD;
-    // a release may delete the victim (an owner that owns what it holds): look at it only while it lives
-    const QPointer<QObject> vp(victim);
-    auto hit = [&](const QObject *c) {
-        if (collect) {
-            if (c) collect->append(const_cast<QObject *>(c));
-            return false;
-        }
-        return vp && c && inside(c, victim);
-    };
-    auto held = [&]() { if (st < RELEASABLE) st = RELEASABLE; return release; };
-    auto pin = [&]() { st = PINNED; };
+    VisitCtx ctx;
+    ctx.victim = victim;
+    ctx.vp = victim;   // a release may delete the victim (an owner that owns what it holds): look at it only while it lives
+    ctx.release = release;
+    ctx.collect = collect;
+    const QPointer<QObject> &vp = ctx.vp;
+    int &st = ctx.st;
+    auto hit = [&](const QObject *c) { return ctx.hit(c); };
+    auto held = [&]() { return ctx.held(); };
+    auto pin = [&]() { ctx.pin(); };
     (void)hit;
     (void)held;
     (void)pin;
@@ -441,10 +311,6 @@ int visit(QObject *owner, uint64_t kinds, QObject *victim, bool release, QList<Q
             if (hit(e->document()) && held()) e->setDocument(nullptr);
         if (auto *e = qobject_cast<QPlainTextEdit *>(owner))
             if (hit(e->document()) && held()) e->setDocument(nullptr);
-#ifdef QTC_HAS_MODULE_Charts
-        if (auto *v = qobject_cast<QChartView *>(owner))
-            if (hit(v->chart()) && held()) v->setChart(new QChart);
-#endif
     }
     if (kinds & OK_MESSAGEBOX) {
         auto *m = static_cast<QMessageBox *>(owner);
@@ -569,151 +435,8 @@ int visit(QObject *owner, uint64_t kinds, QObject *victim, bool release, QList<Q
         for (QAbstractItemModel *m : ms)
             if (hit(m) && held()) c->removeSourceModel(m);
     }
-#ifdef QTC_HAS_MODULE_Network
-    if (kinds & OK_NAM) {
-        auto *n = static_cast<QNetworkAccessManager *>(owner);
-        if (hit(n->cache()) && held()) n->setCache(nullptr);   // deletes it: the manager owns its cache
-        // cookieJar() makes a jar when there is none, so only ask when the victim could be one
-        if (vcast<QNetworkCookieJar>(vp) && hit(n->cookieJar()) && held()) n->setCookieJar(nullptr);
-    }
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    if (kinds & OK_REST) {
-        auto *r = static_cast<QRestAccessManager *>(owner);
-        if (hit(r->networkAccessManager())) pin();
-    }
-#endif
-#endif
-#ifdef QTC_HAS_MODULE_Qml
-    if (kinds & OK_QMLCONTEXT) {
-        auto *c = static_cast<QQmlContext *>(owner);
-        if (hit(c->contextObject()) && held()) c->setContextObject(nullptr);
-        // a context made for an engine uses it until it dies, even as the child of something else
-        // (the engine's own contexts die with it)
-        if (made_by_qtc(c) && hit(c->engine())) pin();
-    }
-    if (kinds & OK_QMLCOMPONENT) {
-        auto *c = static_cast<QQmlComponent *>(owner);
-        if (made_by_qtc(c) && hit(c->engine())) pin();
-    }
-    if (kinds & OK_FILESELECTOR) {
-        // a fresh selector of its own takes over (setSelector(nullptr) makes one that Qt 6.4
-        // deletes twice); taking over deletes the built-in one, which is its release
-        auto *f = static_cast<QQmlFileSelector *>(owner);
-        if (hit(f->selector()) && held()) f->setSelector(new QFileSelector(f));
-    }
-    if ((kinds & OK_QMLENGINE) && vcast<QNetworkAccessManager>(vp)) {
-        auto *e = static_cast<QQmlEngine *>(owner);
-        if (QObject *nam = e->networkAccessManager(); nam && (nam == victim || inside(nam, victim))) pin();
-    }
-#endif
-#ifdef QTC_HAS_MODULE_Multimedia
-    if (kinds & OK_WAVE) {
-        auto *w = static_cast<QWaveDecoder *>(owner);
-        if (hit(w->getDevice())) pin();
-    }
-#endif
-#ifdef QTC_HAS_MODULE_MultimediaWidgets
-    if (kinds & OK_VIDEO) {
-        QVideoSink *sink = nullptr;
-        if (auto *v = qobject_cast<QVideoWidget *>(owner)) sink = v->videoSink();
-        else if (auto *g = qobject_cast<QGraphicsVideoItem *>(owner)) sink = g->videoSink();
-        if (hit(sink)) pin();
-    }
-#endif
-#ifdef QTC_HAS_MODULE_SpatialAudio
-    if (kinds & OK_SPATIAL) {
-        QAudioEngine *e = nullptr;
-        if (auto *s = qobject_cast<QSpatialSound *>(owner)) e = s->engine();
-        else if (auto *a = qobject_cast<QAmbientSound *>(owner)) e = a->engine();
-        else if (auto *l = dynamic_cast<QAudioListener *>(owner)) e = l->engine();
-        if (hit(e)) pin();
-    }
-#endif
-#ifdef QTC_HAS_MODULE_Charts
-    if (kinds & OK_CHARTSERIES) {
-        if (auto *s = qobject_cast<QAbstractBarSeries *>(owner))
-            for (QBarSet *x : s->barSets())
-                if (hit(x) && held()) s->take(x);
-        if (auto *s = qobject_cast<QPieSeries *>(owner))
-            for (QPieSlice *x : s->slices())
-                if (hit(x) && held()) s->take(x);
-        if (auto *s = qobject_cast<QBoxPlotSeries *>(owner))
-            for (QBoxSet *x : s->boxSets())
-                if (hit(x) && held()) s->take(x);
-        if (auto *s = qobject_cast<QCandlestickSeries *>(owner))
-            for (QCandlestickSet *x : s->sets())
-                if (hit(x) && held()) s->take(x);
-    }
-    if (kinds & OK_AREA) {
-        auto *a = static_cast<QAreaSeries *>(owner);
-        if (hit(a->upperSeries()) && held()) a->setUpperSeries(nullptr);
-        if (hit(a->lowerSeries()) && held()) a->setLowerSeries(nullptr);
-    }
-    if (kinds & OK_CHARTMAPPER) {
-        // A model mapper writes its series' changes into its model without checking that the
-        // model is still there (Qt clears the pointer when the model goes). Before its model is
-        // destroyed it gets an empty model of its own instead, and the series follows that one.
-        // (setSeries(nullptr) would not do: the XY, bar, pie and box plot mappers only stop
-        // following the series and keep pointing at it.)
-        QObject *model = nullptr;
-        std::function<void()> swap;
-        auto take = [&](auto *m) {
-            if (!m || swap || !m->series()) return;   // without a series it writes nothing
-            model = m->model();
-            swap = [m] { m->setModel(new QStandardItemModel(m)); };
-        };
-        take(qobject_cast<QVXYModelMapper *>(owner));
-        take(qobject_cast<QHXYModelMapper *>(owner));
-        take(qobject_cast<QVBarModelMapper *>(owner));
-        take(qobject_cast<QHBarModelMapper *>(owner));
-        take(qobject_cast<QVPieModelMapper *>(owner));
-        take(qobject_cast<QHPieModelMapper *>(owner));
-        take(qobject_cast<QVBoxPlotModelMapper *>(owner));
-        take(qobject_cast<QHBoxPlotModelMapper *>(owner));
-        take(qobject_cast<QCandlestickModelMapper *>(owner));
-        if (swap && hit(model) && held()) swap();
-    }
-#endif
-#ifdef QTC_HAS_MODULE_Positioning
-    if (kinds & OK_GEO) {
-        auto *m = static_cast<QGeoAreaMonitorSource *>(owner);
-        if (hit(m->positionInfoSource()) && held()) m->setPositionInfoSource(nullptr);
-    }
-    if (kinds & OK_NMEA) {
-        QIODevice *dev = nullptr;
-        if (auto *n = qobject_cast<QNmeaPositionInfoSource *>(owner)) dev = n->device();
-        else if (auto *n = qobject_cast<QNmeaSatelliteInfoSource *>(owner)) dev = n->device();
-        if (hit(dev)) pin();   // the device can be set only once
-    }
-#endif
-#ifdef QTC_HAS_MODULE_WebSockets
-    if (kinds & OK_WEBSOCKET) {
-        // setMaskGenerator(nullptr) returns to the built-in generator, which itself cannot go
-        auto *w = static_cast<QWebSocket *>(owner);
-        const QObject *g = w->maskGenerator();
-        if (hit(g) && held()) w->setMaskGenerator(nullptr);
-    }
-#endif
-#ifdef QTC_HAS_MODULE_Mqtt
-    if (kinds & OK_MQTT) {
-        // the client keeps its transport by a plain pointer (setTransport, or a socket of its own
-        // that it deletes itself), and letting go of it (setTransport(nullptr)) crashes: the
-        // transport goes with the client
-        if (hit(static_cast<QMqttClient *>(owner)->transport())) pin();
-    }
-#endif
-#ifdef QTC_HAS_MODULE_NetworkAuth
-    if (kinds & OK_OAUTH) {
-        // the built-in reply handler (what replyHandler() returns when none was set) belongs to
-        // the OAuth object, which deletes it; one set with setReplyHandler is watched and may go
-        auto *a = static_cast<QAbstractOAuth *>(owner);
-        QAbstractOAuthReplyHandler *cur = a->replyHandler();
-        a->setReplyHandler(nullptr);
-        QAbstractOAuthReplyHandler *def = a->replyHandler();
-        if (cur != def) a->setReplyHandler(cur);
-        if (hit(def)) pin();
-    }
-#endif
+    for (const ModuleExt *e : module_exts())
+        if (e->visit) e->visit(owner, kinds, ctx);
     return st;
 }
 
@@ -811,10 +534,8 @@ QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
         if (qobject_cast<QAbstractItemView *>(o)) typed |= OK_COMPLETER | OK_COMBO;
         if (qobject_cast<QStyle *>(o)) typed |= OK_SCENE | OK_GWIDGET;
 #endif
-#ifdef QTC_HAS_MODULE_Network
-        if (qobject_cast<QNetworkCookieJar *>(o)) typed |= OK_NAM;
-        if (qobject_cast<QNetworkAccessManager *>(o)) typed |= OK_QMLENGINE;
-#endif
+        for (const ModuleExt *e : module_exts())
+            if (e->typed) typed |= e->typed(o);
         Q_UNUSED(o);
         return typed;
     };
@@ -822,10 +543,10 @@ QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
     auto type_of = [&typed, &type_of_uncached](QObject *o) {
         const QObjectData *d = KindsPeek::of(o);
         if (d && d->metaObject) { typed |= type_of_uncached(o); return; }
-        static auto *memo = new QHash<const QMetaObject *, uint64_t>;
+        QHash<const QMetaObject *, uint64_t> &memo = typed_memo();
         const QMetaObject *mo = o->metaObject();
-        auto it = memo->constFind(mo);
-        if (it == memo->constEnd()) it = memo->insert(mo, type_of_uncached(o));
+        auto it = memo.constFind(mo);
+        if (it == memo.constEnd()) it = memo.insert(mo, type_of_uncached(o));
         typed |= *it;
     };
     type_of(x);
@@ -846,9 +567,6 @@ QString qt_owned_by_class(QObject *x);
 static bool qt_owned_class(QObject *x) {
     const auto relevant = [](QObject *o) {
         if (qobject_cast<QThread *>(o) || qobject_cast<QAbstractEventDispatcher *>(o) || qobject_cast<QThreadPool *>(o)) return true;
-#ifdef QTC_HAS_MODULE_Coap
-        if (qobject_cast<QCoapReply *>(o)) return true;
-#endif
 #ifdef QTC_HAS_GUI
         if (qobject_cast<QScreen *>(o) || qobject_cast<QStyleHints *>(o) || qobject_cast<QInputMethod *>(o) ||
             qobject_cast<QClipboard *>(o) || qobject_cast<QMimeData *>(o) || o->inherits("QWidgetWindow") ||
@@ -862,26 +580,16 @@ static bool qt_owned_class(QObject *x) {
 #ifdef QTC_HAS_WIDGETS
         if (qobject_cast<QStyle *>(o)) return true;
 #endif
-#ifdef QTC_HAS_MODULE_Sql
-        if (qobject_cast<QSqlDriver *>(o)) return true;
-#endif
-#ifdef QTC_HAS_MODULE_Qml
-        if (qobject_cast<QQmlContext *>(o)) return true;
-#endif
-#ifdef QTC_HAS_MODULE_Quick
-        if (qobject_cast<QQuickItem *>(o) || o->inherits("QQuickRootItem") || qobject_cast<QQuickRenderControl *>(o)) return true;
-#endif
-#ifdef QTC_HAS_MODULE_Charts
-        if (qobject_cast<QLegend *>(o) || qobject_cast<QLegendMarker *>(o)) return true;
-#endif
+        for (const ModuleExt *e : module_exts())
+            if (e->qt_owned_class && e->qt_owned_class(o)) return true;
         return false;
     };
     const QObjectData *d = KindsPeek::of(x);
     if (d && d->metaObject) return relevant(x);   // a dynamic meta-object: asked every time
-    static auto *memo = new QHash<const QMetaObject *, bool>;
+    QHash<const QMetaObject *, bool> &memo = owned_memo();
     const QMetaObject *mo = x->metaObject();
-    auto it = memo->constFind(mo);
-    if (it == memo->constEnd()) it = memo->insert(mo, relevant(x));
+    auto it = memo.constFind(mo);
+    if (it == memo.constEnd()) it = memo.insert(mo, relevant(x));
     return *it;
 }
 
@@ -902,12 +610,6 @@ QString qt_owned_by_class(QObject *x) {
     }
     if (qobject_cast<QAbstractEventDispatcher *>(x)) return QStringLiteral("the event dispatcher of a thread");
     if (qobject_cast<QThreadPool *>(x) && x == QThreadPool::globalInstance()) return QStringLiteral("Qt's global thread pool");
-#ifdef QTC_HAS_MODULE_Coap
-    // the client's protocol object, on a thread of its own, keeps a running reply by a plain pointer
-    if (auto *r = qobject_cast<QCoapReply *>(x); r && !r->isFinished())
-        return QStringLiteral("a CoAP reply still running (the client's protocol thread uses it); abort() it, "
-                              "and destroy it once it has finished");
-#endif
 #ifdef QTC_HAS_GUI
     if (qobject_cast<QScreen *>(x)) return QStringLiteral("a screen (screens belong to the windowing system)");
     if (qobject_cast<QStyleHints *>(x)) return QStringLiteral("the application's style hints");
@@ -939,25 +641,9 @@ QString qt_owned_by_class(QObject *x) {
         }
     }
 #endif
-#ifdef QTC_HAS_MODULE_Sql
-    // drivers live inside QSqlDatabase's shared data (or are a static null driver)
-    if (qobject_cast<QSqlDriver *>(x) && !made_by_qtc(x))
-        return QStringLiteral("the driver of a QSqlDatabase; use QSqlDatabase::removeDatabase");
-#endif
-#ifdef QTC_HAS_MODULE_Qml
-    if (qobject_cast<QQmlContext *>(x) && !made_by_qtc(x)) return QStringLiteral("a context made by the QML engine");
-#endif
-#ifdef QTC_HAS_MODULE_Quick
-    if (auto *item = qobject_cast<QQuickItem *>(x))
-        if (item->window() && item->window()->contentItem() == item) return QStringLiteral("the content item of a Quick window");
-    if (x->inherits("QQuickRootItem")) return QStringLiteral("the content item of a Quick window");
-    if (auto *rc = qobject_cast<QQuickRenderControl *>(x))
-        if (rc->window()) return QStringLiteral("the render control of a live QQuickWindow; destroy the window first");
-#endif
-#ifdef QTC_HAS_MODULE_Charts
-    if (qobject_cast<QLegend *>(x)) return QStringLiteral("the legend of a chart");
-    if (qobject_cast<QLegendMarker *>(x)) return QStringLiteral("a marker of a chart legend");
-#endif
+    for (const ModuleExt *e : module_exts())
+        if (e->qt_owned_by_class)
+            if (QString why = e->qt_owned_by_class(x); !why.isEmpty()) return why;
     return QString();
 }
 
@@ -1497,9 +1183,9 @@ QString roles_movable(QObject *root) {
     for (QObject *x : tree) {
         if (QString why = qt_owned(x); !why.isEmpty()) return QStringLiteral("%1 is %2").arg(label(x), why);
         if (x->isWidgetType() || x->isWindowType()) return QStringLiteral("%1 is a widget or a window").arg(label(x));
-#ifdef QTC_HAS_MODULE_Qml
-        if (qmlContext(x) || qmlEngine(x)) return QStringLiteral("%1 belongs to a QML engine").arg(label(x));
-#endif
+        for (const ModuleExt *e : module_exts())
+            if (e->not_movable)
+                if (QString why = e->not_movable(x); !why.isEmpty()) return QStringLiteral("%1 %2").arg(label(x), why);
         if (qobject_cast<QThread *>(x) || qobject_cast<QThreadPool *>(x) || qobject_cast<QAbstractItemModel *>(x) ||
             qobject_cast<QAbstractAnimation *>(x) || qobject_cast<QTranslator *>(x) || qobject_cast<QMimeData *>(x) ||
             x->inherits("QNetworkInformation"))
@@ -1606,23 +1292,6 @@ bool part_free(const QObject *receiver, const QObject *old) {
     return true;
 }
 
-// Qt's NMEA sources read their device for as long as it says bytes are available, and a device
-// open without reading says so while every read fails: the simulation reader spins forever. A
-// device an NMEA source reads is reopened for reading only.
-bool nmea_open_ok(const QObject *device, int mode) {
-    if (mode & QIODevice::ReadOnly) return true;
-#ifdef QTC_HAS_MODULE_Positioning
-    auto *x = const_cast<QObject *>(device);
-    for (const auto &[o, kinds] : candidates(x)) {
-        if (!(kinds & OK_NMEA)) continue;
-        if (auto *n = qobject_cast<QNmeaPositionInfoSource *>(o); n && n->device() == device) return false;
-        if (auto *n = qobject_cast<QNmeaSatelliteInfoSource *>(o); n && n->device() == device) return false;
-    }
-#else
-    Q_UNUSED(device);
-#endif
-    return true;
-}
 
 bool free_for(const QObject *receiver, const QObject *arg) {
     if (!arg) return true;
@@ -1645,38 +1314,7 @@ bool proxy_source_free(const QObject *proxy) {
     return true;
 }
 
-// Qt Charts crashes when an area series in a chart has a boundary line whose point label
-// clipping is off (the default is on): the boundary's chart item updates a graphics item that
-// is not set up yet when it is built, and again when the clipping changes, also after the area
-// series left the chart (its chart item goes only with the next deferred delete). So the
-// boundary lines of an area series keep their clipping on.
-bool bound_clipping_ok(const QObject *series) {
-#ifdef QTC_HAS_MODULE_Charts
-    for (const auto &[o, kinds] : candidates(const_cast<QObject *>(series))) {
-        if (!(kinds & OK_AREA)) continue;
-        auto *a = static_cast<QAreaSeries *>(o);
-        if (a->upperSeries() == series || a->lowerSeries() == series) return false;
-    }
-#else
-    (void)series;
-#endif
-    return true;
-}
 
-// An area series also needs its upper series when it goes into a chart: its chart item is built
-// without one then, and animating it reads through the missing upper line.
-bool area_clipping_ok(const QObject *series) {
-#ifdef QTC_HAS_MODULE_Charts
-    if (auto *a = qobject_cast<const QAreaSeries *>(series)) {
-        if (!a->upperSeries()) return false;
-        for (const QLineSeries *l : {a->upperSeries(), a->lowerSeries()})
-            if (l && !l->pointLabelsClipping()) return false;
-    }
-#else
-    (void)series;
-#endif
-    return true;
-}
 
 bool doc_layout_ok(const QObject *doc, const QObject *layout) {
 #ifdef QTC_HAS_WIDGETS
@@ -1692,20 +1330,6 @@ bool doc_layout_ok(const QObject *doc, const QObject *layout) {
     return true;
 }
 
-#ifdef QTC_HAS_MODULE_Qml
-// A component still loading asynchronously is called back by Qt's type loader when the load
-// completes, so it must stay alive until then: its handle is gone at once, the object goes later.
-bool roles_defer_delete(QObject *o) {
-    auto *c = qobject_cast<QQmlComponent *>(o);
-    if (!c || !c->isLoading()) return false;
-    QObject::connect(c, &QQmlComponent::statusChanged, c, [c](QQmlComponent::Status s) {
-        if (s != QQmlComponent::Loading) c->deleteLater();
-    });
-    return true;
-}
-#else
-bool roles_defer_delete(QObject *) { return false; }
-#endif
 
 // Objects that keep a plain pointer to an object they were made with, and have no getter
 // to check it later, become its children: they go with it instead of dangling. Those that
@@ -1722,26 +1346,8 @@ QString made_pin_reason(QObject *victim) {
 }
 
 void roles_adopt_new(QObject *o, const QList<QObject *> &made_with) {
-    (void)made_with;
-#ifdef QTC_HAS_MODULE_Qml
-    // a QQmlFileSelector calls its engine when it is destroyed (Qt 6.4 through a plain pointer)
-    if (qobject_cast<QQmlFileSelector *>(o))
-        for (QObject *a : made_with)
-            if (qobject_cast<QQmlEngine *>(a)) { made_pins().append(MadePin{o, a}); break; }
-#endif
-#ifdef QTC_HAS_MODULE_Qml
-    // a component keeps a plain pointer to its engine
-    if (auto *c = qobject_cast<QQmlComponent *>(o); c && !c->parent() && c->engine()) c->setParent(c->engine());
-#endif
-#ifdef QTC_HAS_MODULE_SpatialAudio
-    // a room uses its engine until it dies and has no getter for it (sounds and listeners are
-    // pinned through engine()); as the engine's child it would die after the engine's own
-    // destructor ran, which Qt 6.4 does not survive
-    if (qobject_cast<QAudioRoom *>(o))
-        for (QObject *a : made_with)
-            if (qobject_cast<QAudioEngine *>(a)) { made_pins().append(MadePin{o, a}); break; }
-#endif
-    (void)o;
+    for (const ModuleExt *e : module_exts())
+        if (e->adopt_new) e->adopt_new(o, made_with);
 }
 
 bool layout_accepts(const QObject *layout, const QObject *widget) {
@@ -1764,4 +1370,43 @@ bool layout_accepts(const QObject *layout, const QObject *widget) {
     return true;
 }
 
+// A module may need an object alive a while longer than qtc_destroy (a QML component still
+// loading): its handle is gone at once, the object goes later.
+bool roles_defer_delete(QObject *o) {
+    for (const ModuleExt *e : module_exts())
+        if (e->defer_delete && e->defer_delete(o)) return true;
+    return false;
+}
+
+// ------------------------------------------------------------ for the modules (qtc_module.h)
+
+static QList<const ModuleExt *> &exts() {
+    static auto *l = new QList<const ModuleExt *>;
+    return *l;
+}
+void register_module_ext(const ModuleExt *e) {
+    if (!exts().contains(e)) exts().append(e);
+    // what objects of a class can hold depends on the modules loaded: worked out again
+    kinds_memo().clear();
+    typed_memo().clear();
+    owned_memo().clear();
+}
+const QList<const ModuleExt *> &module_exts() { return exts(); }
+
+bool roles_inside(const QObject *o, const QObject *root) { return inside(o, root); }
+QString roles_label(const QObject *o) { return label(o); }
+bool roles_made_by_qtc(const QObject *o) { return made_by_qtc(o); }
+QList<QPair<QObject *, uint64_t>> roles_candidates(QObject *x) { return candidates(x); }
+void roles_pin_made(QObject *user, QObject *used) { made_pins().append(MadePin{user, used}); }
+
+}  // namespace qtc
+
+namespace qtc {
+// Qt's NMEA sources read their device for as long as it says bytes are available, and a device
+// open without reading says so while every read fails: the simulation reader spins forever. A
+// device an NMEA source reads is reopened for reading only.
+bool nmea_open_ok(const QObject *device, int mode) {
+    if (mode & QIODevice::ReadOnly) return true;
+    return !(g_module_hooks.nmea_reads && g_module_hooks.nmea_reads(device));
+}
 }  // namespace qtc

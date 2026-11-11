@@ -21,6 +21,15 @@ qtc_shutdown();
 The thread that calls `qtc_init` is the GUI thread; every other function must be
 called from it, except `qtc_post`.
 
+`libqtc` binds Qt Core, Gui and Widgets. Every other Qt module (Network, Sql,
+Qml, Quick, Multimedia, ...) is bound by a library of its own, `libqtc_<Module>`
+next to `libqtc`, which qtc loads the first time the program names one of its
+classes (`qtc_new`, a call on an object of that class, `qtc_describe`). Nothing
+is needed from the program, and a program that uses only widgets maps neither
+those libraries nor the Qt modules behind them. A deployment can leave out the
+`libqtc_<Module>` libraries (and Qt modules) its program does not use; a class of
+a missing module is then reported as unknown.
+
 ## Objects
 
 ```c
@@ -365,7 +374,7 @@ image of 100,000 x 100,000 pixels, a model with a billion rows.
 `qtc_describe(0, "QSlider")` returns JSON with the class's properties, signals,
 methods (with their parameters) and constructors; `qtc_describe(obj, "")` does the
 same for a live object, QML objects included. `qtc_class_count` and
-`qtc_class_at` list the bound classes. `manifest/qtc_api.json` has the same data
+`qtc_class_at` list the bound classes (loading every module library there is). `manifest/qtc_api.json` has the same data
 for all of them, for generating bindings in other languages.
 
 ## Testing your program
