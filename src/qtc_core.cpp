@@ -61,6 +61,7 @@
 #include <cstring>
 #include <memory>
 #include <span>
+#include <optional>
 #include <QtCore/QVarLengthArray>
 #ifdef Q_OS_UNIX
 #include <fcntl.h>
@@ -212,9 +213,13 @@ void Registry::release_slot(uint32_t idx) {
 uint64_t Registry::handle_for(QObject *o) {
     if (!o) return 0;
     std::lock_guard<std::recursive_mutex> lk(mu);
+    // made by make_obj just now: its destructor reports it (see Tracked)
+    QObject *fresh = g_tracked_new.load(std::memory_order_relaxed);
+    const bool tracked = fresh == o && gui_thread_ok();
+    if (fresh == o) g_tracked_new.store(nullptr, std::memory_order_relaxed);
     auto it = by_ptr.constFind(o);
     if (it != by_ptr.constEnd()) {
-        if (table[*it].qp) return make_handle(*it, table[*it].gen);
+        if (table[*it].alive()) return make_handle(*it, table[*it].gen);
         forget_dead(*it);   // an earlier object at this address died without notice
     }
     qtc_status err = 0;
@@ -223,12 +228,14 @@ uint64_t Registry::handle_for(QObject *o) {
     Slot &s = table[idx];
     s.kind = SK_OBJ;
     s.obj = o;
-    s.qp = o;
-    s.flags = 0;
+    s.flags = tracked ? uint8_t(SF_TRACKED | SF_GUI) : uint8_t(0);
     s.order = ++order_counter;
     by_ptr.insert(o, idx);
     live_objects++;
-    s.destroyed = QObject::connect(o, &QObject::destroyed, [](QObject *ob) { reg().on_destroyed(ob); });
+    if (!tracked) {
+        s.qp = o;
+        s.destroyed = QObject::connect(o, &QObject::destroyed, [](QObject *ob) { reg().on_destroyed(ob); });
+    }
     uint64_t h = make_handle(idx, s.gen);
     roles_register(o);
     return h;
@@ -258,7 +265,7 @@ bool Registry::made(const QObject *o) {
     auto it = by_ptr.constFind(const_cast<QObject *>(o));
     if (it == by_ptr.constEnd()) return false;
     const Slot &s = table[*it];
-    return s.kind == SK_OBJ && s.qp == o && (s.flags & SF_MADE);
+    return s.kind == SK_OBJ && s.obj == o && s.alive() && (s.flags & SF_MADE);
 }
 
 void Registry::set_owned(uint64_t h, bool owned) {
@@ -272,15 +279,33 @@ void Registry::set_owned(uint64_t h, bool owned) {
 }
 
 QObject *Registry::object(uint64_t h, qtc_status *err, bool allow_dying) {
+    if (!allow_dying && gui_thread_ok()) {   // see SF_GUI
+        const uint32_t idx = handle_index(h);
+        if (h && idx < table.size()) {
+            const Slot &s = table[idx];
+            if (s.gen == handle_gen(h) && s.kind == SK_OBJ && (s.flags & (SF_GUI | SF_DYING)) == SF_GUI && s.alive()) {
+                *err = 0;
+                return s.obj;
+            }
+        }
+    }
     std::lock_guard<std::recursive_mutex> lk(mu);
     QObject *o = lookup_locked(h, err, allow_dying);
     if (!o) return nullptr;
     // read under mu: an object of another thread cannot finish dying while mu is held
     QThread *t = o->thread();
-    if (t == QThread::currentThread()) return o;
-    if (!t && pull_orphan(o)) return o;
+    if (t == QThread::currentThread() || (!t && pull_orphan(o))) {
+        if (gui_thread_ok()) table[handle_index(h)].flags |= SF_GUI;
+        return o;
+    }
     *err = QTC_ERR_WRONG_THREAD;
     return nullptr;
+}
+
+void Registry::note_thread_change(QObject *o) {
+    std::lock_guard<std::recursive_mutex> lk(mu);
+    auto it = by_ptr.constFind(o);
+    if (it != by_ptr.constEnd() && *it < table.size()) table[*it].flags &= uint8_t(~SF_GUI);
 }
 
 QObject *Registry::object_anywhere(uint64_t h, qtc_status *err, bool allow_dying) {
@@ -308,7 +333,7 @@ uint64_t Registry::known_handle(const QObject *o) {
     auto it = by_ptr.constFind(const_cast<QObject *>(o));
     if (it == by_ptr.constEnd()) return 0;
     const Slot &s = table[*it];
-    if (s.kind != SK_OBJ || !s.qp || (s.flags & SF_DYING)) return 0;
+    if (s.kind != SK_OBJ || !s.alive() || (s.flags & SF_DYING)) return 0;
     return make_handle(*it, s.gen);
 }
 
@@ -343,7 +368,7 @@ QObject *Registry::lookup_locked(uint64_t h, qtc_status *err, bool allow_dying) 
     }
     if (s.kind == SK_FREE) { *err = QTC_ERR_STALE_HANDLE; return nullptr; }
     if (s.kind != SK_OBJ) { *err = QTC_ERR_WRONG_TYPE; return nullptr; }
-    if (!s.qp) {   // deleted while its signals were blocked
+    if (!s.alive()) {   // deleted while its signals were blocked
         if (gui_thread_ok()) forget_dead(idx);
         *err = QTC_ERR_STALE_HANDLE;
         return nullptr;
@@ -396,21 +421,40 @@ qtc_status Registry::free_value(uint64_t h) {
 
 qtc_status Registry::mark_dying(uint64_t h, QObject **out) {
     qtc_status err = 0;
-    QObject *o = object_anywhere(h, &err);
-    if (!o) return err;
     std::lock_guard<std::recursive_mutex> lk(mu);
+    QObject *o = lookup_locked(h, &err, false);
+    if (!o) return err;
     table[handle_index(h)].flags |= SF_DYING;
     *out = o;
     return QTC_OK;
 }
 
+// set_made and, for an object without a parent, set_owned, under one lock (after construction)
+static void mark_made(uint64_t h, bool owned) {
+    Registry &r = reg();
+    std::lock_guard<std::recursive_mutex> lk(r.mu);
+    const uint32_t idx = handle_index(h);
+    if (idx >= r.table.size()) return;
+    Slot &s = r.table[idx];
+    if (s.gen != handle_gen(h) || s.kind != SK_OBJ) return;
+    s.flags |= owned ? uint8_t(SF_MADE | SF_OWNED) : uint8_t(SF_MADE);
+}
+
 bool Registry::alive(uint64_t h) {
     if (h == 0) return false;
+    if (gui_thread_ok()) {   // values and GUI-thread objects: no lock (see SF_GUI)
+        const uint32_t idx = handle_index(h);
+        if (idx >= table.size()) return false;
+        const Slot &s = table[idx];
+        if (s.gen != handle_gen(h)) return false;
+        if (s.kind == SK_VAL) return true;
+        if (s.kind == SK_OBJ && (s.flags & SF_GUI)) return !(s.flags & SF_DYING) && s.alive();
+    }
     std::lock_guard<std::recursive_mutex> lk(mu);
     uint32_t idx = handle_index(h);
     if (idx >= table.size()) return false;
     const Slot &s = table[idx];
-    return s.gen == handle_gen(h) && s.kind != SK_FREE && !(s.flags & SF_DYING) && (s.kind != SK_OBJ || !s.qp.isNull());
+    return s.gen == handle_gen(h) && s.kind != SK_FREE && !(s.flags & SF_DYING) && (s.kind != SK_OBJ || s.alive());
 }
 
 bool Registry::receiver(uint64_t h, QObject **o, QVariant **v, qtc_status *err) {
@@ -429,6 +473,7 @@ bool Registry::receiver(uint64_t h, QObject **o, QVariant **v, qtc_status *err) 
     // as object(): read under mu, so an object of another thread cannot finish dying meanwhile
     QThread *t = x->thread();
     if (t == QThread::currentThread() || (!t && pull_orphan(x))) {
+        if (gui_thread_ok()) table[idx].flags |= SF_GUI;
         *o = x;
         return true;
     }
@@ -463,13 +508,17 @@ void Registry::on_destroyed(QObject *o) {
     if (on_object_destroyed_hook) on_object_destroyed_hook(o, handle);
 }
 
+std::atomic<QObject *> g_tracked_new{nullptr};
+
+void tracked_dying(QObject *o) { reg().on_destroyed(o); }
+
 void Registry::forget_dead(uint32_t idx) {
     QObject *o = nullptr;
     uint64_t handle = 0;
     {
         std::lock_guard<std::recursive_mutex> lk(mu);
         Slot &s = table[idx];
-        if (s.kind != SK_OBJ || s.qp) return;
+        if (s.kind != SK_OBJ || s.alive()) return;
         o = s.obj;   // only its address: the object itself is gone
         auto it = by_ptr.find(o);
         if (it != by_ptr.end() && *it == idx) by_ptr.erase(it);
@@ -488,7 +537,7 @@ void Registry::sweep_dead() {
     {
         std::lock_guard<std::recursive_mutex> lk(mu);
         for (uint32_t i = 0; i < table.size(); i++)
-            if (table[i].kind == SK_OBJ && !table[i].qp) dead.push_back(i);
+            if (table[i].kind == SK_OBJ && !table[i].alive()) dead.push_back(i);
     }
     for (uint32_t i : dead) forget_dead(i);
 }
@@ -509,7 +558,7 @@ void Registry::sweep_blocked() {
         for (size_t i = 0; i < blocked_.size();) {
             if (blocked_[i]) { i++; continue; }
             auto it = by_ptr.constFind(blocked_raw_[i]);
-            if (it != by_ptr.constEnd() && !table[*it].qp) dead.push_back(*it);
+            if (it != by_ptr.constEnd() && !table[*it].alive()) dead.push_back(*it);
             blocked_[i] = blocked_.back();
             blocked_.pop_back();
             blocked_raw_[i] = blocked_raw_.back();
@@ -523,7 +572,7 @@ std::vector<QPointer<QObject>> Registry::owned_roots() {
     std::lock_guard<std::recursive_mutex> lk(mu);
     std::vector<std::pair<uint32_t, QPointer<QObject>>> v;
     for (const Slot &s : table)
-        if (s.kind == SK_OBJ && (s.flags & SF_OWNED) && s.qp) v.push_back({s.order, s.qp});
+        if (s.kind == SK_OBJ && (s.flags & SF_OWNED) && s.alive()) v.push_back({s.order, QPointer<QObject>(s.obj)});
     std::sort(v.begin(), v.end(), [](auto &a, auto &b) { return a.first > b.first; });
     std::vector<QPointer<QObject>> out;
     for (auto &p : v) out.push_back(p.second);
@@ -737,8 +786,11 @@ void Ret::set_variant(const QVariant &x) {
 // The pending arguments and the last result are reached through pointers, so that a call can
 // take the arguments over, and hand its result back, by swapping a pointer instead of moving
 // sixteen arguments' strings and variants.
-static ArgStack *&args_ptr() { static ArgStack *a = new ArgStack; return a; }
-static Ret *&ret_ptr() { static Ret *r = new Ret; return r; }
+// (plain pointers made at load time: no guard to test on every call; never freed)
+static ArgStack *g_args = new ArgStack;
+static Ret *g_ret = new Ret;
+static inline ArgStack *&args_ptr() { return g_args; }
+static inline Ret *&ret_ptr() { return g_ret; }
 ArgStack &args() { return *args_ptr(); }
 Ret &ret() { return *ret_ptr(); }
 
@@ -749,18 +801,17 @@ struct FramePool {
     std::vector<ArgStack *> st;   // never freed: they live as long as the process
     std::vector<Ret *> r;
     int depth = 0;
+    Q_NEVER_INLINE void grow() {
+        st.push_back(new ArgStack);
+        r.push_back(new Ret);
+    }
     int take() {
-        if (depth == int(st.size())) {
-            st.push_back(new ArgStack);
-            r.push_back(new Ret);
-        }
+        if (Q_UNLIKELY(depth == int(st.size()))) grow();
         return depth++;
     }
 };
-FramePool &frames() {
-    static auto *p = new FramePool;
-    return *p;
-}
+FramePool *g_frames = new FramePool;
+inline FramePool &frames() { return *g_frames; }
 }  // namespace
 
 // A call: its frame takes the pushed arguments (the pending stack becomes the frame's empty one)
@@ -2298,7 +2349,7 @@ static qtc_status do_call_in(uint64_t receiver, qtc_str method, ArgStack &st, Re
     QObject *o = nullptr;
     QVariant *v = nullptr;
     qtc_status err = 0;
-    if (!reg().receiver(receiver, &o, &v, &err)) {
+    if (!reg().receiver_gui(receiver, &o, &v, &err)) {
         if (err == QTC_ERR_WRONG_TYPE) return fail(err, "receiver is not an object or value");
         return fail(err, err == QTC_ERR_STALE_HANDLE ? "the receiver was destroyed" : "receiver");
     }
@@ -2566,6 +2617,15 @@ QTC_API qtc_obj qtc_new(qtc_str class_name) {
     });
 }
 
+// whether events are queued for o or anything inside it (QObjectData::postedEvents)
+static bool posted_in_tree(QObject *o, int depth = 0) {
+    const QObjectData *d = DPtrPeek::of(o);
+    if (!d || d->postedEvents.loadRelaxed() > 0 || depth > 1000) return true;
+    for (QObject *c : o->children())
+        if (posted_in_tree(c, depth + 1)) return true;
+    return false;
+}
+
 QTC_API qtc_status qtc_destroy(qtc_obj obj) {
     return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
         qtc_status err = 0;
@@ -2588,7 +2648,13 @@ QTC_API qtc_status qtc_destroy(qtc_obj obj) {
 #endif
         QObject *x = nullptr;
         if (qtc_status e = reg().mark_dying(obj, &x)) return fail(e, "qtc_destroy");
-        if (!roles_defer_delete(x)) x->deleteLater();
+        if (roles_defer_delete(x)) return QTC_OK;
+        // Deleting a QObject is unsafe while it handles an event, or from another thread. Outside
+        // override handlers no Qt code is running (qtc_wait has returned), so it goes now, as
+        // `delete` would in C++; inside one, the object may be what Qt is busy with: later. So
+        // does a tree with events still queued for it (a queued call runs before the delete).
+        if (ov_depth() == 0 && x->thread() == QThread::currentThread() && !posted_in_tree(x)) delete x;
+        else x->deleteLater();
         return QTC_OK;
     });
 }
@@ -2899,7 +2965,7 @@ bool known_live(const QObject *p, const QObject *root) {
         Registry &r = reg();
         std::lock_guard<std::recursive_mutex> lk(r.mu);
         auto it = r.by_ptr.constFind(const_cast<QObject *>(p));
-        if (it != r.by_ptr.constEnd() && r.table[*it].qp) return true;
+        if (it != r.by_ptr.constEnd() && r.table[*it].alive()) return true;
     }
     return root && (p == root || root->findChildren<QObject *>().contains(const_cast<QObject *>(p)));
 }
@@ -3333,14 +3399,90 @@ static QByteArray bound_setter_uncached(const QObject *o, const QByteArray &prop
     return QByteArray();
 }
 
+namespace qtc {
+// entry_pick (below), for the property cache
+const Cand *entry_pick_one(std::span<const Cand> cands, Arg *a, int n);
+}
+
+// A property write worked out once per class, property name and argument kind: the property,
+// and the setter qtc_call would pick for such an argument (GUI thread).
+struct PropSlot {
+    const QMetaObject *mo = nullptr;
+    uint32_t gen = 0;
+    int kind = -1;
+    QByteArray name;
+    int idx = -1;
+    bool plain = false;               // a writable, non-enum property of a static meta-object
+    const MethodDef *md = nullptr;    // its bound setter for this kind of argument (null: none, or not one choice)
+    bool has_setter = false;
+    bool owner_kind = false;
+};
+static PropSlot g_props[512];
+static PropSlot &prop_slot(const QMetaObject *mo, const char *p, int64_t len, int kind) {
+    const uint64_t k = (uint64_t(reinterpret_cast<uintptr_t>(mo)) >> 4) * 31 + bytes_hash(p, len) + uint64_t(kind) * 7;
+    return g_props[(k * 0x9E3779B97F4A7C15ull) >> 55];
+}
+
 static qtc_status prop_set_impl(uint64_t obj, qtc_str name, bool dynamic) {
     CallFrame f;
     qtc_status err = 0;
     QObject *o = reg().object(obj, &err);
     if (!o) return fail(err, "qtc_prop_set");
+    ArgStack &st = *f.st;
+    // the cached path: a plain property set through its bound setter
+    if (!dynamic && st.n == 1 && !st.overflow && name.data && name.len > 0 && name.len <= 256) {
+        const QObjectData *d = DPtrPeek::of(o);
+        const QMetaObject *mo = o->metaObject();
+        if (!(d && d->metaObject)) {
+            PropSlot &ps = prop_slot(mo, name.data, name.len, st.a[0].kind);
+            if (ps.mo == mo && ps.gen == g_cand_gen && ps.kind == st.a[0].kind && ps.name.size() == name.len &&
+                std::memcmp(ps.name.constData(), name.data, size_t(name.len)) == 0 && ps.plain && ps.md) {
+                QVariant v;   // the value must suit the property, as below
+                if (int e = arg_to_metatype(st.a[0], mo->property(ps.idx).metaType(), v, 0)) return e;
+                std::optional<QPointer<QObject>> owner;
+                if (ps.owner_kind && roles_is_owner(o)) owner.emplace(o);
+                f.r->clear();
+                const int rc = ps.md->fn((ps.md->flags & MF_STATIC) ? nullptr : o, st.a, 1, f.r);
+                if (owner && *owner) roles_note_call(*owner);
+                if (rc) {
+                    if (t_err != rc) fail(rc, QStringLiteral("%1.%2 failed").arg(QLatin1StringView(mo->className()), QString::fromUtf8(ps.name)));
+                    return rc;
+                }
+                return QTC_OK;
+            }
+            if (!(ps.mo == mo && ps.gen == g_cand_gen && ps.kind == st.a[0].kind && ps.name.size() == name.len &&
+                  std::memcmp(ps.name.constData(), name.data, size_t(name.len)) == 0)) {
+                // work it out for next time
+                PropSlot n;
+                n.mo = mo;
+                n.gen = g_cand_gen;
+                n.kind = st.a[0].kind;
+                n.name = QByteArray(name.data, qsizetype(name.len));
+                n.idx = mo->indexOfProperty(n.name.constData());
+                if (n.idx >= 0) {
+                    const QMetaProperty p = mo->property(n.idx);
+                    n.plain = p.isWritable() && !p.isEnumType();
+                    const QByteArray setter = bound_setter(o, n.name);
+                    n.has_setter = !setter.isEmpty();
+                    if (n.plain && n.has_setter && !(setter == "setParent" || setter == "setParentItem" || setter == "blockSignals")) {
+                        CandList cands;
+                        object_cands(o, nullptr, setter, QByteArray(), cands);
+                        uint32_t nx = 0;
+                        ov_extras(o, &nx);
+                        if (!nx)
+                            if (const Cand *c = entry_pick_one(std::span<const Cand>(cands.data(), size_t(cands.size())), st.a, 1)) {
+                                QString why;
+                                if (!c->cls || need_ok(c->cls, &why)) n.md = c->md;
+                            }
+                    }
+                    n.owner_kind = roles_may_own(o);
+                }
+                ps = n;
+            }
+        }
+    }
     QByteArray pn;
     if (!read_bytes(name, pn, "name")) return t_err;
-    ArgStack &st = *f.st;
     if (st.overflow) return fail(QTC_ERR_BAD_ARGS, "qtc_prop_set: bad argument");
     if (st.n != 1) return fail(QTC_ERR_BAD_ARGS, QStringLiteral("qtc_prop_set: expected 1 argument, got %1").arg(st.n));
     const QMetaObject *mo = o->metaObject();
@@ -4084,3 +4226,351 @@ static void message_handler(QtMsgType type, const QMessageLogContext &ctx, const
     std::fprintf(stderr, "%s\n", m.constData());
     std::fflush(stderr);
 }
+
+// =================================================== direct entry points
+//
+// gen/entries.py makes one exported function per bound signature (qtcm_*) and constructor
+// (qtcn_*), declared in qtc_direct.h. Each converts its typed arguments the way qtc_arg_* would
+// and comes here with the signature's number. What qtc_call works out from a method string on
+// every call (the name, its candidates, which overload fits the arguments) is worked out here on
+// the first call per receiver class and signature and kept; the call itself then goes straight to
+// the thunk, which checks and converts every argument as it does for qtc_call. Anything the cache
+// cannot stand for (dynamic meta-objects, an overridable object's protected methods, methods
+// qtc_call treats specially, a choice that depends on more than the class) takes qtc_call's own
+// path with the same arguments, so the two never disagree.
+
+namespace qtc {
+
+bool entry_ready() {
+    if (Q_UNLIKELY(!is_inited())) { fail(QTC_ERR_NOT_INITIALIZED, "qtc_init has not been called"); return false; }
+    if (Q_UNLIKELY(!gui_thread_ok())) {
+        fail(QTC_ERR_WRONG_THREAD, "qtc functions must be called from the thread that called qtc_init");
+        return false;
+    }
+    return true;
+}
+
+bool put_str(Arg &x, qtc_str v) {
+    if (!read_str(v, x.s, "argument")) return false;
+    x.kind = AK_STR;
+    return true;
+}
+
+bool put_bytes(Arg &x, qtc_str v) {
+    if (!read_bytes(v, x.bytes, "argument")) return false;
+    x.kind = AK_BYTES;
+    return true;
+}
+
+bool put_val(Arg &x, uint64_t v) {
+    qtc_status err = 0;
+    QVariant *p = reg().value(v, &err);
+    if (!p) {
+        if (err == QTC_ERR_WRONG_TYPE) { x.kind = AK_OBJ; x.h = v; return true; }   // an object passed as a value
+        fail(err, "argument");
+        return false;
+    }
+    x.kind = AK_VAL;
+    x.v = *p;
+    return true;
+}
+
+namespace {
+
+// The result of an entry becomes ret(), as a call's does (see CallFrame); the arguments pushed
+// with qtc_arg_* stay as they are.
+struct EntryFrame {
+    Ret *r;
+    ArgStack *st;   // free for the entry's own use (empty at both ends)
+    int d;
+    EntryFrame() {
+        FramePool &p = frames();
+        d = p.take();
+        r = p.r[d];
+        st = p.st[d];
+    }
+    ~EntryFrame() {
+        FramePool &p = frames();
+        --p.depth;
+        std::swap(ret_ptr(), p.r[d]);
+        p.r[d]->clear_all();
+    }
+    EntryFrame(const EntryFrame &) = delete;
+    EntryFrame &operator=(const EntryFrame &) = delete;
+};
+
+// What a signature number stands for, made on first use (GUI thread). Never freed.
+const MethodInfo *entry_info(uint32_t id) {
+    static std::vector<const MethodInfo *> *infos = nullptr;
+    if (!infos) infos = new std::vector<const MethodInfo *>(g_entry_count, nullptr);
+    const MethodInfo *&m = (*infos)[id];
+    if (!m) {
+        const EntryDesc &e = g_entries[id];
+        QByteArray raw(e.sig, qsizetype(e.len)), name, sig;
+        split_method_uncached(raw, name, sig);
+        m = new MethodInfo{raw, name, sig, denied_methods().contains(name), name == "setParent", name == "blockSignals",
+                           name == "createWindowContainer"};
+    }
+    return m;
+}
+
+// One resolved (receiver class, signature): the method to call, or none (qtc_call's path).
+struct EntrySlot {
+    const void *key = nullptr;      // the QMetaObject (objects) or the QMetaType interface (values)
+    uint32_t id = 0;
+    uint32_t gen = 0;
+    bool resolved = false;
+    bool owner_kind = false;        // objects of this class can hold others (qtc_roles.cpp)
+    int base = -1;                  // values: the base class the method is declared in
+    const MethodDef *md = nullptr;
+    const ClassDef *cls = nullptr;  // objects: the declaring class (need_ok); values: the value's class
+};
+EntrySlot g_entry_cache[4096];
+EntrySlot &entry_slot(const void *key, uint32_t id) {
+    const uint64_t k = (uint64_t(reinterpret_cast<uintptr_t>(key)) >> 4) ^ (uint64_t(id) * 0x9E3779B1u);
+    return g_entry_cache[(k * 0x9E3779B97F4A7C15ull) >> 52];
+}
+
+// The candidate qtc_call would pick for these arguments, if the same one is picked for any
+// arguments of these kinds: every candidate of one signature has the same parameter types, so
+// what decides between them (statically typed, arity, const, the most derived class) does not
+// depend on the values. Null when qtc_call's path has to decide.
+const Cand *entry_pick(std::span<const Cand> cands, Arg *a, int n) {
+    if (n > kMaxArgs) return nullptr;
+    static ArgStack *st = new ArgStack;   // GUI thread; only used here, on a cache miss
+    st->clear();
+    for (int i = 0; i < n; i++) st->a[i] = a[i];
+    st->n = n;
+    int64_t best = 0, second = 0;
+    const Cand *bc = nullptr, *sc = nullptr;
+    for (const Cand &c : cands) {
+        int h = 0;
+        const int64_t s = score(c, *st, &h);
+        if (h) { st->clear(); return nullptr; }
+        if (s > best) { second = best; sc = bc; best = s; bc = &c; }
+        else if (s > second) { second = s; sc = &c; }
+    }
+    st->clear();
+    if (!bc || !bc->md || bc->call_n > 0 || bc->skip) return nullptr;
+    if (sc && second == best && cand_sig(*sc) != cand_sig(*bc)) return nullptr;
+    return bc;
+}
+
+}  // namespace
+
+const Cand *entry_pick_one(std::span<const Cand> cands, Arg *a, int n) { return entry_pick(cands, a, n); }
+
+namespace {
+
+qtc_status entry_failed(qtc_status rc, const Label &what, const MethodDef *md) {
+    if (rc == QTC_ERR_UNSUPPORTED)
+        return fail(rc, QStringLiteral("%1: %2 is not available in this Qt build").arg(what.str(), QLatin1StringView(md->sig)));
+    if (t_err != rc) fail(rc, QStringLiteral("%1 failed").arg(what.str()));
+    return rc;
+}
+
+// qtc_call's own path, with the entry's arguments
+qtc_status entry_slow(uint64_t self, uint32_t id, Arg *a, int n) {
+    if (n > kMaxArgs) return fail(QTC_ERR_BAD_ARGS, "too many arguments");
+    FramePool &p = frames();
+    const int d = p.take();
+    ArgStack &st = *p.st[d];
+    st.clear();
+    for (int i = 0; i < n; i++) st.a[i] = a[i];
+    st.n = n;
+    const EntryDesc &e = g_entries[id];
+    qtc_status rc = do_call_in(self, qtc_str{e.sig, int64_t(e.len)}, st, *p.r[d]);
+    st.clear();
+    --p.depth;
+    std::swap(ret_ptr(), p.r[d]);
+    p.r[d]->clear_all();
+    return rc;
+}
+
+qtc_status entry_object(QObject *o, uint64_t self, uint32_t id, Arg *a, int n) {
+    const QObjectData *d = DPtrPeek::of(o);
+    if (d && d->metaObject) return entry_slow(self, id, a, n);   // a dynamic meta-object
+    if (g_entries[id].flags & 2) {                                 // an overridable object's protected methods
+        uint32_t nx = 0;
+        ov_extras(o, &nx);
+        if (nx) return entry_slow(self, id, a, n);
+    }
+    const QMetaObject *mo = o->metaObject();
+    EntrySlot &s = entry_slot(mo, id);
+    if (s.key != mo || s.id != id || s.gen != g_cand_gen || !s.resolved) {
+        const MethodInfo *info = entry_info(id);
+        CandKey key{mo, info->name, info->sig, false, qml_object(o)};
+        auto it = cand_cache().constFind(key);
+        if (it == cand_cache().constEnd()) {
+            auto fresh = std::make_shared<std::vector<Cand>>();
+            collect_object(o, info->name, info->sig, false, *fresh);
+            it = cand_cache().insert(key, std::move(fresh));
+        }
+        const std::vector<Cand> &v = **it;
+        const Cand *c = entry_pick(std::span<const Cand>(v.data(), v.size()), a, n);
+        QString why;
+        if (c && c->cls && !need_ok(c->cls, &why)) c = nullptr;   // qtc_call's path says why (the kind is fixed until qtc_shutdown)
+        s = EntrySlot{mo, id, g_cand_gen, true, roles_may_own(o), -1, c ? c->md : nullptr, c ? c->cls : nullptr};
+    }
+    const MethodDef *md = s.md;
+    if (!md) return entry_slow(self, id, a, n);
+    if ((md->flags & MF_BLOCKING) && ov_depth() > 0) {
+        const MethodInfo *info = entry_info(id);
+        return fail(QTC_ERR_STATE, QStringLiteral("%1::%2: %3 waits in an event loop, which an override handler may not start")
+                                       .arg(QLatin1StringView(mo->className()), QLatin1StringView(info->name), QLatin1StringView(md->sig)));
+    }
+    // as in do_call_in: an owner is looked at again after a call that may give it something to hold
+    std::optional<QPointer<QObject>> owner;
+    if (s.owner_kind && roles_is_owner(o)) owner.emplace(o);
+    EntryFrame f;   // its result is empty: the pool empties results it takes back
+    const int rc = md->fn((md->flags & MF_STATIC) ? nullptr : o, a, n, f.r);
+    if (owner && *owner) roles_note_call(*owner);
+    if (Q_UNLIKELY(rc)) {
+        const MethodInfo *info = entry_info(id);
+        return entry_failed(rc, Label{QLatin1StringView(mo->className()), QLatin1StringView(info->name), "%1::%2"}, md);
+    }
+    return QTC_OK;
+}
+
+qtc_status entry_value(QVariant *v, uint64_t self, uint32_t id, Arg *a, int n) {
+    const QtPrivate::QMetaTypeInterface *mt = v->metaType().iface();
+    EntrySlot &s = entry_slot(mt, id);
+    if (s.key != mt || s.id != id || s.gen != g_cand_gen || !s.resolved) {
+        const ClassDef *c = mt ? find_class(QByteArray(v->metaType().name() ? v->metaType().name() : "")) : nullptr;
+        const Cand *k = nullptr;
+        if (c) {
+            const MethodInfo *info = entry_info(id);
+            const std::vector<Cand> &cands = value_cands_cached(c, info->name, info->sig);
+            k = entry_pick(std::span<const Cand>(cands.data(), cands.size()), a, n);
+            if (k && k->base >= 0 && !c->upcast) k = nullptr;
+            QString why;
+            if (k && !need_ok(c, &why)) k = nullptr;
+        }
+        s = EntrySlot{mt, id, g_cand_gen, true, false, k ? k->base : -1, k ? k->md : nullptr, c};
+    }
+    const MethodDef *md = s.md;
+    if (!md) return entry_slow(self, id, a, n);
+    if ((md->flags & MF_BLOCKING) && ov_depth() > 0) return entry_slow(self, id, a, n);
+    void *p = nullptr;
+    if (!(md->flags & MF_STATIC)) {
+        p = v->data();
+        if (s.base >= 0) p = s.cls->upcast(p, s.base);
+    }
+    EntryFrame f;
+    const int rc = md->fn(p, a, n, f.r);
+    if (Q_UNLIKELY(rc)) {
+        const MethodInfo *info = entry_info(id);
+        return entry_failed(rc, Label{QLatin1StringView(s.cls->name), QLatin1StringView(info->name), "%1::%2"}, md);
+    }
+    return QTC_OK;
+}
+
+}  // namespace
+
+qtc_status entry_call(uint64_t self, uint32_t id, Arg *a, int n) {
+    try {
+        if (g_entries[id].flags & 1) return entry_slow(self, id, a, n);
+        QObject *o = nullptr;
+        QVariant *v = nullptr;
+        qtc_status err = 0;
+        if (Q_UNLIKELY(!reg().receiver_gui(self, &o, &v, &err))) {
+            if (err == QTC_ERR_WRONG_TYPE) return fail(err, "receiver is not an object or value");
+            return fail(err, err == QTC_ERR_STALE_HANDLE ? "the receiver was destroyed" : "receiver");
+        }
+        return o ? entry_object(o, self, id, a, n) : entry_value(v, self, id, a, n);
+    } catch (const std::exception &e) {
+        return fail(QTC_ERR_EXCEPTION, QString::fromUtf8(e.what()));
+    } catch (...) {
+        return fail(QTC_ERR_EXCEPTION, "unknown C++ exception");
+    }
+}
+
+namespace {
+
+struct CtorSlot {
+    uint32_t gen = 0;            // g_class_gen and g_cand_gen when resolved
+    uint32_t cgen = 0;
+    bool resolved = false;
+    const ClassDef *c = nullptr;
+    const MethodDef *md = nullptr;   // null: decided per call
+};
+
+CtorSlot &ctor_slot(uint32_t id) {
+    static std::vector<CtorSlot> *slots = nullptr;
+    if (!slots) slots = new std::vector<CtorSlot>(g_ctor_entry_count);
+    return (*slots)[id];
+}
+
+// after an object is made, as qtc_new does
+uint64_t entry_made_object(Ret &r, Arg *a, int n, const Label &what) {
+    if (r.kind != QTC_T_OBJ || !r.h) { fail(QTC_ERR_REJECTED, what.str()); return 0; }
+    qtc_status e = 0;
+    QObject *o = reg().object(r.h, &e);
+    if (o) {
+        mark_made(r.h, false);
+        QList<QObject *> made_with;
+        for (int i = 0; i < n; i++)
+            if (a[i].kind == AK_OBJ)
+                if (QObject *x = reg().object(a[i].h, &e)) made_with.append(x);
+        roles_adopt_new(o, made_with);
+        roles_constructed(o);
+        if (!o->parent()) reg().set_owned(r.h, true);
+    }
+    return r.h;
+}
+
+}  // namespace
+
+uint64_t entry_new(uint32_t id, Arg *a, int n) {
+    try {
+        const CtorEntryDesc &e = g_ctor_entries[id];
+        CtorSlot &s = ctor_slot(id);
+        if (!s.resolved || s.gen != g_class_gen || s.cgen != g_cand_gen) {
+            s = CtorSlot{g_class_gen, g_cand_gen, true, find_class(QByteArray(e.cls, qsizetype(e.cls_len))), nullptr};
+            if (s.c && s.c->nctors > 0 && !s.c->abstract) {
+                // the constructors of this signature (cut to these arguments), as qtc_new scores them
+                const auto all = ctor_span(s.c->ctors, s.c->nctors, s.c);
+                const QByteArray sig = QMetaObject::normalizedSignature(e.sig);
+                std::vector<Cand> mine;
+                for (const Cand &k : all)
+                    if (k.md && sig_matches(k.md, sig)) mine.push_back(k);
+                if (const Cand *k = entry_pick(std::span<const Cand>(mine.data(), mine.size()), a, n)) s.md = k->md;
+            }
+        }
+        const ClassDef *c = s.c;
+        if (!c) { fail(QTC_ERR_NOT_FOUND, QStringLiteral("no class named %1").arg(QLatin1StringView(e.cls))); return 0; }
+        const bool object = c->kind == CK_OBJECT;
+        if (object && (c->abstract || c->nctors == 0)) { fail(QTC_ERR_UNSUPPORTED, QStringLiteral("%1 cannot be created").arg(QLatin1StringView(c->name))); return 0; }
+        const Label what{QLatin1StringView(c->name), QLatin1StringView(), object ? "new %1" : "%1 value"};
+        EntryFrame f;
+        Ret &r = *f.r;
+        if (s.md) {
+            QString why;
+            if (!need_ok(c, &why)) { fail(QTC_ERR_STATE, why); return 0; }
+            r.clear();
+            if (const int rc = s.md->fn(nullptr, a, n, &r)) { entry_failed(rc, what, s.md); return 0; }
+        } else {
+            // qtc_new's own scoring, among all the class's constructors
+            if (n > kMaxArgs) { fail(QTC_ERR_BAD_ARGS, "too many arguments"); return 0; }
+            if (!object) {
+                QString why;
+                if (!need_ok(c, &why)) { fail(QTC_ERR_STATE, why); return 0; }
+            }
+            ArgStack &st = *f.st;
+            for (int i = 0; i < n; i++) st.a[i] = a[i];
+            st.n = n;
+            const qtc_status rc = run_candidates(ctor_span(c->ctors, c->nctors, c), nullptr, nullptr, what, st, r);
+            st.clear();
+            if (rc != QTC_OK) return 0;
+        }
+        return object ? entry_made_object(r, a, n, what) : value_of_ret(r);
+    } catch (const std::exception &x) {
+        fail(QTC_ERR_EXCEPTION, QString::fromUtf8(x.what()));
+        return 0;
+    } catch (...) {
+        fail(QTC_ERR_EXCEPTION, "unknown C++ exception");
+        return 0;
+    }
+}
+
+}  // namespace qtc

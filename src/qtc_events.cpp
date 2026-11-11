@@ -27,9 +27,19 @@ static constexpr int kRecent = 64;
 static constexpr int kWakeEvent = QEvent::User + 0x5100;
 static constexpr int kReleaseEvent = QEvent::User + 0x5101;
 
+// A signal's scalar arguments (bool, integers, floating point), kept as values: the QVariants
+// qtc_event_arg_* reads are made only if it is asked (most handlers read the payload fields).
+struct ScalarArg {
+    int type = 0;
+    int64_t i = 0;
+    double d = 0;
+};
+
 struct QueuedEvent {
     qtc_event e{};
     QList<QVariant> args;
+    ScalarArg sargs[4];
+    int nsargs = 0;   // > 0: args is empty and these are the arguments
     QByteArray text;
     QByteArray signal;
     uint32_t conn_slot = UINT32_MAX;
@@ -223,6 +233,8 @@ static bool try_coalesce(Connection &c, QueuedEvent &qe) {
     int32_t count = t.e.count + 1;
     uint64_t seq = t.e.seq;
     t.args = std::move(qe.args);
+    for (int i = 0; i < qe.nsargs; i++) t.sargs[i] = qe.sargs[i];
+    t.nsargs = qe.nsargs;
     t.text = std::move(qe.text);
     qtc_event e = qe.e;
     e.seq = seq;
@@ -371,6 +383,47 @@ static int scalar_arg(QMetaType t, const void *p, int64_t *i, double *d) {
     }
 }
 
+// whether every argument of the emission is a scalar scalar_arg reads
+static bool scalar_signal(const QMetaMethod &m, void **a) {
+    int64_t i;
+    double d;
+    for (int k = 0; k < m.parameterCount(); k++) {
+        const QMetaType t = m.parameterMetaType(k);
+        if (!t.isValid() || !a[k + 1]) return false;
+        switch (t.id()) {
+        case QMetaType::Bool: case QMetaType::Int: case QMetaType::UInt: case QMetaType::LongLong: case QMetaType::Long:
+        case QMetaType::Short: case QMetaType::UShort: case QMetaType::Double: case QMetaType::Float: break;
+        default: return false;
+        }
+    }
+    (void)i; (void)d;
+    return true;
+}
+
+// the QVariants of kept scalar arguments, as the general path would have made them
+static void materialize_args(QueuedEvent &qe) {
+    if (qe.nsargs <= 0) return;
+    QList<QVariant> v;
+    for (int k = 0; k < qe.nsargs; k++) {
+        const ScalarArg &x = qe.sargs[k];
+        const QMetaType t(x.type);
+        switch (x.type) {
+        case QMetaType::Bool: { bool b = x.i != 0; v.append(QVariant(t, &b)); break; }
+        case QMetaType::Int: { int y = int(x.i); v.append(QVariant(t, &y)); break; }
+        case QMetaType::UInt: { unsigned y = unsigned(x.i); v.append(QVariant(t, &y)); break; }
+        case QMetaType::LongLong: { qlonglong y = x.i; v.append(QVariant(t, &y)); break; }
+        case QMetaType::Long: { long y = long(x.i); v.append(QVariant(t, &y)); break; }
+        case QMetaType::Short: { short y = short(x.i); v.append(QVariant(t, &y)); break; }
+        case QMetaType::UShort: { unsigned short y = static_cast<unsigned short>(x.i); v.append(QVariant(t, &y)); break; }
+        case QMetaType::Double: { double y = x.d; v.append(QVariant(t, &y)); break; }
+        case QMetaType::Float: { float y = float(x.d); v.append(QVariant(t, &y)); break; }
+        default: v.append(QVariant()); break;
+        }
+    }
+    qe.args = std::move(v);
+    qe.nsargs = 0;
+}
+
 static void on_signal(uint32_t slot, void **a) {
     Events &ev = E();
     if (slot >= ev.conns.size()) return;
@@ -389,7 +442,21 @@ static void on_signal(uint32_t slot, void **a) {
     qe.signal = c.signature;
     const int n = c.signal.parameterCount();
     qe.e.argc = (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS)) ? n : 0;
-    if (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS)) {
+    if (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS) && n > 0 && n <= 4 && scalar_signal(c.signal, a)) {
+        // only scalars: kept as values, the payload fields filled in order
+        int64_t *is[4] = {&qe.e.i0, &qe.e.i1, &qe.e.i2, &qe.e.i3};
+        double *ds[2] = {&qe.e.d0, &qe.e.d1};
+        int ii = 0, di = 0;
+        for (int i = 0; i < n; i++) {
+            const QMetaType t = c.signal.parameterMetaType(i);
+            ScalarArg &x = qe.sargs[i];
+            x.type = t.id();
+            const int sk = scalar_arg(t, a[i + 1], &x.i, &x.d);
+            if (sk == 1 && ii < 4) *is[ii++] = x.i;
+            if (sk == 2 && di < 2) *ds[di++] = x.d;
+        }
+        qe.nsargs = n;
+    } else if (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS)) {
         qe.args.reserve(n);
         bool all_scalar = true;
         int64_t *is[4] = {&qe.e.i0, &qe.e.i1, &qe.e.i2, &qe.e.i3};
@@ -755,6 +822,9 @@ static void check_last_window() {
 }
 
 bool AppFilter::eventFilter(QObject *o, QEvent *e) {
+    // sent to an object (and each one inside it) before it moves to another thread: the
+    // registry stops reading its slot without the lock (SF_GUI)
+    if (e->type() == QEvent::ThreadChange) reg().note_thread_change(o);
 #ifdef QTC_HAS_GUI
     const QEvent::Type t = e->type();
     if (t != QEvent::Show && t != QEvent::Close && t != QEvent::Hide) return false;
@@ -1109,6 +1179,7 @@ static QueuedEvent *recent_event(uint64_t seq) {
 static const QVariant *event_arg(uint64_t seq, int32_t index) {
     QueuedEvent *qe = recent_event(seq);
     if (!qe) return nullptr;
+    materialize_args(*qe);
     if (index < 0 || index >= qe->args.size()) {
         fail(QTC_ERR_OUT_OF_RANGE, QStringLiteral("event %1 has %2 captured arguments").arg(seq).arg(qe->args.size()));
         return nullptr;

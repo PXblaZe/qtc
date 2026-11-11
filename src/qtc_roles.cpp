@@ -792,7 +792,7 @@ QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
         if (oi != m.constEnd() && oi->p) out.append({o, oi->kinds});
     };
     const QHash<QObject *, QList<QObject *>> &ix = held_index();
-    const QList<QObject *> kids = x->findChildren<QObject *>();
+    const QList<QObject *> kids = x->children().isEmpty() ? QList<QObject *>() : x->findChildren<QObject *>();
     if (!ix.isEmpty()) {
         auto look = [&](QObject *h) {
             auto it = ix.constFind(h);
@@ -805,7 +805,8 @@ QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
     // roles whose getters would make what they return: asked by the type of the victim and of
     // everything that dies with it (a style made a child of the object destroyed)
     uint64_t typed = 0;
-    auto type_of = [&typed](QObject *o) {
+    auto type_of_uncached = [](QObject *o) -> uint64_t {
+        uint64_t typed = 0;
 #ifdef QTC_HAS_WIDGETS
         if (qobject_cast<QAbstractItemView *>(o)) typed |= OK_COMPLETER | OK_COMBO;
         if (qobject_cast<QStyle *>(o)) typed |= OK_SCENE | OK_GWIDGET;
@@ -815,6 +816,17 @@ QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
         if (qobject_cast<QNetworkAccessManager *>(o)) typed |= OK_QMLENGINE;
 #endif
         Q_UNUSED(o);
+        return typed;
+    };
+    // the casts depend on the class alone: once per meta-object (dynamic ones each time)
+    auto type_of = [&typed, &type_of_uncached](QObject *o) {
+        const QObjectData *d = KindsPeek::of(o);
+        if (d && d->metaObject) { typed |= type_of_uncached(o); return; }
+        static auto *memo = new QHash<const QMetaObject *, uint64_t>;
+        const QMetaObject *mo = o->metaObject();
+        auto it = memo->constFind(mo);
+        if (it == memo->constEnd()) it = memo->insert(mo, type_of_uncached(o));
+        typed |= *it;
     };
     type_of(x);
     for (QObject *k : kids) type_of(k);
@@ -1040,6 +1052,9 @@ QPointer<LooseLayoutWatch> &loose_watch() {
 uint64_t roles_epoch = 1;
 
 bool roles_is_owner(const QObject *o) { return owners_map().contains(const_cast<QObject *>(o)); }
+// Per class: whether objects of o's class can ever hold others (window containers become holders
+// one by one, as createWindowContainer makes them, so the class counts).
+bool roles_may_own(QObject *o) { return kinds_of(o) != 0 || o->inherits("QWindowContainer"); }
 
 void roles_note_call(const QObject *o) {
     auto *x = const_cast<QObject *>(o);
@@ -1047,7 +1062,8 @@ void roles_note_call(const QObject *o) {
 }
 
 void roles_register(QObject *o) {
-    if (uint64_t k = kinds_of(o)) {
+    const uint64_t k = kinds_of(o);
+    if (k) {
         Owners &m = owners_map();
         auto it = m.find(o);
         if (it != m.end()) unindex(o, *it);   // an earlier object at this address
@@ -1055,8 +1071,8 @@ void roles_register(QObject *o) {
         dirty_owners().insert(o);
     }
 #ifdef QTC_HAS_WIDGETS
-    if (qobject_cast<QLayout *>(o)) layouts_map().insert(o, o);
-    if (qobject_cast<QFocusFrame *>(o)) frames_map().insert(o, o);
+    if (k & OK_LAYOUT) layouts_map().insert(o, o);           // qobject_cast<QLayout *>
+    if (k & OK_FOCUSFRAME) frames_map().insert(o, o);        // qobject_cast<QFocusFrame *>
 #endif
 }
 

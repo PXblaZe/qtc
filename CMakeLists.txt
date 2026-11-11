@@ -109,7 +109,9 @@ set(QTC_SOURCES
   src/qtc_override.h
   src/qtc_builtin.cpp
   src/qtc_builtin.h
-  ${QTC_GEN_COMMON})
+  include/qtc_direct.h
+  ${QTC_GEN_COMMON}
+  ${QTC_GEN_ENTRIES})
 set(QTC_LINK Qt6::Core)
 set(QTC_DEFS QTC_BUILDING QT_NO_KEYWORDS)
 foreach(m IN LISTS QTC_ENABLED_MODULES)
@@ -172,7 +174,7 @@ else()
   target_compile_options(qtc PRIVATE -Wall -Wextra -Wno-unused-parameter -fno-strict-aliasing)
 endif()
 if(QTC_GEN_OPT)
-  set_source_files_properties(${QTC_GEN_COMMON} PROPERTIES COMPILE_OPTIONS "${QTC_GEN_OPT}")
+  set_source_files_properties(${QTC_GEN_COMMON} ${QTC_GEN_ENTRIES} PROPERTIES COMPILE_OPTIONS "${QTC_GEN_OPT}")
   foreach(m IN LISTS QTC_ENABLED_MODULES)
     set_source_files_properties(${QTC_GEN_${m}} PROPERTIES COMPILE_OPTIONS "${QTC_GEN_OPT}")
   endforeach()
@@ -219,8 +221,8 @@ if(TARGET qtc_test)
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
   install(FILES include/qtc_test.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 endif()
-install(FILES include/qtc.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-install(FILES manifest/qtc_api.json DESTINATION ${CMAKE_INSTALL_DATADIR}/qtc)
+install(FILES include/qtc.h include/qtc_direct.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(FILES manifest/qtc_api.json manifest/qtc_entries.json DESTINATION ${CMAKE_INSTALL_DATADIR}/qtc)
 install(EXPORT qtcTargets NAMESPACE qtc:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/qtc)
 include(CMakePackageConfigHelpers)
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/qtcConfig.cmake "include(\${CMAKE_CURRENT_LIST_DIR}/qtcTargets.cmake)\n")

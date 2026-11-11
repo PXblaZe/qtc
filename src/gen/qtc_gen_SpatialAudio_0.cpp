@@ -228,7 +228,7 @@ template <class S> static int t11944(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QAmbientSound::QAmbientSound(QAudioEngine*): argument 1 must not be null");
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -518,7 +518,7 @@ template <class S> static int t11967(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -531,7 +531,7 @@ template <class S> static int t11968(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -547,10 +547,10 @@ template <class S> static int t11969(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!(qtc::standard_sample_rate((p0.get())))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QAudioEngine::QAudioEngine(int,QObject*): sampleRate must be a standard rate (8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 64000, 88200, 96000, 128000, 176400, 192000, 352800, 384000, 705600 or 768000)");
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QObject *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<QObject *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -874,7 +874,7 @@ template <class S> static int t11994(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QAudioRoom::QAudioRoom(QAudioEngine*): argument 1 must not be null");
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1473,7 +1473,7 @@ template <class S> static int t12041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!((p0.get()) != nullptr)) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QSpatialSound::QSpatialSound(QAudioEngine*): argument 1 must not be null");
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QAudioEngine *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }

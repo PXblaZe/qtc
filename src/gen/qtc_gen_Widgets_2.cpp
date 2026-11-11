@@ -992,10 +992,10 @@ template <class S> static int t6752(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1010,10 +1010,10 @@ template <class S> static int t6753(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGraphicsScene *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGraphicsScene *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGraphicsScene *> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QGraphicsScene *> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1807,7 +1807,7 @@ template <class S> static int t6809(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2426,10 +2426,10 @@ template <class S> static int t6846(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2617,10 +2617,10 @@ template <class S> static int t6860(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2635,10 +2635,10 @@ template <class S> static int t6861(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2651,7 +2651,7 @@ template <class S> static int t6862(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)q;
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2664,7 +2664,7 @@ template <class S> static int t6863(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3792,10 +3792,10 @@ template <class S> static int t6945(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::Orientation> &p0) { qtc::cve(aa[0], p0, 0, 916); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::Orientation> &p0) { qtc::cve(aa[0], p0, 0, 916); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::Orientation> &p0, qtc::H<QWidget *> &p1) { qtc::cve(aa[0], p0, 0, 916); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<Qt::Orientation> &p0, qtc::H<QWidget *> &p1) { qtc::cve(aa[0], p0, 0, 916); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4705,13 +4705,13 @@ template <class S> static int t7001(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CVF(1, p1, 950);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 950); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 950); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4793,10 +4793,10 @@ template <class S> static int t7006(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4961,10 +4961,10 @@ template <class S> static int t7018(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4979,10 +4979,10 @@ template <class S> static int t7019(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QKeySequence> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QKeySequence> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QKeySequence> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QKeySequence> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5268,10 +5268,10 @@ template <class S> static int t7041(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5288,10 +5288,10 @@ template <class S> static int t7042(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!(qtc::in((p0.get()), 1, 99))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QLCDNumber::QLCDNumber(uint,QWidget*): numDigits must be in [1, 99]");
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned int> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned int> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned int> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<unsigned int> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5833,13 +5833,13 @@ template <class S> static int t7083(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CVF(1, p1, 950);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 950); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 950); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -5856,13 +5856,13 @@ template <class S> static int t7084(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 2) QTC_CVF(2, p2, 950);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1, qtc::H<QFlags<Qt::WindowType>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 950); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1, qtc::H<QFlags<Qt::WindowType>> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cvf(aa[2], p2, 2, 950); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7477,10 +7477,10 @@ template <class S> static int t7203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -7495,10 +7495,10 @@ template <class S> static int t7204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWidget *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8021,10 +8021,10 @@ template <class S> static int t7243(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -8294,10 +8294,10 @@ template <class S> static int t7262(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }

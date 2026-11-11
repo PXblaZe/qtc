@@ -288,13 +288,13 @@ template <class S> static int t10558(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CVF(1, p1, 950);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 950); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0, qtc::H<QFlags<Qt::WindowType>> &p1) { qtc::cv(aa[0], p0, 0); qtc::cvf(aa[1], p1, 1, 950); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }

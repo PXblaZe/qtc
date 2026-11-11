@@ -34,6 +34,9 @@ qtc_alive(label);                               /* false once it is gone */
 
 Constructor arguments are pushed first. A new object without a parent belongs to
 qtc until it gets one, and `qtc_shutdown` destroys what qtc still owns.
+`qtc_destroy` makes the handle stale at once and deletes the object then, unless an
+override handler is running (Qt may be in the middle of something with it) or events
+are still queued for it or its children; those go when the event loop next runs.
 `qtc_destroy` refuses objects Qt owns or that another object holds by a plain
 pointer it cannot let go of; the message names the owner to destroy instead.
 `qtc_find_child`, `qtc_class_name` and `qtc_inherits` look objects up.
@@ -51,6 +54,32 @@ qtc_view t = qtc_ret_str();                     /* the result: qtc_ret_int, _boo
 qtc_call_static(QTC_S("QDateTime"), QTC_S("currentDateTime"));
 qtc_val now = qtc_ret_val();
 ```
+
+### Direct entry points
+
+`qtc_direct.h` declares one function per bound method signature and per constructor.
+Each takes its arguments as parameters and is the same call as `qtc_call` with that
+signature, with the same checks and errors, but without the work of finding the
+method: no name to look up, no argument stack, and the overload is resolved once per
+receiver class and remembered. A call costs a quarter to a half of `qtc_call`'s (see
+TESTING.md).
+
+```c
+#include "qtc_direct.h"
+qtc_obj label = qtcn_QLabel__QString(QTC_S("Hello"));   /* qtc_new("QLabel") with a QString */
+qtcm_setText__QString(label, QTC_S("Hi"));               /* any class with setText(QString) */
+qtcm_text(label);
+qtc_view t = qtc_ret_str();                              /* results as after qtc_call */
+qtc_val red = qtcn_QColor__int_int_int(255, 0, 0);       /* values too (qtc_val_new) */
+```
+
+Names are `qtcm_<method>__<parameter types>` and `qtcn_<Class>__<parameter types>`,
+the types joined by `_` with `::` as `_`, `*` as `Ptr`, `<...>` as `Of...`; the
+header lists each with its signature. Integers are `int64_t`, strings and byte arrays
+`qtc_str`, objects `qtc_obj`, values `qtc_val`; out-parameters are left out (read them
+with `qtc_out_*`). A direct call neither uses nor clears arguments pushed with
+`qtc_arg_*`. Static methods have no entry point: use `qtc_call_static`.
+`manifest/qtc_entries.json` maps each signature to its function, for bindings.
 
 Arguments are matched to parameters by kind: `qtc_arg_int` fits any integer or
 enum parameter (with a range check), `qtc_arg_str` a `QString`, `QByteArray`

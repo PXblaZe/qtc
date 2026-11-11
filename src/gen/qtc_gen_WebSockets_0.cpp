@@ -942,16 +942,16 @@ template <class S> static int t13509(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketProtocol::Version> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 841); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketProtocol::Version> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 841); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketProtocol::Version> &p1, qtc::H<QObject *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 841); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketProtocol::Version> &p1, qtc::H<QObject *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 841); qtc::cv(aa[2], p2, 2); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1613,10 +1613,10 @@ template <class S> static int t13558(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 2) QTC_CV(2, p2);
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketServer::SslMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 842); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketServer::SslMode> &p1) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 842); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketServer::SslMode> &p1, qtc::H<QObject *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 842); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<QWebSocketServer::SslMode> &p1, qtc::H<QObject *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cve(aa[1], p1, 1, 842); qtc::cv(aa[2], p2, 2); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }

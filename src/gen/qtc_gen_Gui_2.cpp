@@ -258,10 +258,10 @@ template <class S> static int t4380(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -293,16 +293,16 @@ template <class S> static int t4381(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!(qtc::in((p5.get()), 0, 127) && qtc::in((p6.get()), 0, 127))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QPointingDevice::QPointingDevice(QString,qint64,QInputDevice::DeviceType,QPointingDevice::PointerType,Capabilities,int,int,QString,QPointingDeviceUniqueId,QObject*): maxPoints and buttonCount must be in [0, 127]");
     switch (n) {
         case 7:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 8:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6, qtc::H<QString> &p7) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); qtc::cv(aa[7], p7, 7); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6, qtc::H<QString> &p7) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); qtc::cv(aa[7], p7, 7); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 9:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6, qtc::H<QString> &p7, qtc::H<QPointingDeviceUniqueId> &p8) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); qtc::cv(aa[7], p7, 7); qtc::cv(aa[8], p8, 8); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6, qtc::H<QString> &p7, qtc::H<QPointingDeviceUniqueId> &p8) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); qtc::cv(aa[7], p7, 7); qtc::cv(aa[8], p8, 8); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 10:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6, qtc::H<QString> &p7, qtc::H<QPointingDeviceUniqueId> &p8, qtc::H<QObject *> &p9) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); qtc::cv(aa[7], p7, 7); qtc::cv(aa[8], p8, 8); qtc::cv(aa[9], p9, 9); rr->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get(), p9.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get(), p9.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0, qtc::H<long long> &p1, qtc::H<QInputDevice::DeviceType> &p2, qtc::H<QPointingDevice::PointerType> &p3, qtc::H<QFlags<QInputDevice::Capability>> &p4, qtc::H<int> &p5, qtc::H<int> &p6, qtc::H<QString> &p7, qtc::H<QPointingDeviceUniqueId> &p8, qtc::H<QObject *> &p9) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cve(aa[2], p2, 2, 270); qtc::cve(aa[3], p3, 3, 474); qtc::cvf(aa[4], p4, 4, 269); qtc::cv(aa[5], p5, 5); qtc::cv(aa[6], p6, 6); qtc::cv(aa[7], p7, 7); qtc::cv(aa[8], p8, 8); qtc::cv(aa[9], p9, 9); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get(), p9.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get(), p3.get(), p4.get(), p5.get(), p6.get(), p7.get(), p8.get(), p9.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -1764,10 +1764,10 @@ template <class S> static int t4482(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWindow *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWindow *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2159,10 +2159,10 @@ template <class S> static int t4509(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -2177,10 +2177,10 @@ template <class S> static int t4510(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QRegularExpression> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QRegularExpression> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QRegularExpression> &p0, qtc::H<QObject *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QRegularExpression> &p0, qtc::H<QObject *> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3482,7 +3482,7 @@ template <class S> static int t4608(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4100,10 +4100,10 @@ template <class S> static int t4643(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     switch (n) {
         case 0:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(new S()); }) { r->set_obj(new S()); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa) { rr->set_obj(qtc::make_obj<S>()); }) { r->set_obj(qtc::make_obj<S>()); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QObject *> &p0) { qtc::cv(aa[0], p0, 0); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -4121,10 +4121,10 @@ template <class S> static int t4644(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!((p0.get()) >= 0 && (p1.get()) >= 0 && qtc::alloc_ok(int64_t(qMax(1, (p0.get()))) * qMax(1, (p1.get())), 8))) return qtc::pre_fail(QTC_ERR_LIMIT, "QStandardItemModel::QStandardItemModel(int,int,QObject*): rows x columns too large");
     switch (n) {
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 3:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1, qtc::H<QObject *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); rr->set_obj(new S(p0.get(), p1.get(), p2.get())); }) { r->set_obj(new S(p0.get(), p1.get(), p2.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1, qtc::H<QObject *> &p2) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::cv(aa[2], p2, 2); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get(), p2.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }

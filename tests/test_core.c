@@ -1,6 +1,7 @@
 /* qtc core tests, written in C against the public API only. */
 #define _POSIX_C_SOURCE 200809L
 #include "qtc.h"
+#include "qtc_direct.h"
 #include "qtc_test.h"
 
 #include <math.h>
@@ -2485,6 +2486,102 @@ static void test_wrong_thread(void) {
     qtc_process_events();
 }
 
+static void *direct_wrong_thread(void *arg) {
+    qtc_obj l = (qtc_obj)(uintptr_t)arg;
+    int ok = qtcm_setText__QString(l, S("x")) == QTC_ERR_WRONG_THREAD && qtcm_text(l) == QTC_ERR_WRONG_THREAD &&
+             qtcn_QObject() == 0 && qtc_last_error() == QTC_ERR_WRONG_THREAD;
+    return ok ? NULL : (void *)1;
+}
+
+/* Direct entry points (qtc_direct.h): the same results and errors as qtc_call. */
+static void test_direct(void) {
+    reset();
+    qtc_obj l = qtcn_QLabel__QString(S("start"));
+    CHECK(l != 0 && qtc_is_object(l));
+    CHECK_EQ(qtcm_text(l), QTC_OK);
+    CHECK_STR(qtc_ret_str(), "start");
+    CHECK_EQ(qtcm_setText__QString(l, S("hello")), QTC_OK);
+    CHECK_EQ(qtc_call(l, S("text")), QTC_OK);
+    CHECK_STR(qtc_ret_str(), "hello");
+    for (int i = 0; i < 3; i++) {   /* the second call on the class takes the cached path */
+        CHECK_EQ(qtcm_setText__QString(l, S("again")), QTC_OK);
+        CHECK_EQ(qtcm_text(l), QTC_OK);
+        CHECK_STR(qtc_ret_str(), "again");
+    }
+    /* pushed arguments are neither used nor cleared */
+    qtc_arg_int(7);
+    CHECK_EQ(qtcm_text(l), QTC_OK);
+    CHECK_EQ(qtc_args_count(), 1);
+    qtc_args_clear();
+    /* errors */
+    CHECK_EQ(qtcm_text(0), QTC_ERR_NULL_HANDLE);
+    CHECK_EQ(qtcm_setValue__int(l, 3), QTC_ERR_NOT_FOUND);   /* a QLabel has no setValue(int) */
+    CHECK_EQ(qtcm_setText__QString(l, (qtc_str){NULL, 3}), QTC_ERR_INVALID_ARG);
+    qtc_obj s = qtcn_QSlider();
+    CHECK_EQ(qtcm_setValue__int(s, 1LL << 40), QTC_ERR_OUT_OF_RANGE);
+    CHECK_EQ(qtcm_setMaximum__int(s, 100), QTC_OK);
+    CHECK_EQ(qtcm_setValue__int(s, 42), QTC_OK);
+    CHECK_EQ(qtcm_value(s), QTC_OK);
+    CHECK_EQ(qtc_ret_int(), 42);
+    /* the same signature on another class of the same name */
+    qtc_obj b = qtcn_QPushButton__QString(S("b"));
+    CHECK_EQ(qtcm_setText__QString(b, S("button")), QTC_OK);
+    CHECK_EQ(qtcm_text(b), QTC_OK);
+    CHECK_STR(qtc_ret_str(), "button");
+    /* values */
+    qtc_val c = qtcn_QColor__int_int_int(255, 10, 20);
+    CHECK(c != 0 && qtc_is_value(c));
+    CHECK_EQ(qtcm_red(c), QTC_OK);
+    CHECK_EQ(qtc_ret_int(), 255);
+    CHECK_EQ(qtcm_green(c), QTC_OK);
+    CHECK_EQ(qtc_ret_int(), 10);
+    CHECK_EQ(qtcm_red(l), QTC_ERR_NOT_FOUND);
+    qtc_val_free(c);
+    CHECK_EQ(qtcm_red(c), QTC_ERR_STALE_HANDLE);
+    /* what qtc_call treats specially still is: a parent cycle is refused */
+    qtc_obj w = qtcn_QWidget();
+    qtc_obj inner = qtcn_QWidget__QWidgetPtr(w);
+    CHECK_EQ(qtcm_setParent__QWidgetPtr(w, inner), QTC_ERR_REJECTED);
+    /* objects qtc makes: a child goes with its parent (a widget with events still queued for it,
+       here a polish request, goes once they are delivered) */
+    CHECK_EQ(qtc_destroy(w), QTC_OK);
+    CHECK(!qtc_alive(w));
+    qtc_process_events();
+    CHECK(!qtc_alive(inner));
+    CHECK_EQ(qtcm_show(inner), QTC_ERR_STALE_HANDLE);
+    qtc_obj parent = qtcn_QObject();
+    qtc_obj kid = qtcn_QObject__QObjectPtr(parent);
+    qtc_obj kid2 = qtc_new(S("QObject"));
+    CHECK_EQ(qtcm_setParent__QObjectPtr(kid2, parent), QTC_OK);
+    int64_t before = qtc_live_objects();
+    CHECK_EQ(qtc_destroy(parent), QTC_OK);
+    CHECK(!qtc_alive(kid) && !qtc_alive(kid2));
+    CHECK_EQ(qtc_live_objects(), before - 3);
+    /* deleted by Qt itself: a QTimer::singleShot to deleteLater is not reachable, a parent's is */
+    qtc_obj holder = qtcn_QObject();
+    qtc_obj held = qtcn_QTimer__QObjectPtr(holder);
+    CHECK_EQ(qtcm_setSingleShot__bool(held, true), QTC_OK);
+    CHECK_EQ(qtc_destroy(holder), QTC_OK);
+    CHECK(!qtc_alive(held));
+    /* a constructor given the wrong kind of object */
+    qtc_obj plain = qtcn_QObject();
+    qtc_clear_error();
+    CHECK_EQ(qtcn_QLabel__QString_QWidgetPtr(S("x"), plain), 0);
+    CHECK(qtc_last_error() != QTC_OK);
+    qtc_destroy(plain);
+    qtc_clear_error();
+    /* from another thread */
+    pthread_t th;
+    pthread_create(&th, NULL, direct_wrong_thread, (void *)(uintptr_t)l);
+    void *r;
+    pthread_join(th, &r);
+    CHECK(r == NULL);
+    qtc_destroy(l);
+    qtc_destroy(s);
+    qtc_destroy(b);
+    reset();
+}
+
 static void test_describe(void) {
     reset();
     qtc_view d = qtc_describe(0, S("QPushButton"));
@@ -2547,6 +2644,7 @@ int main(void) {
     test_ownership_rules();
     test_fuzz_findings();
     test_wrong_thread();
+    test_direct();
     test_describe();
     test_shutdown_and_reinit();
     printf("test_core: %d passed, %d failed\n", g_passed, g_failed);

@@ -1143,7 +1143,7 @@ _ROWS = [(full(r[0]), full(r[1]), r[2], r[3], r[4] if len(r) > 4 else None) for 
 
 def preconditions(ctx, cn, m, plan, kind):
     """The checks for one bound method or constructor: a list of (C++ condition, max param index, code, message)."""
-    is_ctor = kind in ("ctor_obj", "ctor_val")
+    is_ctor = kind in ("ctor_obj", "ctor_val", "ctor_ov")
     name = "<ctor>" if is_ctor else m["name"]
     params = plan["params"]
     sig = ",".join(pt.sig for _, pt in params)

@@ -3407,10 +3407,10 @@ template <class S> static int t13427(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 396); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 396); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 396); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaPositionInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 396); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }
@@ -3578,10 +3578,10 @@ template <class S> static int t13439(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CV(1, p1);
     switch (n) {
         case 1:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 397); rr->set_obj(new S(p0.get())); }) { r->set_obj(new S(p0.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0) { qtc::cve(aa[0], p0, 0, 397); rr->set_obj(qtc::make_obj<S>(p0.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         case 2:
-            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 397); qtc::cv(aa[1], p1, 1); rr->set_obj(new S(p0.get(), p1.get())); }) { r->set_obj(new S(p0.get(), p1.get())); return 0; }
+            if constexpr (requires(qtc::Ret *rr, qtc::Arg *aa, qtc::H<QNmeaSatelliteInfoSource::UpdateMode> &p0, qtc::H<QObject *> &p1) { qtc::cve(aa[0], p0, 0, 397); qtc::cv(aa[1], p1, 1); rr->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); }) { r->set_obj(qtc::make_obj<S>(p0.get(), p1.get())); return 0; }
             else return QTC_ERR_UNSUPPORTED;
         default: break;
     }

@@ -64,7 +64,13 @@ struct ObjRef {
 };
 
 enum SlotKind : uint8_t { SK_FREE = 0, SK_OBJ = 1, SK_VAL = 2 };
-enum SlotFlag : uint8_t { SF_OWNED = 1, SF_DYING = 2, SF_RETIRED = 4, SF_MADE = 8 };
+// SF_GUI: the object was last seen living in the GUI thread, by the GUI thread. Only the GUI
+// thread can move it away (Qt moves an object from its own thread), and qtc hears of every move
+// (QEvent::ThreadChange, see events' AppFilter) and clears it first: while it is set no other
+// thread can delete the object or touch its slot, so the GUI thread may read the slot without mu.
+// SF_TRACKED: a Tracked<> object (made by qtc): its destructor tells the registry first thing, so
+// it needs neither the QPointer nor the destroyed() connection other objects get.
+enum SlotFlag : uint8_t { SF_OWNED = 1, SF_DYING = 2, SF_RETIRED = 4, SF_MADE = 8, SF_GUI = 16, SF_TRACKED = 32 };
 
 struct Slot {
     uint32_t gen = 1;
@@ -73,6 +79,8 @@ struct Slot {
     uint32_t order = 0;            // creation order, for shutdown
     QObject *obj = nullptr;
     QPointer<QObject> qp;          // cleared by ~QObject even when destroyed() is not emitted
+    // an object slot whose object still lives (a tracked object's slot is freed as it starts dying)
+    bool alive() const { return (flags & SF_TRACKED) || !qp.isNull(); }
     QVariant *val = nullptr;
     QMetaObject::Connection destroyed;
 };
@@ -116,6 +124,25 @@ public:
     int kind_of(uint64_t h);
     // A call's receiver in one lookup: the object (as object() checks it) or the value.
     bool receiver(uint64_t h, QObject **o, QVariant **v, qtc_status *err);
+    // receiver() for the GUI thread (the caller checked): objects of that thread and values are
+    // read without mu; anything else takes receiver()
+    bool receiver_gui(uint64_t h, QObject **o, QVariant **v, qtc_status *err) {
+        const uint32_t idx = handle_index(h);
+        if (h && idx < table.size()) {
+            const Slot &s = table[idx];
+            if (s.gen == handle_gen(h)) {
+                if (s.kind == SK_VAL) { *o = nullptr; *v = s.val; *err = 0; return true; }
+                if (s.kind == SK_OBJ && (s.flags & (SF_GUI | SF_DYING)) == SF_GUI && s.alive()) {
+                    *o = s.obj;
+                    *v = nullptr;
+                    *err = 0;
+                    return true;
+                }
+            }
+        }
+        return receiver(h, o, v, err);
+    }
+    void note_thread_change(QObject *o);   // o is about to move to another thread
     void on_destroyed(QObject *o);
     // An object deleted while its signals were blocked never emits destroyed(): its QPointer
     // is the only trace. These find such objects and forget them like destroyed ones.
@@ -172,6 +199,64 @@ struct ArgStack {
     void clear() { for (int i = 0; i < n; i++) a[i].reset(); n = 0; overflow = false; }
 };
 ArgStack &args();
+
+// ------------------------------------------------------------- tracked objects
+//
+// The QObjects qtc constructs are made as Tracked<Class>: the class itself (no meta-object of its
+// own, so className(), qobject_cast and properties are the class's), whose destructor tells the
+// registry before the class's own destructor runs. That is sip's way: no destroyed() connection
+// and no QPointer per object, and the handle goes stale while the object is still whole.
+void tracked_dying(QObject *o);
+extern std::atomic<QObject *> g_tracked_new;   // the object make_obj just made, until it is registered
+
+template <class S>
+struct Tracked : S {
+    using S::S;
+    ~Tracked() override { tracked_dying(this); }
+};
+
+// whether S can be made as a Tracked<S> with these arguments (final classes cannot be derived from)
+template <class S, class... A>
+constexpr bool trackable() {
+    if constexpr (std::is_final_v<S> || !std::has_virtual_destructor_v<S>) return false;
+    else return requires(A &&...b) { new Tracked<S>(std::forward<A>(b)...); };
+}
+
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_DEPRECATED
+template <class S, class... A>
+    requires requires(A &&...a) { new S(std::forward<A>(a)...); }
+S *make_obj(A &&...a) {
+    if constexpr (trackable<S, A...>()) {
+        S *o = new Tracked<S>(std::forward<A>(a)...);
+        g_tracked_new.store(o, std::memory_order_relaxed);
+        return o;
+    } else {
+        return new S(std::forward<A>(a)...);
+    }
+}
+QT_WARNING_POP
+
+// ------------------------------------------- direct entry points (qtc_direct.h, gen/entries.py)
+
+struct EntryDesc { const char *sig; uint32_t len; uint8_t nargs; uint8_t flags; };   // flags: 1 qtc_call's path, 2 may be protected
+struct CtorEntryDesc { const char *cls; uint32_t cls_len; const char *sig; uint8_t nargs; };
+extern const EntryDesc *const g_entries;
+extern const uint32_t g_entry_count;
+extern const CtorEntryDesc *const g_ctor_entries;
+extern const uint32_t g_ctor_entry_count;
+bool entry_ready();   // false, with the error set, unless qtc is initialized and this is the GUI thread
+qtc_status last_error_code();
+inline void put_bool(Arg &x, bool v) { x.kind = AK_BOOL; x.b = v; }
+inline void put_int(Arg &x, int64_t v) { x.kind = AK_INT; x.i = v; }
+inline void put_double(Arg &x, double v) { x.kind = AK_DOUBLE; x.d = v; }
+inline void put_obj(Arg &x, uint64_t v) { x.kind = AK_OBJ; x.h = v; }
+inline void put_null(Arg &x) { x.kind = AK_NULL; }
+bool put_str(Arg &x, qtc_str v);     // as qtc_arg_str; false (and an error) if malformed
+bool put_bytes(Arg &x, qtc_str v);
+bool put_val(Arg &x, uint64_t v);    // as qtc_arg_val
+qtc_status entry_call(uint64_t self, uint32_t id, Arg *a, int n);
+uint64_t entry_new(uint32_t id, Arg *a, int n);
 
 // --------------------------------------------------------------- the return
 
@@ -778,6 +863,7 @@ void roles_register_tree(QObject *root);      // it came back: objects with hand
 extern uint64_t roles_epoch;
 void roles_note_call(const QObject *o);       // a call on o is about to run
 bool roles_is_owner(const QObject *o);        // whether o holds anything in a role (roles_note_call matters)
+bool roles_may_own(QObject *o);   // whether an object of its class can hold others in a role
 // a copy that shares no data with anything (QProcessEnvironment::insert(self) deadlocks otherwise)
 template <class E> bool unshare(E &e) {
     E fresh;

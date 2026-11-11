@@ -726,7 +726,9 @@ class Emitter:
             elif kind == "static":
                 call = "S::%s(%s)" % (name, argl)
             elif kind == "ctor_obj":
-                call = "new S(%s)" % argl
+                call = "qtc::make_obj<S>(%s)" % argl   # a Tracked<S> (qtc_internal.h)
+            elif kind == "ctor_ov":
+                call = "new S(%s)" % argl              # an overridable subclass: its own bookkeeping
             else:
                 call = "S(%s)" % argl
             if kind in ("obj", "val"):
@@ -744,7 +746,7 @@ class Emitter:
                 else:
                     conv_req.append("qtc::cvf(aa[%d], p%d, %d, %d)" % (i, i, i, pt.eid))
             outs = "".join(" r->out(p%d.v);" % i for i in range(k) if params[i][1].pk == "PK_OUT")
-            if kind == "ctor_obj":
+            if kind in ("ctor_obj", "ctor_ov"):
                 expr = "rr->set_obj(%s)" % call
                 body_call = "r->set_obj(%s);%s return 0;" % (call, outs)
             elif kind == "ctor_val":
@@ -1017,6 +1019,7 @@ def main():
     os.makedirs(gen_dir, exist_ok=True)
     os.makedirs(man_dir, exist_ok=True)
     stale_files = set(glob.glob(os.path.join(gen_dir, "qtc_gen_*.cpp")) + glob.glob(os.path.join(gen_dir, "qtc_ov_*.cpp")))
+    stale_files -= set(glob.glob(os.path.join(gen_dir, "qtc_gen_entr*.cpp")))   # gen/entries.py's
 
     em = Emitter(ctx, versions, floor, primary["include_root"], primary.get("header_config"))
     ove = overrides.OvEmitter(em, ctx, map_value, cstr, guard, Versions, NEED_WIDGETS, NEED_GUI)
@@ -1208,7 +1211,6 @@ def main():
     for m in MODULE_DEPS:
         if m in by_module:
             cmake.append("set(QTC_GEN_DEPS_%s %s)" % (m, " ".join(MODULE_DEPS[m]) or '""'))
-    write_if_changed(os.path.join(gen_dir, "modules.cmake"), "\n".join(cmake) + "\n")
 
     enum_man = []
     for n in names:
@@ -1219,6 +1221,11 @@ def main():
                 "classes": em.manifest_classes, "enums": enum_man, "overridables": ove.manifest}
     with open(os.path.join(man_dir, "qtc_api.json"), "w") as f:
         json.dump(manifest, f, separators=(",", ":"))
+    # direct entry points (gen/entries.py), from the manifest just written
+    import entries
+    efiles, nme, nce = entries.generate(json.loads(json.dumps(manifest)), args.out)
+    cmake.append("set(QTC_GEN_ENTRIES %s)" % " ".join("${CMAKE_CURRENT_LIST_DIR}/" + f for f in efiles))
+    write_if_changed(os.path.join(gen_dir, "modules.cmake"), "\n".join(cmake) + "\n")
     totals = collections.Counter()
     for mod, c in em.cov.items():
         totals.update(c)

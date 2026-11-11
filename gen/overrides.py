@@ -442,7 +442,7 @@ class OvEmitter:
                 if kplan is None:
                     continue
                 start = len(ctor_thunks)
-                tid = em.thunk(cn, c, k, kplan, "ctor_obj", ctor_thunks)
+                tid = em.thunk(cn, c, k, kplan, "ctor_ov", ctor_thunks)
                 if tid is None:
                     del ctor_thunks[start:]
                     continue

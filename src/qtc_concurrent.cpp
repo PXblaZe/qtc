@@ -529,8 +529,8 @@ void concurrent_shutdown() {
     {
         std::lock_guard<std::recursive_mutex> lk(reg().mu);
         for (const Slot &s : reg().table)
-            if (s.kind == SK_OBJ && s.qp)
-                if (auto *t = qobject_cast<QThread *>(s.qp.data()); t && t != QThread::currentThread() && t->isRunning())
+            if (s.kind == SK_OBJ && s.alive())
+                if (auto *t = qobject_cast<QThread *>(s.obj); t && t != QThread::currentThread() && t->isRunning())
                     threads.push_back(t);
     }
     for (QPointer<QThread> &t : threads)
