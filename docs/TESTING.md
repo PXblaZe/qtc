@@ -103,6 +103,11 @@ modules built in so that they are tested too. The graphics suites ran with Mesa'
 | `ctest` (all 18 tests, examples included) | 18 of 18 pass | not run as a whole |
 | goose-qt tests (`test/run.sh`, JIT and native) | 18 of 18 pass (examples: 11 of 11) | not run |
 
+The default build (LGPL-3.0 modules only), configured and built from the release package in
+an empty directory: no GPL-3.0-only module is linked (`ldd`), the fuzzer lists 11,966 items
+and none from those modules, `ctest` passes 18 of 18, and goose-qt passes its 18 tests and
+11 examples against it.
+
 The method fuzzer, release build:
 
 | run | items | calls | failures |
