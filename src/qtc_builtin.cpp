@@ -584,11 +584,10 @@ bool path_finite(const QPainterPath &p) {
 
 // Flattening (QBezier::addToPolygon) splits each cubic until it is flat to half a pixel,
 // at most nine times deep: up to 512 points per curve, about sqrt(2 * length) in practice.
-bool flatten_ok(const QPainterPath &p, const QTransform &t) {
+double path_points(const QPainterPath &p, const QTransform &t, double stop) {
     const int n = p.elementCount();
-    if (n == 0) return true;
+    if (n == 0) return 0;
     long double points = 0;
-    const long double budget = (long double)alloc_limit() / sizeof(QPointF);
     QPointF prev = t.map(QPointF(p.elementAt(0).x, p.elementAt(0).y));
     for (int i = 0; i < n; i++) {
         const QPainterPath::Element e = p.elementAt(i);
@@ -604,9 +603,14 @@ bool flatten_ok(const QPainterPath &p, const QTransform &t) {
             points += 1;
             prev = pt;
         }
-        if (points > budget) return false;
+        if (points > stop) break;
     }
-    return true;
+    return double(points);
+}
+
+bool flatten_ok(const QPainterPath &p, const QTransform &t) {
+    const double budget = double(alloc_limit()) / sizeof(QPointF);
+    return path_points(p, t, budget) <= budget;
 }
 
 

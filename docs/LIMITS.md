@@ -272,8 +272,8 @@ ones:
   them (`QPainterPath::translate` by a non-finite offset, `QTransform::map` and
   `toFillPolygons` with a non-finite transform): a NaN point defeats the
   bounding-box tests, and every hit test then walks the whole path.
-  `QGraphicsScene::setSelectionArea` with a path whose elements times the
-  scene's items exceed 2^26.
+  `QGraphicsScene::setSelectionArea` with a path whose elements (curves counted
+  as flattened) times the scene's items exceed 2^24 (about a second).
 - `QChart::removeAllSeries` while the chart has an area series: Qt deletes the
   series at once but the area's chart item later, and it still follows the
   boundary lines. Remove area series with `removeSeries` and destroy them first.

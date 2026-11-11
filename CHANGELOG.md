@@ -41,7 +41,8 @@
   points (Qt refuses NaN points when they are added but not when a path is
   moved or mapped: `QPainterPath::translate` and `QTransform::map` with
   non-finite values are refused now, and paths with such points are refused by
-  the operations that test against them).
+  the operations that test against them); selecting with a path whose
+  elements times the scene's items exceed 2^24.
 - Calls to meta-object methods with `QVariant` parameters (every untyped QML
   function parameter) passed a value stored outside its variant (types over 24
   bytes, such as `QRectF` or `QTransform`) as the address of the value, which the

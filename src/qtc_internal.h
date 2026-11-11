@@ -702,6 +702,9 @@ bool path_room(const QPainterPath &p, int64_t extra);
 // testing quick: each test then walks the whole path)
 bool path_finite(const QPainterPath &p);
 bool transform_finite(const QTransform &t);
+// about how many points flattening the path makes (each curve split until flat to half a pixel);
+// counting stops once past stop
+double path_points(const QPainterPath &p, const QTransform &t, double stop);
 // Qt's path clipper is safe on the paths (coordinates within +-2^30) and, with count_crossings, quick:
 // at most 32,768 segments in all, crossing each other at most 4,096 times (it slows down about as
 // the square of the crossings)

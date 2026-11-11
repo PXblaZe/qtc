@@ -6351,7 +6351,7 @@ template <class S> static int t6646(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QTransform> p1;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
-    if (!(qtc::path_finite((p0.get())) && int64_t((p0.get()).elementCount()) * std::max<int64_t>(1, s->items().size()) <= (int64_t(1) << 26))) return qtc::pre_fail(QTC_ERR_LIMIT, "QGraphicsScene::setSelectionArea(QPainterPath,QTransform): the path has points that are not finite, or its elements times the scene's items exceed 2^26 (each item is tested against the whole path)");
+    if (!(qtc::path_finite((p0.get())) && [&] { const double items = std::max<qsizetype>(1, s->items().size()), budget = double(int64_t(1) << 24); return std::max(double((p0.get()).elementCount()), qtc::path_points((p0.get()), QTransform(), budget / items)) * items <= budget; }())) return qtc::pre_fail(QTC_ERR_LIMIT, "QGraphicsScene::setSelectionArea(QPainterPath,QTransform): the path has points that are not finite, or its elements (curves counted as flattened) times the scene's items exceed 2^24 (each item is tested against the whole path: about a second)");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPainterPath> &p0, qtc::H<QTransform> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->setSelectionArea(p0.get(), p1.get()); }) { s->setSelectionArea(p0.get(), p1.get()); r->set_none(); return 0; }
@@ -6372,7 +6372,7 @@ template <class S> static int t6647(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 1) QTC_CVE(1, p1, 903);
     if (n > 2) QTC_CVE(2, p2, 902);
     if (n > 3) QTC_CV(3, p3);
-    if (!(qtc::path_finite((p0.get())) && int64_t((p0.get()).elementCount()) * std::max<int64_t>(1, s->items().size()) <= (int64_t(1) << 26))) return qtc::pre_fail(QTC_ERR_LIMIT, "QGraphicsScene::setSelectionArea(QPainterPath,Qt::ItemSelectionOperation,Qt::ItemSelectionMode,QTransform): the path has points that are not finite, or its elements times the scene's items exceed 2^26 (each item is tested against the whole path)");
+    if (!(qtc::path_finite((p0.get())) && [&] { const double items = std::max<qsizetype>(1, s->items().size()), budget = double(int64_t(1) << 24); return std::max(double((p0.get()).elementCount()), qtc::path_points((p0.get()), QTransform(), budget / items)) * items <= budget; }())) return qtc::pre_fail(QTC_ERR_LIMIT, "QGraphicsScene::setSelectionArea(QPainterPath,Qt::ItemSelectionOperation,Qt::ItemSelectionMode,QTransform): the path has points that are not finite, or its elements (curves counted as flattened) times the scene's items exceed 2^24 (each item is tested against the whole path: about a second)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPainterPath> &p0) { qtc::cv(aa[0], p0, 0); s->setSelectionArea(p0.get()); }) { s->setSelectionArea(p0.get()); r->set_none(); return 0; }

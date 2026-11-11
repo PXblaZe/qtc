@@ -247,9 +247,11 @@ TABLE = [
     ("QPainterPath", r"united|intersected|subtracted|contains|intersects|connectPath|addPath", r"QPainterPath",
      "qtc::path_finite({0})", BAD, "the path has points that are not finite"),
     ("QGraphicsScene", r"setSelectionArea", r"QPainterPath(,.*)?",
-     "qtc::path_finite({0}) && int64_t({0}.elementCount()) * std::max<int64_t>(1, {s}->items().size()) <= (int64_t(1) << 26)",
-     LIMIT, "the path has points that are not finite, or its elements times the scene's items exceed 2^26 (each item "
-     "is tested against the whole path)"),
+     "qtc::path_finite({0}) && [&] { const double items = std::max<qsizetype>(1, {s}->items().size()), "
+     "budget = double(int64_t(1) << 24); return std::max(double({0}.elementCount()), "
+     "qtc::path_points({0}, QTransform(), budget / items)) * items <= budget; }()",
+     LIMIT, "the path has points that are not finite, or its elements (curves counted as flattened) times the "
+     "scene's items exceed 2^24 (each item is tested against the whole path: about a second)"),
     ("QPainterPath", r"united|intersected|subtracted|contains|intersects", r"QPainterPath",
      "qtc::flatten_ok(*{s}, QTransform()) && qtc::flatten_ok({0}, QTransform()) && qtc::path_room(*{s}, {0}.elementCount())",
      LIMIT, "the paths are too large for a boolean operation"),
