@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 — unreleased
+## 1.1.0 — 2026-11-11
 
 ### Licensing
 - A default build now binds only Qt modules available under the LGPL-3.0, which
