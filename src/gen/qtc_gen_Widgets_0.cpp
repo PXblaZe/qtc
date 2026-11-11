@@ -1829,6 +1829,7 @@ template <class S> static int t5778(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!(qtc::not_self_or_ancestor(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QAbstractScrollArea::setViewport(QWidget*): the argument is the receiver or one of its ancestors");
     if (!(qtc::not_held(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QAbstractScrollArea::setViewport(QWidget*): the argument is held by another object (a check box, header, viewport, ...); take it from there first");
     if (!((p0.get()) == s->viewport() || qtc::part_free(s, s->viewport()))) return qtc::pre_fail(QTC_ERR_STATE, "QAbstractScrollArea::setViewport(QWidget*): the part this replaces (and deletes) holds an object another owner keeps a plain pointer to and cannot let go of");
+    if (!(!(p0.get()) || ((p0.get()) != s && !(p0.get())->isAncestorOf(s) && !(qobject_cast<QScrollArea *>(s) && static_cast<QScrollArea *>(s)->widget() == (p0.get()))))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QAbstractScrollArea::setViewport(QWidget*): the viewport is the scroll area's widget, the scroll area, or one of its ancestors");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); s->setViewport(p0.get()); }) { s->setViewport(p0.get()); r->set_none(); return 0; }

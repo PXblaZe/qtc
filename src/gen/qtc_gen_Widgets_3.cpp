@@ -7057,6 +7057,8 @@ template <class S> static int t7742(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (!(qtc::not_self_or_ancestor(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QScrollArea::setWidget(QWidget*): the argument is the receiver or one of its ancestors");
     if (!(qtc::not_held(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QScrollArea::setWidget(QWidget*): the argument is held by another object (a check box, header, viewport, ...); take it from there first");
     if (!((p0.get()) == s->widget() || qtc::part_free(s, s->widget()))) return qtc::pre_fail(QTC_ERR_STATE, "QScrollArea::setWidget(QWidget*): the part this replaces (and deletes) holds an object another owner keeps a plain pointer to and cannot let go of");
+    if (!(!(p0.get()) || ((p0.get()) != s->viewport() && (p0.get()) != s && !(p0.get())->isAncestorOf(s)))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QScrollArea::setWidget(QWidget*): the widget is the scroll area's viewport, the scroll area, or one of its ancestors");
+    if (!(qtc::in_no_scroll_area((p0.get()), s))) return qtc::pre_fail(QTC_ERR_STATE, "QScrollArea::setWidget(QWidget*): the widget is another scroll area's widget (a tool box's page is one too): take it from that one first (takeWidget, removeItem)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QWidget *> &p0) { qtc::cv(aa[0], p0, 0); s->setWidget(p0.get()); }) { s->setWidget(p0.get()); r->set_none(); return 0; }

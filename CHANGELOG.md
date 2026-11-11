@@ -31,7 +31,10 @@
   counts past what it stores; `QGraphicsScene::setStyle` while proxy widgets use
   the scene's own style (Qt deletes it under them); `QChart::removeAllSeries`
   with an area series in the chart (its chart item outlives it and follows the
-  boundary lines); `QBarSet::remove` with a count that wraps past `INT_MAX`.
+  boundary lines); `QBarSet::remove` with a count that wraps past `INT_MAX`;
+  a scroll area or a tool box given another scroll area's widget (a tool box's
+  pages sit in scroll areas; both kept resizing it to their own viewports until
+  the stack ran out), and a scroll area whose widget is also its viewport.
 - Hangs the method fuzzer found: a grid layout with negative or huge row and
   column minimum sizes (the layout engine's sums wrapped; minimum sizes are now
   limited to [0, 16777215] and counted with the other sizes before a layout

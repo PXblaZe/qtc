@@ -82,6 +82,7 @@
 #ifdef QTC_HAS_WIDGETS
 #include <QtWidgets/QAbstractScrollArea>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QColumnView>
 #include <QtWidgets/QComboBox>
@@ -1077,6 +1078,19 @@ bool style_unshared(const QObject *style) {
         if (w) return false;
 #else
     (void)style;
+#endif
+    return true;
+}
+
+bool in_no_scroll_area(const QObject *widget, const QObject *except) {
+#ifdef QTC_HAS_WIDGETS
+    if (!widget) return true;
+    const QWidgetList all = QApplication::allWidgets();
+    for (QWidget *x : all)
+        if (auto *a = qobject_cast<QScrollArea *>(x); a && a != except && a->widget() == widget) return false;
+#else
+    (void)widget;
+    (void)except;
 #endif
     return true;
 }

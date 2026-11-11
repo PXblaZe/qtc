@@ -7298,6 +7298,7 @@ template <class S> static int t8360(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(1, p1);
     if (!(qtc::not_self_or_ancestor(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QToolBox::addItem(QWidget*,QString): the argument is the receiver or one of its ancestors");
     if (!(qtc::not_held(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::addItem(QWidget*,QString): the argument is held by another object (a check box, header, viewport, ...); take it from there first");
+    if (!(qtc::in_no_scroll_area((p0.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::addItem(QWidget*,QString): the widget is a scroll area's widget (or another tool box's page): take it from there first");
     if (!((p0.get()) == nullptr || s->indexOf((p0.get())) < 0)) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::addItem(QWidget*,QString): the widget is in the tool box already");
     switch (n) {
         case 2:
@@ -7319,6 +7320,7 @@ template <class S> static int t8361(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(2, p2);
     if (!(qtc::not_self_or_ancestor(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QToolBox::addItem(QWidget*,QIcon,QString): the argument is the receiver or one of its ancestors");
     if (!(qtc::not_held(s, (p0.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::addItem(QWidget*,QIcon,QString): the argument is held by another object (a check box, header, viewport, ...); take it from there first");
+    if (!(qtc::in_no_scroll_area((p0.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::addItem(QWidget*,QIcon,QString): the widget is a scroll area's widget (or another tool box's page): take it from there first");
     if (!((p0.get()) == nullptr || s->indexOf((p0.get())) < 0)) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::addItem(QWidget*,QIcon,QString): the widget is in the tool box already");
     switch (n) {
         case 3:
@@ -7340,6 +7342,7 @@ template <class S> static int t8362(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(2, p2);
     if (!(qtc::not_self_or_ancestor(s, (p1.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QToolBox::insertItem(int,QWidget*,QString): the argument is the receiver or one of its ancestors");
     if (!(qtc::not_held(s, (p1.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::insertItem(int,QWidget*,QString): the argument is held by another object (a check box, header, viewport, ...); take it from there first");
+    if (!(qtc::in_no_scroll_area((p1.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::insertItem(int,QWidget*,QString): the widget is a scroll area's widget (or another tool box's page): take it from there first");
     if (!((p1.get()) == nullptr || s->indexOf((p1.get())) < 0)) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::insertItem(int,QWidget*,QString): the widget is in the tool box already");
     switch (n) {
         case 3:
@@ -7363,6 +7366,7 @@ template <class S> static int t8363(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(3, p3);
     if (!(qtc::not_self_or_ancestor(s, (p1.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QToolBox::insertItem(int,QWidget*,QIcon,QString): the argument is the receiver or one of its ancestors");
     if (!(qtc::not_held(s, (p1.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::insertItem(int,QWidget*,QIcon,QString): the argument is held by another object (a check box, header, viewport, ...); take it from there first");
+    if (!(qtc::in_no_scroll_area((p1.get())))) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::insertItem(int,QWidget*,QIcon,QString): the widget is a scroll area's widget (or another tool box's page): take it from there first");
     if (!((p1.get()) == nullptr || s->indexOf((p1.get())) < 0)) return qtc::pre_fail(QTC_ERR_STATE, "QToolBox::insertItem(int,QWidget*,QIcon,QString): the widget is in the tool box already");
     switch (n) {
         case 4:

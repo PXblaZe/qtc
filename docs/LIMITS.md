@@ -274,6 +274,10 @@ ones:
   bounding-box tests, and every hit test then walks the whole path.
   `QGraphicsScene::setSelectionArea` with a path whose elements (curves counted
   as flattened) times the scene's items exceed 2^24 (about a second).
+- `QScrollArea::setWidget` and `QToolBox::addItem`/`insertItem` with a widget
+  that is already a scroll area's widget, a tool box's page included (take it
+  from there first with `takeWidget` or `removeItem`); a scroll area's viewport and its widget being the
+  same widget (or either being the scroll area or one of its ancestors).
 - `QChart::removeAllSeries` while the chart has an area series: Qt deletes the
   series at once but the area's chart item later, and it still follows the
   boundary lines. Remove area series with `removeSeries` and destroy them first.
@@ -294,11 +298,23 @@ ones:
 
 ## Known open failures
 
-Every failure the last fuzz rounds found is fixed in this release (see
-[TESTING.md](TESTING.md#results)). The crash while painting through a graphics
-effect that 1.0.0 listed here as unexplained is explained and fixed:
+Every failure in qtc that the last fuzz rounds found is fixed in this release
+(see [TESTING.md](TESTING.md#results)). The crash while painting through a
+graphics effect that 1.0.0 listed here as unexplained is explained and fixed:
 `QWidget::grab` with an empty rectangle that is not a null one (`QRect(0, 1, 2,
 0)`) paints into a null pixmap, which crashes where a graphics effect draws.
+
+One failure the 1.1.0 rounds found is in Qt itself and is not worked around:
+
+- **A crash at process exit after `QCryptographicHash::supportsAlgorithm` ran
+  twice (or an MD4 hash), with OpenSSL 3.** OpenSSL's exit-time cleanup frees a
+  provider-store entry a second time (a double free, or a segfault). A plain Qt
+  program of four lines does the same with the Qt 6.12 binaries used here, with
+  either OpenSSL 3.0.13 or 3.6.5; Qt's 6.12 branch sources carry a fix (the
+  default provider is never unloaded, QTBUG-148575). It happens after `main`
+  returns, so nothing is lost but the exit status; a Qt build with the fix does
+  not have it.
+
 One failure from earlier rounds is still not explained:
 
 - **A hang after `QIODevice::readChannelFinished` was emitted by hand on a

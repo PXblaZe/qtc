@@ -409,6 +409,26 @@ TABLE = [
      "{0} == {s}->horizontalScrollBar() || qtc::part_free({s}, {s}->horizontalScrollBar())", STATE, PART_HELD),
     ("QScrollArea+", r"setWidget", r"QWidget\*", "{0} == {s}->widget() || qtc::part_free({s}, {s}->widget())", STATE,
      PART_HELD),
+    # a scroll area whose widget is also its viewport resizes one to fit the other: each resize
+    # event resizes again, and when the scroll bars come and go it recurses until the stack runs out
+    ("QScrollArea+", r"setWidget", r"QWidget\*", "!{0} || ({0} != {s}->viewport() && {0} != {s} && !{0}->isAncestorOf({s}))",
+     BAD, "the widget is the scroll area's viewport, the scroll area, or one of its ancestors"),
+    # a scroll area keeps watching its widget after another one takes it (and after it is moved
+    # elsewhere): each then resizes it to its own viewport on the other's resize, until the stack
+    # runs out
+    ("QScrollArea+", r"setWidget", r"QWidget\*",
+     "qtc::in_no_scroll_area({0}, {s})",
+     STATE, "the widget is another scroll area's widget (a tool box's page is one too): take it from that one first "
+     "(takeWidget, removeItem)"),
+    # (a tool box puts each page in a scroll area of its own)
+    ("QToolBox", r"addItem", None, "qtc::in_no_scroll_area({0})", STATE,
+     "the widget is a scroll area's widget (or another tool box's page): take it from there first"),
+    ("QToolBox", r"insertItem", None, "qtc::in_no_scroll_area({1})", STATE,
+     "the widget is a scroll area's widget (or another tool box's page): take it from there first"),
+    ("QAbstractScrollArea+", r"setViewport", r"QWidget\*",
+     "!{0} || ({0} != {s} && !{0}->isAncestorOf({s}) && !(qobject_cast<QScrollArea *>({s}) && "
+     "static_cast<QScrollArea *>({s})->widget() == {0}))",
+     BAD, "the viewport is the scroll area's widget, the scroll area, or one of its ancestors"),
     ("QTabWidget+", r"setTabBar", r"QTabBar\*", "{0} == {s}->tabBar() || qtc::part_free({s}, {s}->tabBar())", STATE,
      PART_HELD),
     ("QTableView+", r"setHorizontalHeader", r"QHeaderView\*",

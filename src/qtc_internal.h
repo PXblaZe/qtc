@@ -629,6 +629,9 @@ bool style_unshared(const QObject *style);
 // QGraphicsScene::setStyle deletes the scene's own style before the widgets of its proxy widgets
 // let go of it: false while it has a style of its own and proxy widgets
 bool scene_style_swappable(const QObject *scene);
+// no scroll area but `except` has the widget as its widget (a scroll area keeps watching its widget
+// after something else takes it, and two of them resize it in turn without end)
+bool in_no_scroll_area(const QObject *widget, const QObject *except = nullptr);
 // play() and stop() of a spatial-audio sound note whether it plays; pause() needs it to
 bool note_sound(QObject *sound, bool playing);   // always true
 bool sound_playing(const QObject *sound);

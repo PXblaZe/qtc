@@ -249,6 +249,7 @@ Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
 | `QGridLayout::setRowMinimumHeight(100, INT_MIN)` and others, then `setGeometry` | the layout engine's sums wrap and its space distribution never finishes (the 1.0.0 box-layout hang, through the grid's own row and column sizes) |
 | `QPlainTextEdit::find` with an empty regular expression, backward, whole words, over a 4,096-character line | tries every earlier position, matching each from the start of the line: seconds to minutes |
 | a text path moved by NaN, joined to itself, then `QGraphicsScene::setSelectionArea` with it | the NaN points defeat the bounding-box early outs, and each item is tested against every element: minutes |
+| a scroll area's widget added to a tool box (whose page is a scroll area of its own), both resizable | the first keeps watching it: each resizes it to its own viewport on the other's resize, until the stack runs out |
 
 They found bugs in qtc too: `QByteArray::erase` was bound with its iterators taken
 for byte buffers (it then freed memory it did not own); deletions Qt makes itself

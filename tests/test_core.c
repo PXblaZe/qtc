@@ -2208,6 +2208,43 @@ static void test_fuzz_findings(void) {
         qtc_val_free(gr);
         qtc_destroy(gl);
     }
+    /* a scroll area whose widget is also its viewport resizes each to the other without end */
+    {
+        qtc_obj sa = make("QScrollArea");
+        qtc_obj sw = make("QWidget");
+        qtc_arg_obj(sw);
+        CHECK_EQ(qtc_call(sa, S("setWidget")), QTC_OK);
+        qtc_arg_obj(sw);
+        CHECK_EQ(qtc_call(sa, S("setViewport")), QTC_ERR_BAD_ARGS);
+        qtc_arg_obj(sa);
+        CHECK_EQ(qtc_call(sa, S("setViewport")), QTC_ERR_BAD_ARGS);
+        CHECK_EQ(qtc_call(sa, S("viewport")), QTC_OK);
+        qtc_obj vp = qtc_ret_obj();
+        qtc_arg_obj(vp);
+        CHECK(qtc_call(sa, S("setWidget")) != QTC_OK);
+        /* another scroll area cannot take the widget while the first still has it */
+        qtc_obj sb = make("QScrollArea");
+        qtc_arg_obj(sw);
+        CHECK_EQ(qtc_call(sb, S("setWidget")), QTC_ERR_STATE);
+        CHECK_EQ(qtc_call(sa, S("takeWidget")), QTC_OK);
+        qtc_arg_obj(sw);
+        CHECK_EQ(qtc_call(sb, S("setWidget")), QTC_OK);
+        /* a tool box's pages sit in scroll areas of their own */
+        qtc_obj tb = make("QToolBox");
+        qtc_arg_obj(sw);
+        qtc_arg_str(S("page"));
+        CHECK_EQ(qtc_call(tb, S("addItem(QWidget*,QString)")), QTC_ERR_STATE);
+        qtc_obj page = make("QWidget");
+        qtc_arg_obj(page);
+        qtc_arg_str(S("page"));
+        CHECK_EQ(qtc_call(tb, S("addItem(QWidget*,QString)")), QTC_OK);
+        qtc_arg_obj(page);
+        CHECK_EQ(qtc_call(sb, S("setWidget")), QTC_ERR_STATE);
+        qtc_destroy(tb);
+        qtc_destroy(sb);
+        qtc_destroy(sa);
+        qtc_process_events();
+    }
     /* a path moved by a non-finite offset gets NaN points, and every hit test then walks all of it */
     {
         qtc_val pp = qtc_val_new(S("QPainterPath"));
