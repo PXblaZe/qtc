@@ -2654,6 +2654,21 @@ bool grid_cells_ok(const QObject *layout, int64_t rows, int64_t cols) {
 // Images. Qt checks an image's size only for overflow: a large one is allocated, then touched
 // (filled, painted, converted) and the system kills the process. These keep each image a call
 // makes within the allocation limit.
+bool normalize_ok(const QString &s) {
+    qsizetype run = 0, other = 0;
+    for (qsizetype i = 0, n = s.size(); i < n; i++) {
+        char32_t c = s.at(i).unicode();
+        if (c >= 0x80) other++;
+        if (QChar::isHighSurrogate(c) && i + 1 < n && s.at(i + 1).isLowSurrogate())
+            c = QChar::surrogateToUcs4(char16_t(c), s.at(++i).unicode());
+        run = QChar::combiningClass(c) != 0 ? run + 1 : 0;
+        if (run > 16384) return false;
+    }
+    // and it rewrites the string in place, character by character: about length x the characters
+    // past ASCII (a megabyte of mixed text takes seconds)
+    return double(s.size()) * double(other) <= double(int64_t(1) << 36);
+}
+
 bool buffer_seek_ok(const QObject *device, int64_t pos) {
     auto *b = qobject_cast<const QBuffer *>(device);
     return !b || pos <= b->size() || alloc_ok(pos, 1);

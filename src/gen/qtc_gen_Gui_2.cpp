@@ -3808,6 +3808,7 @@ template <class S> static int t4625(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 2) QTC_CV(2, p2);
     if (n > 2 && !(qtc::index_of(s, (p2.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QStandardItemModel::removeColumns(int,int,QModelIndex): the index belongs to another model");
     if (!((p0.get()) >= 0 && (p1.get()) >= 0 && int64_t((p0.get())) + (p1.get()) <= qtc::cols_of(s, (n > 2 ? static_cast<decltype(QModelIndex())>(p2.get()) : (QModelIndex()))))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QStandardItemModel::removeColumns(int,int,QModelIndex): the columns must exist");
+    if (!((p1.get()) <= 0 || qtc::std_columns_ok(qtc::rows_of(s, (n > 2 ? static_cast<decltype(QModelIndex())>(p2.get()) : (QModelIndex()))), qtc::cols_of(s, (n > 2 ? static_cast<decltype(QModelIndex())>(p2.get()) : (QModelIndex())))))) return qtc::pre_fail(QTC_ERR_LIMIT, "QStandardItemModel::removeColumns(int,int,QModelIndex): removing columns from this many rows takes too long in Qt (rows x rows x columns over 2^30): remove rows first");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->removeColumns(p0.get(), p1.get())); }) { qtc::rt(*r, s->removeColumns(p0.get(), p1.get())); return 0; }
@@ -3961,7 +3962,7 @@ template <class S> static int t4635(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p0;
     QTC_CV(0, p0);
     if (!((p0.get()) >= 0 && qtc::alloc_ok(int64_t((p0.get())) * qMax(1, s->rowCount()), 8))) return qtc::pre_fail(QTC_ERR_LIMIT, "QStandardItemModel::setColumnCount(int): rows x columns too large");
-    if (!((p0.get()) <= s->columnCount() || qtc::std_columns_ok(int64_t(s->rowCount()), (p0.get())))) return qtc::pre_fail(QTC_ERR_LIMIT, "QStandardItemModel::setColumnCount(int): adding columns to this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows");
+    if (!((p0.get()) == s->columnCount() || qtc::std_columns_ok(int64_t(s->rowCount()), std::max<int64_t>((p0.get()), s->columnCount())))) return qtc::pre_fail(QTC_ERR_LIMIT, "QStandardItemModel::setColumnCount(int): adding or removing columns in this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->setColumnCount(p0.get()); }) { s->setColumnCount(p0.get()); r->set_none(); return 0; }

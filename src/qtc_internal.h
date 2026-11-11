@@ -578,6 +578,9 @@ inline bool alloc_ok(int64_t count, int64_t elem) { return count <= 0 || (elem >
 // a QBuffer seeked past its end grows to the position (Qt fills the gap with zeros): such a seek
 // stays within the allocation limit; other devices are left to Qt
 bool buffer_seek_ok(const QObject *device, int64_t pos);
+// Qt puts each run of combining marks in canonical order in time that grows as the run's square, and
+// rewrites the string in place: length x the characters past ASCII
+bool normalize_ok(const QString &s);
 
 // The number of elements: the first of size(), count(), elementCount() and length() that counts
 // (QPainterPath::length() is the path's length in pixels, QRect::size() is a QSize).

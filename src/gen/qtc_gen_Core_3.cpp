@@ -9480,6 +9480,7 @@ template <class S> static int t2388(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QChar::UnicodeVersion> p1;
     QTC_CVE(0, p0, 652);
     if (n > 1) QTC_CVE(1, p1, 97);
+    if (!(qtc::normalize_ok(*s))) return qtc::pre_fail(QTC_ERR_LIMIT, "QString::normalized(QString::NormalizationForm,QChar::UnicodeVersion): a run of more than 16,384 combining marks (Qt orders each run in time growing as its square), or length x characters past ASCII over 2^36 (it rewrites the string in place: about a second)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString::NormalizationForm> &p0) { qtc::cve(aa[0], p0, 0, 652); qtc::rt(*rr, s->normalized(p0.get())); }) { qtc::rt(*r, s->normalized(p0.get())); return 0; }

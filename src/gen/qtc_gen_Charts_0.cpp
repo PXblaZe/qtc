@@ -3617,6 +3617,7 @@ template <class S> static int t12304(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p1;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
+    if (!(false)) return qtc::pre_fail(QTC_ERR_STATE, "QBarSet::valuesAdded(int,int): the set emits this itself when its values change; emitted by hand, the bar charts' copy no longer matches");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->valuesAdded(p0.get(), p1.get()); }) { s->valuesAdded(p0.get(), p1.get()); r->set_none(); return 0; }
@@ -3633,6 +3634,7 @@ template <class S> static int t12305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p1;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
+    if (!(false)) return qtc::pre_fail(QTC_ERR_STATE, "QBarSet::valuesRemoved(int,int): the set emits this itself when its values change; emitted by hand, the bar charts' copy no longer matches");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->valuesRemoved(p0.get(), p1.get()); }) { s->valuesRemoved(p0.get(), p1.get()); r->set_none(); return 0; }
@@ -3647,6 +3649,7 @@ template <class S> static int t12306(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
+    if (!(qtc::in((p0.get()), 0, int64_t(s->count()) - 1))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QBarSet::valueChanged(int): index out of range [0, count())");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->valueChanged(p0.get()); }) { s->valueChanged(p0.get()); r->set_none(); return 0; }

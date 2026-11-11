@@ -35,12 +35,22 @@
   a scroll area or a tool box given another scroll area's widget (a tool box's
   pages sit in scroll areas; both kept resizing it to their own viewports until
   the stack ran out), and a scroll area whose widget is also its viewport.
+- Chart signals emitted by hand: `QXYSeries::pointAdded`, `pointRemoved` and
+  `pointsRemoved`, `QBarSet::valuesAdded` and
+  `valuesRemoved` (the chart's copy of the points no longer matched, and it
+  read past the end); `pointReplaced` and `QBarSet::valueChanged` with an index
+  out of range.
 - Hangs the method fuzzer found: a grid layout with negative or huge row and
   column minimum sizes (the layout engine's sums wrapped; minimum sizes are now
   limited to [0, 16777215] and counted with the other sizes before a layout
   runs), and a backward whole-word search with a regular expression over long
   text blocks (`QTextDocument`, `QTextEdit`, `QPlainTextEdit::find`; quadratic in
-  the block length, now limited); selecting in a scene with a path of NaN
+  the block length, now limited); removing columns from a `QStandardItemModel`
+  of very many rows (row by row, moving everything after each: the limit that
+  1.0.0 put on inserting columns now covers removing them); `QString::normalized` on a run of
+  more than 16,384 combining marks (Qt orders each run in time growing as its
+  square) or on long text with much past ASCII (it rewrites the string in
+  place: length x such characters, now at most 2^36); selecting in a scene with a path of NaN
   points (Qt refuses NaN points when they are added but not when a path is
   moved or mapped: `QPainterPath::translate` and `QTransform::map` with
   non-finite values are refused now, and paths with such points are refused by

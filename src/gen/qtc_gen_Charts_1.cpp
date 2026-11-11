@@ -4777,6 +4777,7 @@ template <class S> static int t13092(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
+    if (!(qtc::in((p0.get()), 0, int64_t(s->count()) - 1))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QXYSeries::pointReplaced(int): index out of range [0, count())");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->pointReplaced(p0.get()); }) { s->pointReplaced(p0.get()); r->set_none(); return 0; }
@@ -4791,6 +4792,7 @@ template <class S> static int t13093(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
+    if (!(false)) return qtc::pre_fail(QTC_ERR_STATE, "QXYSeries::pointRemoved(int): the series emits this itself when its points change; emitted by hand, the copy a chart keeps of the points (also one the series has just left) no longer matches");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->pointRemoved(p0.get()); }) { s->pointRemoved(p0.get()); r->set_none(); return 0; }
@@ -4805,6 +4807,7 @@ template <class S> static int t13094(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<int> p0;
     QTC_CV(0, p0);
+    if (!(false)) return qtc::pre_fail(QTC_ERR_STATE, "QXYSeries::pointAdded(int): the series emits this itself when its points change; emitted by hand, the copy a chart keeps of the points (also one the series has just left) no longer matches");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->pointAdded(p0.get()); }) { s->pointAdded(p0.get()); r->set_none(); return 0; }
@@ -4931,6 +4934,7 @@ template <class S> static int t13103(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p1;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
+    if (!(false)) return qtc::pre_fail(QTC_ERR_STATE, "QXYSeries::pointsRemoved(int,int): the series emits this itself when its points change; emitted by hand, the copy a chart keeps of the points (also one the series has just left) no longer matches");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->pointsRemoved(p0.get(), p1.get()); }) { s->pointsRemoved(p0.get(), p1.get()); r->set_none(); return 0; }

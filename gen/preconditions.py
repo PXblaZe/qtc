@@ -492,6 +492,9 @@ TABLE = [
      "seeking that far past the end would make the buffer larger than the allocation limit (qtc_set_alloc_limit)"),
     ("QString", r"split", r"(QString|QChar)(,.*)?", "qtc::split_ok(*{s}, QString({0}), {2|Qt::CaseSensitive})", LIMIT,
      "the result would have too many parts"),
+    ("QString", r"normalized", None, "qtc::normalize_ok(*{s})", LIMIT,
+     "a run of more than 16,384 combining marks (Qt orders each run in time growing as its square), or length x "
+     "characters past ASCII over 2^36 (it rewrites the string in place: about a second)"),
     ("QString", r"split", r"QRegularExpression(,.*)?", "qtc::split_ok(*{s}, {0})", LIMIT, "the result would have too many parts"),
     ("QByteArray", r"split", r"char", "qtc::split_ok(*{s}, {0})", LIMIT, "the result would have too many parts"),
     ("QSplashScreen", r"finish", None, "{0} != {s} && ({0} == nullptr || {0}->isWindow())", BAD,
@@ -641,15 +644,26 @@ TABLE = [
      "qtc::std_columns_ok(int64_t({s}->rowCount()), int64_t({s}->columnCount()) + 1)", LIMIT,
      "inserting columns into this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows"),
     ("QStandardItemModel", r"setColumnCount", None,
-     "{0} <= {s}->columnCount() || qtc::std_columns_ok(int64_t({s}->rowCount()), {0})", LIMIT,
-     "adding columns to this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows"),
+     "{0} == {s}->columnCount() || qtc::std_columns_ok(int64_t({s}->rowCount()), std::max<int64_t>({0}, {s}->columnCount()))", LIMIT,
+     "adding or removing columns in this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows"),
+    # removing a column goes row by row the same way
+    ("QStandardItemModel", r"removeColumns", r"int,int(,QModelIndex)?",
+     "{1} <= 0 || qtc::std_columns_ok(qtc::rows_of({s}, {2|QModelIndex()}), qtc::cols_of({s}, {2|QModelIndex()}))",
+     LIMIT, "removing columns from this many rows takes too long in Qt (rows x rows x columns over 2^30): remove rows first"),
+    ("QStandardItem", r"removeColumns", None, "{1} <= 0 || qtc::std_columns_ok(int64_t({s}->rowCount()), int64_t({s}->columnCount()))",
+     LIMIT, "removing columns from this many rows takes too long in Qt (rows x rows x columns over 2^30): remove rows first"),
+    ("QStandardItem", r"removeColumn|takeColumn", None, "qtc::std_columns_ok(int64_t({s}->rowCount()), int64_t({s}->columnCount()))",
+     LIMIT, "removing columns from this many rows takes too long in Qt (rows x rows x columns over 2^30): remove rows first"),
+    ("QStandardItemModel", r"takeColumn", None, "qtc::std_columns_ok(int64_t({s}->rowCount()), int64_t({s}->columnCount()))",
+     LIMIT, "removing columns from this many rows takes too long in Qt (rows x rows x columns over 2^30): remove rows first"),
     ("QStandardItem", r"insertColumns", None, "qtc::std_columns_ok(int64_t({s}->rowCount()), int64_t({s}->columnCount()) + {1})",
      LIMIT, "inserting columns into this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows"),
     ("QStandardItem", r"insertColumn|appendColumn", None,
      "qtc::std_columns_ok(int64_t({s}->rowCount()), int64_t({s}->columnCount()) + 1)", LIMIT,
      "inserting columns into this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows"),
-    ("QStandardItem", r"setColumnCount", None, "{0} <= {s}->columnCount() || qtc::std_columns_ok(int64_t({s}->rowCount()), {0})",
-     LIMIT, "adding columns to this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows"),
+    ("QStandardItem", r"setColumnCount", None,
+     "{0} == {s}->columnCount() || qtc::std_columns_ok(int64_t({s}->rowCount()), std::max<int64_t>({0}, {s}->columnCount()))",
+     LIMIT, "adding or removing columns in this many rows takes too long in Qt (rows x rows x columns over 2^30): set the columns before adding rows"),
     # when the copy fails (a descriptor that is not open), Qt closes the descriptor it holds but keeps
     # its number, and closes that number again later: by then it is someone else's (Qt's own event
     # loop wakeups, found as a hang at exit)
@@ -799,6 +813,19 @@ TABLE = [
     ("QMdiSubWindow", r"showSystemMenu", None, "!{s}->systemMenu() || {s}->systemMenu()->isWindow()", STATE,
      "the system menu is no longer a popup window"),
     # QMessageBox keeps plain pointers to these buttons, also after they are deleted
+    # emitted by hand, these change the chart item's own copy of the points or values without the
+    # series changing: it then reads past the end (an added or removed point, also right after the
+    # series left its chart, whose item lives until the next deferred delete), or
+    # takes the index as given (a replaced point, a changed value)
+    ("QXYSeries", r"pointAdded|pointRemoved|pointsRemoved", None, "false", STATE,
+     "the series emits this itself when its points change; emitted by hand, the copy a chart keeps of the points "
+     "(also one the series has just left) no longer matches"),
+    ("QXYSeries", r"pointReplaced", None, "qtc::in({0}, 0, int64_t({s}->count()) - 1)", OOR,
+     "index out of range [0, count())"),
+    ("QBarSet", r"valuesAdded|valuesRemoved", None, "false", STATE,
+     "the set emits this itself when its values change; emitted by hand, the bar charts' copy no longer matches"),
+    ("QBarSet", r"valueChanged", r"int", "qtc::in({0}, 0, int64_t({s}->count()) - 1)", OOR,
+     "index out of range [0, count())"),
     # emitted by hand, contentsChange has the document's layouts lay out the range it names
     ("QTextDocument", r"contentsChange", None,
      "qtc::in({0}, 0, {s}->characterCount()) && qtc::in({1}, 0, {s}->characterCount()) && "

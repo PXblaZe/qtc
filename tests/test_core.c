@@ -2125,6 +2125,25 @@ static void test_fuzz_findings(void) {
         qtc_destroy(chart);
         qtc_destroy(upper);
 
+        /* point signals emitted by hand while the series is in a chart */
+        chart = make("QChart");
+        qtc_obj ls = make("QLineSeries");
+        for (int i = 0; i < 3; i++) {
+            qtc_arg_double(i);
+            qtc_arg_double(i);
+            CHECK_EQ(qtc_call(ls, S("append(qreal,qreal)")), QTC_OK);
+        }
+        qtc_arg_obj(ls);
+        CHECK_EQ(qtc_call(chart, S("addSeries")), QTC_OK);
+        qtc_arg_int(-1);
+        CHECK_EQ(qtc_call(ls, S("pointAdded")), QTC_ERR_STATE);
+        qtc_arg_int(5);
+        CHECK_EQ(qtc_call(ls, S("pointReplaced")), QTC_ERR_OUT_OF_RANGE);
+        qtc_arg_int(1);
+        CHECK_EQ(qtc_call(ls, S("pointReplaced")), QTC_OK);
+        qtc_destroy(chart);
+        qtc_process_events();
+
         /* index + count wrapped past INT_MAX */
         qtc_arg_str(S("set"));
         qtc_obj bs = make("QBarSet");
@@ -2255,6 +2274,47 @@ static void test_fuzz_findings(void) {
         qtc_arg_double(2);
         CHECK_EQ(qtc_call(pp, S("translate(qreal,qreal)")), QTC_OK);
         qtc_val_free(pp);
+    }
+    /* a standard item model removes a column row by row, moving everything after it each time */
+    {
+        qtc_obj sm = make("QStandardItemModel");
+        qtc_arg_int(32);
+        CHECK_EQ(qtc_call(sm, S("setColumnCount")), QTC_OK);
+        qtc_arg_int(65536);
+        CHECK_EQ(qtc_call(sm, S("setRowCount")), QTC_OK);
+        qtc_arg_int(0);
+        qtc_arg_int(1);
+        CHECK_EQ(qtc_call(sm, S("removeColumns")), QTC_ERR_LIMIT);
+        qtc_arg_int(8);
+        CHECK_EQ(qtc_call(sm, S("setColumnCount")), QTC_ERR_LIMIT);
+        qtc_arg_int(16);
+        CHECK_EQ(qtc_call(sm, S("setRowCount")), QTC_OK);
+        qtc_arg_int(0);
+        qtc_arg_int(1);
+        CHECK_EQ(qtc_call(sm, S("removeColumns")), QTC_OK);
+        qtc_destroy(sm);
+    }
+    /* normalizing orders each run of combining marks in time growing as its square */
+    {
+        char *marks = malloc(2 * 20000 + 2);
+        marks[0] = 'a';
+        for (int i = 0; i < 20000; i++) {
+            marks[1 + 2 * i] = (char)0xcc;   /* U+0301 COMBINING ACUTE ACCENT */
+            marks[2 + 2 * i] = (char)0x81;
+        }
+        marks[1 + 2 * 20000] = 0;
+        qtc_arg_str(qtc_s(marks));
+        qtc_val qs = qtc_val_new(S("QString"));
+        qtc_arg_int(3);   /* NormalizationForm_KC */
+        CHECK_EQ(qtc_call(qs, S("normalized")), QTC_ERR_LIMIT);
+        qtc_val_free(qs);
+        marks[1 + 2 * 1000] = 0;
+        qtc_arg_str(qtc_s(marks));
+        qs = qtc_val_new(S("QString"));
+        qtc_arg_int(3);
+        CHECK_EQ(qtc_call(qs, S("normalized")), QTC_OK);
+        qtc_val_free(qs);
+        free(marks);
     }
     /* a backward whole-word search with a regular expression is quadratic in the block length */
     {

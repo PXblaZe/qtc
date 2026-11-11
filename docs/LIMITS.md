@@ -38,7 +38,7 @@ It does not cover:
     models of `QListWidget` and `QTreeWidget` before many rows (Qt inserts them one
     at a time), also through `QIdentityProxyModel`, `QSortFilterProxyModel` and
     `QTransposeProxyModel`;
-  - adding columns to a `QStandardItemModel` or a `QTableWidget` with many rows
+  - adding or removing columns in a `QStandardItemModel` or a `QTableWidget` with many rows
     (rows × rows × columns; set the columns before adding rows), also through
     header labels and proxies;
   - a `QGridLayout` of more than 2^20 cells (rows × columns: Qt clears that many
@@ -278,6 +278,15 @@ ones:
   that is already a scroll area's widget, a tool box's page included (take it
   from there first with `takeWidget` or `removeItem`); a scroll area's viewport and its widget being the
   same widget (or either being the scroll area or one of its ancestors).
+- `QString::normalized` on text with a run of more than 16,384 combining marks
+  (Qt puts each run in order in time growing as its square: minutes for a run of
+  a million), or whose length times its characters past ASCII exceed 2^36 (Qt
+  rewrites the string in place: a megabyte of mixed text takes seconds).
+- Chart signals that report structural changes, emitted by hand:
+  `QXYSeries::pointAdded`, `pointRemoved`, `pointsRemoved` and
+  `QBarSet::valuesAdded`/`valuesRemoved` (the series and sets emit them
+  themselves; a chart's copy of the points, also one the series has just left,
+  would no longer match).
 - `QChart::removeAllSeries` while the chart has an area series: Qt deletes the
   series at once but the area's chart item later, and it still follows the
   boundary lines. Remove area series with `removeSeries` and destroy them first.

@@ -250,6 +250,9 @@ Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
 | `QPlainTextEdit::find` with an empty regular expression, backward, whole words, over a 4,096-character line | tries every earlier position, matching each from the start of the line: seconds to minutes |
 | a text path moved by NaN, joined to itself, then `QGraphicsScene::setSelectionArea` with it | the NaN points defeat the bounding-box early outs, and each item is tested against every element: minutes |
 | a scroll area's widget added to a tool box (whose page is a scroll area of its own), both resizable | the first keeps watching it: each resizes it to its own viewport on the other's resize, until the stack runs out |
+| `QXYSeries::pointAdded(-1)` emitted by hand on a line series in a chart | the chart item inserts the series' point -1 into its own copy |
+| `QString::normalized` on a string of a million characters, a quarter past ASCII, called a dozen times | Qt rewrites the string in place: about length x characters past ASCII, seconds per call (and a run of combining marks costs its square) |
+| `QStandardItemModel` with 32 columns and a million rows, then `removeColumns(0, 1)` | removes the column row by row, moving the rest of the model each time |
 
 They found bugs in qtc too: `QByteArray::erase` was bound with its iterators taken
 for byte buffers (it then freed memory it did not own); deletions Qt makes itself
