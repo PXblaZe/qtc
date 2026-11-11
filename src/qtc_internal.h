@@ -123,6 +123,7 @@ public:
     void set_owned(uint64_t h, bool owned);
     void set_made(uint64_t h);                       // qtc_new made it
     bool made(const QObject *o);
+    bool made_handle(uint64_t h);                    // the object of h was made by qtc_new
     bool alive(uint64_t h);
     int kind_of(uint64_t h);
     // A call's receiver in one lookup: the object (as object() checks it) or the value.
@@ -856,7 +857,7 @@ void roles_note_container(QObject *container, QObject *window);   // QWidget::cr
 void roles_forget(QObject *o, bool readable); // it is being destroyed (readable) or is gone
 void roles_clear();                           // qtc_shutdown
 void roles_init();                      // after the application object exists: watch Qt's own deletions
-QString roles_prepare_destroy(QObject *victim);   // releases it from its owners; non-empty: must not be deleted
+QString roles_prepare_destroy(QObject *victim, bool made = false);   // releases it from its owners; non-empty: must not be deleted
 QObject *roles_holder(QObject *x);            // an owner holding x in a role, if any
 // qtc_move_to_thread: why root (and what is inside it) cannot live in another thread, or empty
 QString roles_movable(QObject *root);

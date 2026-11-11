@@ -205,9 +205,32 @@ struct KindsPeek : QObject {   // QObject's protected d_ptr, as qtc_core.cpp's D
 
 // The roles an object can play. All but one depend on its class alone, so they are worked out
 // once per class (a few dozen casts each time cost more than the rest of making an object).
-QHash<const QMetaObject *, uint64_t> &kinds_memo() { static auto *m = new QHash<const QMetaObject *, uint64_t>; return *m; }
-QHash<const QMetaObject *, uint64_t> &typed_memo() { static auto *m = new QHash<const QMetaObject *, uint64_t>; return *m; }
-QHash<const QMetaObject *, bool> &owned_memo() { static auto *m = new QHash<const QMetaObject *, bool>; return *m; }
+// Each has a one-entry front, as programs tend to make and destroy objects of one class in turn.
+template <class V>
+struct ClassMemo {
+    QHash<const QMetaObject *, V> map;
+    const QMetaObject *last = nullptr;
+    V last_v{};
+    template <class F>
+    V get(const QMetaObject *mo, F &&compute) {
+        if (mo == last) return last_v;
+        auto it = map.constFind(mo);
+        if (it == map.constEnd()) {
+            V v = compute();   // may load a module, which clears the memos
+            it = map.insert(mo, v);
+        }
+        last = mo;
+        last_v = *it;
+        return last_v;
+    }
+    void clear() {
+        map.clear();
+        last = nullptr;
+    }
+};
+ClassMemo<uint64_t> &kinds_memo() { static auto *m = new ClassMemo<uint64_t>; return *m; }
+ClassMemo<uint64_t> &typed_memo() { static auto *m = new ClassMemo<uint64_t>; return *m; }
+ClassMemo<bool> &owned_memo() { static auto *m = new ClassMemo<bool>; return *m; }
 
 uint64_t kinds_of(QObject *o) {
     uint64_t k = 0;
@@ -216,15 +239,10 @@ uint64_t kinds_of(QObject *o) {
         load_modules_of(o);
         k = class_kinds(o);   // a dynamic meta-object: it can change, and its address can be reused
     } else {
-        QHash<const QMetaObject *, uint64_t> *memo = &kinds_memo();
-        const QMetaObject *mo = o->metaObject();
-        auto it = memo->constFind(mo);
-        if (it == memo->constEnd()) {
+        k = kinds_memo().get(o->metaObject(), [o] {
             load_modules_of(o);   // the module of its class knows its roles
-            memo = &kinds_memo();
-            it = memo->insert(mo, class_kinds(o));
-        }
-        k = *it;
+            return class_kinds(o);
+        });
     }
 #ifdef QTC_HAS_WIDGETS
     if (container_windows().contains(o)) k |= OK_WINDOWCONTAINER;
@@ -502,8 +520,9 @@ void ensure_index() {
     }
 }
 
-// The owners that may hold x or something inside it (check each with visit()).
-QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
+// The owners that may hold x or something inside it (check each with visit()). Const, so that
+// a range-for over the result does not detach (allocate) it.
+const QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
     ensure_index();
     QList<QPair<QObject *, uint64_t>> out;
     QSet<QObject *> seen;
@@ -543,11 +562,7 @@ QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
     auto type_of = [&typed, &type_of_uncached](QObject *o) {
         const QObjectData *d = KindsPeek::of(o);
         if (d && d->metaObject) { typed |= type_of_uncached(o); return; }
-        QHash<const QMetaObject *, uint64_t> &memo = typed_memo();
-        const QMetaObject *mo = o->metaObject();
-        auto it = memo.constFind(mo);
-        if (it == memo.constEnd()) it = memo.insert(mo, type_of_uncached(o));
-        typed |= *it;
+        typed |= typed_memo().get(o->metaObject(), [&] { return type_of_uncached(o); });
     };
     type_of(x);
     for (QObject *k : kids) type_of(k);
@@ -586,11 +601,7 @@ static bool qt_owned_class(QObject *x) {
     };
     const QObjectData *d = KindsPeek::of(x);
     if (d && d->metaObject) return relevant(x);   // a dynamic meta-object: asked every time
-    QHash<const QMetaObject *, bool> &memo = owned_memo();
-    const QMetaObject *mo = x->metaObject();
-    auto it = memo.constFind(mo);
-    if (it == memo.constEnd()) it = memo.insert(mo, relevant(x));
-    return *it;
+    return owned_memo().get(x->metaObject(), [&] { return relevant(x); });
 }
 
 QString qt_owned(QObject *x) {
@@ -648,13 +659,13 @@ QString qt_owned_by_class(QObject *x) {
 }
 
 // 4. Parts of Qt objects that cannot be deleted while their owner lives (empty: may be deleted).
-QString internal_part(QObject *x) {
+QString internal_part(QObject *x, bool made) {
     QObject *p = x->parent();
     // the child of a private implementation object, whoever made it (QGeoAreaMonitorPollingPrivate
     // takes over the position source all polling area monitors share)
     if (p && QByteArray(p->metaObject()->className()).endsWith("Private"))
         return QStringLiteral("an internal object of %1").arg(label(p));
-    if (made_by_qtc(x)) return QString();
+    if (made || made_by_qtc(x)) return QString();
 #ifdef QTC_HAS_WIDGETS
     if (qobject_cast<QTabBar *>(x) && qobject_cast<QTabWidget *>(p)) return QStringLiteral("the tab bar of a QTabWidget");
     if (qobject_cast<QSplitterHandle *>(x) && qobject_cast<QSplitter *>(p)) return QStringLiteral("a handle of a QSplitter");
@@ -1105,7 +1116,7 @@ QModelIndex index_of_widget(QAbstractItemView *v, QWidget *w, bool *unsure = nul
 }  // namespace
 #endif
 
-QString roles_prepare_destroy(QObject *victim) {
+QString roles_prepare_destroy(QObject *victim, bool made) {
     if (QString why = qt_owned(victim); !why.isEmpty()) return why;
     if (QString why = made_pin_reason(victim); !why.isEmpty()) return why;
 #ifdef QTC_HAS_WIDGETS
@@ -1122,7 +1133,7 @@ QString roles_prepare_destroy(QObject *victim) {
         if (st == RELEASABLE) holders.append({o, kinds});
     }
     if (holders.isEmpty()) {
-        QString why = internal_part(victim);
+        QString why = internal_part(victim, made);
 #ifdef QTC_HAS_WIDGETS
         if (why.isEmpty()) release_style_users(victim);
 #endif

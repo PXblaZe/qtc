@@ -222,7 +222,10 @@ uint64_t Registry::handle_for(QObject *o) {
     Slot &s = table[idx];
     s.kind = SK_OBJ;
     s.obj = o;
-    s.flags = tracked ? uint8_t(SF_TRACKED | SF_GUI) : uint8_t(0);
+    // a Tracked object is made by a constructor thunk (qtc_new and the direct constructors), which
+    // marks it made, and owned when it has no parent, afterwards (mark_made): set here already,
+    // that is a check instead of another trip through the lock
+    s.flags = tracked ? uint8_t(SF_TRACKED | SF_GUI | SF_MADE | (o->parent() ? 0 : SF_OWNED)) : uint8_t(0);
     s.order = ++order_counter;
     by_ptr.insert(o, idx);
     live_objects++;
@@ -252,6 +255,21 @@ void Registry::set_made(uint64_t h) {
     if (idx >= table.size()) return;
     Slot &s = table[idx];
     if (s.gen == handle_gen(h) && s.kind == SK_OBJ) s.flags |= SF_MADE;
+}
+
+bool Registry::made_handle(uint64_t h) {
+    if (gui_thread_ok()) {   // see SF_GUI
+        const uint32_t idx = handle_index(h);
+        if (h && idx < table.size()) {
+            const Slot &s = table[idx];
+            if (s.gen == handle_gen(h) && s.kind == SK_OBJ && (s.flags & SF_GUI)) return s.flags & SF_MADE;
+        }
+    }
+    std::lock_guard<std::recursive_mutex> lk(mu);
+    const uint32_t idx = handle_index(h);
+    if (idx >= table.size()) return false;
+    const Slot &s = table[idx];
+    return s.gen == handle_gen(h) && s.kind == SK_OBJ && (s.flags & SF_MADE);
 }
 
 bool Registry::made(const QObject *o) {
@@ -423,15 +441,25 @@ qtc_status Registry::mark_dying(uint64_t h, QObject **out) {
     return QTC_OK;
 }
 
-// set_made and, for an object without a parent, set_owned, under one lock (after construction)
+// After construction: made by qtc_new, and owned by the program when it has no parent.
 static void mark_made(uint64_t h, bool owned) {
     Registry &r = reg();
+    const uint8_t want = owned ? uint8_t(SF_MADE | SF_OWNED) : uint8_t(SF_MADE);
+    if (gui_thread_ok()) {   // a Tracked object has them already (see handle_for)
+        const uint32_t idx = handle_index(h);
+        if (idx < r.table.size()) {
+            const Slot &s = r.table[idx];
+            if (s.gen == handle_gen(h) && s.kind == SK_OBJ && (s.flags & SF_GUI) &&
+                (s.flags & (SF_MADE | SF_OWNED)) == want)
+                return;
+        }
+    }
     std::lock_guard<std::recursive_mutex> lk(r.mu);
     const uint32_t idx = handle_index(h);
     if (idx >= r.table.size()) return;
     Slot &s = r.table[idx];
     if (s.gen != handle_gen(h) || s.kind != SK_OBJ) return;
-    s.flags |= owned ? uint8_t(SF_MADE | SF_OWNED) : uint8_t(SF_MADE);
+    s.flags = uint8_t((s.flags & ~SF_OWNED) | want);
 }
 
 bool Registry::alive(uint64_t h) {
@@ -2206,13 +2234,13 @@ uint64_t new_with_ctors(const char *cls, const MethodDef *ctors, uint32_t nctors
     qtc_status e = 0;
     QObject *o = reg().object(r.h, &e);
     if (o) {
-        reg().set_made(r.h);
         QList<QObject *> made_with;
         for (int i = 0; i < f.st->n; i++)
             if (f.st->a[i].kind == AK_OBJ)
                 if (QObject *x = reg().object(f.st->a[i].h, &e)) made_with.append(x);
         roles_adopt_new(o, made_with);
         roles_constructed(o);
+        mark_made(r.h, !o->parent());
     }
     if (o && !o->parent()) reg().set_owned(r.h, true);
     return r.h;
@@ -2592,15 +2620,14 @@ QTC_API qtc_obj qtc_new(qtc_str class_name) {
         qtc_status e = 0;
         QObject *o = reg().object(r.h, &e);
         if (o) {
-            reg().set_made(r.h);
             QList<QObject *> made_with;
             for (int i = 0; i < f.st->n; i++)
                 if (f.st->a[i].kind == AK_OBJ)
                     if (QObject *x = reg().object(f.st->a[i].h, &e)) made_with.append(x);
             roles_adopt_new(o, made_with);   // e.g. a parentless QQmlComponent becomes its engine's child
             roles_constructed(o);
+            mark_made(r.h, !o->parent());
         }
-        if (o && !o->parent()) reg().set_owned(r.h, true);
         return r.h;
     });
 }
@@ -2627,7 +2654,7 @@ QTC_API qtc_status qtc_destroy(qtc_obj obj) {
         if (!o) return fail(err, "qtc_destroy");
         if (o == QCoreApplication::instance()) return fail(QTC_ERR_STATE, "the application object is destroyed by qtc_shutdown");
         // owners holding it by a plain pointer let go of it first (see qtc_roles.cpp)
-        QString why = roles_prepare_destroy(o);
+        QString why = roles_prepare_destroy(o, reg().made_handle(obj));
         if (!why.isEmpty())
             return fail(QTC_ERR_STATE, QStringLiteral("qtc_destroy: %1 is %2; destroy its owner instead").arg(obj_label(o), why));
         if (!reg().alive(obj)) return QTC_OK;   // releasing it deleted it
@@ -4500,14 +4527,13 @@ uint64_t entry_made_object(Ret &r, Arg *a, int n, const Label &what) {
     qtc_status e = 0;
     QObject *o = reg().object(r.h, &e);
     if (o) {
-        mark_made(r.h, false);
         QList<QObject *> made_with;
         for (int i = 0; i < n; i++)
             if (a[i].kind == AK_OBJ)
                 if (QObject *x = reg().object(a[i].h, &e)) made_with.append(x);
         roles_adopt_new(o, made_with);
         roles_constructed(o);
-        if (!o->parent()) reg().set_owned(r.h, true);
+        mark_made(r.h, !o->parent());
     }
     return r.h;
 }
