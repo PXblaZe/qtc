@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Installed libraries carry the run path of the Qt they link (and `qtc_test`
+  finds `qtc` beside it), so programs and bindings that load them at run time
+  need no library path when Qt is outside the system's directories
+  (`QTC_INSTALL_RPATH`, on by default; not on Windows).
+
 ## 1.1.0 — 2026-11-11
 
 ### Licensing

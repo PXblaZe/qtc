@@ -198,6 +198,20 @@ if(QTC_BUILD_TESTLIB)
 endif()
 
 include(GNUInstallDirs)
+# Installed libraries find the Qt they were linked with (when it is outside the system's library
+# directories, as an installer's or a conda Qt is) and qtc_test finds qtc beside it, so programs
+# and language bindings that load them at run time need no library path.
+option(QTC_INSTALL_RPATH "Give the installed libraries the run path of the Qt they link" ON)
+if(QTC_INSTALL_RPATH AND NOT WIN32)
+  set_target_properties(qtc PROPERTIES INSTALL_RPATH_USE_LINK_PATH ON)
+  if(TARGET qtc_test)
+    if(APPLE)
+      set_target_properties(qtc_test PROPERTIES INSTALL_RPATH_USE_LINK_PATH ON INSTALL_RPATH "@loader_path")
+    else()
+      set_target_properties(qtc_test PROPERTIES INSTALL_RPATH_USE_LINK_PATH ON INSTALL_RPATH "$ORIGIN")
+    endif()
+  endif()
+endif()
 install(TARGETS qtc EXPORT qtcTargets LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 if(TARGET qtc_test)
