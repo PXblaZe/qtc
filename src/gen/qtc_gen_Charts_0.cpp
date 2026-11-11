@@ -3010,7 +3010,7 @@ template <class S> static int t12259(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<int> p1;
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
-    if (!(qtc::idx(s, (p0.get())) && (n > 1 ? static_cast<decltype(1)>(p1.get()) : (1)) >= 0)) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QBarSet::remove(int,int): index out of range [0, count())");
+    if (!(qtc::idx(s, (p0.get())) && (n > 1 ? static_cast<decltype(1)>(p1.get()) : (1)) >= 0 && int64_t((p0.get())) + (n > 1 ? static_cast<decltype(1)>(p1.get()) : (1)) <= INT_MAX)) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QBarSet::remove(int,int): index out of range [0, count()), or count negative or past INT_MAX - index");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0) { qtc::cv(aa[0], p0, 0); s->remove(p0.get()); }) { s->remove(p0.get()); r->set_none(); return 0; }
@@ -5848,6 +5848,7 @@ template <class S> static int t12466(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
 }
 template <class S> static int t12467(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
+    if (!([&] { for (QAbstractSeries *x : s->series()) if (x->type() == QAbstractSeries::SeriesTypeArea) return false; return true; }())) return qtc::pre_fail(QTC_ERR_STATE, "QChart::removeAllSeries(): the chart has an area series, whose chart item outlives it here (Qt Charts then crashes on a change to its boundary lines): remove the area series with removeSeries and destroy them, then call removeAllSeries");
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { s->removeAllSeries(); }) { s->removeAllSeries(); r->set_none(); return 0; }

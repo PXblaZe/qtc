@@ -1,16 +1,17 @@
 # How qtc is tested
 
 Everything here runs on Qt's offscreen platform, so it needs no display. The
-numbers are from the runs made for the 1.0.0 release on Linux x86-64 (GCC 13),
+numbers are from the runs made for the 1.1.0 release on Linux x86-64 (GCC 13),
 against Qt 6.12.0 (6.12 LTS is the supported release), natively and under
-AddressSanitizer with UndefinedBehaviorSanitizer; the [results](#results) section
-has them.
+AddressSanitizer with UndefinedBehaviorSanitizer, with the GPL-3.0-only add-on
+modules built in (so they are tested too); the [results](#results) section has
+them.
 
 ## The suite (`ctest -LE slow`)
 
 | test | what it checks |
 |---|---|
-| `test_core` | the C API function by function: init and shutdown, handles and staleness, calls and overload resolution, out-parameters, properties, values and JSON, lists and maps, signals, coalescing, watches, timers, posts from threads, forwarding connections, enums, drawing, QML and the bridge, ownership rules, allocation limits, error policies (about 860 checks) |
+| `test_core` | the C API function by function: init and shutdown, handles and staleness, calls and overload resolution, out-parameters, properties, values and JSON, lists and maps, signals, coalescing, watches, timers, posts from threads, forwarding connections, enums, drawing, QML and the bridge, ownership rules, allocation limits, error policies (about 890 checks) |
 | `test_app` | a small application driven by simulated input (`libqtc_test`): a form, tabs, a canvas, keyboard and mouse |
 | `test_sweep` | every bound method and constructor called wrongly: a stale, null, garbage and wrong-kind receiver, one argument too many, each argument of a wrong type, a stale object as an argument; every call must fail with the right error |
 | `test_stress` | handle churn and generation reuse, event floods, deep object trees, many connections, floods from other threads, big payloads — each with a time budget, so a performance cliff fails like a wrong result |
@@ -25,8 +26,8 @@ has them.
 ## The fuzzers (`tests/fuzz_methods.cpp`, `tests/fuzz_driver.py`)
 
 The method fuzzer calls every bound method and constructor of every class
-(13,002 items) on a live receiver, with every arity it accepts and edge values
-for each parameter kind (289 of the items are on classes it cannot make on its
+(13,617 items with the add-on modules) on a live receiver, with every arity it accepts and edge values
+for each parameter kind (321 of the items are on classes it cannot make on its
 own, such as network replies, legend markers and abstract classes without a
 bound subclass; those are left uncalled): 0, ±1, `INT_MAX`, NaN, empty and 4,096-character
 strings, format strings, null, the receiver itself, live instances of the
@@ -229,6 +230,26 @@ hangs inside Qt reached through ordinary calls:
 | `QPainterPath::setElementPositionAt` with NaN or infinity, then `simplified()` or `united()` | the clipper crashes on the point (Qt keeps non-finite points out of `moveTo`, `lineTo` and the rest) |
 | a window given a window state, then new flags with no parent, then put in a parent before being shown again, then a `QOpenGLWidget` put in it | Qt leaves the old native window on what is now a plain child, takes it for the native parent, remakes it for OpenGL and gets no window back |
 
+Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
+
+| call | what Qt does |
+|---|---|
+| `QOAuth1::setSignatureMethod(Rsa_Sha1)`, then a request | aborts (`qFatal`): RSA-SHA1 is not supported |
+| `QMqttClient::setTransport(buffer, AbstractSocket)`, then `connectToHost()` | casts the buffer to a socket without checking and reads through null |
+| `QMqttClient::setState(Connected)`, then `publish()` | writes to a transport it never made |
+| the default reply handler of an OAuth object, or an MQTT client's transport, destroyed | the owner keeps a plain pointer to it (a scoped pointer, or one it never lets go of) |
+| `QWidget::grab(QRect(0, 1, 2, 0))` on a widget with a graphics effect | the empty rectangle still "intersects" the widget; the effect paints into the null pixmap (the crash 1.0.0 listed as unexplained) |
+| `QWidget::grab` with one negative size and a far-off top left | grabs from that corner to the widget's bottom right: a pixmap too large to allocate, painted into anyway |
+| `QWidget::scroll(INT_MIN, INT_MIN)` | the backing store's rectangle arithmetic overflows and copies out of the image |
+| `QGraphicsScene::setStyle` while proxy widgets use the scene's own style | deletes the style, then tells the embedded widgets, which unpolish with it |
+| `QAudioFormat::setChannelCount(40000)`, then `framesForBytes(INT_MIN)` | the count is kept in a short and turns negative: `INT_MIN / -1` traps |
+| `QWaveDecoder::seek` far past the end of the buffer it reads | the buffer grows to the position: gigabytes, until the system kills the process |
+| an area series in a chart, then `QChart::removeAllSeries()`, then `setPointsVisible` on its upper line | the area series is deleted at once, its chart item later, and the item reads the deleted series when the line changes |
+| `QBarSet::remove(1, INT_MAX)` | index + count wraps, and Qt removes past the end |
+| `QGridLayout::setRowMinimumHeight(100, INT_MIN)` and others, then `setGeometry` | the layout engine's sums wrap and its space distribution never finishes (the 1.0.0 box-layout hang, through the grid's own row and column sizes) |
+| `QPlainTextEdit::find` with an empty regular expression, backward, whole words, over a 4,096-character line | tries every earlier position, matching each from the start of the line: seconds to minutes |
+| a text path moved by NaN, joined to itself, then `QGraphicsScene::setSelectionArea` with it | the NaN points defeat the bounding-box early outs, and each item is tested against every element: minutes |
+
 They found bugs in qtc too: `QByteArray::erase` was bound with its iterators taken
 for byte buffers (it then freed memory it did not own); deletions Qt makes itself
 (`Qt::WA_DeleteOnClose`) went around the ownership rules; a widget moved out of a
@@ -244,13 +265,17 @@ read it; the ownership rules did not know that a graphics proxy keeps the widget
 (a scene's `clear()` deleted it inside a column view), that an item view keeps its index
 widgets, or that graphics widgets using a style lose it when the style's parent is destroyed
 (qtc_shutdown read the style afterwards); and 144 common calls by name were reported as
-ambiguous between equivalent overloads (`QColor(QString)` and `QColor(QStringView)`).
+ambiguous between equivalent overloads (`QColor(QString)` and `QColor(QStringView)`). For 1.1.0:
+the `QBuffer::seek` limit covered only calls that resolved to `QBuffer::seek`, not
+`QIODevice::seek` on a buffer or classes that seek a buffer they read; and the size check
+before `QWidget::grab` did not follow Qt's rule for a rectangle with one negative size.
 
 ## What the tests do not show
 
 - Fuzzing finds what its values and orders reach, and it has not run out. The
-  rate falls as rounds go (the last rounds before this release found 4 failures
-  in 16 orders, then 2 in 16 new ones, then 5 in 48, then 1 in 64), but each new
+  rate falls as rounds go (for 1.0.0: 4 failures in 16 orders, then 2 in 16
+  new ones, then 5 in 48, then 1 in 64; for 1.1.0, with new modules and
+  classes: 3 in 16, then 1 in 16, then 2 in 16, then 1 in 16), but each new
   order can still reach a rarely combined corner; the open ones are in
   [LIMITS.md](LIMITS.md#known-open-failures). A change to the bound methods
   reshuffles every seed, and so does a new refusal, so an order that ran clean
@@ -262,5 +287,11 @@ ambiguous between equivalent overloads (`QColor(QString)` and `QColor(QStringVie
   crashes particular to it are refused), but this release was not tested there,
   and Qt 6.5 to 6.11 never were; CMake accepts them only with
   `-DQTC_ALLOW_OLDER_QT=ON`.
-- Real displays (xcb, Wayland), macOS and Windows are not tested.
+- Real displays (xcb, Wayland), macOS and Windows are not tested; the graphics
+  tests use an X server without a display (Xvfb) and Mesa's software renderers
+  (llvmpipe, lavapipe). Direct3D and Metal are neither compiled nor run, and no
+  GPU vendor's driver was used.
+- `fuzz_rhi` covers the graphics API's argument checking and resource lifetimes;
+  shader programs are compiled from a few fixed sources, so what a shader
+  computes is not fuzzed (see [LIMITS.md](LIMITS.md#graphics)).
 - [LIMITS.md](LIMITS.md) lists what the API does not cover.

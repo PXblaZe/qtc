@@ -2011,6 +2011,7 @@ template <class S> static int t6823(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(1, p1);
     if (!(qtc::in((p0.get()), 0, 65535))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QGridLayout::setRowMinimumHeight(int,int): row must be in [0, 65535]");
     if (!(qtc::grid_cells_ok(s, int64_t((p0.get())) + 1, 0))) return qtc::pre_fail(QTC_ERR_LIMIT, "QGridLayout::setRowMinimumHeight(int,int): a grid layout must stay under 2^20 cells (rows x columns)");
+    if (!(qtc::in((p1.get()), 0, 16777215))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QGridLayout::setRowMinimumHeight(int,int): the minimum size must be in [0, 16777215]");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->setRowMinimumHeight(p0.get(), p1.get()); }) { s->setRowMinimumHeight(p0.get(), p1.get()); r->set_none(); return 0; }
@@ -2029,6 +2030,7 @@ template <class S> static int t6824(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(1, p1);
     if (!(qtc::in((p0.get()), 0, 65535))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QGridLayout::setColumnMinimumWidth(int,int): column must be in [0, 65535]");
     if (!(qtc::grid_cells_ok(s, 0, int64_t((p0.get())) + 1))) return qtc::pre_fail(QTC_ERR_LIMIT, "QGridLayout::setColumnMinimumWidth(int,int): a grid layout must stay under 2^20 cells (rows x columns)");
+    if (!(qtc::in((p1.get()), 0, 16777215))) return qtc::pre_fail(QTC_ERR_OUT_OF_RANGE, "QGridLayout::setColumnMinimumWidth(int,int): the minimum size must be in [0, 16777215]");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<int> &p0, qtc::H<int> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->setColumnMinimumWidth(p0.get(), p1.get()); }) { s->setColumnMinimumWidth(p0.get(), p1.get()); r->set_none(); return 0; }

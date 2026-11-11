@@ -567,6 +567,21 @@ bool path_room(const QPainterPath &p, int64_t extra) {
     return extra <= 0 || int64_t(p.elementCount()) + extra <= kMaxPathElements;
 }
 
+bool transform_finite(const QTransform &t) {
+    const qreal m[] = {t.m11(), t.m12(), t.m13(), t.m21(), t.m22(), t.m23(), t.m31(), t.m32(), t.m33()};
+    for (qreal v : m)
+        if (!std::isfinite(v)) return false;
+    return true;
+}
+
+bool path_finite(const QPainterPath &p) {
+    for (int i = 0, n = p.elementCount(); i < n; i++) {
+        const QPainterPath::Element e = p.elementAt(i);
+        if (!std::isfinite(e.x) || !std::isfinite(e.y)) return false;
+    }
+    return true;
+}
+
 // Flattening (QBezier::addToPolygon) splits each cubic until it is flat to half a pixel,
 // at most nine times deep: up to 512 points per curve, about sqrt(2 * length) in practice.
 bool flatten_ok(const QPainterPath &p, const QTransform &t) {

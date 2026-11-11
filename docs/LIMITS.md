@@ -263,6 +263,20 @@ ones:
   it, and crashes when what it holds comes to contain it.
 - `QWidget::grab` with an empty rectangle that is not a null one (zero width or
   height, as `QRect(0, 1, 2, 0)`): Qt paints into a null pixmap.
+- A backward whole-word `find` with a regular expression (`QTextDocument`,
+  `QTextEdit`, `QPlainTextEdit`) on text whose blocks' lengths squared add up past
+  2^24 (one block of 4,096 characters): Qt tries every earlier position and
+  matches each from the start of its block. Search forward, or without
+  `FindWholeWords`, or check word boundaries in the pattern (`\b`).
+- Paths with points that are not finite, and the operations that would make
+  them (`QPainterPath::translate` by a non-finite offset, `QTransform::map` and
+  `toFillPolygons` with a non-finite transform): a NaN point defeats the
+  bounding-box tests, and every hit test then walks the whole path.
+  `QGraphicsScene::setSelectionArea` with a path whose elements times the
+  scene's items exceed 2^26.
+- `QChart::removeAllSeries` while the chart has an area series: Qt deletes the
+  series at once but the area's chart item later, and it still follows the
+  boundary lines. Remove area series with `removeSeries` and destroy them first.
 - `QGraphicsScene::setStyle` while the scene has a style of its own and proxy
   widgets: Qt deletes the old style before the embedded widgets let go of it. Set
   the scene's style before adding proxy widgets.

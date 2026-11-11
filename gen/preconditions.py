@@ -232,6 +232,24 @@ TABLE = [
      "more than 8192 subpaths (the computation is quadratic); use toSubpathPolygons"),
     ("QPainterPath", r"toSubpathPolygons|toFillPolygons|toFillPolygon", r"(QTransform)?",
      "qtc::flatten_ok(*{s}, {0|QTransform()})", LIMIT, "flattening the path would exceed the allocation limit"),
+    # Qt refuses non-finite points when they are added but not when a path is moved: a path of NaN
+    # points defeats the bounding-box tests, and every hit test then walks all of it (selecting
+    # with one in a scene of a few dozen items took minutes)
+    ("QPainterPath", r"translate|translated", r"qreal,qreal", "std::isfinite({0}) && std::isfinite({1})", BAD,
+     "the offset must be finite"),
+    ("QPainterPath", r"translate|translated", r"QPointF", "std::isfinite({0}.x()) && std::isfinite({0}.y())", BAD,
+     "the offset must be finite"),
+    ("QPainterPath", r"toSubpathPolygons|toFillPolygons|toFillPolygon", None,
+     "qtc::path_finite(*{s}) && qtc::transform_finite({0|QTransform()})", BAD,
+     "the path or the transform has values that are not finite"),
+    ("QTransform", r"map", r"QPainterPath", "qtc::transform_finite(*{s})", BAD,
+     "the transform has values that are not finite (the path would get NaN points)"),
+    ("QPainterPath", r"united|intersected|subtracted|contains|intersects|connectPath|addPath", r"QPainterPath",
+     "qtc::path_finite({0})", BAD, "the path has points that are not finite"),
+    ("QGraphicsScene", r"setSelectionArea", r"QPainterPath(,.*)?",
+     "qtc::path_finite({0}) && int64_t({0}.elementCount()) * std::max<int64_t>(1, {s}->items().size()) <= (int64_t(1) << 26)",
+     LIMIT, "the path has points that are not finite, or its elements times the scene's items exceed 2^26 (each item "
+     "is tested against the whole path)"),
     ("QPainterPath", r"united|intersected|subtracted|contains|intersects", r"QPainterPath",
      "qtc::flatten_ok(*{s}, QTransform()) && qtc::flatten_ok({0}, QTransform()) && qtc::path_room(*{s}, {0}.elementCount())",
      LIMIT, "the paths are too large for a boolean operation"),
@@ -469,7 +487,9 @@ TABLE = [
      "the server is not listening"),
     (r"Q\w+ModelMapper", r"setModel", None, "qobject_cast<QConcatenateTablesProxyModel *>({0}) == nullptr", STATE,
      "a chart model mapper writes into its model; QConcatenateTablesProxyModel cannot take new rows"),
-    ("QBarSet", r"remove", r"int(,int)?", "qtc::idx({s}, {0}) && {1|1} >= 0", OOR, "index out of range [0, count())"),
+    # (index + count wraps for a count near INT_MAX, and Qt then removes past the end)
+    ("QBarSet", r"remove", r"int(,int)?", "qtc::idx({s}, {0}) && {1|1} >= 0 && int64_t({0}) + {1|1} <= INT_MAX", OOR,
+     "index out of range [0, count()), or count negative or past INT_MAX - index"),
     (r"Q\w+ModelMapper", r"setSeries", None, "{0} == nullptr || {s}->model() != nullptr", STATE,
      "set the model first"),
     (r"Q\w+ModelMapper", r"setModel", None, "{0} != nullptr || {s}->series() == nullptr", STATE,
@@ -506,6 +526,8 @@ TABLE = [
      "the stretch must be in [0, %d]" % STRETCH),
     ("QGridLayout", r"setRowStretch|setColumnStretch", None, "qtc::in({1}, 0, %d)" % STRETCH, OOR,
      "the stretch must be in [0, %d]" % STRETCH),
+    ("QGridLayout", r"setRowMinimumHeight|setColumnMinimumWidth", None, "qtc::in({1}, 0, 16777215)", OOR,
+     "the minimum size must be in [0, 16777215]"),
     ("QBoxLayout", r"addSpacing|addStrut", None, "qtc::in({0}, 0, 16777215)", OOR, "the size must be in [0, 16777215]"),
     ("QBoxLayout", r"insertSpacing", None, "qtc::in({1}, 0, 16777215)", OOR, "the size must be in [0, 16777215]"),
     ("QLayout+", r"setSpacing|setHorizontalSpacing|setVerticalSpacing", r"int",
@@ -799,6 +821,12 @@ TABLE = [
      "the default button was destroyed"),
     ("QMessageBox", r"escapeButton", r"", "qtc::known_live({s}->escapeButton(), {s})", STATE,
      "the escape button was destroyed"),
+    # a backward search for whole words with a regular expression tries every earlier position, and
+    # each try matches from the start of the block: block length x block length steps
+    ("QTextEdit|QPlainTextEdit", r"find", r"QRegularExpression(,.*)?", "!(({1|QTextDocument::FindFlags()}) & QTextDocument::FindBackward) || !(({1|QTextDocument::FindFlags()}) & QTextDocument::FindWholeWords) || [&] { int64_t t = 0; for (QTextBlock b = {s}->document()->begin(); b.isValid(); b = b.next()) { t += int64_t(b.length()) * b.length(); if (t > (int64_t(1) << 24)) return false; } return true; }()", LIMIT,
+     "a backward whole-word search with a regular expression takes block length x block length steps: the squares of the blocks' lengths must add up to at most 2^24 (one block of 4096 characters)"),
+    ("QTextDocument", r"find", r"QRegularExpression,.*", "!(({2|QTextDocument::FindFlags()}) & QTextDocument::FindBackward) || !(({2|QTextDocument::FindFlags()}) & QTextDocument::FindWholeWords) || [&] { int64_t t = 0; for (QTextBlock b = {s}->begin(); b.isValid(); b = b.next()) { t += int64_t(b.length()) * b.length(); if (t > (int64_t(1) << 24)) return false; } return true; }()", LIMIT,
+     "a backward whole-word search with a regular expression takes block length x block length steps: the squares of the blocks' lengths must add up to at most 2^24 (one block of 4096 characters)"),
     # counting overlapping matches takes up to size x size steps
     ("QString", r"count", r"QRegularExpression", "{s}->size() <= 8192", LIMIT,
      "count() with a regular expression counts overlapping matches, up to size x size steps: at most 8192 "
@@ -814,6 +842,13 @@ TABLE = [
     ("QChart|QPolarChart", r"addSeries", None, "qtc::area_clipping_ok({0})", STATE,
      "an area series goes into a chart with its upper series, and its boundary lines keep point label clipping on "
      "(Qt Charts crashes otherwise)"),
+    # removeAllSeries deletes the series at once, but an area series' chart item lives until the next
+    # deferred delete and still follows the boundary lines: a change to one then reads the deleted
+    # area series. removeSeries and qtc_destroy (deferred, after the item) are safe.
+    ("QChart|QPolarChart", r"removeAllSeries", None,
+     "[&] { for (QAbstractSeries *x : {s}->series()) if (x->type() == QAbstractSeries::SeriesTypeArea) return false; return true; }()",
+     STATE, "the chart has an area series, whose chart item outlives it here (Qt Charts then crashes on a change to "
+     "its boundary lines): remove the area series with removeSeries and destroy them, then call removeAllSeries"),
     ("QAreaSeries", r"setUpperSeries|setLowerSeries", None, "!{0} || {0}->pointLabelsClipping()", STATE,
      "the boundary lines of an area series keep point label clipping on (Qt Charts crashes on them otherwise)"),
     # header labels add the columns or rows they need: columns cost what insertColumns costs

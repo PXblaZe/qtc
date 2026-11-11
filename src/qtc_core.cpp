@@ -2746,6 +2746,7 @@ struct LayoutSums { int64_t w = 0, h = 0, stretch = 0; };
 int64_t count_items(const QLayout *l, int depth) {
     if (depth > 64) return INT64_MAX;
     int64_t n = 0;
+    if (auto *g = qobject_cast<const QGridLayout *>(l)) n += int64_t(g->rowCount()) + g->columnCount();
     for (int i = 0, c = l->count(); i < c; i++) {
         QLayoutItem *it = l->itemAt(i);
         if (!it) continue;
@@ -2764,8 +2765,15 @@ bool add_layout(const QLayout *l, LayoutSums &s, int depth) {
     int64_t spacing = std::max(0, l->spacing());
     if (auto *g = qobject_cast<const QGridLayout *>(l)) {
         spacing = std::max({int64_t(0), int64_t(g->horizontalSpacing()), int64_t(g->verticalSpacing())});
-        for (int r = 0, rows = g->rowCount(); r < rows; r++) s.stretch += std::max(0, g->rowStretch(r));
-        for (int c = 0, cols = g->columnCount(); c < cols; c++) s.stretch += std::max(0, g->columnStretch(c));
+        // rows and columns count with their minimum sizes even when no item is in them
+        for (int r = 0, rows = g->rowCount(); r < rows; r++) {
+            s.stretch += std::max(0, g->rowStretch(r));
+            s.h += std::abs(int64_t(g->rowMinimumHeight(r))) + spacing;
+        }
+        for (int c = 0, cols = g->columnCount(); c < cols; c++) {
+            s.stretch += std::max(0, g->columnStretch(c));
+            s.w += std::abs(int64_t(g->columnMinimumWidth(c))) + spacing;
+        }
     } else if (auto *f = qobject_cast<const QFormLayout *>(l)) {
         spacing = std::max({int64_t(0), int64_t(f->horizontalSpacing()), int64_t(f->verticalSpacing())});
     }
@@ -2793,7 +2801,7 @@ bool layout_sums_ok(const QLayout *l) {
     if (!l) return true;
     // a few items cannot add up that far: sizes, spacing and margins are each at most
     // QWIDGETSIZE_MAX (Qt bounds widgets, the rules the rest) and stretch factors 65535
-    if (count_items(l, 0) <= 8) return true;
+    if (count_items(l, 0) <= 8) return true;   // (a grid's rows and columns count as items)
     LayoutSums s;
     return add_layout(l, s, 0);
 }

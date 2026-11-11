@@ -29,7 +29,19 @@
   listed as unexplained); a `QBuffer` grown past the allocation limit by seeking
   through `QIODevice::seek` or `QWaveDecoder::seek`; `QAudioFormat` channel
   counts past what it stores; `QGraphicsScene::setStyle` while proxy widgets use
-  the scene's own style (Qt deletes it under them).
+  the scene's own style (Qt deletes it under them); `QChart::removeAllSeries`
+  with an area series in the chart (its chart item outlives it and follows the
+  boundary lines); `QBarSet::remove` with a count that wraps past `INT_MAX`.
+- Hangs the method fuzzer found: a grid layout with negative or huge row and
+  column minimum sizes (the layout engine's sums wrapped; minimum sizes are now
+  limited to [0, 16777215] and counted with the other sizes before a layout
+  runs), and a backward whole-word search with a regular expression over long
+  text blocks (`QTextDocument`, `QTextEdit`, `QPlainTextEdit::find`; quadratic in
+  the block length, now limited); selecting in a scene with a path of NaN
+  points (Qt refuses NaN points when they are added but not when a path is
+  moved or mapped: `QPainterPath::translate` and `QTransform::map` with
+  non-finite values are refused now, and paths with such points are refused by
+  the operations that test against them).
 - Calls to meta-object methods with `QVariant` parameters (every untyped QML
   function parameter) passed a value stored outside its variant (types over 24
   bytes, such as `QRectF` or `QTransform`) as the address of the value, which the

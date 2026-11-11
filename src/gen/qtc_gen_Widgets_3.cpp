@@ -4757,6 +4757,7 @@ template <class S> static int t7579(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QFlags<QTextDocument::FindFlag>> p1;
     QTC_CV(0, p0);
     if (n > 1) QTC_CVF(1, p1, 777);
+    if (!(!(((n > 1 ? static_cast<decltype(QTextDocument::FindFlags())>(p1.get()) : (QTextDocument::FindFlags()))) & QTextDocument::FindBackward) || !(((n > 1 ? static_cast<decltype(QTextDocument::FindFlags())>(p1.get()) : (QTextDocument::FindFlags()))) & QTextDocument::FindWholeWords) || [&] { int64_t t = 0; for (QTextBlock b = s->document()->begin(); b.isValid(); b = b.next()) { t += int64_t(b.length()) * b.length(); if (t > (int64_t(1) << 24)) return false; } return true; }())) return qtc::pre_fail(QTC_ERR_LIMIT, "QPlainTextEdit::find(QRegularExpression,QTextDocument::FindFlags): a backward whole-word search with a regular expression takes block length x block length steps: the squares of the blocks' lengths must add up to at most 2^24 (one block of 4096 characters)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QRegularExpression> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->find(p0.get())); }) { qtc::rt(*r, s->find(p0.get())); return 0; }

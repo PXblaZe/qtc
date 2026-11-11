@@ -2104,6 +2104,44 @@ static void test_fuzz_findings(void) {
         qtc_destroy(chart);
         qtc_destroy(area);
         qtc_destroy(upper);
+
+        /* removeAllSeries deletes an area series while its chart item lives on and follows the
+           boundary lines; removeSeries and destroying it afterwards is safe */
+        chart = make("QChart");
+        area = make("QAreaSeries");
+        upper = make("QLineSeries");
+        qtc_arg_obj(upper);
+        CHECK_EQ(qtc_call(area, S("setUpperSeries")), QTC_OK);
+        qtc_arg_obj(area);
+        CHECK_EQ(qtc_call(chart, S("addSeries")), QTC_OK);
+        CHECK_EQ(qtc_call(chart, S("removeAllSeries")), QTC_ERR_STATE);
+        qtc_arg_obj(area);
+        CHECK_EQ(qtc_call(chart, S("removeSeries")), QTC_OK);
+        CHECK_EQ(qtc_destroy(area), QTC_OK);
+        qtc_process_events();
+        CHECK_EQ(qtc_call(chart, S("removeAllSeries")), QTC_OK);
+        qtc_arg_bool(1);
+        CHECK_EQ(qtc_call(upper, S("setPointsVisible")), QTC_OK);
+        qtc_destroy(chart);
+        qtc_destroy(upper);
+
+        /* index + count wrapped past INT_MAX */
+        qtc_arg_str(S("set"));
+        qtc_obj bs = make("QBarSet");
+        for (int i = 0; i < 3; i++) {
+            qtc_arg_double(i);
+            CHECK_EQ(qtc_call(bs, S("append(qreal)")), QTC_OK);
+        }
+        qtc_arg_int(1);
+        qtc_arg_int(INT32_MAX);
+        CHECK_EQ(qtc_call(bs, S("remove")), QTC_ERR_OUT_OF_RANGE);
+        qtc_arg_int(1);
+        qtc_arg_int(5);
+        CHECK_EQ(qtc_call(bs, S("remove")), QTC_OK);
+        CHECK_EQ(qtc_call(bs, S("count")), QTC_OK);
+        CHECK_EQ(qtc_ret_int(), 1);
+        qtc_destroy(bs);
+        qtc_process_events();
     }
     /* scrolling by offsets past any widget size overflowed the backing store's arithmetic */
     {
@@ -2147,6 +2185,58 @@ static void test_fuzz_findings(void) {
         CHECK_EQ(qtc_call(sw, S("grab")), QTC_OK);
         qtc_val_free(gr);
         qtc_destroy(sw);
+    }
+    /* a grid's row minimum heights count toward the sums the layout engine adds up in int (they
+       wrapped and its space distribution never finished) */
+    {
+        qtc_obj gl = make("QGridLayout");
+        qtc_arg_int(100);
+        qtc_arg_int(INT32_MIN);
+        CHECK_EQ(qtc_call(gl, S("setRowMinimumHeight")), QTC_ERR_OUT_OF_RANGE);
+        for (int r = 0; r < 70; r++) {
+            qtc_arg_int(r);
+            qtc_arg_int(16777215);
+            CHECK_EQ(qtc_call(gl, S("setRowMinimumHeight")), QTC_OK);
+        }
+        qtc_arg_int(0);
+        qtc_arg_int(0);
+        qtc_arg_int(100);
+        qtc_arg_int(100);
+        qtc_val gr = qtc_val_new(S("QRect"));
+        qtc_arg_val(gr);
+        CHECK_EQ(qtc_call(gl, S("setGeometry")), QTC_ERR_LIMIT);
+        qtc_val_free(gr);
+        qtc_destroy(gl);
+    }
+    /* a path moved by a non-finite offset gets NaN points, and every hit test then walks all of it */
+    {
+        qtc_val pp = qtc_val_new(S("QPainterPath"));
+        qtc_arg_double(NAN);
+        qtc_arg_double(0);
+        CHECK_EQ(qtc_call(pp, S("translate(qreal,qreal)")), QTC_ERR_BAD_ARGS);
+        qtc_arg_double(1);
+        qtc_arg_double(2);
+        CHECK_EQ(qtc_call(pp, S("translate(qreal,qreal)")), QTC_OK);
+        qtc_val_free(pp);
+    }
+    /* a backward whole-word search with a regular expression is quadratic in the block length */
+    {
+        qtc_obj pe = make("QPlainTextEdit");
+        char *big = malloc(20001);
+        memset(big, 'a', 20000);
+        big[20000] = 0;
+        qtc_arg_str(qtc_s(big));
+        CHECK_EQ(qtc_call(pe, S("insertPlainText")), QTC_OK);
+        free(big);
+        qtc_val rx = qtc_val_new(S("QRegularExpression"));
+        qtc_arg_val(rx);
+        qtc_arg_int(1 | 4);   /* FindBackward | FindWholeWords */
+        CHECK_EQ(qtc_call(pe, S("find(QRegularExpression,QTextDocument::FindFlags)")), QTC_ERR_LIMIT);
+        qtc_arg_val(rx);
+        qtc_arg_int(1);   /* backward alone finds the first match at once */
+        CHECK_EQ(qtc_call(pe, S("find(QRegularExpression,QTextDocument::FindFlags)")), QTC_OK);
+        qtc_val_free(rx);
+        qtc_destroy(pe);
     }
     /* a scene's own style is deleted before the widgets in its proxy widgets let go of it */
     {

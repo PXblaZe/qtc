@@ -6202,6 +6202,7 @@ template <class S> static int t4171(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::path_finite((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::addPath(QPainterPath): the path has points that are not finite");
     if (!(qtc::path_room(*s, (p0.get()).elementCount()))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::addPath(QPainterPath): the path would exceed 4,194,304 elements");
     switch (n) {
         case 1:
@@ -6284,6 +6285,7 @@ template <class S> static int t4175(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::path_finite((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::connectPath(QPainterPath): the path has points that are not finite");
     if (!(qtc::path_room(*s, (p0.get()).elementCount()))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::connectPath(QPainterPath): the path would exceed 4,194,304 elements");
     switch (n) {
         case 1:
@@ -6343,6 +6345,7 @@ template <class S> static int t4179(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<double> p1;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
+    if (!(std::isfinite((p0.get())) && std::isfinite((p1.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::translate(qreal,qreal): the offset must be finite");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0, qtc::H<double> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); s->translate(p0.get(), p1.get()); }) { s->translate(p0.get(), p1.get()); r->set_none(); return 0; }
@@ -6357,6 +6360,7 @@ template <class S> static int t4180(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPointF> p0;
     QTC_CV(0, p0);
+    if (!(std::isfinite((p0.get()).x()) && std::isfinite((p0.get()).y()))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::translate(QPointF): the offset must be finite");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPointF> &p0) { qtc::cv(aa[0], p0, 0); s->translate(p0.get()); }) { s->translate(p0.get()); r->set_none(); return 0; }
@@ -6373,6 +6377,7 @@ template <class S> static int t4181(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<double> p1;
     QTC_CV(0, p0);
     QTC_CV(1, p1);
+    if (!(std::isfinite((p0.get())) && std::isfinite((p1.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::translated(qreal,qreal): the offset must be finite");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<double> &p0, qtc::H<double> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->translated(p0.get(), p1.get())); }) { qtc::rt(*r, s->translated(p0.get(), p1.get())); return 0; }
@@ -6387,6 +6392,7 @@ template <class S> static int t4182(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPointF> p0;
     QTC_CV(0, p0);
+    if (!(std::isfinite((p0.get()).x()) && std::isfinite((p0.get()).y()))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::translated(QPointF): the offset must be finite");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QPointF> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->translated(p0.get())); }) { qtc::rt(*r, s->translated(p0.get())); return 0; }
@@ -6476,6 +6482,7 @@ template <class S> static int t4189(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QTransform> p0;
     if (n > 0) QTC_CV(0, p0);
     if (!(qtc::flatten_ok(*s, (n > 0 ? static_cast<decltype(QTransform())>(p0.get()) : (QTransform()))))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::toSubpathPolygons(QTransform): flattening the path would exceed the allocation limit");
+    if (!(qtc::path_finite(*s) && qtc::transform_finite((n > 0 ? static_cast<decltype(QTransform())>(p0.get()) : (QTransform()))))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::toSubpathPolygons(QTransform): the path or the transform has values that are not finite");
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toSubpathPolygons()); }) { qtc::rt(*r, s->toSubpathPolygons()); return 0; }
@@ -6495,6 +6502,7 @@ template <class S> static int t4190(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     if (n > 0) QTC_CV(0, p0);
     if (!(qtc::fill_polygons_ok(s))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::toFillPolygons(QTransform): more than 8192 subpaths (the computation is quadratic); use toSubpathPolygons");
     if (!(qtc::flatten_ok(*s, (n > 0 ? static_cast<decltype(QTransform())>(p0.get()) : (QTransform()))))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::toFillPolygons(QTransform): flattening the path would exceed the allocation limit");
+    if (!(qtc::path_finite(*s) && qtc::transform_finite((n > 0 ? static_cast<decltype(QTransform())>(p0.get()) : (QTransform()))))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::toFillPolygons(QTransform): the path or the transform has values that are not finite");
     if (!([&] { int64_t n = 0; for (int i = 0, c = s->elementCount(); i < c; i++) n += s->elementAt(i).isMoveTo(); return n <= 16384; }())) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::toFillPolygons(QTransform): at most 16,384 subpaths (it compares every subpath with every other)");
     switch (n) {
         case 0:
@@ -6514,6 +6522,7 @@ template <class S> static int t4191(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     qtc::H<QTransform> p0;
     if (n > 0) QTC_CV(0, p0);
     if (!(qtc::flatten_ok(*s, (n > 0 ? static_cast<decltype(QTransform())>(p0.get()) : (QTransform()))))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::toFillPolygon(QTransform): flattening the path would exceed the allocation limit");
+    if (!(qtc::path_finite(*s) && qtc::transform_finite((n > 0 ? static_cast<decltype(QTransform())>(p0.get()) : (QTransform()))))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::toFillPolygon(QTransform): the path or the transform has values that are not finite");
     switch (n) {
         case 0:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa) { qtc::rt(*rr, s->toFillPolygon()); }) { qtc::rt(*r, s->toFillPolygon()); return 0; }
@@ -6710,6 +6719,7 @@ template <class S> static int t4203(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::path_finite((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::intersects(QPainterPath): the path has points that are not finite");
     if (!(qtc::flatten_ok(*s, QTransform()) && qtc::flatten_ok((p0.get()), QTransform()) && qtc::path_room(*s, (p0.get()).elementCount()))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::intersects(QPainterPath): the paths are too large for a boolean operation");
     if (!(qtc::clip_ok(*s, (p0.get()), false))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::intersects(QPainterPath): the paths have a point beyond +-2^30 (where Qt's clipper overflows) or not finite");
     switch (n) {
@@ -6726,6 +6736,7 @@ template <class S> static int t4204(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::path_finite((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::contains(QPainterPath): the path has points that are not finite");
     if (!(qtc::flatten_ok(*s, QTransform()) && qtc::flatten_ok((p0.get()), QTransform()) && qtc::path_room(*s, (p0.get()).elementCount()))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::contains(QPainterPath): the paths are too large for a boolean operation");
     if (!(qtc::clip_ok(*s, (p0.get()), false))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::contains(QPainterPath): the paths have a point beyond +-2^30 (where Qt's clipper overflows) or not finite");
     switch (n) {
@@ -6742,6 +6753,7 @@ template <class S> static int t4205(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::path_finite((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::united(QPainterPath): the path has points that are not finite");
     if (!(qtc::flatten_ok(*s, QTransform()) && qtc::flatten_ok((p0.get()), QTransform()) && qtc::path_room(*s, (p0.get()).elementCount()))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::united(QPainterPath): the paths are too large for a boolean operation");
     if (!(qtc::clip_ok(*s, (p0.get()), true))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::united(QPainterPath): the paths cross too often for a boolean operation (more than 4,096 crossings or 32,768 segments), or have a point beyond +-2^30 or not finite");
     switch (n) {
@@ -6758,6 +6770,7 @@ template <class S> static int t4206(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::path_finite((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::intersected(QPainterPath): the path has points that are not finite");
     if (!(qtc::flatten_ok(*s, QTransform()) && qtc::flatten_ok((p0.get()), QTransform()) && qtc::path_room(*s, (p0.get()).elementCount()))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::intersected(QPainterPath): the paths are too large for a boolean operation");
     if (!(qtc::clip_ok(*s, (p0.get()), true))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::intersected(QPainterPath): the paths cross too often for a boolean operation (more than 4,096 crossings or 32,768 segments), or have a point beyond +-2^30 or not finite");
     switch (n) {
@@ -6774,6 +6787,7 @@ template <class S> static int t4207(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::path_finite((p0.get())))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QPainterPath::subtracted(QPainterPath): the path has points that are not finite");
     if (!(qtc::flatten_ok(*s, QTransform()) && qtc::flatten_ok((p0.get()), QTransform()) && qtc::path_room(*s, (p0.get()).elementCount()))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::subtracted(QPainterPath): the paths are too large for a boolean operation");
     if (!(qtc::clip_ok(*s, (p0.get()), true))) return qtc::pre_fail(QTC_ERR_LIMIT, "QPainterPath::subtracted(QPainterPath): the paths cross too often for a boolean operation (more than 4,096 crossings or 32,768 segments), or have a point beyond +-2^30 or not finite");
     switch (n) {

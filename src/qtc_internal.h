@@ -698,6 +698,10 @@ bool replace_ok(const QByteArray &s, const QByteArray &before, int64_t after_len
 // and adding extra elements keeps it under kMaxPathElements
 bool flatten_ok(const QPainterPath &p, const QTransform &t);
 bool path_room(const QPainterPath &p, int64_t extra);
+// every point of the path is finite (a NaN point defeats the bounding-box tests that keep hit
+// testing quick: each test then walks the whole path)
+bool path_finite(const QPainterPath &p);
+bool transform_finite(const QTransform &t);
 // Qt's path clipper is safe on the paths (coordinates within +-2^30) and, with count_crossings, quick:
 // at most 32,768 segments in all, crossing each other at most 4,096 times (it slows down about as
 // the square of the crossings)

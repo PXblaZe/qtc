@@ -368,6 +368,7 @@ template <class S> static int t4985(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     if (n > 1) QTC_CV(1, p1);
     if (n > 2) QTC_CVF(2, p2, 777);
+    if (!(!(((n > 2 ? static_cast<decltype(QTextDocument::FindFlags())>(p2.get()) : (QTextDocument::FindFlags()))) & QTextDocument::FindBackward) || !(((n > 2 ? static_cast<decltype(QTextDocument::FindFlags())>(p2.get()) : (QTextDocument::FindFlags()))) & QTextDocument::FindWholeWords) || [&] { int64_t t = 0; for (QTextBlock b = s->begin(); b.isValid(); b = b.next()) { t += int64_t(b.length()) * b.length(); if (t > (int64_t(1) << 24)) return false; } return true; }())) return qtc::pre_fail(QTC_ERR_LIMIT, "QTextDocument::find(QRegularExpression,int,QTextDocument::FindFlags): a backward whole-word search with a regular expression takes block length x block length steps: the squares of the blocks' lengths must add up to at most 2^24 (one block of 4096 characters)");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QRegularExpression> &p0) { qtc::cv(aa[0], p0, 0); qtc::rt(*rr, s->find(p0.get())); }) { qtc::rt(*r, s->find(p0.get())); return 0; }
@@ -392,6 +393,7 @@ template <class S> static int t4986(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     QTC_CV(0, p0);
     QTC_CV(1, p1);
     if (n > 2) QTC_CVF(2, p2, 777);
+    if (!(!(((n > 2 ? static_cast<decltype(QTextDocument::FindFlags())>(p2.get()) : (QTextDocument::FindFlags()))) & QTextDocument::FindBackward) || !(((n > 2 ? static_cast<decltype(QTextDocument::FindFlags())>(p2.get()) : (QTextDocument::FindFlags()))) & QTextDocument::FindWholeWords) || [&] { int64_t t = 0; for (QTextBlock b = s->begin(); b.isValid(); b = b.next()) { t += int64_t(b.length()) * b.length(); if (t > (int64_t(1) << 24)) return false; } return true; }())) return qtc::pre_fail(QTC_ERR_LIMIT, "QTextDocument::find(QRegularExpression,QTextCursor,QTextDocument::FindFlags): a backward whole-word search with a regular expression takes block length x block length steps: the squares of the blocks' lengths must add up to at most 2^24 (one block of 4096 characters)");
     switch (n) {
         case 2:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QRegularExpression> &p0, qtc::H<QTextCursor> &p1) { qtc::cv(aa[0], p0, 0); qtc::cv(aa[1], p1, 1); qtc::rt(*rr, s->find(p0.get(), p1.get())); }) { qtc::rt(*r, s->find(p0.get(), p1.get())); return 0; }
@@ -5273,6 +5275,7 @@ template <class S> static int t5350(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_val<S>(q);
     qtc::H<QPainterPath> p0;
     QTC_CV(0, p0);
+    if (!(qtc::transform_finite(*s))) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QTransform::map(QPainterPath): the transform has values that are not finite (the path would get NaN points)");
     if (!(qtc::project_ok(*s, (p0.get())))) return qtc::pre_fail(QTC_ERR_LIMIT, "QTransform::map(QPainterPath): a perspective transform maps each curve as up to 512 lines: at most 2^20 points");
     switch (n) {
         case 1:
