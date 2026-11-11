@@ -258,6 +258,44 @@ static void test_calls(void) {
     qtc_arg_int(99);
     CHECK_EQ(qtc_call(cb, S("itemText")), QTC_OK);     /* Qt returns "" for an index out of range */
     CHECK_STR(qtc_ret_str(), "");
+    /* method strings are cached by their bytes: a buffer the program reuses for another
+       method must reach that method, and one that differs only in spacing the same one */
+    {
+        char buf[32];
+        strcpy(buf, "itemText(int)");
+        qtc_arg_int(0);
+        CHECK_EQ(qtc_call(cb, qtc_sn(buf, (int64_t)strlen(buf))), QTC_OK);
+        CHECK_STR(qtc_ret_str(), "one");
+        strcpy(buf, "itemData(int)");
+        qtc_arg_int(1);
+        CHECK_EQ(qtc_call(cb, qtc_sn(buf, (int64_t)strlen(buf))), QTC_OK);
+        CHECK_EQ(qtc_ret_int(), 42);
+        strcpy(buf, " itemText( int ) ");
+        qtc_arg_int(2);
+        CHECK_EQ(qtc_call(cb, qtc_sn(buf, (int64_t)strlen(buf))), QTC_OK);
+        CHECK_STR(qtc_ret_str(), "three");
+        strcpy(buf, "itemTextX(int)");
+        qtc_arg_int(0);
+        CHECK_EQ(qtc_call(cb, qtc_sn(buf, (int64_t)strlen(buf))), QTC_ERR_NOT_FOUND);
+        /* the same with NUL-terminated strings (qtc_s), which are measured and cached too */
+        strcpy(buf, "itemText(int)");
+        qtc_arg_int(0);
+        CHECK_EQ(qtc_call(cb, qtc_s(buf)), QTC_OK);
+        CHECK_STR(qtc_ret_str(), "one");
+        strcpy(buf, "itemData");
+        qtc_arg_int(1);
+        CHECK_EQ(qtc_call(cb, qtc_s(buf)), QTC_OK);
+        CHECK_EQ(qtc_ret_int(), 42);
+        strcpy(buf, "itemDat");
+        qtc_arg_int(1);
+        CHECK_EQ(qtc_call(cb, qtc_s(buf)), QTC_ERR_NOT_FOUND);
+        CHECK_EQ(qtc_call(cb, qtc_s("")), QTC_ERR_INVALID_ARG);
+        qtc_obj l2 = qtc_new(qtc_s("QLabel"));
+        CHECK(l2 != 0);
+        strcpy(buf, "QLabe");
+        CHECK_EQ(qtc_new(qtc_s(buf)), 0);
+        qtc_destroy(l2);
+    }
     /* full signature */
     qtc_arg_str(S("four"));
     CHECK_EQ(qtc_call(cb, S("addItem(QString,QVariant)")), QTC_OK);

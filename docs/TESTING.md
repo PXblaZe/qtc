@@ -11,7 +11,7 @@ them.
 
 | test | what it checks |
 |---|---|
-| `test_core` | the C API function by function: init and shutdown, handles and staleness, calls and overload resolution, out-parameters, properties, values and JSON, lists and maps, signals, coalescing, watches, timers, posts from threads, forwarding connections, enums, drawing, QML and the bridge, ownership rules, allocation limits, error policies (about 890 checks) |
+| `test_core` | the C API function by function: init and shutdown, handles and staleness, calls and overload resolution, out-parameters, properties, values and JSON, lists and maps, signals, coalescing, watches, timers, posts from threads, forwarding connections, enums, drawing, QML and the bridge, ownership rules, allocation limits, error policies (about 1,000 checks) |
 | `test_app` | a small application driven by simulated input (`libqtc_test`): a form, tabs, a canvas, keyboard and mouse |
 | `test_sweep` | every bound method and constructor called wrongly: a stale, null, garbage and wrong-kind receiver, one argument too many, each argument of a wrong type, a stale object as an argument; every call must fail with the right error |
 | `test_stress` | handle churn and generation reuse, event floods, deep object trees, many connections, floods from other threads, big payloads — each with a time budget, so a performance cliff fails like a wrong result |
@@ -21,6 +21,7 @@ them.
 | `test_rhi` | the graphics layer on every backend the machine has: every refusal (handles, kinds, states, sizes, bindings against shaders, vertex and index ranges, destruction order), rendering read back pixel by pixel (offscreen frames, swapchains on windows, `QRhiWidget`), texture sampling, instancing, compute into buffers and images, native interop, shutdown with frames open |
 | `rhi_xcb` | `test_rhi` on an X server (Xvfb), where Mesa's llvmpipe (OpenGL) and lavapipe (Vulkan) render |
 | `fuzz_rhi`, `fuzz_rhi_xcb` | random sequences of graphics calls with handles of every kind and edge-value arguments, built around valid scenes so that hundreds of draws and dispatches reach the GPU per run; no handle may be left behind |
+| `wayland` | widget windows, a menu popup opened and dismissed, closes, and an object destroyed while shown, on a headless weston compositor (Wayland); skipped when weston is not installed |
 | `example_*` | the six examples, each driving itself with `--selftest` and checking the result |
 
 ## The fuzzers (`tests/fuzz_methods.cpp`, `tests/fuzz_driver.py`)
@@ -92,7 +93,7 @@ modules built in so that they are tested too. The graphics suites ran with Mesa'
 
 | suite | release build | ASan + UBSan build |
 |---|---|---|
-| `test_core` | 1,010 checks pass | 1,010 checks pass |
+| `test_core` | 1,025 checks pass | 1,025 checks pass |
 | `test_app` | 32 pass | 32 pass |
 | `test_concurrent` | 1,696 pass | 1,696 pass |
 | `test_override` | 221 pass | 221 pass |
@@ -100,7 +101,7 @@ modules built in so that they are tested too. The graphics suites ran with Mesa'
 | `test_rhi` offscreen / under Xvfb | 459 / 1,175 pass | 459 / 1,175 pass, no validation errors |
 | `fuzz_rhi` (OpenGL offscreen, Vulkan under Xvfb) | clean | clean |
 | `test_stress` | all pass | all pass |
-| `ctest` (all 18 tests, examples included) | 18 of 18 pass | not run as a whole |
+| `ctest` (all 19 tests, examples included) | 19 of 19 pass | 19 of 19 pass |
 | goose-qt tests (`test/run.sh`, JIT and native) | 18 of 18 pass (examples: 11 of 11) | not run |
 
 The default build (LGPL-3.0 modules only), configured and built from the release package in
@@ -152,24 +153,25 @@ Under AddressSanitizer and UndefinedBehaviorSanitizer:
 | drawing 200,000 commands onto a 1024x1024 image | 3,361 ms | 6,000 ms |
 | handles stay valid across 50 shutdown/init cycles | 277 ms | 30,000 ms |
 
-What a call costs (`tests/bench.cpp`, release build, ns per operation; "direct" is the same call
-in C++):
+What a call costs in 1.1.1 (`tests/bench.cpp`, release build, ns per operation on a 2-core
+2.1 GHz Xeon VM; "direct" is the same call in C++, and its column shows how noisy the machine
+is):
 
 | operation                                      |       qtc |    direct |   ratio |
 |------------------------------------------------|-----------|-----------|---------|
-| QLabel::setText through a method call          |       239 |         5 |   46.6x |
-| QLabel::setText with a full signature          |       408 |         - |       - |
-| QLabel text through the property system        |       563 |        43 |   13.2x |
-| QSlider::setValue (int)                        |       262 |        23 |   11.2x |
-| QSlider::value() and read the result           |       166 |         2 |   98.8x |
-| QSlider value property get                     |       138 |        60 |    2.3x |
-| QLabel::text() returning a string              |       202 |        20 |   10.3x |
-| QComboBox::addItem, resolved among 3 overloads |       739 |       421 |    1.8x |
-| signal to C: emit, capture, poll (with args)   |       201 |       221 |    0.9x |
-| signal to C without argument capture           |       158 |         - |       - |
-| value handle create + free                     |        44 |         - |       - |
-| qtc_alive on a live handle                     |         9 |         - |       - |
-| call on a stale handle (rejected)              |       212 |         - |       - |
+| QLabel::setText through a method call          |       151 |         7 |   22.8x |
+| QLabel::setText with a full signature          |       155 |         - |       - |
+| QLabel text through the property system        |       308 |        64 |    4.8x |
+| QSlider::setValue (int)                        |       162 |        33 |    4.9x |
+| QSlider::value() and read the result           |       103 |         3 |   36.9x |
+| QSlider value property get                     |       192 |        94 |    2.0x |
+| QLabel::text() returning a string              |       142 |        25 |    5.7x |
+| QComboBox::addItem, resolved among 3 overloads |       861 |       595 |    1.4x |
+| signal to C: emit, capture, poll (with args)   |       247 |       263 |    0.9x |
+| signal to C without argument capture           |       221 |         - |       - |
+| value handle create + free                     |        70 |         - |       - |
+| qtc_alive on a live handle                     |        14 |         - |       - |
+| call on a stale handle (rejected)              |       220 |         - |       - |
 
 ## What the fuzzers found
 
@@ -306,7 +308,8 @@ before `QWidget::grab` did not follow Qt's rule for a rectangle with one negativ
   crashes particular to it are refused), but this release was not tested there,
   and Qt 6.5 to 6.11 never were; CMake accepts them only with
   `-DQTC_ALLOW_OLDER_QT=ON`.
-- Real displays (xcb, Wayland), macOS and Windows are not tested; the graphics
+- Real displays are not tested, and neither are macOS and Windows. Wayland is covered only
+  by the `wayland` test on a headless weston, added in 1.1.1 after a crash there; the graphics
   tests use an X server without a display (Xvfb) and Mesa's software renderers
   (llvmpipe, lavapipe). Direct3D and Metal are neither compiled nor run, and no
   GPU vendor's driver was used.

@@ -58,7 +58,10 @@
 #include <algorithm>
 #include <cstdio>
 #include <cstdlib>
+#include <cstring>
 #include <memory>
+#include <span>
+#include <QtCore/QVarLengthArray>
 #ifdef Q_OS_UNIX
 #include <fcntl.h>
 #endif
@@ -410,6 +413,29 @@ bool Registry::alive(uint64_t h) {
     return s.gen == handle_gen(h) && s.kind != SK_FREE && !(s.flags & SF_DYING) && (s.kind != SK_OBJ || !s.qp.isNull());
 }
 
+bool Registry::receiver(uint64_t h, QObject **o, QVariant **v, qtc_status *err) {
+    *o = nullptr;
+    *v = nullptr;
+    if (h == 0) { *err = QTC_ERR_NULL_HANDLE; return false; }
+    std::lock_guard<std::recursive_mutex> lk(mu);
+    uint32_t idx = handle_index(h);
+    if (idx < table.size() && table[idx].gen == handle_gen(h) && table[idx].kind == SK_VAL) {
+        *v = table[idx].val;
+        *err = 0;
+        return true;
+    }
+    QObject *x = lookup_locked(h, err, false);
+    if (!x) return false;
+    // as object(): read under mu, so an object of another thread cannot finish dying meanwhile
+    QThread *t = x->thread();
+    if (t == QThread::currentThread() || (!t && pull_orphan(x))) {
+        *o = x;
+        return true;
+    }
+    *err = QTC_ERR_WRONG_THREAD;
+    return false;
+}
+
 int Registry::kind_of(uint64_t h) {
     if (h == 0) return SK_FREE;
     std::lock_guard<std::recursive_mutex> lk(mu);
@@ -703,69 +729,73 @@ void Ret::set_variant(const QVariant &x) {
     default:
         clear();
         kind = k;
-        v = sv;
-        if (sv.canConvert<QString>() && k == QTC_T_VALUE) s = sv.toString().toUtf8();
+        v = sv;   // qtc_ret_str makes its text when it is asked for
         return;
     }
 }
 
-ArgStack &args() { static ArgStack *a = new ArgStack; return *a; }
-Ret &ret() { static Ret *r = new Ret; return *r; }
+// The pending arguments and the last result are reached through pointers, so that a call can
+// take the arguments over, and hand its result back, by swapping a pointer instead of moving
+// sixteen arguments' strings and variants.
+static ArgStack *&args_ptr() { static ArgStack *a = new ArgStack; return a; }
+static Ret *&ret_ptr() { static Ret *r = new Ret; return r; }
+ArgStack &args() { return *args_ptr(); }
+Ret &ret() { return *ret_ptr(); }
 
-// Frames come from a pool, one level per call in progress: taking one costs a few moves.
+// Frames come from a pool, one level per call in progress, each with an empty argument stack
+// and an empty result; taking one swaps pointers.
 namespace {
 struct FramePool {
-    std::vector<std::unique_ptr<ArgStack>> st;
-    std::vector<std::unique_ptr<Ret>> r;
+    std::vector<ArgStack *> st;   // never freed: they live as long as the process
+    std::vector<Ret *> r;
     int depth = 0;
-    void take(ArgStack *&s, Ret *&rr) {
+    int take() {
         if (depth == int(st.size())) {
-            st.push_back(std::make_unique<ArgStack>());
-            r.push_back(std::make_unique<Ret>());
+            st.push_back(new ArgStack);
+            r.push_back(new Ret);
         }
-        s = st[depth].get();
-        rr = r[depth].get();
-        depth++;
+        return depth++;
     }
 };
 FramePool &frames() {
     static auto *p = new FramePool;
     return *p;
 }
-// Moves the first n arguments of `from` into `to` (whose arguments are empty) and empties `from`.
-void move_args(ArgStack &from, ArgStack &to) {
-    for (int i = 0; i < from.n; i++) std::swap(to.a[i], from.a[i]);
-    to.n = from.n;
-    to.overflow = from.overflow;
-    from.n = 0;
-    from.overflow = false;
-}
 }  // namespace
 
+// A call: its frame takes the pushed arguments (the pending stack becomes the frame's empty one)
+// and, at the end, its result becomes ret() (the previous result goes to the pool, emptied).
 CallFrame::CallFrame() {
-    frames().take(st, r);
-    move_args(args(), *st);
-    r->clear_all();
+    FramePool &p = frames();
+    const int d = p.take();
+    std::swap(args_ptr(), p.st[d]);
+    st = p.st[d];
+    r = p.r[d];
 }
 CallFrame::~CallFrame() {
+    FramePool &p = frames();
+    const int d = --p.depth;
     st->clear();
-    ret() = std::move(*r);
-    r->clear_all();
-    frames().depth--;
+    std::swap(ret_ptr(), p.r[d]);
+    p.r[d]->clear_all();
 }
+// qtc's own call in the middle of the program's: the pending arguments and the last result go
+// aside (the frame's empty stack and result take their places) and come back at the end.
 Stash::Stash() {
-    frames().take(st, r);
-    move_args(args(), *st);
-    *r = std::move(ret());
-    ret().clear_all();
+    FramePool &p = frames();
+    const int d = p.take();
+    std::swap(args_ptr(), p.st[d]);
+    std::swap(ret_ptr(), p.r[d]);
+    st = p.st[d];
+    r = p.r[d];
 }
 Stash::~Stash() {
-    ArgStack &g = args();
-    g.clear();
-    move_args(*st, g);
-    ret() = std::move(*r);
-    r->clear_all();
-    frames().depth--;
+    FramePool &p = frames();
+    const int d = --p.depth;
+    args().clear();
+    std::swap(args_ptr(), p.st[d]);
+    std::swap(ret_ptr(), p.r[d]);
+    p.r[d]->clear_all();
 }
 
 QString arg_describe(const Arg &a) {
@@ -1223,7 +1253,9 @@ static QList<QByteArray> &class_names() { static auto *c = new QList<QByteArray>
 struct NameIndex { QHash<QByteArray, QList<const MethodDef *>> by_name; };
 static QHash<const ClassDef *, NameIndex *> &name_indexes() { static auto *c = new QHash<const ClassDef *, NameIndex *>; return *c; }
 
+static uint32_t g_class_gen = 1;   // see recent_class
 void register_classes(const ClassDef *defs, int count) {
+    g_class_gen++;
     for (int i = 0; i < count; i++) {
         QByteArray n(defs[i].name);
         if (!classes().contains(n)) class_names().append(n);
@@ -1233,9 +1265,44 @@ void register_classes(const ClassDef *defs, int count) {
     }
 }
 const ClassDef *find_class(const QByteArray &name) { return classes().value(name, nullptr); }
+
+// A bound class by the name string a program passes to qtc_new or qtc_val_new, remembered by the
+// string's address (its bytes are compared too): programs pass the same few literals over and
+// over. Registering or unregistering a class forgets them all. GUI thread.
+namespace {
+struct RecentClass {
+    const char *p = nullptr;
+    int64_t len = 0;
+    uint32_t gen = 0;
+    const ClassDef *c = nullptr;
+    char bytes[64];
+};
+RecentClass g_recent_class[64];
+}  // namespace
+static RecentClass &recent_class_slot(qtc_str s) { return g_recent_class[(reinterpret_cast<uintptr_t>(s.data) >> 3) & 63]; }
+static inline qtc_str measured(qtc_str s, size_t max);
+static const ClassDef *recent_class(qtc_str s) {
+    s = measured(s, 64);
+    if (s.len <= 0 || s.len > 64 || !s.data) return nullptr;
+    const RecentClass &r = recent_class_slot(s);
+    if (r.p == s.data && r.len == s.len && r.gen == g_class_gen && std::memcmp(r.bytes, s.data, size_t(s.len)) == 0) return r.c;
+    return nullptr;
+}
+static void remember_class(qtc_str s, const ClassDef *c) {
+    s = measured(s, 64);
+    if (s.len <= 0 || s.len > 64 || !s.data || !c) return;
+    RecentClass &r = recent_class_slot(s);
+    r.p = s.data;
+    r.len = s.len;
+    r.gen = g_class_gen;
+    r.c = c;
+    std::memcpy(r.bytes, s.data, size_t(s.len));
+}
+
 void unregister_class(const QByteArray &name) {
     const ClassDef *c = classes().value(name, nullptr);
     if (!c) return;
+    g_class_gen++;
     classes().remove(name);
     class_names().removeAll(name);
     delete name_indexes().take(c);
@@ -1277,12 +1344,31 @@ struct Cand {
     QMetaMethod mm;                  // meta-object method
     int depth = 0;
 };
+// The candidates of a call, gathered on the stack: most methods have a handful.
+using CandList = QVarLengthArray<Cand, 8>;
 
 // Overloads that differ only in the width or signedness of an integer, float against double, or
 // QString against a string view do the same thing: the order below picks one instead of
 // reporting the call as ambiguous. Signed for a signed argument, unsigned for an unsigned one,
 // then the widest; double over float; the owning QString and QByteArray over views.
+// Parameter type names are static strings (generated tables, registered meta-types): what is
+// worked out from one is kept by its address. Per thread.
+template <int (*F)(const char *)>
+static int memo_by_type(const char *type) {
+    if (!type) return F(type);
+    struct Memo { const char *t; int v; };
+    static thread_local Memo memo[256];
+    Memo &m = memo[(reinterpret_cast<uintptr_t>(type) >> 3) & 255];
+    if (m.t != type) m = Memo{type, F(type)};
+    return m.v;
+}
+static int int_type_penalty_uncached(const char *type, bool arg_unsigned);
+static int int_penalty_signed(const char *type) { return int_type_penalty_uncached(type, false); }
+static int int_penalty_unsigned(const char *type) { return int_type_penalty_uncached(type, true); }
 static int int_type_penalty(const char *type, bool arg_unsigned) {
+    return arg_unsigned ? memo_by_type<int_penalty_unsigned>(type) : memo_by_type<int_penalty_signed>(type);
+}
+static int int_type_penalty_uncached(const char *type, bool arg_unsigned) {
     if (!type) return 0;
     struct T { const char *name; int bits; bool is_unsigned; };
     static constexpr T types[] = {
@@ -1325,7 +1411,9 @@ static QByteArray typed_list_element(const char *type) {
     if (t == "QVariant" || t == "QString") return {};
     return t;
 }
-static int string_type_penalty(const char *type) {
+static int string_type_penalty_uncached(const char *type);
+static int string_type_penalty(const char *type) { return memo_by_type<string_type_penalty_uncached>(type); }
+static int string_type_penalty_uncached(const char *type) {
     if (!type || std::strcmp(type, "QString") == 0) return 0;
     if (std::strstr(type, "QLatin1String")) return 5;   // UTF-8 text would lose what Latin-1 cannot hold
     if (std::strstr(type, "Utf8StringView")) return 3;   // QUtf8StringView is QBasicUtf8StringView<false>
@@ -1333,7 +1421,9 @@ static int string_type_penalty(const char *type) {
     if (std::strstr(type, "QAnyStringView")) return 1;
     return 0;
 }
-static int bytes_type_penalty(const char *type) {
+static int bytes_type_penalty_uncached(const char *type);
+static int bytes_type_penalty(const char *type) { return memo_by_type<bytes_type_penalty_uncached>(type); }
+static int bytes_type_penalty_uncached(const char *type) {
     if (!type || std::strcmp(type, "QByteArray") == 0) return 0;
     if (std::strcmp(type, "const char*") == 0) return 3;   // keeps neither the length nor embedded NULs
     if (std::strstr(type, "Utf8StringView")) return 2;
@@ -1708,11 +1798,17 @@ struct CandKey {
     }
 };
 static size_t qHash(const CandKey &k, size_t seed = 0) { return qHashMulti(seed, k.cls, k.name, k.sig, k.want_static, k.qml); }
-static QHash<CandKey, std::vector<Cand>> &cand_cache() {
-    static auto *h = new QHash<CandKey, std::vector<Cand>>;
+// The vectors stay where they are until the cache is cleared (the front cache below points at
+// them), and clearing bumps the generation that front entries are checked against.
+static QHash<CandKey, std::shared_ptr<const std::vector<Cand>>> &cand_cache() {
+    static auto *h = new QHash<CandKey, std::shared_ptr<const std::vector<Cand>>>;
     return *h;
 }
-void clear_cand_cache() { cand_cache().clear(); }
+static uint32_t g_cand_gen = 1;
+void clear_cand_cache() {
+    cand_cache().clear();
+    g_cand_gen++;
+}
 
 // The protected methods an overridable object makes callable (qtc_override.h): its own, never
 // cached by class (the same meta-object serves plain objects of the class).
@@ -1739,11 +1835,11 @@ static void collect_object_cached(QObject *o, const QByteArray &name, const QByt
     CandKey key{o->metaObject(), name, sig, want_static, !want_static && qml_object(o)};
     auto it = cand_cache().constFind(key);
     if (it == cand_cache().constEnd()) {
-        std::vector<Cand> fresh;
-        collect_object(o, name, sig, want_static, fresh);
+        auto fresh = std::make_shared<std::vector<Cand>>();
+        collect_object(o, name, sig, want_static, *fresh);
         it = cand_cache().insert(key, std::move(fresh));
     }
-    out.insert(out.end(), it->begin(), it->end());
+    out.insert(out.end(), (*it)->begin(), (*it)->end());
 }
 
 bool method_callable(QObject *o, const QByteArray &signature, QString *why) {
@@ -1804,20 +1900,113 @@ QByteArray bound_method_for_signal(QObject *o, const QByteArray &name, const QLi
     return best;
 }
 
-static void collect_value_cached(const ClassDef *c, const QByteArray &name, const QByteArray &sig, std::vector<Cand> &out) {
+static const std::vector<Cand> &value_cands_cached(const ClassDef *c, const QByteArray &name, const QByteArray &sig) {
     CandKey key{c, name, sig, false, false};
     auto it = cand_cache().constFind(key);
     if (it == cand_cache().constEnd()) {
-        std::vector<Cand> fresh;
-        collect_value(c, name, sig, fresh, -1, 0);
+        auto fresh = std::make_shared<std::vector<Cand>>();
+        collect_value(c, name, sig, *fresh, -1, 0);
         it = cand_cache().insert(key, std::move(fresh));
     }
-    out.insert(out.end(), it->begin(), it->end());
+    return **it;
+}
+
+static bool split_method_uncached(const QByteArray &raw, QByteArray &name, QByteArray &sig);
+static const QSet<QByteArray> &denied_methods();
+
+// What a method string says, worked out once per string: bindings call the same few hundred
+// strings over and over, and splitting and normalizing one (QMetaObject::normalizedSignature)
+// costs more than the rest of a call. Interned per thread by the string's bytes; an entry is
+// never freed, so a pointer to one stays valid (and names it) for the thread's life. Strings
+// past the table's size are worked out on every call instead.
+struct MethodInfo {
+    QByteArray raw;    // the bytes as passed
+    QByteArray name, sig;
+    bool denied = false;
+    bool set_parent = false, block_signals = false, window_container = false;
+};
+struct MethodTable {
+    static constexpr int kSlots = 8192;   // open addressing, at most half full
+    static constexpr int kMax = kSlots / 2;
+    const MethodInfo *slot[kSlots] = {};
+    uint32_t hash[kSlots] = {};
+    int n = 0;
+};
+static MethodTable &method_table() {
+    static thread_local MethodTable *t = new MethodTable;
+    return *t;
+}
+static uint32_t bytes_hash(const char *p, int64_t len) {
+    uint32_t h = 2166136261u;
+    for (int64_t i = 0; i < len; i++) h = (h ^ uint8_t(p[i])) * 16777619u;
+    return h | 1;   // 0 marks an empty slot
+}
+// Splits a method string: false when it is not a usable method name (the error is set). *info
+// is its interned entry (its name and sig are the split form), or null when it is not interned,
+// and then *name and *sig hold the split form.
+// A NUL-terminated qtc_str (qtc_s, length -1) given its length, when it is no longer than `max`,
+// so the caches keyed by length see it too; otherwise unchanged.
+static inline qtc_str measured(qtc_str s, size_t max) {
+    if (s.len < 0 && s.data) {
+        const size_t n = strnlen(s.data, max + 1);
+        if (n <= max) s.len = int64_t(n);
+    }
+    return s;
+}
+
+static bool method_info(qtc_str method, const MethodInfo **info, QByteArray *name, QByteArray *sig) {
+    *info = nullptr;
+    method = measured(method, 256);
+    if (method.len > 0 && method.len <= 256 && method.data) {
+        // most calls pass the same string from the same place: by its address first (the bytes
+        // are still compared, since a program may reuse a buffer for another method)
+        struct Recent { const char *p; int64_t len; const MethodInfo *m; };
+        static thread_local Recent recent[512];
+        Recent &rc = recent[(reinterpret_cast<uintptr_t>(method.data) >> 3) & 511];
+        if (rc.p == method.data && rc.len == method.len && std::memcmp(rc.m->raw.constData(), method.data, size_t(method.len)) == 0) {
+            *info = rc.m;
+            return true;
+        }
+        MethodTable &t = method_table();
+        const uint32_t h = bytes_hash(method.data, method.len);
+        uint32_t i = h & (MethodTable::kSlots - 1);
+        for (; t.slot[i]; i = (i + 1) & (MethodTable::kSlots - 1))
+            if (t.hash[i] == h && t.slot[i]->raw.size() == method.len &&
+                std::memcmp(t.slot[i]->raw.constData(), method.data, size_t(method.len)) == 0) {
+                *info = t.slot[i];
+                rc = Recent{method.data, method.len, t.slot[i]};
+                return true;
+            }
+        const QByteArray raw(method.data, qsizetype(method.len));
+        if (!split_method_uncached(raw, *name, *sig)) return false;
+        if (t.n < MethodTable::kMax) {
+            auto *m = new MethodInfo{raw, *name, *sig, denied_methods().contains(*name), *name == "setParent",
+                                     *name == "blockSignals", *name == "createWindowContainer"};
+            t.slot[i] = m;
+            t.hash[i] = h;
+            t.n++;
+            *info = m;
+            rc = Recent{method.data, method.len, m};
+        }
+        return true;
+    }
+    QByteArray m;
+    if (!read_bytes(method, m, "method")) return false;
+    return split_method_uncached(m, *name, *sig);
 }
 
 static bool split_method(qtc_str method, QByteArray &name, QByteArray &sig) {
-    QByteArray m;
-    if (!read_bytes(method, m, "method")) return false;
+    const MethodInfo *info = nullptr;
+    if (!method_info(method, &info, &name, &sig)) return false;
+    if (info) {
+        name = info->name;
+        sig = info->sig;
+    }
+    return true;
+}
+
+static bool split_method_uncached(const QByteArray &raw, QByteArray &name, QByteArray &sig) {
+    QByteArray m(raw.constData(), raw.size());   // a copy of its own: raw may be the caller's bytes
     m = m.trimmed();
     if (m.isEmpty()) {
         fail(QTC_ERR_INVALID_ARG, "empty method name");
@@ -1872,7 +2061,7 @@ struct Label {
     QString str() const { return b.isEmpty() ? QString::fromLatin1(fmt).arg(a) : QString::fromLatin1(fmt).arg(a, b); }
 };
 
-static qtc_status run_candidates(std::vector<Cand> &cands, void *self_obj, QVariant *self_val, const Label &label, ArgStack &st, Ret &r) {
+static qtc_status run_candidates(std::span<const Cand> cands, void *self_obj, QVariant *self_val, const Label &label, ArgStack &st, Ret &r) {
     const auto what = [&]() { return label.str(); };
     if (st.overflow) return fail(QTC_ERR_BAD_ARGS, QStringLiteral("%1: more than %2 arguments").arg(what()).arg(kMaxArgs));
     if (cands.empty()) return fail(QTC_ERR_NOT_FOUND, QStringLiteral("%1: no such method").arg(what()));
@@ -1946,20 +2135,34 @@ static qtc_status run_candidates(std::vector<Cand> &cands, void *self_obj, QVari
     return invoke_meta(static_cast<QObject *>(self_obj), bc->mm, st, r) ? t_err : QTC_OK;
 }
 
+// A class's constructors as candidates, made once per constructor table (the tables are static,
+// and the lists are never freed). Shared, not copied: scoring writes each candidate's arity
+// (Cand::call_n, skip), but the chosen one's is read before anything else can run, so a call
+// nested inside a constructor rescoring the same list changes nothing for the outer one. GUI thread.
+static std::span<const Cand> ctor_span(const MethodDef *ctors, uint32_t nctors, const ClassDef *c) {
+    static auto *cache = new QHash<QPair<const MethodDef *, const ClassDef *>, std::vector<Cand> *>;
+    const auto key = qMakePair(ctors, c);
+    auto it = cache->constFind(key);
+    if (it == cache->constEnd()) {
+        auto *v = new std::vector<Cand>;
+        for (uint32_t i = 0; i < nctors; i++) {
+            Cand k;
+            k.md = &ctors[i];
+            k.cls = c;
+            v->push_back(k);
+        }
+        it = cache->insert(key, v);
+    }
+    return std::span<const Cand>((*it)->data(), (*it)->size());
+}
+
 // Creates an object with one of these constructors, chosen by the pushed arguments as qtc_new
 // chooses (the arguments are consumed). GUI thread, inside guarded().
 uint64_t new_with_ctors(const char *cls, const MethodDef *ctors, uint32_t nctors, const ClassDef *c) {
     CallFrame f;
     Ret &r = *f.r;
-    std::vector<Cand> cands;
-    for (uint32_t i = 0; i < nctors; i++) {
-        Cand k;
-        k.md = &ctors[i];
-        k.cls = c;
-        cands.push_back(k);
-    }
     const Label what{QLatin1StringView(cls), QLatin1StringView(), "new %1"};
-    if (run_candidates(cands, nullptr, nullptr, what, *f.st, r) != QTC_OK) return 0;
+    if (run_candidates(ctor_span(ctors, nctors, c), nullptr, nullptr, what, *f.st, r) != QTC_OK) return 0;
     if (r.kind != QTC_T_OBJ || !r.h) { fail(QTC_ERR_REJECTED, what.str()); return 0; }
     qtc_status e = 0;
     QObject *o = reg().object(r.h, &e);
@@ -2024,39 +2227,108 @@ static bool would_cycle(QObject *self, QObject *newparent) {
     return false;
 }
 
+
+// A front for cand_cache, for calls whose method string is interned: keyed by the receiver's
+// class and the interned entry, so a call costs no hash of the name and signature. GUI thread.
+struct FrontEntry {
+    const void *cls = nullptr;
+    const MethodInfo *m = nullptr;
+    bool qml = false;
+    uint32_t gen = 0;
+    const std::vector<Cand> *cands = nullptr;
+};
+static FrontEntry g_front[1024];
+static FrontEntry *front_slot(const void *cls, const MethodInfo *m, bool qml) {
+    const uintptr_t k = (reinterpret_cast<uintptr_t>(cls) >> 4) * 31 + (reinterpret_cast<uintptr_t>(m) >> 4) + (qml ? 7 : 0);
+    return &g_front[(k * 0x9E3779B97F4A7C15ull) >> 54];
+}
+static const std::vector<Cand> *front_find(const void *cls, const MethodInfo *m, bool qml, FrontEntry **slot) {
+    *slot = nullptr;
+    if (!m) return nullptr;
+    FrontEntry *e = front_slot(cls, m, qml);
+    *slot = e;
+    return e->cls == cls && e->m == m && e->qml == qml && e->gen == g_cand_gen ? e->cands : nullptr;
+}
+static void front_put(FrontEntry *e, const void *cls, const MethodInfo *m, bool qml, const std::vector<Cand> *v) {
+    if (e) *e = FrontEntry{cls, m, qml, g_cand_gen, v};
+}
+
+static void object_cands(QObject *o, const MethodInfo *info, const QByteArray &name, const QByteArray &sig, CandList &out) {
+    uint32_t nx = 0;
+    const MethodDef *ex = ov_extras(o, &nx);   // an overridable object's protected methods
+    for (uint32_t i = 0; i < nx; i++) {
+        if (name != ex[i].name || !sig_matches(&ex[i], sig)) continue;
+        Cand k;
+        k.md = &ex[i];
+        k.cls = nullptr;
+        k.depth = 0;
+        out.append(k);
+    }
+    const QObjectData *d = DPtrPeek::of(o);
+    if (d && d->metaObject) {   // a dynamic meta-object: it can change, and its address can be reused
+        std::vector<Cand> v;
+        collect_object(o, name, sig, false, v);
+        out.append(v.data(), qsizetype(v.size()));
+        return;
+    }
+    const QMetaObject *mo = o->metaObject();
+    const bool qml = qml_object(o);
+    FrontEntry *slot = nullptr;
+    const std::vector<Cand> *v = front_find(mo, info, qml, &slot);
+    if (!v) {
+        CandKey key{mo, name, sig, false, qml};
+        auto it = cand_cache().constFind(key);
+        if (it == cand_cache().constEnd()) {
+            auto fresh = std::make_shared<std::vector<Cand>>();
+            collect_object(o, name, sig, false, *fresh);
+            it = cand_cache().insert(key, std::move(fresh));
+        }
+        v = it->get();
+        front_put(slot, mo, info, qml, v);
+    }
+    out.append(v->data(), qsizetype(v->size()));
+}
+
 static qtc_status do_call_in(uint64_t receiver, qtc_str method, ArgStack &st, Ret &r) {
-    QByteArray name, sig;
-    if (!split_method(method, name, sig)) return t_err;
-    int kind = reg().kind_of(receiver);
-    std::vector<Cand> cands;
-    if (kind == SK_VAL) {
-        qtc_status err = 0;
-        QVariant *v = reg().value(receiver, &err);
-        if (!v) return fail(err, "receiver");
+    QByteArray name_s, sig_s;
+    const MethodInfo *info = nullptr;
+    if (!method_info(method, &info, &name_s, &sig_s)) return t_err;
+    const QByteArray &name = info ? info->name : name_s;
+    const QByteArray &sig = info ? info->sig : sig_s;
+    QObject *o = nullptr;
+    QVariant *v = nullptr;
+    qtc_status err = 0;
+    if (!reg().receiver(receiver, &o, &v, &err)) {
+        if (err == QTC_ERR_WRONG_TYPE) return fail(err, "receiver is not an object or value");
+        return fail(err, err == QTC_ERR_STALE_HANDLE ? "the receiver was destroyed" : "receiver");
+    }
+    CandList cands;
+    if (v) {
         const QByteArray tn(v->metaType().name() ? v->metaType().name() : "");
         const ClassDef *c = find_class(tn);
         const Label what{QLatin1StringView(tn), QLatin1StringView(name), "%1::%2"};
         if (!c) return fail(QTC_ERR_NOT_FOUND, QStringLiteral("%1: values of type %2 have no methods").arg(what.str(), QLatin1StringView(tn)));
-        collect_value_cached(c, name, sig, cands);
-        return run_candidates(cands, nullptr, v, what, st, r);
-    }
-    qtc_status err = 0;
-    QObject *o = reg().object(receiver, &err);
-    if (!o) {
-        if (err == QTC_ERR_WRONG_TYPE) return fail(err, "receiver is not an object or value");
-        return fail(err, err == QTC_ERR_STALE_HANDLE ? "the receiver was destroyed" : "receiver");
+        FrontEntry *slot = nullptr;
+        const std::vector<Cand> *vc = front_find(c, info, false, &slot);
+        if (!vc) {
+            vc = &value_cands_cached(c, name, sig);
+            front_put(slot, c, info, false, vc);
+        }
+        cands.append(vc->data(), qsizetype(vc->size()));
+        return run_candidates(std::span<const Cand>(cands.data(), size_t(cands.size())), nullptr, v, what, st, r);
     }
     const Label what{QLatin1StringView(o->metaObject()->className()), QLatin1StringView(name), "%1::%2"};
-    // the call may give an owner something new to hold: it is looked at again afterwards
+    // the call may give an owner something new to hold: it is looked at again afterwards (only
+    // owners need it, and a guard costs more than the check)
     struct NoteAfter {
         QPointer<QObject> o;
         ~NoteAfter() { if (o) roles_note_call(o); }
-    } note_after{o};
-    if (denied_methods().contains(name))
+    } note_after{roles_is_owner(o) ? o : nullptr};
+    if (info ? info->denied : denied_methods().contains(name))
         return fail(QTC_ERR_UNSUPPORTED, QStringLiteral("%1 is not available through qtc (use qtc_destroy for deleteLater)").arg(what.str()));
     qtc_status irc = 0;
     if (intercept_call(o, name, st, &irc)) return irc;
-    if (name == "setParent" && st.n >= 1) {
+    if ((info ? info->set_parent : name == "setParent") && st.n >= 1) {
         int e = 0;
         QObject *np = cv_object(st.a[0], nullptr, 0, &e);
         if (e) return e;
@@ -2076,10 +2348,10 @@ static qtc_status do_call_in(uint64_t receiver, qtc_str method, ArgStack &st, Re
         }
 #endif
     }
-    collect_object_cached(o, name, sig, false, cands);
-    qtc_status rc = run_candidates(cands, o, nullptr, what, st, r);
-    if (rc == QTC_OK && name == "blockSignals" && o->signalsBlocked()) reg().note_blocked(o);
-    note_window_container(name, st, r, rc);
+    object_cands(o, info, name, sig, cands);
+    qtc_status rc = run_candidates(std::span<const Cand>(cands.data(), size_t(cands.size())), o, nullptr, what, st, r);
+    if (rc == QTC_OK && (info ? info->block_signals : name == "blockSignals") && o->signalsBlocked()) reg().note_blocked(o);
+    if (info ? info->window_container : name == "createWindowContainer") note_window_container(name, st, r, rc);
     return rc;
 }
 
@@ -2255,31 +2527,28 @@ QTC_API qtc_obj qtc_new(qtc_str class_name) {
     return guarded<qtc_obj>(0, [&]() -> qtc_obj {
         CallFrame f;
         Ret &r = *f.r;
-        QByteArray cn;
-        if (!read_bytes(class_name, cn, "class_name")) return 0;
         bool runtime = false;
-        // a runtime class (qtc_class_*): made like qtc_class_new makes it (the frame gives the
-        // arguments back first)
-        if (dyn_class_named(cn.trimmed())) {
-            ArgStack &g = args();
-            g.clear();
-            for (int i = 0; i < f.st->n; i++) g.a[i] = f.st->a[i];
-            g.n = f.st->n;
-            return dyn_new(cn.trimmed(), &runtime);
+        const ClassDef *c = recent_class(class_name);   // runtime classes never share a bound class's name
+        if (!c) {
+            QByteArray cn;
+            if (!read_bytes(class_name, cn, "class_name")) return 0;
+            // a runtime class (qtc_class_*): made like qtc_class_new makes it (the frame gives the
+            // arguments back first)
+            if (dyn_class_named(cn.trimmed())) {
+                ArgStack &g = args();
+                g.clear();
+                for (int i = 0; i < f.st->n; i++) g.a[i] = f.st->a[i];
+                g.n = f.st->n;
+                return dyn_new(cn.trimmed(), &runtime);
+            }
+            c = find_class(cn.trimmed());
+            if (!c) { fail(QTC_ERR_NOT_FOUND, QStringLiteral("no class named %1").arg(QString::fromUtf8(cn))); return 0; }
+            remember_class(class_name, c);
         }
-        const ClassDef *c = find_class(cn.trimmed());
-        if (!c) { fail(QTC_ERR_NOT_FOUND, QStringLiteral("no class named %1").arg(QString::fromUtf8(cn))); return 0; }
         if (c->kind != CK_OBJECT) { fail(QTC_ERR_WRONG_TYPE, QStringLiteral("%1 is a value type: use qtc_val_new").arg(QLatin1StringView(c->name))); return 0; }
         if (c->abstract || c->nctors == 0) { fail(QTC_ERR_UNSUPPORTED, QStringLiteral("%1 cannot be created").arg(QLatin1StringView(c->name))); return 0; }
-        std::vector<Cand> cands;
-        for (uint32_t i = 0; i < c->nctors; i++) {
-            Cand k;
-            k.md = &c->ctors[i];
-            k.cls = c;
-            cands.push_back(k);
-        }
         const Label what{QLatin1StringView(c->name), QLatin1StringView(), "new %1"};
-        if (run_candidates(cands, nullptr, nullptr, what, *f.st, r) != QTC_OK) return 0;
+        if (run_candidates(ctor_span(c->ctors, c->nctors, c), nullptr, nullptr, what, *f.st, r) != QTC_OK) return 0;
         if (r.kind != QTC_T_OBJ || !r.h) { fail(QTC_ERR_REJECTED, what.str()); return 0; }
         qtc_status e = 0;
         QObject *o = reg().object(r.h, &e);
@@ -3038,7 +3307,19 @@ QTC_API qtc_val qtc_ret_val(void) {
 // The bound C++ setter of a property (setFoo for foo), if there is one: writing through it applies
 // the checks qtc makes for that method (preconditions, ownership, cycles), which a plain
 // QMetaProperty::write would go around.
+static QByteArray bound_setter_uncached(const QObject *o, const QByteArray &prop);
+// The setter depends on the class and the property name: kept per class (dynamic meta-objects,
+// which can change, are asked every time). GUI thread.
 static QByteArray bound_setter(const QObject *o, const QByteArray &prop) {
+    const QObjectData *d = DPtrPeek::of(o);
+    if (d && d->metaObject) return bound_setter_uncached(o, prop);
+    static auto *memo = new QHash<QPair<const QMetaObject *, QByteArray>, QByteArray>;
+    const auto key = qMakePair(o->metaObject(), prop);
+    auto it = memo->constFind(key);
+    if (it == memo->constEnd()) it = memo->insert(key, bound_setter_uncached(o, prop));
+    return *it;
+}
+static QByteArray bound_setter_uncached(const QObject *o, const QByteArray &prop) {
     if (prop.isEmpty()) return QByteArray();
     QByteArray name;
     if (prop == "parent" && o->inherits("QQuickItem")) name = "setParentItem";
@@ -3064,9 +3345,9 @@ static qtc_status prop_set_impl(uint64_t obj, qtc_str name, bool dynamic) {
     if (st.n != 1) return fail(QTC_ERR_BAD_ARGS, QStringLiteral("qtc_prop_set: expected 1 argument, got %1").arg(st.n));
     const QMetaObject *mo = o->metaObject();
     int idx = mo->indexOfProperty(pn.constData());
-    QString what = QStringLiteral("%1.%2").arg(QLatin1StringView(mo->className()), QString::fromUtf8(pn));
+    const auto what = [&] { return QStringLiteral("%1.%2").arg(QLatin1StringView(mo->className()), QString::fromUtf8(pn)); };
     if (dynamic) {
-        if (idx >= 0) return fail(QTC_ERR_STATE, QStringLiteral("%1 is a declared property: use qtc_prop_set").arg(what));
+        if (idx >= 0) return fail(QTC_ERR_STATE, QStringLiteral("%1 is a declared property: use qtc_prop_set").arg(what()));
         o->setProperty(pn.constData(), arg_to_variant(st.a[0]));
         return QTC_OK;
     }
@@ -3075,10 +3356,10 @@ static qtc_status prop_set_impl(uint64_t obj, qtc_str name, bool dynamic) {
             o->setProperty(pn.constData(), arg_to_variant(st.a[0]));
             return QTC_OK;
         }
-        return fail(QTC_ERR_NOT_FOUND, QStringLiteral("%1: no such property").arg(what));
+        return fail(QTC_ERR_NOT_FOUND, QStringLiteral("%1: no such property").arg(what()));
     }
     QMetaProperty p = mo->property(idx);
-    if (!p.isWritable()) return fail(QTC_ERR_READ_ONLY, what);
+    if (!p.isWritable()) return fail(QTC_ERR_READ_ONLY, what());
     QVariant v;
     if (p.isEnumType()) {
         int64_t x;
@@ -3087,9 +3368,9 @@ static qtc_status prop_set_impl(uint64_t obj, qtc_str name, bool dynamic) {
         if (me.isFlag()) {
             int all = 0;
             for (int i = 0; i < me.keyCount(); i++) all |= me.value(i);
-            if (uint32_t(x) & ~uint32_t(all)) return fail(QTC_ERR_OUT_OF_RANGE, QStringLiteral("%1: invalid flags 0x%2").arg(what).arg(qulonglong(x), 0, 16));
+            if (uint32_t(x) & ~uint32_t(all)) return fail(QTC_ERR_OUT_OF_RANGE, QStringLiteral("%1: invalid flags 0x%2").arg(what()).arg(qulonglong(x), 0, 16));
         } else if (!me.valueToKey(int(x))) {
-            return fail(QTC_ERR_OUT_OF_RANGE, QStringLiteral("%1: %2 is not a %3 value").arg(what).arg(x).arg(QLatin1StringView(me.name())));
+            return fail(QTC_ERR_OUT_OF_RANGE, QStringLiteral("%1: %2 is not a %3 value").arg(what()).arg(x).arg(QLatin1StringView(me.name())));
         }
         v = QVariant(int(x));
         if (!v.convert(p.metaType())) v = QVariant(int(x));
@@ -3099,7 +3380,7 @@ static qtc_status prop_set_impl(uint64_t obj, qtc_str name, bool dynamic) {
     // the value suits the property: it goes in through the setter when qtc binds one
     if (const QByteArray setter = bound_setter(o, pn); !setter.isEmpty())
         return do_call_in(obj, qtc_sn(setter.constData(), setter.size()), st, *f.r);
-    if (!p.write(o, v)) return fail(QTC_ERR_REJECTED, QStringLiteral("%1: the value was not accepted").arg(what));
+    if (!p.write(o, v)) return fail(QTC_ERR_REJECTED, QStringLiteral("%1: the value was not accepted").arg(what()));
     return QTC_OK;
 }
 
@@ -3180,21 +3461,21 @@ QTC_API qtc_val qtc_val_new(qtc_str type_name) {
     return guarded<qtc_val>(0, [&]() -> qtc_val {
         CallFrame f;
         QByteArray tn;
-        if (!read_bytes(type_name, tn, "type_name")) return 0;
-        tn = tn.trimmed();
-        const ClassDef *c = find_class(tn);
+        const ClassDef *c = recent_class(type_name);
+        if (c) {
+            tn = QByteArray::fromRawData(c->name, qsizetype(std::strlen(c->name)));
+        } else {
+            if (!read_bytes(type_name, tn, "type_name")) return 0;
+            tn = tn.trimmed();
+            c = find_class(tn);
+            remember_class(type_name, c);
+        }
         if (c && c->kind == CK_OBJECT) { fail(QTC_ERR_WRONG_TYPE, QStringLiteral("%1 is an object class: use qtc_new").arg(QString::fromUtf8(tn))); return 0; }
         if (c && c->nctors > 0) {
             QString why;
             if (!need_ok(c, &why)) { fail(QTC_ERR_STATE, why); return 0; }
-            std::vector<Cand> cands;
-            for (uint32_t i = 0; i < c->nctors; i++) {
-                Cand k;
-                k.md = &c->ctors[i];
-                k.cls = c;
-                cands.push_back(k);
-            }
-            if (run_candidates(cands, nullptr, nullptr, Label{QLatin1StringView(c->name), QLatin1StringView(), "%1 value"}, *f.st, *f.r) != QTC_OK) return 0;
+            if (run_candidates(ctor_span(c->ctors, c->nctors, c), nullptr, nullptr,
+                               Label{QLatin1StringView(c->name), QLatin1StringView(), "%1 value"}, *f.st, *f.r) != QTC_OK) return 0;
             return value_of_ret(*f.r);
         }
         if (f.st->n != 0) { fail(QTC_ERR_BAD_ARGS, QStringLiteral("%1 takes no constructor arguments").arg(QString::fromUtf8(tn))); return 0; }

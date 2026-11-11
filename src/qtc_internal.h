@@ -114,6 +114,8 @@ public:
     bool made(const QObject *o);
     bool alive(uint64_t h);
     int kind_of(uint64_t h);
+    // A call's receiver in one lookup: the object (as object() checks it) or the value.
+    bool receiver(uint64_t h, QObject **o, QVariant **v, qtc_status *err);
     void on_destroyed(QObject *o);
     // An object deleted while its signals were blocked never emits destroyed(): its QPointer
     // is the only trace. These find such objects and forget them like destroyed ones.
@@ -152,7 +154,14 @@ struct Arg {
     QVariant v;
     mutable QByteArray cache;   // UTF-8 / Latin-1 bytes for const char* and view parameters
     mutable QString scache;
-    void reset() { kind = AK_NONE; s.clear(); bytes.clear(); v.clear(); cache.clear(); scache.clear(); }
+    void reset() {   // most arguments use one of these: the others are left alone when empty
+        kind = AK_NONE;
+        if (!s.isNull()) s.clear();
+        if (!bytes.isNull()) bytes.clear();
+        if (v.isValid()) v.clear();
+        if (!cache.isNull()) cache.clear();
+        if (!scache.isNull()) scache.clear();
+    }
 };
 
 constexpr int kMaxArgs = 16;
@@ -180,7 +189,11 @@ struct Ret {
     static constexpr int kMaxOut = 8;
     OutVal outs[kMaxOut];
     int nout = 0;
-    void clear() { kind = QTC_T_NONE; b = false; i = 0; u = 0; d = 0; s.clear(); v.clear(); h = 0; }
+    void clear() {
+        kind = QTC_T_NONE; b = false; i = 0; u = 0; d = 0; h = 0;
+        if (!s.isNull()) s.clear();
+        if (v.isValid()) v.clear();
+    }
     void clear_all() { clear(); nout = 0; }
     void out(bool x) { if (nout < kMaxOut) outs[nout++] = {x ? 1 : 0, x ? 1.0 : 0.0, x}; }
     template <class I>
@@ -764,6 +777,7 @@ void roles_register_tree(QObject *root);      // it came back: objects with hand
 // Bumped by whatever may give an owner something new to hold; the held-object index follows it.
 extern uint64_t roles_epoch;
 void roles_note_call(const QObject *o);       // a call on o is about to run
+bool roles_is_owner(const QObject *o);        // whether o holds anything in a role (roles_note_call matters)
 // a copy that shares no data with anything (QProcessEnvironment::insert(self) deadlocks otherwise)
 template <class E> bool unshare(E &e) {
     E fresh;

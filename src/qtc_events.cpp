@@ -353,6 +353,24 @@ static void forward_signal(uint32_t slot, void **a) {
     g_forward_depth--;
 }
 
+// A signal argument of a plain number type: its payload slot read directly (the commonest case,
+// valueChanged(int), toggled(bool), ..., with no conversion through QVariant). 1 integer, 2
+// floating point, 0 any other type.
+static int scalar_arg(QMetaType t, const void *p, int64_t *i, double *d) {
+    switch (t.id()) {
+    case QMetaType::Bool: *i = *static_cast<const bool *>(p); return 1;
+    case QMetaType::Int: *i = *static_cast<const int *>(p); return 1;
+    case QMetaType::UInt: *i = *static_cast<const unsigned *>(p); return 1;
+    case QMetaType::LongLong: *i = *static_cast<const qlonglong *>(p); return 1;
+    case QMetaType::Long: *i = *static_cast<const long *>(p); return 1;
+    case QMetaType::Short: *i = *static_cast<const short *>(p); return 1;
+    case QMetaType::UShort: *i = *static_cast<const unsigned short *>(p); return 1;
+    case QMetaType::Double: *d = *static_cast<const double *>(p); return 2;
+    case QMetaType::Float: *d = *static_cast<const float *>(p); return 2;
+    default: return 0;
+    }
+}
+
 static void on_signal(uint32_t slot, void **a) {
     Events &ev = E();
     if (slot >= ev.conns.size()) return;
@@ -373,12 +391,25 @@ static void on_signal(uint32_t slot, void **a) {
     qe.e.argc = (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS)) ? n : 0;
     if (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS)) {
         qe.args.reserve(n);
+        bool all_scalar = true;
+        int64_t *is[4] = {&qe.e.i0, &qe.e.i1, &qe.e.i2, &qe.e.i3};
+        double *ds[2] = {&qe.e.d0, &qe.e.d1};
+        int ii = 0, di = 0;
         for (int i = 0; i < n; i++) {
             QMetaType t = c.signal.parameterMetaType(i);
             if (!t.isValid() || !a[i + 1]) {
                 qe.args.append(QVariant());
                 continue;
             }
+            int64_t iv = 0;
+            double dv = 0;
+            if (const int sk = all_scalar ? scalar_arg(t, a[i + 1], &iv, &dv) : 0) {   // nothing to sanitize
+                qe.args.append(QVariant(t, a[i + 1]));
+                if (sk == 1 && ii < 4) *is[ii++] = iv;
+                if (sk == 2 && di < 2) *ds[di++] = dv;
+                continue;
+            }
+            all_scalar = false;
             // From another thread an object argument may be gone by now (or be another object at
             // the same address): only objects qtc knows and that still live get their handles there.
             if (t.flags() & QMetaType::PointerToQObject) {
@@ -392,7 +423,11 @@ static void on_signal(uint32_t slot, void **a) {
                 qe.args.append(c.far ? sanitize_known(QVariant(t, a[i + 1])) : sanitize(QVariant(t, a[i + 1])));
             }
         }
-        fill_payload(qe);
+        if (!all_scalar) {
+            qe.e.i0 = qe.e.i1 = qe.e.i2 = qe.e.i3 = 0;
+            qe.e.d0 = qe.e.d1 = 0;
+            fill_payload(qe);
+        }
     }
     if (c.flags & QTC_CONN_COALESCE) {
         if (try_coalesce(c, qe)) return;

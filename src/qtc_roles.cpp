@@ -288,14 +288,43 @@ bool inside(const QObject *o, const QObject *root) {
 
 QString label(const QObject *o) { return QString::fromLatin1(o->metaObject()->className()); }
 
+static uint64_t class_kinds(QObject *o);
+namespace {
+struct KindsPeek : QObject {   // QObject's protected d_ptr, as qtc_core.cpp's DPtrPeek reads it
+    static const QObjectData *of(const QObject *o) {
+        auto member = &KindsPeek::d_ptr;
+        return (o->*member).data();
+    }
+};
+}  // namespace
+
+// The roles an object can play. All but one depend on its class alone, so they are worked out
+// once per class (a few dozen casts each time cost more than the rest of making an object).
 uint64_t kinds_of(QObject *o) {
+    uint64_t k = 0;
+    const QObjectData *d = KindsPeek::of(o);
+    if (d && d->metaObject) {
+        k = class_kinds(o);   // a dynamic meta-object: it can change, and its address can be reused
+    } else {
+        static auto *memo = new QHash<const QMetaObject *, uint64_t>;
+        const QMetaObject *mo = o->metaObject();
+        auto it = memo->constFind(mo);
+        if (it == memo->constEnd()) it = memo->insert(mo, class_kinds(o));
+        k = *it;
+    }
+#ifdef QTC_HAS_WIDGETS
+    if (container_windows().contains(o)) k |= OK_WINDOWCONTAINER;
+#endif
+    return k;
+}
+
+static uint64_t class_kinds(QObject *o) {
     uint64_t k = 0;
 #ifdef QTC_HAS_WIDGETS
     if (qobject_cast<QAbstractScrollArea *>(o)) k |= OK_SCROLLAREA;
     if (qobject_cast<QMessageBox *>(o)) k |= OK_MESSAGEBOX;
     if (qobject_cast<QFocusFrame *>(o)) k |= OK_FOCUSFRAME;
     if (qobject_cast<QDialogButtonBox *>(o)) k |= OK_BUTTONBOX;
-    if (container_windows().contains(o)) k |= OK_WINDOWCONTAINER;
     if (qobject_cast<QProgressDialog *>(o)) k |= OK_PROGRESS;
     if (qobject_cast<QWizard *>(o)) k |= OK_WIZARD;
     if (qobject_cast<QComboBox *>(o)) k |= OK_COMBO;
@@ -796,8 +825,64 @@ QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
 }
 
 // 1. Objects that belong to Qt itself.
+QString qt_owned_by_class(QObject *x);
+
+// Whether qt_owned can say anything about objects of x's class beyond the application object:
+// most classes are none of the ones it knows, and asking all its casts of every object destroyed
+// cost more than the rest of destroying it. Kept per class; keep it in step with
+// qt_owned_by_class (a debug build checks that it is).
+static bool qt_owned_class(QObject *x) {
+    const auto relevant = [](QObject *o) {
+        if (qobject_cast<QThread *>(o) || qobject_cast<QAbstractEventDispatcher *>(o) || qobject_cast<QThreadPool *>(o)) return true;
+#ifdef QTC_HAS_MODULE_Coap
+        if (qobject_cast<QCoapReply *>(o)) return true;
+#endif
+#ifdef QTC_HAS_GUI
+        if (qobject_cast<QScreen *>(o) || qobject_cast<QStyleHints *>(o) || qobject_cast<QInputMethod *>(o) ||
+            qobject_cast<QClipboard *>(o) || qobject_cast<QMimeData *>(o) || o->inherits("QWidgetWindow") ||
+            o->inherits("QQuickWidgetOffscreenWindow") || qobject_cast<QTextObject *>(o) ||
+            qobject_cast<QAbstractTextDocumentLayout *>(o))
+            return true;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        if (qobject_cast<QAccessibilityHints *>(o)) return true;
+#endif
+#endif
+#ifdef QTC_HAS_WIDGETS
+        if (qobject_cast<QStyle *>(o)) return true;
+#endif
+#ifdef QTC_HAS_MODULE_Sql
+        if (qobject_cast<QSqlDriver *>(o)) return true;
+#endif
+#ifdef QTC_HAS_MODULE_Qml
+        if (qobject_cast<QQmlContext *>(o)) return true;
+#endif
+#ifdef QTC_HAS_MODULE_Quick
+        if (qobject_cast<QQuickItem *>(o) || o->inherits("QQuickRootItem") || qobject_cast<QQuickRenderControl *>(o)) return true;
+#endif
+#ifdef QTC_HAS_MODULE_Charts
+        if (qobject_cast<QLegend *>(o) || qobject_cast<QLegendMarker *>(o)) return true;
+#endif
+        return false;
+    };
+    const QObjectData *d = KindsPeek::of(x);
+    if (d && d->metaObject) return relevant(x);   // a dynamic meta-object: asked every time
+    static auto *memo = new QHash<const QMetaObject *, bool>;
+    const QMetaObject *mo = x->metaObject();
+    auto it = memo->constFind(mo);
+    if (it == memo->constEnd()) it = memo->insert(mo, relevant(x));
+    return *it;
+}
+
 QString qt_owned(QObject *x) {
     if (x == QCoreApplication::instance()) return QStringLiteral("the application object (qtc_shutdown destroys it)");
+    if (!qt_owned_class(x)) {
+        Q_ASSERT(qt_owned_by_class(x).isEmpty());
+        return QString();
+    }
+    return qt_owned_by_class(x);
+}
+
+QString qt_owned_by_class(QObject *x) {
     if (auto *t = qobject_cast<QThread *>(x)) {
         if (t == QCoreApplication::instance()->thread() || t == QThread::currentThread())
             return QStringLiteral("the QThread of the main thread");
@@ -953,6 +1038,8 @@ QPointer<LooseLayoutWatch> &loose_watch() {
 }  // namespace
 
 uint64_t roles_epoch = 1;
+
+bool roles_is_owner(const QObject *o) { return owners_map().contains(const_cast<QObject *>(o)); }
 
 void roles_note_call(const QObject *o) {
     auto *x = const_cast<QObject *>(o);
@@ -1208,7 +1295,12 @@ public:
                 if (!window_size_ok(w, w->width(), w->height())) return true;
                 // Qt paints a widget with a graphics effect without checking that the backing
                 // store has an image (it checks for the others): a store that kept no image at
-                // the window's size is not painted into
+                // the window's size is not painted into. Only an exposed window with a platform
+                // window has a store to ask: on Wayland, asking the store of a window whose
+                // platform window is gone (a closed window, a dismissed or refused popup)
+                // crashes in the platform plugin, and those still get Expose and UpdateRequest.
+                QWindow *wh = w->windowHandle();
+                if (!wh || !wh->handle() || !wh->isExposed()) return false;
                 if (QBackingStore *bs = w->backingStore(); bs && bs->size() == w->size() && !w->size().isEmpty()) {
                     QPaintDevice *pd = bs->paintDevice();
                     if (pd && pd->devType() == QInternal::Image && static_cast<QImage *>(pd)->isNull()) return true;

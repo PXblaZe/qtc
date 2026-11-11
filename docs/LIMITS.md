@@ -384,7 +384,8 @@ values are checked against the release qtc was built with.
 
 Developed and tested on Linux (x86-64, GCC 13), with Qt's offscreen platform.
 Running on a display (xcb, Wayland) uses the same code, but the automated tests do
-not. The code has no Linux-only parts, but macOS and Windows builds are
+not, apart from the `wayland` test, which runs widget windows and popups on a headless
+weston compositor. The code has no Linux-only parts, but macOS and Windows builds are
 untested.
 
 ## goose-qt

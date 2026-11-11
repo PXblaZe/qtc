@@ -1,7 +1,44 @@
 # Changelog
 
-## Unreleased
+## 1.1.1 — 2026-11-11
 
+### Fixed
+- Widget programs crashed on Wayland when a window closed and when a menu (any popup) was
+  dismissed: qtc's application event filter asked the backing store of a window whose
+  platform window was gone for its paint device, which crashes in Qt's Wayland plugin. The
+  check now runs only for exposed windows with a platform window. A new test, `wayland`,
+  runs widget windows, a popup and closes against a headless weston (skipped without one).
+  Reported with a backtrace by a user on Arch Linux.
+
+### Faster
+Profiled with callgrind against goose-qt's comparison benchmark, which put qtc's calls
+behind PyQt6's; every check stays. From C, release build, median of five runs on the
+benchmark's machine: `QLabel::setText` 381 → 164 ns, `QLabel::text` 333 → 135 ns,
+`QAbstractSlider::value` 283 → 104 ns, a property write 927 → 306 ns, a `QColor` made, read
+and freed 1,349 → 433 ns, a signal round trip 645 → 383 ns, an object made and destroyed
+2,439 → 1,667 ns, and a million-row model filtered through a proxy, with a call into the
+override handler per row, 959 → 720 ms.
+- Method strings are split and normalized once per string and interned per thread; a call
+  finds its string by address (the bytes are still compared, so a reused buffer is safe).
+  NUL-terminated strings (`qtc_s`) are measured first and take the same path; in 1.1.0 they
+  missed every cache, so a `qtc_call(l, qtc_s("setText"))` costs half what it did (300 →
+  151 ns in `tests/bench`). The same goes for class names given to `qtc_new` and
+  `qtc_val_new`.
+  Calls by signature, as generated bindings make them, used to run Qt's signature normalizer
+  every time.
+- A front cache, keyed by the receiver's class and the interned method, finds a call's
+  candidates without hashing the name; candidates are gathered on the stack, so a call
+  allocates nothing of its own. Constructor candidate lists are made once per class.
+- A call's frame takes the pushed arguments, and hands its result back, by swapping
+  pointers instead of moving sixteen argument slots; arguments and results clear only what
+  they hold.
+- One registry lookup per call finds the receiver (it was two, each taking the lock).
+- Per-class memos: the ownership roles an object can play, whether `qtc_destroy` has to ask
+  which Qt-owned object it is, the setter a property write goes through, and the ranking of
+  parameter types (which compared an integer parameter's type name with 42 others per call).
+- Error labels are built only when there is an error.
+- Signals with plain number arguments fill the event's payload directly.
+### Changed
 - Installed libraries carry the run path of the Qt they link (and `qtc_test`
   finds `qtc` beside it), so programs and bindings that load them at run time
   need no library path when Qt is outside the system's directories
