@@ -154,7 +154,9 @@ when run alone. The run between the two:
 | random order, seed 77 | 13,617 | 169,284 | 0 |
 | random order, seed 3 | 13,617 | 169,284 | 1: OpenSSL's double free at exit, the known Qt failure above |
 
-`test_stress`, release build (the budget is what the test allows):
+`test_stress`, release build (the budget is what the test allows; the drawing case is held to
+the same lines drawn with QPainter directly, since nearly all of it is Qt's rasterizer, whose
+speed depends on the machine and the Qt build):
 
 | case | time | budget |
 |---|---:|---:|
@@ -170,7 +172,7 @@ when run alone. The run between the two:
 | 64 MB string through a property and back | 219 ms | 4,000 ms |
 | list value with 1,000,000 elements | 67 ms | 5,000 ms |
 | 100,000 items into a QListWidget through qtc_call | 108 ms | 8,000 ms |
-| drawing 200,000 commands onto a 1024x1024 image | 3,361 ms | 6,000 ms |
+| drawing 200,000 commands onto a 1024x1024 image | 3,669 ms (QPainter alone: 3,647 ms) | QPainter's time x 1.5 + 1,000 ms |
 | handles stay valid across 50 shutdown/init cycles | 277 ms | 30,000 ms |
 
 What a call through `qtc_call` costs (`tests/bench.cpp`, measured during development, release build, ns per

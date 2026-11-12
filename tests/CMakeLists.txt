@@ -78,7 +78,7 @@ target_link_libraries(test_sweep PRIVATE qtc Qt6::Core)
 qtc_add_test(sweep $<TARGET_FILE:test_sweep>)
 
 add_executable(test_stress test_stress.cpp)
-target_link_libraries(test_stress PRIVATE qtc Qt6::Core Threads::Threads)
+target_link_libraries(test_stress PRIVATE qtc Qt6::Gui Threads::Threads)
 qtc_add_test(stress $<TARGET_FILE:test_stress>)
 
 add_executable(fuzz_methods fuzz_methods.cpp)

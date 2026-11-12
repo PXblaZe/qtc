@@ -5,6 +5,8 @@
 
 #include <QtCore/QByteArray>
 #include <QtCore/QElapsedTimer>
+#include <QtGui/QImage>
+#include <QtGui/QPainter>
 
 #include <atomic>
 #include <cstdio>
@@ -211,7 +213,21 @@ int main() {
         qtc_process_events();
     }
     {
-        Timer t("drawing 200,000 commands onto a 1024x1024 image", 6000);
+        // Nearly all of this is Qt's rasterizer, whose speed depends on the machine and on how
+        // Qt was built (an antialiased 1,450-pixel line each time). So the same lines are drawn
+        // with QPainter directly first, and qtc is held to that plus its own per-command cost.
+        QElapsedTimer direct;
+        direct.start();
+        {
+            QImage ref(1024, 1024, QImage::Format_ARGB32_Premultiplied);
+            QPainter p(&ref);
+            p.setRenderHint(QPainter::Antialiasing, true);
+            for (int i = 0; i < 200000; i++) p.drawLine(QLineF(i % 1024, 0, 1023 - i % 1024, 1023));
+        }
+        const double direct_ms = direct.nsecsElapsed() / 1e6;
+        char name[96];
+        std::snprintf(name, sizeof name, "drawing 200,000 commands (QPainter alone: %.0f ms)", direct_ms);
+        Timer t(name, direct_ms * 1.5 / kBudgetScale + 1000);   // (the scale is for qtc's part)
         qtc_arg_int(1024);
         qtc_arg_int(1024);
         int64_t fmt = 0;
