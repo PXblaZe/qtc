@@ -59,6 +59,19 @@ A widgets program therefore maps 4 Qt libraries instead of 30-odd, which is most
 of what starting it cost. With `-DQTC_SPLIT_MODULES=OFF` (always on Windows) the
 module code is part of `libqtc` and loading only registers it.
 
+### Inline values
+
+`gen/inline.py` turns eleven trivially copyable value types (`QPoint` ... `QColor`)
+into C structs and C functions (`qtc_inline.h`). A struct's layout is Qt's own,
+checked with `static_assert`s on size, alignment, triviality and, for the geometry
+types, the field order (`std::bit_cast` of a `constexpr` sample). A function
+`bit_cast`s its arguments to the Qt type, calls the method and casts the result back:
+no QVariant, no registry slot. What can be wrong in such a value is checked before Qt
+sees it: integers are range-checked like every other int parameter, and a `QColor`'s
+spec and hue, which Qt switches on and indexes by, must be valid. The `qtcmi_` entry
+points (entries.py) are the direct entry points with these structs in place of value
+handles; they wrap each in a QVariant argument and take the same path as `qtcm_`.
+
 ### Preconditions
 
 `gen/preconditions.py` is a table of rules: a class pattern, a method pattern,

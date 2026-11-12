@@ -90,6 +90,36 @@ with `qtc_out_*`). A direct call neither uses nor clears arguments pushed with
 `qtc_arg_*`. Static methods have no entry point: use `qtc_call_static`.
 `manifest/qtc_entries.json` maps each signature to its function, for bindings.
 
+### Inline values
+
+`qtc_inline.h` has Qt's small value types as C structs the caller keeps, with no
+handle: `qtc_QPoint`, `qtc_QPointF`, `qtc_QSize`, `qtc_QSizeF`, `qtc_QRect`,
+`qtc_QRectF`, `qtc_QLine`, `qtc_QLineF`, `qtc_QMargins`, `qtc_QMarginsF` and
+`qtc_QColor`. Each has exactly its Qt type's layout (checked when qtc is built), and
+its constructors and methods are plain C functions that call Qt directly:
+
+```c
+#include "qtc_inline.h"
+qtc_QRect r = qtci_QRect__int_int_int_int(0, 0, 640, 480);
+qtci_QRect_moveTo__int_int(&r, 10, 10);        /* methods that change it take a pointer */
+int64_t w = qtci_QRect_width(r);
+qtc_QColor c = qtci_QColor__int_int_int(255, 0, 0);
+int64_t red = qtci_QColor_red(c);
+qtcmi_setGeometry__QRect(widget, r);           /* object methods: qtcmi_ in qtc_direct.h */
+qtc_call(widget, QTC_S("geometry"));
+qtc_QRect g = qtc_ret_QRect();                 /* a call's result as a struct */
+```
+
+The geometry types' fields are Qt's own (`QRect` keeps its far corner: `x2` is
+`x + width - 1`); a `qtc_QColor` is opaque. They are checked as everything else:
+integers must fit Qt's types, pointers must not be null, and a `qtc_QColor` must be
+one qtc made (a valid spec and hue). Errors go to `qtc_last_error` with a zero
+result. They use no global state, so any thread may call them, also before
+`qtc_init`. `qtc_arg_<T>` pushes one for `qtc_call`, `qtc_ret_<T>` reads a result,
+`qtc_val_from_<T>` and `qtc_val_to_<T>` convert to and from a `qtc_val`.
+`manifest/qtc_inline.json` lists them for bindings. Making a `QColor` and reading
+`red()` this way costs about 15 ns, against about 140 ns through a value handle.
+
 Arguments are matched to parameters by kind: `qtc_arg_int` fits any integer or
 enum parameter (with a range check), `qtc_arg_str` a `QString`, `QByteArray`
 (UTF-8), `QUrl` and similar, `qtc_arg_val` any Qt value type, `qtc_arg_obj` a

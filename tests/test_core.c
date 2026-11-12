@@ -2445,6 +2445,18 @@ static void test_fuzz_findings(void) {
             CHECK_EQ(qtc_destroy(rep), QTC_ERR_STATE);
             qtc_destroy(coap);
             qtc_process_events();
+            /* a client destroyed at once while its protocol thread has the request queued
+               (Qt's protocol reads the reply there unchecked: qtc drains that thread first) */
+            int sent = 0;
+            for (int i = 0; i < 60; i++) {
+                qtc_obj c2 = make("QCoapClient");
+                qtc_arg_str(S("coap://127.0.0.1:5683/x"));
+                if (qtc_call(c2, S("get(QUrl)")) == QTC_OK) sent++;
+                CHECK_EQ(qtc_destroy(c2), QTC_OK);
+                if (i % 3 == 0) qtc_process_events();
+            }
+            CHECK_EQ(sent, 60);
+            qtc_process_events();
         }
         qtc_obj oa = make("QOAuth1");
         if (oa) {

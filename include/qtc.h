@@ -60,9 +60,9 @@ extern "C" {
 #endif
 
 #define QTC_VERSION_MAJOR 1
-#define QTC_VERSION_MINOR 2
+#define QTC_VERSION_MINOR 3
 #define QTC_VERSION_PATCH 0
-#define QTC_VERSION_STRING "1.2.0"
+#define QTC_VERSION_STRING "1.3.0"
 
 /* ------------------------------------------------------------------ types */
 
