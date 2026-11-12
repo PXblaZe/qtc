@@ -29,8 +29,9 @@ From C, release build, on the comparison machine (median of five runs):
 - Objects qtc makes are `Tracked<Class>` (sip's technique): the destructor releases the
   handle itself, so an object needs no `destroyed()` connection and no `QPointer`.
   `qtc_destroy` deletes at once unless an override handler is running or events are still
-  queued for the object or its children (then it defers, as before). Making and destroying
-  an object: ~900 → ~270 ns.
+  queued for the object or its children (then it defers, as before). A Tracked object is
+  marked made, and owned, as its handle is made, so construction takes the registry lock
+  once. Making and destroying an object: ~900 → ~210 ns.
 - The GUI thread reads the handles of GUI-thread objects and of values without the
   registry lock (cleared by `QEvent::ThreadChange` before an object moves).
 - Signals with plain number arguments keep them as numbers; QVariants are made only when
@@ -41,6 +42,12 @@ From C, release build, on the comparison machine (median of five runs):
 ### Changed
 - `qtc_class_count`, `qtc_class_at` and `qtc_stats` load every module library there is
   first, so they still list every bound class.
+
+### Tested
+The 19 test suites pass in release and AddressSanitizer + UndefinedBehaviorSanitizer builds
+(`test_core` adds checks of the direct entry points: 1,075 in all). The method fuzzer ran
+clean on the final code under the sanitizers: fixed order, by name, object lifetimes and
+three random orders.
 
 ## 1.1.1 — 2026-11-11
 

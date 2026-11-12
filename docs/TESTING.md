@@ -87,13 +87,13 @@ For the sanitizers, configure with `-DQTC_SANITIZE=address,undefined`.
 
 ## Results
 
-The last runs, on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
+The last runs (qtc 1.2.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
 modules built in so that they are tested too. The graphics suites ran with Mesa's llvmpipe
 (OpenGL) and lavapipe (Vulkan, with the Khronos validation layers under the sanitizers).
 
 | suite | release build | ASan + UBSan build |
 |---|---|---|
-| `test_core` | 1,025 checks pass | 1,025 checks pass |
+| `test_core` | 1,075 checks pass | 1,075 checks pass |
 | `test_app` | 32 pass | 32 pass |
 | `test_concurrent` | 1,696 pass | 1,696 pass |
 | `test_override` | 221 pass | 221 pass |
@@ -153,25 +153,26 @@ Under AddressSanitizer and UndefinedBehaviorSanitizer:
 | drawing 200,000 commands onto a 1024x1024 image | 3,361 ms | 6,000 ms |
 | handles stay valid across 50 shutdown/init cycles | 277 ms | 30,000 ms |
 
-What a call costs in 1.1.1 (`tests/bench.cpp`, release build, ns per operation on a 2-core
-2.1 GHz Xeon VM; "direct" is the same call in C++, and its column shows how noisy the machine
-is):
+What a call through `qtc_call` costs in 1.2.0 (`tests/bench.cpp`, release build, ns per
+operation on a 2-core 2.3 GHz Xeon VM; "direct" is the same call in C++, and its column shows
+how noisy the machine is). The direct entry points of `qtc_direct.h` cost about half of these:
+45–55 ns for `setText` and `text`, 17 ns for `value` (bench/compare in goose-qt):
 
 | operation                                      |       qtc |    direct |   ratio |
 |------------------------------------------------|-----------|-----------|---------|
-| QLabel::setText through a method call          |       151 |         7 |   22.8x |
-| QLabel::setText with a full signature          |       155 |         - |       - |
-| QLabel text through the property system        |       308 |        64 |    4.8x |
-| QSlider::setValue (int)                        |       162 |        33 |    4.9x |
-| QSlider::value() and read the result           |       103 |         3 |   36.9x |
-| QSlider value property get                     |       192 |        94 |    2.0x |
-| QLabel::text() returning a string              |       142 |        25 |    5.7x |
-| QComboBox::addItem, resolved among 3 overloads |       861 |       595 |    1.4x |
-| signal to C: emit, capture, poll (with args)   |       247 |       263 |    0.9x |
-| signal to C without argument capture           |       221 |         - |       - |
-| value handle create + free                     |        70 |         - |       - |
-| qtc_alive on a live handle                     |        14 |         - |       - |
-| call on a stale handle (rejected)              |       220 |         - |       - |
+| QLabel::setText through a method call          |       115 |         7 |   16.8x |
+| QLabel::setText with a full signature          |       114 |         - |       - |
+| QLabel text through the property system        |       259 |        54 |    4.8x |
+| QSlider::setValue (int)                        |       112 |        31 |    3.6x |
+| QSlider::value() and read the result           |        62 |         2 |   28.5x |
+| QSlider value property get                     |       147 |        74 |    2.0x |
+| QLabel::text() returning a string              |       135 |        32 |    4.2x |
+| QComboBox::addItem, resolved among 3 overloads |       810 |       554 |    1.5x |
+| signal to C: emit, capture, poll (with args)   |       216 |       283 |    0.8x |
+| signal to C without argument capture           |       169 |         - |       - |
+| value handle create + free                     |        52 |         - |       - |
+| qtc_alive on a live handle                     |         7 |         - |       - |
+| call on a stale handle (rejected)              |       187 |         - |       - |
 
 ## What the fuzzers found
 

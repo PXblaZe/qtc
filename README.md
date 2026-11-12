@@ -83,11 +83,14 @@ Windows (MSVC), but builds on those systems have not been tested yet.
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/qt-6.12
 cmake --build build
 ctest --test-dir build -LE slow          # the test suite (the method fuzzer is labelled slow)
-sudo cmake --install build               # libqtc, qtc.h, a CMake package and qtc.pc
+sudo cmake --install build               # libqtc, its module libraries, qtc.h, a CMake package and qtc.pc
 ```
 
 qtc binds every Qt module it finds and leaves out the ones that are not
-installed. To bind fewer, pass `-DQTC_MODULES="Core;Gui;Widgets"`.
+installed. To bind fewer, pass `-DQTC_MODULES="Core;Gui;Widgets"`. `libqtc` holds
+Qt Core, Gui and Widgets; every other module is bound by its own `libqtc_<Module>`
+library next to it, loaded the first time a program uses one of its classes, so a
+program pays (in startup time and memory) only for the Qt it uses.
 
 ### Getting Qt 6.12
 
@@ -140,6 +143,7 @@ tested either.
 | `QTC_BUILD_EXAMPLES` | `ON` | the programs in `examples/` |
 | `QTC_SANITIZE` | | e.g. `address,undefined` for the library and tests |
 | `QTC_ALLOW_OLDER_QT` | `OFF` | accept Qt 6.4 to 6.11 (untested) |
+| `QTC_SPLIT_MODULES` | `ON` (`OFF` on Windows) | a library per Qt module beyond Core, Gui and Widgets, loaded on first use |
 
 ### Using it
 
@@ -173,6 +177,9 @@ The pieces:
   `qtc_call(obj, "name(int,QString)")`; read the result with `qtc_ret_*`.
   Overloads are resolved from the argument kinds. `qtc_call_static` for static
   methods.
+- **Direct calls** — `qtc_direct.h` has one C function per bound signature:
+  `qtcm_setText__QString(label, QTC_S("hi"))`, `qtcn_QColor__int_int_int(255, 0, 0)`.
+  Same checks as `qtc_call`, about half its cost: 20–60 ns for a plain call.
 - **Properties** — `qtc_set_int(obj, "value", 5)`, `qtc_get_str(obj, "text")`.
   A property with a bound setter is written through it, with its checks.
 - **Values** — `qtc_val` handles hold any Qt value (colours, fonts, images, dates,
@@ -198,9 +205,11 @@ The pieces:
 
 ```
 include/qtc.h          the API
+include/qtc_direct.h   generated: a C function per bound signature
 include/qtc_test.h     simulated input for tests (libqtc_test)
 src/                   the runtime: handles, calls, events, ownership rules, drawing
 src/gen/               generated: thunks, class and enum tables (do not edit)
+src/mod/               what the runtime knows of each module library's classes
 gen/                   the scanner, generator, precondition table and Qt models
 manifest/              qtc_api.json (the bound API) and coverage.json
 tests/                 test suite, fuzzers, benchmark
