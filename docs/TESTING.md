@@ -334,7 +334,9 @@ before `QWidget::grab` did not follow Qt's rule for a rectangle with one negativ
   and Qt 6.5 to 6.11 never were; CMake accepts them only with
   `-DQTC_ALLOW_OLDER_QT=ON`.
 - Real displays are not tested, and neither are macOS and Windows. Wayland is covered only
-  by the `wayland` test on a headless weston, added after a crash there; the graphics
+  by the `wayland` test on a headless weston, added after a crash there; a real compositor
+  showed one more that headless weston does not (asking the backing store of a shown
+  window for its paint device); the graphics
   tests use an X server without a display (Xvfb) and Mesa's software renderers
   (llvmpipe, lavapipe). Direct3D and Metal are neither compiled nor run, and no
   GPU vendor's driver was used.

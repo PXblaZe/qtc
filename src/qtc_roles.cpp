@@ -1000,6 +1000,13 @@ void widget_parent_changed(QWidget *w) {
 }
 #endif
 
+// The platforms whose raster backing store gives its paint device outside painting
+// (DeferredDeleteWatch, below).
+bool backing_store_check_safe() {
+    const QString p = QGuiApplication::platformName();
+    return p == QLatin1String("offscreen") || p == QLatin1String("minimal") || p == QLatin1String("xcb");
+}
+
 // Qt deletes objects itself too: a widget or graphics widget closed with Qt::WA_DeleteOnClose, a
 // closed MDI subwindow, a message box's old check box. Those deletions are deferred, so before
 // each one the owners that hold the object (or something inside it) by a plain pointer let go of
@@ -1020,10 +1027,14 @@ public:
                 if (!window_size_ok(w, w->width(), w->height())) return true;
                 // Qt paints a widget with a graphics effect without checking that the backing
                 // store has an image (it checks for the others): a store that kept no image at
-                // the window's size is not painted into. Only an exposed window with a platform
-                // window has a store to ask: on Wayland, asking the store of a window whose
-                // platform window is gone (a closed window, a dismissed or refused popup)
-                // crashes in the platform plugin, and those still get Expose and UpdateRequest.
+                // the window's size is not painted into. Only a large window can have failed to
+                // get its image, so smaller ones are not asked. QBackingStore::paintDevice is
+                // only valid while painting: the raster stores of the offscreen, minimal and xcb
+                // platforms answer outside it, but Wayland's crashes (its buffer is made in
+                // beginPaint), so other platforms are not asked at all.
+                const qreal dpr = w->devicePixelRatioF();
+                if (double(w->width()) * w->height() * dpr * dpr * 4 < double(64 << 20)) return false;
+                if (!backing_store_check_safe()) return false;
                 QWindow *wh = w->windowHandle();
                 if (!wh || !wh->handle() || !wh->isExposed()) return false;
                 if (QBackingStore *bs = w->backingStore(); bs && bs->size() == w->size() && !w->size().isEmpty()) {
