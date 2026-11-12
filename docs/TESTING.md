@@ -87,13 +87,13 @@ For the sanitizers, configure with `-DQTC_SANITIZE=address,undefined`.
 
 ## Results
 
-The last runs (qtc 1.2.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
+The last runs (qtc 1.3.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
 modules built in so that they are tested too. The graphics suites ran with Mesa's llvmpipe
 (OpenGL) and lavapipe (Vulkan, with the Khronos validation layers under the sanitizers).
 
 | suite | release build | ASan + UBSan build |
 |---|---|---|
-| `test_core` | 1,075 checks pass | 1,075 checks pass |
+| `test_core` | 1,118 checks pass | 1,118 checks pass |
 | `test_app` | 32 pass | 32 pass |
 | `test_concurrent` | 1,696 pass | 1,696 pass |
 | `test_override` | 221 pass | 221 pass |
@@ -268,8 +268,10 @@ Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
 | a scroll area's widget added to a tool box (whose page is a scroll area of its own), both resizable | the first keeps watching it: each resizes it to its own viewport on the other's resize, until the stack runs out |
 | `QXYSeries::pointAdded(-1)` emitted by hand on a line series in a chart | the chart item inserts the series' point -1 into its own copy |
 | `QString::normalized` on a string of a million characters, a quarter past ASCII, called a dozen times | Qt rewrites the string in place: about length x characters past ASCII, seconds per call (and a run of combining marks costs its square) |
+| `QString::toUcs4` on the fuzzer's string after earlier calls grew it (seed 1501, 1.3.0's run) | not a Qt fault: the fuzzer turns each multi-million-element result into text (`qtc_val_to_string`), about 1.3 s per call in a release build, past the 60 s hang limit under the sanitizers |
 | `QStandardItemModel` with 32 columns and a million rows, then `removeColumns(0, 1)` | removes the column row by row, moving the rest of the model each time |
 | the reply of `QCoapClient::discover` destroyed at once | the client's protocol thread still holds it and reads it on its next event |
+| a `QCoapClient` destroyed at once after `get` (found under ASan in 1.3.0's run: 1.2.0 deletes at once) | the protocol thread runs the queued `sendRequest` on the client's replies, which are gone: qtc lets that thread drain first |
 
 They found bugs in qtc too: `QByteArray::erase` was bound with its iterators taken
 for byte buffers (it then freed memory it did not own); deletions Qt makes itself
