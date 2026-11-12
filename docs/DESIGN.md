@@ -121,13 +121,26 @@ die there) and guarded by a lock, but the GUI thread reads the slot of an object
 that lives in the GUI thread without it. Only the GUI thread can move such an
 object away, and every move sends it `QEvent::ThreadChange`, which qtc's
 application event filter sees first: the slot is marked as no longer readable
-without the lock before the object can leave.
+without the lock before the object can leave. The slots live in pages of 4,096 that
+never move once made, so such a read can never see the table reallocated by another
+thread adding a slot.
+
+Each slot also records whether anything else in qtc keeps state for its object: the
+event layer (a connection or a watch) and the ownership roles (the object is an
+owner, something that can hold other objects). Destroying an object with neither,
+the common case, skips both cleanups. Builds with `QTC_CROSSCHECK` (on with the
+sanitizers) check, at each such destruction, that there really was nothing to clean
+up.
 
 `qtc_destroy` deletes at once, as C++ code would, unless that is unsafe: inside an
 override handler Qt may be in the middle of something with the object, and an
 object (or a child of it) with events still queued for it would lose them (a
 queued call is posted before the destroy and runs first). Those are deleted when
 the event loop next runs.
+Before deleting later, the slot is marked dying, so the handle reads as stale at
+once. An object qtc made, deleted at once in the GUI thread, needs no such mark:
+nothing runs between the check and its destructor, whose first act is to release
+the handle.
 
 Objects created with `qtc_new` and left without a parent are owned by qtc and
 destroyed by `qtc_shutdown`, newest first. Values are `QVariant`s; a value never

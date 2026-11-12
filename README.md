@@ -142,6 +142,7 @@ tested either.
 | `QTC_BUILD_TESTLIB` | `ON` | `libqtc_test`, simulated input for tests (needs Qt Test) |
 | `QTC_BUILD_EXAMPLES` | `ON` | the programs in `examples/` |
 | `QTC_SANITIZE` | | e.g. `address,undefined` for the library and tests |
+| `QTC_CROSSCHECK` | `ON` with `QTC_SANITIZE` | check at run time that the registry's fast paths skip only work there is none of (slower) |
 | `QTC_ALLOW_OLDER_QT` | `OFF` | accept Qt 6.4 to 6.11 (untested) |
 | `QTC_SPLIT_MODULES` | `ON` (`OFF` on Windows) | a library per Qt module beyond Core, Gui and Widgets, loaded on first use |
 

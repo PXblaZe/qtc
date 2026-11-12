@@ -577,6 +577,7 @@ static uint64_t make_connection(QObject *o, uint64_t sender, int sidx, uint64_t 
         return 0;
     }
     ev.conns_by_obj[o].append(slot);
+    reg().note_flag(o, SF_EVENTS);   // its destruction has something to clean up here
     return make_handle(slot, c.gen);
 }
 
@@ -861,6 +862,18 @@ static void forget_far_object(uint64_t handle) {
     }
 }
 
+#ifdef QTC_CROSSCHECK
+// the registry skips object_destroyed for objects it saw no event state noted for: check that
+// there is none (sanitizer builds)
+static void check_no_event_state(QObject *o) {
+    if (!gui_thread_ok()) return;
+    Events &ev = E();
+    if (ev.watches_by_obj.contains(o) || ev.conns_by_obj.contains(o)) {
+        qFatal("qtc cross-check: an object without SF_EVENTS has event state");
+    }
+}
+#endif
+
 static void object_destroyed(QObject *o, uint64_t handle) {
     if (!gui_thread_ok()) {
         Events &ev = E();
@@ -935,6 +948,9 @@ void events_init() {
     ev.handler_user = nullptr;
     QCoreApplication::instance()->installEventFilter(ev.appfilter);
     on_object_destroyed_hook = object_destroyed;
+#ifdef QTC_CROSSCHECK
+    on_object_no_events_hook = check_no_event_state;
+#endif
 }
 
 void events_shutdown() {
@@ -1382,6 +1398,8 @@ QTC_API uint64_t qtc_connect_to(qtc_obj sender, qtc_str signal, qtc_obj receiver
         }
         ev.conns_by_obj[s].append(slot);
         if (r != s) ev.conns_by_obj[r].append(slot);
+        reg().note_flag(s, SF_EVENTS);
+        if (r != s) reg().note_flag(r, SF_EVENTS);
         return make_handle(slot, c.gen);
     });
 }
@@ -1418,6 +1436,7 @@ QTC_API uint64_t qtc_watch(qtc_obj obj, uint64_t mask, uint64_t consume, uint64_
         auto &list = ev.watches_by_obj[o];
         if (list.isEmpty()) o->installEventFilter(ev.filter);
         list.append(slot);
+        reg().note_flag(o, SF_EVENTS);
 #ifdef QTC_HAS_WIDGETS
         if (o->isWidgetType()) {
             QWidget *wd = static_cast<QWidget *>(o);

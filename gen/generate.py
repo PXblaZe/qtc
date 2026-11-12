@@ -1260,7 +1260,7 @@ def main():
     for n in names:
         e = primary["enums"][n]
         enum_man.append({"name": n, "flags": n in ctx.flag_enums, "scoped": bool(e.get("scoped")), "values": e["values"]})
-    manifest = {"qtc_version": "1.3.0", "qt_version": primary["qt_version"],
+    manifest = {"qtc_version": "1.4.0", "qt_version": primary["qt_version"],
                 "qt_versions_scanned": [m["qt_version"] for m in models],
                 "classes": em.manifest_classes, "enums": enum_man, "overridables": ove.manifest}
     with open(os.path.join(man_dir, "qtc_api.json"), "w") as f:

@@ -170,6 +170,9 @@ bool read_bytes(qtc_str s, QByteArray &out, const char *what) {
 // ================================================================ registry
 
 void (*on_object_destroyed_hook)(QObject *o, uint64_t handle) = nullptr;
+#ifdef QTC_CROSSCHECK
+void (*on_object_no_events_hook)(QObject *o) = nullptr;
+#endif
 static PtrMap<char> *g_recently_destroyed = new PtrMap<char>;
 
 Registry &reg() { static Registry *r = new Registry; return *r; }
@@ -180,22 +183,23 @@ uint32_t Registry::alloc_slot(qtc_status *err) {
         free_list.pop_back();
         return idx;
     }
-    if (table.size() >= 0x7fffffffu) {
+    if (!table.grow()) {
         if (err) *err = QTC_ERR_LIMIT;
         return UINT32_MAX;
     }
-    table.emplace_back();
-    return uint32_t(table.size() - 1);
+    return table.size() - 1;
 }
 
 void Registry::release_slot(uint32_t idx) {
     Slot &s = table[idx];
+    if (!(s.flags & SF_TRACKED)) {   // a Tracked object's slot never had either (see handle_for)
+        s.qp.clear();
+        s.destroyed = QMetaObject::Connection();
+    }
     s.kind = SK_FREE;
     s.flags = 0;
     s.obj = nullptr;
-    s.qp.clear();
     s.val = nullptr;
-    s.destroyed = QMetaObject::Connection();
     if (s.gen >= 0xfffffffeu) {
         s.flags = SF_RETIRED;   // never reused: a handle stays unique forever
         return;
@@ -229,6 +233,9 @@ uint64_t Registry::handle_for(QObject *o) {
     s.order = ++order_counter;
     by_ptr.insert(o, idx);
     live_objects++;
+    // made just now at the address of an object destroyed since the last top-level point: it is
+    // not that one (known_handle and signal arguments would take it for the dying object)
+    if (tracked) g_recently_destroyed->remove(o);
     if (!tracked) {
         s.qp = o;
         s.destroyed = QObject::connect(o, &QObject::destroyed, [](QObject *ob) { reg().on_destroyed(ob); });
@@ -312,6 +319,25 @@ QObject *Registry::object(uint64_t h, qtc_status *err, bool allow_dying) {
     }
     *err = QTC_ERR_WRONG_THREAD;
     return nullptr;
+}
+
+QObject *Registry::object_to_destroy(uint64_t h, qtc_status *err, bool *made, bool *tracked) {
+    if (gui_thread_ok()) {   // see SF_GUI
+        const uint32_t idx = handle_index(h);
+        if (h && idx < table.size()) {
+            const Slot &s = table[idx];
+            if (s.gen == handle_gen(h) && s.kind == SK_OBJ && (s.flags & (SF_GUI | SF_DYING)) == SF_GUI && s.alive()) {
+                *err = 0;
+                *made = s.flags & SF_MADE;
+                *tracked = s.flags & SF_TRACKED;
+                return s.obj;
+            }
+        }
+    }
+    *tracked = false;
+    QObject *o = object(h, err);
+    *made = o && made_handle(h);
+    return o;
 }
 
 void Registry::note_thread_change(QObject *o) {
@@ -512,22 +538,35 @@ int Registry::kind_of(uint64_t h) {
     return s.gen == handle_gen(h) ? int(s.kind) : int(SK_FREE);
 }
 
+void Registry::note_flag(QObject *o, uint8_t f) {
+    std::lock_guard<RegMutex> lk(mu);
+    if (const uint32_t *it = by_ptr.lookup(o)) table[*it].flags |= f;
+}
+
 void Registry::on_destroyed(QObject *o) {
     uint64_t handle = 0;
+    uint8_t flags = 0;
     {
         std::lock_guard<RegMutex> lk(mu);
         const uint32_t *it = by_ptr.lookup(o);
         if (!it) return;
         const uint32_t idx = *it;
         by_ptr.remove(o);
+        flags = table[idx].flags;
         handle = make_handle(idx, table[idx].gen);
         release_slot(idx);
         live_objects--;
         g_recently_destroyed->insert(o, 1);
     }
     // an object moved to a worker thread dies there: the roles index (GUI thread) never had it
-    if (gui_thread_ok()) roles_forget(o, true);
-    if (on_object_destroyed_hook) on_object_destroyed_hook(o, handle);
+    if (gui_thread_ok()) roles_forget(o, true, flags & SF_OWNER);
+    // the event layer only has something to do for objects it noted (SF_EVENTS)
+    if (flags & SF_EVENTS) {
+        if (on_object_destroyed_hook) on_object_destroyed_hook(o, handle);
+    }
+#ifdef QTC_CROSSCHECK
+    else if (on_object_no_events_hook) on_object_no_events_hook(o);
+#endif
 }
 
 std::atomic<QObject *> g_tracked_new{nullptr};
@@ -2644,7 +2683,8 @@ static bool posted_in_tree(QObject *o, int depth = 0) {
 QTC_API qtc_status qtc_destroy(qtc_obj obj) {
     return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
         qtc_status err = 0;
-        QObject *o = reg().object(obj, &err);
+        bool made = false, tracked = false;
+        QObject *o = reg().object_to_destroy(obj, &err, &made, &tracked);
         if (!o && err == QTC_ERR_WRONG_THREAD) {
             // moved to a worker thread (qtc_move_to_thread): nothing in the GUI thread holds it
             // (moving refused objects held by others), and its own thread deletes it
@@ -2654,15 +2694,33 @@ QTC_API qtc_status qtc_destroy(qtc_obj obj) {
         if (!o) return fail(err, "qtc_destroy");
         if (o == QCoreApplication::instance()) return fail(QTC_ERR_STATE, "the application object is destroyed by qtc_shutdown");
         // owners holding it by a plain pointer let go of it first (see qtc_roles.cpp)
-        QString why = roles_prepare_destroy(o, reg().made_handle(obj));
+#ifdef QTC_HAS_WIDGETS
+        const bool widget = o->isWidgetType();
+#endif
+        QString why = roles_prepare_destroy(o, made);
         if (!why.isEmpty())
             return fail(QTC_ERR_STATE, QStringLiteral("qtc_destroy: %1 is %2; destroy its owner instead").arg(obj_label(o), why));
-        if (!reg().alive(obj)) return QTC_OK;   // releasing it deleted it
 #ifdef QTC_HAS_WIDGETS
-        if (o->isWidgetType()) static_cast<QWidget *>(o)->hide();
+        if (widget) {
+            if (!reg().alive(obj)) return QTC_OK;   // releasing it deleted it
+            static_cast<QWidget *>(o)->hide();
+        }
 #endif
+        // A Tracked object of the GUI thread deleted now, with no module that could keep it: no
+        // need to mark it dying first, as nothing runs between here and its destructor, whose
+        // first act is to free its handle (see Tracked).
+        if (tracked && ov_depth() == 0 && !roles_may_defer_delete()) {
+            if (!reg().alive(obj)) return QTC_OK;   // releasing it (or hiding it) deleted it
+            if (o->thread() == QThread::currentThread() && !posted_in_tree(o)) {
+                delete o;
+                return QTC_OK;
+            }
+        }
         QObject *x = nullptr;
-        if (qtc_status e = reg().mark_dying(obj, &x)) return fail(e, "qtc_destroy");
+        if (qtc_status e = reg().mark_dying(obj, &x)) {
+            if (e == QTC_ERR_STALE_HANDLE) return QTC_OK;   // releasing it (or hiding it) deleted it
+            return fail(e, "qtc_destroy");
+        }
         if (roles_defer_delete(x)) return QTC_OK;
         // Deleting a QObject is unsafe while it handles an event, or from another thread. Outside
         // override handlers no Qt code is running (qtc_wait has returned), so it goes now, as

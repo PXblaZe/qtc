@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(qtc VERSION 1.3.0 LANGUAGES C CXX DESCRIPTION "Qt 6 for C, safe by construction")
+project(qtc VERSION 1.4.0 LANGUAGES C CXX DESCRIPTION "Qt 6 for C, safe by construction")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -13,6 +13,14 @@ option(QTC_BUILD_TESTLIB "Build libqtc_test (input simulation through QtTest)" O
 option(QTC_BUILD_EXAMPLES "Build the C examples" ON)
 option(QTC_ALLOW_OLDER_QT "Also accept Qt 6.4 to 6.11 (untested: Qt 6.12 is the supported release)" OFF)
 set(QTC_SANITIZE "" CACHE STRING "Sanitizers for the library and tests, e.g. address,undefined")
+# Cross-checks: the fast paths that skip work for objects nothing keeps state for verify, at each
+# destruction, that there was nothing to do (a fatal error otherwise). On in sanitizer builds.
+if(QTC_SANITIZE)
+  set(_crosscheck_default ON)
+else()
+  set(_crosscheck_default OFF)
+endif()
+option(QTC_CROSSCHECK "Verify the registry's fast paths at run time (slower; for testing)" ${_crosscheck_default})
 set(QTC_MODULES "" CACHE STRING "Qt modules to bind (default: every module that is installed)")
 set(QTC_GEN_OPT "" CACHE STRING "Optimization flag for the generated sources (default: the build type's)")
 # libqtc binds Qt Core, Gui and Widgets; each other Qt module is bound by a library of its own,
@@ -224,6 +232,9 @@ if(QTC_GEN_OPT)
   foreach(m IN LISTS QTC_ENABLED_MODULES)
     set_source_files_properties(${QTC_GEN_${m}} PROPERTIES COMPILE_OPTIONS "${QTC_GEN_OPT}")
   endforeach()
+endif()
+if(QTC_CROSSCHECK)
+  target_compile_definitions(qtc PRIVATE QTC_CROSSCHECK)
 endif()
 if(QTC_SANITIZE)
   target_compile_options(qtc PUBLIC -fsanitize=${QTC_SANITIZE} -fno-omit-frame-pointer)

@@ -2487,6 +2487,64 @@ static void test_fuzz_findings(void) {
     reset();
 }
 
+/* Objects made and destroyed in a mix: plain ones (no event or ownership state, the fast path),
+ * ones with a connection or a watch (the event layer cleans up), owners (the ownership roles
+ * forget them). Addresses get reused all the time: a new object must never inherit anything of
+ * the dead one at its address. Sanitizer builds also cross-check that the objects the fast paths
+ * skipped had nothing to clean up (QTC_CROSSCHECK). */
+static void test_lifetime_fast_paths(void) {
+    reset();
+    uint32_t rnd = 12345;
+    int stale_ok = 0, quiet_ok = 0, loud_ok = 0;
+    for (int round = 0; round < 300; round++) {
+        enum { N = 8 };
+        qtc_obj o[N];
+        int kind[N];
+        for (int i = 0; i < N; i++) {
+            rnd = rnd * 1103515245u + 12345u;
+            kind[i] = (int)((rnd >> 16) % 5);
+            switch (kind[i]) {
+            case 0: o[i] = qtcn_QObject(); break;                                  /* plain */
+            case 1: o[i] = qtcn_QObject(); qtc_connect(o[i], S("objectNameChanged"), 900 + (uint64_t)i, 0); break;
+            case 2: o[i] = make("QWidget"); qtc_watch(o[i], QTC_WATCH_KEYS, 0, 950); break;
+            case 3: o[i] = make("QComboBox"); break;                              /* an owner */
+            default: o[i] = make("QHBoxLayout"); break;                            /* an owner, a layout */
+            }
+        }
+        /* destroy in a random order */
+        for (int k = 0; k < N; k++) {
+            rnd = rnd * 1103515245u + 12345u;
+            int i = (int)((rnd >> 16) % N);
+            while (!qtc_alive(o[i])) i = (i + 1) % N;
+            if (qtc_destroy(o[i]) == QTC_OK && !qtc_alive(o[i])) stale_ok++;
+        }
+        /* new plain objects, likely at the same addresses: no old connection may fire for them */
+        qtc_obj fresh[N];
+        for (int i = 0; i < N; i++) {
+            fresh[i] = qtcn_QObject();
+            qtc_arg_str(S("renamed"));
+            qtc_call(fresh[i], S("setObjectName"));
+        }
+        qtc_process_events();
+        qtc_event e;
+        int stray = 0;
+        while (qtc_poll(&e))
+            if (e.tag >= 900 && e.tag < 1000) stray++;
+        if (stray == 0) quiet_ok++;
+        /* and a connection made now works */
+        qtc_connect(fresh[0], S("objectNameChanged"), 990, 0);
+        qtc_arg_str(S("again"));
+        qtc_call(fresh[0], S("setObjectName"));
+        qtc_process_events();
+        if (drain(NULL, 990) == 1) loud_ok++;
+        for (int i = 0; i < N; i++) qtc_destroy(fresh[i]);
+    }
+    CHECK_EQ(stale_ok, 300 * 8);
+    CHECK_EQ(quiet_ok, 300);
+    CHECK_EQ(loud_ok, 300);
+    reset();
+}
+
 static void test_wrong_thread(void) {
     reset();
     qtc_obj w = make("QWidget");
@@ -2735,6 +2793,7 @@ int main(void) {
     test_blocked_signals_lifetime();
     test_ownership_rules();
     test_fuzz_findings();
+    test_lifetime_fast_paths();
     test_wrong_thread();
     test_direct();
     test_inline();

@@ -76,7 +76,11 @@ enum SlotKind : uint8_t { SK_FREE = 0, SK_OBJ = 1, SK_VAL = 2 };
 // thread can delete the object or touch its slot, so the GUI thread may read the slot without mu.
 // SF_TRACKED: a Tracked<> object (made by qtc): its destructor tells the registry first thing, so
 // it needs neither the QPointer nor the destroyed() connection other objects get.
-enum SlotFlag : uint8_t { SF_OWNED = 1, SF_DYING = 2, SF_RETIRED = 4, SF_MADE = 8, SF_GUI = 16, SF_TRACKED = 32 };
+enum SlotFlag : uint8_t {
+    SF_OWNED = 1, SF_DYING = 2, SF_RETIRED = 4, SF_MADE = 8, SF_GUI = 16, SF_TRACKED = 32,
+    SF_EVENTS = 64,   // the event layer keeps something for the object (a watch, a connection)
+    SF_OWNER = 128,   // the ownership roles index it as an owner (kinds_of is not 0)
+};
 
 struct Slot {
     uint32_t gen = 1;
@@ -89,6 +93,43 @@ struct Slot {
     bool alive() const { return (flags & SF_TRACKED) || !qp.isNull(); }
     QVariant *val = nullptr;
     QMetaObject::Connection destroyed;
+};
+
+// The slots, in pages that never move once made: a reader on the GUI thread that does not take
+// the registry's lock (see SF_GUI) can never see the array reallocated under it by another thread
+// adding a slot (std::vector did that). size() is published after the slot it counts is ready.
+class SlotTable {
+public:
+    static constexpr uint32_t kPageBits = 12, kPageSize = 1u << kPageBits, kMaxSlots = 0x7fffffffu;
+    SlotTable() : pages_(static_cast<Slot **>(std::calloc(size_t(kMaxSlots >> kPageBits) + 1, sizeof(Slot *)))) {
+        if (!pages_) throw std::bad_alloc();
+    }
+    SlotTable(const SlotTable &) = delete;
+    SlotTable &operator=(const SlotTable &) = delete;
+    Slot &operator[](uint32_t i) { return pages_[i >> kPageBits][i & (kPageSize - 1)]; }
+    const Slot &operator[](uint32_t i) const { return pages_[i >> kPageBits][i & (kPageSize - 1)]; }
+    uint32_t size() const { return n_.load(std::memory_order_acquire); }
+    // under the registry's lock
+    bool grow() {
+        const uint32_t n = n_.load(std::memory_order_relaxed);
+        if (n >= kMaxSlots) return false;
+        if ((n & (kPageSize - 1)) == 0) pages_[n >> kPageBits] = new Slot[kPageSize];
+        n_.store(n + 1, std::memory_order_release);
+        return true;
+    }
+    struct Iter {
+        const SlotTable *t;
+        uint32_t i;
+        const Slot &operator*() const { return (*t)[i]; }
+        Iter &operator++() { ++i; return *this; }
+        bool operator!=(const Iter &o) const { return i != o.i; }
+    };
+    Iter begin() const { return {this, 0}; }
+    Iter end() const { return {this, size()}; }
+
+private:
+    Slot **pages_;   // never freed: the registry lives as long as the process
+    std::atomic<uint32_t> n_{0};
 };
 
 inline uint64_t make_handle(uint32_t index, uint32_t gen) { return (uint64_t(gen) << 32) | (uint64_t(index) + 1); }
@@ -219,7 +260,7 @@ private:
 class Registry {
 public:
     RegMutex mu;
-    std::vector<Slot> table;
+    SlotTable table;
     std::vector<uint32_t> free_list;
     PtrMap<uint32_t> by_ptr;   // object -> slot index
     int64_t live_objects = 0;
@@ -231,6 +272,9 @@ public:
     // Living in this thread. An object whose QThread was destroyed (no thread affinity) is moved
     // back to the calling GUI thread on the way.
     QObject *object(uint64_t h, qtc_status *err, bool allow_dying = false);
+    // object() for qtc_destroy: also whether qtc made it (made_handle) in the same lookup
+    // *tracked: a Tracked object living in the GUI thread (SF_TRACKED and SF_GUI)
+    QObject *object_to_destroy(uint64_t h, qtc_status *err, bool *made, bool *tracked);
     // In any thread. For one in another thread only what is safe across threads, with mu held
     // for as long as the pointer is used (it cannot finish dying meanwhile: see destroy_far).
     QObject *object_anywhere(uint64_t h, qtc_status *err, bool allow_dying = false);
@@ -270,6 +314,7 @@ public:
         return receiver(h, o, v, err);
     }
     void note_thread_change(QObject *o);   // o is about to move to another thread
+    void note_flag(QObject *o, uint8_t f);  // SF_EVENTS, SF_OWNER: a layer keeps something for o
     void on_destroyed(QObject *o);
     // An object deleted while its signals were blocked never emits destroyed(): its QPointer
     // is the only trace. These find such objects and forget them like destroyed ones.
@@ -290,7 +335,11 @@ private:
 Registry &reg();
 
 // Hooks the event layer installs (watches, connections tied to an object).
-extern void (*on_object_destroyed_hook)(QObject *o, uint64_t handle);
+extern void (*on_object_destroyed_hook)(QObject *o, uint64_t handle);   // objects with SF_EVENTS
+#ifdef QTC_CROSSCHECK
+// Sanitizer builds check every shortcut against what the slow path would have found.
+extern void (*on_object_no_events_hook)(QObject *o);
+#endif
 
 // --------------------------------------------------------------- arguments
 
@@ -959,6 +1008,7 @@ bool not_held(const QObject *receiver, const QObject *arg);
 // an object that keeps a plain pointer to the one it was made in (a QSplitterHandle its splitter)
 QObject *bound_parent(const QObject *o);
 bool roles_defer_delete(QObject *o);     // qtc_destroy: Qt needs the object alive a while longer
+bool roles_may_defer_delete();           // whether a loaded module could (else roles_defer_delete is false)
 // qtc_new: objects that must not outlive another get it as parent (made_with: its object arguments)
 void roles_adopt_new(QObject *o, const QList<QObject *> &made_with);
 void roles_constructed(QObject *o);      // qtc_new: the parts its constructor made are internal
@@ -984,7 +1034,9 @@ bool layout_accepts(const QObject *layout, const QObject *widget);
 // qtc_roles.cpp: owners that hold plain pointers to objects, see there
 void roles_register(QObject *o);              // every object that gets a handle
 void roles_note_container(QObject *container, QObject *window);   // QWidget::createWindowContainer made it
-void roles_forget(QObject *o, bool readable); // it is being destroyed (readable) or is gone
+// it is being destroyed (readable) or is gone; has_state: the roles may keep something for it
+// (its slot's SF_OWNER, or true when unknown)
+void roles_forget(QObject *o, bool readable, bool has_state = true);
 void roles_clear();                           // qtc_shutdown
 void roles_init();                      // after the application object exists: watch Qt's own deletions
 QString roles_prepare_destroy(QObject *victim, bool made = false);   // releases it from its owners; non-empty: must not be deleted

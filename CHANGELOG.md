@@ -1,5 +1,46 @@
 # Changelog
 
+## 1.4.0 — 2026-11-12
+
+Cheaper object lifetimes: less work to make and destroy an object, and a run-time check of
+the shortcuts in sanitizer builds.
+
+### Faster
+- Each registry slot records whether the event layer (a connection, a watch) or the
+  ownership roles (an owner: something that can hold other objects) keep anything for its
+  object. Destroying an object with neither, most objects, skips both cleanups.
+- `qtc_destroy` looks the handle up once instead of three times. An object qtc made, deleted
+  at once in the GUI thread with no module that could keep it alive, is no longer marked
+  dying first: nothing runs between the check and its destructor, whose first act is to
+  release the handle. That is one lock fewer per object.
+- Shortcuts for the common case: no ownership work when there are no owners, for objects
+  made with no children inside, or when no pins or style users exist.
+- Together: 2,365 instructions to make and destroy a `QObject`, down from 2,847 (−17%), and
+  two trips through the registry's lock instead of three. In goose-qt's comparison benchmark
+  it takes 178 ns, against 245 ns in the previous run (C++: 41 ns).
+
+### Fixed
+- The GUI thread reads object slots without the registry's lock. The slots were a
+  `std::vector`, which another thread adding a slot could reallocate under such a read. They
+  are now pages of 4,096 slots that never move once made.
+- An object made at the address of one destroyed since the last top-level point was taken
+  for the dying one in a few places: as a signal argument it came back as handle 0. Objects
+  qtc makes now clear that mark.
+
+### Added
+- The `QTC_CROSSCHECK` build option, on by default with `QTC_SANITIZE`: at each destruction
+  that skipped a cleanup, check that there was nothing to clean up, and stop the program if
+  there was.
+- `test_core` checks 300 rounds of plain, connected, watched and owner objects destroyed in
+  random orders, with their addresses reused at once: no handle survives, and no connection
+  of a dead object fires for a new one.
+
+### Tested
+The 19 suites pass in release and AddressSanitizer + UndefinedBehaviorSanitizer builds, the
+latter with `QTC_CROSSCHECK`; `test_core` has 1,182 checks. The method fuzzer ran under the
+sanitizers (fixed order, by name, lifetimes, two random orders): clean but for OpenSSL's
+known double free at exit in one order. goose-qt's 20 tests and 12 examples pass.
+
 ## 1.3.0 — 2026-11-12
 
 ### Added

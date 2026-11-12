@@ -523,6 +523,7 @@ void ensure_index() {
 // The owners that may hold x or something inside it (check each with visit()). Const, so that
 // a range-for over the result does not detach (allocate) it.
 const QList<QPair<QObject *, uint64_t>> candidates(QObject *x) {
+    if (owners_map().isEmpty()) return {};   // no owners: nothing holds anything
     ensure_index();
     QList<QPair<QObject *, uint64_t>> out;
     QSet<QObject *> seen;
@@ -761,6 +762,7 @@ void roles_note_call(const QObject *o) {
 void roles_register(QObject *o) {
     const uint64_t k = kinds_of(o);
     if (k) {
+        reg().note_flag(o, SF_OWNER);   // roles_forget has something to forget
         Owners &m = owners_map();
         auto it = m.find(o);
         if (it != m.end()) unindex(o, *it);   // an earlier object at this address
@@ -776,20 +778,29 @@ void roles_register(QObject *o) {
 void roles_note_container(QObject *container, QObject *window) {
     if (!container || !window) return;
     container_windows().insert(container, window);
+    reg().note_flag(container, SF_OWNER);
     if (auto it = owners_map().find(container); it != owners_map().end()) it->kinds |= OK_WINDOWCONTAINER;
     else roles_register(container);
     dirty_owners().insert(container);
 }
 
-void roles_forget(QObject *o, bool readable) {
-    container_windows().remove(o);
-    if (auto it = owners_map().find(o); it != owners_map().end()) {
-        unindex(o, *it);
-        owners_map().erase(it);
+void roles_forget(QObject *o, bool readable, bool has_state) {
+    if (has_state) {
+        container_windows().remove(o);
+        if (auto it = owners_map().find(o); it != owners_map().end()) {
+            unindex(o, *it);
+            owners_map().erase(it);
+        }
+        dirty_owners().remove(o);
+        layouts_map().remove(o);
+        frames_map().remove(o);
     }
-    dirty_owners().remove(o);
-    layouts_map().remove(o);
-    frames_map().remove(o);
+#ifdef QTC_CROSSCHECK
+    else if (auto it = owners_map().constFind(o); it != owners_map().constEnd() && it->p == o) {
+        // (an entry left by an earlier object at this address has a null p and is dropped later)
+        qFatal("qtc cross-check: an object without SF_OWNER has ownership state");
+    }
+#endif
 #ifdef QTC_HAS_WIDGETS
     // o is being destroyed (or is gone): layouts without a parent widget must let go of it now.
     // Only widgets sit in layouts; o's flags can be read while it is destroyed, not once it is gone.
@@ -837,6 +848,7 @@ void roles_clear() {
 }
 
 void roles_constructed(QObject *root) {
+    if (root->children().isEmpty()) return;   // most objects: nothing made inside it
     const QList<QObject *> kids = root->findChildren<QObject *>();
     if (kids.isEmpty()) return;
     QHash<QObject *, Part> &m = parts_map();
@@ -1118,7 +1130,8 @@ QModelIndex index_of_widget(QAbstractItemView *v, QWidget *w, bool *unsure = nul
 
 QString roles_prepare_destroy(QObject *victim, bool made) {
     if (QString why = qt_owned(victim); !why.isEmpty()) return why;
-    if (QString why = made_pin_reason(victim); !why.isEmpty()) return why;
+    if (!made_pins().isEmpty())
+        if (QString why = made_pin_reason(victim); !why.isEmpty()) return why;
 #ifdef QTC_HAS_WIDGETS
     // an index widget: its view lets go of it first (and deletes it later itself)
     if (QAbstractItemView *v = index_widget_view(victim))
@@ -1135,7 +1148,7 @@ QString roles_prepare_destroy(QObject *victim, bool made) {
     if (holders.isEmpty()) {
         QString why = internal_part(victim, made);
 #ifdef QTC_HAS_WIDGETS
-        if (why.isEmpty()) release_style_users(victim);
+        if (why.isEmpty() && !style_users().isEmpty()) release_style_users(victim);
 #endif
         return why;
     }
@@ -1386,6 +1399,12 @@ bool layout_accepts(const QObject *layout, const QObject *widget) {
 bool roles_defer_delete(QObject *o) {
     for (const ModuleExt *e : module_exts())
         if (e->defer_delete && e->defer_delete(o)) return true;
+    return false;
+}
+
+bool roles_may_defer_delete() {
+    for (const ModuleExt *e : module_exts())
+        if (e->defer_delete) return true;
     return false;
 }
 

@@ -83,17 +83,20 @@ python3 tests/fuzz_driver.py --binary build/tests/fuzz_methods --work /tmp/fw --
 python3 tests/fuzz_driver.py --binary build/tests/fuzz_methods --work /tmp/fw --report report.json --by-name
 ```
 
-For the sanitizers, configure with `-DQTC_SANITIZE=address,undefined`.
+For the sanitizers, configure with `-DQTC_SANITIZE=address,undefined`. That also turns on
+`QTC_CROSSCHECK`: each object destroyed without the event layer's or the ownership roles'
+cleanup (its slot says neither keeps anything for it) is checked to have nothing there, and
+a mismatch stops the program.
 
 ## Results
 
-The last runs (qtc 1.3.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
+The last runs (qtc 1.4.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
 modules built in so that they are tested too. The graphics suites ran with Mesa's llvmpipe
 (OpenGL) and lavapipe (Vulkan, with the Khronos validation layers under the sanitizers).
 
 | suite | release build | ASan + UBSan build |
 |---|---|---|
-| `test_core` | 1,118 checks pass | 1,118 checks pass |
+| `test_core` | 1,182 checks pass | 1,182 checks pass (with `QTC_CROSSCHECK`) |
 | `test_app` | 32 pass | 32 pass |
 | `test_concurrent` | 1,696 pass | 1,696 pass |
 | `test_override` | 221 pass | 221 pass |
@@ -102,7 +105,7 @@ modules built in so that they are tested too. The graphics suites ran with Mesa'
 | `fuzz_rhi` (OpenGL offscreen, Vulkan under Xvfb) | clean | clean |
 | `test_stress` | all pass | all pass |
 | `ctest` (all 19 tests, examples included) | 19 of 19 pass | 19 of 19 pass |
-| goose-qt tests (`test/run.sh`, JIT and native) | 18 of 18 pass (examples: 11 of 11) | not run |
+| goose-qt tests (`test/run.sh`, JIT and native) | 20 of 20 pass (examples: 12 of 12) | not run |
 
 The default build (LGPL-3.0 modules only), configured and built from the release package in
 an empty directory: no GPL-3.0-only module is linked (`ldd`), the fuzzer lists 11,966 items
@@ -125,7 +128,7 @@ failure in qtc these rounds found is fixed, with a test, and the orders that fou
 clean; the lifetime run found the last one (a CoAP reply destroyed while the client's
 protocol thread still used it), and it runs clean on the fix.
 
-Under AddressSanitizer and UndefinedBehaviorSanitizer:
+Under AddressSanitizer and UndefinedBehaviorSanitizer (1.3.0's run; 1.4.0's below):
 
 | run | items | calls | failures |
 |---|---:|---:|---:|
@@ -133,6 +136,17 @@ Under AddressSanitizer and UndefinedBehaviorSanitizer:
 | by name | 13,617 | 14,915 | 0 |
 | lifetime | 1,348 | 100,439 | 0 |
 | random orders, seeds 1, 2 and 4–13 | 13,617 each | 2,031,408 | 0 |
+
+qtc 1.4.0 changed how objects are made and destroyed, so the fuzzer ran again under the
+sanitizers, now with `QTC_CROSSCHECK` checking each destruction that skipped a cleanup:
+
+| run | items | calls | failures |
+|---|---:|---:|---:|
+| fixed order | 13,617 | 89,514 | 0 |
+| by name | 13,617 | 14,915 | 0 |
+| lifetime | 1,348 | 100,439 | 0 |
+| random order, seed 77 | 13,617 | 169,284 | 0 |
+| random order, seed 3 | 13,617 | 169,284 | 1: OpenSSL's double free at exit, the known Qt failure above |
 
 `test_stress`, release build (the budget is what the test allows):
 
