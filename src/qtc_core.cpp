@@ -2790,6 +2790,60 @@ QTC_API void qtc_arg_val(qtc_val v) {
         x->v = *p;)
 }
 
+}  // extern "C"
+
+namespace qtc {
+// for qtc_inline.h (gen/inline.py)
+void clear_error() { t_err = 0; }
+void push_arg_variant(const QVariant &v) { QTC_PUSH(x->kind = AK_VAL; x->v = v;) }
+void push_arg_bad() { QTC_PUSH(x->kind = AK_NONE; args().overflow = true;) }
+// v as type t, into *out (a value of t): its own type, or one Qt converts to it
+static bool variant_as(const QVariant &v, QMetaType t, void *out, const char *what) {
+    if (v.metaType() == t) {
+        t.destruct(out);
+        t.construct(out, v.constData());
+        return true;
+    }
+    QVariant c = v;
+    if (!v.isValid() || !c.convert(t)) {
+        fail(QTC_ERR_WRONG_TYPE, QStringLiteral("%1 is %2, not %3")
+                                     .arg(QLatin1StringView(what), QLatin1StringView(v.typeName() ? v.typeName() : "nothing"),
+                                          QLatin1StringView(t.name())));
+        return false;
+    }
+    t.destruct(out);
+    t.construct(out, c.constData());
+    return true;
+}
+bool ret_as(QMetaType t, void *out) {
+    return guarded<bool>(false, [&]() -> bool {
+        const Ret &r = ret();
+        if (r.kind != QTC_T_VALUE) {
+            fail(QTC_ERR_WRONG_TYPE, QStringLiteral("the result is not a %1").arg(QLatin1StringView(t.name())));
+            return false;
+        }
+        if (!variant_as(r.v, t, out, "the result")) return false;
+        t_err = 0;
+        return true;
+    });
+}
+qtc_val new_value_checked(const QVariant &v) {
+    return guarded<qtc_val>(0, [&] { return reg().new_value(v); });
+}
+qtc_status value_as(qtc_val h, QMetaType t, void *out) {
+    return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
+        qtc_status err = 0;
+        QVariant *p = reg().value(h, &err);
+        if (!p) return fail(err, "qtc_val_to");
+        if (!variant_as(*p, t, out, "the value")) return t_err;
+        t_err = 0;
+        return QTC_OK;
+    });
+}
+}  // namespace qtc
+
+extern "C" {
+
 // ------------------------------------------------------------------ calls
 
 QTC_API qtc_status qtc_call(uint64_t receiver, qtc_str method) {
@@ -4407,10 +4461,20 @@ qtc_status entry_slow(uint64_t self, uint32_t id, Arg *a, int n) {
     return rc;
 }
 
-qtc_status entry_object(QObject *o, uint64_t self, uint32_t id, Arg *a, int n) {
+// The call itself, for an object that may hold others (as in do_call_in: an owner is looked at
+// again after a call that may give it something to hold). Out of line: most objects hold nothing.
+Q_NEVER_INLINE int entry_owner_call(const MethodDef *md, QObject *o, Arg *a, int n, Ret *r) {
+    std::optional<QPointer<QObject>> owner;
+    if (roles_is_owner(o)) owner.emplace(o);
+    const int rc = md->fn((md->flags & MF_STATIC) ? nullptr : o, a, n, r);
+    if (owner && *owner) roles_note_call(*owner);
+    return rc;
+}
+
+qtc_status entry_object(QObject *o, uint64_t self, uint32_t id, uint8_t eflags, Arg *a, int n) {
     const QObjectData *d = DPtrPeek::of(o);
     if (d && d->metaObject) return entry_slow(self, id, a, n);   // a dynamic meta-object
-    if (g_entries[id].flags & 2) {                                 // an overridable object's protected methods
+    if (eflags & 2) {                                              // an overridable object's protected methods
         uint32_t nx = 0;
         ov_extras(o, &nx);
         if (nx) return entry_slow(self, id, a, n);
@@ -4439,12 +4503,9 @@ qtc_status entry_object(QObject *o, uint64_t self, uint32_t id, Arg *a, int n) {
         return fail(QTC_ERR_STATE, QStringLiteral("%1::%2: %3 waits in an event loop, which an override handler may not start")
                                        .arg(QLatin1StringView(mo->className()), QLatin1StringView(info->name), QLatin1StringView(md->sig)));
     }
-    // as in do_call_in: an owner is looked at again after a call that may give it something to hold
-    std::optional<QPointer<QObject>> owner;
-    if (s.owner_kind && roles_is_owner(o)) owner.emplace(o);
     EntryFrame f;   // its result is empty: the pool empties results it takes back
-    const int rc = md->fn((md->flags & MF_STATIC) ? nullptr : o, a, n, f.r);
-    if (owner && *owner) roles_note_call(*owner);
+    const int rc = Q_UNLIKELY(s.owner_kind) ? entry_owner_call(md, o, a, n, f.r)
+                                            : md->fn((md->flags & MF_STATIC) ? nullptr : o, a, n, f.r);
     if (Q_UNLIKELY(rc)) {
         const MethodInfo *info = entry_info(id);
         return entry_failed(rc, Label{QLatin1StringView(mo->className()), QLatin1StringView(info->name), "%1::%2"}, md);
@@ -4489,7 +4550,8 @@ qtc_status entry_value(QVariant *v, uint64_t self, uint32_t id, Arg *a, int n) {
 
 qtc_status entry_call(uint64_t self, uint32_t id, Arg *a, int n) {
     try {
-        if (g_entries[id].flags & 1) return entry_slow(self, id, a, n);
+        const uint8_t eflags = g_entries[id].flags;
+        if (Q_UNLIKELY(eflags & 1)) return entry_slow(self, id, a, n);
         QObject *o = nullptr;
         QVariant *v = nullptr;
         qtc_status err = 0;
@@ -4497,7 +4559,7 @@ qtc_status entry_call(uint64_t self, uint32_t id, Arg *a, int n) {
             if (err == QTC_ERR_WRONG_TYPE) return fail(err, "receiver is not an object or value");
             return fail(err, err == QTC_ERR_STALE_HANDLE ? "the receiver was destroyed" : "receiver");
         }
-        return o ? entry_object(o, self, id, a, n) : entry_value(v, self, id, a, n);
+        return o ? entry_object(o, self, id, eflags, a, n) : entry_value(v, self, id, a, n);
     } catch (const std::exception &e) {
         return fail(QTC_ERR_EXCEPTION, QString::fromUtf8(e.what()));
     } catch (...) {

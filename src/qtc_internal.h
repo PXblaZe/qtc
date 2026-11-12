@@ -374,6 +374,13 @@ extern const CtorEntryDesc *const g_ctor_entries;
 extern const uint32_t g_ctor_entry_count;
 bool entry_ready();   // false, with the error set, unless qtc is initialized and this is the GUI thread
 qtc_status last_error_code();
+// for qtc_inline.h (gen/inline.py)
+void clear_error();                                       // the call succeeded
+void push_arg_variant(const QVariant &v);                 // as qtc_arg_val
+void push_arg_bad();                                      // an argument qtc could not take: the call fails
+bool ret_as(QMetaType t, void *out);                      // the last call's result as t
+qtc_val new_value_checked(const QVariant &v);             // as qtc_val_new
+qtc_status value_as(qtc_val h, QMetaType t, void *out);   // a value handle's value as t
 inline void put_bool(Arg &x, bool v) { x.kind = AK_BOOL; x.b = v; }
 inline void put_int(Arg &x, int64_t v) { x.kind = AK_INT; x.i = v; }
 inline void put_double(Arg &x, double v) { x.kind = AK_DOUBLE; x.d = v; }

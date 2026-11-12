@@ -1,0 +1,4877 @@
+{
+"types": {
+"QPoint": {
+"fields": [
+[
+"int32_t",
+"xp"
+],
+[
+"int32_t",
+"yp"
+]
+],
+"goose": "Point",
+"module": "Core"
+},
+"QPointF": {
+"fields": [
+[
+"double",
+"xp"
+],
+[
+"double",
+"yp"
+]
+],
+"goose": "PointF",
+"module": "Core"
+},
+"QSize": {
+"fields": [
+[
+"int32_t",
+"wd"
+],
+[
+"int32_t",
+"ht"
+]
+],
+"goose": "Size",
+"module": "Core"
+},
+"QSizeF": {
+"fields": [
+[
+"double",
+"wd"
+],
+[
+"double",
+"ht"
+]
+],
+"goose": "SizeF",
+"module": "Core"
+},
+"QRect": {
+"fields": [
+[
+"int32_t",
+"x1"
+],
+[
+"int32_t",
+"y1"
+],
+[
+"int32_t",
+"x2"
+],
+[
+"int32_t",
+"y2"
+]
+],
+"goose": "Rect",
+"module": "Core"
+},
+"QRectF": {
+"fields": [
+[
+"double",
+"xp"
+],
+[
+"double",
+"yp"
+],
+[
+"double",
+"w"
+],
+[
+"double",
+"h"
+]
+],
+"goose": "RectF",
+"module": "Core"
+},
+"QLine": {
+"fields": [
+[
+"int32_t",
+"p1x"
+],
+[
+"int32_t",
+"p1y"
+],
+[
+"int32_t",
+"p2x"
+],
+[
+"int32_t",
+"p2y"
+]
+],
+"goose": "Line",
+"module": "Core"
+},
+"QLineF": {
+"fields": [
+[
+"double",
+"p1x"
+],
+[
+"double",
+"p1y"
+],
+[
+"double",
+"p2x"
+],
+[
+"double",
+"p2y"
+]
+],
+"goose": "LineF",
+"module": "Core"
+},
+"QMargins": {
+"fields": [
+[
+"int32_t",
+"m_left"
+],
+[
+"int32_t",
+"m_top"
+],
+[
+"int32_t",
+"m_right"
+],
+[
+"int32_t",
+"m_bottom"
+]
+],
+"goose": "Margins",
+"module": "Core"
+},
+"QMarginsF": {
+"fields": [
+[
+"double",
+"m_left"
+],
+[
+"double",
+"m_top"
+],
+[
+"double",
+"m_right"
+],
+[
+"double",
+"m_bottom"
+]
+],
+"goose": "MarginsF",
+"module": "Core"
+},
+"QColor": {
+"fields": [
+[
+"int32_t",
+"spec"
+],
+[
+"uint16_t",
+"c0"
+],
+[
+"uint16_t",
+"c1"
+],
+[
+"uint16_t",
+"c2"
+],
+[
+"uint16_t",
+"c3"
+],
+[
+"uint16_t",
+"c4"
+],
+[
+"uint16_t",
+"c5"
+]
+],
+"goose": "Color",
+"module": "Gui"
+}
+},
+"functions": [
+{
+"c": "qtci_QPoint",
+"type": "QPoint",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QPoint__int_int",
+"type": "QPoint",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QPoint_isNull",
+"type": "QPoint",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QPoint_x",
+"type": "QPoint",
+"kind": "const",
+"name": "x",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QPoint_y",
+"type": "QPoint",
+"kind": "const",
+"name": "y",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QPoint_setX__int",
+"type": "QPoint",
+"kind": "mut",
+"name": "setX",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QPoint_setY__int",
+"type": "QPoint",
+"kind": "mut",
+"name": "setY",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QPoint_manhattanLength",
+"type": "QPoint",
+"kind": "const",
+"name": "manhattanLength",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QPoint_transposed",
+"type": "QPoint",
+"kind": "const",
+"name": "transposed",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QPoint_rx",
+"type": "QPoint",
+"kind": "mut",
+"name": "rx",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QPoint_ry",
+"type": "QPoint",
+"kind": "mut",
+"name": "ry",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QPoint_dotProduct__QPoint_QPoint",
+"type": "QPoint",
+"kind": "static",
+"name": "dotProduct",
+"params": [
+[
+"QPoint",
+"value"
+],
+[
+"QPoint",
+"value"
+]
+],
+"ret": "int"
+},
+{
+"c": "qtci_QPoint_toPointF",
+"type": "QPoint",
+"kind": "const",
+"name": "toPointF",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QPointF",
+"type": "QPointF",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QPointF__QPoint",
+"type": "QPointF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QPointF__qreal_qreal",
+"type": "QPointF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QPointF_manhattanLength",
+"type": "QPointF",
+"kind": "const",
+"name": "manhattanLength",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QPointF_isNull",
+"type": "QPointF",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QPointF_x",
+"type": "QPointF",
+"kind": "const",
+"name": "x",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QPointF_y",
+"type": "QPointF",
+"kind": "const",
+"name": "y",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QPointF_setX__qreal",
+"type": "QPointF",
+"kind": "mut",
+"name": "setX",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QPointF_setY__qreal",
+"type": "QPointF",
+"kind": "mut",
+"name": "setY",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QPointF_transposed",
+"type": "QPointF",
+"kind": "const",
+"name": "transposed",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QPointF_rx",
+"type": "QPointF",
+"kind": "mut",
+"name": "rx",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QPointF_ry",
+"type": "QPointF",
+"kind": "mut",
+"name": "ry",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QPointF_dotProduct__QPointF_QPointF",
+"type": "QPointF",
+"kind": "static",
+"name": "dotProduct",
+"params": [
+[
+"QPointF",
+"value"
+],
+[
+"QPointF",
+"value"
+]
+],
+"ret": "double"
+},
+{
+"c": "qtci_QPointF_toPoint",
+"type": "QPointF",
+"kind": "const",
+"name": "toPoint",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QSize",
+"type": "QSize",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QSize"
+},
+{
+"c": "qtci_QSize__int_int",
+"type": "QSize",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QSize"
+},
+{
+"c": "qtci_QSize_isNull",
+"type": "QSize",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QSize_isEmpty",
+"type": "QSize",
+"kind": "const",
+"name": "isEmpty",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QSize_isValid",
+"type": "QSize",
+"kind": "const",
+"name": "isValid",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QSize_width",
+"type": "QSize",
+"kind": "const",
+"name": "width",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QSize_height",
+"type": "QSize",
+"kind": "const",
+"name": "height",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QSize_setWidth__int",
+"type": "QSize",
+"kind": "mut",
+"name": "setWidth",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QSize_setHeight__int",
+"type": "QSize",
+"kind": "mut",
+"name": "setHeight",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QSize_transpose",
+"type": "QSize",
+"kind": "mut",
+"name": "transpose",
+"params": [],
+"ret": "void"
+},
+{
+"c": "qtci_QSize_transposed",
+"type": "QSize",
+"kind": "const",
+"name": "transposed",
+"params": [],
+"ret": "QSize"
+},
+{
+"c": "qtci_QSize_expandedTo__QSize",
+"type": "QSize",
+"kind": "const",
+"name": "expandedTo",
+"params": [
+[
+"QSize",
+"value"
+]
+],
+"ret": "QSize"
+},
+{
+"c": "qtci_QSize_boundedTo__QSize",
+"type": "QSize",
+"kind": "const",
+"name": "boundedTo",
+"params": [
+[
+"QSize",
+"value"
+]
+],
+"ret": "QSize"
+},
+{
+"c": "qtci_QSize_grownBy__QMargins",
+"type": "QSize",
+"kind": "const",
+"name": "grownBy",
+"params": [
+[
+"QMargins",
+"value"
+]
+],
+"ret": "QSize"
+},
+{
+"c": "qtci_QSize_shrunkBy__QMargins",
+"type": "QSize",
+"kind": "const",
+"name": "shrunkBy",
+"params": [
+[
+"QMargins",
+"value"
+]
+],
+"ret": "QSize"
+},
+{
+"c": "qtci_QSize_rwidth",
+"type": "QSize",
+"kind": "mut",
+"name": "rwidth",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QSize_rheight",
+"type": "QSize",
+"kind": "mut",
+"name": "rheight",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QSize_toSizeF",
+"type": "QSize",
+"kind": "const",
+"name": "toSizeF",
+"params": [],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF",
+"type": "QSizeF",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF__QSize",
+"type": "QSizeF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QSize",
+"value"
+]
+],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF__qreal_qreal",
+"type": "QSizeF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF_isNull",
+"type": "QSizeF",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QSizeF_isEmpty",
+"type": "QSizeF",
+"kind": "const",
+"name": "isEmpty",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QSizeF_isValid",
+"type": "QSizeF",
+"kind": "const",
+"name": "isValid",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QSizeF_width",
+"type": "QSizeF",
+"kind": "const",
+"name": "width",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QSizeF_height",
+"type": "QSizeF",
+"kind": "const",
+"name": "height",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QSizeF_setWidth__qreal",
+"type": "QSizeF",
+"kind": "mut",
+"name": "setWidth",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QSizeF_setHeight__qreal",
+"type": "QSizeF",
+"kind": "mut",
+"name": "setHeight",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QSizeF_transpose",
+"type": "QSizeF",
+"kind": "mut",
+"name": "transpose",
+"params": [],
+"ret": "void"
+},
+{
+"c": "qtci_QSizeF_transposed",
+"type": "QSizeF",
+"kind": "const",
+"name": "transposed",
+"params": [],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF_expandedTo__QSizeF",
+"type": "QSizeF",
+"kind": "const",
+"name": "expandedTo",
+"params": [
+[
+"QSizeF",
+"value"
+]
+],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF_boundedTo__QSizeF",
+"type": "QSizeF",
+"kind": "const",
+"name": "boundedTo",
+"params": [
+[
+"QSizeF",
+"value"
+]
+],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF_grownBy__QMarginsF",
+"type": "QSizeF",
+"kind": "const",
+"name": "grownBy",
+"params": [
+[
+"QMarginsF",
+"value"
+]
+],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF_shrunkBy__QMarginsF",
+"type": "QSizeF",
+"kind": "const",
+"name": "shrunkBy",
+"params": [
+[
+"QMarginsF",
+"value"
+]
+],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QSizeF_rwidth",
+"type": "QSizeF",
+"kind": "mut",
+"name": "rwidth",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QSizeF_rheight",
+"type": "QSizeF",
+"kind": "mut",
+"name": "rheight",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QSizeF_toSize",
+"type": "QSizeF",
+"kind": "const",
+"name": "toSize",
+"params": [],
+"ret": "QSize"
+},
+{
+"c": "qtci_QRect",
+"type": "QRect",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect__QPoint_QPoint",
+"type": "QRect",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QPoint",
+"value"
+],
+[
+"QPoint",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect__QPoint_QSize",
+"type": "QRect",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QPoint",
+"value"
+],
+[
+"QSize",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect__int_int_int_int",
+"type": "QRect",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_isNull",
+"type": "QRect",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_isEmpty",
+"type": "QRect",
+"kind": "const",
+"name": "isEmpty",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_isValid",
+"type": "QRect",
+"kind": "const",
+"name": "isValid",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_left",
+"type": "QRect",
+"kind": "const",
+"name": "left",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_top",
+"type": "QRect",
+"kind": "const",
+"name": "top",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_right",
+"type": "QRect",
+"kind": "const",
+"name": "right",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_bottom",
+"type": "QRect",
+"kind": "const",
+"name": "bottom",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_normalized",
+"type": "QRect",
+"kind": "const",
+"name": "normalized",
+"params": [],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_x",
+"type": "QRect",
+"kind": "const",
+"name": "x",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_y",
+"type": "QRect",
+"kind": "const",
+"name": "y",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_setLeft__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setLeft",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setTop__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setTop",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setRight__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setRight",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setBottom__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setBottom",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setX__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setX",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setY__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setY",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setTopLeft__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "setTopLeft",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setBottomRight__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "setBottomRight",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setTopRight__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "setTopRight",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setBottomLeft__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "setBottomLeft",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_topLeft",
+"type": "QRect",
+"kind": "const",
+"name": "topLeft",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QRect_bottomRight",
+"type": "QRect",
+"kind": "const",
+"name": "bottomRight",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QRect_topRight",
+"type": "QRect",
+"kind": "const",
+"name": "topRight",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QRect_bottomLeft",
+"type": "QRect",
+"kind": "const",
+"name": "bottomLeft",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QRect_center",
+"type": "QRect",
+"kind": "const",
+"name": "center",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QRect_moveLeft__int",
+"type": "QRect",
+"kind": "mut",
+"name": "moveLeft",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveTop__int",
+"type": "QRect",
+"kind": "mut",
+"name": "moveTop",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveRight__int",
+"type": "QRect",
+"kind": "mut",
+"name": "moveRight",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveBottom__int",
+"type": "QRect",
+"kind": "mut",
+"name": "moveBottom",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveTopLeft__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "moveTopLeft",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveBottomRight__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "moveBottomRight",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveTopRight__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "moveTopRight",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveBottomLeft__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "moveBottomLeft",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveCenter__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "moveCenter",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_translate__int_int",
+"type": "QRect",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_translate__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_translated__int_int",
+"type": "QRect",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_translated__QPoint",
+"type": "QRect",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_transposed",
+"type": "QRect",
+"kind": "const",
+"name": "transposed",
+"params": [],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_moveTo__int_int",
+"type": "QRect",
+"kind": "mut",
+"name": "moveTo",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_moveTo__QPoint",
+"type": "QRect",
+"kind": "mut",
+"name": "moveTo",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setRect__int_int_int_int",
+"type": "QRect",
+"kind": "mut",
+"name": "setRect",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setCoords__int_int_int_int",
+"type": "QRect",
+"kind": "mut",
+"name": "setCoords",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_adjust__int_int_int_int",
+"type": "QRect",
+"kind": "mut",
+"name": "adjust",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_adjusted__int_int_int_int",
+"type": "QRect",
+"kind": "const",
+"name": "adjusted",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_size",
+"type": "QRect",
+"kind": "const",
+"name": "size",
+"params": [],
+"ret": "QSize"
+},
+{
+"c": "qtci_QRect_width",
+"type": "QRect",
+"kind": "const",
+"name": "width",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_height",
+"type": "QRect",
+"kind": "const",
+"name": "height",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QRect_setWidth__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setWidth",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setHeight__int",
+"type": "QRect",
+"kind": "mut",
+"name": "setHeight",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_setSize__QSize",
+"type": "QRect",
+"kind": "mut",
+"name": "setSize",
+"params": [
+[
+"QSize",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRect_contains__QRect",
+"type": "QRect",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"QRect",
+"value"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_contains__QRect_bool",
+"type": "QRect",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"QRect",
+"value"
+],
+[
+"bool",
+"bool"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_contains__QPoint",
+"type": "QRect",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_contains__QPoint_bool",
+"type": "QRect",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"QPoint",
+"value"
+],
+[
+"bool",
+"bool"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_contains__int_int",
+"type": "QRect",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_contains__int_int_bool",
+"type": "QRect",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"bool",
+"bool"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_united__QRect",
+"type": "QRect",
+"kind": "const",
+"name": "united",
+"params": [
+[
+"QRect",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_intersected__QRect",
+"type": "QRect",
+"kind": "const",
+"name": "intersected",
+"params": [
+[
+"QRect",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_intersects__QRect",
+"type": "QRect",
+"kind": "const",
+"name": "intersects",
+"params": [
+[
+"QRect",
+"value"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRect_marginsAdded__QMargins",
+"type": "QRect",
+"kind": "const",
+"name": "marginsAdded",
+"params": [
+[
+"QMargins",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_marginsRemoved__QMargins",
+"type": "QRect",
+"kind": "const",
+"name": "marginsRemoved",
+"params": [
+[
+"QMargins",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_span__QPoint_QPoint",
+"type": "QRect",
+"kind": "static",
+"name": "span",
+"params": [
+[
+"QPoint",
+"value"
+],
+[
+"QPoint",
+"value"
+]
+],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRect_toRectF",
+"type": "QRect",
+"kind": "const",
+"name": "toRectF",
+"params": [],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF",
+"type": "QRectF",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF__QPointF_QSizeF",
+"type": "QRectF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QPointF",
+"value"
+],
+[
+"QSizeF",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF__QPointF_QPointF",
+"type": "QRectF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QPointF",
+"value"
+],
+[
+"QPointF",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF__qreal_qreal_qreal_qreal",
+"type": "QRectF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF__QRect",
+"type": "QRectF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QRect",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_isNull",
+"type": "QRectF",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QRectF_isEmpty",
+"type": "QRectF",
+"kind": "const",
+"name": "isEmpty",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QRectF_isValid",
+"type": "QRectF",
+"kind": "const",
+"name": "isValid",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QRectF_normalized",
+"type": "QRectF",
+"kind": "const",
+"name": "normalized",
+"params": [],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_left",
+"type": "QRectF",
+"kind": "const",
+"name": "left",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_top",
+"type": "QRectF",
+"kind": "const",
+"name": "top",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_right",
+"type": "QRectF",
+"kind": "const",
+"name": "right",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_bottom",
+"type": "QRectF",
+"kind": "const",
+"name": "bottom",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_x",
+"type": "QRectF",
+"kind": "const",
+"name": "x",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_y",
+"type": "QRectF",
+"kind": "const",
+"name": "y",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_setLeft__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setLeft",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setTop__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setTop",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setRight__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setRight",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setBottom__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setBottom",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setX__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setX",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setY__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setY",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_topLeft",
+"type": "QRectF",
+"kind": "const",
+"name": "topLeft",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QRectF_bottomRight",
+"type": "QRectF",
+"kind": "const",
+"name": "bottomRight",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QRectF_topRight",
+"type": "QRectF",
+"kind": "const",
+"name": "topRight",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QRectF_bottomLeft",
+"type": "QRectF",
+"kind": "const",
+"name": "bottomLeft",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QRectF_center",
+"type": "QRectF",
+"kind": "const",
+"name": "center",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QRectF_setTopLeft__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "setTopLeft",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setBottomRight__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "setBottomRight",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setTopRight__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "setTopRight",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setBottomLeft__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "setBottomLeft",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveLeft__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveLeft",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveTop__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveTop",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveRight__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveRight",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveBottom__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveBottom",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveTopLeft__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveTopLeft",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveBottomRight__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveBottomRight",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveTopRight__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveTopRight",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveBottomLeft__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveBottomLeft",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveCenter__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveCenter",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_translate__qreal_qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_translate__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_translated__qreal_qreal",
+"type": "QRectF",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_translated__QPointF",
+"type": "QRectF",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_transposed",
+"type": "QRectF",
+"kind": "const",
+"name": "transposed",
+"params": [],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_moveTo__qreal_qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveTo",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_moveTo__QPointF",
+"type": "QRectF",
+"kind": "mut",
+"name": "moveTo",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setRect__qreal_qreal_qreal_qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setRect",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setCoords__qreal_qreal_qreal_qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setCoords",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_adjust__qreal_qreal_qreal_qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "adjust",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_adjusted__qreal_qreal_qreal_qreal",
+"type": "QRectF",
+"kind": "const",
+"name": "adjusted",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_size",
+"type": "QRectF",
+"kind": "const",
+"name": "size",
+"params": [],
+"ret": "QSizeF"
+},
+{
+"c": "qtci_QRectF_width",
+"type": "QRectF",
+"kind": "const",
+"name": "width",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_height",
+"type": "QRectF",
+"kind": "const",
+"name": "height",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QRectF_setWidth__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setWidth",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setHeight__qreal",
+"type": "QRectF",
+"kind": "mut",
+"name": "setHeight",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_setSize__QSizeF",
+"type": "QRectF",
+"kind": "mut",
+"name": "setSize",
+"params": [
+[
+"QSizeF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QRectF_contains__QRectF",
+"type": "QRectF",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"QRectF",
+"value"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRectF_contains__QPointF",
+"type": "QRectF",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRectF_contains__qreal_qreal",
+"type": "QRectF",
+"kind": "const",
+"name": "contains",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRectF_united__QRectF",
+"type": "QRectF",
+"kind": "const",
+"name": "united",
+"params": [
+[
+"QRectF",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_intersected__QRectF",
+"type": "QRectF",
+"kind": "const",
+"name": "intersected",
+"params": [
+[
+"QRectF",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_intersects__QRectF",
+"type": "QRectF",
+"kind": "const",
+"name": "intersects",
+"params": [
+[
+"QRectF",
+"value"
+]
+],
+"ret": "bool"
+},
+{
+"c": "qtci_QRectF_marginsAdded__QMarginsF",
+"type": "QRectF",
+"kind": "const",
+"name": "marginsAdded",
+"params": [
+[
+"QMarginsF",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_marginsRemoved__QMarginsF",
+"type": "QRectF",
+"kind": "const",
+"name": "marginsRemoved",
+"params": [
+[
+"QMarginsF",
+"value"
+]
+],
+"ret": "QRectF"
+},
+{
+"c": "qtci_QRectF_toRect",
+"type": "QRectF",
+"kind": "const",
+"name": "toRect",
+"params": [],
+"ret": "QRect"
+},
+{
+"c": "qtci_QRectF_toAlignedRect",
+"type": "QRectF",
+"kind": "const",
+"name": "toAlignedRect",
+"params": [],
+"ret": "QRect"
+},
+{
+"c": "qtci_QLine",
+"type": "QLine",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QLine"
+},
+{
+"c": "qtci_QLine__QPoint_QPoint",
+"type": "QLine",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QPoint",
+"value"
+],
+[
+"QPoint",
+"value"
+]
+],
+"ret": "QLine"
+},
+{
+"c": "qtci_QLine__int_int_int_int",
+"type": "QLine",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QLine"
+},
+{
+"c": "qtci_QLine_isNull",
+"type": "QLine",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QLine_p1",
+"type": "QLine",
+"kind": "const",
+"name": "p1",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QLine_p2",
+"type": "QLine",
+"kind": "const",
+"name": "p2",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QLine_x1",
+"type": "QLine",
+"kind": "const",
+"name": "x1",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QLine_y1",
+"type": "QLine",
+"kind": "const",
+"name": "y1",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QLine_x2",
+"type": "QLine",
+"kind": "const",
+"name": "x2",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QLine_y2",
+"type": "QLine",
+"kind": "const",
+"name": "y2",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QLine_dx",
+"type": "QLine",
+"kind": "const",
+"name": "dx",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QLine_dy",
+"type": "QLine",
+"kind": "const",
+"name": "dy",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QLine_translate__QPoint",
+"type": "QLine",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLine_translate__int_int",
+"type": "QLine",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLine_translated__QPoint",
+"type": "QLine",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "QLine"
+},
+{
+"c": "qtci_QLine_translated__int_int",
+"type": "QLine",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QLine"
+},
+{
+"c": "qtci_QLine_center",
+"type": "QLine",
+"kind": "const",
+"name": "center",
+"params": [],
+"ret": "QPoint"
+},
+{
+"c": "qtci_QLine_setP1__QPoint",
+"type": "QLine",
+"kind": "mut",
+"name": "setP1",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLine_setP2__QPoint",
+"type": "QLine",
+"kind": "mut",
+"name": "setP2",
+"params": [
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLine_setPoints__QPoint_QPoint",
+"type": "QLine",
+"kind": "mut",
+"name": "setPoints",
+"params": [
+[
+"QPoint",
+"value"
+],
+[
+"QPoint",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLine_setLine__int_int_int_int",
+"type": "QLine",
+"kind": "mut",
+"name": "setLine",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLine_toLineF",
+"type": "QLine",
+"kind": "const",
+"name": "toLineF",
+"params": [],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF",
+"type": "QLineF",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF__QPointF_QPointF",
+"type": "QLineF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QPointF",
+"value"
+],
+[
+"QPointF",
+"value"
+]
+],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF__qreal_qreal_qreal_qreal",
+"type": "QLineF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF__QLine",
+"type": "QLineF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QLine",
+"value"
+]
+],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF_fromPolar__qreal_qreal",
+"type": "QLineF",
+"kind": "static",
+"name": "fromPolar",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF_isNull",
+"type": "QLineF",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QLineF_p1",
+"type": "QLineF",
+"kind": "const",
+"name": "p1",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QLineF_p2",
+"type": "QLineF",
+"kind": "const",
+"name": "p2",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QLineF_x1",
+"type": "QLineF",
+"kind": "const",
+"name": "x1",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_y1",
+"type": "QLineF",
+"kind": "const",
+"name": "y1",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_x2",
+"type": "QLineF",
+"kind": "const",
+"name": "x2",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_y2",
+"type": "QLineF",
+"kind": "const",
+"name": "y2",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_dx",
+"type": "QLineF",
+"kind": "const",
+"name": "dx",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_dy",
+"type": "QLineF",
+"kind": "const",
+"name": "dy",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_length",
+"type": "QLineF",
+"kind": "const",
+"name": "length",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_setLength__qreal",
+"type": "QLineF",
+"kind": "mut",
+"name": "setLength",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_angle",
+"type": "QLineF",
+"kind": "const",
+"name": "angle",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_setAngle__qreal",
+"type": "QLineF",
+"kind": "mut",
+"name": "setAngle",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_angleTo__QLineF",
+"type": "QLineF",
+"kind": "const",
+"name": "angleTo",
+"params": [
+[
+"QLineF",
+"value"
+]
+],
+"ret": "double"
+},
+{
+"c": "qtci_QLineF_unitVector",
+"type": "QLineF",
+"kind": "const",
+"name": "unitVector",
+"params": [],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF_normalVector",
+"type": "QLineF",
+"kind": "const",
+"name": "normalVector",
+"params": [],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF_pointAt__qreal",
+"type": "QLineF",
+"kind": "const",
+"name": "pointAt",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QLineF_translate__QPointF",
+"type": "QLineF",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_translate__qreal_qreal",
+"type": "QLineF",
+"kind": "mut",
+"name": "translate",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_translated__QPointF",
+"type": "QLineF",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF_translated__qreal_qreal",
+"type": "QLineF",
+"kind": "const",
+"name": "translated",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QLineF"
+},
+{
+"c": "qtci_QLineF_center",
+"type": "QLineF",
+"kind": "const",
+"name": "center",
+"params": [],
+"ret": "QPointF"
+},
+{
+"c": "qtci_QLineF_setP1__QPointF",
+"type": "QLineF",
+"kind": "mut",
+"name": "setP1",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_setP2__QPointF",
+"type": "QLineF",
+"kind": "mut",
+"name": "setP2",
+"params": [
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_setPoints__QPointF_QPointF",
+"type": "QLineF",
+"kind": "mut",
+"name": "setPoints",
+"params": [
+[
+"QPointF",
+"value"
+],
+[
+"QPointF",
+"value"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_setLine__qreal_qreal_qreal_qreal",
+"type": "QLineF",
+"kind": "mut",
+"name": "setLine",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QLineF_toLine",
+"type": "QLineF",
+"kind": "const",
+"name": "toLine",
+"params": [],
+"ret": "QLine"
+},
+{
+"c": "qtci_QMargins",
+"type": "QMargins",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QMargins"
+},
+{
+"c": "qtci_QMargins__int_int_int_int",
+"type": "QMargins",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QMargins"
+},
+{
+"c": "qtci_QMargins_isNull",
+"type": "QMargins",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QMargins_left",
+"type": "QMargins",
+"kind": "const",
+"name": "left",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QMargins_top",
+"type": "QMargins",
+"kind": "const",
+"name": "top",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QMargins_right",
+"type": "QMargins",
+"kind": "const",
+"name": "right",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QMargins_bottom",
+"type": "QMargins",
+"kind": "const",
+"name": "bottom",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QMargins_setLeft__int",
+"type": "QMargins",
+"kind": "mut",
+"name": "setLeft",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMargins_setTop__int",
+"type": "QMargins",
+"kind": "mut",
+"name": "setTop",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMargins_setRight__int",
+"type": "QMargins",
+"kind": "mut",
+"name": "setRight",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMargins_setBottom__int",
+"type": "QMargins",
+"kind": "mut",
+"name": "setBottom",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMargins_toMarginsF",
+"type": "QMargins",
+"kind": "const",
+"name": "toMarginsF",
+"params": [],
+"ret": "QMarginsF"
+},
+{
+"c": "qtci_QMarginsF",
+"type": "QMarginsF",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QMarginsF"
+},
+{
+"c": "qtci_QMarginsF__qreal_qreal_qreal_qreal",
+"type": "QMarginsF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+],
+[
+"qreal",
+"double"
+]
+],
+"ret": "QMarginsF"
+},
+{
+"c": "qtci_QMarginsF__QMargins",
+"type": "QMarginsF",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QMargins",
+"value"
+]
+],
+"ret": "QMarginsF"
+},
+{
+"c": "qtci_QMarginsF_isNull",
+"type": "QMarginsF",
+"kind": "const",
+"name": "isNull",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QMarginsF_left",
+"type": "QMarginsF",
+"kind": "const",
+"name": "left",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QMarginsF_top",
+"type": "QMarginsF",
+"kind": "const",
+"name": "top",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QMarginsF_right",
+"type": "QMarginsF",
+"kind": "const",
+"name": "right",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QMarginsF_bottom",
+"type": "QMarginsF",
+"kind": "const",
+"name": "bottom",
+"params": [],
+"ret": "double"
+},
+{
+"c": "qtci_QMarginsF_setLeft__qreal",
+"type": "QMarginsF",
+"kind": "mut",
+"name": "setLeft",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMarginsF_setTop__qreal",
+"type": "QMarginsF",
+"kind": "mut",
+"name": "setTop",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMarginsF_setRight__qreal",
+"type": "QMarginsF",
+"kind": "mut",
+"name": "setRight",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMarginsF_setBottom__qreal",
+"type": "QMarginsF",
+"kind": "mut",
+"name": "setBottom",
+"params": [
+[
+"qreal",
+"double"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QMarginsF_toMargins",
+"type": "QMarginsF",
+"kind": "const",
+"name": "toMargins",
+"params": [],
+"ret": "QMargins"
+},
+{
+"c": "qtci_QColor",
+"type": "QColor",
+"kind": "ctor",
+"name": "",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor__int_int_int",
+"type": "QColor",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor__int_int_int_int",
+"type": "QColor",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor__QRgb",
+"type": "QColor",
+"kind": "ctor",
+"name": "",
+"params": [
+[
+"QRgb",
+"uint"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_isValid",
+"type": "QColor",
+"kind": "const",
+"name": "isValid",
+"params": [],
+"ret": "bool"
+},
+{
+"c": "qtci_QColor_alpha",
+"type": "QColor",
+"kind": "const",
+"name": "alpha",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_setAlpha__int",
+"type": "QColor",
+"kind": "mut",
+"name": "setAlpha",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_alphaF",
+"type": "QColor",
+"kind": "const",
+"name": "alphaF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_setAlphaF__float",
+"type": "QColor",
+"kind": "mut",
+"name": "setAlphaF",
+"params": [
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_red",
+"type": "QColor",
+"kind": "const",
+"name": "red",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_green",
+"type": "QColor",
+"kind": "const",
+"name": "green",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_blue",
+"type": "QColor",
+"kind": "const",
+"name": "blue",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_setRed__int",
+"type": "QColor",
+"kind": "mut",
+"name": "setRed",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setGreen__int",
+"type": "QColor",
+"kind": "mut",
+"name": "setGreen",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setBlue__int",
+"type": "QColor",
+"kind": "mut",
+"name": "setBlue",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_redF",
+"type": "QColor",
+"kind": "const",
+"name": "redF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_greenF",
+"type": "QColor",
+"kind": "const",
+"name": "greenF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_blueF",
+"type": "QColor",
+"kind": "const",
+"name": "blueF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_setRedF__float",
+"type": "QColor",
+"kind": "mut",
+"name": "setRedF",
+"params": [
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setGreenF__float",
+"type": "QColor",
+"kind": "mut",
+"name": "setGreenF",
+"params": [
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setBlueF__float",
+"type": "QColor",
+"kind": "mut",
+"name": "setBlueF",
+"params": [
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setRgb__int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setRgb",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setRgb__int_int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setRgb",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setRgbF__float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setRgbF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setRgbF__float_float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setRgbF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_rgba",
+"type": "QColor",
+"kind": "const",
+"name": "rgba",
+"params": [],
+"ret": "unsigned int"
+},
+{
+"c": "qtci_QColor_setRgba__QRgb",
+"type": "QColor",
+"kind": "mut",
+"name": "setRgba",
+"params": [
+[
+"QRgb",
+"uint"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_rgb",
+"type": "QColor",
+"kind": "const",
+"name": "rgb",
+"params": [],
+"ret": "unsigned int"
+},
+{
+"c": "qtci_QColor_setRgb__QRgb",
+"type": "QColor",
+"kind": "mut",
+"name": "setRgb",
+"params": [
+[
+"QRgb",
+"uint"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_hue",
+"type": "QColor",
+"kind": "const",
+"name": "hue",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_saturation",
+"type": "QColor",
+"kind": "const",
+"name": "saturation",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_hsvHue",
+"type": "QColor",
+"kind": "const",
+"name": "hsvHue",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_hsvSaturation",
+"type": "QColor",
+"kind": "const",
+"name": "hsvSaturation",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_value",
+"type": "QColor",
+"kind": "const",
+"name": "value",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_hueF",
+"type": "QColor",
+"kind": "const",
+"name": "hueF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_saturationF",
+"type": "QColor",
+"kind": "const",
+"name": "saturationF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_hsvHueF",
+"type": "QColor",
+"kind": "const",
+"name": "hsvHueF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_hsvSaturationF",
+"type": "QColor",
+"kind": "const",
+"name": "hsvSaturationF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_valueF",
+"type": "QColor",
+"kind": "const",
+"name": "valueF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_setHsv__int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setHsv",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setHsv__int_int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setHsv",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setHsvF__float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setHsvF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setHsvF__float_float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setHsvF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_cyan",
+"type": "QColor",
+"kind": "const",
+"name": "cyan",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_magenta",
+"type": "QColor",
+"kind": "const",
+"name": "magenta",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_yellow",
+"type": "QColor",
+"kind": "const",
+"name": "yellow",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_black",
+"type": "QColor",
+"kind": "const",
+"name": "black",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_cyanF",
+"type": "QColor",
+"kind": "const",
+"name": "cyanF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_magentaF",
+"type": "QColor",
+"kind": "const",
+"name": "magentaF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_yellowF",
+"type": "QColor",
+"kind": "const",
+"name": "yellowF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_blackF",
+"type": "QColor",
+"kind": "const",
+"name": "blackF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_setCmyk__int_int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setCmyk",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setCmyk__int_int_int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setCmyk",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setCmykF__float_float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setCmykF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setCmykF__float_float_float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setCmykF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_hslHue",
+"type": "QColor",
+"kind": "const",
+"name": "hslHue",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_hslSaturation",
+"type": "QColor",
+"kind": "const",
+"name": "hslSaturation",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_lightness",
+"type": "QColor",
+"kind": "const",
+"name": "lightness",
+"params": [],
+"ret": "int"
+},
+{
+"c": "qtci_QColor_hslHueF",
+"type": "QColor",
+"kind": "const",
+"name": "hslHueF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_hslSaturationF",
+"type": "QColor",
+"kind": "const",
+"name": "hslSaturationF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_lightnessF",
+"type": "QColor",
+"kind": "const",
+"name": "lightnessF",
+"params": [],
+"ret": "float"
+},
+{
+"c": "qtci_QColor_setHsl__int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setHsl",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setHsl__int_int_int_int",
+"type": "QColor",
+"kind": "mut",
+"name": "setHsl",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setHslF__float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setHslF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_setHslF__float_float_float_float",
+"type": "QColor",
+"kind": "mut",
+"name": "setHslF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "void"
+},
+{
+"c": "qtci_QColor_toRgb",
+"type": "QColor",
+"kind": "const",
+"name": "toRgb",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_toHsv",
+"type": "QColor",
+"kind": "const",
+"name": "toHsv",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_toCmyk",
+"type": "QColor",
+"kind": "const",
+"name": "toCmyk",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_toHsl",
+"type": "QColor",
+"kind": "const",
+"name": "toHsl",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_toExtendedRgb",
+"type": "QColor",
+"kind": "const",
+"name": "toExtendedRgb",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromRgb__QRgb",
+"type": "QColor",
+"kind": "static",
+"name": "fromRgb",
+"params": [
+[
+"QRgb",
+"uint"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromRgba__QRgb",
+"type": "QColor",
+"kind": "static",
+"name": "fromRgba",
+"params": [
+[
+"QRgb",
+"uint"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromRgb__int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromRgb",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromRgb__int_int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromRgb",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromRgbF__float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromRgbF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromRgbF__float_float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromRgbF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHsv__int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromHsv",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHsv__int_int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromHsv",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHsvF__float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromHsvF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHsvF__float_float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromHsvF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromCmyk__int_int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromCmyk",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromCmyk__int_int_int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromCmyk",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromCmykF__float_float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromCmykF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromCmykF__float_float_float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromCmykF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHsl__int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromHsl",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHsl__int_int_int_int",
+"type": "QColor",
+"kind": "static",
+"name": "fromHsl",
+"params": [
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+],
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHslF__float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromHslF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_fromHslF__float_float_float_float",
+"type": "QColor",
+"kind": "static",
+"name": "fromHslF",
+"params": [
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+],
+[
+"float",
+"float"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_lighter",
+"type": "QColor",
+"kind": "const",
+"name": "lighter",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_lighter__int",
+"type": "QColor",
+"kind": "const",
+"name": "lighter",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_darker",
+"type": "QColor",
+"kind": "const",
+"name": "darker",
+"params": [],
+"ret": "QColor"
+},
+{
+"c": "qtci_QColor_darker__int",
+"type": "QColor",
+"kind": "const",
+"name": "darker",
+"params": [
+[
+"int",
+"int"
+]
+],
+"ret": "QColor"
+}
+]
+}

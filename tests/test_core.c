@@ -2,6 +2,7 @@
 #define _POSIX_C_SOURCE 200809L
 #include "qtc.h"
 #include "qtc_direct.h"
+#include "qtc_inline.h"
 #include "qtc_test.h"
 
 #include <math.h>
@@ -2494,6 +2495,85 @@ static void *direct_wrong_thread(void *arg) {
 }
 
 /* Direct entry points (qtc_direct.h): the same results and errors as qtc_call. */
+/* qtc_inline.h: value types as structs, and the qtcmi_ entry points that take them */
+static void test_inline(void) {
+    reset();
+    qtc_QRect r = qtci_QRect__int_int_int_int(1, 2, 3, 4);
+    CHECK_EQ(qtc_last_error(), QTC_OK);
+    CHECK(r.x1 == 1 && r.y1 == 2 && r.x2 == 3 && r.y2 == 5);   /* Qt keeps the far corner */
+    CHECK_EQ(qtci_QRect_right(r), 3);
+    qtci_QRect_moveTo__int_int(&r, 10, 20);
+    CHECK(r.x1 == 10 && r.y1 == 20 && r.x2 == 12 && r.y2 == 23);
+    qtc_QRect t = qtci_QRect_translated__int_int(r, 1, 1);
+    CHECK(t.x1 == 11 && r.x1 == 10);
+    CHECK(qtci_QRect_intersects__QRect(r, t));
+    qtc_QRectF rf = qtci_QRectF__QRect(r);
+    CHECK(rf.xp == 10.0 && rf.w == 3.0 && rf.h == 4.0);
+    qtc_QPoint p = {3, -4};
+    CHECK_EQ(qtci_QPoint_manhattanLength(p), 7);
+    /* colors: made by qtc, changed in place, converted */
+    qtc_QColor c = qtci_QColor__int_int_int(255, 10, 20);
+    CHECK_EQ(qtci_QColor_red(c), 255);
+    CHECK_EQ(qtci_QColor_green(c), 10);
+    qtci_QColor_setRed__int(&c, 7);
+    CHECK_EQ(qtci_QColor_red(c), 7);
+    qtc_QColor h = qtci_QColor_fromHsv__int_int_int(120, 255, 255);
+    CHECK_EQ(qtci_QColor_hue(h), 120);
+    CHECK_EQ(qtci_QColor_green(h), 255);
+    /* checks: integers out of range, null pointers, colors qtc did not make */
+    qtc_QRect bad = qtci_QRect__int_int_int_int(1LL << 40, 0, 1, 1);
+    CHECK_EQ(qtc_last_error(), QTC_ERR_OUT_OF_RANGE);
+    CHECK(bad.x1 == 0 && bad.x2 == 0);
+    qtci_QRect_moveTo__int_int(NULL, 1, 1);
+    CHECK_EQ(qtc_last_error(), QTC_ERR_NULL_HANDLE);
+    qtc_QColor junk = c;
+    junk.spec = 99;
+    CHECK_EQ(qtci_QColor_red(junk), 0);
+    CHECK_EQ(qtc_last_error(), QTC_ERR_INVALID_ARG);
+    junk = h;
+    junk.c1 = 40000;   /* an HSV hue past 359.99 degrees */
+    CHECK_EQ(qtci_QColor_red(junk), 0);
+    CHECK_EQ(qtc_last_error(), QTC_ERR_INVALID_ARG);
+    CHECK_EQ(qtci_QColor_red(c), 7);
+    CHECK_EQ(qtc_last_error(), QTC_OK);
+    /* objects take them through qtcmi_ and the dynamic API */
+    qtc_obj w = qtcn_QWidget();
+    qtc_QRect g = qtci_QRect__int_int_int_int(5, 6, 70, 80);
+    CHECK_EQ(qtcmi_setGeometry__QRect(w, g), QTC_OK);
+    CHECK_EQ(qtc_call(w, S("geometry")), QTC_OK);
+    qtc_QRect back = qtc_ret_QRect();
+    CHECK(memcmp(&back, &g, sizeof g) == 0);
+    qtc_QPoint at = {9, 8};
+    CHECK_EQ(qtcmi_move__QPoint(w, at), QTC_OK);
+    CHECK_EQ(qtc_call(w, S("pos")), QTC_OK);
+    qtc_QPoint pos = qtc_ret_QPoint();
+    CHECK(pos.xp == 9 && pos.yp == 8);
+    CHECK_EQ(qtcmi_setGeometry__QRect(0, g), QTC_ERR_NULL_HANDLE);
+    CHECK_EQ(qtcmi_fill__QColor(w, c), QTC_ERR_NOT_FOUND);   /* a QWidget has no fill(QColor) */
+    CHECK_EQ(qtcmi_fill__QColor(w, junk), QTC_ERR_INVALID_ARG);
+    qtc_arg_QRect(g);
+    CHECK_EQ(qtc_call(w, S("setGeometry")), QTC_OK);
+    qtc_arg_QColor(junk);
+    CHECK(qtc_call(w, S("setGeometry")) != QTC_OK);   /* the bad argument fails the call */
+    qtc_args_clear();
+    CHECK_EQ(qtc_call(w, S("width")), QTC_OK);
+    qtc_QRect none = qtc_ret_QRect();   /* an int is not a QRect */
+    CHECK_EQ(qtc_last_error(), QTC_ERR_WRONG_TYPE);
+    CHECK(none.x1 == 0 && none.x2 == 0);
+    /* to and from handles */
+    qtc_val v = qtc_val_from_QColor(c);
+    CHECK(v != 0 && qtc_is_value(v));
+    CHECK_EQ(qtcm_red(v), QTC_OK);
+    CHECK_EQ(qtc_ret_int(), 7);
+    qtc_QColor c2;
+    CHECK_EQ(qtc_val_to_QColor(v, &c2), QTC_OK);
+    CHECK(memcmp(&c2, &c, sizeof c) == 0);
+    CHECK_EQ(qtc_val_to_QRect(v, &back), QTC_ERR_WRONG_TYPE);
+    CHECK_EQ(qtc_val_from_QColor(junk), 0);
+    qtc_val_free(v);
+    qtc_destroy(w);
+}
+
 static void test_direct(void) {
     reset();
     qtc_obj l = qtcn_QLabel__QString(S("start"));
@@ -2645,6 +2725,7 @@ int main(void) {
     test_fuzz_findings();
     test_wrong_thread();
     test_direct();
+    test_inline();
     test_describe();
     test_shutdown_and_reinit();
     printf("test_core: %d passed, %d failed\n", g_passed, g_failed);

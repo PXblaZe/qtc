@@ -1267,7 +1267,9 @@ def main():
         json.dump(manifest, f, separators=(",", ":"))
     # direct entry points (gen/entries.py), from the manifest just written
     import entries
-    efiles, nme, nce = entries.generate(json.loads(json.dumps(manifest)), args.out)
+    import inline
+    inline.generate(json.loads(json.dumps(manifest)), args.out)   # gen/inline.py: before the entries, which use it
+    efiles, nme, nce, nie = entries.generate(json.loads(json.dumps(manifest)), args.out)
     cmake.append("set(QTC_GEN_ENTRIES %s)" % " ".join("${CMAKE_CURRENT_LIST_DIR}/" + f for f in efiles))
     write_if_changed(os.path.join(gen_dir, "modules.cmake"), "\n".join(cmake) + "\n")
     totals = collections.Counter()

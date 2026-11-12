@@ -120,6 +120,9 @@ set(QTC_SOURCES
   src/qtc_builtin.cpp
   src/qtc_builtin.h
   include/qtc_direct.h
+  include/qtc_inline.h
+  src/gen/qtc_gen_inline.cpp
+  src/gen/qtc_inline_conv.h
   ${QTC_GEN_COMMON}
   ${QTC_GEN_ENTRIES})
 set(QTC_LINK Qt6::Core)
@@ -302,8 +305,8 @@ if(TARGET qtc_test)
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
   install(FILES include/qtc_test.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 endif()
-install(FILES include/qtc.h include/qtc_direct.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-install(FILES manifest/qtc_api.json manifest/qtc_entries.json DESTINATION ${CMAKE_INSTALL_DATADIR}/qtc)
+install(FILES include/qtc.h include/qtc_direct.h include/qtc_inline.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(FILES manifest/qtc_api.json manifest/qtc_entries.json manifest/qtc_inline.json DESTINATION ${CMAKE_INSTALL_DATADIR}/qtc)
 install(EXPORT qtcTargets NAMESPACE qtc:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/qtc)
 include(CMakePackageConfigHelpers)
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/qtcConfig.cmake "include(\${CMAKE_CURRENT_LIST_DIR}/qtcTargets.cmake)\n")

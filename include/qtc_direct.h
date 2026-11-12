@@ -10,6 +10,7 @@
 #ifndef QTC_DIRECT_H
 #define QTC_DIRECT_H
 #include "qtc.h"
+#include "qtc_inline.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -10328,6 +10329,333 @@ QTC_API uint64_t qtcn_QXmlStreamEntityDeclaration(void); /* QXmlStreamEntityDecl
 QTC_API uint64_t qtcn_QXmlStreamNamespaceDeclaration(void); /* QXmlStreamNamespaceDeclaration() */
 QTC_API uint64_t qtcn_QXmlStreamNamespaceDeclaration__QString_QString(qtc_str a0, qtc_str a1); /* QXmlStreamNamespaceDeclaration(QString,QString) */
 QTC_API uint64_t qtcn_QXmlStreamNotationDeclaration(void); /* QXmlStreamNotationDeclaration() */
+/* the same with QPoint, QRect, QColor and the other types of qtc_inline.h as structs */
+QTC_API qtc_status qtcmi_actionAt__QPoint(qtc_obj self, qtc_QPoint a0); /* actionAt(QPoint) */
+QTC_API qtc_status qtcmi_actualSize__QSize(qtc_obj self, qtc_QSize a0); /* actualSize(QSize) */
+QTC_API qtc_status qtcmi_actualSize__QSize_QIcon_Mode(qtc_obj self, qtc_QSize a0, int64_t a1); /* actualSize(QSize,QIcon::Mode) */
+QTC_API qtc_status qtcmi_actualSize__QSize_QIcon_Mode_QIcon_State(qtc_obj self, qtc_QSize a0, int64_t a1, int64_t a2); /* actualSize(QSize,QIcon::Mode,QIcon::State) */
+QTC_API qtc_status qtcmi_actualSize__QWindowPtr_QSize(qtc_obj self, qtc_obj a0, qtc_QSize a1); /* actualSize(QWindow*,QSize) */
+QTC_API qtc_status qtcmi_actualSize__QWindowPtr_QSize_QIcon_Mode(qtc_obj self, qtc_obj a0, qtc_QSize a1, int64_t a2); /* actualSize(QWindow*,QSize,QIcon::Mode) */
+QTC_API qtc_status qtcmi_actualSize__QWindowPtr_QSize_QIcon_Mode_QIcon_State(qtc_obj self, qtc_obj a0, qtc_QSize a1, int64_t a2, int64_t a3); /* actualSize(QWindow*,QSize,QIcon::Mode,QIcon::State) */
+QTC_API qtc_status qtcmi_addCubicBezierSegment__QPointF_QPointF_QPointF(qtc_obj self, qtc_QPointF a0, qtc_QPointF a1, qtc_QPointF a2); /* addCubicBezierSegment(QPointF,QPointF,QPointF) */
+QTC_API qtc_status qtcmi_addEllipse__QPointF_qreal_qreal(qtc_obj self, qtc_QPointF a0, double a1, double a2); /* addEllipse(QPointF,qreal,qreal) */
+QTC_API qtc_status qtcmi_addEllipse__QRectF(qtc_obj self, qtc_QRectF a0); /* addEllipse(QRectF) */
+QTC_API qtc_status qtcmi_addFile__QString_QSize(qtc_obj self, qtc_str a0, qtc_QSize a1); /* addFile(QString,QSize) */
+QTC_API qtc_status qtcmi_addFile__QString_QSize_QIcon_Mode(qtc_obj self, qtc_str a0, qtc_QSize a1, int64_t a2); /* addFile(QString,QSize,QIcon::Mode) */
+QTC_API qtc_status qtcmi_addFile__QString_QSize_QIcon_Mode_QIcon_State(qtc_obj self, qtc_str a0, qtc_QSize a1, int64_t a2, int64_t a3); /* addFile(QString,QSize,QIcon::Mode,QIcon::State) */
+QTC_API qtc_status qtcmi_addRect__QRectF(qtc_obj self, qtc_QRectF a0); /* addRect(QRectF) */
+QTC_API qtc_status qtcmi_addRoundedRect__QRectF_qreal_qreal(qtc_obj self, qtc_QRectF a0, double a1, double a2); /* addRoundedRect(QRectF,qreal,qreal) */
+QTC_API qtc_status qtcmi_addRoundedRect__QRectF_qreal_qreal_Qt_SizeMode(qtc_obj self, qtc_QRectF a0, double a1, double a2, int64_t a3); /* addRoundedRect(QRectF,qreal,qreal,Qt::SizeMode) */
+QTC_API qtc_status qtcmi_addTCBSegment__QPointF_qreal_qreal_qreal(qtc_obj self, qtc_QPointF a0, double a1, double a2, double a3); /* addTCBSegment(QPointF,qreal,qreal,qreal) */
+QTC_API qtc_status qtcmi_addText__QPointF_QFont_QString(qtc_obj self, qtc_QPointF a0, qtc_val a1, qtc_str a2); /* addText(QPointF,QFont,QString) */
+QTC_API qtc_status qtcmi_anchorAt__QPoint(qtc_obj self, qtc_QPoint a0); /* anchorAt(QPoint) */
+QTC_API qtc_status qtcmi_angleTo__QLineF(qtc_obj self, qtc_QLineF a0); /* angleTo(QLineF) */
+QTC_API qtc_status qtcmi_append__QPointF(qtc_obj self, qtc_QPointF a0); /* append(QPointF) */
+QTC_API qtc_status qtcmi_arcMoveTo__QRectF_qreal(qtc_obj self, qtc_QRectF a0, double a1); /* arcMoveTo(QRectF,qreal) */
+QTC_API qtc_status qtcmi_arcTo__QRectF_qreal_qreal(qtc_obj self, qtc_QRectF a0, double a1, double a2); /* arcTo(QRectF,qreal,qreal) */
+QTC_API qtc_status qtcmi_availableGeometryChanged__QRect(qtc_obj self, qtc_QRect a0); /* availableGeometryChanged(QRect) */
+QTC_API qtc_status qtcmi_availableVirtualGeometryChanged__QRect(qtc_obj self, qtc_QRect a0); /* availableVirtualGeometryChanged(QRect) */
+QTC_API qtc_status qtcmi_bestFitLineColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* bestFitLineColorChanged(QColor) */
+QTC_API qtc_status qtcmi_borderColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* borderColorChanged(QColor) */
+QTC_API qtc_status qtcmi_boundedTo__QSize(qtc_obj self, qtc_QSize a0); /* boundedTo(QSize) */
+QTC_API qtc_status qtcmi_boundedTo__QSizeF(qtc_obj self, qtc_QSizeF a0); /* boundedTo(QSizeF) */
+QTC_API qtc_status qtcmi_boundingRect__QRect_int_QString(qtc_obj self, qtc_QRect a0, int64_t a1, qtc_str a2); /* boundingRect(QRect,int,QString) */
+QTC_API qtc_status qtcmi_boundingRect__QRect_int_QString_int(qtc_obj self, qtc_QRect a0, int64_t a1, qtc_str a2, int64_t a3); /* boundingRect(QRect,int,QString,int) */
+QTC_API qtc_status qtcmi_boundingRect__QRect_int_QString_int_intPtr(qtc_obj self, qtc_QRect a0, int64_t a1, qtc_str a2, int64_t a3); /* boundingRect(QRect,int,QString,int,int*) */
+QTC_API qtc_status qtcmi_boundingRect__QRectF_int_QString(qtc_obj self, qtc_QRectF a0, int64_t a1, qtc_str a2); /* boundingRect(QRectF,int,QString) */
+QTC_API qtc_status qtcmi_boundingRect__QRectF_int_QString_int(qtc_obj self, qtc_QRectF a0, int64_t a1, qtc_str a2, int64_t a3); /* boundingRect(QRectF,int,QString,int) */
+QTC_API qtc_status qtcmi_boundingRect__QRectF_int_QString_int_intPtr(qtc_obj self, qtc_QRectF a0, int64_t a1, qtc_str a2, int64_t a3); /* boundingRect(QRectF,int,QString,int,int*) */
+QTC_API qtc_status qtcmi_boundingRectFor__QRectF(qtc_obj self, qtc_QRectF a0); /* boundingRectFor(QRectF) */
+QTC_API qtc_status qtcmi_centerOn__QPointF(qtc_obj self, qtc_QPointF a0); /* centerOn(QPointF) */
+QTC_API qtc_status qtcmi_childAt__QPoint(qtc_obj self, qtc_QPoint a0); /* childAt(QPoint) */
+QTC_API qtc_status qtcmi_childAt__QPointF(qtc_obj self, qtc_QPointF a0); /* childAt(QPointF) */
+QTC_API qtc_status qtcmi_childrenRectChanged__QRectF(qtc_obj self, qtc_QRectF a0); /* childrenRectChanged(QRectF) */
+QTC_API qtc_status qtcmi_clicked__QPointF(qtc_obj self, qtc_QPointF a0); /* clicked(QPointF) */
+QTC_API qtc_status qtcmi_colorChanged__QColor(qtc_obj self, qtc_QColor a0); /* colorChanged(QColor) */
+QTC_API qtc_status qtcmi_colorSelected__QColor(qtc_obj self, qtc_QColor a0); /* colorSelected(QColor) */
+QTC_API qtc_status qtcmi_complete__QRect(qtc_obj self, qtc_QRect a0); /* complete(QRect) */
+QTC_API qtc_status qtcmi_contains__QPoint(qtc_obj self, qtc_QPoint a0); /* contains(QPoint) */
+QTC_API qtc_status qtcmi_contains__QPoint_bool(qtc_obj self, qtc_QPoint a0, bool a1); /* contains(QPoint,bool) */
+QTC_API qtc_status qtcmi_contains__QPointF(qtc_obj self, qtc_QPointF a0); /* contains(QPointF) */
+QTC_API qtc_status qtcmi_contains__QRect(qtc_obj self, qtc_QRect a0); /* contains(QRect) */
+QTC_API qtc_status qtcmi_contains__QRect_bool(qtc_obj self, qtc_QRect a0, bool a1); /* contains(QRect,bool) */
+QTC_API qtc_status qtcmi_contains__QRectF(qtc_obj self, qtc_QRectF a0); /* contains(QRectF) */
+QTC_API qtc_status qtcmi_containsPoint__QPoint_Qt_FillRule(qtc_obj self, qtc_QPoint a0, int64_t a1); /* containsPoint(QPoint,Qt::FillRule) */
+QTC_API qtc_status qtcmi_containsPoint__QPointF_Qt_FillRule(qtc_obj self, qtc_QPointF a0, int64_t a1); /* containsPoint(QPointF,Qt::FillRule) */
+QTC_API qtc_status qtcmi_copy__QRect(qtc_obj self, qtc_QRect a0); /* copy(QRect) */
+QTC_API qtc_status qtcmi_createMaskFromColor__QColor(qtc_obj self, qtc_QColor a0); /* createMaskFromColor(QColor) */
+QTC_API qtc_status qtcmi_createMaskFromColor__QColor_Qt_MaskMode(qtc_obj self, qtc_QColor a0, int64_t a1); /* createMaskFromColor(QColor,Qt::MaskMode) */
+QTC_API qtc_status qtcmi_createStandardContextMenu__QPoint(qtc_obj self, qtc_QPoint a0); /* createStandardContextMenu(QPoint) */
+QTC_API qtc_status qtcmi_cubicTo__QPointF_QPointF_QPointF(qtc_obj self, qtc_QPointF a0, qtc_QPointF a1, qtc_QPointF a2); /* cubicTo(QPointF,QPointF,QPointF) */
+QTC_API qtc_status qtcmi_currentColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* currentColorChanged(QColor) */
+QTC_API qtc_status qtcmi_cursorForPosition__QPoint(qtc_obj self, qtc_QPoint a0); /* cursorForPosition(QPoint) */
+QTC_API qtc_status qtcmi_cursorPositionAt__QPoint(qtc_obj self, qtc_QPoint a0); /* cursorPositionAt(QPoint) */
+QTC_API qtc_status qtcmi_customContextMenuRequested__QPoint(qtc_obj self, qtc_QPoint a0); /* customContextMenuRequested(QPoint) */
+QTC_API qtc_status qtcmi_doubleClicked__QPointF(qtc_obj self, qtc_QPointF a0); /* doubleClicked(QPointF) */
+QTC_API qtc_status qtcmi_ensureVisible__QRectF(qtc_obj self, qtc_QRectF a0); /* ensureVisible(QRectF) */
+QTC_API qtc_status qtcmi_ensureVisible__QRectF_int(qtc_obj self, qtc_QRectF a0, int64_t a1); /* ensureVisible(QRectF,int) */
+QTC_API qtc_status qtcmi_ensureVisible__QRectF_int_int(qtc_obj self, qtc_QRectF a0, int64_t a1, int64_t a2); /* ensureVisible(QRectF,int,int) */
+QTC_API qtc_status qtcmi_ensureVisible__QRectF_qreal_qreal(qtc_obj self, qtc_QRectF a0, double a1, double a2); /* ensureVisible(QRectF,qreal,qreal) */
+QTC_API qtc_status qtcmi_ensureVisible__QRectF_qreal_qreal_int(qtc_obj self, qtc_QRectF a0, double a1, double a2, int64_t a3); /* ensureVisible(QRectF,qreal,qreal,int) */
+QTC_API qtc_status qtcmi_exec__QPoint(qtc_obj self, qtc_QPoint a0); /* exec(QPoint) */
+QTC_API qtc_status qtcmi_exec__QPoint_QActionPtr(qtc_obj self, qtc_QPoint a0, qtc_obj a1); /* exec(QPoint,QAction*) */
+QTC_API qtc_status qtcmi_expandedTo__QSize(qtc_obj self, qtc_QSize a0); /* expandedTo(QSize) */
+QTC_API qtc_status qtcmi_expandedTo__QSizeF(qtc_obj self, qtc_QSizeF a0); /* expandedTo(QSizeF) */
+QTC_API qtc_status qtcmi_fill__QColor(qtc_obj self, qtc_QColor a0); /* fill(QColor) */
+QTC_API qtc_status qtcmi_fitInView__QRectF(qtc_obj self, qtc_QRectF a0); /* fitInView(QRectF) */
+QTC_API qtc_status qtcmi_fitInView__QRectF_Qt_AspectRatioMode(qtc_obj self, qtc_QRectF a0, int64_t a1); /* fitInView(QRectF,Qt::AspectRatioMode) */
+QTC_API qtc_status qtcmi_fixedColorBufferSizeChanged__QSize(qtc_obj self, qtc_QSize a0); /* fixedColorBufferSizeChanged(QSize) */
+QTC_API qtc_status qtcmi_geometryChanged__QRect(qtc_obj self, qtc_QRect a0); /* geometryChanged(QRect) */
+QTC_API qtc_status qtcmi_grab__QRect(qtc_obj self, qtc_QRect a0); /* grab(QRect) */
+QTC_API qtc_status qtcmi_grabToImage__QJSValue_QSize(qtc_obj self, qtc_val a0, qtc_QSize a1); /* grabToImage(QJSValue,QSize) */
+QTC_API qtc_status qtcmi_gridLineColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* gridLineColorChanged(QColor) */
+QTC_API qtc_status qtcmi_grownBy__QMargins(qtc_obj self, qtc_QMargins a0); /* grownBy(QMargins) */
+QTC_API qtc_status qtcmi_grownBy__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* grownBy(QMarginsF) */
+QTC_API qtc_status qtcmi_handleInput__QScroller_Input_QPointF(qtc_obj self, int64_t a0, qtc_QPointF a1); /* handleInput(QScroller::Input,QPointF) */
+QTC_API qtc_status qtcmi_handleInput__QScroller_Input_QPointF_qint64(qtc_obj self, int64_t a0, qtc_QPointF a1, int64_t a2); /* handleInput(QScroller::Input,QPointF,qint64) */
+QTC_API qtc_status qtcmi_hitTest__QPointF_Qt_HitTestAccuracy(qtc_obj self, qtc_QPointF a0, int64_t a1); /* hitTest(QPointF,Qt::HitTestAccuracy) */
+QTC_API qtc_status qtcmi_hovered__QPointF_bool(qtc_obj self, qtc_QPointF a0, bool a1); /* hovered(QPointF,bool) */
+QTC_API qtc_status qtcmi_iconSizeChanged__QSize(qtc_obj self, qtc_QSize a0); /* iconSizeChanged(QSize) */
+QTC_API qtc_status qtcmi_indexAt__QPoint(qtc_obj self, qtc_QPoint a0); /* indexAt(QPoint) */
+QTC_API qtc_status qtcmi_insert__int_QPointF(qtc_obj self, int64_t a0, qtc_QPointF a1); /* insert(int,QPointF) */
+QTC_API qtc_status qtcmi_intersected__QRect(qtc_obj self, qtc_QRect a0); /* intersected(QRect) */
+QTC_API qtc_status qtcmi_intersected__QRectF(qtc_obj self, qtc_QRectF a0); /* intersected(QRectF) */
+QTC_API qtc_status qtcmi_intersects__QLineF(qtc_obj self, qtc_QLineF a0); /* intersects(QLineF) */
+QTC_API qtc_status qtcmi_intersects__QRect(qtc_obj self, qtc_QRect a0); /* intersects(QRect) */
+QTC_API qtc_status qtcmi_intersects__QRectF(qtc_obj self, qtc_QRectF a0); /* intersects(QRectF) */
+QTC_API qtc_status qtcmi_invalidate__QRectF(qtc_obj self, qtc_QRectF a0); /* invalidate(QRectF) */
+QTC_API qtc_status qtcmi_invalidate__QRectF_QGraphicsScene_SceneLayers(qtc_obj self, qtc_QRectF a0, int64_t a1); /* invalidate(QRectF,QGraphicsScene::SceneLayers) */
+QTC_API qtc_status qtcmi_invalidateScene__QRectF(qtc_obj self, qtc_QRectF a0); /* invalidateScene(QRectF) */
+QTC_API qtc_status qtcmi_invalidateScene__QRectF_QGraphicsScene_SceneLayers(qtc_obj self, qtc_QRectF a0, int64_t a1); /* invalidateScene(QRectF,QGraphicsScene::SceneLayers) */
+QTC_API qtc_status qtcmi_isSeparator__QPoint(qtc_obj self, qtc_QPoint a0); /* isSeparator(QPoint) */
+QTC_API qtc_status qtcmi_itemPixmapRect__QRect_int_QPixmap(qtc_obj self, qtc_QRect a0, int64_t a1, qtc_val a2); /* itemPixmapRect(QRect,int,QPixmap) */
+QTC_API qtc_status qtcmi_itemTextRect__QFontMetrics_QRect_int_bool_QString(qtc_obj self, qtc_val a0, qtc_QRect a1, int64_t a2, bool a3, qtc_str a4); /* itemTextRect(QFontMetrics,QRect,int,bool,QString) */
+QTC_API qtc_status qtcmi_labelColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* labelColorChanged(QColor) */
+QTC_API qtc_status qtcmi_labelsColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* labelsColorChanged(QColor) */
+QTC_API qtc_status qtcmi_lineTo__QPointF(qtc_obj self, qtc_QPointF a0); /* lineTo(QPointF) */
+QTC_API qtc_status qtcmi_logicalIndexAt__QPoint(qtc_obj self, qtc_QPoint a0); /* logicalIndexAt(QPoint) */
+QTC_API qtc_status qtcmi_map__QColor(qtc_obj self, qtc_QColor a0); /* map(QColor) */
+QTC_API qtc_status qtcmi_map__QLine(qtc_obj self, qtc_QLine a0); /* map(QLine) */
+QTC_API qtc_status qtcmi_map__QLineF(qtc_obj self, qtc_QLineF a0); /* map(QLineF) */
+QTC_API qtc_status qtcmi_map__QPoint(qtc_obj self, qtc_QPoint a0); /* map(QPoint) */
+QTC_API qtc_status qtcmi_map__QPointF(qtc_obj self, qtc_QPointF a0); /* map(QPointF) */
+QTC_API qtc_status qtcmi_mapBetween__Qt_ScreenOrientation_Qt_ScreenOrientation_QRect(qtc_obj self, int64_t a0, int64_t a1, qtc_QRect a2); /* mapBetween(Qt::ScreenOrientation,Qt::ScreenOrientation,QRect) */
+QTC_API qtc_status qtcmi_mapFrom__constQWidgetPtr_QPoint(qtc_obj self, qtc_obj a0, qtc_QPoint a1); /* mapFrom(const QWidget*,QPoint) */
+QTC_API qtc_status qtcmi_mapFrom__constQWidgetPtr_QPointF(qtc_obj self, qtc_obj a0, qtc_QPointF a1); /* mapFrom(const QWidget*,QPointF) */
+QTC_API qtc_status qtcmi_mapFromGlobal__QPoint(qtc_obj self, qtc_QPoint a0); /* mapFromGlobal(QPoint) */
+QTC_API qtc_status qtcmi_mapFromGlobal__QPointF(qtc_obj self, qtc_QPointF a0); /* mapFromGlobal(QPointF) */
+QTC_API qtc_status qtcmi_mapFromItem__constQQuickItemPtr_QPointF(qtc_obj self, qtc_obj a0, qtc_QPointF a1); /* mapFromItem(const QQuickItem*,QPointF) */
+QTC_API qtc_status qtcmi_mapFromItem__constQQuickItemPtr_QRectF(qtc_obj self, qtc_obj a0, qtc_QRectF a1); /* mapFromItem(const QQuickItem*,QRectF) */
+QTC_API qtc_status qtcmi_mapFromParent__QPoint(qtc_obj self, qtc_QPoint a0); /* mapFromParent(QPoint) */
+QTC_API qtc_status qtcmi_mapFromParent__QPointF(qtc_obj self, qtc_QPointF a0); /* mapFromParent(QPointF) */
+QTC_API qtc_status qtcmi_mapFromScene__QPointF(qtc_obj self, qtc_QPointF a0); /* mapFromScene(QPointF) */
+QTC_API qtc_status qtcmi_mapFromScene__QRectF(qtc_obj self, qtc_QRectF a0); /* mapFromScene(QRectF) */
+QTC_API qtc_status qtcmi_mapRect__QRect(qtc_obj self, qtc_QRect a0); /* mapRect(QRect) */
+QTC_API qtc_status qtcmi_mapRect__QRectF(qtc_obj self, qtc_QRectF a0); /* mapRect(QRectF) */
+QTC_API qtc_status qtcmi_mapRectFromItem__constQQuickItemPtr_QRectF(qtc_obj self, qtc_obj a0, qtc_QRectF a1); /* mapRectFromItem(const QQuickItem*,QRectF) */
+QTC_API qtc_status qtcmi_mapRectFromScene__QRectF(qtc_obj self, qtc_QRectF a0); /* mapRectFromScene(QRectF) */
+QTC_API qtc_status qtcmi_mapRectToItem__constQQuickItemPtr_QRectF(qtc_obj self, qtc_obj a0, qtc_QRectF a1); /* mapRectToItem(const QQuickItem*,QRectF) */
+QTC_API qtc_status qtcmi_mapRectToScene__QRectF(qtc_obj self, qtc_QRectF a0); /* mapRectToScene(QRectF) */
+QTC_API qtc_status qtcmi_mapTo__constQWidgetPtr_QPoint(qtc_obj self, qtc_obj a0, qtc_QPoint a1); /* mapTo(const QWidget*,QPoint) */
+QTC_API qtc_status qtcmi_mapTo__constQWidgetPtr_QPointF(qtc_obj self, qtc_obj a0, qtc_QPointF a1); /* mapTo(const QWidget*,QPointF) */
+QTC_API qtc_status qtcmi_mapToGlobal__QPoint(qtc_obj self, qtc_QPoint a0); /* mapToGlobal(QPoint) */
+QTC_API qtc_status qtcmi_mapToGlobal__QPointF(qtc_obj self, qtc_QPointF a0); /* mapToGlobal(QPointF) */
+QTC_API qtc_status qtcmi_mapToItem__constQQuickItemPtr_QPointF(qtc_obj self, qtc_obj a0, qtc_QPointF a1); /* mapToItem(const QQuickItem*,QPointF) */
+QTC_API qtc_status qtcmi_mapToItem__constQQuickItemPtr_QRectF(qtc_obj self, qtc_obj a0, qtc_QRectF a1); /* mapToItem(const QQuickItem*,QRectF) */
+QTC_API qtc_status qtcmi_mapToParent__QPoint(qtc_obj self, qtc_QPoint a0); /* mapToParent(QPoint) */
+QTC_API qtc_status qtcmi_mapToParent__QPointF(qtc_obj self, qtc_QPointF a0); /* mapToParent(QPointF) */
+QTC_API qtc_status qtcmi_mapToPolygon__QRect(qtc_obj self, qtc_QRect a0); /* mapToPolygon(QRect) */
+QTC_API qtc_status qtcmi_mapToPosition__QPointF(qtc_obj self, qtc_QPointF a0); /* mapToPosition(QPointF) */
+QTC_API qtc_status qtcmi_mapToPosition__QPointF_QAbstractSeriesPtr(qtc_obj self, qtc_QPointF a0, qtc_obj a1); /* mapToPosition(QPointF,QAbstractSeries*) */
+QTC_API qtc_status qtcmi_mapToScene__QPoint(qtc_obj self, qtc_QPoint a0); /* mapToScene(QPoint) */
+QTC_API qtc_status qtcmi_mapToScene__QPointF(qtc_obj self, qtc_QPointF a0); /* mapToScene(QPointF) */
+QTC_API qtc_status qtcmi_mapToScene__QRect(qtc_obj self, qtc_QRect a0); /* mapToScene(QRect) */
+QTC_API qtc_status qtcmi_mapToValue__QPointF(qtc_obj self, qtc_QPointF a0); /* mapToValue(QPointF) */
+QTC_API qtc_status qtcmi_mapToValue__QPointF_QAbstractSeriesPtr(qtc_obj self, qtc_QPointF a0, qtc_obj a1); /* mapToValue(QPointF,QAbstractSeries*) */
+QTC_API qtc_status qtcmi_marginsAdded__QMargins(qtc_obj self, qtc_QMargins a0); /* marginsAdded(QMargins) */
+QTC_API qtc_status qtcmi_marginsAdded__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* marginsAdded(QMarginsF) */
+QTC_API qtc_status qtcmi_marginsRemoved__QMargins(qtc_obj self, qtc_QMargins a0); /* marginsRemoved(QMargins) */
+QTC_API qtc_status qtcmi_marginsRemoved__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* marginsRemoved(QMarginsF) */
+QTC_API qtc_status qtcmi_minorGridLineColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* minorGridLineColorChanged(QColor) */
+QTC_API qtc_status qtcmi_move__QPoint(qtc_obj self, qtc_QPoint a0); /* move(QPoint) */
+QTC_API qtc_status qtcmi_moveBottomLeft__QPoint(qtc_obj self, qtc_QPoint a0); /* moveBottomLeft(QPoint) */
+QTC_API qtc_status qtcmi_moveBottomLeft__QPointF(qtc_obj self, qtc_QPointF a0); /* moveBottomLeft(QPointF) */
+QTC_API qtc_status qtcmi_moveBottomRight__QPoint(qtc_obj self, qtc_QPoint a0); /* moveBottomRight(QPoint) */
+QTC_API qtc_status qtcmi_moveBottomRight__QPointF(qtc_obj self, qtc_QPointF a0); /* moveBottomRight(QPointF) */
+QTC_API qtc_status qtcmi_moveCenter__QPoint(qtc_obj self, qtc_QPoint a0); /* moveCenter(QPoint) */
+QTC_API qtc_status qtcmi_moveCenter__QPointF(qtc_obj self, qtc_QPointF a0); /* moveCenter(QPointF) */
+QTC_API qtc_status qtcmi_moveTo__QPoint(qtc_obj self, qtc_QPoint a0); /* moveTo(QPoint) */
+QTC_API qtc_status qtcmi_moveTo__QPointF(qtc_obj self, qtc_QPointF a0); /* moveTo(QPointF) */
+QTC_API qtc_status qtcmi_moveTopLeft__QPoint(qtc_obj self, qtc_QPoint a0); /* moveTopLeft(QPoint) */
+QTC_API qtc_status qtcmi_moveTopLeft__QPointF(qtc_obj self, qtc_QPointF a0); /* moveTopLeft(QPointF) */
+QTC_API qtc_status qtcmi_moveTopRight__QPoint(qtc_obj self, qtc_QPoint a0); /* moveTopRight(QPoint) */
+QTC_API qtc_status qtcmi_moveTopRight__QPointF(qtc_obj self, qtc_QPointF a0); /* moveTopRight(QPointF) */
+QTC_API qtc_status qtcmi_offsetChanged__QPointF(qtc_obj self, qtc_QPointF a0); /* offsetChanged(QPointF) */
+QTC_API qtc_status qtcmi_ortho__QRect(qtc_obj self, qtc_QRect a0); /* ortho(QRect) */
+QTC_API qtc_status qtcmi_ortho__QRectF(qtc_obj self, qtc_QRectF a0); /* ortho(QRectF) */
+QTC_API qtc_status qtcmi_physicalSizeChanged__QSizeF(qtc_obj self, qtc_QSizeF a0); /* physicalSizeChanged(QSizeF) */
+QTC_API qtc_status qtcmi_pixel__QPoint(qtc_obj self, qtc_QPoint a0); /* pixel(QPoint) */
+QTC_API qtc_status qtcmi_pixelColor__QPoint(qtc_obj self, qtc_QPoint a0); /* pixelColor(QPoint) */
+QTC_API qtc_status qtcmi_pixelIndex__QPoint(qtc_obj self, qtc_QPoint a0); /* pixelIndex(QPoint) */
+QTC_API qtc_status qtcmi_pixmap__QSize(qtc_obj self, qtc_QSize a0); /* pixmap(QSize) */
+QTC_API qtc_status qtcmi_pixmap__QSize_QIcon_Mode(qtc_obj self, qtc_QSize a0, int64_t a1); /* pixmap(QSize,QIcon::Mode) */
+QTC_API qtc_status qtcmi_pixmap__QSize_QIcon_Mode_QIcon_State(qtc_obj self, qtc_QSize a0, int64_t a1, int64_t a2); /* pixmap(QSize,QIcon::Mode,QIcon::State) */
+QTC_API qtc_status qtcmi_pixmap__QSize_qreal(qtc_obj self, qtc_QSize a0, double a1); /* pixmap(QSize,qreal) */
+QTC_API qtc_status qtcmi_pixmap__QSize_qreal_QIcon_Mode(qtc_obj self, qtc_QSize a0, double a1, int64_t a2); /* pixmap(QSize,qreal,QIcon::Mode) */
+QTC_API qtc_status qtcmi_pixmap__QSize_qreal_QIcon_Mode_QIcon_State(qtc_obj self, qtc_QSize a0, double a1, int64_t a2, int64_t a3); /* pixmap(QSize,qreal,QIcon::Mode,QIcon::State) */
+QTC_API qtc_status qtcmi_pixmap__QWindowPtr_QSize(qtc_obj self, qtc_obj a0, qtc_QSize a1); /* pixmap(QWindow*,QSize) */
+QTC_API qtc_status qtcmi_pixmap__QWindowPtr_QSize_QIcon_Mode(qtc_obj self, qtc_obj a0, qtc_QSize a1, int64_t a2); /* pixmap(QWindow*,QSize,QIcon::Mode) */
+QTC_API qtc_status qtcmi_pixmap__QWindowPtr_QSize_QIcon_Mode_QIcon_State(qtc_obj self, qtc_obj a0, qtc_QSize a1, int64_t a2, int64_t a3); /* pixmap(QWindow*,QSize,QIcon::Mode,QIcon::State) */
+QTC_API qtc_status qtcmi_plotAreaChanged__QRectF(qtc_obj self, qtc_QRectF a0); /* plotAreaChanged(QRectF) */
+QTC_API qtc_status qtcmi_pointLabelsColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* pointLabelsColorChanged(QColor) */
+QTC_API qtc_status qtcmi_popup__QPoint(qtc_obj self, qtc_QPoint a0); /* popup(QPoint) */
+QTC_API qtc_status qtcmi_popup__QPoint_QActionPtr(qtc_obj self, qtc_QPoint a0, qtc_obj a1); /* popup(QPoint,QAction*) */
+QTC_API qtc_status qtcmi_pressed__QPointF(qtc_obj self, qtc_QPointF a0); /* pressed(QPointF) */
+QTC_API qtc_status qtcmi_project__QMatrix4x4_QMatrix4x4_QRect(qtc_obj self, qtc_val a0, qtc_val a1, qtc_QRect a2); /* project(QMatrix4x4,QMatrix4x4,QRect) */
+QTC_API qtc_status qtcmi_quadTo__QPointF_QPointF(qtc_obj self, qtc_QPointF a0, qtc_QPointF a1); /* quadTo(QPointF,QPointF) */
+QTC_API qtc_status qtcmi_released__QPointF(qtc_obj self, qtc_QPointF a0); /* released(QPointF) */
+QTC_API qtc_status qtcmi_remove__QPointF(qtc_obj self, qtc_QPointF a0); /* remove(QPointF) */
+QTC_API qtc_status qtcmi_repaint__QRect(qtc_obj self, qtc_QRect a0); /* repaint(QRect) */
+QTC_API qtc_status qtcmi_replace__QPointF_QPointF(qtc_obj self, qtc_QPointF a0, qtc_QPointF a1); /* replace(QPointF,QPointF) */
+QTC_API qtc_status qtcmi_replace__int_QPointF(qtc_obj self, int64_t a0, qtc_QPointF a1); /* replace(int,QPointF) */
+QTC_API qtc_status qtcmi_resize__QSize(qtc_obj self, qtc_QSize a0); /* resize(QSize) */
+QTC_API qtc_status qtcmi_resize__QSizeF(qtc_obj self, qtc_QSizeF a0); /* resize(QSizeF) */
+QTC_API qtc_status qtcmi_resized__QSize(qtc_obj self, qtc_QSize a0); /* resized(QSize) */
+QTC_API qtc_status qtcmi_rubberBandChanged__QRect_QPointF_QPointF(qtc_obj self, qtc_QRect a0, qtc_QPointF a1, qtc_QPointF a2); /* rubberBandChanged(QRect,QPointF,QPointF) */
+QTC_API qtc_status qtcmi_safeAreaMarginsChanged__QMargins(qtc_obj self, qtc_QMargins a0); /* safeAreaMarginsChanged(QMargins) */
+QTC_API qtc_status qtcmi_scale__QSize_Qt_AspectRatioMode(qtc_obj self, qtc_QSize a0, int64_t a1); /* scale(QSize,Qt::AspectRatioMode) */
+QTC_API qtc_status qtcmi_scale__QSizeF_Qt_AspectRatioMode(qtc_obj self, qtc_QSizeF a0, int64_t a1); /* scale(QSizeF,Qt::AspectRatioMode) */
+QTC_API qtc_status qtcmi_scaled__QSize(qtc_obj self, qtc_QSize a0); /* scaled(QSize) */
+QTC_API qtc_status qtcmi_scaled__QSize_Qt_AspectRatioMode(qtc_obj self, qtc_QSize a0, int64_t a1); /* scaled(QSize,Qt::AspectRatioMode) */
+QTC_API qtc_status qtcmi_scaled__QSize_Qt_AspectRatioMode_Qt_TransformationMode(qtc_obj self, qtc_QSize a0, int64_t a1, int64_t a2); /* scaled(QSize,Qt::AspectRatioMode,Qt::TransformationMode) */
+QTC_API qtc_status qtcmi_scaled__QSizeF_Qt_AspectRatioMode(qtc_obj self, qtc_QSizeF a0, int64_t a1); /* scaled(QSizeF,Qt::AspectRatioMode) */
+QTC_API qtc_status qtcmi_sceneRectChanged__QRectF(qtc_obj self, qtc_QRectF a0); /* sceneRectChanged(QRectF) */
+QTC_API qtc_status qtcmi_scroll__int_int_QRect(qtc_obj self, int64_t a0, int64_t a1, qtc_QRect a2); /* scroll(int,int,QRect) */
+QTC_API qtc_status qtcmi_scrollTo__QPointF(qtc_obj self, qtc_QPointF a0); /* scrollTo(QPointF) */
+QTC_API qtc_status qtcmi_scrollTo__QPointF_int(qtc_obj self, qtc_QPointF a0, int64_t a1); /* scrollTo(QPointF,int) */
+QTC_API qtc_status qtcmi_selectedColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* selectedColorChanged(QColor) */
+QTC_API qtc_status qtcmi_setBackgroundColor__QColor(qtc_obj self, qtc_QColor a0); /* setBackgroundColor(QColor) */
+QTC_API qtc_status qtcmi_setBaseSize__QSize(qtc_obj self, qtc_QSize a0); /* setBaseSize(QSize) */
+QTC_API qtc_status qtcmi_setBestFitLineColor__QColor(qtc_obj self, qtc_QColor a0); /* setBestFitLineColor(QColor) */
+QTC_API qtc_status qtcmi_setBorderColor__QColor(qtc_obj self, qtc_QColor a0); /* setBorderColor(QColor) */
+QTC_API qtc_status qtcmi_setBottomLeft__QPoint(qtc_obj self, qtc_QPoint a0); /* setBottomLeft(QPoint) */
+QTC_API qtc_status qtcmi_setBottomLeft__QPointF(qtc_obj self, qtc_QPointF a0); /* setBottomLeft(QPointF) */
+QTC_API qtc_status qtcmi_setBottomRight__QPoint(qtc_obj self, qtc_QPoint a0); /* setBottomRight(QPoint) */
+QTC_API qtc_status qtcmi_setBottomRight__QPointF(qtc_obj self, qtc_QPointF a0); /* setBottomRight(QPointF) */
+QTC_API qtc_status qtcmi_setCenter__QPointF(qtc_obj self, qtc_QPointF a0); /* setCenter(QPointF) */
+QTC_API qtc_status qtcmi_setCenterPoint__QPointF(qtc_obj self, qtc_QPointF a0); /* setCenterPoint(QPointF) */
+QTC_API qtc_status qtcmi_setClearColor__QColor(qtc_obj self, qtc_QColor a0); /* setClearColor(QColor) */
+QTC_API qtc_status qtcmi_setColor__QColor(qtc_obj self, qtc_QColor a0); /* setColor(QColor) */
+QTC_API qtc_status qtcmi_setColor__QPalette_ColorGroup_QPalette_ColorRole_QColor(qtc_obj self, int64_t a0, int64_t a1, qtc_QColor a2); /* setColor(QPalette::ColorGroup,QPalette::ColorRole,QColor) */
+QTC_API qtc_status qtcmi_setColor__QPalette_ColorRole_QColor(qtc_obj self, int64_t a0, qtc_QColor a1); /* setColor(QPalette::ColorRole,QColor) */
+QTC_API qtc_status qtcmi_setColorAt__qreal_QColor(qtc_obj self, double a0, qtc_QColor a1); /* setColorAt(qreal,QColor) */
+QTC_API qtc_status qtcmi_setContentsMargins__QMargins(qtc_obj self, qtc_QMargins a0); /* setContentsMargins(QMargins) */
+QTC_API qtc_status qtcmi_setContentsMargins__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* setContentsMargins(QMarginsF) */
+QTC_API qtc_status qtcmi_setContentsSize__QSize(qtc_obj self, qtc_QSize a0); /* setContentsSize(QSize) */
+QTC_API qtc_status qtcmi_setCurrentColor__QColor(qtc_obj self, qtc_QColor a0); /* setCurrentColor(QColor) */
+QTC_API qtc_status qtcmi_setCustomFocusPoint__QPointF(qtc_obj self, qtc_QPointF a0); /* setCustomFocusPoint(QPointF) */
+QTC_API qtc_status qtcmi_setDecreasingColor__QColor(qtc_obj self, qtc_QColor a0); /* setDecreasingColor(QColor) */
+QTC_API qtc_status qtcmi_setFillColor__QColor(qtc_obj self, qtc_QColor a0); /* setFillColor(QColor) */
+QTC_API qtc_status qtcmi_setFinalStop__QPointF(qtc_obj self, qtc_QPointF a0); /* setFinalStop(QPointF) */
+QTC_API qtc_status qtcmi_setFixedColorBufferSize__QSize(qtc_obj self, qtc_QSize a0); /* setFixedColorBufferSize(QSize) */
+QTC_API qtc_status qtcmi_setFixedSize__QSize(qtc_obj self, qtc_QSize a0); /* setFixedSize(QSize) */
+QTC_API qtc_status qtcmi_setFocalPoint__QPointF(qtc_obj self, qtc_QPointF a0); /* setFocalPoint(QPointF) */
+QTC_API qtc_status qtcmi_setFramePosition__QPoint(qtc_obj self, qtc_QPoint a0); /* setFramePosition(QPoint) */
+QTC_API qtc_status qtcmi_setFrameRect__QRect(qtc_obj self, qtc_QRect a0); /* setFrameRect(QRect) */
+QTC_API qtc_status qtcmi_setFrameSize__QSize(qtc_obj self, qtc_QSize a0); /* setFrameSize(QSize) */
+QTC_API qtc_status qtcmi_setGeometry__QRect(qtc_obj self, qtc_QRect a0); /* setGeometry(QRect) */
+QTC_API qtc_status qtcmi_setGeometry__QRectF(qtc_obj self, qtc_QRectF a0); /* setGeometry(QRectF) */
+QTC_API qtc_status qtcmi_setGridLineColor__QColor(qtc_obj self, qtc_QColor a0); /* setGridLineColor(QColor) */
+QTC_API qtc_status qtcmi_setGridSize__QSize(qtc_obj self, qtc_QSize a0); /* setGridSize(QSize) */
+QTC_API qtc_status qtcmi_setHotSpot__QPoint(qtc_obj self, qtc_QPoint a0); /* setHotSpot(QPoint) */
+QTC_API qtc_status qtcmi_setHotSpot__QPointF(qtc_obj self, qtc_QPointF a0); /* setHotSpot(QPointF) */
+QTC_API qtc_status qtcmi_setIconSize__QSize(qtc_obj self, qtc_QSize a0); /* setIconSize(QSize) */
+QTC_API qtc_status qtcmi_setIncreasingColor__QColor(qtc_obj self, qtc_QColor a0); /* setIncreasingColor(QColor) */
+QTC_API qtc_status qtcmi_setInputItemRectangle__QRectF(qtc_obj self, qtc_QRectF a0); /* setInputItemRectangle(QRectF) */
+QTC_API qtc_status qtcmi_setLabelColor__QColor(qtc_obj self, qtc_QColor a0); /* setLabelColor(QColor) */
+QTC_API qtc_status qtcmi_setLabelsColor__QColor(qtc_obj self, qtc_QColor a0); /* setLabelsColor(QColor) */
+QTC_API qtc_status qtcmi_setLastCenterPoint__QPointF(qtc_obj self, qtc_QPointF a0); /* setLastCenterPoint(QPointF) */
+QTC_API qtc_status qtcmi_setLastOffset__QPointF(qtc_obj self, qtc_QPointF a0); /* setLastOffset(QPointF) */
+QTC_API qtc_status qtcmi_setLinePenColor__QColor(qtc_obj self, qtc_QColor a0); /* setLinePenColor(QColor) */
+QTC_API qtc_status qtcmi_setMargins__QMargins(qtc_obj self, qtc_QMargins a0); /* setMargins(QMargins) */
+QTC_API qtc_status qtcmi_setMargins__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* setMargins(QMarginsF) */
+QTC_API qtc_status qtcmi_setMargins__QMarginsF_QPageLayout_OutOfBoundsPolicy(qtc_obj self, qtc_QMarginsF a0, int64_t a1); /* setMargins(QMarginsF,QPageLayout::OutOfBoundsPolicy) */
+QTC_API qtc_status qtcmi_setMaximumSize__QSize(qtc_obj self, qtc_QSize a0); /* setMaximumSize(QSize) */
+QTC_API qtc_status qtcmi_setMinimumMargins__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* setMinimumMargins(QMarginsF) */
+QTC_API qtc_status qtcmi_setMinimumSize__QSize(qtc_obj self, qtc_QSize a0); /* setMinimumSize(QSize) */
+QTC_API qtc_status qtcmi_setMinorGridLineColor__QColor(qtc_obj self, qtc_QColor a0); /* setMinorGridLineColor(QColor) */
+QTC_API qtc_status qtcmi_setOffset__QPoint(qtc_obj self, qtc_QPoint a0); /* setOffset(QPoint) */
+QTC_API qtc_status qtcmi_setOffset__QPointF(qtc_obj self, qtc_QPointF a0); /* setOffset(QPointF) */
+QTC_API qtc_status qtcmi_setP1__QPoint(qtc_obj self, qtc_QPoint a0); /* setP1(QPoint) */
+QTC_API qtc_status qtcmi_setP1__QPointF(qtc_obj self, qtc_QPointF a0); /* setP1(QPointF) */
+QTC_API qtc_status qtcmi_setP2__QPoint(qtc_obj self, qtc_QPoint a0); /* setP2(QPoint) */
+QTC_API qtc_status qtcmi_setP2__QPointF(qtc_obj self, qtc_QPointF a0); /* setP2(QPointF) */
+QTC_API qtc_status qtcmi_setPageSize__QPageSize_QMarginsF(qtc_obj self, qtc_val a0, qtc_QMarginsF a1); /* setPageSize(QPageSize,QMarginsF) */
+QTC_API qtc_status qtcmi_setPageSize__QSizeF(qtc_obj self, qtc_QSizeF a0); /* setPageSize(QSizeF) */
+QTC_API qtc_status qtcmi_setPixel__QPoint_uint(qtc_obj self, qtc_QPoint a0, int64_t a1); /* setPixel(QPoint,uint) */
+QTC_API qtc_status qtcmi_setPixelColor__QPoint_QColor(qtc_obj self, qtc_QPoint a0, qtc_QColor a1); /* setPixelColor(QPoint,QColor) */
+QTC_API qtc_status qtcmi_setPixelColor__int_int_QColor(qtc_obj self, int64_t a0, int64_t a1, qtc_QColor a2); /* setPixelColor(int,int,QColor) */
+QTC_API qtc_status qtcmi_setPlotArea__QRectF(qtc_obj self, qtc_QRectF a0); /* setPlotArea(QRectF) */
+QTC_API qtc_status qtcmi_setPoint__int_QPoint(qtc_obj self, int64_t a0, qtc_QPoint a1); /* setPoint(int,QPoint) */
+QTC_API qtc_status qtcmi_setPointLabelsColor__QColor(qtc_obj self, qtc_QColor a0); /* setPointLabelsColor(QColor) */
+QTC_API qtc_status qtcmi_setPoints__QPoint_QPoint(qtc_obj self, qtc_QPoint a0, qtc_QPoint a1); /* setPoints(QPoint,QPoint) */
+QTC_API qtc_status qtcmi_setPoints__QPointF_QPointF(qtc_obj self, qtc_QPointF a0, qtc_QPointF a1); /* setPoints(QPointF,QPointF) */
+QTC_API qtc_status qtcmi_setPosition__QPoint(qtc_obj self, qtc_QPoint a0); /* setPosition(QPoint) */
+QTC_API qtc_status qtcmi_setPosition__QPointF(qtc_obj self, qtc_QPointF a0); /* setPosition(QPointF) */
+QTC_API qtc_status qtcmi_setPrimaries__QPointF_QPointF_QPointF_QPointF(qtc_obj self, qtc_QPointF a0, qtc_QPointF a1, qtc_QPointF a2, qtc_QPointF a3); /* setPrimaries(QPointF,QPointF,QPointF,QPointF) */
+QTC_API qtc_status qtcmi_setResolution__QSize(qtc_obj self, qtc_QSize a0); /* setResolution(QSize) */
+QTC_API qtc_status qtcmi_setScaledSize__QSize(qtc_obj self, qtc_QSize a0); /* setScaledSize(QSize) */
+QTC_API qtc_status qtcmi_setSceneRect__QRectF(qtc_obj self, qtc_QRectF a0); /* setSceneRect(QRectF) */
+QTC_API qtc_status qtcmi_setSelectedColor__QColor(qtc_obj self, qtc_QColor a0); /* setSelectedColor(QColor) */
+QTC_API qtc_status qtcmi_setShadesBorderColor__QColor(qtc_obj self, qtc_QColor a0); /* setShadesBorderColor(QColor) */
+QTC_API qtc_status qtcmi_setShadesColor__QColor(qtc_obj self, qtc_QColor a0); /* setShadesColor(QColor) */
+QTC_API qtc_status qtcmi_setSize__QSize(qtc_obj self, qtc_QSize a0); /* setSize(QSize) */
+QTC_API qtc_status qtcmi_setSize__QSizeF(qtc_obj self, qtc_QSizeF a0); /* setSize(QSizeF) */
+QTC_API qtc_status qtcmi_setSizeIncrement__QSize(qtc_obj self, qtc_QSize a0); /* setSizeIncrement(QSize) */
+QTC_API qtc_status qtcmi_setStart__QPointF(qtc_obj self, qtc_QPointF a0); /* setStart(QPointF) */
+QTC_API qtc_status qtcmi_setStartCenterPoint__QPointF(qtc_obj self, qtc_QPointF a0); /* setStartCenterPoint(QPointF) */
+QTC_API qtc_status qtcmi_setTabTextColor__int_QColor(qtc_obj self, int64_t a0, qtc_QColor a1); /* setTabTextColor(int,QColor) */
+QTC_API qtc_status qtcmi_setTextBackgroundColor__QColor(qtc_obj self, qtc_QColor a0); /* setTextBackgroundColor(QColor) */
+QTC_API qtc_status qtcmi_setTextColor__QColor(qtc_obj self, qtc_QColor a0); /* setTextColor(QColor) */
+QTC_API qtc_status qtcmi_setTextMargins__QMargins(qtc_obj self, qtc_QMargins a0); /* setTextMargins(QMargins) */
+QTC_API qtc_status qtcmi_setTextureSize__QSize(qtc_obj self, qtc_QSize a0); /* setTextureSize(QSize) */
+QTC_API qtc_status qtcmi_setTopLeft__QPoint(qtc_obj self, qtc_QPoint a0); /* setTopLeft(QPoint) */
+QTC_API qtc_status qtcmi_setTopLeft__QPointF(qtc_obj self, qtc_QPointF a0); /* setTopLeft(QPointF) */
+QTC_API qtc_status qtcmi_setTopRight__QPoint(qtc_obj self, qtc_QPoint a0); /* setTopRight(QPoint) */
+QTC_API qtc_status qtcmi_setTopRight__QPointF(qtc_obj self, qtc_QPointF a0); /* setTopRight(QPointF) */
+QTC_API qtc_status qtcmi_setTransformOriginPoint__QPointF(qtc_obj self, qtc_QPointF a0); /* setTransformOriginPoint(QPointF) */
+QTC_API qtc_status qtcmi_setUnderlineColor__QColor(qtc_obj self, qtc_QColor a0); /* setUnderlineColor(QColor) */
+QTC_API qtc_status qtcmi_setVideoResolution__QSize(qtc_obj self, qtc_QSize a0); /* setVideoResolution(QSize) */
+QTC_API qtc_status qtcmi_setViewBox__QRect(qtc_obj self, qtc_QRect a0); /* setViewBox(QRect) */
+QTC_API qtc_status qtcmi_setViewBox__QRectF(qtc_obj self, qtc_QRectF a0); /* setViewBox(QRectF) */
+QTC_API qtc_status qtcmi_setViewport__QRect(qtc_obj self, qtc_QRect a0); /* setViewport(QRect) */
+QTC_API qtc_status qtcmi_setWhitePoint__QPointF(qtc_obj self, qtc_QPointF a0); /* setWhitePoint(QPointF) */
+QTC_API qtc_status qtcmi_setWindowFrameMargins__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* setWindowFrameMargins(QMarginsF) */
+QTC_API qtc_status qtcmi_shadesBorderColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* shadesBorderColorChanged(QColor) */
+QTC_API qtc_status qtcmi_shadesColorChanged__QColor(qtc_obj self, qtc_QColor a0); /* shadesColorChanged(QColor) */
+QTC_API qtc_status qtcmi_showMessage__QString_int_QColor(qtc_obj self, qtc_str a0, int64_t a1, qtc_QColor a2); /* showMessage(QString,int,QColor) */
+QTC_API qtc_status qtcmi_showTearOffMenu__QPoint(qtc_obj self, qtc_QPoint a0); /* showTearOffMenu(QPoint) */
+QTC_API qtc_status qtcmi_shrunkBy__QMargins(qtc_obj self, qtc_QMargins a0); /* shrunkBy(QMargins) */
+QTC_API qtc_status qtcmi_shrunkBy__QMarginsF(qtc_obj self, qtc_QMarginsF a0); /* shrunkBy(QMarginsF) */
+QTC_API qtc_status qtcmi_tabAt__QPoint(qtc_obj self, qtc_QPoint a0); /* tabAt(QPoint) */
+QTC_API qtc_status qtcmi_transformBetween__Qt_ScreenOrientation_Qt_ScreenOrientation_QRect(qtc_obj self, int64_t a0, int64_t a1, qtc_QRect a2); /* transformBetween(Qt::ScreenOrientation,Qt::ScreenOrientation,QRect) */
+QTC_API qtc_status qtcmi_translate__QPoint(qtc_obj self, qtc_QPoint a0); /* translate(QPoint) */
+QTC_API qtc_status qtcmi_translate__QPointF(qtc_obj self, qtc_QPointF a0); /* translate(QPointF) */
+QTC_API qtc_status qtcmi_translated__QPoint(qtc_obj self, qtc_QPoint a0); /* translated(QPoint) */
+QTC_API qtc_status qtcmi_translated__QPointF(qtc_obj self, qtc_QPointF a0); /* translated(QPointF) */
+QTC_API qtc_status qtcmi_united__QRect(qtc_obj self, qtc_QRect a0); /* united(QRect) */
+QTC_API qtc_status qtcmi_united__QRectF(qtc_obj self, qtc_QRectF a0); /* united(QRectF) */
+QTC_API qtc_status qtcmi_unproject__QMatrix4x4_QMatrix4x4_QRect(qtc_obj self, qtc_val a0, qtc_val a1, qtc_QRect a2); /* unproject(QMatrix4x4,QMatrix4x4,QRect) */
+QTC_API qtc_status qtcmi_update__QRect(qtc_obj self, qtc_QRect a0); /* update(QRect) */
+QTC_API qtc_status qtcmi_update__QRectF(qtc_obj self, qtc_QRectF a0); /* update(QRectF) */
+QTC_API qtc_status qtcmi_updateRequest__QRect_int(qtc_obj self, qtc_QRect a0, int64_t a1); /* updateRequest(QRect,int) */
+QTC_API qtc_status qtcmi_updateSceneRect__QRectF(qtc_obj self, qtc_QRectF a0); /* updateSceneRect(QRectF) */
+QTC_API qtc_status qtcmi_updated__QRect(qtc_obj self, qtc_QRect a0); /* updated(QRect) */
+QTC_API qtc_status qtcmi_valid__QPoint(qtc_obj self, qtc_QPoint a0); /* valid(QPoint) */
+QTC_API qtc_status qtcmi_viewport__QRectF(qtc_obj self, qtc_QRectF a0); /* viewport(QRectF) */
+QTC_API qtc_status qtcmi_virtualGeometryChanged__QRect(qtc_obj self, qtc_QRect a0); /* virtualGeometryChanged(QRect) */
+QTC_API qtc_status qtcmi_virtualSiblingAt__QPoint(qtc_obj self, qtc_QPoint a0); /* virtualSiblingAt(QPoint) */
+QTC_API qtc_status qtcmi_zoomIn__QRectF(qtc_obj self, qtc_QRectF a0); /* zoomIn(QRectF) */
 #ifdef __cplusplus
 }
 #endif
