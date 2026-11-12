@@ -1,7 +1,7 @@
 /* Widgets on Wayland (run by run_wayland.sh under a headless weston): windows whose platform
  * window is gone, a closed window, a dismissed or refused popup, still get Expose and
  * UpdateRequest events, and nothing qtc does with those may ask their backing store for a
- * paint device (Qt's Wayland plugin crashes there). 1.1.0 crashed in each case below. */
+ * paint device (Qt's Wayland plugin crashes there). An earlier version crashed in each case below. */
 #include "qtc.h"
 
 #include <stdio.h>

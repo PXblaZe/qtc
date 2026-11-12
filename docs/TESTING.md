@@ -1,7 +1,7 @@
 # How qtc is tested
 
 Everything here runs on Qt's offscreen platform, so it needs no display. The
-numbers are from the runs made for the 1.1.0 release on Linux x86-64 (GCC 13),
+numbers are from runs on Linux x86-64 (GCC 13),
 against Qt 6.12.0 (6.12 LTS is the supported release), natively and under
 AddressSanitizer with UndefinedBehaviorSanitizer, with the GPL-3.0-only add-on
 modules built in (so they are tested too); the [results](#results) section has
@@ -41,7 +41,7 @@ between items, so state built by one method is used by the next.
   calls with random arities and a random mix of the fixed patterns and wider
   values (`INT_MIN`, 2^20, ±infinity, undeclared enum values, invalid UTF-8,
   control characters, nested JSON). A different seed is a different program;
-  most of the crashes fixed for 1.0.0 were found this way.
+  most of the crashes fixed during development were found this way.
 - **By name** (`--by-name`): every method called by name instead of signature,
   as a program would; it checks that overload resolution picks a method, and
   reports the calls it cannot resolve.
@@ -90,7 +90,7 @@ a mismatch stops the program.
 
 ## Results
 
-The last runs (qtc 1.5.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
+The release runs (each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
 modules built in so that they are tested too. The graphics suites ran with Mesa's llvmpipe
 (OpenGL) and lavapipe (Vulkan, with the Khronos validation layers under the sanitizers).
 
@@ -112,7 +112,9 @@ an empty directory: no GPL-3.0-only module is linked (`ldd`), the fuzzer lists 1
 and none from those modules, `ctest` passes 18 of 18, and goose-qt passes its 18 tests and
 11 examples against it.
 
-The method fuzzer, release build:
+The method fuzzer, release build (the 128 random orders ran during development, before the
+last changes to object lifetimes and calls; the sanitizer rounds below ran on the release
+code):
 
 | run | items | calls | failures |
 |---|---:|---:|---:|
@@ -128,7 +130,8 @@ failure in qtc these rounds found is fixed, with a test, and the orders that fou
 clean; the lifetime run found the last one (a CoAP reply destroyed while the client's
 protocol thread still used it), and it runs clean on the fix.
 
-Under AddressSanitizer and UndefinedBehaviorSanitizer (1.3.0's run; 1.4.0's below):
+Under AddressSanitizer and UndefinedBehaviorSanitizer, before the changes to object
+lifetimes:
 
 | run | items | calls | failures |
 |---|---:|---:|---:|
@@ -137,11 +140,11 @@ Under AddressSanitizer and UndefinedBehaviorSanitizer (1.3.0's run; 1.4.0's belo
 | lifetime | 1,348 | 100,439 | 0 |
 | random orders, seeds 1, 2 and 4–13 | 13,617 each | 2,031,408 | 0 |
 
-qtc 1.4.0 changed how objects are made and destroyed, so the fuzzer ran again under the
-sanitizers, now with `QTC_CROSSCHECK` checking each destruction that skipped a cleanup.
-qtc 1.5.0's run (fixed order, by name, lifetimes, seeds 5 and 77) had the same counts and
-no failures; seed 5's first attempt timed out while other work loaded the machine and
-passed when run alone. 1.4.0's run:
+The changes to how objects are made and destroyed came next, so the fuzzer ran again under
+the sanitizers, with `QTC_CROSSCHECK` checking each destruction that skipped a cleanup. The
+release code's run (fixed order, by name, lifetimes, seeds 5 and 77) had the same counts and
+no failures; seed 5's first attempt timed out while other work loaded the machine and passed
+when run alone. The run between the two:
 
 | run | items | calls | failures |
 |---|---:|---:|---:|
@@ -170,7 +173,7 @@ passed when run alone. 1.4.0's run:
 | drawing 200,000 commands onto a 1024x1024 image | 3,361 ms | 6,000 ms |
 | handles stay valid across 50 shutdown/init cycles | 277 ms | 30,000 ms |
 
-What a call through `qtc_call` costs in 1.2.0 (`tests/bench.cpp`, release build, ns per
+What a call through `qtc_call` costs (`tests/bench.cpp`, measured during development, release build, ns per
 operation on a 2-core 2.3 GHz Xeon VM; "direct" is the same call in C++, and its column shows
 how noisy the machine is). The direct entry points of `qtc_direct.h` cost about half of these:
 45–55 ns for `setText` and `text`, 17 ns for `value` (bench/compare in goose-qt):
@@ -194,7 +197,7 @@ how noisy the machine is). The direct entry points of `qtc_direct.h` cost about 
 ## What the fuzzers found
 
 Most of the precondition table is the fuzzers' work: each rule names the crash it
-prevents. Some of what the random-order runs found for 1.0.0, all crashes or
+prevents. Some of what the random-order runs found, all crashes or
 hangs inside Qt reached through ordinary calls:
 
 | call | what Qt does |
@@ -263,7 +266,7 @@ hangs inside Qt reached through ordinary calls:
 | `QPainterPath::setElementPositionAt` with NaN or infinity, then `simplified()` or `united()` | the clipper crashes on the point (Qt keeps non-finite points out of `moveTo`, `lineTo` and the rest) |
 | a window given a window state, then new flags with no parent, then put in a parent before being shown again, then a `QOpenGLWidget` put in it | Qt leaves the old native window on what is now a plain child, takes it for the native parent, remakes it for OpenGL and gets no window back |
 
-Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
+Found in later rounds (the first four in the GPL-3.0-only add-ons):
 
 | call | what Qt does |
 |---|---|
@@ -271,7 +274,7 @@ Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
 | `QMqttClient::setTransport(buffer, AbstractSocket)`, then `connectToHost()` | casts the buffer to a socket without checking and reads through null |
 | `QMqttClient::setState(Connected)`, then `publish()` | writes to a transport it never made |
 | the default reply handler of an OAuth object, or an MQTT client's transport, destroyed | the owner keeps a plain pointer to it (a scoped pointer, or one it never lets go of) |
-| `QWidget::grab(QRect(0, 1, 2, 0))` on a widget with a graphics effect | the empty rectangle still "intersects" the widget; the effect paints into the null pixmap (the crash 1.0.0 listed as unexplained) |
+| `QWidget::grab(QRect(0, 1, 2, 0))` on a widget with a graphics effect | the empty rectangle still "intersects" the widget; the effect paints into the null pixmap |
 | `QWidget::grab` with one negative size and a far-off top left | grabs from that corner to the widget's bottom right: a pixmap too large to allocate, painted into anyway |
 | `QWidget::scroll(INT_MIN, INT_MIN)` | the backing store's rectangle arithmetic overflows and copies out of the image |
 | `QGraphicsScene::setStyle` while proxy widgets use the scene's own style | deletes the style, then tells the embedded widgets, which unpolish with it |
@@ -279,16 +282,16 @@ Found for 1.1.0 (the first four in the GPL-3.0-only add-ons):
 | `QWaveDecoder::seek` far past the end of the buffer it reads | the buffer grows to the position: gigabytes, until the system kills the process |
 | an area series in a chart, then `QChart::removeAllSeries()`, then `setPointsVisible` on its upper line | the area series is deleted at once, its chart item later, and the item reads the deleted series when the line changes |
 | `QBarSet::remove(1, INT_MAX)` | index + count wraps, and Qt removes past the end |
-| `QGridLayout::setRowMinimumHeight(100, INT_MIN)` and others, then `setGeometry` | the layout engine's sums wrap and its space distribution never finishes (the 1.0.0 box-layout hang, through the grid's own row and column sizes) |
+| `QGridLayout::setRowMinimumHeight(100, INT_MIN)` and others, then `setGeometry` | the layout engine's sums wrap and its space distribution never finishes (as the box layouts did, through the grid's own row and column sizes) |
 | `QPlainTextEdit::find` with an empty regular expression, backward, whole words, over a 4,096-character line | tries every earlier position, matching each from the start of the line: seconds to minutes |
 | a text path moved by NaN, joined to itself, then `QGraphicsScene::setSelectionArea` with it | the NaN points defeat the bounding-box early outs, and each item is tested against every element: minutes |
 | a scroll area's widget added to a tool box (whose page is a scroll area of its own), both resizable | the first keeps watching it: each resizes it to its own viewport on the other's resize, until the stack runs out |
 | `QXYSeries::pointAdded(-1)` emitted by hand on a line series in a chart | the chart item inserts the series' point -1 into its own copy |
 | `QString::normalized` on a string of a million characters, a quarter past ASCII, called a dozen times | Qt rewrites the string in place: about length x characters past ASCII, seconds per call (and a run of combining marks costs its square) |
-| `QString::toUcs4` on the fuzzer's string after earlier calls grew it (seed 1501, 1.3.0's run) | not a Qt fault: the fuzzer turns each multi-million-element result into text (`qtc_val_to_string`), about 1.3 s per call in a release build, past the 60 s hang limit under the sanitizers |
+| `QString::toUcs4` on the fuzzer's string after earlier calls grew it (seed 1501) | not a Qt fault: the fuzzer turns each multi-million-element result into text (`qtc_val_to_string`), about 1.3 s per call in a release build, past the 60 s hang limit under the sanitizers |
 | `QStandardItemModel` with 32 columns and a million rows, then `removeColumns(0, 1)` | removes the column row by row, moving the rest of the model each time |
 | the reply of `QCoapClient::discover` destroyed at once | the client's protocol thread still holds it and reads it on its next event |
-| a `QCoapClient` destroyed at once after `get` (found under ASan in 1.3.0's run: 1.2.0 deletes at once) | the protocol thread runs the queued `sendRequest` on the client's replies, which are gone: qtc lets that thread drain first |
+| a `QCoapClient` destroyed at once after `get` (found under ASan once qtc deleted objects at once) | the protocol thread runs the queued `sendRequest` on the client's replies, which are gone: qtc lets that thread drain first |
 
 They found bugs in qtc too: `QByteArray::erase` was bound with its iterators taken
 for byte buffers (it then freed memory it did not own); deletions Qt makes itself
@@ -305,7 +308,7 @@ read it; the ownership rules did not know that a graphics proxy keeps the widget
 (a scene's `clear()` deleted it inside a column view), that an item view keeps its index
 widgets, or that graphics widgets using a style lose it when the style's parent is destroyed
 (qtc_shutdown read the style afterwards); and 144 common calls by name were reported as
-ambiguous between equivalent overloads (`QColor(QString)` and `QColor(QStringView)`). For 1.1.0:
+ambiguous between equivalent overloads (`QColor(QString)` and `QColor(QStringView)`). Later rounds:
 the `QBuffer::seek` limit covered only calls that resolved to `QBuffer::seek`, not
 `QIODevice::seek` on a buffer or classes that seek a buffer they read; and the size check
 before `QWidget::grab` did not follow Qt's rule for a rectangle with one negative size.
@@ -313,10 +316,10 @@ before `QWidget::grab` did not follow Qt's rule for a rectangle with one negativ
 ## What the tests do not show
 
 - Fuzzing finds what its values and orders reach, and it has not run out. The
-  rate falls as rounds go (for 1.0.0: 4 failures in 16 orders, then 2 in 16
-  new ones, then 5 in 48, then 1 in 64; for 1.1.0, with new modules and
-  classes, rounds of 12 to 16 new orders found 1 to 3 each, then 64 orders 4,
-  then 96 orders 3, then 128 orders 4, and the last 128 none in qtc), but each new
+  rate falls as rounds go (first 4 failures in 16 orders, then 2 in 16 new
+  ones, then 5 in 48, then 1 in 64; with new modules and classes, rounds of 12
+  to 16 new orders found 1 to 3 each, then 64 orders 4, then 96 orders 3, then
+  128 orders 4, and the last 128 none in qtc), but each new
   order can still reach a rarely combined corner; the open ones are in
   [LIMITS.md](LIMITS.md#known-open-failures). A change to the bound methods
   reshuffles every seed, and so does a new refusal, so an order that ran clean
@@ -329,7 +332,7 @@ before `QWidget::grab` did not follow Qt's rule for a rectangle with one negativ
   and Qt 6.5 to 6.11 never were; CMake accepts them only with
   `-DQTC_ALLOW_OLDER_QT=ON`.
 - Real displays are not tested, and neither are macOS and Windows. Wayland is covered only
-  by the `wayland` test on a headless weston, added in 1.1.1 after a crash there; the graphics
+  by the `wayland` test on a headless weston, added after a crash there; the graphics
   tests use an X server without a display (Xvfb) and Mesa's software renderers
   (llvmpipe, lavapipe). Direct3D and Metal are neither compiled nor run, and no
   GPU vendor's driver was used.

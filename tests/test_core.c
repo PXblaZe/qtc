@@ -1072,7 +1072,7 @@ static void test_qml(void) {
     CHECK_EQ(qtc_call(o, S("add")), QTC_OK);
     CHECK_EQ(qtc_ret_int(), 42);
     /* a value stored outside its variant (QRectF is 32 bytes) reaches an untyped QML parameter
-       as itself (1.0.0 passed the address of the value, read as a variant: a crash) */
+       as itself (an early version passed the address of the value, read as a variant: a crash) */
     qtc_arg_double(1);
     qtc_arg_double(2);
     qtc_arg_double(30);

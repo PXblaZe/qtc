@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(qtc VERSION 1.5.0 LANGUAGES C CXX DESCRIPTION "Qt 6 for C, safe by construction")
+project(qtc VERSION 1.0.0 LANGUAGES C CXX DESCRIPTION "Qt 6 for C, safe by construction")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

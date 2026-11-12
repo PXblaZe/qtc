@@ -1,316 +1,55 @@
 # Changelog
 
-## 1.5.0 — 2026-11-12
+## 1.0.0 — 2026-11-12
 
-Faster calls and signals, every check kept.
+The first release: Qt 6.12 LTS for C, and for any language that can call C.
 
-### Added
-- Direct signals: a connection made with `QTC_CONN_DIRECT` hands its event to the handler
-  set with `qtc_set_signal_handler` inside the emission, as Qt calls a slot, instead of
-  queueing it. The handler runs as an override handler does: the program's pending
-  arguments and last result are set aside, an object it destroys (the sender too) is
-  deleted once Qt's call returns, the event loop is refused, and calls nest up to 64 deep.
-  `qtc_direct_event` returns the event to a binding that cannot pass the pointer on.
-  A direct emission takes 1,644 instructions from click to handler, against 2,218 queued
-  and polled; in goose-qt's benchmark, 168 ns from C against 207.
+### What it binds
+- About 12,400 methods and 1,000 constructors of 618 classes across 25 Qt modules,
+  generated from Qt's headers with libclang: widgets, Qt Quick and QML, painting, item
+  models, networking, SQL, XML, D-Bus, multimedia, charts, serial ports, positioning,
+  WebSockets, MQTT, CoAP and more. Qt Core, Gui and Widgets are in `libqtc`; every other
+  module is a library of its own (`libqtc_<Module>`), loaded the first time a program
+  uses one of its classes. The GPL-3.0-only modules are left out unless asked for
+  ([LICENSING.md](docs/LICENSING.md)).
+- Calls by name (`qtc_call`, with overloads resolved at run time) and a C function per
+  bound signature (`qtc_direct.h`: `qtcm_setText__QString`, constructors as `qtcn_*`).
+- Small value types as C structs with Qt's own layout (`qtc_inline.h`: points, sizes,
+  rectangles, lines, margins, colors); other values as handles.
+- Signals and watched events queued and polled (`qtc_wait`, `qtc_poll`), or handed to a
+  handler inside the emission (`QTC_CONN_DIRECT`, `qtc_set_signal_handler`).
+- Subclassing (`qtc_new_overridable`, `qtc_override`), classes defined at run time with
+  signals, slots and properties Qt and QML see (`qtc_class_*`), futures, promises, tasks
+  and worker threads, and Qt's RHI for GPU rendering and compute (`qtc_rhi_*`).
 
-### Faster
-- Each direct entry point keeps the last class it was called on, checked before anything
-  else: a call site that sees one class goes from the handle check straight to the method.
-- The "is qtc initialized, is this its thread" check every call makes is one load and one
-  comparison, inline in each entry point; the registry is reached through a pointer
-  instead of a function-local static.
-- A string returned on the GUI thread is kept in a plain global instead of a thread-local.
-- A connection works out once which of its signal's parameters are plain numbers, so such
-  emissions skip the per-emission meta-type lookups; event numbers are taken with one
-  atomic add.
-- In instructions: `slider.value()` 324 (was 389), `setText` 839 (902), `text()` 734 (853),
-  making and destroying a `QObject` 2,279 (2,365). In goose-qt's benchmark, from C:
-  `value()` 16 ns (21), `setText` 55 ns (58), a `QObject` made and destroyed 156 ns (178).
+### How it keeps programs from crashing
+- Objects and values are 64-bit handles with a generation count: a handle to something
+  destroyed is `QTC_ERR_STALE_HANDLE`, never a dangling pointer.
+- Every call checks the receiver (alive, its thread, its class), every argument's type and
+  range, and a table of nearly 400 preconditions for inputs that crash or hang Qt, each
+  found by the fuzzers. Objects Qt owns or still holds cannot be destroyed out from under
+  it: their holders let go first.
+- Handlers that run inside Qt (overrides, direct signals) cannot run the event loop, and
+  what they destroy is deleted once Qt's call returns.
 
-### Tested
-The 19 suites pass in release and AddressSanitizer + UndefinedBehaviorSanitizer builds
-(cross-checks on); `test_core` has 1,202 checks, among them direct signals that nest,
-refuse the event loop and destroy their sender. The method fuzzer ran under the sanitizers
-(fixed order, by name, lifetimes, seeds 5 and 77) with no failures; seed 5's first run
-timed out while other work loaded the machine and passed alone. goose-qt 1.7.0's tests
-and examples pass against it.
+### How fast it is
+- A call through a direct entry point costs 15–60 ns on a 2.1 GHz Xeon (C++: 1–26 ns),
+  with every check made; a small value made and read as a struct, 15 ns. Each entry point
+  remembers the class it was last called on.
+- Making and destroying a `QObject` costs about 135–155 ns: objects are made as a subclass
+  whose destructor releases the handle, deleted at once, and skip the event and ownership
+  cleanups they have nothing for.
+- A widgets program starts in about 24 ms and peaks at 39 MiB (C++: 17 ms, 29 MiB).
+- goose-qt's comparison (`goose-qt/docs/comparison.md`) runs the same benchmark in C++,
+  qtc, goose-qt, PyQt6, PySide6, Go's miqt and Rust's cxx-qt.
 
-## 1.4.0 — 2026-11-12
-
-Cheaper object lifetimes: less work to make and destroy an object, and a run-time check of
-the shortcuts in sanitizer builds.
-
-### Faster
-- Each registry slot records whether the event layer (a connection, a watch) or the
-  ownership roles (an owner: something that can hold other objects) keep anything for its
-  object. Destroying an object with neither, most objects, skips both cleanups.
-- `qtc_destroy` looks the handle up once instead of three times. An object qtc made, deleted
-  at once in the GUI thread with no module that could keep it alive, is no longer marked
-  dying first: nothing runs between the check and its destructor, whose first act is to
-  release the handle. That is one lock fewer per object.
-- Shortcuts for the common case: no ownership work when there are no owners, for objects
-  made with no children inside, or when no pins or style users exist.
-- Together: 2,365 instructions to make and destroy a `QObject`, down from 2,847 (−17%), and
-  two trips through the registry's lock instead of three. In goose-qt's comparison benchmark
-  it takes 178 ns, against 245 ns in the previous run (C++: 41 ns).
-
-### Fixed
-- The GUI thread reads object slots without the registry's lock. The slots were a
-  `std::vector`, which another thread adding a slot could reallocate under such a read. They
-  are now pages of 4,096 slots that never move once made.
-- An object made at the address of one destroyed since the last top-level point was taken
-  for the dying one in a few places: as a signal argument it came back as handle 0. Objects
-  qtc makes now clear that mark.
-
-### Added
-- The `QTC_CROSSCHECK` build option, on by default with `QTC_SANITIZE`: at each destruction
-  that skipped a cleanup, check that there was nothing to clean up, and stop the program if
-  there was.
-- `test_core` checks 300 rounds of plain, connected, watched and owner objects destroyed in
-  random orders, with their addresses reused at once: no handle survives, and no connection
-  of a dead object fires for a new one.
-
-### Tested
-The 19 suites pass in release and AddressSanitizer + UndefinedBehaviorSanitizer builds, the
-latter with `QTC_CROSSCHECK`; `test_core` has 1,182 checks. The method fuzzer ran under the
-sanitizers (fixed order, by name, lifetimes, two random orders): clean but for OpenSSL's
-known double free at exit in one order. goose-qt's 20 tests and 12 examples pass.
-
-## 1.3.0 — 2026-11-12
-
-### Added
-- **Inline values** (`include/qtc_inline.h`, generated by `gen/inline.py`): `QPoint`,
-  `QPointF`, `QSize`, `QSizeF`, `QRect`, `QRectF`, `QLine`, `QLineF`, `QMargins`,
-  `QMarginsF` and `QColor` as C structs of their exact layout, held by the caller with no
-  handle, and 369 C functions for their constructors and methods, which call Qt directly.
-  The usual checks apply (integer ranges, null pointers, and a `QColor` must have a valid
-  spec and hue). `qtc_arg_<T>`, `qtc_ret_<T>`, `qtc_val_from_<T>` and `qtc_val_to_<T>`
-  connect them to the dynamic API, and 326 `qtcmi_*` direct entry points take them where
-  object methods take such values (`qtcmi_setGeometry__QRect`). `QColor(255, 0, 0).red()`:
-  about 140 ns through value handles, about 15 ns inline.
-- `manifest/qtc_inline.json` describes them for language bindings.
-
-### Faster
-- The handle registry's object index and its set of recently destroyed objects are an
-  open-addressing pointer map that allocates nothing as objects come and go, and its lock
-  is a recursive lock over a plain mutex: about 8% fewer instructions to make and destroy
-  an object.
-- The direct entry points keep the ownership bookkeeping out of line and read their flags
-  once: about 4% fewer instructions per call.
-
-### Tested
-The 19 suites pass in release and AddressSanitizer + UndefinedBehaviorSanitizer builds;
-`test_core` adds 43 checks of the inline values (1,118 in all).
-
-## 1.2.0 — 2026-11-12
-
-### Added
-- **Direct entry points** (`include/qtc_direct.h`, generated by `gen/entries.py`): one
-  exported C function per bound method signature, `qtcm_<method>__<types>(receiver, ...)`,
-  and per constructor, `qtcn_<Class>__<types>(...)` (8,681 and 1,634 of them). Arguments go in
-  as C parameters instead of through the argument stack, and the first call per receiver
-  class resolves the signature exactly as `qtc_call` would and keeps the result, so later
-  calls go straight to the thunk. Every check stays: the handle and its thread, the class,
-  each argument, preconditions, ownership. `manifest/qtc_entries.json` maps signatures to
-  function names for language bindings.
-- **Qt modules load on demand.** `libqtc` binds Qt Core, Gui and Widgets; each other module
-  (Network, Sql, Qml, Quick, Multimedia, Charts ...) is bound by `libqtc_<Module>` beside it,
-  loaded the first time a program uses one of its classes, and so is Qt Shader Tools
-  (`libqtc_ShaderTools`, for `qtc_rhi_shader_bake`). Programs need no change. A widgets
-  program maps 4 Qt libraries instead of about 30. `-DQTC_SPLIT_MODULES=OFF` (always the case
-  on Windows) keeps everything in `libqtc`. The GPL-3.0-only modules, when built, are now
-  linked only by their own libraries (docs/LICENSING.md).
-
-### Faster
-From C, release build, on the comparison machine (median of five runs):
-- Start a widgets program, show and grab a label, exit: 42 → 20 ms; resident memory
-  65.6 → 40.0 MiB.
-- Through the direct entry points: `QLabel::setText` 45 ns (98 through `qtc_call`),
-  `QLabel::text` 53 (80), `QAbstractSlider::setValue` 41 (85), `value` 17 (48), a `QColor`
-  made, read and freed 139 (310).
-- Objects qtc makes are `Tracked<Class>` (sip's technique): the destructor releases the
-  handle itself, so an object needs no `destroyed()` connection and no `QPointer`.
-  `qtc_destroy` deletes at once unless an override handler is running or events are still
-  queued for the object or its children (then it defers, as before). A Tracked object is
-  marked made, and owned, as its handle is made, so construction takes the registry lock
-  once. Making and destroying an object: ~900 → ~210 ns.
-- The GUI thread reads the handles of GUI-thread objects and of values without the
-  registry lock (cleared by `QEvent::ThreadChange` before an object moves).
-- Signals with plain number arguments keep them as numbers; QVariants are made only when
-  asked for.
-- Property writes resolve their setter once per class, property name and value kind:
-  `qtc_set_str` ~210 → ~108 ns.
-
-### Changed
-- `qtc_class_count`, `qtc_class_at` and `qtc_stats` load every module library there is
-  first, so they still list every bound class.
-
-### Tested
-The 19 test suites pass in release and AddressSanitizer + UndefinedBehaviorSanitizer builds
-(`test_core` adds checks of the direct entry points: 1,075 in all). The method fuzzer ran
-clean on the final code under the sanitizers: fixed order, by name, object lifetimes and
-three random orders.
-
-## 1.1.1 — 2026-11-11
-
-### Fixed
-- Widget programs crashed on Wayland when a window closed and when a menu (any popup) was
-  dismissed: qtc's application event filter asked the backing store of a window whose
-  platform window was gone for its paint device, which crashes in Qt's Wayland plugin. The
-  check now runs only for exposed windows with a platform window. A new test, `wayland`,
-  runs widget windows, a popup and closes against a headless weston (skipped without one).
-  Reported with a backtrace by a user on Arch Linux.
-
-### Faster
-Profiled with callgrind against goose-qt's comparison benchmark, which put qtc's calls
-behind PyQt6's; every check stays. From C, release build, median of five runs on the
-benchmark's machine: `QLabel::setText` 381 → 164 ns, `QLabel::text` 333 → 135 ns,
-`QAbstractSlider::value` 283 → 104 ns, a property write 927 → 306 ns, a `QColor` made, read
-and freed 1,349 → 433 ns, a signal round trip 645 → 383 ns, an object made and destroyed
-2,439 → 1,667 ns, and a million-row model filtered through a proxy, with a call into the
-override handler per row, 959 → 720 ms.
-- Method strings are split and normalized once per string and interned per thread; a call
-  finds its string by address (the bytes are still compared, so a reused buffer is safe).
-  NUL-terminated strings (`qtc_s`) are measured first and take the same path; in 1.1.0 they
-  missed every cache, so a `qtc_call(l, qtc_s("setText"))` costs half what it did (300 →
-  151 ns in `tests/bench`). The same goes for class names given to `qtc_new` and
-  `qtc_val_new`.
-  Calls by signature, as generated bindings make them, used to run Qt's signature normalizer
-  every time.
-- A front cache, keyed by the receiver's class and the interned method, finds a call's
-  candidates without hashing the name; candidates are gathered on the stack, so a call
-  allocates nothing of its own. Constructor candidate lists are made once per class.
-- A call's frame takes the pushed arguments, and hands its result back, by swapping
-  pointers instead of moving sixteen argument slots; arguments and results clear only what
-  they hold.
-- One registry lookup per call finds the receiver (it was two, each taking the lock).
-- Per-class memos: the ownership roles an object can play, whether `qtc_destroy` has to ask
-  which Qt-owned object it is, the setter a property write goes through, and the ranking of
-  parameter types (which compared an integer parameter's type name with 42 others per call).
-- Error labels are built only when there is an error.
-- Signals with plain number arguments fill the event's payload directly.
-### Changed
-- Installed libraries carry the run path of the Qt they link (and `qtc_test`
-  finds `qtc` beside it), so programs and bindings that load them at run time
-  need no library path when Qt is outside the system's directories
-  (`QTC_INSTALL_RPATH`, on by default; not on Windows).
-
-## 1.1.0 — 2026-11-11
-
-### Licensing
-- A default build now binds only Qt modules available under the LGPL-3.0, which
-  closed-source programs may use. The GPL-3.0-only modules (Charts, Network
-  Authorization, HTTP Server, MQTT, CoAP) need `-DQTC_GPL_MODULES=ON`; naming one
-  in `QTC_MODULES` without it stops the configure step. 1.0.0 bound Qt Charts
-  whenever it was installed. `qtc_stats()` lists the GPL-3.0-only modules a build
-  links under `"gpl_only_modules"`. See docs/LICENSING.md.
-
-### Fixed
-- Crashes in the GPL-3.0-only add-ons that the method fuzzer found: the accessors
-  of a default-constructed `QHttpServerRequest` (no data behind it),
-  `QCoapMessage::optionAt` past the options, `QAbstractOAuth2::post`/`put` with a
-  null multipart and `QAbstractOAuthReplyHandler::networkReplyFinished` with a
-  null reply are refused now.
-- More crashes the method fuzzer found: `QOAuth1::setSignatureMethod` with
-  RSA-SHA1 (Qt aborts on the next request); `QMqttClient::setTransport` with a
-  null device or one that does not suit the transport type, `setState` (the
-  state follows the connection), and `connectToHostWebSocket*` with a websocket
-  qtc could not keep alive; destroying an MQTT client's transport or an OAuth
-  object's built-in reply handler while their owner lives, or a CoAP reply
-  still running (the client's protocol thread uses it) (now refused);
-  `QWidget::scroll` with offsets past QWIDGETSIZE_MAX; `QWidget::grab` with one
-  negative size and a top left far outside (Qt grabs to the widget's bottom right
-  and paints into a pixmap it could not allocate) or with an empty rectangle
-  that is not a null one on a widget with a graphics effect (the crash 1.0.0
-  listed as unexplained); a `QBuffer` grown past the allocation limit by seeking
-  through `QIODevice::seek` or `QWaveDecoder::seek`; `QAudioFormat` channel
-  counts past what it stores; `QGraphicsScene::setStyle` while proxy widgets use
-  the scene's own style (Qt deletes it under them); `QChart::removeAllSeries`
-  with an area series in the chart (its chart item outlives it and follows the
-  boundary lines); `QBarSet::remove` with a count that wraps past `INT_MAX`;
-  a scroll area or a tool box given another scroll area's widget (a tool box's
-  pages sit in scroll areas; both kept resizing it to their own viewports until
-  the stack ran out), and a scroll area whose widget is also its viewport.
-- Chart signals emitted by hand: `QXYSeries::pointAdded`, `pointRemoved` and
-  `pointsRemoved`, `QBarSet::valuesAdded` and
-  `valuesRemoved` (the chart's copy of the points no longer matched, and it
-  read past the end); `pointReplaced` and `QBarSet::valueChanged` with an index
-  out of range.
-- Hangs the method fuzzer found: a grid layout with negative or huge row and
-  column minimum sizes (the layout engine's sums wrapped; minimum sizes are now
-  limited to [0, 16777215] and counted with the other sizes before a layout
-  runs), and a backward whole-word search with a regular expression over long
-  text blocks (`QTextDocument`, `QTextEdit`, `QPlainTextEdit::find`; quadratic in
-  the block length, now limited); removing columns from a `QStandardItemModel`
-  of very many rows (row by row, moving everything after each: the limit that
-  1.0.0 put on inserting columns now covers removing them); `QString::normalized` on a run of
-  more than 16,384 combining marks (Qt orders each run in time growing as its
-  square) or on long text with much past ASCII (it rewrites the string in
-  place: length x such characters, now at most 2^36); selecting in a scene with a path of NaN
-  points (Qt refuses NaN points when they are added but not when a path is
-  moved or mapped: `QPainterPath::translate` and `QTransform::map` with
-  non-finite values are refused now, and paths with such points are refused by
-  the operations that test against them); selecting with a path whose
-  elements times the scene's items exceed 2^24.
-- Calls to meta-object methods with `QVariant` parameters (every untyped QML
-  function parameter) passed a value stored outside its variant (types over 24
-  bytes, such as `QRectF` or `QTransform`) as the address of the value, which the
-  method read as a variant: a crash. They now pass the variant.
-
-### Added
-- Network add-ons (opt-in, GPL-3.0-only): Qt Network Authorization, Qt HTTP
-  Server, Qt MQTT, Qt CoAP.
-- Futures, promises, thread-pool tasks, parallel map, worker objects on QThreads
-  and queued invocations (`qtc_promise_*`, `qtc_task_*`, `qtc_future_*`,
-  `qtc_move_to_thread`, `qtc_invoke_queued`, `qtc_invoke_future`); QThreadPool is
-  bound.
-- Subclassing Qt classes from C: overridable objects of 25 classes (widgets,
-  windows, QOpenGLWidget, QRhiWidget, item models and proxies, QValidator,
-  QSyntaxHighlighter, QIODevice, QThread, QTcpServer, animations, graphics scenes
-  and views, delegates, completers) whose virtual methods run a handler
-  (`qtc_new_overridable`, `qtc_override`, `qtc_set_override_handler`, the
-  `qtc_ov_*` call API, `qtc_draw_begin_painter`), with Qt's model begin/end
-  rules checked.
-- Runtime-defined QObject classes with signals, slots, invokables and
-  properties that Qt, QML and `qtc_call` see like C++ ones (`qtc_class_*`,
-  `qtc_emit`). Uses Qt's private QMetaObjectBuilder (Qt6::CorePrivate).
-- Graphics (`qtc_rhi_*`): Qt's RHI over Vulkan, OpenGL (ES), Direct3D 11/12 and
-  Metal, with offscreen frames, swapchains on windows, QRhiWidget rendering,
-  buffers, textures, samplers, bindings, graphics and compute pipelines,
-  uploads, readbacks, draws and dispatches, every command checked before the
-  GPU sees it; shaders compiled at run time from GLSL with Qt Shader Tools
-  (LGPL-3.0), or loaded as `.qsb` packages; native handles and native command
-  recording for code that calls Vulkan, OpenGL, Direct3D or Metal itself;
-  `qtc_gl_proc_address`; Vulkan instances and surfaces (`qtc_vk_*`); Qt Quick's
-  graphics API (`qtc_quick_set_graphics_api`). Uses Qt's semi-public RHI API
-  (Qt6::GuiPrivate). Tested on the Null backend, Mesa's llvmpipe (OpenGL) and
-  lavapipe (Vulkan); the Direct3D and Metal paths are not compiled or tested
-  here.
-- goose-qt: overridable objects (through an exported handler), runtime classes,
-  futures and promises for Goose worker threads, worker objects, and the
-  graphics API.
-
-## 1.0.0 — 2026-11-10
-
-The first release.
-
-- The C API in `qtc.h`: handles for objects and values, calls by name or
-  signature with overload resolution, properties, values with JSON, lists and
-  maps, signals and input events through a queue (`qtc_wait`, `qtc_poll`,
-  `qtc_run`), timers, `qtc_post` from any thread, forwarding connections, enums
-  by name, drawing (`QtcCanvas`, images), the QML bridge (`QtcBridge`),
-  introspection (`qtc_describe`, `manifest/qtc_api.json`).
-- For Qt 6.12 LTS, the release it is tested on. Bindings generated from Qt's
-  headers: 12,421 methods and 1,009 constructors of 618 classes in 25 modules.
-  Qt 6.4 to 6.11 build only with `-DQTC_ALLOW_OLDER_QT=ON` (each method compiled
-  only where the release has it) and are not tested.
-- About 480 precondition rules (1,761 checks in the generated code; a rule for a
-  class also covers the overrides its subclasses declare), ownership rules for 35
-  kinds of holders, allocation and work limits, and an application event filter
-  that keeps Qt from painting or laying out what it cannot and clears up after
-  parent changes Qt mishandles.
-- `libqtc_test` for simulated input in tests.
-- Tests: the C API suite, an application test, a sweep, a stress test, the
-  method fuzzer (fixed order, random orders with random arguments, by name) and
-  the lifetime fuzzer; examples that test themselves.
+### How it is tested
+- 19 test suites, among them `test_core` (1,202 checks) and `test_concurrent` (1,696), in
+  release and AddressSanitizer + UndefinedBehaviorSanitizer builds; sanitizer builds also
+  check the registry's shortcuts at run time (`QTC_CROSSCHECK`).
+- A method fuzzer that calls every bound method with generated arguments in fixed, named
+  and random orders and through object lifetimes, also under the sanitizers. What it and
+  the tests found, and what they do not cover, is in [TESTING.md](docs/TESTING.md) and
+  [LIMITS.md](docs/LIMITS.md).
+- Tested on Linux x86-64 with Qt 6.12.0. macOS and Windows builds are prepared for but
+  not tested.

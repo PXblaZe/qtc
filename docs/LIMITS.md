@@ -308,13 +308,10 @@ ones:
 
 ## Known open failures
 
-Every failure in qtc that the last fuzz rounds found is fixed in this release
-(see [TESTING.md](TESTING.md#results)). The crash while painting through a
-graphics effect that 1.0.0 listed here as unexplained is explained and fixed:
-`QWidget::grab` with an empty rectangle that is not a null one (`QRect(0, 1, 2,
-0)`) paints into a null pixmap, which crashes where a graphics effect draws.
+Every failure in qtc that the fuzz rounds found is fixed in this release
+(see [TESTING.md](TESTING.md#results)).
 
-One failure the 1.1.0 rounds found is in Qt itself and is not worked around:
+One failure the rounds found is in Qt itself and is not worked around:
 
 - **A crash at process exit after `QCryptographicHash::supportsAlgorithm` ran
   twice (or an MD4 hash), with OpenSSL 3.** OpenSSL's exit-time cleanup frees a
@@ -330,7 +327,7 @@ One failure from earlier rounds is still not explained:
 - **A hang after `QIODevice::readChannelFinished` was emitted by hand on a
   `QBuffer`, seen once.** That buffer was the device of a `QNmeaSatelliteInfoSource`,
   so it was most likely the NMEA reader looping on a buffer opened without
-  reading, which qtc refuses since 1.0.0; it was not reduced to its calls to make
+  reading, which qtc refuses; it was not reduced to its calls to make
   sure, and no round since has met it.
 
 ## Graphics

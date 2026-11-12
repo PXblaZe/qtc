@@ -42,10 +42,10 @@ approach:
   errors. Qt's internal parts and objects it owns cannot be destroyed from C.
 - **No callbacks inside Qt unless you ask.** Signals and watched events are
   queued and read with `qtc_wait` / `qtc_poll` at the top of the program's own
-  loop, so C code never runs in the middle of a Qt call. Subclassing is the
-  exception a program opts into: overridable objects run a handler for the
-  virtual methods it overrides, with the arguments and results checked and the
-  event loop off limits inside it.
+  loop, so C code never runs in the middle of a Qt call. Subclassing and direct
+  signals (`QTC_CONN_DIRECT`) are the exceptions a program opts into: a handler
+  runs inside Qt's call, with the arguments and results checked, deletes
+  deferred and the event loop off limits inside it.
 - **Generated from Qt's headers.** The bindings come from scanning Qt's headers
   with libclang. The generator also knows the Qt 6 releases before 6.12 and
   compiles each method in only where the Qt in use has it, but only Qt 6.12 is
