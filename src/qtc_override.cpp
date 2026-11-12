@@ -353,6 +353,28 @@ bool ov_dispatch_method(OvHost *h, QObject *self, const OvMethod *mp, uint64_t t
     return true;
 }
 
+bool ov_run_external(void (*fn)(void *), void *ctx) {
+    if (t_depth >= kMaxOvDepth) {
+        warn_once("depth", QStringLiteral("calls into the program nested %1 deep: the innermost was queued or skipped").arg(kMaxOvDepth));
+        return false;
+    }
+    Stash stash;   // the program's pending arguments and last result are its own
+    draw_push();
+    Frame *outer = t_top;
+    t_top = nullptr;   // qtc_ov_* calls have no override call to read here
+    ++t_depth;
+    struct Restore {
+        Frame *outer;
+        ~Restore() {
+            t_top = outer;
+            t_depth--;
+            draw_pop();
+        }
+    } restore{outer};
+    fn(ctx);
+    return true;
+}
+
 bool ov_painting(const QObject *o) {
     return t_top && t_top->gui && (t_top->m->flags & OVF_PAINT) && t_top->self == o;
 }

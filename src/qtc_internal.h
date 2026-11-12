@@ -36,6 +36,8 @@ class QLayout;
 class QTextTable;
 QT_END_NAMESPACE
 
+#include <QtCore/QThread>
+
 #include <atomic>
 #include <cmath>
 #include <cstdint>
@@ -332,7 +334,13 @@ private:
     std::vector<QPointer<QObject>> blocked_;
     std::vector<QObject *> blocked_raw_;
 };
-Registry &reg();
+Registry *reg_make();
+extern std::atomic<Registry *> g_reg;
+// the registry (made on first use: static initializers may need it)
+inline Registry &reg() {
+    Registry *r = g_reg.load(std::memory_order_acquire);
+    return Q_LIKELY(r) ? *r : *reg_make();
+}
 
 // Hooks the event layer installs (watches, connections tied to an object).
 extern void (*on_object_destroyed_hook)(QObject *o, uint64_t handle);   // objects with SF_EVENTS
@@ -421,7 +429,13 @@ extern const EntryDesc *const g_entries;
 extern const uint32_t g_entry_count;
 extern const CtorEntryDesc *const g_ctor_entries;
 extern const uint32_t g_ctor_entry_count;
-bool entry_ready();   // false, with the error set, unless qtc is initialized and this is the GUI thread
+// qtc_init's thread while qtc is initialized, null otherwise: every entry point compares the
+// calling thread with it (QThread::currentThreadId is one load, and never null)
+extern std::atomic<Qt::HANDLE> g_ready_thread;
+inline bool ready_here() { return g_ready_thread.load(std::memory_order_acquire) == QThread::currentThreadId(); }
+bool entry_not_ready();   // sets the error entry_ready reports, and returns false
+// false, with the error set, unless qtc is initialized and this is the GUI thread
+inline bool entry_ready() { return Q_LIKELY(ready_here()) || entry_not_ready(); }
 qtc_status last_error_code();
 // for qtc_inline.h (gen/inline.py)
 void clear_error();                                       // the call succeeded

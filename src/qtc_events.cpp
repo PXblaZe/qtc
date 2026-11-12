@@ -59,6 +59,9 @@ struct Connection {
     uint64_t sender_handle = 0;
     QMetaMethod signal;
     QByteArray signature;
+    int nparams = 0;                 // the signal's parameters (set_signal)
+    bool scalar_params = false;      // 1 to 4 of them, all numbers or bools: kept without QVariants
+    QMetaType ptype[4];
     uint64_t tag = 0;
     uint32_t flags = 0;
     int32_t kind = QTC_EV_SIGNAL;
@@ -66,6 +69,24 @@ struct Connection {
     uint64_t pending_seq = 0;
     uint64_t batch = 0;
 };
+
+static bool scalar_type(QMetaType t) {
+    if (!t.isValid()) return false;
+    switch (t.id()) {
+    case QMetaType::Bool: case QMetaType::Int: case QMetaType::UInt: case QMetaType::LongLong: case QMetaType::Long:
+    case QMetaType::Short: case QMetaType::UShort: case QMetaType::Double: case QMetaType::Float: return true;
+    default: return false;
+    }
+}
+
+// what on_signal needs of a connection's signal, worked out once
+static void set_signal(Connection &c, const QMetaMethod &m) {
+    c.signal = m;
+    c.nparams = m.parameterCount();
+    c.scalar_params = c.nparams > 0 && c.nparams <= 4;
+    for (int k = 0; k < 4; k++) c.ptype[k] = k < c.nparams ? m.parameterMetaType(k) : QMetaType();
+    for (int k = 0; k < c.nparams && c.scalar_params; k++) c.scalar_params = scalar_type(c.ptype[k]);
+}
 
 struct Watch {
     uint32_t gen = 1;
@@ -92,7 +113,7 @@ public:
 struct Events {
     std::mutex mu;   // queue + counters + spy pointer (posts come from any thread)
     std::deque<QueuedEvent> q;
-    uint64_t next_seq = 1;
+    std::atomic<uint64_t> next_seq{1};   // (direct signals take one without the lock)
     int64_t limit = 1000000;
     int64_t dropped = 0;
     bool open = false;
@@ -119,6 +140,8 @@ struct Events {
     bool check_pending = false;
     qtc_handler handler = nullptr;
     void *handler_user = nullptr;
+    qtc_handler signal_handler = nullptr;   // QTC_CONN_DIRECT connections
+    void *signal_user = nullptr;
     QByteArray text_store;
 };
 static Events &E() { static Events *e = new Events; return *e; }
@@ -150,7 +173,7 @@ static uint64_t enqueue(QueuedEvent &&qe, bool gui) {
             ev.dropped++;
             return 0;
         }
-        seq = ev.next_seq++;
+        seq = ev.next_seq.fetch_add(1, std::memory_order_relaxed);
         qe.e.seq = seq;
         if (qe.e.count == 0) qe.e.count = 1;
         was_empty = ev.q.empty();
@@ -274,7 +297,7 @@ static void release_conn(uint32_t slot) {
     c.used = false;
     c.far = false;
     c.sender = c.receiver = nullptr;
-    c.signal = QMetaMethod();
+    set_signal(c, QMetaMethod());
     c.qconn = QMetaObject::Connection();
     c.gen++;
     c.batch = ++ev.batch;
@@ -384,21 +407,6 @@ static int scalar_arg(QMetaType t, const void *p, int64_t *i, double *d) {
 }
 
 // whether every argument of the emission is a scalar scalar_arg reads
-static bool scalar_signal(const QMetaMethod &m, void **a) {
-    int64_t i;
-    double d;
-    for (int k = 0; k < m.parameterCount(); k++) {
-        const QMetaType t = m.parameterMetaType(k);
-        if (!t.isValid() || !a[k + 1]) return false;
-        switch (t.id()) {
-        case QMetaType::Bool: case QMetaType::Int: case QMetaType::UInt: case QMetaType::LongLong: case QMetaType::Long:
-        case QMetaType::Short: case QMetaType::UShort: case QMetaType::Double: case QMetaType::Float: break;
-        default: return false;
-        }
-    }
-    (void)i; (void)d;
-    return true;
-}
 
 // the QVariants of kept scalar arguments, as the general path would have made them
 static void materialize_args(QueuedEvent &qe) {
@@ -424,6 +432,36 @@ static void materialize_args(QueuedEvent &qe) {
     qe.nsargs = 0;
 }
 
+// QTC_CONN_DIRECT: the event goes to the signal handler now, inside the emission, as a call from
+// Qt into the program (ov_run_external). It is kept with the polled ones, so qtc_event_arg_*
+// read its arguments. False when it cannot run now: the caller queues it.
+struct DirectCall {
+    qtc_handler fn;
+    void *user;
+    qtc_event e;
+};
+static DirectCall *g_direct = nullptr;   // the innermost direct call running (GUI thread)
+static void run_direct(void *p) {
+    auto *d = static_cast<DirectCall *>(p);
+    DirectCall *outer = std::exchange(g_direct, d);
+    d->fn(&d->e, d->user);
+    g_direct = outer;
+}
+static bool direct_signal(uint32_t slot, QueuedEvent &qe) {
+    Events &ev = E();
+    if (!ev.signal_handler || !gui_thread_ok() || !is_inited() || ov_depth() >= 64) return false;
+    if (!ev.open) return false;   // (set and cleared in the GUI thread)
+    qe.e.seq = ev.next_seq.fetch_add(1, std::memory_order_relaxed);
+    if (qe.e.count == 0) qe.e.count = 1;
+    if (qe.e.source && !reg().alive(qe.e.source)) qe.e.flags |= QTC_EVF_STALE_SOURCE;
+    DirectCall d{ev.signal_handler, ev.signal_user, qe.e};
+    const bool once = ev.conns[slot].flags & QTC_CONN_ONCE;
+    ev.recent[size_t(qe.e.seq % kRecent)] = std::move(qe);
+    if (once) release_conn(slot);   // before the handler, which may connect again
+    ov_run_external(run_direct, &d);   // (cannot fail: the depth was checked)
+    return true;
+}
+
 static void on_signal(uint32_t slot, void **a) {
     Events &ev = E();
     if (slot >= ev.conns.size()) return;
@@ -440,15 +478,17 @@ static void on_signal(uint32_t slot, void **a) {
     qe.e.id = make_handle(slot, c.gen);
     qe.conn_slot = slot;
     qe.signal = c.signature;
-    const int n = c.signal.parameterCount();
+    const int n = c.nparams;
     qe.e.argc = (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS)) ? n : 0;
-    if (c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS) && n > 0 && n <= 4 && scalar_signal(c.signal, a)) {
+    bool scalars = c.kind == QTC_EV_SIGNAL && !(c.flags & QTC_CONN_NO_ARGS) && c.scalar_params;
+    for (int i = 0; i < n && scalars; i++) scalars = a[i + 1] != nullptr;
+    if (scalars) {
         // only scalars: kept as values, the payload fields filled in order
         int64_t *is[4] = {&qe.e.i0, &qe.e.i1, &qe.e.i2, &qe.e.i3};
         double *ds[2] = {&qe.e.d0, &qe.e.d1};
         int ii = 0, di = 0;
         for (int i = 0; i < n; i++) {
-            const QMetaType t = c.signal.parameterMetaType(i);
+            const QMetaType t = c.ptype[i];
             ScalarArg &x = qe.sargs[i];
             x.type = t.id();
             const int sk = scalar_arg(t, a[i + 1], &x.i, &x.d);
@@ -495,6 +535,9 @@ static void on_signal(uint32_t slot, void **a) {
             qe.e.d0 = qe.e.d1 = 0;
             fill_payload(qe);
         }
+    }
+    if (c.flags & QTC_CONN_DIRECT) {
+        if (direct_signal(slot, qe)) return;   // (c may be gone: the handler can connect)
     }
     if (c.flags & QTC_CONN_COALESCE) {
         if (try_coalesce(c, qe)) return;
@@ -562,7 +605,7 @@ static uint64_t make_connection(QObject *o, uint64_t sender, int sidx, uint64_t 
     c.sender = o;
     c.receiver = nullptr;
     c.sender_handle = sender;
-    c.signal = o->metaObject()->method(sidx);
+    set_signal(c, o->metaObject()->method(sidx));
     c.signature = c.signal.methodSignature();
     c.destroyed_signal = (c.signature == "destroyed(QObject*)" || c.signature == "destroyed()");
     c.tag = tag;
@@ -934,7 +977,7 @@ void events_init() {
         ev.spy = spy;
         ev.open = true;
         ev.q.clear();
-        ev.next_seq = 1;
+        ev.next_seq.store(1);
         ev.dropped = 0;
     }
     ev.filter = new Filter;
@@ -1127,6 +1170,23 @@ QTC_API qtc_status qtc_set_handler(qtc_handler fn, void *user) {
     });
 }
 
+QTC_API qtc_status qtc_set_signal_handler(qtc_handler fn, void *user) {
+    return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
+        E().signal_handler = fn;
+        E().signal_user = user;
+        return QTC_OK;
+    });
+}
+
+QTC_API bool qtc_direct_event(qtc_event *out) {
+    return guarded<bool>(false, [&]() -> bool {
+        if (!out) { fail(QTC_ERR_INVALID_ARG, "qtc_direct_event(NULL)"); return false; }
+        if (!g_direct) { fail(QTC_ERR_STATE, "qtc_direct_event: only inside the signal handler"); return false; }
+        *out = g_direct->e;
+        return true;
+    });
+}
+
 QTC_API int32_t qtc_run(void) {
     return guarded<int32_t>(QTC_ERR_STATE, []() -> int32_t {
         Events &ev = E();
@@ -1292,7 +1352,7 @@ QTC_API uint64_t qtc_connect(qtc_obj sender, qtc_str signal, uint64_t tag, uint3
         QObject *o = reg().object(sender, &err);
         if (!o && err == QTC_ERR_WRONG_THREAD) o = reg().object_anywhere(sender, &err);
         if (!o) { fail(err, "qtc_connect: sender"); return 0; }
-        if (flags & ~uint32_t(QTC_CONN_COALESCE | QTC_CONN_ONCE | QTC_CONN_NO_ARGS)) { fail(QTC_ERR_INVALID_ARG, "unknown connection flags"); return 0; }
+        if (flags & ~uint32_t(QTC_CONN_COALESCE | QTC_CONN_ONCE | QTC_CONN_NO_ARGS | QTC_CONN_DIRECT)) { fail(QTC_ERR_INVALID_ARG, "unknown connection flags"); return 0; }
         QByteArray spec;
         if (!read_bytes(signal, spec, "signal")) return 0;
         QString why;
@@ -1380,7 +1440,7 @@ QTC_API uint64_t qtc_connect_to(qtc_obj sender, qtc_str signal, qtc_obj receiver
         c.method = target;
         c.forward_n = nargs;
         c.sender_handle = sender;
-        c.signal = sm;
+        set_signal(c, sm);
         c.signature = sm.methodSignature();
         c.destroyed_signal = false;
         c.tag = 0;

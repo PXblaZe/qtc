@@ -90,13 +90,13 @@ a mismatch stops the program.
 
 ## Results
 
-The last runs (qtc 1.4.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
+The last runs (qtc 1.5.0, each module bound by a library of its own), on Qt 6.12.0 (Linux x86-64, GCC 13, two cores), with the GPL-3.0-only add-on
 modules built in so that they are tested too. The graphics suites ran with Mesa's llvmpipe
 (OpenGL) and lavapipe (Vulkan, with the Khronos validation layers under the sanitizers).
 
 | suite | release build | ASan + UBSan build |
 |---|---|---|
-| `test_core` | 1,182 checks pass | 1,182 checks pass (with `QTC_CROSSCHECK`) |
+| `test_core` | 1,202 checks pass | 1,202 checks pass (with `QTC_CROSSCHECK`) |
 | `test_app` | 32 pass | 32 pass |
 | `test_concurrent` | 1,696 pass | 1,696 pass |
 | `test_override` | 221 pass | 221 pass |
@@ -105,7 +105,7 @@ modules built in so that they are tested too. The graphics suites ran with Mesa'
 | `fuzz_rhi` (OpenGL offscreen, Vulkan under Xvfb) | clean | clean |
 | `test_stress` | all pass | all pass |
 | `ctest` (all 19 tests, examples included) | 19 of 19 pass | 19 of 19 pass |
-| goose-qt tests (`test/run.sh`, JIT and native) | 20 of 20 pass (examples: 12 of 12) | not run |
+| goose-qt tests (`test/run.sh`, JIT and native) | 22 of 22 pass (examples: 12 of 12) | not run |
 
 The default build (LGPL-3.0 modules only), configured and built from the release package in
 an empty directory: no GPL-3.0-only module is linked (`ldd`), the fuzzer lists 11,966 items
@@ -138,7 +138,10 @@ Under AddressSanitizer and UndefinedBehaviorSanitizer (1.3.0's run; 1.4.0's belo
 | random orders, seeds 1, 2 and 4–13 | 13,617 each | 2,031,408 | 0 |
 
 qtc 1.4.0 changed how objects are made and destroyed, so the fuzzer ran again under the
-sanitizers, now with `QTC_CROSSCHECK` checking each destruction that skipped a cleanup:
+sanitizers, now with `QTC_CROSSCHECK` checking each destruction that skipped a cleanup.
+qtc 1.5.0's run (fixed order, by name, lifetimes, seeds 5 and 77) had the same counts and
+no failures; seed 5's first attempt timed out while other work loaded the machine and
+passed when run alone. 1.4.0's run:
 
 | run | items | calls | failures |
 |---|---:|---:|---:|

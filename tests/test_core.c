@@ -2487,6 +2487,76 @@ static void test_fuzz_findings(void) {
     reset();
 }
 
+/* Direct signals (QTC_CONN_DIRECT): the handler runs inside the emission, may destroy the
+ * sender (deleted after Qt's call), cannot run the event loop, and nests. */
+static struct { int calls, nested, wait_refused, arg_ok, depth_max, destroyed, same_event; qtc_obj slider; } g_ds;
+static void direct_handler(const qtc_event *e, void *user) {
+    (void)user;
+    g_ds.calls++;
+    qtc_event cur;
+    if (qtc_direct_event(&cur) && cur.seq == e->seq && cur.tag == e->tag) g_ds.same_event++;
+    int32_t d = qtc_ov_depth();
+    if (d > g_ds.depth_max) g_ds.depth_max = d;
+    if (e->tag == 700) {                       /* clicked(bool) */
+        bool checked = true;
+        if (e->argc == 1 && qtc_event_arg_bool(e->seq, 0, &checked) == QTC_OK && !checked) g_ds.arg_ok++;
+        if (qtc_wait(0) == QTC_ERR_STATE) g_ds.wait_refused++;
+        qtc_arg_int(42);
+        qtc_call(g_ds.slider, S("setValue"));  /* emits valueChanged: a nested direct call */
+    } else if (e->tag == 701) {                /* valueChanged(int) */
+        g_ds.nested++;
+        if (e->i0 == 42) g_ds.arg_ok++;
+    } else if (e->tag == 702) {                /* the sender destroys itself */
+        if (qtc_destroy(e->source) == QTC_OK) g_ds.destroyed++;
+    }
+}
+static void test_direct_signals(void) {
+    reset();
+    memset(&g_ds, 0, sizeof g_ds);
+    qtc_obj w = make("QWidget");
+    qtc_obj b = make_child("QPushButton", w);
+    g_ds.slider = make_child("QSlider", w);
+    CHECK_EQ(qtc_set_signal_handler(direct_handler, NULL), QTC_OK);
+    CHECK(qtc_connect(b, S("clicked"), 700, QTC_CONN_DIRECT) != 0);
+    CHECK(qtc_connect(g_ds.slider, S("valueChanged"), 701, QTC_CONN_DIRECT) != 0);
+    CHECK_EQ(qtc_call(b, S("click")), QTC_OK);
+    CHECK_EQ(g_ds.calls, 2);                   /* clicked, then valueChanged inside it */
+    CHECK_EQ(g_ds.nested, 1);
+    CHECK_EQ(g_ds.arg_ok, 2);
+    CHECK_EQ(g_ds.wait_refused, 1);
+    CHECK_EQ(g_ds.depth_max, 2);
+    CHECK_EQ(g_ds.same_event, 2);
+    qtc_event none;
+    CHECK(!qtc_direct_event(&none));             /* only inside the handler */
+    CHECK_EQ(drain(NULL, 700) + drain(NULL, 701), 0);   /* nothing was queued */
+    /* the sender destroyed by its own handler: deleted once Qt's call returns */
+    qtc_obj b2 = make_child("QPushButton", w);
+    CHECK(qtc_connect(b2, S("clicked"), 702, QTC_CONN_DIRECT | QTC_CONN_ONCE) != 0);
+    CHECK_EQ(qtc_call(b2, S("click")), QTC_OK);
+    qtc_process_events();
+    CHECK(!qtc_alive(b2));
+    /* without a handler, a direct connection queues as before */
+    CHECK_EQ(qtc_set_signal_handler(NULL, NULL), QTC_OK);
+    int before = g_ds.calls;
+    qtc_call(b, S("click"));
+    qtc_process_events();
+    CHECK_EQ(g_ds.calls, before);
+    CHECK_EQ(drain(NULL, 700), 1);
+    drain(NULL, 0);
+    CHECK_EQ(qtc_set_signal_handler(direct_handler, NULL), QTC_OK);
+    /* churn: many direct emissions, each sender destroyed by its handler */
+    for (int i = 0; i < 200; i++) {
+        qtc_obj x = make_child("QPushButton", w);
+        qtc_connect(x, S("clicked"), 702, QTC_CONN_DIRECT);
+        qtc_call(x, S("click"));
+    }
+    qtc_process_events();
+    CHECK_EQ(g_ds.destroyed, 201);
+    qtc_set_signal_handler(NULL, NULL);
+    qtc_destroy(w);
+    reset();
+}
+
 /* Objects made and destroyed in a mix: plain ones (no event or ownership state, the fast path),
  * ones with a connection or a watch (the event layer cleans up), owners (the ownership roles
  * forget them). Addresses get reused all the time: a new object must never inherit anything of
@@ -2794,6 +2864,7 @@ int main(void) {
     test_ownership_rules();
     test_fuzz_findings();
     test_lifetime_fast_paths();
+    test_direct_signals();
     test_wrong_thread();
     test_direct();
     test_inline();

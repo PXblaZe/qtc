@@ -60,9 +60,9 @@ extern "C" {
 #endif
 
 #define QTC_VERSION_MAJOR 1
-#define QTC_VERSION_MINOR 4
+#define QTC_VERSION_MINOR 5
 #define QTC_VERSION_PATCH 0
-#define QTC_VERSION_STRING "1.4.0"
+#define QTC_VERSION_STRING "1.5.0"
 
 /* ------------------------------------------------------------------ types */
 
@@ -254,6 +254,19 @@ typedef void (*qtc_handler)(const qtc_event *ev, void *user);
 QTC_API qtc_status qtc_set_handler(qtc_handler handler, void *user);
 QTC_API int32_t qtc_run(void);
 
+/* Direct signals: a connection made with QTC_CONN_DIRECT hands its event to this
+   handler during the emission, as Qt calls a slot, instead of queueing it. The
+   event is the one qtc_poll would have returned (its arguments are read with
+   qtc_event_arg_* and its seq as usual). The handler runs as an override handler
+   does: it may call qtc, and an object it destroys (the sender too) is deleted
+   once Qt's call returns, but it may not run the event loop or shut qtc down.
+   A sender in a worker thread reaches the handler when the GUI thread receives
+   the emission (in qtc_wait). With no handler set, or handlers 64 deep, the
+   event is queued as usual. NULL clears the handler. */
+QTC_API qtc_status qtc_set_signal_handler(qtc_handler handler, void *user);
+/* Inside the signal handler: the event it was called with (false elsewhere). */
+QTC_API bool qtc_direct_event(qtc_event *out);
+
 /* Thread-safe: queues a QTC_EV_POST event and wakes qtc_wait. */
 QTC_API qtc_status qtc_post(uint64_t tag, int64_t a, int64_t b);
 /* Upper bound on queued events (0 = unlimited, the default is 1,000,000).
@@ -280,6 +293,7 @@ QTC_API qtc_view qtc_event_signal(uint64_t seq);
 #define QTC_CONN_COALESCE 1u   /* while an event of this connection is queued, update it instead of queueing more */
 #define QTC_CONN_ONCE     2u   /* disconnect after the first emission */
 #define QTC_CONN_NO_ARGS  4u   /* do not capture the signal's arguments (fastest) */
+#define QTC_CONN_DIRECT   8u   /* call the signal handler during the emission (see qtc_set_signal_handler) */
 
 /* signal: a name ("clicked") or a signature ("clicked(bool)"). Returns a
    connection id, or 0 on failure. Works for QML-declared signals too. */

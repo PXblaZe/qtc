@@ -86,6 +86,8 @@ struct State {
     bool classes_registered = false;
 };
 static State &st() { static State *s = new State; return *s; }
+std::atomic<Qt::HANDLE> g_ready_thread{nullptr};
+std::atomic<Qt::HANDLE> g_gui_thread{nullptr};
 int app_kind() { return st().inited ? st().kind : -1; }
 
 static thread_local qtc_status t_err = 0;
@@ -94,9 +96,11 @@ static thread_local QByteArray t_view;
 
 bool is_inited() { return st().inited.load(std::memory_order_acquire); }
 qtc_status last_error_code() { return t_err; }
+static QByteArray *g_gui_view = new QByteArray;   // t_view of the GUI thread, without the thread-local lookup
 qtc_view view_of(const QByteArray &b) {
-    t_view = b;
-    return qtc_view{t_view.constData(), int64_t(t_view.size())};
+    QByteArray &v = gui_thread_ok() ? *g_gui_view : t_view;
+    v = b;
+    return qtc_view{v.constData(), int64_t(v.size())};
 }
 static qtc_view view_static(const char *s) { return qtc_view{s, int64_t(std::strlen(s))}; }
 
@@ -139,7 +143,6 @@ qtc_status fail(qtc_status code, const QString &message) {
 }
 qtc_status fail(qtc_status code, const char *message) { return fail(code, QString::fromUtf8(message)); }
 
-bool gui_thread_ok() { return QThread::currentThreadId() == st().gui_thread; }
 
 // Reads a qtc_str. False (and an error) if it is malformed.
 bool read_str(qtc_str s, QString &out, const char *what) {
@@ -175,7 +178,12 @@ void (*on_object_no_events_hook)(QObject *o) = nullptr;
 #endif
 static PtrMap<char> *g_recently_destroyed = new PtrMap<char>;
 
-Registry &reg() { static Registry *r = new Registry; return *r; }
+std::atomic<Registry *> g_reg{nullptr};
+Registry *reg_make() {
+    static Registry *r = new Registry;   // thread-safe once
+    g_reg.store(r, std::memory_order_release);
+    return r;
+}
 
 uint32_t Registry::alloc_slot(qtc_status *err) {
     if (!free_list.empty()) {
@@ -559,7 +567,7 @@ void Registry::on_destroyed(QObject *o) {
         g_recently_destroyed->insert(o, 1);
     }
     // an object moved to a worker thread dies there: the roles index (GUI thread) never had it
-    if (gui_thread_ok()) roles_forget(o, true, flags & SF_OWNER);
+    if (gui_thread_ok()) roles_forget(o, true, flags & SF_OWNER);   // also widgets in parentless layouts
     // the event layer only has something to do for objects it noted (SF_EVENTS)
     if (flags & SF_EVENTS) {
         if (on_object_destroyed_hook) on_object_destroyed_hook(o, handle);
@@ -2532,6 +2540,7 @@ static qtc_status init_common(int32_t kind) {
     }
     s.kind = kind;
     s.gui_thread = QThread::currentThreadId();
+    g_gui_thread.store(s.gui_thread, std::memory_order_relaxed);
     qRegisterMetaType<ObjRef>("qtc::ObjRef");
     if (!s.classes_registered) {
         register_builtin_classes();
@@ -2539,6 +2548,7 @@ static qtc_status init_common(int32_t kind) {
         s.classes_registered = true;
     }
     s.inited.store(true, std::memory_order_release);
+    g_ready_thread.store(s.gui_thread, std::memory_order_release);
     events_init();
     roles_init();
     concurrent_init();
@@ -2618,6 +2628,7 @@ QTC_API qtc_status qtc_shutdown(void) {
     } catch (...) {
     }
     qInstallMessageHandler(g_prev_handler);
+    g_ready_thread.store(nullptr, std::memory_order_release);
     s.inited.store(false);
     s.kind = -1;
     return QTC_OK;
@@ -2815,7 +2826,7 @@ QTC_API void qtc_args_clear(void) { if (st().inited && gui_thread_ok()) args().c
 QTC_API int32_t qtc_args_count(void) { return (st().inited && gui_thread_ok()) ? args().n : 0; }
 
 #define QTC_PUSH(body) \
-    if (!st().inited || !gui_thread_ok()) return; \
+    if (!ready_here()) return; \
     Arg *x = push_arg(); \
     if (!x) return; \
     body
@@ -2959,14 +2970,14 @@ QTC_API qtc_status qtc_call_static(qtc_str class_name, qtc_str method) {
 
 QTC_API int32_t qtc_ret_kind(void) { return (st().inited && gui_thread_ok()) ? ret().kind : QTC_T_NONE; }
 QTC_API bool qtc_ret_bool(void) {
-    if (!st().inited || !gui_thread_ok()) return false;
+    if (!ready_here()) return false;
     Ret &r = ret();
     if (r.kind == QTC_T_VALUE || r.kind == QTC_T_LIST || r.kind == QTC_T_MAP) return r.v.toBool();
     if (r.kind == QTC_T_STR) return !r.s.isEmpty();
     return r.b;
 }
 QTC_API int64_t qtc_ret_int(void) {
-    if (!st().inited || !gui_thread_ok()) return 0;
+    if (!ready_here()) return 0;
     Ret &r = ret();
     if (r.kind == QTC_T_VALUE) return r.v.toLongLong();
     if (r.kind == QTC_T_STR || r.kind == QTC_T_BYTES) return r.s.toLongLong();
@@ -2974,21 +2985,21 @@ QTC_API int64_t qtc_ret_int(void) {
     return r.i;
 }
 QTC_API uint64_t qtc_ret_uint(void) {
-    if (!st().inited || !gui_thread_ok()) return 0;
+    if (!ready_here()) return 0;
     Ret &r = ret();
     if (r.kind == QTC_T_VALUE) return r.v.toULongLong();
     if (r.kind == QTC_T_OBJ) return r.h;
     return r.u;
 }
 QTC_API double qtc_ret_double(void) {
-    if (!st().inited || !gui_thread_ok()) return 0;
+    if (!ready_here()) return 0;
     Ret &r = ret();
     if (r.kind == QTC_T_VALUE) return r.v.toDouble();
     if (r.kind == QTC_T_STR || r.kind == QTC_T_BYTES) return r.s.toDouble();
     return r.d;
 }
 QTC_API qtc_view qtc_ret_str(void) {
-    if (!st().inited || !gui_thread_ok()) return qtc_view{"", 0};
+    if (!ready_here()) return qtc_view{"", 0};
     Ret &r = ret();
     switch (r.kind) {
     case QTC_T_STR: case QTC_T_BYTES: return view_of(r.s);
@@ -3003,14 +3014,14 @@ QTC_API qtc_view qtc_ret_str(void) {
     }
 }
 QTC_API qtc_obj qtc_ret_obj(void) {
-    if (!st().inited || !gui_thread_ok()) return 0;
+    if (!ready_here()) return 0;
     Ret &r = ret();
     return r.kind == QTC_T_OBJ ? r.h : 0;
 }
 // ------------------------------------------------------------------ out-parameters
 
 static const Ret::OutVal *out_at(int32_t index) {
-    if (!st().inited || !gui_thread_ok()) return nullptr;
+    if (!ready_here()) return nullptr;
     Ret &r = ret();
     if (index < 0 || index >= r.nout) {
         fail(QTC_ERR_OUT_OF_RANGE, QStringLiteral("qtc_out: index %1 out of range (the last call filled %2)").arg(index).arg(r.nout));
@@ -4373,13 +4384,13 @@ static void message_handler(QtMsgType type, const QMessageLogContext &ctx, const
 
 namespace qtc {
 
-bool entry_ready() {
-    if (Q_UNLIKELY(!is_inited())) { fail(QTC_ERR_NOT_INITIALIZED, "qtc_init has not been called"); return false; }
-    if (Q_UNLIKELY(!gui_thread_ok())) {
+bool entry_not_ready() {
+    if (!is_inited()) { fail(QTC_ERR_NOT_INITIALIZED, "qtc_init has not been called"); return false; }
+    if (!gui_thread_ok()) {
         fail(QTC_ERR_WRONG_THREAD, "qtc functions must be called from the thread that called qtc_init");
         return false;
     }
-    return true;
+    return true;   // between is_inited and the thread check, qtc_init finished
 }
 
 bool put_str(Arg &x, qtc_str v) {
@@ -4458,6 +4469,20 @@ struct EntrySlot {
     const ClassDef *cls = nullptr;  // objects: the declaring class (need_ok); values: the value's class
 };
 EntrySlot g_entry_cache[4096];
+
+// Per entry point, the class it was last called on, resolved (most call sites see one class):
+// entry_call checks it before anything else. Filled by entry_object, GUI thread only.
+struct EntryIC {
+    const QMetaObject *mo = nullptr;
+    const MethodDef *md = nullptr;
+    uint32_t gen = 0;
+    bool owner_kind = false;
+};
+EntryIC *g_entry_ic = nullptr;
+inline EntryIC *entry_ics() {
+    if (Q_UNLIKELY(!g_entry_ic)) g_entry_ic = new EntryIC[g_entry_count]();
+    return g_entry_ic;
+}
 EntrySlot &entry_slot(const void *key, uint32_t id) {
     const uint64_t k = (uint64_t(reinterpret_cast<uintptr_t>(key)) >> 4) ^ (uint64_t(id) * 0x9E3779B1u);
     return g_entry_cache[(k * 0x9E3779B97F4A7C15ull) >> 52];
@@ -4529,6 +4554,8 @@ Q_NEVER_INLINE int entry_owner_call(const MethodDef *md, QObject *o, Arg *a, int
     return rc;
 }
 
+qtc_status entry_invoke(QObject *o, const QMetaObject *mo, const MethodDef *md, bool owner_kind, uint32_t id, Arg *a, int n);
+
 qtc_status entry_object(QObject *o, uint64_t self, uint32_t id, uint8_t eflags, Arg *a, int n) {
     const QObjectData *d = DPtrPeek::of(o);
     if (d && d->metaObject) return entry_slow(self, id, a, n);   // a dynamic meta-object
@@ -4556,13 +4583,19 @@ qtc_status entry_object(QObject *o, uint64_t self, uint32_t id, uint8_t eflags, 
     }
     const MethodDef *md = s.md;
     if (!md) return entry_slow(self, id, a, n);
+    entry_ics()[id] = EntryIC{mo, md, s.gen, s.owner_kind};
+    return entry_invoke(o, mo, md, s.owner_kind, id, a, n);
+}
+
+// The resolved call: md on o (of class mo), as entry_object and entry_call's cached path make it.
+qtc_status entry_invoke(QObject *o, const QMetaObject *mo, const MethodDef *md, bool owner_kind, uint32_t id, Arg *a, int n) {
     if ((md->flags & MF_BLOCKING) && ov_depth() > 0) {
         const MethodInfo *info = entry_info(id);
         return fail(QTC_ERR_STATE, QStringLiteral("%1::%2: %3 waits in an event loop, which an override handler may not start")
                                        .arg(QLatin1StringView(mo->className()), QLatin1StringView(info->name), QLatin1StringView(md->sig)));
     }
     EntryFrame f;   // its result is empty: the pool empties results it takes back
-    const int rc = Q_UNLIKELY(s.owner_kind) ? entry_owner_call(md, o, a, n, f.r)
+    const int rc = Q_UNLIKELY(owner_kind) ? entry_owner_call(md, o, a, n, f.r)
                                             : md->fn((md->flags & MF_STATIC) ? nullptr : o, a, n, f.r);
     if (Q_UNLIKELY(rc)) {
         const MethodInfo *info = entry_info(id);
@@ -4609,6 +4642,25 @@ qtc_status entry_value(QVariant *v, uint64_t self, uint32_t id, Arg *a, int n) {
 qtc_status entry_call(uint64_t self, uint32_t id, Arg *a, int n) {
     try {
         const uint8_t eflags = g_entries[id].flags;
+        // The common case first: an object of the GUI thread (see SF_GUI), of a class with a
+        // static meta-object, called through an entry point whose last class this is.
+        if (Q_LIKELY(!(eflags & 3))) {
+            Registry &R = reg();
+            const uint32_t idx = handle_index(self);
+            if (Q_LIKELY(self && idx < R.table.size())) {
+                const Slot &sl = R.table[idx];
+                if (sl.gen == handle_gen(self) && sl.kind == SK_OBJ && (sl.flags & (SF_GUI | SF_DYING)) == SF_GUI && sl.alive()) {
+                    QObject *o = sl.obj;
+                    const QObjectData *d = DPtrPeek::of(o);
+                    if (Q_LIKELY(!(d && d->metaObject))) {
+                        const QMetaObject *mo = o->metaObject();
+                        const EntryIC &ic = entry_ics()[id];
+                        if (Q_LIKELY(ic.mo == mo && ic.gen == g_cand_gen))
+                            return entry_invoke(o, mo, ic.md, ic.owner_kind, id, a, n);
+                    }
+                }
+            }
+        }
         if (Q_UNLIKELY(eflags & 1)) return entry_slow(self, id, a, n);
         QObject *o = nullptr;
         QVariant *v = nullptr;

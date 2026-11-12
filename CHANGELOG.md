@@ -1,5 +1,41 @@
 # Changelog
 
+## 1.5.0 — 2026-11-12
+
+Faster calls and signals, every check kept.
+
+### Added
+- Direct signals: a connection made with `QTC_CONN_DIRECT` hands its event to the handler
+  set with `qtc_set_signal_handler` inside the emission, as Qt calls a slot, instead of
+  queueing it. The handler runs as an override handler does: the program's pending
+  arguments and last result are set aside, an object it destroys (the sender too) is
+  deleted once Qt's call returns, the event loop is refused, and calls nest up to 64 deep.
+  `qtc_direct_event` returns the event to a binding that cannot pass the pointer on.
+  A direct emission takes 1,644 instructions from click to handler, against 2,218 queued
+  and polled; in goose-qt's benchmark, 168 ns from C against 207.
+
+### Faster
+- Each direct entry point keeps the last class it was called on, checked before anything
+  else: a call site that sees one class goes from the handle check straight to the method.
+- The "is qtc initialized, is this its thread" check every call makes is one load and one
+  comparison, inline in each entry point; the registry is reached through a pointer
+  instead of a function-local static.
+- A string returned on the GUI thread is kept in a plain global instead of a thread-local.
+- A connection works out once which of its signal's parameters are plain numbers, so such
+  emissions skip the per-emission meta-type lookups; event numbers are taken with one
+  atomic add.
+- In instructions: `slider.value()` 324 (was 389), `setText` 839 (902), `text()` 734 (853),
+  making and destroying a `QObject` 2,279 (2,365). In goose-qt's benchmark, from C:
+  `value()` 16 ns (21), `setText` 55 ns (58), a `QObject` made and destroyed 156 ns (178).
+
+### Tested
+The 19 suites pass in release and AddressSanitizer + UndefinedBehaviorSanitizer builds
+(cross-checks on); `test_core` has 1,202 checks, among them direct signals that nest,
+refuse the event loop and destroy their sender. The method fuzzer ran under the sanitizers
+(fixed order, by name, lifetimes, seeds 5 and 77) with no failures; seed 5's first run
+timed out while other work loaded the machine and passed alone. goose-qt 1.7.0's tests
+and examples pass against it.
+
 ## 1.4.0 — 2026-11-12
 
 Cheaper object lifetimes: less work to make and destroy an object, and a run-time check of

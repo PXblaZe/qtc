@@ -70,7 +70,8 @@ qtc_val now = qtc_ret_val();
 Each takes its arguments as parameters and is the same call as `qtc_call` with that
 signature, with the same checks and errors, but without the work of finding the
 method: no name to look up, no argument stack, and the overload is resolved once per
-receiver class and remembered. A call costs a quarter to a half of `qtc_call`'s (see
+receiver class and remembered. Each entry point also keeps the last class it was called
+on, so a call site that always sees one class goes straight to the method. A call costs a quarter to a half of `qtc_call`'s (see
 TESTING.md).
 
 ```c
@@ -219,6 +220,33 @@ the event kinds in `qtc.h`), and every argument through `qtc_event_arg_*` for th
 later events from it are flagged `QTC_EVF_STALE_SOURCE`.
 
 For a callback style, `qtc_set_handler(fn, user)` and `qtc_run()`.
+
+### Direct signals
+
+A connection made with `QTC_CONN_DIRECT` calls the signal handler inside the
+emission, as Qt calls a slot, instead of queueing the event:
+
+```c
+static void on_signal(const qtc_event *e, void *user) {
+    if (e->tag == TAG_CLICKED) { /* runs inside button.click() */ }
+}
+
+qtc_set_signal_handler(on_signal, NULL);
+qtc_connect(button, QTC_S("clicked"), TAG_CLICKED, QTC_CONN_DIRECT);
+```
+
+The handler gets the event `qtc_poll` would have returned: its arguments are read
+with `qtc_event_arg_*(e->seq, ...)`, and `qtc_direct_event(&ev)` copies it for a
+binding that cannot pass the pointer on. The handler runs as an override handler
+does: it may call qtc, and an object it destroys (the sender included) is deleted
+once Qt's call returns, but it may not run the event loop (`qtc_wait` fails with
+`QTC_ERR_STATE`) or shut qtc down. Direct calls nest up to 64 deep; past that,
+and while no handler is set, the event is queued as usual. A sender in a worker
+thread reaches the handler when the GUI thread receives the emission.
+
+Queued events are still the default: a handler that runs between emissions can do
+anything, including running a nested event loop. A direct signal takes about a quarter
+fewer instructions than a queued one.
 
 `qtc_post(tag, a, b)` queues an event from any thread and wakes `qtc_wait`: it is
 how worker threads report to the GUI.
