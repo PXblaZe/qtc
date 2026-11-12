@@ -391,7 +391,7 @@ qtc_future invoke_queued(qtc_obj obj, qtc_str method, bool want_future, const ch
     spec = spec.trimmed();
     // the registry lock keeps an object of another thread from finishing dying while it is looked at
     // and posted to (see Registry::destroy_far)
-    std::lock_guard<std::recursive_mutex> lk(reg().mu);
+    std::lock_guard<RegMutex> lk(reg().mu);
     qtc_status err = 0;
     QObject *o = reg().object(obj, &err);
     bool far = false;
@@ -527,7 +527,7 @@ void concurrent_shutdown() {
     // time stay where they are (qtc_shutdown leaves them)
     std::vector<QPointer<QThread>> threads;
     {
-        std::lock_guard<std::recursive_mutex> lk(reg().mu);
+        std::lock_guard<RegMutex> lk(reg().mu);
         for (const Slot &s : reg().table)
             if (s.kind == SK_OBJ && s.alive())
                 if (auto *t = qobject_cast<QThread *>(s.obj); t && t != QThread::currentThread() && t->isRunning())

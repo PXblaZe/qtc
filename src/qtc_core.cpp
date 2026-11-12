@@ -170,7 +170,7 @@ bool read_bytes(qtc_str s, QByteArray &out, const char *what) {
 // ================================================================ registry
 
 void (*on_object_destroyed_hook)(QObject *o, uint64_t handle) = nullptr;
-static QSet<QObject *> *g_recently_destroyed = new QSet<QObject *>;
+static PtrMap<char> *g_recently_destroyed = new PtrMap<char>;
 
 Registry &reg() { static Registry *r = new Registry; return *r; }
 
@@ -206,15 +206,15 @@ void Registry::release_slot(uint32_t idx) {
 
 uint64_t Registry::handle_for(QObject *o) {
     if (!o) return 0;
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     // made by make_obj just now: its destructor reports it (see Tracked)
     QObject *fresh = g_tracked_new.load(std::memory_order_relaxed);
     const bool tracked = fresh == o && gui_thread_ok();
     if (fresh == o) g_tracked_new.store(nullptr, std::memory_order_relaxed);
-    auto it = by_ptr.constFind(o);
-    if (it != by_ptr.constEnd()) {
-        if (table[*it].alive()) return make_handle(*it, table[*it].gen);
-        forget_dead(*it);   // an earlier object at this address died without notice
+    if (const uint32_t *it = by_ptr.lookup(o)) {
+        const uint32_t at = *it;
+        if (table[at].alive()) return make_handle(at, table[at].gen);
+        forget_dead(at);   // an earlier object at this address died without notice
     }
     qtc_status err = 0;
     uint32_t idx = alloc_slot(&err);
@@ -241,7 +241,7 @@ uint64_t Registry::handle_for(QObject *o) {
 uint64_t Registry::adopt_new(QObject *o, bool owned) {
     if (!o) return 0;
     {
-        std::lock_guard<std::recursive_mutex> lk(mu);
+        std::lock_guard<RegMutex> lk(mu);
         g_recently_destroyed->remove(o);
     }
     uint64_t h = handle_for(o);
@@ -250,7 +250,7 @@ uint64_t Registry::adopt_new(QObject *o, bool owned) {
 }
 
 void Registry::set_made(uint64_t h) {
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     uint32_t idx = handle_index(h);
     if (idx >= table.size()) return;
     Slot &s = table[idx];
@@ -265,7 +265,7 @@ bool Registry::made_handle(uint64_t h) {
             if (s.gen == handle_gen(h) && s.kind == SK_OBJ && (s.flags & SF_GUI)) return s.flags & SF_MADE;
         }
     }
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     const uint32_t idx = handle_index(h);
     if (idx >= table.size()) return false;
     const Slot &s = table[idx];
@@ -273,15 +273,15 @@ bool Registry::made_handle(uint64_t h) {
 }
 
 bool Registry::made(const QObject *o) {
-    std::lock_guard<std::recursive_mutex> lk(mu);
-    auto it = by_ptr.constFind(const_cast<QObject *>(o));
-    if (it == by_ptr.constEnd()) return false;
+    std::lock_guard<RegMutex> lk(mu);
+    const uint32_t *it = by_ptr.lookup(o);
+    if (!it) return false;
     const Slot &s = table[*it];
     return s.kind == SK_OBJ && s.obj == o && s.alive() && (s.flags & SF_MADE);
 }
 
 void Registry::set_owned(uint64_t h, bool owned) {
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     uint32_t idx = handle_index(h);
     if (idx >= table.size()) return;
     Slot &s = table[idx];
@@ -301,7 +301,7 @@ QObject *Registry::object(uint64_t h, qtc_status *err, bool allow_dying) {
             }
         }
     }
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     QObject *o = lookup_locked(h, err, allow_dying);
     if (!o) return nullptr;
     // read under mu: an object of another thread cannot finish dying while mu is held
@@ -315,13 +315,13 @@ QObject *Registry::object(uint64_t h, qtc_status *err, bool allow_dying) {
 }
 
 void Registry::note_thread_change(QObject *o) {
-    std::lock_guard<std::recursive_mutex> lk(mu);
-    auto it = by_ptr.constFind(o);
-    if (it != by_ptr.constEnd() && *it < table.size()) table[*it].flags &= uint8_t(~SF_GUI);
+    std::lock_guard<RegMutex> lk(mu);
+    const uint32_t *it = by_ptr.lookup(o);
+    if (it && *it < table.size()) table[*it].flags &= uint8_t(~SF_GUI);
 }
 
 QObject *Registry::object_anywhere(uint64_t h, qtc_status *err, bool allow_dying) {
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     return lookup_locked(h, err, allow_dying);
 }
 
@@ -340,10 +340,10 @@ bool Registry::pull_orphan(QObject *o) {
 
 uint64_t Registry::known_handle(const QObject *o) {
     if (!o) return 0;
-    std::lock_guard<std::recursive_mutex> lk(mu);
-    if (g_recently_destroyed->contains(const_cast<QObject *>(o))) return 0;
-    auto it = by_ptr.constFind(const_cast<QObject *>(o));
-    if (it == by_ptr.constEnd()) return 0;
+    std::lock_guard<RegMutex> lk(mu);
+    if (g_recently_destroyed->contains(o)) return 0;
+    const uint32_t *it = by_ptr.lookup(o);
+    if (!it) return 0;
     const Slot &s = table[*it];
     if (s.kind != SK_OBJ || !s.alive() || (s.flags & SF_DYING)) return 0;
     return make_handle(*it, s.gen);
@@ -352,7 +352,7 @@ uint64_t Registry::known_handle(const QObject *o) {
 qtc_status Registry::destroy_far(uint64_t h) {
     // mu stays held throughout: the object's own thread, if it is destroying it right now, waits in
     // on_destroyed (emitted before ~QObject frees anything or drops posted events) until we are done
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     qtc_status err = 0;
     QObject *o = lookup_locked(h, &err, false);
     if (!o) return err;
@@ -392,7 +392,7 @@ QObject *Registry::lookup_locked(uint64_t h, qtc_status *err, bool allow_dying) 
 
 QVariant *Registry::value(uint64_t h, qtc_status *err) {
     if (h == 0) { *err = QTC_ERR_NULL_HANDLE; return nullptr; }
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     uint32_t idx = handle_index(h);
     if (idx >= table.size() || handle_gen(h) == 0) { *err = QTC_ERR_BAD_HANDLE; return nullptr; }
     Slot &s = table[idx];
@@ -407,7 +407,7 @@ QVariant *Registry::value(uint64_t h, qtc_status *err) {
 }
 
 uint64_t Registry::new_value(QVariant v) {
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     qtc_status err = 0;
     uint32_t idx = alloc_slot(&err);
     if (idx == UINT32_MAX) { fail(QTC_ERR_LIMIT, "too many live handles"); return 0; }
@@ -423,7 +423,7 @@ qtc_status Registry::free_value(uint64_t h) {
     qtc_status err = 0;
     QVariant *v = value(h, &err);
     if (!v) return err;
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     uint32_t idx = handle_index(h);
     delete table[idx].val;
     release_slot(idx);
@@ -433,7 +433,7 @@ qtc_status Registry::free_value(uint64_t h) {
 
 qtc_status Registry::mark_dying(uint64_t h, QObject **out) {
     qtc_status err = 0;
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     QObject *o = lookup_locked(h, &err, false);
     if (!o) return err;
     table[handle_index(h)].flags |= SF_DYING;
@@ -454,7 +454,7 @@ static void mark_made(uint64_t h, bool owned) {
                 return;
         }
     }
-    std::lock_guard<std::recursive_mutex> lk(r.mu);
+    std::lock_guard<RegMutex> lk(r.mu);
     const uint32_t idx = handle_index(h);
     if (idx >= r.table.size()) return;
     Slot &s = r.table[idx];
@@ -472,7 +472,7 @@ bool Registry::alive(uint64_t h) {
         if (s.kind == SK_VAL) return true;
         if (s.kind == SK_OBJ && (s.flags & SF_GUI)) return !(s.flags & SF_DYING) && s.alive();
     }
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     uint32_t idx = handle_index(h);
     if (idx >= table.size()) return false;
     const Slot &s = table[idx];
@@ -483,7 +483,7 @@ bool Registry::receiver(uint64_t h, QObject **o, QVariant **v, qtc_status *err) 
     *o = nullptr;
     *v = nullptr;
     if (h == 0) { *err = QTC_ERR_NULL_HANDLE; return false; }
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     uint32_t idx = handle_index(h);
     if (idx < table.size() && table[idx].gen == handle_gen(h) && table[idx].kind == SK_VAL) {
         *v = table[idx].val;
@@ -505,7 +505,7 @@ bool Registry::receiver(uint64_t h, QObject **o, QVariant **v, qtc_status *err) 
 
 int Registry::kind_of(uint64_t h) {
     if (h == 0) return SK_FREE;
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     uint32_t idx = handle_index(h);
     if (idx >= table.size()) return SK_FREE;
     const Slot &s = table[idx];
@@ -515,15 +515,15 @@ int Registry::kind_of(uint64_t h) {
 void Registry::on_destroyed(QObject *o) {
     uint64_t handle = 0;
     {
-        std::lock_guard<std::recursive_mutex> lk(mu);
-        auto it = by_ptr.find(o);
-        if (it == by_ptr.end()) return;
-        uint32_t idx = *it;
-        by_ptr.erase(it);
+        std::lock_guard<RegMutex> lk(mu);
+        const uint32_t *it = by_ptr.lookup(o);
+        if (!it) return;
+        const uint32_t idx = *it;
+        by_ptr.remove(o);
         handle = make_handle(idx, table[idx].gen);
         release_slot(idx);
         live_objects--;
-        g_recently_destroyed->insert(o);
+        g_recently_destroyed->insert(o, 1);
     }
     // an object moved to a worker thread dies there: the roles index (GUI thread) never had it
     if (gui_thread_ok()) roles_forget(o, true);
@@ -538,17 +538,17 @@ void Registry::forget_dead(uint32_t idx) {
     QObject *o = nullptr;
     uint64_t handle = 0;
     {
-        std::lock_guard<std::recursive_mutex> lk(mu);
+        std::lock_guard<RegMutex> lk(mu);
         Slot &s = table[idx];
         if (s.kind != SK_OBJ || s.alive()) return;
         o = s.obj;   // only its address: the object itself is gone
-        auto it = by_ptr.find(o);
-        if (it != by_ptr.end() && *it == idx) by_ptr.erase(it);
+        const uint32_t *it = by_ptr.lookup(o);
+        if (it && *it == idx) by_ptr.remove(o);
         QObject::disconnect(s.destroyed);
         handle = make_handle(idx, s.gen);
         release_slot(idx);
         live_objects--;
-        g_recently_destroyed->insert(o);
+        g_recently_destroyed->insert(o, 1);
     }
     roles_forget(o, false);
     if (on_object_destroyed_hook) on_object_destroyed_hook(o, handle);
@@ -557,7 +557,7 @@ void Registry::forget_dead(uint32_t idx) {
 void Registry::sweep_dead() {
     std::vector<uint32_t> dead;
     {
-        std::lock_guard<std::recursive_mutex> lk(mu);
+        std::lock_guard<RegMutex> lk(mu);
         for (uint32_t i = 0; i < table.size(); i++)
             if (table[i].kind == SK_OBJ && !table[i].alive()) dead.push_back(i);
     }
@@ -565,7 +565,7 @@ void Registry::sweep_dead() {
 }
 
 void Registry::note_blocked(QObject *o) {
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     for (const QObject *x : blocked_raw_)
         if (x == o) return;
     blocked_.push_back(o);
@@ -575,12 +575,12 @@ void Registry::note_blocked(QObject *o) {
 void Registry::sweep_blocked() {
     std::vector<uint32_t> dead;
     {
-        std::lock_guard<std::recursive_mutex> lk(mu);
+        std::lock_guard<RegMutex> lk(mu);
         if (blocked_.empty()) return;
         for (size_t i = 0; i < blocked_.size();) {
             if (blocked_[i]) { i++; continue; }
-            auto it = by_ptr.constFind(blocked_raw_[i]);
-            if (it != by_ptr.constEnd() && !table[*it].alive()) dead.push_back(*it);
+            const uint32_t *it = by_ptr.lookup(blocked_raw_[i]);
+            if (it && !table[*it].alive()) dead.push_back(*it);
             blocked_[i] = blocked_.back();
             blocked_.pop_back();
             blocked_raw_[i] = blocked_raw_.back();
@@ -591,7 +591,7 @@ void Registry::sweep_blocked() {
 }
 
 std::vector<QPointer<QObject>> Registry::owned_roots() {
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     std::vector<std::pair<uint32_t, QPointer<QObject>>> v;
     for (const Slot &s : table)
         if (s.kind == SK_OBJ && (s.flags & SF_OWNED) && s.alive()) v.push_back({s.order, QPointer<QObject>(s.obj)});
@@ -602,7 +602,7 @@ std::vector<QPointer<QObject>> Registry::owned_roots() {
 }
 
 void Registry::clear_all() {
-    std::lock_guard<std::recursive_mutex> lk(mu);
+    std::lock_guard<RegMutex> lk(mu);
     blocked_.clear();
     blocked_raw_.clear();
     for (uint32_t i = 0; i < table.size(); i++) {
@@ -625,14 +625,14 @@ void Registry::clear_all() {
 uint64_t handle_for_signal_arg(QObject *o) {
     if (!o) return 0;
     {
-        std::lock_guard<std::recursive_mutex> lk(reg().mu);
+        std::lock_guard<RegMutex> lk(reg().mu);
         if (g_recently_destroyed->contains(o)) return 0;
     }
     return reg().handle_for(o);
 }
 
 void top_level_point() {
-    std::lock_guard<std::recursive_mutex> lk(reg().mu);
+    std::lock_guard<RegMutex> lk(reg().mu);
     g_recently_destroyed->clear();
 }
 
@@ -2725,8 +2725,8 @@ QTC_API qtc_obj qtc_find_child(qtc_obj parent, qtc_str object_name, qtc_str clas
     });
 }
 
-QTC_API int64_t qtc_live_objects(void) { std::lock_guard<std::recursive_mutex> lk(reg().mu); return reg().live_objects; }
-QTC_API int64_t qtc_live_values(void) { std::lock_guard<std::recursive_mutex> lk(reg().mu); return reg().live_values; }
+QTC_API int64_t qtc_live_objects(void) { std::lock_guard<RegMutex> lk(reg().mu); return reg().live_objects; }
+QTC_API int64_t qtc_live_values(void) { std::lock_guard<RegMutex> lk(reg().mu); return reg().live_values; }
 
 QTC_API void *qtc_unsafe_pointer(qtc_obj obj) {
     return guarded<void *>(nullptr, [&]() -> void * {
@@ -2978,9 +2978,9 @@ bool known_live(const QObject *p, const QObject *root) {
     if (!p) return true;
     {
         Registry &r = reg();
-        std::lock_guard<std::recursive_mutex> lk(r.mu);
-        auto it = r.by_ptr.constFind(const_cast<QObject *>(p));
-        if (it != r.by_ptr.constEnd() && r.table[*it].alive()) return true;
+        std::lock_guard<RegMutex> lk(r.mu);
+        const uint32_t *it = r.by_ptr.lookup(p);
+        if (it && r.table[*it].alive()) return true;
     }
     return root && (p == root || root->findChildren<QObject *>().contains(const_cast<QObject *>(p)));
 }

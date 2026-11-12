@@ -1272,7 +1272,7 @@ QTC_API uint64_t qtc_connect(qtc_obj sender, qtc_str signal, uint64_t tag, uint3
         // a sender may live in a worker thread (qtc_move_to_thread): its signals reach the queue
         // through Qt's queued connections. The registry lock keeps such a sender from finishing
         // dying while it is connected to.
-        std::lock_guard<std::recursive_mutex> lk(reg().mu);
+        std::lock_guard<RegMutex> lk(reg().mu);
         QObject *o = reg().object(sender, &err);
         if (!o && err == QTC_ERR_WRONG_THREAD) o = reg().object_anywhere(sender, &err);
         if (!o) { fail(err, "qtc_connect: sender"); return 0; }

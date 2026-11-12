@@ -39,10 +39,13 @@ QT_END_NAMESPACE
 #include <atomic>
 #include <cmath>
 #include <cstdint>
+#include <cstdlib>
 #include <cstring>
 #include <limits>
+#include <new>
 #include <mutex>
 #include <optional>
+#include <thread>
 #include <type_traits>
 #include <vector>
 
@@ -92,13 +95,133 @@ inline uint64_t make_handle(uint32_t index, uint32_t gen) { return (uint64_t(gen
 inline uint32_t handle_index(uint64_t h) { return uint32_t(h & 0xffffffffu) - 1; }
 inline uint32_t handle_gen(uint64_t h) { return uint32_t(h >> 32); }
 
+// The registry's lock: recursive, as std::recursive_mutex, but on a plain mutex, whose
+// uncontended lock and unlock are one atomic operation each.
+class RegMutex {
+public:
+    void lock() {
+        const std::thread::id me = std::this_thread::get_id();
+        // only this thread ever stores its own id: equal means this thread holds the lock
+        if (owner_.load(std::memory_order_relaxed) == me) {
+            depth_++;
+            return;
+        }
+        m_.lock();
+        owner_.store(me, std::memory_order_relaxed);
+        depth_ = 1;
+    }
+    void unlock() {
+        if (--depth_ == 0) {
+            owner_.store(std::thread::id(), std::memory_order_relaxed);
+            m_.unlock();
+        }
+    }
+
+private:
+    std::mutex m_;
+    std::atomic<std::thread::id> owner_{};
+    int depth_ = 0;   // read and written by the holder only
+};
+
+// A map from object addresses to V: open addressing with linear probing and backward-shift
+// deletion, so that inserting and erasing allocate nothing (QHash allocated on growth and did
+// more work per operation, on the path of every object made and destroyed). Keys are never null.
+template <class V>
+class PtrMap {
+public:
+    PtrMap() { reset(64); }
+    ~PtrMap() { std::free(keys_); std::free(vals_); }
+    PtrMap(const PtrMap &) = delete;
+    PtrMap &operator=(const PtrMap &) = delete;
+
+    size_t size() const { return n_; }
+    bool isEmpty() const { return n_ == 0; }
+    const V *lookup(const void *k) const {
+        for (size_t i = home(k);; i = (i + 1) & mask_) {
+            if (keys_[i] == k) return &vals_[i];
+            if (!keys_[i]) return nullptr;
+        }
+    }
+    V *lookup(const void *k) { return const_cast<V *>(static_cast<const PtrMap *>(this)->lookup(k)); }
+    bool contains(const void *k) const { return lookup(k) != nullptr; }
+    void insert(const void *k, V v) {
+        if ((n_ + 1) * 2 > cap_) grow();
+        size_t i = home(k);
+        for (; keys_[i]; i = (i + 1) & mask_)
+            if (keys_[i] == k) { vals_[i] = v; return; }
+        keys_[i] = k;
+        vals_[i] = v;
+        n_++;
+    }
+    bool remove(const void *k) {
+        for (size_t i = home(k);; i = (i + 1) & mask_) {
+            if (!keys_[i]) return false;
+            if (keys_[i] == k) { erase_at(i); return true; }
+        }
+    }
+    // empties the map; keeps its storage unless that grew large
+    void clear() {
+        if (cap_ > 4096) {
+            std::free(keys_);
+            std::free(vals_);
+            reset(64);
+        } else if (n_) {
+            std::memset(static_cast<void *>(keys_), 0, cap_ * sizeof(*keys_));
+            n_ = 0;
+        }
+    }
+
+private:
+    const void **keys_ = nullptr;
+    V *vals_ = nullptr;
+    size_t cap_ = 0, mask_ = 0, n_ = 0;
+    int shift_ = 0;
+
+    size_t home(const void *k) const { return size_t((uint64_t(uintptr_t(k)) >> 4) * 0x9E3779B97F4A7C15ull >> shift_); }
+    void reset(size_t cap) {
+        cap_ = cap;
+        mask_ = cap - 1;
+        n_ = 0;
+        shift_ = 64 - __builtin_ctzll(cap);
+        keys_ = static_cast<const void **>(std::calloc(cap, sizeof(*keys_)));
+        vals_ = static_cast<V *>(std::calloc(cap, sizeof(V)));
+        if (!keys_ || !vals_) throw std::bad_alloc();
+    }
+    void grow() {
+        const void **ok = keys_;
+        V *ov = vals_;
+        const size_t oc = cap_;
+        reset(oc * 2);
+        for (size_t i = 0; i < oc; i++)
+            if (ok[i]) insert(ok[i], ov[i]);
+        std::free(ok);
+        std::free(ov);
+    }
+    void erase_at(size_t i) {
+        size_t j = i;
+        for (;;) {
+            j = (j + 1) & mask_;
+            if (!keys_[j]) break;
+            const size_t k = home(keys_[j]);
+            // keys_[j] may move to i unless its home lies cyclically in (i, j]
+            const bool stays = i <= j ? (i < k && k <= j) : (i < k || k <= j);
+            if (stays) continue;
+            keys_[i] = keys_[j];
+            vals_[i] = vals_[j];
+            i = j;
+        }
+        keys_[i] = nullptr;
+        n_--;
+    }
+};
+
 // Thread-safe for lookups and destruction notices; creation and calls happen on the GUI thread.
 class Registry {
 public:
-    std::recursive_mutex mu;
+    RegMutex mu;
     std::vector<Slot> table;
     std::vector<uint32_t> free_list;
-    QHash<QObject *, uint32_t> by_ptr;
+    PtrMap<uint32_t> by_ptr;   // object -> slot index
     int64_t live_objects = 0;
     int64_t live_values = 0;
     uint32_t order_counter = 0;
