@@ -4,7 +4,7 @@
 #include "qtc.h"
 #include "qtc_test.h"
 
-#include <pthread.h>
+#include "test_thread.h"
 #include <stdatomic.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -215,9 +215,15 @@ static int32_t handler(const qtc_override_call *c, void *user) {
     }
 }
 
-/* The same handler, exported for qtc_set_override_handler_symbol. */
-int32_t qtc_test_override_handler(const qtc_override_call *c, void *user);
-int32_t qtc_test_override_handler(const qtc_override_call *c, void *user) { return handler(c, user); }
+/* The same handler, exported for qtc_set_override_handler_symbol (from the executable: on
+   Windows, GetProcAddress finds only what it exports). */
+#if defined(_WIN32)
+#define TEST_EXPORT __declspec(dllexport)
+#else
+#define TEST_EXPORT
+#endif
+TEST_EXPORT int32_t qtc_test_override_handler(const qtc_override_call *c, void *user);
+TEST_EXPORT int32_t qtc_test_override_handler(const qtc_override_call *c, void *user) { return handler(c, user); }
 
 /* ------------------------------------------------------------------ tests */
 

@@ -9,6 +9,17 @@ set(QTC_TEST_ENV
   "ASAN_OPTIONS=detect_leaks=0:abort_on_error=1:detect_stack_use_after_return=1"
   "UBSAN_OPTIONS=print_stacktrace=1:halt_on_error=1")
 
+# the C math library, which is part of the C runtime on Windows
+if(WIN32)
+  set(QTC_LIBM "")
+else()
+  set(QTC_LIBM m)
+endif()
+# <stdatomic.h> in the C tests is experimental in MSVC
+if(MSVC)
+  add_compile_options($<$<COMPILE_LANGUAGE:C>:/experimental:c11atomics>)
+endif()
+
 function(qtc_add_test name)
   add_test(NAME ${name} COMMAND ${ARGN} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
   set_tests_properties(${name} PROPERTIES ENVIRONMENT "${QTC_TEST_ENV}" TIMEOUT 1800)
@@ -16,7 +27,7 @@ endfunction()
 
 if(TARGET qtc_test)
   add_executable(test_core test_core.c)
-  target_link_libraries(test_core PRIVATE qtc qtc_test Threads::Threads m)
+  target_link_libraries(test_core PRIVATE qtc qtc_test Threads::Threads ${QTC_LIBM})
   qtc_add_test(core $<TARGET_FILE:test_core>)
 
   add_executable(test_concurrent test_concurrent.c)
@@ -69,7 +80,7 @@ if(TARGET qtc_test)
   qtc_add_test(class $<TARGET_FILE:test_class>)
 
   add_executable(test_app test_app.c)
-  target_link_libraries(test_app PRIVATE qtc qtc_test m)
+  target_link_libraries(test_app PRIVATE qtc qtc_test ${QTC_LIBM})
   qtc_add_test(app $<TARGET_FILE:test_app>)
 endif()
 

@@ -2,7 +2,7 @@
 #define _POSIX_C_SOURCE 200809L
 #include "qtc.h"
 
-#include <pthread.h>
+#include "test_thread.h"
 #include <stdatomic.h>
 #include <stdint.h>
 #include <stdio.h>

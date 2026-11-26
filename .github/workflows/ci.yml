@@ -52,7 +52,8 @@ jobs:
           path: '*.json'
 
   other-platforms:
-    # builds only; qtc has not been tested on these systems yet
+    # builds and runs the tests as on Linux, the fuzzers aside; allowed to fail until they pass
+    # here as they do there
     continue-on-error: true
     strategy:
       matrix:
@@ -81,5 +82,6 @@ jobs:
             cygpath -w "$prefix/bin" >> "$GITHUB_PATH"
           fi
           echo "QT_PREFIX=$prefix" >> "$GITHUB_ENV"
-      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DQTC_BUILD_TESTS=OFF -DCMAKE_PREFIX_PATH="$QT_PREFIX"
+      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$QT_PREFIX"
       - run: cmake --build build --config Release
+      - run: ctest --test-dir build -C Release -LE slow --output-on-failure

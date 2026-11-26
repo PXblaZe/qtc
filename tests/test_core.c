@@ -6,7 +6,7 @@
 #include "qtc_test.h"
 
 #include <math.h>
-#include <pthread.h>
+#include "test_thread.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

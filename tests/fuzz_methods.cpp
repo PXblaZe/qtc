@@ -37,7 +37,11 @@
 #include <cstdlib>
 #include <csignal>
 #include <cstring>
+#if defined(_WIN32)
+#include <io.h>   // write
+#else
 #include <unistd.h>
+#endif
 #if defined(__GLIBC__)
 #include <execinfo.h>
 #endif
@@ -51,6 +55,22 @@
 #endif
 #endif
 
+#if defined(_WIN32)
+// Windows has no sigaction: C's signal(), which its runtime raises for an access violation too
+static void on_crash(int sig) {
+    char head[64];
+    const int n = std::snprintf(head, sizeof head, "CRASH: fatal signal %d\n", sig);
+    (void)!::write(2, head, unsigned(n > 0 ? n : 0));
+    std::signal(sig, SIG_DFL);
+    std::raise(sig);
+}
+
+static void install_crash_handler() {
+#if !defined(FUZZ_SANITIZED)
+    for (int sig : {SIGSEGV, SIGFPE, SIGILL, SIGABRT}) std::signal(sig, on_crash);
+#endif
+}
+#else
 static void on_crash(int sig, siginfo_t *info, void *) {
     char head[96];
     const int n = std::snprintf(head, sizeof head, "CRASH: fatal signal %d at address %p, stack:\n", sig,
@@ -75,6 +95,7 @@ static void install_crash_handler() {
     for (int sig : {SIGSEGV, SIGBUS, SIGFPE, SIGILL, SIGABRT}) sigaction(sig, &sa, nullptr);
 #endif
 }
+#endif
 
 static qtc_str S(const QByteArray &b) { return qtc_sn(b.constData(), b.size()); }
 static QByteArray V(qtc_view v) { return QByteArray(v.data, qsizetype(v.len)); }

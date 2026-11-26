@@ -3,7 +3,7 @@
 #define _POSIX_C_SOURCE 200809L
 #include "qtc.h"
 
-#include <pthread.h>
+#include "test_thread.h"
 #include <stdatomic.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -26,6 +26,10 @@ static int g_failed = 0, g_passed = 0;
 #define S(lit) QTC_S(lit)
 #define NOSTR qtc_sn(NULL, 0)
 
+#if defined(_WIN32)
+static void sleep_ms(int ms) { Sleep((DWORD)ms); }
+static int64_t now_ms(void) { return (int64_t)GetTickCount64(); }
+#else
 static void sleep_ms(int ms) {
     struct timespec ts = {ms / 1000, (long)(ms % 1000) * 1000000L};
     nanosleep(&ts, NULL);
@@ -35,6 +39,7 @@ static int64_t now_ms(void) {
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return (int64_t)ts.tv_sec * 1000 + ts.tv_nsec / 1000000;
 }
+#endif
 static int spin_until(atomic_int *v, int want, int timeout_ms) {
     int64_t end = now_ms() + timeout_ms;
     while (atomic_load(v) != want) {
