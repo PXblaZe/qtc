@@ -56,7 +56,8 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        os: [macos-14, windows-2022]
+        # macos-latest: GitHub retires its macOS images, as it did macos-14
+        os: [macos-latest, windows-2022]
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -71,10 +72,14 @@ jobs:
             channels: [conda-forge]
           cache-environment: true
       - name: Qt's prefix
-        # conda-forge puts Qt under Library on Windows
+        # conda-forge puts Qt under Library on Windows, with its DLLs in Library\bin, which
+        # Qt's tools (moc, rcc) need on PATH to start: the environment is not activated
         run: |
           prefix="$MAMBA_ROOT_PREFIX/envs/qt"
-          if [ "$RUNNER_OS" = Windows ]; then prefix="$prefix/Library"; fi
+          if [ "$RUNNER_OS" = Windows ]; then
+            prefix="$prefix/Library"
+            cygpath -w "$prefix/bin" >> "$GITHUB_PATH"
+          fi
           echo "QT_PREFIX=$prefix" >> "$GITHUB_ENV"
       - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DQTC_BUILD_TESTS=OFF -DCMAKE_PREFIX_PATH="$QT_PREFIX"
       - run: cmake --build build --config Release
