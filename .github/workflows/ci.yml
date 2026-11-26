@@ -1,7 +1,12 @@
-# Build, test and fuzz qtc on Qt 6.12 LTS, the supported release. Not yet run on GitHub: the
-# jobs mirror what was run by hand during development (see docs/TESTING.md).
+# Build, test and fuzz qtc on Qt 6.12 LTS, the supported release. Qt comes from conda-forge,
+# the packages qtc was developed and tested against (QT_PACKAGES), installed with micromamba.
 name: ci
 on: [push, pull_request]
+
+env:
+  QT_PACKAGES: >-
+    qt6-main=6.12.0 qt6-charts=6.12.0 qt6-multimedia=6.12.0 qt6-serialport=6.12.0
+    qt6-positioning=6.12.0 qt6-networkauth=6.12.0
 
 jobs:
   linux:
@@ -14,18 +19,20 @@ jobs:
     name: linux-${{ matrix.name }}
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: jurplel/install-qt-action@v4
+      - uses: actions/checkout@v5
+      - uses: mamba-org/setup-micromamba@v2
         with:
-          version: '6.12.*'
-          modules: 'qtcharts qtmultimedia qtpositioning qtserialport qtwebsockets qtwebchannel qtspatialaudio qtshadertools'
-          cache: true
+          environment-name: qt
+          create-args: ${{ env.QT_PACKAGES }}
+          condarc: |
+            channels: [conda-forge]
+          cache-environment: true
       - name: Build tools
         run: |
           sudo apt-get update
           # Xvfb, Mesa's llvmpipe and lavapipe: the graphics tests render on OpenGL and Vulkan
           sudo apt-get install -y ninja-build libgl-dev libegl-dev libxkbcommon-dev xvfb mesa-vulkan-drivers libvulkan-dev vulkan-validationlayers
-      - run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DQTC_SANITIZE=${{ matrix.sanitize }}
+      - run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DQTC_SANITIZE=${{ matrix.sanitize }} -DCMAKE_PREFIX_PATH=$MAMBA_ROOT_PREFIX/envs/qt
       - run: cmake --build build
       - run: ctest --test-dir build -LE slow --output-on-failure
       - name: Method fuzzer (fixed order, by name, lifetime, two random orders)
@@ -40,7 +47,9 @@ jobs:
           exit $rc
       - uses: actions/upload-artifact@v4
         if: failure()
-        with: { name: fuzz-reports-${{ matrix.name }}, path: '*.json' }
+        with:
+          name: fuzz-reports-${{ matrix.name }}
+          path: '*.json'
 
   other-platforms:
     # builds only; qtc has not been tested on these systems yet
@@ -49,9 +58,23 @@ jobs:
       matrix:
         os: [macos-14, windows-2022]
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     steps:
-      - uses: actions/checkout@v4
-      - uses: jurplel/install-qt-action@v4
-        with: { version: '6.12.*', cache: true }
-      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DQTC_BUILD_TESTS=OFF
+      - uses: actions/checkout@v5
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-name: qt
+          create-args: ${{ env.QT_PACKAGES }}
+          condarc: |
+            channels: [conda-forge]
+          cache-environment: true
+      - name: Qt's prefix
+        # conda-forge puts Qt under Library on Windows
+        run: |
+          prefix="$MAMBA_ROOT_PREFIX/envs/qt"
+          if [ "$RUNNER_OS" = Windows ]; then prefix="$prefix/Library"; fi
+          echo "QT_PREFIX=$prefix" >> "$GITHUB_ENV"
+      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DQTC_BUILD_TESTS=OFF -DCMAKE_PREFIX_PATH="$QT_PREFIX"
       - run: cmake --build build --config Release
