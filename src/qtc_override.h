@@ -21,7 +21,9 @@ class QEvent;
 QT_END_NAMESPACE
 
 // Shared with the module libraries (qtc_module.h): the runtime's internal API is exported
+#if defined(__GNUC__)
 #pragma GCC visibility push(default)
+#endif
 
 namespace qtc {
 
@@ -203,4 +205,6 @@ public:
 };
 
 }  // namespace qtc
+#if defined(__GNUC__)
 #pragma GCC visibility pop
+#endif

@@ -34,7 +34,9 @@ QString owned_by(QObject *x) {
 // goes, its protocol thread works through what is queued for it (a bounded wait: the protocol
 // never waits for the GUI thread).
 #if defined(__GNUC__)
+#if defined(__GNUC__)
 __attribute__((no_sanitize("vptr")))   // UBSan's type checks would need QCoapClientPrivate's typeinfo
+#endif
 #endif
 void drain(QCoapClient *c) {
     auto *d = static_cast<QCoapClientPrivate *>(QObjectPrivate::get(c));

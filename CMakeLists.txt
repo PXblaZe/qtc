@@ -217,7 +217,8 @@ target_include_directories(qtc PUBLIC
 target_compile_definitions(qtc PRIVATE ${QTC_DEFS})
 target_link_libraries(qtc PRIVATE ${QTC_LINK})
 if(MSVC)
-  target_compile_options(qtc PRIVATE /bigobj /W3 /Zc:__cplusplus /permissive-)
+  # /wd4068: the generated sources' #pragma GCC diagnostic lines, which MSVC does not know
+  target_compile_options(qtc PRIVATE /bigobj /W3 /Zc:__cplusplus /permissive- /wd4068)
 else()
   # The module libraries call into libqtc, so its internal functions are exported; calls inside
   # libqtc stay direct (and inlinable) all the same.

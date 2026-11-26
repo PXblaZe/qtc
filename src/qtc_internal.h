@@ -47,12 +47,15 @@ QT_END_NAMESPACE
 #include <new>
 #include <mutex>
 #include <optional>
+#include <bit>
 #include <thread>
 #include <type_traits>
 #include <vector>
 
 // Shared with the module libraries (qtc_module.h): the runtime's internal API is exported
+#if defined(__GNUC__)
 #pragma GCC visibility push(default)
+#endif
 
 namespace qtc {
 
@@ -225,7 +228,7 @@ private:
         cap_ = cap;
         mask_ = cap - 1;
         n_ = 0;
-        shift_ = 64 - __builtin_ctzll(cap);
+        shift_ = 64 - std::countr_zero(uint64_t(cap));
         keys_ = static_cast<const void **>(std::calloc(cap, sizeof(*keys_)));
         vals_ = static_cast<V *>(std::calloc(cap, sizeof(V)));
         if (!keys_ || !vals_) throw std::bad_alloc();
@@ -395,8 +398,16 @@ extern std::atomic<QObject *> g_tracked_new;   // the object make_obj just made,
 
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED   // a deprecated constructor is inherited (and checked for) as it is
+// Hidden on ELF and Mach-O, where the module libraries share libqtc's exported symbols;
+// Windows builds one library, where nothing else could share it.
+#if defined(__GNUC__)
+#define QTC_HIDDEN __attribute__((visibility("hidden")))
+#else
+#define QTC_HIDDEN
+#endif
+
 template <class S>
-struct __attribute__((visibility("hidden"))) Tracked : S {   // each library its own
+struct QTC_HIDDEN Tracked : S {   // each library its own
     using S::S;
     ~Tracked() override { tracked_dying(this); }
 };
@@ -1099,7 +1110,9 @@ template <class S> inline S *self_obj(void *q) { return static_cast<S *>(static_
 template <class S> inline S *self_val(void *q) { return static_cast<S *>(q); }
 
 }  // namespace qtc
+#if defined(__GNUC__)
 #pragma GCC visibility pop
+#endif
 
 Q_DECLARE_METATYPE(qtc::ObjRef)
 

@@ -16,7 +16,9 @@
 #include <QtCore/QString>
 #include <QtCore/QVariant>
 
+#if defined(__GNUC__)
 #pragma GCC visibility push(default)
+#endif
 
 namespace qtc {
 
@@ -136,7 +138,9 @@ extern ModuleHooks g_module_hooks;
 
 }  // namespace qtc
 
+#if defined(__GNUC__)
 #pragma GCC visibility pop
+#endif
 
 // What a module library exports: qtc_module_init_<Module>, called once it is loaded, and
 // qtc_mod_ext_<Module> (src/mod), its part of the roles and hooks, which the init calls.
