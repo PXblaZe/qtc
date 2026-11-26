@@ -615,6 +615,17 @@ def guard(since, floor):
     return "QT_VERSION >= QT_VERSION_CHECK(%d, %d, 0)" % (since[0], since[1])
 
 
+# Qt API that its headers declare on some systems only: the models are read from Linux's
+# headers, so a method naming one of these types is built only where the type exists.
+PLATFORM_ONLY = [("QProcess::UnixProcess", "defined(Q_OS_UNIX)")]
+
+
+def platform_guard(m):
+    names = [p["type"]["canon"] for p in m["params"]] + [(m.get("ret") or {}).get("canon", "")]
+    conds = sorted({cond for prefix, cond in PLATFORM_ONLY for n in names if prefix in n})
+    return " && ".join(conds) or None
+
+
 # ------------------------------------------------------------------ emission
 
 def cstr(s):
@@ -853,7 +864,8 @@ class Emitter:
             kind = "static" if m["static"] else ("obj" if is_obj else "val")
             msince = self.v.since(module, "method", Versions.mkey(cn, m))
             mg = guard(msince, csince if cguard else self.floor)
-            # the thunk names the method's types: an older Qt may not have them
+            mg = " && ".join(g for g in (mg, platform_guard(m)) if g) or None
+            # the thunk names the method's types: an older Qt may not have them, nor another system
             start = len(thunk_code)
             tid = self.thunk(cn, c, m, plan, kind, thunk_code)
             if tid is None:

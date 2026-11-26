@@ -7112,7 +7112,7 @@ template <class S> static int t1689(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     (void)a; (void)r;
     return QTC_ERR_BAD_ARGS;
 }
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
 template <class S> static int t1690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     switch (n) {
@@ -7126,7 +7126,7 @@ template <class S> static int t1690(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
 template <class S> static int t1691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QProcess::UnixProcessParameters> p0;
@@ -7142,7 +7142,7 @@ template <class S> static int t1691(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     return QTC_ERR_BAD_ARGS;
 }
 #endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
 template <class S> static int t1692(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QFlags<QProcess::UnixProcessFlag>> p0;
@@ -9299,10 +9299,10 @@ static const qtc::ParamDesc P1686[] = {{qtc::PK_STR, -1, "QString", nullptr}};
 static const qtc::ParamDesc P1687[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
 static const qtc::ParamDesc P1688[] = {{qtc::PK_STR, -1, "QString", nullptr}, {qtc::PK_FLAGS, 254, "QFlags<QIODeviceBase::OpenModeFlag>", nullptr}};
 static const qtc::ParamDesc P1689[] = {{qtc::PK_OBJ, -1, "QProcess*", &QProcess::staticMetaObject}};
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
 static const qtc::ParamDesc P1691[] = {{qtc::PK_VALUE, -1, "QProcess::UnixProcessParameters", nullptr}};
 #endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
 static const qtc::ParamDesc P1692[] = {{qtc::PK_FLAGS, 494, "QFlags<QProcess::UnixProcessFlag>", nullptr}};
 #endif
 static const qtc::ParamDesc P1694[] = {{qtc::PK_STR, -1, "QString", nullptr}};
@@ -9341,13 +9341,13 @@ static const qtc::MethodDef M_QProcess[] = {
     {"setStandardOutputFile", "setStandardOutputFile(QString,OpenMode)", t1687<QProcess>, P1687, 2, 1, 0, QTC_T_NONE, "void"},
     {"setStandardErrorFile", "setStandardErrorFile(QString,OpenMode)", t1688<QProcess>, P1688, 2, 1, 0, QTC_T_NONE, "void"},
     {"setStandardOutputProcess", "setStandardOutputProcess(QProcess*)", t1689<QProcess>, P1689, 1, 1, 0, QTC_T_NONE, "void"},
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
     {"unixProcessParameters", "unixProcessParameters()", t1690<QProcess>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_VALUE, "QProcess::UnixProcessParameters"},
 #endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
     {"setUnixProcessParameters", "setUnixProcessParameters(QProcess::UnixProcessParameters)", t1691<QProcess>, P1691, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0) && defined(Q_OS_UNIX)
     {"setUnixProcessParameters", "setUnixProcessParameters(QProcess::UnixProcessFlags)", t1692<QProcess>, P1692, 1, 1, 0, QTC_T_NONE, "void"},
 #endif
     {"workingDirectory", "workingDirectory()", t1693<QProcess>, nullptr, 0, 0, qtc::MF_CONST, QTC_T_STR, "QString"},

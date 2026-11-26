@@ -241,7 +241,7 @@ using namespace qtc;
 extern "C" {
 
 QTC_API qtc_status qtc_draw_begin(uint64_t target) {
-    DRAW_GUARD(
+    return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
         Recorder &r = rec();
         if (r.active) return fail(QTC_ERR_STATE, "qtc_draw_begin: a recording is already open; call qtc_draw_end");
         if (app_kind() == QTC_APP_CORE) return fail(QTC_ERR_STATE, "drawing needs a GUI application");
@@ -281,7 +281,7 @@ QTC_API qtc_status qtc_draw_begin(uint64_t target) {
         r.depth = 0;
         r.path = QPainterPath();
         r.path_open = false;
-        return QTC_OK;)
+        return QTC_OK;});
 }
 
 QTC_API qtc_status qtc_draw_begin_painter(int32_t arg_index) {
@@ -304,7 +304,7 @@ QTC_API qtc_status qtc_draw_begin_painter(int32_t arg_index) {
 }
 
 QTC_API qtc_status qtc_draw_end(void) {
-    DRAW_GUARD(
+    return guarded<qtc_status>(QTC_ERR_STATE, [&]() -> qtc_status {
         Recorder &r = rec();
         if (!r.active) return fail(QTC_ERR_STATE, "qtc_draw_end: no recording is open");
         r.active = false;
@@ -373,7 +373,7 @@ QTC_API qtc_status qtc_draw_end(void) {
         if (!o) return fail(err, "qtc_draw_end: the canvas");
         static_cast<QtcCanvas *>(o)->setList(std::move(list));
 #endif
-        return QTC_OK;)
+        return QTC_OK;});
 }
 
 QTC_API int64_t qtc_draw_count(void) {
