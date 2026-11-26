@@ -198,7 +198,7 @@ The pieces:
   structured messages both ways.
 - **Introspection** — `qtc_describe` returns JSON for any class or object;
   `manifest/qtc_api.json` lists everything bound, for generating bindings in other
-  languages (that is how [goose-qt](../goose-qt) is made).
+  languages (that is how [goose-qt](https://github.com/PXblaZe/goose-qt) is made).
 - **Errors** — every call returns or records a status (`qtc_last_error`,
   `qtc_last_error_message`). `qtc_set_error_policy(QTC_ERRORS_LOG)` prints each one.
 

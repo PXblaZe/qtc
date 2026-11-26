@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Documentation
+- The README's link to goose-qt points at https://github.com/PXblaZe/goose-qt; it assumed
+  the two repositories side by side on disk, which left it broken on GitHub.
+
 ## 1.0.0 — 2026-11-12
 
 The first release: Qt 6.12 LTS for C, and for any language that can call C.
