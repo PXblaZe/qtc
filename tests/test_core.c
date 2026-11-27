@@ -822,6 +822,8 @@ static void test_timers(void) {
     reset();
     qtc_obj t = qtc_timer(5, false, 30);
     CHECK(t != 0);
+    /* the first timeout, however long a busy machine takes to it, then 60 ms more of them */
+    CHECK_EQ(qtc_wait(2000), QTC_WAIT_EVENTS);
     pump(60);
     qtc_event e;
     int n = 0;

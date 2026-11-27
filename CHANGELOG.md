@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+### Added
+- Windows: qtc builds with MSVC. The CI builds and tests it on Windows and macOS, besides
+  Linux, with Qt 6.12 from conda-forge.
+
+### Fixed
+- `QNetworkDiskCache::setCacheDirectory` refuses the root of any drive. On Windows, "/" is
+  the root of the current drive, which need not be the one `QDir::root()` names, and the
+  cache deletes every file ending in .d under its directory.
+- Two tests assumed a fast machine: the timer test waits for the first timeout, and the
+  suspended map waits for the chunks already running to finish.
+
 ### Documentation
 - The README's link to goose-qt points at https://github.com/PXblaZe/goose-qt; it assumed
   the two repositories side by side on disk, which left it broken on GitHub.

@@ -454,11 +454,16 @@ static void test_map(void) {
     f = qtc_task_map(600, square, &slow, NULL);
     sleep_ms(20);
     CHECK_EQ(qtc_future_suspend(f, true), QTC_OK);
-    sleep_ms(150);
+    /* the chunks already running finish first, which on a machine with many threads (or
+       Windows, where a 1 ms sleep takes a timer tick) can take a while: wait until no more
+       items get done, then check that none do */
+    int p1 = -1, p2 = atomic_load(&g_processed);
+    for (int waited = 0; waited < 10000 && p1 != p2; waited += 150) {
+        p1 = p2;
+        sleep_ms(150);
+        p2 = atomic_load(&g_processed);
+    }
     CHECK(qtc_future_state(f) & QTC_FUT_SUSPENDED);
-    int p1 = atomic_load(&g_processed);
-    sleep_ms(150);
-    int p2 = atomic_load(&g_processed);
     CHECK_EQ(p1, p2);
     CHECK(p1 < 600);
     CHECK_EQ(qtc_future_suspend(f, false), QTC_OK);

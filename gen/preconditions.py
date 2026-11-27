@@ -831,9 +831,10 @@ TABLE = [
      "qtc::in({0}, 0, {s}->characterCount()) && qtc::in({1}, 0, {s}->characterCount()) && "
      "qtc::in({2}, 0, {s}->characterCount() - {0})", OOR, "the range must lie within the document"),
     # a disk cache owns its directory: expire() and clear() delete every file ending in .d under
-    # it, so neither the root of the file system nor the home directory can be one
+    # it, so neither a root of the file system (any drive's, on Windows: "/" there is the current
+    # drive's, which need not be QDir::root()) nor the home directory can be one
     ("QNetworkDiskCache", r"setCacheDirectory", None,
-     "[&] { const QString d = QDir({0}).absolutePath(); return {0}.isEmpty() || (QDir(d) != QDir::root() && QDir(d) != QDir::home()); }()",
+     "[&] { const QString d = QDir({0}).absolutePath(); return {0}.isEmpty() || (!QDir(d).isRoot() && QDir(d) != QDir::home()); }()",
      BAD, "the cache deletes every file ending in .d under its directory: give it a directory of its own"),
     # a message box keeps its custom buttons in a list of its own: clearing its button box from
     # outside would delete them under it

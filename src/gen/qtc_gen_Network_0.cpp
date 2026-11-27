@@ -6224,7 +6224,7 @@ template <class S> static int t9305(void *q, qtc::Arg *a, int n, qtc::Ret *r) {
     S *s = qtc::self_obj<S>(q);
     qtc::H<QString> p0;
     QTC_CV(0, p0);
-    if (!([&] { const QString d = QDir((p0.get())).absolutePath(); return (p0.get()).isEmpty() || (QDir(d) != QDir::root() && QDir(d) != QDir::home()); }())) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QNetworkDiskCache::setCacheDirectory(QString): the cache deletes every file ending in .d under its directory: give it a directory of its own");
+    if (!([&] { const QString d = QDir((p0.get())).absolutePath(); return (p0.get()).isEmpty() || (!QDir(d).isRoot() && QDir(d) != QDir::home()); }())) return qtc::pre_fail(QTC_ERR_BAD_ARGS, "QNetworkDiskCache::setCacheDirectory(QString): the cache deletes every file ending in .d under its directory: give it a directory of its own");
     switch (n) {
         case 1:
             if constexpr (requires(S *s, qtc::Ret *rr, qtc::Arg *aa, qtc::H<QString> &p0) { qtc::cv(aa[0], p0, 0); s->setCacheDirectory(p0.get()); }) { s->setCacheDirectory(p0.get()); r->set_none(); return 0; }
