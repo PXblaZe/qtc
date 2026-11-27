@@ -69,8 +69,14 @@ static int32_t handler(const qtc_override_call *c, void *user) {
         return QTC_OV_DONE;
     case T_TAKE: {
         qtc_obj o = qtc_ov_arg_obj(0);
-        if (o) qtc_ov_ret_str(qtc_get_str(o, S("objectName")).data ? (qtc_str){qtc_get_str(o, S("objectName")).data, qtc_get_str(o, S("objectName")).len} : NOSTR);
-        else qtc_ov_ret_str(S("null"));
+        if (o) {
+            /* one call: the next one that returns a view may reuse this one's text, and C leaves
+               the order of calls within an expression open */
+            qtc_view name = qtc_get_str(o, S("objectName"));
+            qtc_ov_ret_str(name.data ? (qtc_str){name.data, name.len} : NOSTR);
+        } else {
+            qtc_ov_ret_str(S("null"));
+        }
         return QTC_OV_DONE;
     }
     case T_WORK:

@@ -6,6 +6,7 @@
 #include "qtc.h"
 
 #include <stdint.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -262,7 +263,7 @@ static void test_backend(int32_t backend, const char *name) {
     CHECK_EQ(qtc_rhi_set_viewport(r, 0, 0, 0, 10), QTC_ERR_OUT_OF_RANGE);
     CHECK_EQ(qtc_rhi_set_viewport(r, 0, 0, 1e9, 10), QTC_ERR_OUT_OF_RANGE);
     CHECK_EQ(qtc_rhi_set_viewport(r, 32768, 0, 1, 1), QTC_ERR_OUT_OF_RANGE);   /* past Vulkan's bounds */
-    CHECK_EQ(qtc_rhi_set_viewport(r, 0, 0.0 / 0.0, 1, 1), QTC_ERR_OUT_OF_RANGE);
+    CHECK_EQ(qtc_rhi_set_viewport(r, 0, NAN, 1, 1), QTC_ERR_OUT_OF_RANGE);
     CHECK_EQ(qtc_rhi_set_viewport(r, -W, -H, 3 * W, 3 * H), QTC_OK);
     CHECK_EQ(qtc_rhi_set_viewport(r, 0, 0, W / 2, H), QTC_OK);
     /* a buffer destroyed mid-pass: commands recorded keep it until the frame ends */

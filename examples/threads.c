@@ -10,7 +10,6 @@
  */
 #include "qtc.h"
 
-#include <pthread.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -28,6 +27,26 @@ static void *work(void *arg) {
     return NULL;
 }
 
+/* Starting and joining a thread: Win32 threads on Windows, POSIX threads elsewhere. */
+#if defined(_WIN32)
+#include <windows.h>
+typedef HANDLE thread;
+static DWORD WINAPI work_win32(LPVOID arg) {
+    work(arg);
+    return 0;
+}
+static void start(thread *t, intptr_t id) { *t = CreateThread(NULL, 0, work_win32, (void *)id, 0, NULL); }
+static void join(thread t) {
+    WaitForSingleObject(t, INFINITE);
+    CloseHandle(t);
+}
+#else
+#include <pthread.h>
+typedef pthread_t thread;
+static void start(thread *t, intptr_t id) { pthread_create(t, NULL, work, (void *)id); }
+static void join(thread t) { pthread_join(t, NULL); }
+#endif
+
 int main(int argc, char **argv) {
     const bool selftest = argc > 1 && strcmp(argv[1], "--selftest") == 0;
     if (qtc_init_argv(QTC_APP_WIDGETS, argc, (const char *const *)argv) != QTC_OK) return 1;
@@ -41,8 +60,8 @@ int main(int argc, char **argv) {
     qtc_call(bar, QTC_S("resize"));
     qtc_call(bar, QTC_S("show"));
 
-    pthread_t threads[WORKERS];
-    for (intptr_t i = 0; i < WORKERS; i++) pthread_create(&threads[i], NULL, work, (void *)i);
+    thread threads[WORKERS];
+    for (intptr_t i = 0; i < WORKERS; i++) start(&threads[i], i);
 
     int64_t reports = 0, done = 0;
     qtc_event ev;
@@ -57,7 +76,7 @@ int main(int argc, char **argv) {
             }
         }
     }
-    for (int i = 0; i < WORKERS; i++) pthread_join(threads[i], NULL);
+    for (int i = 0; i < WORKERS; i++) join(threads[i]);
 
     int rc = 0;
     if (selftest) {
